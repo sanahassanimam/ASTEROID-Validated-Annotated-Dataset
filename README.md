@@ -26,7 +26,7 @@ The dataset enables:
 ## 📂 Repository Structure
 
 ```
-├── Annotated_Files_Combined/
+├── Annotated_Files/
 │   └── all_annotations.json
 │
 ├── Images/
@@ -52,7 +52,7 @@ The dataset enables:
 ## 1️⃣ Annotated Files (Combined)
 
 **Path:**  
-`Annotated_Files_Combined/all_annotations.json`
+`Annotated_Files/all_annotations.json`
 
 **Description:**  
 - Contains **all 170 annotated JSON files merged into a single file**
