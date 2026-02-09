@@ -1,0 +1,305 @@
+{
+  "data": {
+    "text": "Cerebellum’s Anatomical Parcellation\nProcess\nBased on the standard cerebellum anatomical atlas provided b y\nthe Spatially Unbiased Infratentorial Template (SUIT) toolbox\n(Diedrichsen et al., 2009; Diedrichsen and Zotow, 2015 ), the\ncerebellum was parcellated into 28 lobules or regions of inte rest\n(ROIs), which are classiﬁed as motor related (I–IV, V, VI),\ncognitive and emotional related (Crus I, Crus II, VIIb, VIII a,\nVIIIb, IX, X) according to Stoodley and Schmahmann (2009) ,\nStoodley et al. (2012) ,E et al. (2014) , andKoziol et al.\n(2014), as shown in Figure1. In order to avoid inﬂuences of\nintracranial volume diﬀerences among gender and IQ groups,\nall MRI structures were matched to the same model through the\naforementioned parcellation procedure which was based on the\nstandard (normalized) SUIT anatomical cerebellum atlas. The\nvolume of each ROI was deﬁned as the number of its voxels\nand was calculated from the standard SUIT cerebellum atlas\n(Diedrichsen et al., 2009; Diedrichsen and Zotow, 2015 ). As a\nresult,thesizeofeachROIiscommoninallsubjects,irrespec tive\nof IQ or gender factors. SUIT’s standard cerebellum atlas was\nbasedonthehand-segmentationof20healthyyoungparticipan ts\nand was already registered on the MNI space (see Diedrichsen\net al., 2009 , for further information). In addition, a ﬂat surface\nrepresentation of the cerebellum according to Diedrichsen and\nZotow (2015) is provided in Figure1, where color coding has\nbeenappliedbasedoneachlobule’s volumetricsize.Itisobvi ous\nfromFigure1 that lobule Crus I is the largest one including\nalmost 23% of the total cerebellar volume, whereas lobule X\nis the smallest ROI including almost 1.5% of the total volume.\nVermis Crus I contains less than 0.005% of the total cerebell ar\nvolume and is excluded from further analysis. The anatomica l\nparcellation of cerebellum was performed for all 136 subjects\nseparately,inordertoextracttheaverageBOLDsignalsfrom the\nremaining27ROIs,basedonSUIT’sstandardcerebellumatlas.\nGraph Analysis\nWeighted—Undirected Graphs\nAccording to Graph Theory, a graph Gcan be deﬁned as a pair\n(V,E)whereVisasetofnodesand Eisasetofedges( Reijneveld\net al., 2007; Fornito et al., 2013 ). Weighted and undirected\nFrontiers in Human Neuroscience | www.frontiersin.org 3 April 2017 | Volume 11 | Article 189\nPezoulas et al. Crystallized IQ, Gender, and Cerebellum\nFIGURE 1 | Cerebellum parcellation procedure (coronal view , A: front,B: back) followed by its ﬂat surface representation (C). Color coding is based on each\nlobule’s volumetric size.\ngraphs were constructed in this study. After the extraction o f\nthe BOLD time-series from cerebellum’s parcellation procedu re\n(Section Cerebellum’s Anatomical Parcellation Process), the\naverageBOLDtime-serieswerecomputedperROIandforevery\nsubjectseparately.Cerebellum’sfunctionalconnectivity wasthen\nassessedbycomputingPearson’scorrelationcoeﬃcientsbet ween\neachpairofthe27ROIsinsidethecerebellum,leadingtoa27 ×\n27 correlation (adjacency) matrix per subject in both IQ grou ps.\nNegativecorrelationswerediscardedfromfurtheranalysis (Bohr\net al., 2013 ). The adjacency matrix is in fact a weighted and\nundirectedgraphwith27nodes,whicharedesignatedascente rs\nof mass on ROIs, with a maximum number of 351 edges per\ngraph.\nSmall-World Network Topology\nA small-world network architecture ( Watts and Strogatz, 1998 )\ncombines high clustering coeﬃcient and small characterist ic\npath-length. In order to examine the small-world properties of\nthecerebellumnetworkassociatedwiththeIQgroups,weshou ld\ncompare them to a null model. In order to produce this null\nmodel, a total of 100 random weighted and undirected graphs\n(edgeandweightpreserving)wereformedforcomputing Cwrand\nandLwrandusing Brain Connectivity Toolbox ( Rubinov and\nSporns, 2010 ). In this study, the weighted versions of clustering\ncoeﬃcient and characteristic path-length were used in order to\ncompute the small-worldness index ( Stam et al., 2009; Rubinov\nand Sporns, 2010; Otte et al., 2015 ), as presented in Table1. In\nfact,asmall-worldnetworkischaracterizedbyhighersegr egation\n(γw≫1) than a random network and almost equal integration\n(λw≈1)withthatofarandomnetworkandthereforeachievesasmall-worldnessindexlargerthan1( VandenHeuveletal.,2008,\n2009; Stam et al., 2014 ). This network architecture manages to\nachieveeﬃcientinformationtransferatlowwiringcost.\nMinimum Spanning Trees\nTowardthecharacterizationofagraph’sarchitecture,itwo uldbe\nconvenient to summarize it with a structure that (i) overcom es\nbiasesintroducedbycomparingnetworkswithdiﬀerentnumber\nof edges and (ii) eliminates any disconnected syndromes wit hin\nthenetwork(forfurthernetwork-comparisonissuessee Stamand\nvan Straaten, 2012; van Diessen et al., 2015 ). A straightforward\napproachthatfulﬁllsthesespeciﬁcationsoperatesontheconce pt\nofMSTs,awidespreadgraphanalysismethodrecentlyemployed\nfor brain functional-connectivity assessment ( Tewarie et al.,\n2014, 2015a; Van Diessen et al., 2014; Otte et al., 2015; Van\nDellen et al., 2015; Stam et al., 2016 ). A spanning tree is a\nconnected subgraph of the original graph with n-nodes and\nexactly n −1 edges ( Stam et al., 2014; Tewarie et al., 2015b ).\nA MST is a spanning tree that manages to preserve only the\nedges that minimize the total cost deﬁned as the sum of the\nweights of the edges. In our study, MSTs were constructed\nusing Kruskal’s algorithm ( Kruskal, 1956 ). The algorithm begins\nwith n-disconnected nodes and orders the weights in ascendi ng\norder. Afterwards, the edge with the smallest weight is sele cted\nto connect two nodes, unless the selected edge creates a loop.\nThe above procedure is repeated until a loopless subgraph with\nn-nodes and n −1 edges is constructed. In order to preserve\nthe strongest connections within the original network, Kru skal’s\nalgorithm is executed so as to minimize the inverse of the tot al\ncost and, thus, retain only edges that maximize the total cost\nFrontiers in Human Neuroscience | www.frontiersin.org 4 April 2017 | Volume 11 | Article 189\nPezoulas et al. Crystallized IQ, Gender, and Cerebellum\nTABLE 1 | Network descriptors used in this study.\nSymbol Interpretation Mathematical expression Implication\nG Graph – Weighted and undirected graph\nV Set of vertices – Set of n-nodes\nE Set of edges – Set of n*(n −1)/2 maximum edges\nNleaf Leaf nodes – Number of nodes with degree equal to one\nwij Weight – Weight of the edge connecting nodes iandj\ntw\niNumber of triangles tw\ni=1\n2/summationtext\nj,k∈V(wijwjkwkl)1/3Weighted geometric mean of triangles around a node\ndw\nijShortest path - Shortest weighted path between nodes iandj\nCw\niWeighted clustering coefﬁcient Cw\ni=/summationtext\ni∈G2tw\ni\nki(ki−1)Segregation measure that quantiﬁes the local connectedness of a network\nCw Average weighted clustering coefﬁcient Cw=1\nn/summationtext\ni∈GCw\niA global version of the weighted clustering coefﬁcient used f or computing σw\nLw Weighted characteristic path length Lw=1\nn/summationtext\ni∈G,j/negationslash=idw\nij\nn−1Integration measure\nγwGamma γw=Cw/Cwrand Ratio of the weighted clustering coefﬁcients between origin al and random networks\nλwLambda λw=Lw/Lwrand Ratio of weighted path lengths between original and random n etworks\nσwSmall-worldness index σw=γw/λwReveals whether a network has an optimal organization or not\nconn Connectivity conn=1\nn(n−1)·/summationtext\nwij∈G\ni/negationslash=jwi,jMeasures the connectedness of a network in terms of network’ s density, where pklis\nthe number of shortest paths between nodes kandlandpj\nklis the number of\nshortest paths between kandlthat pass through node j\nk Degree ki=/summationtext\nj∈Vaij Number of neighbors connected to a node (hub metric)\nBC Betweenness centrality BCi=/summationtext\nk,l∈V\nk/negationslash=l,k/negationslash=i,l/negationslash=ipi\nklpklQuantiﬁes the importance of a node (hub metric)\nECC Eccentricity – Indicates whether a node is central or peripheral in a networ k\nd Diameter – Maximum eccentricity\nr Radius – Minimum eccentricity\nLf Leaf fraction Lf=Nleaf/n−1 Fraction of nodes with degree equal to one\nTh Tree-hierarchy Th=Nleaf\n2(n−1)BCmaxQuantiﬁes the balance between diameter reduction and overlo ad prevention\nκ Kappa or degree divergence κ=/angbracketleftk2/angbracketright\n/angbracketleftk/angbracketrightMeasure of the broadness of the degree distribution\nrdeg Degree correlation – Quantiﬁes the inﬂuence of a node’s degree by its neighbors\n(Boersma et al., 2013; Tewarie et al., 2015a; Van Dellen et al. ,\n2015).Theresultisanacyclicsubgraphoftheoriginalgraphthat\nmanagestopreserveonlythestrongestconnections(edges). The\nMST provides a graph representation that absorbs population\ncharacteristicsintoacompactformandfacilitatesthedisti nction\nof diﬀerent populations through the computation of various\nmetrics or descriptors. Recall that such MST comparisons assess\nthe eﬀects of only the strongest connections within the origi nal\nnetworktopologyandthereforetheMST canbesuitablyusedto\nexaminetheIQ’seﬀectincerebellum.\nLocal and Global MST Descriptors\nThree local and six global MST metrics were computed in\norder to describe the topological characteristics of each MST\n(Stam and van Straaten, 2012; Otte et al., 2015; Tewarie et al. ,\n2015a). The local MST descriptors are computed per node\nand normalized with their corresponding maximum values for\nappropriate comparisons. These metrics are summarized in\nTable1. In particular, degree (DEG) is deﬁned as the number of\nedges connected to a speciﬁc node, while betweenness central ity\n(BC)deﬁnesthefractionofallshortestpathsinthenetworkt hat\npassthroughaspeciﬁcnode.Consequently,thesetwometricsc anbe used as hub indicators, since they provide useful informati on\nconcerning the information ﬂow within the network. Finally ,\neccentricity (ECC) is the longest shortest path from a particu lar\nnode to any other node in the network. The global MST\nmeasures are deﬁned on the basis of the entire network. Based\noneccentricity’sdeﬁnition,diameter( d)isdeﬁnedasthelongest\nshortestpathinthewholenetwork,sothatsmalldiameterval ues\ndenote better network cohesion, whereas radius ( r) is deﬁned as\nthe smallest shortest path in the network. Leaf fraction ( Lf) is\nthe fraction of leaf nodes in the network. Tree-hierarchy ( Th) is\na metric ﬁrst introduced by Boersma et al. (2013) as an optimal\ntreeconﬁgurationquantiﬁer.Anoptimaltreeischaracteriz edby\ndiameter reduction and overload prevention (small BC values ),\nwith the value of Thapproximating 0.5. Kappa ( κ) or degree\ndivergence is mainly related to the synchronization level o f tree\nnodes.Finally,degreecorrelation( rdeg)iscomputedthroughthe\nPearson correlation coeﬃcient of the degrees of pair of verti ces\nconnectedbyanedge( Boersmaetal.,2013 ).\nHub(s) Detection\nNodeswithhighBCandDEGvaluesarecharacterizedascritic al\nnodes (hubs) and are used to determine the information ﬂow\nFrontiers in Human Neuroscience | www.frontiersin.org 5 April 2017 | Volume 11 | Article 189\nPezoulas et al. Crystallized IQ, Gender, and Cerebellum\nwithin the network. In order to specify hub nodes for a group\npopulation, we computed the percentage of maximum BC, DEG\nvaluesineveryROI,forlow/high-IQmales/females.\nStatistical Analysis\nSmall-world properties were investigated for all weighted an d\nundirected graphs and, afterwards, the corresponding MSTs\nwere constructed. Subsequently, three local (BC, ECC, DEG)\nand six global (diameter, degree correlation, radius, kappa, leaf\nfraction, tree hierarchy) metrics were computed in order to\nexamine the topological and functional characteristics of e very\nMST.Moreover,severalglobalweightedgraphmetrics,includi ng\naverageweightedclusteringcoeﬃcient,characteristicpat hlength,\nsmall-worldness and connectivity, were also examined in ou r\nprocedure. The feature datasets are non-normally distribut ed,\nin general, so that natural log-transformation was applied in\norder to approximate normal distribution properties, with the\naddition of a very small constant (1 ·e−24) for avoiding zero-\nvalue transforms. Statistical analysis was performed using 1-\nway unbalanced ANOVA. In total, ﬁve cases were investigated\nin order to test for diﬀerences between (i) low and high-IQ\ngroups (low/high-IQ; 69/67), (ii) males in low and high-IQ\ngroups (low/high-IQ; 25/29), (iii) females in low and high-I Q\ngroups (low/high-IQ; 44/38), (iv) males and females in low-I Q\ngroup (males/females; 25/44), (v) males and females in high -IQ\ngroup (males/females; 29/38). All p-values were corrected based\non False Discovery Rate (FDR) using the Benjamini-Hochberg\nprocedure( BenjaminiandHochberg,1995 )withthesigniﬁcance\nlevelsetto0.05."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 45,
+            "end": 169,
+            "text": "Based on the standard cerebellum anatomical atlas provided b y\nthe Spatially Unbiased Infratentorial Template (SUIT) toolbox",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 116,
+            "end": 168,
+            "text": "ially Unbiased Infratentorial Template (SUIT) toolbo",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 232,
+            "end": 305,
+            "text": "cerebellum was parcellated into 28 lobules or regions of inte rest\n(ROIs)",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1895,
+            "end": 1994,
+            "text": "inordertoextracttheaverageBOLDsignalsfrom the\nremaining27ROIs,basedonSUIT’sstandardcerebellumatlas.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2803,
+            "end": 3023,
+            "text": "Cerebellum’sfunctionalconnectivity wasthen\nassessedbycomputingPearson’scorrelationcoeﬃcientsbet ween\neachpairofthe27ROIsinsidethecerebellum,leadingtoa27 ×\n27 correlation (adjacency) matrix per subject in both IQ grou ps.",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2190,
+            "end": 2245,
+            "text": "Weighted and undirected\nFrontiers in Human Neuroscience",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3076,
+            "text": "Negativecorrelationswerediscardedfromfurtheranalysis",
+            "labels": [
+              "Negative correlation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5320,
+            "end": 5381,
+            "text": "In our study, MSTs were constructed\nusing Kruskal’s algorithm",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9008,
+            "end": 9125,
+            "text": "Three local and six global MST metrics were computed in\norder to describe the topological characteristics of each MST",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3688,
+            "end": 3788,
+            "text": "ormedforcomputing Cwrand\nandLwrandusing Brain Connectivity Toolbox ( Rubinov and\nSporns, 2010 ). In ",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11993,
+            "end": 12058,
+            "text": "Statistical analysis was performed using 1-\nway unbalanced ANOVA.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 45,
+            "end": 169,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 232,
+            "end": 305,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1895,
+            "end": 1994,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2190,
+            "end": 2245,
+            "text": "4",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2803,
+            "end": 3023,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3076,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5320,
+            "end": 5381,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9008,
+            "end": 9125,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11993,
+            "end": 12058,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        }
+      ]
+    }
+  ]
+}

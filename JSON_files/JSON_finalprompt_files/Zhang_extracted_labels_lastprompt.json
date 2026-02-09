@@ -1,0 +1,917 @@
+{
+  "data": {
+    "text": "The catechol-o-methyltransferase Val158Met polymorphism modulates the intrinsic functional network centrality of the parahippocampal cortex in healthy subjects\nXiaolong Zhang1, Jin Li1, 2, Wen Qin3, Chunshui Yu3, Bing Liu1, 2 & Tianzi Jiang1, 2, 4, 5\nScientific RepoRts | 5:10105 | DOi: 10.1038/srep10105\nPublished: 09 June 2015\nwww.nature.com/scientificreports\n\nBased on resting-state fMRI data and eigenvector centrality (EC) maps, we found that COMT Val homozygous individuals exhibited significantly higher EC in the left parahippocampal cortex than Met carriers. Moreover, we demonstrated that the EC of the left parahippocampal cortex was significantly correlated with the correct rate of the 2-back working memory (WM) task. These findings suggest that COMT Val158Met affects the intrinsic functional connectivity between the left parahippocampus and other brain regions.\n\nParticipants. We recruited 323 healthy, young, right-handed Han Chinese individuals (157 males and 166 females, mean age = 22.7 ± 2.5 years, range = 18–31 years) in this study. After a complete study description, all participants provided written informed consent. This protocol was approved by the Ethics Committee of Tianjin Medical University. All experiments were performed in accordance with approved guidelines and regulations. We carefully screened the participants to ensure that they had no history of psychiatric or neurological illness, alcohol or drug abuse, or psychiatric treatment, as well as no contraindications for magnetic resonance image (MRI) examinations. All subjects were examined using the Chinese Revised Wechsler Adult Intelligence Scale (WAIS-RC). Following the exclusion of 6 subjects without COMT Val158Met genotype data and 30 subjects who lacked sufficient fMRI data, 287 subjects were included in our study.\n\nImage Data Acquisition. All subjects were scanned using a Signa HDx 3.0 Tesla MR scanner (GE Healthcare; Milwaukee, WI, USA). Resting-state functional imaging was performed using a single-shot gradient-echo echo-planar-imaging (SS-GRE-EPI) sequence, which is sensitive to blood oxygenation level-dependent (BOLD) contrast, with the following parameters: TR = 2,000 ms, TE = 30 ms, field of view (FOV) = 240 × 240 mm2, matrix = 64 × 64, flip angle = 90°, voxel size = 3.75 × 3.75 × 4.0 mm3, 40 slices, and 180 volumes. During the resting-state fMRI scans, all subjects were instructed to move as little as possible, keep their eyes closed, and refrain from sleeping.\n\nData Preprocessing. We checked each functional MRI from all subjects slice by slice to exclude the images with obvious inter-slice motion artifacts. Further data preprocessing was completed using the Data Processing Assistant for Resting-State fMRI (DPARSF)45. The following preprocessing steps were performed: 1) the first 10 volumes were discarded; 2) slice timing correction; 3) realignment of the volumes to the first volume to correct for head motion; 4) spatial normalization to a standard EPI template and resampling to 4 mm3 voxels; 5) spatial smoothing using an 8 mm Gaussian kernel; 6) linear regression to remove the effects of whole brain signals and linear trends; 7) temporal band-pass filtration (0.01-0.08 Hz); and 8) the multiple regression method was used to remove the potential effects of confounding factors. Subjects who exhibited a maximum displacement greater than 2 mm in any of the cardinal directions (x, y, z) or a maximum spin (x, y, z) greater than 2° were excluded from the following analyses.\n\nWorking Memory Performance. The working memory task was performed on a computer in a quiet room outside the MRI scanner. Working memory was assessed by letter-based 2-back and 3-back tasks as previously described. Briefly, the subjects viewed a series of letters that were presented sequentially; they were asked to judge whether the letter on the screen was the same as that presented two letters earlier (in the 2-back task) or that presented three letters earlier (in the 3-back task). Each task consisted of three blocks (30 trials per block). Prior to the experiment, the subjects were verbally instructed and completed a practice block to ensure that they understood the task prior to the completion of the formal tests. The number of correct trials divided by 90, namely the correct rate, was used as the index of working memory performance in the current study.\n\nNetwork Eigenvector Centrality Analysis. For each subject, we calculated voxel-wise eigenvector centrality (EC) maps as previously described. For each individual, an N×N correlation matrix (R) was computed based on the time series of each voxel throughout the whole brain; N represented the number of voxels of grey matter, and the square value of R was calculated. Here, we chose S = 1.2, which is represented by S = N log N / (log d̄ + 1), where d̄ represents the degree of the voxel i, which was used to define the network threshold. Then, an eigenvector that belonged to the normalized largest eigenvalue of the resulting weighted adjacency matrix (A) was calculated, and its entries (xi) provided a centrality measure for each voxel i. To ensure that the EC obeyed a Gaussian normal distribution, a Fisher’s z transformation was used for the subsequent statistical tests.\n\nStatistical Analysis. We used a Chi-square test to examine the gender differences and one-way ANOVA to identify differences in age, education level, and correct rate of the n-back working memory tasks between the two COMT Val158Met genotype groups using Statistical Package for the Social Sciences version 18.0 (SPSS, Chicago, IL, USA) for Windows. Voxel-wise two-sample t-tests implemented in SPM8 were subsequently used to map the group differences in the eigenvector centrality maps between the COMT Val158Met Val homozygotes and the Met carriers; age and gender were included as covariates of no interest. The results were subjected to a Monte Carlo simulation (n = 1000 iterations) and corrected for multiple comparisons with a significance level of p < 0.05 and a cluster size of at least 17 voxels (voxel-level threshold of P < 0.005, FWHM = 8 mm, cluster connection radius r = 5 mm; with a grey matter mask and a resolution of 4 mm3). This calculation was implemented using the AlphaSim procedure performed in the REST toolbox. Finally, a two-tailed Pearson correlation was used to test the association between the EC of the resulting clusters with significant differences in EC and working memory performance with age and gender as covariates. An alpha of p < 0.05 was considered significant."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 159,
+            "text": "The catechol-o-methyltransferase Val158Met polymorphism modulates the intrinsic functional network centrality of the parahippocampal cortex in healthy subjects",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 160,
+            "end": 250,
+            "text": "Xiaolong Zhang1, Jin Li1, 2, Wen Qin3, Chunshui Yu3, Bing Liu1, 2 & Tianzi Jiang1, 2, 4, 5",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 287,
+            "end": 304,
+            "text": "10.1038/srep10105",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 251,
+            "end": 269,
+            "text": "Scientific RepoRts",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 324,
+            "end": 328,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 732,
+            "end": 878,
+            "text": "These findings suggest that COMT Val158Met affects the intrinsic functional connectivity between the left parahippocampus and other brain regions.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1880,
+            "end": 1946,
+            "text": "Signa HDx 3.0 Tesla MR scanner (GE Healthcare; Milwaukee, WI, USA)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2176,
+            "end": 2189,
+            "text": "TR = 2,000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2191,
+            "end": 2201,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2203,
+            "end": 2238,
+            "text": "field of view (FOV) = 240 × 240 mm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2258,
+            "end": 2274,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2276,
+            "end": 2310,
+            "text": "voxel size = 3.75 × 3.75 × 4.0 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2312,
+            "end": 2321,
+            "text": "40 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2437,
+            "end": 2459,
+            "text": "keep their eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1780,
+            "end": 1820,
+            "text": "287 subjects were included in our study.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1948,
+            "end": 1980,
+            "text": "Resting-state functional imaging",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2748,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)45",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 907,
+            "end": 963,
+            "text": "323 healthy, young, right-handed Han Chinese individuals",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 965,
+            "end": 990,
+            "text": "157 males and 166 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 992,
+            "end": 1040,
+            "text": "mean age = 22.7 ± 2.5 years, range = 18–31 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 927,
+            "end": 939,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1377,
+            "end": 1557,
+            "text": "no history of psychiatric or neurological illness, alcohol or drug abuse, or psychiatric treatment, as well as no contraindications for magnetic resonance image (MRI) examinations.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1656,
+            "end": 1778,
+            "text": "Following the exclusion of 6 subjects without COMT Val158Met genotype data and 30 subjects who lacked sufficient fMRI data",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1145,
+            "end": 1226,
+            "text": "This protocol was approved by the Ethics Committee of Tianjin Medical University.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4242,
+            "end": 4384,
+            "text": "The number of correct trials divided by 90, namely the correct rate, was used as the index of working memory performance in the current study.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3812,
+            "end": 4003,
+            "text": "they were asked to judge whether the letter on the screen was the same as that presented two letters earlier (in the 2-back task) or that presented three letters earlier (in the 3-back task).",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3738,
+            "end": 3810,
+            "text": "the subjects viewed a series of letters that were presented sequentially",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4004,
+            "end": 4062,
+            "text": "Each task consisted of three blocks (30 trials per block).",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2803,
+            "end": 2804,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2748,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)45",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2803,
+            "end": 2838,
+            "text": "the first 10 volumes were discarded",
+            "labels": [
+              "Removal Init Vol — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2807,
+            "end": 2823,
+            "text": "first 10 volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2843,
+            "end": 2844,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2748,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)45",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2843,
+            "end": 2866,
+            "text": "slice timing correction",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2871,
+            "end": 2872,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2748,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)45",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2871,
+            "end": 2944,
+            "text": "realignment of the volumes to the first volume to correct for head motion",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2949,
+            "end": 2950,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2748,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)45",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2949,
+            "end": 3028,
+            "text": "spatial normalization to a standard EPI template and resampling to 4 mm3 voxels",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3016,
+            "end": 3028,
+            "text": "4 mm3 voxels",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3033,
+            "end": 3034,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2748,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)45",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3033,
+            "end": 3080,
+            "text": "spatial smoothing using an 8 mm Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3060,
+            "end": 3080,
+            "text": "8 mm Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3085,
+            "end": 3086,
+            "text": "6",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2748,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)45",
+            "labels": [
+              "Global signal — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3106,
+            "end": 3147,
+            "text": "remove the effects of whole brain signals",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3085,
+            "end": 3086,
+            "text": "7",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2748,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)45",
+            "labels": [
+              "Temporal detrending — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3152,
+            "end": 3165,
+            "text": "linear trends",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3170,
+            "end": 3171,
+            "text": "8",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2748,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)45",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3170,
+            "end": 3199,
+            "text": "temporal band-pass filtration",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3201,
+            "end": 3213,
+            "text": "0.01-0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3223,
+            "end": 3224,
+            "text": "9",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2748,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)45",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3227,
+            "end": 3253,
+            "text": "multiple regression method",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3277,
+            "end": 3317,
+            "text": "potential effects of confounding factors",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3319,
+            "end": 3320,
+            "text": "10",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2748,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)45",
+            "labels": [
+              "Exclusion — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3319,
+            "end": 3513,
+            "text": "Subjects who exhibited a maximum displacement greater than 2 mm in any of the cardinal directions (x, y, z) or a maximum spin (x, y, z) greater than 2° were excluded from the following analyses.",
+            "labels": [
+              "Exclusion — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3344,
+            "end": 3470,
+            "text": "maximum displacement greater than 2 mm in any of the cardinal directions (x, y, z) or a maximum spin (x, y, z) greater than 2°",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4549,
+            "end": 4657,
+            "text": "an N×N correlation matrix (R) was computed based on the time series of each voxel throughout the whole brain",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4459,
+            "end": 4502,
+            "text": "voxel-wise eigenvector centrality (EC) maps",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5188,
+            "end": 5262,
+            "text": "a Fisher’s z transformation was used for the subsequent statistical tests.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5350,
+            "end": 5511,
+            "text": "one-way ANOVA to identify differences in age, education level, and correct rate of the n-back working memory tasks between the two COMT Val158Met genotype groups",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5613,
+            "end": 5813,
+            "text": "Voxel-wise two-sample t-tests implemented in SPM8 were subsequently used to map the group differences in the eigenvector centrality maps between the COMT Val158Met Val homozygotes and the Met carriers",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

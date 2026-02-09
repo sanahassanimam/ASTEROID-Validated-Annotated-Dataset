@@ -1,0 +1,1038 @@
+{
+  "data": {
+    "text": "Sleep/Wake Regularity Associated with Default Mode Network Structure among Healthy Adolescents and Young Adults\n\nScientific Reports (2020) 10:509 | https://doi.org/10.1038/s41598-019-57024-3\n\nJessica R. Lunsford-Avery, Katherine S. F. Damme, Matthew M. Engelhard, Scott H. Kollins & Vijay A. Mittal\n\nTwenty-five healthy adolescents and young adults (age range = 12–22; mean = 18.08; SD = 2.64, 56% female) completed 7 days of actigraphy and resting-state fMRI. Sleep regularity was captured by the Sleep Regularity Index (SRI) and the relationship between the SRI and DMN was examined using graph theory analysis.\n\nMethods\nparticipants and procedure. A total of 25 healthy participants (age 12–22, mean = 18.08, SD = 2.64; 14 (56%) females) were recruited through the Adolescent Development and Preventive Treatment (ADAPT) Program via media announcements. The sample was 52% white, 32% Hispanic, and 16% Asian, and the mean parental education level was 16.28 years (SD = 2.40). Participants (and for those under age 18, their parent or legal guardian) completed informed consent/assent. All procedures were approved by the institutional review board of the University of Colorado Boulder and all research was performed in accordance with relevant guidelines and regulations. Of 33 possible participants, 25 met all inclusion criteria and participated in the current study. The majority of the sample (92%) were right handed.\n\nMRi acquisition and processing. A 3T Siemens Tim Trio MRI Scanner (Siemens AG, Munich, Germany) acquired images with a standard 12-channel head coil. Images included a structural/T1 image for registration and a resting-state functional image. The structural/T1-weighted image was acquired in the sagittal plane and utilized a magnetization prepared rapid gradient multi-echo (MPRAGE) approach (192 interleaved slices; 256 mm field of view; isotropic voxels 1 mm3, GRAPPA parallel imaging factor of 2, Time to repetition (TR) = 2.530 s; Times to Echo (TE) = 1.64 ms, 3.5 ms, 5.36 ms, 7.22 ms, 9.08 ms; flip angle = 7°). A resting-state blood oxygen level dependent (BOLD) scan was acquired with a T2*-weighted echo-planar functional protocol (33 slices in a 240 mm field of view; 3.8 × 3.8 × 3.5 mm voxels; TR = 2.00 s; TE = 29 ms; Flip Angle = 75°). Participants were instructed to close their eyes during the resting-state scans which lasted 5 min 34 s.\n\nResting-state data processing. FSL v6 was used to preprocess data and these steps included a 100 s high-pass filtering and 6-mm FWHM kernel spatial smoothing after brain extraction. Resting state images were first aligned to the native space structural image, then to a template space (Montreal Neurological Institute 2-mm brain template) in a two-step process. Temporal derivative regressors were used to account for motion and were calculated using the artifact detection software (ART). The ART software calculated three translation and three rotation parameters, as well as a series of image specific confound regressors which noted outliers in framewise movement and brain activation. To identify brain activation outliers, voxels were compared based on the z-normalized mean signal across all voxels as a function of time and were considered outliers if they exceeded a z-score of 3. A composite measure of total motion, or maximum voxel displacement, across translation and rotation identified any motion outliers as frames where the absolute value of motion exceeded 1 mm. All motion regressors were defined at the subject level of the model as a temporal derivative nuisance covariate.\n\nConnectivity matrices. CONN toolbox ROI-to-ROI analyses v.18.b in conjunction with SPM12 generated connectivity analyses. Additional denoising regressors included grey matter, white matter, CSF, and mean global signal. To generate these regressors, signal was extracted from masks generated in SPM12 by segmenting structural/T1 images into gray matter, white matter, and CSF. The ROI level time course was created by averaging voxels, and the resultant time courses were defined by Fisher’s Transformed bivariate coefficient. The result was a correlation matrix for each subject reflecting the resting-state connectivity between each ROI. A human connectome project template atlas of intrinsic resting-state networks provided in the CONN 18.b toolbox (32 regions over 6 networks) defined the ROIs.\n\nGraph theory analyses. ROI-to-ROI metrics (path length and clustering coefficient) were calculated using graph theory analyses, where adjacency matrix edges were weighted by cost values over 0.15 with a two-sided FDR-correction threshold of p < 0.05, and related to the SRI.\n\nData availability. The datasets generated during and/or analyzed during the current study are available from the senior author on reasonable request.\n\nOpen Access. This article is licensed under a Creative Commons Attribution 4.0 International License.\n\nTitle: Sleep/Wake Regularity Associated with Default Mode Network Structure among Healthy Adolescents and Young Adults\n\nConnectivity matrices\nCONN toolbox ROI-to-ROI analyses (v18.b) in conjunction with SPM12 were used to generate connectivity matrices. The regions of interest used a human connectome project template atlas of intrinsic resting-state networks, including 32 regions over 6 networks. ROI-level time courses were created by averaging voxels within each ROI, and connectivity was defined by Fisher’s transformed bivariate correlation coefficients.\n\nGraph theory analyses\nROI-to-ROI graph metrics including path length and clustering coefficient were calculated using graph theory analyses. Adjacency matrix edges were weighted by cost values over 0.15 with a two-sided FDR-correction threshold of p < 0.05. Path length reflects the average minimum path distance between nodes, while clustering coefficient reflects the degree of interconnectedness within the network."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 111,
+            "text": "Sleep/Wake Regularity Associated with Default Mode Network Structure among Healthy Adolescents and Young Adults",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 133,
+            "end": 137,
+            "text": "2020",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 113,
+            "end": 131,
+            "text": "Scientific Reports",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 164,
+            "end": 190,
+            "text": "10.1038/s41598-019-57024-3",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 192,
+            "end": 217,
+            "text": "Jessica R. Lunsford-Avery",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 219,
+            "end": 240,
+            "text": "Katherine S. F. Damme",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 242,
+            "end": 262,
+            "text": "Matthew M. Engelhard",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 264,
+            "end": 280,
+            "text": "Scott H. Kollins",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 283,
+            "end": 298,
+            "text": "Vijay A. Mittal",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 300,
+            "end": 460,
+            "text": "Twenty-five healthy adolescents and young adults (age range = 12–22; mean = 18.08; SD = 2.64, 56% female) completed 7 days of actigraphy and resting-state fMRI.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4851,
+            "end": 4905,
+            "text": "Creative Commons Attribution 4.0 International License",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4748,
+            "end": 4802,
+            "text": "available from the senior author on reasonable request",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1461,
+            "end": 1492,
+            "text": "3T Siemens Tim Trio MRI Scanner",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2169,
+            "end": 2178,
+            "text": "33 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2184,
+            "end": 2204,
+            "text": "240 mm field of view",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2206,
+            "end": 2231,
+            "text": "3.8 × 3.8 × 3.5 mm voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2238,
+            "end": 2242,
+            "text": "2.00",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2251,
+            "end": 2253,
+            "text": "29",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2272,
+            "end": 2275,
+            "text": "75°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2370,
+            "end": 2380,
+            "text": "5 min 34 s",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2309,
+            "end": 2325,
+            "text": "close their eyes",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 662,
+            "end": 664,
+            "text": "25",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2414,
+            "end": 2420,
+            "text": "FSL v6",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1638,
+            "end": 1651,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 662,
+            "end": 664,
+            "text": "25",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Inclusion criteria"
+          ],
+          "id": "m0025"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 687,
+            "end": 721,
+            "text": "age 12–22, mean = 18.08, SD = 2.64",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1374,
+            "end": 1424,
+            "text": "The majority of the sample (92%) were right handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 723,
+            "end": 739,
+            "text": "14 (56%) females",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1308,
+            "end": 1334,
+            "text": "met all inclusion criteria",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1276,
+            "end": 1334,
+            "text": "Of 33 possible participants, 25 met all inclusion criteria",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1124,
+            "end": 1188,
+            "text": "institutional review board of the University of Colorado Boulder",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2541,
+            "end": 2557,
+            "text": "brain extraction",
+            "labels": [
+              "Skull extraction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Skull extraction — Parameters",
+            "Skull extraction — Algorithm"
+          ],
+          "id": "m0032"
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2414,
+            "end": 2420,
+            "text": "FSL v6",
+            "labels": [
+              "Skull extraction — Software"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2541,
+            "end": 2542,
+            "text": "1",
+            "labels": [
+              "Skull extraction — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2480,
+            "end": 2489,
+            "text": "high-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2476,
+            "end": 2501,
+            "text": "100 s high-pass filtering",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2476,
+            "end": 2477,
+            "text": "2",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2414,
+            "end": 2420,
+            "text": "FSL v6",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2506,
+            "end": 2515,
+            "text": "6-mm FWHM",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2506,
+            "end": 2507,
+            "text": "3",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2414,
+            "end": 2420,
+            "text": "FSL v6",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2597,
+            "end": 2641,
+            "text": "aligned to the native space structural image",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2597,
+            "end": 2598,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2414,
+            "end": 2420,
+            "text": "FSL v6",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2653,
+            "end": 2721,
+            "text": "template space (Montreal Neurological Institute 2-mm brain template)",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2653,
+            "end": 2654,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2414,
+            "end": 2420,
+            "text": "FSL v6",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2745,
+            "end": 2807,
+            "text": "Temporal derivative regressors were used to account for motion",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2867,
+            "end": 2870,
+            "text": "ART",
+            "labels": [
+              "motion regression — Software"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2745,
+            "end": 2746,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2973,
+            "end": 3007,
+            "text": "image specific confound regressors",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2867,
+            "end": 2870,
+            "text": "ART",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2973,
+            "end": 2974,
+            "text": "9",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3828,
+            "end": 3953,
+            "text": "signal was extracted from masks generated in SPM12 by segmenting structural/T1 images into gray matter, white matter, and CSF",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3662,
+            "end": 3667,
+            "text": "SPM12",
+            "labels": [
+              "Extract regressors — Software"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3828,
+            "end": 3829,
+            "text": "7",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3778,
+            "end": 3796,
+            "text": "mean global signal",
+            "labels": [
+              "Global signal — Type"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3778,
+            "end": 3779,
+            "text": "8",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5073,
+            "end": 5112,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5160,
+            "end": 5186,
+            "text": "32 regions over 6 networks",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5227,
+            "end": 5243,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5227,
+            "end": 5243,
+            "text": "averaging voxels",
+            "labels": [
+              "Time series ROI — Type"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5314,
+            "end": 5348,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5314,
+            "end": 5348,
+            "text": "bivariate correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5293,
+            "end": 5313,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5293,
+            "end": 5313,
+            "text": "Fisher’s transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5532,
+            "end": 5553,
+            "text": "5",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5549,
+            "end": 5553,
+            "text": "0.15",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5599,
+            "end": 5607,
+            "text": "p < 0.05",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5408,
+            "end": 5419,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5408,
+            "end": 5419,
+            "text": "path length",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5424,
+            "end": 5446,
+            "text": "clustering coefficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0072"
+        }
+      ]
+    }
+  ]
+}

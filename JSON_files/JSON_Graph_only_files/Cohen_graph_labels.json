@@ -1,0 +1,471 @@
+{
+  "data": {
+    "text": "Functional connectivity\nTo calculate functional connectivity between pairs of brain regions, we\npartitioned the brain into cortical ROIs using two different whole-brain\natlases: the 96 cortical ROIs from the anatomical Harvard–Oxford atlas\n(Desikan et al., 2006) and the 264 cortical and subcortical ROIs from a\ncommonly used functional brain atlas, the areal atlas from Power et al.\n(2011). Throughout, we refer to the Harvard–Oxford atlas as the ana-\ntomical atlas and the Power atlas as the functional atlas. We conducted all\nanalyses on each atlas separately to confirm that our results were not due\nto the idiosyncrasies of any single atlas. For each atlas, the fully processed\ntime-series data were averaged within each ROI and then each ROI’s\naverage time-series was correlated with the average time-series for all\nother ROIs, resulting in a 96 (cid:7) 96 (anatomical atlas) or 264 (cid:7) 264\n(functional atlas) correlation matrix for each task (or rest) block of each\nparticipant. We constructed the correlation matrices identically for rest\nand for both tasks with the goal of relating overall functional connectivity\nduring rest (intrinsic connectivity) to that during task performance (en-\ncompassing both task-related and background connectivity). The corre-\nlation coefficients were standardized into z-scores to allow for statistical\nconclusions to be made from the magnitudes of the correlations. Due to\nminor signal dropout in the inferior temporal and orbitofrontal cortex,\ndata from six ROIs of the anatomical atlas and 18 ROIs of the functional\natlas were not collected in all 30 included participants. Therefore, all\nanalyses were conducted on a 90 (cid:7) 90 (anatomical) or 246 (cid:7) 246 (func-\ntional) Fisher-transformed connectivity matrix that included only ROIs\nwith data from all participants.\n\nFor the resting state scans, each time-series included the entire run\n(600 s; 300 volumes). For the task scans, each time-series included only\nthe relevant volumes for a given block. Each block time-series began 6 s (3\nvolumes) after the start of each block and ended 6 s (3 volumes) after the\nend of each block to account for the delay of the hemodynamic response.\nAlthough concatenating across nonadjacent volumes is typically done\nwhen probing time-series that are not contiguous in time (i.e., across task\nblocks within a scan or combining data across multiple scans), concate-\nnation ignores important temporal information that may be critical\nwhen measuring low-frequency neural oscillations. For example, if signal\nintensity changes from the last volume of one block to the first volume of\nthe next, spurious correlations could be induced. Therefore, we chose to\nanalyze our data in two different ways to ensure that any results were not\ndue to the specific data combination procedure selected. First, we calcu-\nlated time-series correlations within each block individually and then\naveraged across all blocks to result in a single, average time-series for each\ncondition. For this method, termed “block-wise connectivity,” each se-\nquence tapping task time-series was 14 s (7 volumes) and each n-back\ntask time-series was 50 s (25 volumes). Sequence tapping time-series\nwere separated into right-then-left and interleaved conditions (48 blocks\neach). N-back time-series were separated into 0-back, 2-back, and 3-back\nconditions (10 blocks of 0-back; 11 blocks each of 2-back and 3-back).\nConnectivity matrices of all blocks of a given condition were averaged\ntogether to stabilize connectivity values. Although the block length was\nquite different across tasks, the total number of volumes used to calculate\neach connectivity value was similar (300 volumes for resting blocks; 336\nvolumes for each sequence tapping condition; 275 volumes each for\nn-back 2-back and 3-back conditions). Second, we standardized each\nblock (mean (cid:2) 0; SD (cid:2) 1) to minimize the possibility of spurious corre-\nlations being induced due to changes in signal intensity or variability\nacross blocks and then concatenated across blocks. This method, termed\n“concatenated connectivity,” resulted in a single time-series for each\ncondition, with 336 volumes for each sequence tapping condition and\n275 volumes each for n-back 2-back and 3-back conditions. As before,\nthere was a single block of 300 volumes for the resting state, since resting\nstate blocks were continuous and thus did not require averaging or con-\ncatenation. Results were nearly identical regardless of which method was\nused. Statistical comparison of the results of the two methods with paired\nt tests resulted in all p-values greater than 0.99 when FDR correcting for\n60 comparisons (one for each statistical test conducted). Given that there\nwere no significant differences in results when comparing the two meth-\nods, we only report results for the block-wise connectivity method.\n\nGraph construction\nTo create graphs from the Fisher-transformed connectivity matrices of\nthe anatomical and functional atlases, we used tools from the Brain Con-\nnectivity Toolbox (www.brain-connectivity-toolbox.net; Rubinov and\nSporns, 2010, RRID:SCR_004841). First, we assigned each node to a\nnetwork using the consensus clustering method (Lancichinetti and For-\ntunato, 2012). We used the Louvain community detection algorithm\nwith weighted edges ( positive only) to produce an estimate of the opti-\nmal partitioning of nodes into networks (Rubinov and Sporns, 2011).\nWe set the resolution parameter ((cid:2)), which determines the size of each\nnetwork within the whole-brain graph, to 1.25 because this value pro-\nduced functional graphs with the same number of networks that were\nreported in the initial study describing the functional atlas (Power et al.,\n2011). To maintain analytical consistency across atlases, we used (cid:2) (cid:2)\n1.25 for both the anatomical and functional atlases. Because the Louvain\ncommunity detection algorithm is stochastic, we ran this algorithm 150\ntimes and created a consensus matrix, D, from the 150 partitions, where\neach cell (Dij) indicates the proportion of partitions that particular pair of\nnodes (i,j) were assigned to the same network. We thresholded each cell\nat 0.5. In other words, the agreement of all pairs of nodes that were not\nassigned to the same network at least 50% of the time was set to 0. The\ngoal of this step was to remove the influence of noisy, and potentially\nspurious, node agreement. Last, we created a consensus partition from\nthe agreement matrix, D, by running the Louvain algorithm 100 times to\ncreate 100 consensus partitions. This last step was repeated until a single\nrepresentative partition was obtained. This method has been shown to\nproduce more accurate partitions than other commonly used algorithms\n(Lancichinetti and Fortunato, 2012).\n\nFor each atlas, we created optimal network partitions separately for\neach condition of each task for each participant. We then constructed\nundirected, unweighted graphs using the Fisher-transformed correlation\nmatrices described above. First, we thresholded each connectivity matrix\nto create an adjacency matrix of 1s (above threshold) and 0s (below\nthreshold). Each of the ROIs was a node of the graph and each of the\nabove-threshold connections was an edge. To be able to compare graphs\nmost directly across conditions and participants, we equated the number\nof edges across all graphs (van Wijk et al., 2010; Garrison et al., 2015). We\ndid this by thresholding each graph at a set cost, or percentage of total\nedges. Each analysis was conducted over a range of costs (10 –25% in 5%\nincrements) to ensure that any results were not due to the chosen thresh-\nold. All graph metrics reported are the average value across all costs. The\nrange of thresholds was chosen because it is within the range of values\nthat produce graphs with small world characteristics (Bullmore and\nBassett, 2011).\n\nGraph theoretical metrics\nTo calculate all graph theoretical metrics, we used an in-house software\ntoolbox developed at UC Berkeley that was programmed with Python\n(www.python.org, RRID:SCR_008394). The toolbox, Brainx (cid:8)https://\ngithub.com/nipy/brainx(cid:9), is based on the Networkx graph theory pack-\nage (cid:8)https://networkx.github.io/(cid:9). First, we calculated the modularity of\nthe graphs using the adjacency matrices and the optimal network parti-\ntions of each graph as input. Modularity relates the number of within-\nnetwork connections to all connections to quantify the strength of\nsegregation into distinct networks. Higher values indicate stronger sep-\naration of networks. Modularity (Q) is defined as follows:\n\nQ (cid:3) (cid:2)\n\nm\n\ni(cid:2)1\n\n(cid:8)eii\n\n2(cid:9)\n(cid:4) ai\n\nwhere eii is the fraction of all edges that connect two nodes within module\ni, ai is the fraction of edges that connect a node in module i to any other\nnode, and m is the total number of modules.\n\nNext, we calculated the strength of system segregation of our graphs\n(Chan et al., 2014). We used the unthresholded, Fisher-transformed con-\nnectivity matrices to calculate system segregation based on nodal assign-\nthe optimal partitions described above. Within-network\nment of\nconnectivity strength was calculated as the mean connectivity strength of\nedges between all pairs of nodes within the same network (z(cid:2)\nw). Between-\nnetwork connectivity strength was calculated as the mean connectivity\n\n\fCohen and D’Esposito • Segregation and Integration during Cognition\n\nJ. Neurosci., November 30, 2016 • 36(48):12083–12094 • 12087\n\nstrength of edges between all pairs of nodes that spanned two net-\nworks (z(cid:2)\nb). System segregation was calculated to describe the relative\nstrength of within-network connectivity compared to between-\nnetwork connectivity as follows:\n\nSystem Segregation (cid:3)\n\nz(cid:2)\n\nw\n\nb\n\n(cid:4) z(cid:2)\nz(cid:2)\n\nw\n\nIn addition to network-based measures, we calculated average local\nefficiency and global efficiency across all nodes regardless of network\nmembership (Latora and Marchiori, 2001; Achard and Bullmore, 2007).\nBoth are calculated using the metric of minimum path length (L), which\ncounts the smallest number of edges that must be crossed to get from\nnode i to node j. The efficiency of each node, nodal efficiency (Enodal), is\ncalculated as the inverse of the harmonic mean of L between node i and all\nother nodes as follows:\n\nEnodal\n\n(cid:8)i(cid:9) (cid:3)\n\n1\n\n(cid:8)N (cid:4) 1(cid:9) (cid:2)\n\nj(cid:2)G\n\n1\nLi, j\n\nwhere N is the number of nodes in graph G, and Li,j is the minimum path\nlength between nodes i and j.\n\nLocal efficiency (Elocal) is a measure of the efficiency of information\ntransfer limited to neighboring nodes (i.e., nodes with direct edges [L (cid:2)\n1] to the node of interest). Local efficiency is calculated as the average\nnodal efficiency among the neighboring nodes of node i, excluding node\ni itself, as follows:\n\nElocal\n\n(cid:3)\n\n1\n(cid:8)NGi\n\nNGi\n\n(cid:4) 1(cid:9) (cid:2)\n\nj,k(cid:2)Gi\n\n1\nLj,k\n\nwhere N is the number of nodes in graph Gi. Gi is the subgraph of graph\nG that includes all neighboring nodes of i (excluding i).\n\nGlobal efficiency (Eglobal) is a measure of the efficiency of information\ntransfer among all pairs of nodes in the graph, and is simply calculated as\nthe average nodal efficiency of all nodes as follows:\n\nEglobal\n\n(cid:3)\n\nN(cid:8)N (cid:4) 1(cid:9) (cid:2)\n\n1\n\ni(cid:10)j(cid:2)G\n\n1\nLi, j\n\nLast, we quantified two properties of individual nodes: participation\ncoefficient, an index of internetwork connections, and within-module\ndegree, an index of intranetwork connections (Guimera` and Amaral,\n2005a,2005b). Participation coefficient (PC) is defined as follows:\n\n(cid:3) 1 (cid:4) (cid:2)\n\nNM (cid:3) kis\n\n(cid:4) 2\n\ns(cid:2)1\n\nki\n\nPCi\n\nwhere kis is the degree (number of connections) of node i to other nodes\nin its own network (s), and ki is the degree of node i regardless of network\nmembership. By subtracting that ratio from 1, participation coefficient is\na normalized measure of the connections that are not within a node’s own\nnetwork, or that are across networks.\n\nWithin-module degree (WD) is defined as follows:\n\nWDi\n\n(cid:3)\n\nkis\n\n(cid:4) k(cid:2)\n(cid:5)\nksi\n\nsi\n\nwhere kis is the degree of node i to other nodes in its own network (s), k(cid:2)\nsi\nis the average degree of all nodes in s (only including within-network\nconnections), and (cid:5)\nksi is the SD of the degree of all nodes in s. Within-\nmodule degree, therefore, is a standardized (z-scored) metric of how\nconnected a node is to all other nodes within its own network.\n\nParticipation coefficient and within-module degree can be used to define\ndifferent types of nodes that are important for network communication.\nHere, we investigated how two of these types of nodes were related to specific\ncognitive demands: provincial hubs and connector hubs. We adapted the\ndefinitions of these two node types from Guimera` and Amaral (2005a,\n2005b). These investigators defined provincial hubs as nodes that are impor-\ntant for within-network, but not between-network, communication as as-\nsessed by high WD ((cid:6) 2.5) and low PC ((cid:7)0.3). Due to the different types of\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n.\n.\n.\n.\n.\n.\n\n..........\n..........\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.......\n.........\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.......\n.......\n\n.\n.\n.\n.\n.\n.\n.\n\n.................\n.........\n.........\n..\n\n.\n.\n.\n.\n.\n.\n.\n.\n.\n\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.............\n\n............\n\n.\n.\n.\n.\n.\n.\n.\n.\n.\n\n.........\n\nFigure 2. Measures of network organization. Gray ovals are networks of the graph, circles\nare nodes, solid and dashed lines are edges. Modularity is a measure of network segregation\ninto distinct networks, with sparse connections across networks. System segregation is a mea-\nsure of the relative strength of within-network connections (dashed lines) to between-network\nconnections (solid lines). Green nodes and edges depict a cluster of nodes with high local\nefficiency (the efficiency of information transfer among neighboring, or directly connected,\nnodes). Yellow edges depict the shortest path between the two yellow nodes; the shorter the\naverage path length across all pairs of nodes, the higher the global efficiency (the efficiency of\ninformation transfer across the entire system). The red node depicts a provincial hub (strong\nwithin-network, but weak between-network connectivity). The blue node depicts a connector\nhub (strong between-network, but weak within-network connectivity). Figure adapted with\npermission from Rubinov and Sporns (2010).\n\nnetworks examined, their WD was higher than that observed in our partic-\nipants; therefore, we defined provincial hubs as WD (cid:6) 1.5 and PC (cid:7) 0.3.\nConnector hubs were defined by Guimera` and Amaral (2005a, 2005b) as\nnodes that are important for between-network, but not within-network,\ncommunication (WD (cid:4) 2.5, PC (cid:5) 0.62). Again, we adapted their defi-\nnition and defined connector hubs in our study as WD (cid:4) 1.5 and PC (cid:5) 0.8.\nThe thresholds were chosen to ensure that all participants had at least one\nnode above that threshold for at least one task. A schematic describing all\nmetrics calculated is visualized in Figure 2.\n\nFor statistical comparisons between the resting and task scans, as well as\nbetween the two tasks, metrics for both active conditions of each task were\naveraged (right-then-left and interleaved conditions for the sequence tap-\nping task and 2-back and 3-back conditions for the n-back task). We com-\nbined the two conditions of each task because the average metrics for each\ntask condition were not significantly different from each other, with one\nexpected exception: system segregation, which measures the relative strength\nof between-network and within-network connectivity, was significantly\nstronger during the right-then-left than during the interleaved condition of\n(cid:2) 3.33, cor-\nthe sequence tapping task, for the functional atlas only (t(28)\nrected p (cid:2) 0.015). This was expected due to the increased interhemispheric\nintegration anticipated during the interleaved condition (Sun et al., 2004;\nGrefkes et al., 2008). Importantly for the below analyses, investigating the\ntwo conditions separately did not change the results, so they are reported\ncombined to remain consistent (all other p-values (cid:5) 0.08, FDR corrected\nfor 6 comparisons). Paired t tests were conducted to compare any two tasks\nwithin an individual (rest vs sequence tapping, rest vs n-back, sequence\ntapping vs n-back). For comparisons involving the sequence tapping task, in\nwhich one additional participant was excluded due to computer malfunc-\ntion (see “Participants” section), that participant was also removed from the\ncomparison task to limit comparisons to the same participants for both\ntasks. For relationships with performance, behavior and brain metrics for\nonly the most difficult condition were correlated using Pearson’s correla-\n\n\f12088 • J. Neurosci., November 30, 2016 • 36(48):12083–12094\n\nCohen and D’Esposito • Segregation and Integration during Cognition\n\nRest\n\nAnatomical Atlas\nSequence Tapping\n\nN-back\n\nRest\n\nFunctional Atlas\nSequence Tapping\n\nN-back\n\nA\n\nB\n\ntions because brain– behavior relationships were\nnot identical for the two task conditions. We fo-\ncused on the most difficult condition of each task\nto maximize the effort needed for successful per-\nformance, which we hypothesized would maxi-\nmize concentration on the task and therefore\nbrain– behavior relationships. Because we did\nnot have specific hypotheses regarding which\ngraph metrics would be related to behavior, we\nrelated behavioral performance on the relevant\ntask to all six graph theoretical metrics that we\ncalculated during the interleaved condition of the\nsequence tapping task and the 3-back condition\nof the n-back task (modularity, system segrega-\ntion, local efficiency, global efficiency, number of\nprovincial hubs, and number of connector hubs).\nBecause of a computer malfunction, behavioral\ndata were not collected for one participant during\nthe n-back task, so that participant was excluded\nfrom the correlations with behavior, leaving 29\nparticipants for those analyses.\n\nIn addition, a participant was excluded for\nan individual correlation analysis if that partic-\nipant was an outlier for the relevant brain or\nbehavior metric (as defined by being (cid:5)3\nSDs from the mean); this resulted in a single\nparticipant being excluded from 2 of the 24\nanalyses: functional atlas n-back task global ef-\nficiency and number of provincial hub nodes,\nleaving 28 participants for those two correla-\ntions with behavior. No other participants for\nany other analyses were outliers.\n\nAll analyses that compared rest to sequence\ntapping, rest to n-back, and sequence tapping\nto n-back using paired t tests were FDR cor-\nrected for three comparisons. The behavioral\ncorrelations were FDR corrected for six com-\nparisons for each task separately. Corrected\np-values are reported at a significance thresh-\nold of corrected p (cid:2) 0.05."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 96,
+            "end": 239,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 96,
+            "end": 239,
+            "text": "partitioned the brain into cortical ROIs using two different whole-brain\natlases: the 96 cortical ROIs from the anatomical Harvard–Oxford atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 263,
+            "end": 391,
+            "text": "and the 264 cortical and subcortical ROIs from a\ncommonly used functional brain atlas, the areal atlas from Power et al.\n(2011).",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 392,
+            "end": 511,
+            "text": "Throughout, we refer to the Harvard–Oxford atlas as the ana-\ntomical atlas and the Power atlas as the functional atlas.",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1623,
+            "end": 1823,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1623,
+            "end": 1823,
+            "text": "Therefore, all\nanalyses were conducted on a 90 (cid:7) 90 (anatomical) or 246 (cid:7) 246 (func-\ntional) Fisher-transformed connectivity matrix that included only ROIs\nwith data from all participants.",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 647,
+            "end": 862,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 647,
+            "end": 862,
+            "text": "For each atlas, the fully processed\ntime-series data were averaged within each ROI and then each ROI’s\naverage time-series was correlated with the average time-series for all\nother ROIs, resulting in a 96 (cid:7) 96",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 647,
+            "end": 862,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 647,
+            "end": 862,
+            "text": "For each atlas, the fully processed\ntime-series data were averaged within each ROI and then each ROI’s\naverage time-series was correlated with the average time-series for all\nother ROIs, resulting in a 96 (cid:7) 96",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1261,
+            "end": 1412,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1261,
+            "end": 1412,
+            "text": "The corre-\nlation coefficients were standardized into z-scores to allow for statistical\nconclusions to be made from the magnitudes of the correlations.",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2827,
+            "end": 3055,
+            "text": "6",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2827,
+            "end": 3055,
+            "text": "First, we calcu-\nlated time-series correlations within each block individually and then\naveraged across all blocks to result in a single, average time-series for each\ncondition. For this method, termed “block-wise connectivity,”",
+            "labels": [
+              "Combine block — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3826,
+            "end": 4053,
+            "text": "we standardized each\nblock (mean (cid:2) 0; SD (cid:2) 1) to minimize the possibility of spurious corre-\nlations being induced due to changes in signal intensity or variability\nacross blocks and then concatenated across blocks.",
+            "labels": [
+              "Combine block — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5250,
+            "end": 5412,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5250,
+            "end": 5412,
+            "text": "We used the Louvain community detection algorithm\nwith weighted edges ( positive only) to produce an estimate of the opti-\nmal partitioning of nodes into networks",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5932,
+            "end": 6022,
+            "text": "we ran this algorithm 150\ntimes and created a consensus matrix, D, from the 150 partitions",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6931,
+            "end": 6960,
+            "text": "8",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6931,
+            "end": 6960,
+            "text": "undirected, unweighted graphs",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7332,
+            "end": 7589,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7332,
+            "end": 7589,
+            "text": "we equated the number\nof edges across all graphs (van Wijk et al., 2010; Garrison et al., 2015). We\ndid this by thresholding each graph at a set cost, or percentage of total\nedges. Each analysis was conducted over a range of costs (10 –25% in 5%\nincrements)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8241,
+            "end": 8380,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8241,
+            "end": 8380,
+            "text": "First, we calculated the modularity of\nthe graphs using the adjacency matrices and the optimal network parti-\ntions of each graph as input.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8885,
+            "end": 8974,
+            "text": "Next, we calculated the strength of system segregation of our graphs\n(Chan et al., 2014).",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9835,
+            "end": 9984,
+            "text": "In addition to network-based measures, we calculated average local\nefficiency and global efficiency across all nodes regardless of network\nmembership",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11380,
+            "end": 11563,
+            "text": "Last, we quantified two properties of individual nodes: participation\ncoefficient, an index of internetwork connections, and within-module\ndegree, an index of intranetwork connections",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4998,
+            "end": 5111,
+            "text": "we used tools from the Brain Con-\nnectivity Toolbox (www.brain-connectivity-toolbox.net; Rubinov and\nSporns, 2010",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7954,
+            "end": 8102,
+            "text": "we used an in-house software\ntoolbox developed at UC Berkeley that was programmed with Python\n(www.python.org, RRID:SCR_008394). The toolbox, Brainx",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8166,
+            "end": 8240,
+            "text": "Networkx graph theory pack-\nage (cid:8)https://networkx.github.io/(cid:9).",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7657,
+            "end": 7723,
+            "text": "11",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7657,
+            "end": 7723,
+            "text": "All graph metrics reported are the average value across all costs.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

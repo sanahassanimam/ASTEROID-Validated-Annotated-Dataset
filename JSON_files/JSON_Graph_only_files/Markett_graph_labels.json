@@ -1,0 +1,246 @@
+{
+  "data": {
+    "title": "Assessing the Function of the Fronto-Parietal Attention Network: Insights from Resting-State fMRI and the Attentional Network Test",
+    "text": "Sixteen regions of interest (ROIs) delineating the FPAN\nwere obtained from the literature and converted to MNI\ncoordinates [Fox et al., 2005; Toro et al., 2008]. ROIs were\ndefined as spheres with a 6mm radius around these MNI\ncoordinates (see Table I and Fig. 1). With a 6mm radius,\neach ROI comprised 904.77 mm3 or – with other words –\n33 3mm3 voxels. For the graph analysis, these sixteen ROIs\nwere set as nodes. The BOLD time series was extracted\nfrom each of the 33 voxels in each ROI and then averaged\nacross all voxels in this ROI. Then, the functional connectivity\nbetween each pair of ROIs was computed by means\nof a Pearson correlation. The correlation coefficients in the\nresulting 16  16 matrix were then z-standardized by\nFisher’s r-to-z transformation to approximate a Gaussian\ndistribution. This matrix represents the strength of the\nfunctional connectivity between all 16 areas in the FPAN\nand served as adjacency matrix for the graph analysis.\n\nWe then modeled the network as an undirected weighted graph G = (V,E) with V representing the\nregions in the FPAN (see Table I) and E the z-valued connectivity strength between any two of these regions. Edges\nwere thresholded with k ≥ 0, i.e. negative correlations\nwere set to zero. Thresholding is regularly applied in the\ncontext of graph theoretical approaches to functional imaging, mainly because the calculation of the centrality measures requires entries of the same sign to result in\nmeaningful measures. Then, we computed three centrality\nmeasures: The degree centrality of node i was calculated\nas the sum of its connecting edges. Eigenvector centrality\nEC of node i was computed as the i-th entry of an eigenvector corresponding to the largest eigenvalue of the\ngraph’s adjacency matrix. Betweenness centrality BC of\nnode i was computed as the sum of the fraction of shortest\npaths between any two nodes passing through it. Computation of BC was performed with the Matlab Boost Graph\nLibrary (http://dfleich.github.com/matlab-bgl)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 162,
+            "end": 179,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 183,
+            "end": 208,
+            "text": "spheres with a 6mm radius",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 415,
+            "end": 435,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 498,
+            "end": 506,
+            "text": "averaged",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 467,
+            "end": 476,
+            "text": "33 voxels",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 625,
+            "end": 644,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 625,
+            "end": 644,
+            "text": "Pearson correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 734,
+            "end": 764,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 734,
+            "end": 764,
+            "text": "Fisher’s r-to-z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 995,
+            "end": 1020,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 995,
+            "end": 1020,
+            "text": "undirected weighted graph",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1204,
+            "end": 1242,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1204,
+            "end": 1242,
+            "text": "negative correlations\nwere set to zero",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1480,
+            "end": 1508,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1937,
+            "end": 1963,
+            "text": "Matlab Boost Graph Library",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1523,
+            "end": 1782,
+            "text": "degree centrality of node i was calculated\nas the sum of its connecting edges. Eigenvector centrality\nEC of node i was computed as the i-th entry of an eigenvector corresponding to the largest eigenvalue of the\ngraph’s adjacency matrix. Betweenness centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

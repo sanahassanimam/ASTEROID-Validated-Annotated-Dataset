@@ -1,0 +1,680 @@
+{
+  "data": {
+    "text": "Graph-based Analysis of Functional Brain Networks for Processing Semantic Auditory and Visual Stimuli\nYang Xi 1, 2, Qi Li 1, * Siyuan He 1, Jinxing Zhang 1, MengChao Zhang 3 and Lin Liu 3,*\n1 School of Computer Science and Technology, Changchun University of Science and Technology, Changchun 130022, P.R. China; 2 School of Computer Science, Northeast Electric Power University, Jilin 132012, P.R. China; 3 Department of radiology, China-Japan Union Hospital of Jilin University, Changchun 130022, P.R. China\n*: liqi@cust.edu.cn, liulin5413@126.com\n\n978-1-7281-1699-0/19/$31.00 ©2019 IEEE 1010 Proceedings of 2019 IEEE International Conference on Mechatronics and Automation August 4 - 7, Tianjin, China\n\nAbstract - The human brain processes plenty of information from different senses, auditory and visual information for example, and then makes decision to guide our behaviors depending on their meaning. The brain is a rather intricate system in which different brain functional regions are linked by structural or functional connectivity. Although many studies have investigated the activated areas in cognitive task or in resting-state, the properties of functional network processing semantic auditory and visual stimuli remain unclear. Here, we acquired fMRI data while subjects performed a semantic discrimination task, and then explored the organization of functional brain network using graph theoretical analysis. We identified that increased demand for processing semantic auditory and visual inputs made the local efficiency lower to support more communication across global network. Hub regions with high degree distributed in the temporo-parieto-occipital network were found, which may reflect the mutual assistance of visual and auditory related regions in processing the correlated semantic information. These results provide evidence that processing semantic auditory and visual stimuli is associated with the communication across the global network, specially the regions in temporo-parieto-occipital network with high degree. \n\n18 healthy volunteers (9 female; age range: 21-27 years) having normal hearing capabilities and normal or corrected-to-normal vision participated in this fMRI experiment. All subjects are neurologically healthy and have no history or diagnosis of mental illness. All subjects were paid ̞100/h for the fMRI experiments. After the subjects fully understood the purpose and risks of our experiment, they gave written informed consent as per the protocol approved by the institutional research review board of Ethics Committee of Changchun University of Science and Technology. \n\nAs shown in Fig. 1, our task utilized visual (V), auditory (A), and bimodal audiovisual (AV) stimuli. Specifically, V stimuli consist of pictures of animals or tools from the international common Snodgrass-Vanderwart white-black line graphic library, and A stimuli consist of sounds obtained from the Internet corresponding to the animal or tool images, and AV stimuli consist of image and the corresponding sound presented simultaneously. Presentation 0.71 software running on a personal computer controlled the stimulus presentation. V stimulus was projected onto a screen behind the participants’ head. A mirror was placed in the head coil, by which the participants can see the V stimuli. The distance of participant’s eye and the projection screen was maintained 70 cm. The V stimuli were presented on the left or right side of the screen, with duration of 200 milliseconds. While the A stimuli were presented through earphones. The interstimulus interval varied randomly 2 s, 4 s and 6 s. In the present study, there were 40 auditory, 40 visual, and 40 audiovisual stimuli in each session. The frequencies of the tools and animals stimuli were both 50% for all stimulus groups. These three types of stimuli were presented with equal probability on both sides of the participant according to a pseudorandom sequence. \n\nAll participants need to complete eight sessions, in which four sessions were instructed to discriminate the stimuli presented on right hemisphere and other four sessions were instructed to discriminate the stimuli on the other hemisphere. Two types of sessions were conducted in an alternating fashion. The participants were asked to fix their eyes on a cross point on the center of the screen and pay attention to the target stimulus on one side and ignored those on the opposite side. Participants need to respond to stimuli by pressing one button of a keyboard in their right hands when they heard or /and saw the tools stimuli and pressing the other button of a keyboard in their left hands, as quickly and accurately as possible. There was a five-minute break between two sessions. \n\nA 3T Siemens scanner was used for collecting the task-state fMRI data with a T2-weighted gradient echo-planar imaging sequence. For each participant, 300 volumes were acquired with random time interval 2s, 6s and 10s. When obtained a 5-min resting-state fMRI data, the participants were asked to focus to a fixation cross on central of screen and remain relaxed. The sagittal T1-weighted magnetization prepared rapid gradient echo sequences were used to acquire the structural MRI data. The parameters are set as shown in TABLE I. \n\nCONN toolbox v15 (Gabrieli Laboratory, Massachusetts, USA) was used for preprocessing the task-state and resting-state fMRI data, and then construct functional connectivity. To reduce motion related artifacts, session-specific realignment parameters from preprocessing were used as first level covariates. Reduction in confounding noise signals was performed with CONN standard processing steps, including regression of cerebrospinal fluid (CSF) and white matter blood oxygen level dependent (BOLD) signals, despiking, nuisance regression of motion related components via the component based noise correction method (CompCor), linear detrending, before connectivity analysis [23]. Further correction of micromotion was also implemented. First-level (within-subjects) connectivity analysis was performed to compute the correlation of ROI (regions of interest)-to-ROI, which was defined according to set of coordinates reported in the AAL template, which consisted of 90 ROIs of the brain. After obtaining the ROI-to-ROI connectivity matrices of each participant, a second-level general linear model was generated using the connectivity matrices for population-level estimates and inferences. \n\nGraph theoretical analyses were completed in the GRETNA toolbox for attended V and A conditions, and resting-state. We explored global and local topological attributes of functional brain network. Global network metrics included small-worldness with characteristic path length Lp, lambda λ, clustering coefficient Cp, gamma γ and sigma σ. In addition, network efficiency including local efficiency Eloc and global efficiency Eg, assortativity r, hierarchy β and synchronization s were also computed. For local network metrics, we computed nodal degree. Paired-sample T-tests were used to detect significant differences of global and local network properties for attended A and V conditions, and resting-state with SPSS 19 (IBM Corp., Armonk, NY, USA). A difference with p value less than 0.05 was thought to have significance for the network parameters."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 101,
+            "text": "Graph-based Analysis of Functional Brain Networks for Processing Semantic Auditory and Visual Stimuli",
+            "labels": [
+              "Title"
+            ]
+          },
+          "Missing_sublabels": [
+            "DOI"
+          ]
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 102,
+            "end": 189,
+            "text": "Yang Xi 1, 2, Qi Li 1, * Siyuan He 1, Jinxing Zhang 1, MengChao Zhang 3 and Lin Liu 3,*",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 579,
+            "end": 584,
+            "text": "©2019",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 585,
+            "end": 589,
+            "text": "IEEE",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1822,
+            "end": 2046,
+            "text": "These results provide evidence that processing semantic auditory and visual stimuli is associated with the communication across the global network, specially the regions in temporo-parieto-occipital network with high degree.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4741,
+            "end": 4759,
+            "text": "3T Siemens scanner",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)",
+            "Number of slices",
+            "Slice thickness",
+            "Flip angle",
+            "Inter-slice gap",
+            "Field of View (cm)",
+            "TR (ms)",
+            "TE (ms)",
+            "Voxel Size (mm x mm x mm)"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4889,
+            "end": 4900,
+            "text": "300 volumes",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4973,
+            "end": 5002,
+            "text": "5-min resting-state fMRI data",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5035,
+            "end": 5100,
+            "text": "focus to a fixation cross on central of screen and remain relaxed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5272,
+            "end": 5330,
+            "text": "CONN toolbox v15 (Gabrieli Laboratory, Massachusetts, USA)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1299,
+            "end": 1327,
+            "text": "semantic discrimination task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3642,
+            "end": 3719,
+            "text": "there were 40 auditory, 40 visual, and 40 audiovisual stimuli in each session",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "Missing_sublabels": [
+            "Length of each trial",
+            "ISI distribution",
+            "Length of blocks",
+            "Efficiency optimization",
+            "Block/event correlation"
+          ]
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3475,
+            "end": 3503,
+            "text": "duration of 200 milliseconds",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3563,
+            "end": 3618,
+            "text": "interstimulus interval varied randomly 2 s, 4 s and 6 s",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4284,
+            "end": 4435,
+            "text": "fix their eyes on a cross point on the center of the screen and pay attention to the target stimulus on one side and ignored those on the opposite side",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "Missing_sublabels": [
+            "Stimuli repetition"
+          ]
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2663,
+            "end": 2725,
+            "text": "visual (V), auditory (A), and bimodal audiovisual (AV) stimuli",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3642,
+            "end": 3719,
+            "text": "there were 40 auditory, 40 visual, and 40 audiovisual stimuli in each session",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7018,
+            "end": 7215,
+            "text": "Paired-sample T-tests were used to detect significant differences of global and local network properties for attended A and V conditions, and resting-state with SPSS 19 (IBM Corp., Armonk, NY, USA)",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "Missing_sublabels": [
+            "Omnibus ANOVA"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2049,
+            "end": 2070,
+            "text": "18 healthy volunteers",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2082,
+            "end": 2104,
+            "text": "age range: 21-27 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2072,
+            "end": 2080,
+            "text": "9 female",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2106,
+            "end": 2181,
+            "text": "having normal hearing capabilities and normal or corrected-to-normal vision",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2237,
+            "end": 2310,
+            "text": "neurologically healthy and have no history or diagnosis of mental illness",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2491,
+            "end": 2621,
+            "text": "protocol approved by the institutional research review board of Ethics Committee of Changchun University of Science and Technology",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5482,
+            "end": 5483,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5482,
+            "end": 5576,
+            "text": "session-specific realignment parameters from preprocessing were used as first level covariates",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5678,
+            "end": 5679,
+            "text": "2",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5678,
+            "end": 5778,
+            "text": "regression of cerebrospinal fluid (CSF) and white matter blood oxygen level dependent (BOLD) signals",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5780,
+            "end": 5781,
+            "text": "3",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5780,
+            "end": 5789,
+            "text": "despiking",
+            "labels": [
+              "Despiking — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Despiking — Software",
+            "Despiking — Parameters"
+          ]
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5848,
+            "end": 5849,
+            "text": "4",
+            "labels": [
+              "CompCor — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5272,
+            "end": 5330,
+            "text": "CONN toolbox v15 (Gabrieli Laboratory, Massachusetts, USA)",
+            "labels": [
+              "CompCor — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5848,
+            "end": 5897,
+            "text": "component based noise correction method (CompCor)",
+            "labels": [
+              "CompCor — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "CompCor — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5899,
+            "end": 5900,
+            "text": "5",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5899,
+            "end": 5916,
+            "text": "linear detrending",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Software",
+            "Temporal detrending — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6205,
+            "end": 6206,
+            "text": "6",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6205,
+            "end": 6258,
+            "text": "AAL template, which consisted of 90 ROIs of the brain",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6205,
+            "end": 6206,
+            "text": "7",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6205,
+            "end": 6258,
+            "text": "AAL template, which consisted of 90 ROIs of the brain",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "ROI definition — Software",
+            "ROI definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6078,
+            "end": 6079,
+            "text": "8",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6078,
+            "end": 6137,
+            "text": "compute the correlation of ROI (regions of interest)-to-ROI",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software",
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6662,
+            "end": 6663,
+            "text": "9",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6662,
+            "end": 6803,
+            "text": "Global network metrics included small-worldness with characteristic path length Lp, lambda λ, clustering coefficient Cp, gamma γ and sigma σ.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6817,
+            "end": 6963,
+            "text": "network efficiency including local efficiency Eloc and global efficiency Eg, assortativity r, hierarchy β and synchronization s were also computed",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Software",
+            "Graph measures — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7018,
+            "end": 7020,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7018,
+            "end": 7215,
+            "text": "Paired-sample T-tests were used to detect significant differences of global and local network properties for attended A and V conditions, and resting-state with SPSS 19 (IBM Corp., Armonk, NY, USA)",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Result aggregation — Software",
+            "Result aggregation — Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

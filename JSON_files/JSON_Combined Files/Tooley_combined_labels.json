@@ -1,0 +1,784 @@
+{
+  "data": {
+    "text": "© The Author(s) 2019. Published by Oxford University Press.\nThis is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (http://creativecommons.org/\nlicenses/by-nc/4.0/), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited.\nFor commercial re-use, please contact journals.permissions@oup.com\n\nAbstract\nHigher socioeconomic status (SES) in childhood is associated with stronger cognitive abilities, higher academic\nachievement, and lower incidence of mental illness later in development. While prior work has mapped the associations\nbetween neighborhood SES and brain structure, little is known about the relationship between SES and intrinsic neural\ndynamics. Here, we capitalize upon a large cross-sectional community-based sample (Philadelphia Neurodevelopmental\nCohort, ages 8–22 years, n = 1012) to examine associations between age, SES, and functional brain network topology. We\ncharacterize this topology using a local measure of network segregation known as the clustering coefficient and find that it\naccounts for a greater degree of SES-associated variance than mesoscale segregation captured by modularity. High-SES\nyouth displayed stronger positive associations between age and clustering than low-SES youth, and this effect was most\npronounced for regions in the limbic, somatomotor, and ventral attention systems. The moderating effect of SES on positive\nassociations between age and clustering was strongest for connections of intermediate length and was consistent with a\nstronger negative relationship between age and local connectivity in these regions in low-SES youth. Our findings suggest\nthat, in late childhood and adolescence, neighborhood SES is associated with variation in the development of functional\nnetwork structure in the human brain.\n\nCerebral Cortex, January 2020;30: 1–19\n\ndoi: 10.1093/cercor/bhz066\nAdvance Access Publication Date: 22 July 2019\nOriginal Article\n\nO R I G I N A L A R T I C L E\n\nAssociations between Neighborhood SES and\nFunctional Brain Network Development\nUrsula A. Tooley1, Allyson P. Mackey2, Rastko Ciric3, Kosha Ruparel3,\nTyler M. Moore3, Ruben C. Gur3, Raquel E. Gur3, Theodore D. Satterthwaite3\nand Danielle S. Bassett3,4,5,6,7,†\n\nMaterials and Methods\nParticipant Sample\n\nThe PNC is a large community-based sample of youth between\nthe ages of 8 years and 22 years, a subset of which par-\nticipated in an extensive neuroimaging protocol (n = 1601)\n(Calkins et al. 2015). After excluding youth with abnormalities\nin brain structure or a history of medical problems that could\nimpact brain function (n = 154), poor imaging data that did not\npass quality assurance protocols (described in detail below,\nn = 432), or inadequate coverage of some brain regions in our\nparcellation (n = 3), we selected a subsample of 1012 children\nand adolescents (nf = 552 female, mean age = 15.78 years) with\nneuroimaging data. Participants excluded for abnormalities\nin brain structure or a history of medical problems were\nnot significantly older than our analysis sample (mean age\nof included participants = 14.89 years, mean age of excluded\nparticipants = 15.21 years; Student’s t-test P = 0.05); SES did not\nsignificantly differ between the groups (included participants:\nmean percent in poverty = 17%, mean percent married = 44%,\nmean median family income = $72 334; excluded participants:\nmean percent in poverty = 15%, mean percent married = 47%,\nmean median family income = $77 102; P = 0.08). Participants\nexcluded due to poor quality imaging data were significantly\nyounger (mean age of included participants = 15.78, mean age of\nexcluded participants = 12.77; P < 1 × 10−15) and from lower SES\nbackgrounds than our analysis sample (included participants:\nmean percent in poverty = 16%, mean percent married = 45%,\nmean median family income = $74 684; excluded participants:\nmean percent in poverty = 19%, mean percent married = 43%,\nmean median family income = $66 845; P < 0.001). Sex was\nsignificantly associated with mean edge weight (Wmale =\n0.021, Wfemale = 0.018, P < 0.001) and was not significantly\nassociated with motion (P > 0.11). Demographic information\nwas collected by participant report, including sex, race (coded as\nWhite, Black/African-American, or Other; Other includes Asian,\nNative American, Hawaiian Pacific Islander, and Multi-Racial),\nand home address.\n\nImaging Data Acquisition\n\nAll imaging data were acquired on the same 3T Siemens Tim\nTrio scanner with 32-channel head coil at the Hospital of\nthe University of Pennsylvania. BOLD signal was measured\nusing a whole-brain, single-shot, multi-slice, gradient-echo\n(GE) echoplanar sequence with the following parameters: 124\nvolumes; time repetition (TR) = 3000 ms; time echo (TE) = 32 ms;\nflip angle = 90 degrees, field of view (FoV) = 192 × 192 mm,\nmatrix = 64 × 64, slice thickness = 3 mm, slice gap = 0 mm,\nand effective voxel resolution = 3 × 3 × 3 mm. During the\nresting-state scan, subjects were instructed to keep their\neyes open and fixate on a white crosshair presented against\na dark background. Prior to the resting-state acquisition, a\nmagnetization-prepared rapid acquisition GE T1-weighted\nimage was acquired to aid spatial normalization to standard\natlas space, using the following parameters: TR = 1810 ms,\nTE = 3.51 ms, FOV = 180 × 240 mm, matrix = 256 × 192, 160\nslices, time to inversion = 1100 ms, flip angle = 9 degrees, and\neffective voxel resolution of 0.9 × 0.9 × 1 mm. Further study\nprocedures and design are described in detail elsewhere\n(Satterthwaite et al. 2014a).\n\nImaging Data Preprocessing\n\nWhole-head T1 images were registered to a custom population\ntemplate created with advanced normalization tools (ANTs)\n(Avants et al. 2011) using the top-performing diffeomorphic\nSyN registration (Klein et al. 2009). Preprocessing of resting-\nstate timeseries was conducted using a validated confound\nregression procedure that has been optimized to reduce\nthe influence of subject motion (Satterthwaite et al. 2013a;\nCiric et al. 2017); preprocessing was implemented in XCP\nengine, a multimodal toolkit that deploys processing instru-\nments from frequently used software libraries, including FSL\n(Jenkinson et al. 2012) and AFNI (Cox 1996). Further documen-\ntation is available at https://pipedocs.github.io/intro.html and\nhttps://github.com/PennBBL/xcpEngine. Following distortion\ncorrection using a B0 map, the first 4 volumes of the functional\ntimeseries were removed to allow signal stabilization, leaving\n120 volumes for subsequent analysis. Functional timeseries\nwere band-pass filtered to retain frequencies between 0.01 Hz\nand 0.08 Hz. Functional images were realigned using MCFLIRT\n(Jenkinson et al. 2002) and skull-stripped using BET (Smith 2002).\nData were demeaned, and linear and quadratic trends were\nremoved. Intensity outliers were removed and interpolated\nover using AFNI’s 3dDespike utility. Confound regression was\nperformed using a 36-parameter model; confounds included\nglobal signal, 6 motion parameters as well as their temporal\nderivatives, quadratic terms, and the temporal derivatives\nof the quadratic terms (Satterthwaite et al., 2013a). Global\nsignal regression has been shown to be among the most\neffective methods for reducing the influence of motion on\nestimates of the BOLD signal (Ciric et al. 2017; Power et al.\n2017a; Power et al. 2017b; Parkes et al. 2018). Prior to confound\nregression, all confound parameters were band-pass filtered in\na fashion identical to that applied to the original timeseries\ndata, ensuring comparability of the signals in frequency content\n(Hallquist et al. 2013). Subjects that displayed high levels of\nmotion (mean relative root mean squared (RMS) displacement\ngreater than 0.20 mm or more than 20 frames with over 0.25 mm\nof motion) or poor signal coverage were excluded from all\nanalysis. Functional images were coregistered to the T1 image\nusing boundary-based registration (Greve and Fischl 2009) and\naligned to template space using ANTs, as described above; all\ntransforms were concatenated, and thus only one interpolation\nwas performed.\n\nNetwork Construction\n\nWe extracted time-varying mean BOLD signal from N = 360\nregions of interest, which collectively comprised a multimodal\nparcellation of the cerebral cortex (Glasser et al. 2016). We esti-\nmated the functional connectivity (Friston 2011) between any\ntwo brain regions (region i and region j) by calculating the\nPearson correlation coefficient (Zalesky et al. 2012a) between\nthe mean activity timeseries of region i and the mean activity\ntimeseries of region j (Biswal et al. 1995). We represented the\nN × N functional connectivity matrix as a graph or network in\nwhich regions were encoded as network nodes and in which\nthe functional connectivity between region i and region j was\nencoded as the weight of the network edge between node i\nand node j. We used this encoding of the data as a network to\nproduce an undirected, signed adjacency matrix A. Additionally,\nto evaluate whether our results were dependent on specific node\ndefinitions, we examined an alternative network constructed\nby applying a gradient- and similarity-based parcellation of\nthe cerebral cortex (Schaefer et al. 2017; see Supplementary\nSection 3 and Supplementary Figure 6).\n\nIn the construction of these functional brain networks, we\nnoticed that some participants did not have adequate coverage\nof all 360 brain regions. Because graph statistics tend to be heav-\nily biased by the size of the graph, we ensured that the number\nof brain regions was consistent across participants. Specifically,\nwe observed that 23 participants did not have adequate coverage\n(<50% brain tissue in functional space) of the right area 52 parcel,\nwhich is the smallest parcel in the multimodal parcellation used\nin this work. Accordingly, we excluded this parcel across all\nparticipants, leaving 359 nodes for subsequent analysis. Three\nparticipants had inadequate coverage of parcel V3B (left V3B,\nn = 2; right V3B, n = 1); we excluded these participants from\nfurther analysis (see Participant Sample).\n\nOriginal efforts in the emerging field of network neuro-\nscience (Bassett and Sporns 2017) began by studying binary\ngraphs, where edges were assigned weights of either 1 or 0\n(Scannell et al. 1995; Sporns et al. 2005; Kaiser and Hilgetag 2006).\nIn the context of functional brain networks, these early\nstudies thresholded the functional connectivity matrices, often\nbased on statistical testing of significance (Achard et al. 2006).\nEdges with original weights greater than the threshold were\nmaintained as edges with a new weight of 1, while edges\nwith original weights less than the threshold were assigned\na new weight of 0 (Bassett et al. 2006; Stam et al. 2007;\nRubinov et al. 2009). However, recent evidence has demon-\nstrated that the maintenance of edge weights is critical for\nan accurate understanding of the underlying biology of neural\nsystems (Bassett and Bullmore 2017). Simultaneously, recent\nevidence in applied mathematics has demonstrated that graph-\nrelated calculations are markedly more robust in weighted\ngraphs than in binary graphs (Good et al. 2010). In light of\nthese two strands of evidence from the application domain and\nfrom mathematics, we maintained all edge weights without\nthresholding and studied the full graph including both positive\nand negative correlations.\n\nWe conducted all analyses in R (R Core Team 2013) and\nMATLAB using custom code as well as functions from the\nBrain Connectivity Toolbox (Rubinov and Sporns 2010). The\ndata reported in this paper have been deposited in the\ndatabase of Genotypes and Phenotypes under accession\nnumber dbGaP:phs000607.v2.p2 (https://www.ncbi.nlm.nih.gov/\nprojects/gap/cgi-bin/study.cgi?study_id=phs000607.v2.p2). Code\nfor analyses presented here is available at www.github.com/\nutooley/rsfmri_envi_networks.\n\nSupplementary Material\nSupplementary material is available at: Cerebral Cortex online.\n\nWe extracted time-varying mean BOLD signal from N=360 regions of interest, which collectively comprised a multimodal parcellation of the cerebral cortex (Glasser et al. 2016). We estimated the functional connectivity (Friston 2011) between any two brain regions (region i and region j) by calculating the Pearson correlation coefficient (Zalesky et al. 2012a) between the mean activity timeseries of region i and the mean activity timeseries of region j (Biswal et al. 1995). We represented the N × N functional connectivity matrix as a graph or network in which regions were encoded as network nodes and in which the functional connectivity between region i and region j was encoded as the weight of the network edge between node i and node j. We used this encoding of the data as a network to produce an undirected, signed adjacency matrix A. Additionally, to evaluate whether our results were dependent on specific node definitions, we examined an alternative network constructed by applying a gradient and similarity-based parcellation of the cerebral cortex (Schaefer et al. 2017; see Supplementary Section 3 and Supplementary Figure 6).\n\nIn light of these two strands of evidence from the application domain and from mathematics, we maintained all edge weights without thresholding and studied the full graph including both positive and negative correlations.\n\nSpecifically, we observed that 23 participants did not have adequate coverage (<50% brain tissue in functional space) of the right area 52 parcel, which is the smallest parcel in the multimodal parcellation used in this work. Accordingly, we excluded this parcel across all participants, leaving 359 nodes for subsequent analysis.\n\nWe specifically used a formulation that was recently generalized to signed weighted networks (Zhang and Horvath 2005; Costantini and Perugini 2014). This version is sensitive to nonredundancy in path information based on edge sign as well as edge weight and importantly distinguishes between positive triangles and negative triangles, which have distinct meanings in networks constructed from correlation matrices.\n\nWe use a Louvain-like locally greedy algorithm as a heuristic to maximize this modularity quality index subject to a partition M of nodes into communities.\n\nTo examine associations between SES and development within putative functional networks, we assigned each node to 1 of 7 large-scale functional systems defined a priori (Yeo et al. 2011).\n\nTo examine the effect of physical distance on our findings, we follow Betzel and Bassett (2018) by thresholding each network by distance in bins, ranging from the top 10% of shortest edges to the bottom 10% of longest edges. We then calculated the clustering coefficient on these sparse networks and estimated the age × SES effect within each distance bin."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2142,
+            "end": 2158,
+            "text": "Ursula A. Tooley",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2063,
+            "end": 2141,
+            "text": "Associations between Neighborhood SES and\nFunctional Brain Network Development",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1926,
+            "end": 1930,
+            "text": "2020",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 35,
+            "end": 58,
+            "text": "Oxford University Press",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1946,
+            "end": 1967,
+            "text": "10.1093/cercor/bhz066",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 435,
+            "end": 619,
+            "text": "Higher socioeconomic status (SES) in childhood is associated with stronger cognitive abilities, higher academic\nachievement, and lower incidence of mental illness later in development.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 60,
+            "end": 90,
+            "text": "This is an Open Access article",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11752,
+            "end": 11773,
+            "text": "dbGaP:phs000607.v2.p2",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11912,
+            "end": 11956,
+            "text": "www.github.com/\nutooley/rsfmri_envi_networks",
+            "labels": [
+              "Code"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11982,
+            "end": 12045,
+            "text": "Supplementary material is available at: Cerebral Cortex online.",
+            "labels": [
+              "Remarks"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4487,
+            "end": 4544,
+            "text": "All imaging data were acquired on the same 3T Siemens Tim",
+            "labels": [
+              "Multicenter study? (Y/N)"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4530,
+            "end": 4549,
+            "text": "3T Siemens Tim\nTrio",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4925,
+            "end": 4947,
+            "text": "slice thickness = 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4846,
+            "end": 4869,
+            "text": "flip angle = 90 degrees",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4949,
+            "end": 4965,
+            "text": "slice gap = 0 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4871,
+            "end": 4905,
+            "text": "field of view (FoV) = 192 × 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4790,
+            "end": 4820,
+            "text": "time repetition (TR) = 3000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4822,
+            "end": 4844,
+            "text": "time echo (TE) = 32 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4971,
+            "end": 5012,
+            "text": "effective voxel resolution = 3 × 3 × 3 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2876,
+            "end": 2907,
+            "text": "we selected a subsample of 1012",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6149,
+            "end": 6159,
+            "text": "XCP\nengine",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5025,
+            "end": 5043,
+            "text": "resting-state scan",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5084,
+            "end": 5125,
+            "text": "eyes open and fixate on a white crosshair",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5045,
+            "end": 5125,
+            "text": "subjects were instructed to keep their\neyes open and fixate on a white crosshair",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5110,
+            "end": 5125,
+            "text": "white crosshair",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2876,
+            "end": 2907,
+            "text": "we selected a subsample of 1012",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2428,
+            "end": 2456,
+            "text": "ages of 8 years and 22 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2934,
+            "end": 2949,
+            "text": "nf = 552 female",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2563,
+            "end": 2874,
+            "text": "After excluding youth with abnormalities\nin brain structure or a history of medical problems that could\nimpact brain function (n = 154), poor imaging data that did not\npass quality assurance protocols (described in detail below,\nn = 432), or inadequate coverage of some brain regions in our\nparcellation (n = 3)",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12060,
+            "end": 12086,
+            "text": "mean BOLD signal",
+            "labels": [
+              "Time series ROI — Type"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12087,
+            "end": 12091,
+            "text": "from",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12092,
+            "end": 12116,
+            "text": "N=360 regions of interest",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12118,
+            "end": 12123,
+            "text": "which",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12147,
+            "end": 12221,
+            "text": "multimodal parcellation of the cerebral cortex (Glasser et al. 2016)",
+            "labels": [
+              "Atlas definition — Software",
+              "Atlas definition — Type"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12127,
+            "end": 12139,
+            "text": "collectively",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12345,
+            "end": 12376,
+            "text": "Pearson correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12326,
+            "end": 12337,
+            "text": "calculating",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12736,
+            "end": 12771,
+            "text": "undirected, signed adjacency matrix",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12728,
+            "end": 12735,
+            "text": "produce",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12927,
+            "end": 13016,
+            "text": "gradient and similarity-based parcellation of the cerebral cortex (Schaefer et al. 2017; ",
+            "labels": [
+              "Atlas definition — Software",
+              "Atlas definition — Type"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13184,
+            "end": 13231,
+            "text": "maintained all edge weights without thresholding",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13265,
+            "end": 13316,
+            "text": "including both positive and negative correlations",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13254,
+            "end": 13264,
+            "text": "full graph",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13547,
+            "end": 13594,
+            "text": "excluded this parcel... leaving 359 nodes",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13676,
+            "end": 13700,
+            "text": "signed weighted networks",
+            "labels": [
+              "Graph measures — Type"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13702,
+            "end": 13725,
+            "text": "Zhang and Horvath 2005",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13657,
+            "end": 13666,
+            "text": "generalized",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14004,
+            "end": 14043,
+            "text": "Louvain-like locally greedy algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13997,
+            "end": 14003,
+            "text": "use a",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14076,
+            "end": 14100,
+            "text": "modularity quality index",
+            "labels": [
+              "Graph measures — Type"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14234,
+            "end": 14291,
+            "text": "1 of 7 large-scale functional systems defined a priori",
+            "labels": [
+              "Network definition — Type",
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14293,
+            "end": 14308,
+            "text": "Yeo et al. 2011",
+            "labels": [
+              "Network definition — Software"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14388,
+            "end": 14429,
+            "text": "thresholding each network by distance in bins",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14385,
+            "end": 14387,
+            "text": "by",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14543,
+            "end": 14565,
+            "text": "clustering coefficient",
+            "labels": [
+              "Graph measures — Type"
+            ]
+          },
+          "id": "m0055"
+        }
+      ]
+    }
+  ]
+}

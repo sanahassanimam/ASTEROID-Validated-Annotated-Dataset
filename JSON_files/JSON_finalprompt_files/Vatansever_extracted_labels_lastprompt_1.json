@@ -1,0 +1,727 @@
+{
+  "data": {
+    "text": "Default mode network connectivity during task execution\nD. Vatansever et al.\nNeuroImage 122 (2015) 96–104\n© 2015 The Authors. Published by Elsevier Inc.\nThis is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).\nhttp://dx.doi.org/10.1016/j.neuroimage.2015.07.053\n\nInitially described as task-induced deactivations during goal-directed paradigms of high attentional load, the unresolved functionality of default mode regions has long been assumed to interfere with task performance.\n\nThe study was approved by the local ethics committee and all participants gave informed consent following the presentation of a study specific information sheet. The exclusion criteria comprised of a score below 70 on the National Adult Reading Test (NART) and 23 on the Mini Mental State Exam (MMSE), any history of drug or alcohol abuse, psychiatric and neurological disorders, head injury, medication use affecting cognitive performance (e.g. tricyclic antidepressants), physical handicap hindering the completion of the study, left-handedness, contraindication to MRI scanning and severe claustrophobia. Complying with these conditions, 22 healthy participants were recruited (19–57 years old, mean = 35.0, SD = 11.2, 9/13 female to male ratio) with average scores of 117.1 (SD = 5.76) on NART and 29.33 (SD = 0.85) on MMSE.\n\nThe participants were assessed with an extensive set of neuropsychological tests using the Cambridge Neuropsychological Test Automated Battery (CANTABeclipse). In the simple reaction time test the participants were instructed to press a button in response to the visual presentation of a white box stimulus over a black background. Our measure of choice, the mean simple reaction time denoted the speed of motor response, in which shorter latency implied faster processing.\n\nIn addition to the 5 min resting state scanning (eyes closed), a self-paced, right-handed finger opposition paradigm was employed in a boxcar design with 5 alternating cycles of task and fixation blocks. A visual “move” command indicated for participants to initiate and repeat the movement, while “rest” signalled the fixation state. The participants were instructed to touch the remaining fingers with their right thumb moving sequentially from the index to little finger, and to continue the cycle for the duration of the task period.\n\nThe MRI data was obtained using a Siemens Trio 3 T scanner at the Wolfson Brain Imaging Centre, Cambridge. The imaging session started with a high resolution T1-weighted, magnetization-prepared 180 degrees radio-frequency pulses and rapid gradient-echo (MPRAGE) structural scan (TR = 2300 ms; TE = 2.98 ms; TA = 9.14 min; flip angle = 9°; field of view (FOV) read = 256 mm; voxel size = 1.0 × 1.0 × 1.0 mm, slices per slab = 176), followed by whole-brain echo planar imaging (EPI) for the resting state scanning and the finger opposition paradigm (TR = 2000 ms; TE = 30 ms; flip angle = 78°; FOV read = 192 mm; voxel size = 3.0 × 3.0 × 3.0 mm; volumes = 160; slices per volume = 32). The preprocessing and image analysis were all performed using the Statistical Parametric Mapping (SPM) Version 8.0 (http://www.fil.ion.ucl.ac.uk/spm/) and MATLAB Version 12a platforms (http://www.mathworks.co.uk/products/matlab/). All imaging data were preprocessed following a standard pipeline of slice-time and motion correction, normalization to the Montreal Neurological Institute (MNI) space in combination with the segmented high-resolution grey matter structural image and an a priori grey matter template, and smoothing with an 8 mm FWHM Gaussian kernel.\n\nFor each subject, the functional images acquired during the task were entered into a first level general linear model with the fixation and task onsets modelled as regressors convolved with a canonical HRF. Further, the data was temporally filtered with a high pass filter (cut-off of 128 s) and no global normalization was performed.\n\nThe assessment of functional connectivity for both the resting state and the finger opposition paradigm scans were carried out using the Conn functional connectivity toolbox. A strict noise reduction method called CompCor removed the principal components attributed to white matter and cerebrospinal fluid signals and eliminated the need for a global signal regression. In addition to the subject-specific six realignment parameters and their first order derivatives, the main effect of scanning condition was also introduced as a potential confound. Moreover, a temporal filter of 0.009 and 0.08 Hz was applied to focus on low-frequency fluctuations.\n\nThus, 30 × 30 matrices of Fisher z-transformed bivariate correlation coefficients (Pearson r) were constructed using all of the 30 ROIs identified from the activation analysis and selected from the literature. These weighted correlation matrices formed the basis of the connectomic representations for ROI-to-ROI functional connectivity. A hierarchical clustering analysis that positioned functionally similar areas in one of the two domains (default mode and somatomotor) was conducted to identify any ROIs that changed their network membership. The results were FWE corrected (p < 0.05) at the seed and network levels using Network Based Statistics (NBS)—a method that relies on non-parametric permutation testing of network intensity.\n\nThus, the correlation matrices defined above were used to assess the graph theoretical metrics of mean characteristic path length, mean local efficiency, mean clustering coefficient, and mean betweenness centrality and small-worldness—indices that characterize network properties and the efficiency of information transfer. The analysis of these metrics and the corresponding statistical differences across conditions were calculated using the Graph-Theoretical Analysis Toolbox (GAT) based on the Brain Connectivity Toolbox (BCT). The initial step involved the selection of a range of threshold densities at which the correlation matrices would be binarized. The goal was to establish a lower limit at which the nodes remained fully connected and an upper limit where the networks still displayed biologically plausible small-world architecture. The range was measured as 0.2 < T < 0.4. The same metrics were calculated for 20 random networks and compared to the original network over 5000 permutations using the area under the curve (AUC) method. The reported p-values were multiple comparisons corrected using FDR at the 0.05 level of significance.\n\nThe task requires the participants to press a button in response to a visual stimulus and provides a reliable measure of motor processing abilities. In both the task and fixation conditions greater connectivity of the DMN with a left superior frontal gyrus cluster predicted lower simple reaction time score, thus faster processing. The mean simple reaction time was 0.24 s (SD = 0.03)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 56,
+            "end": 69,
+            "text": "D. Vatansever",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 55,
+            "text": "Default mode network connectivity during task execution",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 93,
+            "end": 97,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 139,
+            "end": 152,
+            "text": "Elsevier Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 285,
+            "end": 317,
+            "text": "10.1016/j.neuroimage.2015.07.053",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 319,
+            "end": 536,
+            "text": "Initially described as task-induced deactivations during goal-directed paradigms of high attentional load, the unresolved functionality of default mode regions has long been assumed to interfere with task performance.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 153,
+            "end": 213,
+            "text": "This is an open access article under the CC BY-NC-ND license",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2416,
+            "end": 2440,
+            "text": "Siemens Trio 3 T scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3041,
+            "end": 3063,
+            "text": "slices per volume = 32",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2956,
+            "end": 2972,
+            "text": "flip angle = 78°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2974,
+            "end": 2991,
+            "text": "FOV read = 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2930,
+            "end": 2942,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2944,
+            "end": 2954,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2993,
+            "end": 3024,
+            "text": "voxel size = 3.0 × 3.0 × 3.0 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1179,
+            "end": 1217,
+            "text": "22 healthy participants were recruited",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3132,
+            "end": 3180,
+            "text": "Statistical Parametric Mapping (SPM) Version 8.0",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1933,
+            "end": 1959,
+            "text": "finger opposition paradigm",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1892,
+            "end": 1903,
+            "text": "eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1997,
+            "end": 2045,
+            "text": "5 alternating cycles of task and fixation blocks",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2047,
+            "end": 2177,
+            "text": "A visual “move” command indicated for participants to initiate and repeat the movement, while “rest” signalled the fixation state.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2049,
+            "end": 2070,
+            "text": "visual “move” command",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2322,
+            "end": 2380,
+            "text": "to continue the cycle for the duration of the task period.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1179,
+            "end": 1217,
+            "text": "22 healthy participants were recruited",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1219,
+            "end": 1258,
+            "text": "19–57 years old, mean = 35.0, SD = 11.2",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1069,
+            "end": 1084,
+            "text": "left-handedness",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1260,
+            "end": 1285,
+            "text": "9/13 female to male ratio",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 700,
+            "end": 1145,
+            "text": "The exclusion criteria comprised of a score below 70 on the National Adult Reading Test (NART) and 23 on the Mini Mental State Exam (MMSE), any history of drug or alcohol abuse, psychiatric and neurological disorders, head injury, medication use affecting cognitive performance (e.g. tricyclic antidepressants), physical handicap hindering the completion of the study, left-handedness, contraindication to MRI scanning and severe claustrophobia.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 538,
+            "end": 590,
+            "text": "The study was approved by the local ethics committee",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6845,
+            "end": 6898,
+            "text": "The mean simple reaction time was 0.24 s (SD = 0.03).",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 88,
+            "end": 89,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3164,
+            "end": 3167,
+            "text": "SPM",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 89,
+            "end": 90,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3164,
+            "end": 3167,
+            "text": "SPM",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 316,
+            "end": 317,
+            "text": "3",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Algorithm",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3164,
+            "end": 3167,
+            "text": "SPM",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 104,
+            "end": 105,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm",
+            "Spatial smooth — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3164,
+            "end": 3167,
+            "text": "SPM",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3603,
+            "end": 3628,
+            "text": "8 mm FWHM Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 96,
+            "end": 97,
+            "text": "5",
+            "labels": [
+              "CompCor — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "CompCor — Software",
+            "CompCor — Type",
+            "CompCor — Parameters"
+          ]
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4181,
+            "end": 4280,
+            "text": "CompCor removed the principal components attributed to white matter and cerebrospinal fluid signals",
+            "labels": [
+              "CompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 100,
+            "end": 101,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Type",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4356,
+            "end": 4433,
+            "text": "subject-specific six realignment parameters and their first order derivatives",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 312,
+            "end": 313,
+            "text": "7",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Type",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4435,
+            "end": 4516,
+            "text": "the main effect of scanning condition was also introduced as a potential confound",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1354,
+            "end": 1355,
+            "text": "8",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software",
+            "Temporal filt — Type",
+            "Temporal filt — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4549,
+            "end": 4566,
+            "text": "0.009 and 0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3887,
+            "end": 3922,
+            "text": "high pass filter (cut-off of 128 s)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4748,
+            "end": 4828,
+            "text": "30 ROIs identified from the activation analysis and selected from the literature",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4703,
+            "end": 4712,
+            "text": "Pearson r",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4646,
+            "end": 4701,
+            "text": "Fisher z-transformed bivariate correlation coefficients",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5457,
+            "end": 5593,
+            "text": "mean characteristic path length, mean local efficiency, mean clustering coefficient, and mean betweenness centrality and small-worldness",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6373,
+            "end": 6406,
+            "text": "area under the curve (AUC) method",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

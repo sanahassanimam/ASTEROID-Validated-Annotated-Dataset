@@ -1,0 +1,802 @@
+{
+  "data": {
+    "text": "The Musical Structure of Time in the Brain: Repetition, Rhythm, and Harmony in fMRI During Rest and Passive Movie Viewing\nDan Lloyd*\nORIGINAL RESEARCH\npublished: 21 January 2020\ndoi: 10.3389/fncom.2019.00098\nFrontiers in Computational Neuroscience 13:98\n\nSpace generally overshadows time in the construction of theories in cognitive neuroscience. In this paper, we pivot from the spatial axes to the temporal, analyzing fMRI image series to reveal structures in time rather than space. To determine affinities among global brain patterns at different times, core concepts in network analysis (derived from graph theory) were applied temporally, as relations among brain images at every time point during an fMRI scanning epoch.\n\nFor this analysis, data from 180 adult subjects (ages 20–35, 108 Female) in two scanning conditions were downloaded from the Human Connectome Project 1200 Subjects Data Release, May 2018 (HCP1; data repository2; Marcus et al., 2011; Van Essen et al., 2013; Hodge et al., 2016). Subjects were scanned on a Siemens MAGNETOM 7T MR scanner housed at the Center for Magnetic Resonance (CMRR) at the University of Minnesota in Minneapolis, MN, using a Nova32 32-channel Siemens receiver head coil. Whole-brain sequence gradient-echo EPI images were acquired with the following parameters: TR 1000 ms; TE 22.2 ms; flip angle 45 degrees; FOV 208 × 208 mm (RO × PE); Matrix 130 × 130 (RO × PE); Slice thickness 1.6 mm; 85 slices; 1.6 mm isotropic voxels; Multiband factor 5; Image Acceleration factor(iPAT) 2; Partial Fourier (pF)sampling 7/8; Echo spacing 0.64 ms; BW 1924 Hz/Px3.\n\nThe two conditions studied here are: (1) resting with eyes open, 900 images (15 min), using the first of four imaging sessions with each subject, and (2) passive movie viewing, 900 images, using the first of four imaging sessions in that condition (Smith et al., 2013). The audio/visual movie was a compilation of short excerpts from Vimeo videos available under Creative Commons licensing.\n\nImages were preprocessed using HCP minimal preprocessing pipelines (Glasser et al., 2013; Marcus et al., 2013). This includes three structural pipelines: PreFreeSurfer, to create an aligned and undistorted structural volume space for each subject and register subjects’ spaces to MNI space; FreeSurfer, to parcel volumes into predefined structures, reconstruct white and pial cortical surfaces, and register surfaces to FreeSurfer’s surface atlas, fsaverage; PostFreeSurfer, performing individual surface registration using multimodal surface matching (MSM), based on areal features including sulcal depth, myelin, and functional connectivity maps.\n\nThen, the fMRI Surface pipeline mapped the cortical gray matter voxels onto cortical surface vertices, and subcortical volume voxels, to standardize the surface and subcortical “grayordinate” space for all subjects. [Among other advantages, mapping via surface vertices greatly reduces the number of datapoints needed to express 7T images, making further computational analysis feasible (Glasser et al., 2013).] These data were smoothed with a surface algorithm to 2 mm FWHM (Glasser et al., 2013). Finally, 7T rfMRI 4D volume and grayordinate (surface vertices + subcortical voxels) Data, and 7T movie data, were further preprocessed to remove structured artifacts using FSL’s FIX (FMRIB’s ICA-based Xnoiseifier, Salimi-Khorshidi et al., 2014).\n\nCopyright © 2020 Lloyd. This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY).\n\nAssociation matrices were constructed using partial correlations between all voxels in each image series, while controlling for their mean activation (Marrelec et al., 2007; Smith et al., 2011; Hutchison et al., 2013; Varoquaux and Craddock, 2013; Epskamp and Fried, 2018). Each matrix was converted to binary (undirected) connection graph by thresholding the matrix to preserve the top 5% of inter-node values (Rubinov and Sporns, 2010). These binary association matrices were the basis for all subsequent analyses. All the measures described herein were assessed for significance by contrast with baseline random images that preserve the degree distribution of the original data ('null-hypothesis networks,' Rubinov and Sporns, 2010). In all cases except where noted 100 baseline association matrices were generated for each subject to be contrasted, subject by subject, with the actual data. Appropriate corrections for multiple comparisons were applied using the Bonferroni method. The randomizing function and other functions are found in the Brain Connectivity Toolbox (BCT 4 Rubinov and Sporns, 2010).\n\nModularity was measured using two standard measures (Girvan and Newman, 2002; Newman, 2006; Reichardt and Bornholdt, 2006; Blondel et al., 2008), also implemented through BCT. Modularity assessments with these two algorithms were very similar, and so further analysis was based in the Louvain group method of Blondel et al. (2008). In addition to providing the optimal group divisions, the modularity algorithms calculate a statistic quantifying the degree to which the network can be subdivided into groups with high ingroup similarity and low outgroup similarity (Kaiser, 2011). We compare this statistic for each subject with the same statistic generated for 18,000 surrogate association matrices (100 per subject)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 122,
+            "end": 132,
+            "text": "Dan Lloyd*",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 121,
+            "text": "The Musical Structure of Time in the Brain: Repetition, Rhythm, and Harmony in fMRI During Rest and Passive Movie Viewing",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 151,
+            "end": 177,
+            "text": "published: 21 January 2020",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 178,
+            "end": 207,
+            "text": "doi: 10.3389/fncom.2019.00098",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 208,
+            "end": 247,
+            "text": "Frontiers in Computational Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 255,
+            "end": 346,
+            "text": "Space generally overshadows time in the construction of theories in cognitive neuroscience.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3427,
+            "end": 3446,
+            "text": "open-access article",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "Missing_sublabels": [
+            "Code",
+            "Preregistered",
+            "Remarks"
+          ],
+          "id": "m0007"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 923,
+            "end": 939,
+            "text": "data repository2",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1034,
+            "end": 1053,
+            "text": "Siemens MAGNETOM 7T",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1439,
+            "end": 1448,
+            "text": "85 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1415,
+            "end": 1437,
+            "text": "Slice thickness 1.6 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1336,
+            "end": 1357,
+            "text": "flip angle 45 degrees",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1359,
+            "end": 1375,
+            "text": "FOV 208 × 208 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1312,
+            "end": 1322,
+            "text": "TR 1000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "type": "labels",
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1324,
+            "end": 1334,
+            "text": "TE 22.2 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "type": "labels",
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1450,
+            "end": 1473,
+            "text": "1.6 mm isotropic voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "type": "labels",
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1644,
+            "end": 1666,
+            "text": "resting with eyes open",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "type": "labels",
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1668,
+            "end": 1687,
+            "text": "900 images (15 min)",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "type": "labels",
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 2026,
+            "end": 2061,
+            "text": "HCP minimal preprocessing pipelines",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "type": "labels",
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1757,
+            "end": 1778,
+            "text": "passive movie viewing",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "type": "labels",
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 748,
+            "end": 776,
+            "text": "data from 180 adult subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "type": "labels",
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 748,
+            "end": 776,
+            "text": "data from 180 adult subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ],
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 778,
+            "end": 788,
+            "text": "ages 20–35",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 790,
+            "end": 800,
+            "text": "108 Female",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2246,
+            "end": 2247,
+            "text": "1",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2149,
+            "end": 2162,
+            "text": "PreFreeSurfer",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization — Parameters",
+            "Spatial normalization — Algorithm"
+          ],
+          "id": "m0026"
+        },
+        {
+          "from_name": "Surface reconstruction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2344,
+            "end": 2345,
+            "text": "2",
+            "labels": [
+              "Surface reconstruction — Step Number"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Surface reconstruction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2152,
+            "end": 2162,
+            "text": "FreeSurfer",
+            "labels": [
+              "Surface reconstruction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Surface reconstruction — Algorithm",
+            "Surface reconstruction — Parameters"
+          ],
+          "id": "m0028"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2301,
+            "end": 2302,
+            "text": "3",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2152,
+            "end": 2162,
+            "text": "FreeSurfer",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Algorithm",
+            "Segmentation — Parameters"
+          ],
+          "id": "m0030"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3073,
+            "end": 3074,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3110,
+            "end": 3119,
+            "text": "2 mm FWHM",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm"
+          ],
+          "id": "m0032"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3317,
+            "end": 3318,
+            "text": "5",
+            "labels": [
+              "ICA FIX — Step Number"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3317,
+            "end": 3326,
+            "text": "ICA-based",
+            "labels": [
+              "ICA FIX — Type"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3317,
+            "end": 3326,
+            "text": "FSL’s FIX",
+            "labels": [
+              "ICA FIX — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "ICA FIX — Parameters"
+          ],
+          "id": "m0035"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2782,
+            "end": 2783,
+            "text": "6",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Algorithm",
+            "Spatial normalization (functional) — Parameters"
+          ],
+          "id": "m0036"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3573,
+            "end": 3592,
+            "text": "partial correlations",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3633,
+            "end": 3678,
+            "text": "controlling for their mean activation",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3573,
+            "end": 3592,
+            "text": "1",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3744,
+            "end": 3775,
+            "text": "binary (undirected) connection graph",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3744,
+            "end": 3764,
+            "text": "2",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3779,
+            "end": 3825,
+            "text": "thresholding the matrix to preserve the top 5%",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3820,
+            "end": 3822,
+            "text": "5%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3779,
+            "end": 3788,
+            "text": "3",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3995,
+            "end": 4021,
+            "text": "null-hypothesis networks",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4123,
+            "end": 4155,
+            "text": "100 baseline association matrices",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4183,
+            "end": 4200,
+            "text": "Bonferroni method",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4402,
+            "end": 4435,
+            "text": "Brain Connectivity Toolbox (BCT)",
+            "labels": [
+              "Result aggregation — Software"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3995,
+            "end": 4021,
+            "text": "4",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4609,
+            "end": 4642,
+            "text": "implemented through BCT",
+            "labels": [
+              "Network definition — Software"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4759,
+            "end": 4766,
+            "text": "Louvain",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4759,
+            "end": 4766,
+            "text": "5",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4931,
+            "end": 4941,
+            "text": "modularity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4931,
+            "end": 4941,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0054"
+        }
+      ]
+    }
+  ]
+}

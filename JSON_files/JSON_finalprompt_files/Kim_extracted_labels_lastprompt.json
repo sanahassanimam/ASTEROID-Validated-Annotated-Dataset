@@ -1,0 +1,725 @@
+{
+  "data": {
+    "text": "Cerebral Cortex, September 2018;28: 3065–3081\ndoi: 10.1093/cercor/bhx175\nAdvance Access Publication Date: 13 July 2017\nOriginal Article\nORIGINAL ARTICLE\nA New Modular Brain Organization of the BOLD Signal during Natural Vision\nDoHyun Kim1, Kendrick Kay2, Gordon L. Shulman3 and Maurizio Corbetta3,4,5,6,7\n\nThe resting blood oxygen level-dependent (BOLD) signal is synchronized in large-scale brain networks (resting-state networks, RSNs) defined by interregional temporal correlations (functional connectivity, FC).\n\nSeventy participants (28 male, age 22–35, including pairs of identical twins) were obtained from the Washington University-Minnesota Consortium Human Connectome Project (WU-Minn HCP Data—900 Subjects + 7 T; June 2016) (Van Essen et al. 2012).\n\nBOLD signals were acquired in 2 consecutive days of experiments on a 7 T scanner (SC72 gradient coil 70–100 mT/m, multiband factor of 5, time echo = 22 ms, time repetition = 1 s, 1.6 mm voxel size) installed at the University of Minnesota (Ugurbil et al. 2013). On the first day, participants were scanned while maintaining fixation on a black screen for 2 scans, each 15 min in duration (resting state). Next, participants were scanned while watching movie clips for 2 scans, each 15 min in duration (movie task). Each movie-watching scan contained 3 to 4 short movie clips with a repeated short clip for validation of possible regression models inserted at the end of each movie session. A 20-s period of fixation on a black screen was inserted prior to the first movie clip, in between movie clips, and following the last movie clip. The same procedure was repeated for the second day. Two of the movie sessions were composed of short clip compilations of 3 Hollywood movies with short intermissions, and the other 2 movie sessions were composed of short clip compilations of 4 independent films with short intermissions (see Supplementary Fig. S1 for descriptions of movie clips).\n\nSpatial image preprocessing initially followed the HCP minimal preprocessing pipeline, minimizing spatial smoothing and spatial distortion while maximizing alignment across image modalities. The HCP minimal preprocessing pipeline transformed the data from the original resolution to 2 mm resolution into a 91 × 182 grayordinate space called CIFTI (Glasser et al. 2013). CIFTI grayordinates comprise cortical gray matter surface vertices (both left and right hemisphere, 30K vertices each) and subcortical gray matter voxels (30K voxels). In this study, only cortical gray matter surface vertices of both hemispheres were used.\n\nThe BOLD time series then underwent 4 additional steps. First, the data were normalized by their mean, transforming each time series into % BOLD fluctuation, and global signal regression was conducted. Second, to minimize the effect of subject motion, BOLD time series were censored and corrected using the DVARS measure (temporal derivative of RMS variance), which is highly correlated with frame-wise head-motion displacement (Power et al. 2012). For each subject, approximately 5% of BOLD frames were replaced by interpolating the magnitude values of neighboring BOLD time points. Third, each subject’s BOLD time series of cortical gray matter surface vertices (both left and right hemisphere, 30K vertices each) were registered into the Gordon–Laumann parcellation (Gordon et al. 2016), and then averaged across the vertices within a parcel. This procedure resulted in a mean BOLD time series for each parcel, reducing 60K time series to 324. The 324 Gordon–Laumann parcels are grouped into 13 different RSNs (see Supplementary Fig. S2): Visual (VIS), Retrosplenial Temporal (RST), Dorsal Attention (DAN), Dorsal Somatomotor (SMd), Somatomotor Mouth (SMv), Auditory (AUD), Cingulo-Operculum (CON), Ventral Attention (VAN), Salience (SAL), Cingulo-parietal (CPN), Fronto-parietal (FPN), Default Mode (DMN), and None. Therefore, the use of the mean parcel BOLD time series allowed simple comparisons of the functional topographies between resting-state BOLD and movie-watching BOLD while increasing the signal-to-noise ratio of movie-evoked and resting BOLD time series.\n\nThe final processing step was temporal filtering of the mean parcel BOLD time series. Since low-frequency fluctuations (<0.1 Hz) account for about 90% of the correlation coefficient between regions, a bandpass filter of 0.008–0.08 Hz was applied (Cordes et al. 2001). For each movie BOLD time series, the first 6 s from the beginning of each clip within each movie was eliminated to account for hemodynamic lag.\n\nBOLD signal time series obtained from different scans were concatenated, and a correlation matrix was computed for each subject by calculating parcel-to-parcel, that is, pairwise, the temporal correlation (Pearson r) between time series. Pearson r-values for individual parcel pairs were converted to Fisher z-transformed values. A group average rs-FC matrix was obtained by averaging over subjects the individual subject correlation matrices and then transforming the Fisher z-values into Pearson r-values.\n\nResting-state (rs-FC) and movie-evoked (m-ISFC) FC matrices generated above were organized in terms of the predefined RSNs. To analyze the network organization of the resting-state and movie-evoked state, 3 different unsupervised, data-driven analyses were conducted. First, hierarchical clustering methods were implemented. Resting-state (rs-FC) and movie-evoked (m-ISFC) FC matrices were converted to dissimilarity matrices by calculating a dissimilarity index (1 – Pearson’s r for paired parcels). A hierarchical clustering analysis, applied to each matrix, yielded an FC dendrogram (Connolly et al. 2012; Cauda et al. 2014; Riedel et al. 2015). The number of clusters (detected communities) were determined by the Davies–Bouldin index (DBI), which determines the optimal number of clusters (Davies and Bouldin 1979). FC matrices were then reordered based on the hierarchical clustering results.\n\nSecond, resting-state FC (rs-FC) and movie-evoked FC (m-ISFC) were reorganized into communities by implementing the Louvain community detection algorithm (Blondel et al. 2008) from the Brain Connectivity Toolbox (Rubinov and Sporns 2010) for varying threshold edge densities (4–20%). Due to the randomized initialization procedure, each run of algorithm resulted variations in detected communities. To account these variations, 10 000 runs of Louvain algorithms were conducted for each FC maps. For each parcel, the most frequently assigned community throughout the entire iterations was chosen. For the network modularity measurement, the average modularity across runs of algorithm was used. To evaluate the stability of communities, Newman’s Q modularity (Newman 2004) was evaluated based on both newly detected communities (unsupervised) and predefined RSNs (supervised). The values of modularity ranges between 0 (community is no better than random connection) and 1 (strong community structure) while the modularity of typical networks with a strong modular structure ranges from 0.3 to 0.7 (Newman and Girvan 2004). Since movie-evoked FC (m-ISFC) was an averaged map of 50 different permutations of split subjects, the modularity scores were assessed for each permutation. Similarly, the modularity scores of resting-state FC (rs-FC) were assessed from 50 different permutations of rs-FC generated from 35 randomly chosen subjects. To test for a difference in mean modularity scores between rs-FC and m-ISFC, a cluster-based nonparametric test with a P-value of 0.0001 was performed (Maris and Oostenveld 2007) as follows: 1. Collect trials of the 2 experimental conditions (the modularity scores of rs-FC and m-ISFC in all permutations). 2. Draw a combined dataset that had 2 subsets of randomly assigned modularity scores. 3. Calculate the difference in mean modularity scores between subsets. 4. Repeat above steps 2 and 3 1 000 000 times to construct a histogram of the difference in mean modularity scores. 5. Calculate a P-value based on the proportion of random partitions that resulted in a larger test statistic than the observed one.\n\nFinally, resting-state FC (rs-FC) and movie-evoked FC (m-ISFC) were visualized with spring-embedded models that were computed using a 4% threshold edge density. Similarly, communities defined from hierarchical clustering and Louvain community detection algorithms were visualized with spring-embedded models.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 15,
+            "text": "Cerebral Cortex",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 17,
+            "end": 45,
+            "text": "September 2018;28: 3065–3081",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 46,
+            "end": 72,
+            "text": "doi: 10.1093/cercor/bhx175",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 153,
+            "end": 226,
+            "text": "A New Modular Brain Organization of the BOLD Signal during Natural Vision",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 227,
+            "end": 304,
+            "text": "DoHyun Kim1, Kendrick Kay2, Gordon L. Shulman3 and Maurizio Corbetta3,4,5,6,7",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 306,
+            "end": 515,
+            "text": "The resting blood oxygen level-dependent (BOLD) signal is synchronized in large-scale brain networks (resting-state networks, RSNs) defined by interregional temporal correlations (functional connectivity, FC).",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 517,
+            "end": 594,
+            "text": "Seventy participants (28 male, age 22–35, including pairs of identical twins)",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Age",
+            "Handedness",
+            "Male/Female",
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 548,
+            "end": 557,
+            "text": "age 22–35",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 539,
+            "end": 546,
+            "text": "28 male",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 917,
+            "end": 938,
+            "text": "time repetition = 1 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 898,
+            "end": 915,
+            "text": "time echo = 22 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 940,
+            "end": 957,
+            "text": "1.6 mm voxel size",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1125,
+            "end": 1148,
+            "text": "each 15 min in duration",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 517,
+            "end": 537,
+            "text": "Seventy participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1263,
+            "end": 1273,
+            "text": "movie task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 830,
+            "end": 896,
+            "text": "7 T scanner (SC72 gradient coil 70–100 mT/m, multiband factor of 5",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1085,
+            "end": 1111,
+            "text": "fixation on a black screen",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1041,
+            "end": 1275,
+            "text": "participants were scanned while maintaining fixation on a black screen for 2 scans, each 15 min in duration (resting state). Next, participants were scanned while watching movie clips for 2 scans, each 15 min in duration (movie task).",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1693,
+            "end": 1884,
+            "text": "short clip compilations of 3 Hollywood movies with short intermissions, and the other 2 movie sessions were composed of short clip compilations of 4 independent films with short intermissions",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1341,
+            "end": 1449,
+            "text": "a repeated short clip for validation of possible regression models inserted at the end of each movie session",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1311,
+            "end": 1335,
+            "text": "3 to 4 short movie clips",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1116,
+            "end": 1148,
+            "text": "2 scans, each 15 min in duration",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1451,
+            "end": 1597,
+            "text": "A 20-s period of fixation on a black screen was inserted prior to the first movie clip, in between movie clips, and following the last movie clip.",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2652,
+            "end": 2731,
+            "text": "normalized by their mean, transforming each time series into % BOLD fluctuation",
+            "labels": [
+              "Intensity normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2631,
+            "end": 2676,
+            "text": "1",
+            "labels": [
+              "Intensity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2737,
+            "end": 2775,
+            "text": "global signal regression was conducted",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2737,
+            "end": 2775,
+            "text": "2",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2827,
+            "end": 3002,
+            "text": "BOLD time series were censored and corrected using the DVARS measure (temporal derivative of RMS variance), which is highly correlated with frame-wise head-motion displacement",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2882,
+            "end": 2933,
+            "text": "DVARS measure (temporal derivative of RMS variance)",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2827,
+            "end": 2895,
+            "text": "3",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Interpolate",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3042,
+            "end": 3157,
+            "text": "approximately 5% of BOLD frames were replaced by interpolating the magnitude values of neighboring BOLD time points",
+            "labels": [
+              "Interpolate — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Interpolate",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3042,
+            "end": 3104,
+            "text": "4",
+            "labels": [
+              "Interpolate — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3296,
+            "end": 3364,
+            "text": "registered into the Gordon–Laumann parcellation (Gordon et al. 2016)",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3296,
+            "end": 3364,
+            "text": "5",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3366,
+            "end": 3420,
+            "text": "and then averaged across the vertices within a parcel.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3366,
+            "end": 3420,
+            "text": "6",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4350,
+            "end": 4382,
+            "text": "bandpass filter of 0.008–0.08 Hz",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4369,
+            "end": 4382,
+            "text": "0.008–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4348,
+            "end": 4394,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4450,
+            "end": 4560,
+            "text": "the first 6 s from the beginning of each clip within each movie was eliminated to account for hemodynamic lag.",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4450,
+            "end": 4560,
+            "text": "8",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4746,
+            "end": 4799,
+            "text": "temporal correlation (Pearson r) between time series.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4800,
+            "end": 4891,
+            "text": "Pearson r-values for individual parcel pairs were converted to Fisher z-transformed values.",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4892,
+            "end": 5069,
+            "text": "A group average rs-FC matrix was obtained by averaging over subjects the individual subject correlation matrices and then transforming the Fisher z-values into Pearson r-values.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5572,
+            "end": 5656,
+            "text": "A hierarchical clustering analysis, applied to each matrix, yielded an FC dendrogram",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5789,
+            "end": 5864,
+            "text": "Davies–Bouldin index (DBI), which determines the optimal number of clusters",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6087,
+            "end": 6208,
+            "text": "Louvain community detection algorithm (Blondel et al. 2008) from the Brain Connectivity Toolbox (Rubinov and Sporns 2010)",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6221,
+            "end": 6254,
+            "text": "threshold edge densities (4–20%).",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6399,
+            "end": 6465,
+            "text": "10 000 runs of Louvain algorithms were conducted for each FC maps.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6707,
+            "end": 6742,
+            "text": "Newman’s Q modularity (Newman 2004)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7487,
+            "end": 7588,
+            "text": "a cluster-based nonparametric test with a P-value of 0.0001 was performed (Maris and Oostenveld 2007)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8207,
+            "end": 8283,
+            "text": "spring-embedded models that were computed using a 4% threshold edge density.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

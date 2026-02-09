@@ -1,0 +1,1033 @@
+{
+  "data": {
+    "text": "Resting-state network topology and planning ability in healthy adults\n\nBrain Structure and Function (2020) 225:365–374 \nhttps://doi.org/10.1007/s00429-019-02004-6\n\nORIGINAL ARTICLE\n\nResting-state network topology and planning ability in healthy adults\n\nChris Vriend · Margot J. Wagenmakers · Odile A. van den Heuvel · Ysbrand D. van der Werf\n\nReceived: 11 July 2019 / Accepted: 6 December 2019 / Published online: 21 December 2019 \n© The Author(s) 2019\n\nAbstract\nFunctional magnetic resonance imaging (fMRI) studies have been used extensively to investigate the brain areas that are \nrecruited during the Tower of London (ToL) task. Nevertheless, little research has been devoted to study the neural cor-\nrelates of the ToL task using a network approach. Here we investigated the association between functional connectivity and \nnetwork topology during resting-state fMRI and ToL task performance, that was performed outside the scanner. Sixty-two \n(62) healthy subjects (21–74 years) underwent eyes-closed rsfMRI and performed the task on a laptop. We studied global \n(whole-brain) and within subnetwork resting-state topology as well as functional connectivity between subnetworks, with a \nfocus on the default-mode, fronto-parietal and dorsal and ventral attention networks. Efficiency and clustering coefficient were \ncalculated to measure network integration and segregation, respectively, at both the global and subnetwork level. Our main \nfinding was that higher global efficiency was associated with slower performance (β = 0.22, Pbca = 0.04) and this association \nseemed mainly driven by inter-individual differences in default-mode network connectivity. The reported results were inde-\npendent of age, sex, education-level and motion. Although this finding is contrary to earlier findings on general cognition, \nwe tentatively hypothesize that the reported association may indicate that individuals with a more integrated brain during \nthe resting-state are less able to further increase network efficiency when transitioning from a rest to task state, leading to \nslower responses. This study also adds to a growing body of literature supporting a central role for the default-mode network \nin individual differences in cognitive performance.\n\nMethods\n\nSubjects and measurements\n\nData of healthy adult controls from two previous case–con-\ntrol studies were pooled for the current study. Exclusion criteria for all healthy \nsubjects were the use of psychoactive medication, current \nor past psychiatric diagnosis, a history of a major physical \nor neurological illness, MRI contraindications or a history \nof alcohol abuse. Further exclusion criteria for the current \nstudy were: no available data on the ToL task, extreme \nbehavioral scores (≥ 2 SD from the mean), a time-interval \nof more than 21 days between resting-state fMRI (rs-fMRI) \nand performing the ToL task, or pathological incidental find-\nings on the structural MRI scan. Written informed consent \nwas provided by all participants according to the Declaration \nof Helsinki and the studies were approved by the Medical \nEthical Committee of the VU University Medical Centre \n(Amsterdam, The Netherlands).\n\nPerformance on the ToL task was indicated by the mean \naccuracy and mean reaction time on correct trials across all \nfive difficulty levels.\n\nMR image acquisition\n\nMR images were acquired at Amsterdam UMC, location \nVUmc (Amsterdam, The Netherlands) on a GE Signa HDxt \n3 T MRI scanner (General Electric, Milwaukee, WI, USA) \nwith an eight-channel head coil. The participant’s head was \nimmobilized using foam pads to reduce motion artifacts. \nParticipants were told to lie still, keep their eyes closed and \nnot fall asleep during the acquisition of the rs-fMRI scan \n(duration: 5.9 min). T2*-weighted echo-planar (EPI) images \nwere acquired with TR = 1.8 s, TE = 35 ms, 64 × 64 matrix, \nfield of view = 24 cm and flip angle = 80° and 40 ascending \nslices per volume (3.75 × 3.75 mm in plane resolution; slice \nthickness = 2.8 mm; interslice gap = 0.2 mm). Structural \nscanning encompassed a sagittal three-dimensional gradi-\nent-echo T1-weighted sequence (256 × 256 matrix; voxel \nsize = 1 × 0.977 × 0.977 mm; 172 slices).\n\nImage (pre)processing\n\nRS-fMRI and T1-weighted images were preprocessed with \nFMRIB’s Software Library version 5.0.10 (FSL). The first four volumes were discarded to reach \nsteady-state magnetization. Non-brain tissue was removed \nusing BET and the structural image was segmented into gray \n(GM), white matter (WM) and cerebrospinal fluid (CSF) \nusing FAST. Functional images were re-aligned using McF-\nLIRT and the resulting six rigid-body parameters were used \nto calculate the motion parameters. Functional images were \nspatially smoothed with a 5 mm full width at half maximum \n(FWHM) kernel. Subjects with significant motion during \nscanning, defined as a mean relative root mean squared dis-\nplacement (RMS) > 0.2 mm, or > 20 volumes with frame-\nwise relative RMS displacement > 0.25 mm, were excluded. \nBecause rs-fMRI is exceptionally sensitive to motion artefacts, we additionally \nperformed ICA-AROMA. After ICA-AROMA, \nadditional nuisance regression was performed by removing \nsignal from the WM and CSF and functional images were \nhigh-pass filtered (100 s cut-off).\n\nThe functional scan was registered to the anatomical \nT1-scans using boundary-based registration (FSL epi_reg). The anatomical image was parcellated into 225 nodes; 210 \ncortical nodes were defined based on the Brainnetome Atlas, 14 subcortical nodes were individually \nsegmented using FSL FIRST and one \ncerebellar node was defined based on the FSL’s cerebellar \natlas. EPI distortions during fMRI \ncan lead to signal drop-out. To account for signal dropout \nnear air/tissue boundaries during scanning, we applied a \nmask to the functional scan to exclude voxels with signal \nintensities in the lowest quartile of the robust range. Nodes were discarded if they comprised less \nthan four signal-containing voxels. This rendered a total of \n194 common brain regions across all subjects. Time-series \nwere extracted from each node.\n\nFunctional connectivity matrices\n\nTo measure FC and construct connectivity matrices we \napplied wavelet coherence on the time-series of each pos-\nsible pair of the 194 brain regions within the frequency \nrange 0.06 and 0.12 Hz. We applied wavelet coher-\nence to the entire rs-fMRI scan to calculate the network \nmeasures.\n\nResults — Sample characteristics\n\nOf the 69 participants with an available ToL task and rs-\nfMRI data, seven had to be excluded, which \nresulted in a total sample size of 62 participants, aged \nbetween 21 and 74 years old (Mage = 48.1 ± 13.9, 33 males). \nThe average motion during rs-fMRI (expressed as mean rela-\ntive RMS framewise displacement) was 0.068 ± 0.029.\nHandedness (R/L) 54/7.\n\nOpen Access and data availability\n\nOpen Access This article is licensed under a Creative Commons Attri-\nbution 4.0 International License.\n\nWe will make the here reported data available \nto researchers upon reasonable request.\n\nPublisher’s Note Springer Nature remains neutral with regard to jurisdictional claims.\n\nRS-fMRI and T1-weighted images were preprocessed with FMRIB’s Software Library version 5.0.10 (FSL; (Smith et al. 2004)). The first four volumes were discarded to reach steady-state magnetization. Non-brain tissue was removed using BET and the structural image was segmented into gray (GM), white matter (WM) and cerebrospinal fluid (CSF) using FAST. Functional images were re-aligned using McFLIRT and the resulting six rigid-body parameters were used to calculate the motion parameters. Functional images were spatially smoothed with a 5 mm full width at half maximum (FWHM) kernel. Subjects with significant motion during scanning, defined as a mean relative root mean squared displacement (RMS)>0.2 mm, or>20 volumes with framewise relative RMS displacement>0.25 mm, were excluded (Ciric et al. 2017). Because rs-fMRI is exceptionally sensitive to motion artefacts (Power et al. 2015), we additionally performed ICA-AROMA (Pruim et al. 2015). ICA-AROMA is a single-subject denoising strategy based on independent component analysis (ICA) that automatically identifies motion-related components in the functional data based on their high-frequency content, correlation with the motion parameters and edge and CSF fraction and removes their variance from the data (Pruim et al. 2015). ICA-AROMA has been shown to provide a good trade-off between reducing noise and preserving BOLD signal (Ciric et al. 2017; Parkes et al. 2018). After ICA-AROMA, additional nuisance regression was performed by removing signal from the WM and CSF and functional images were high-pass filtered (100 s cut-off).\n\nThe functional scan was registered to the anatomical T1-scans using boundary-based registration (FSL epi_reg). The anatomical image was parcellated into 225 nodes; 210 cortical nodes were defined based on the Brainnetome Atlas (Fan et al. 2016), 14 subcortical nodes were individually segmented using FSL FIRST (Patenaude et al. 2011) and one cerebellar node was defined based on the FSL’s cerebellar atlas (Diedrichsen et al. 2009). EPI distortions during fMRI can lead to signal drop-out. To account for signal dropout near air/tissue boundaries during scanning, we applied a mask to the functional scan to exclude voxels with signal intensities in the lowest quartile of the robust range (Meijer et al. 2017). Nodes were discarded if they comprised less than four signal-containing voxels. This rendered a total of 194 common brain regions across all subjects. Time-series were extracted from each node. The cortical nodes were subdivided into four RSN: the DMN, FPN, DAN and VAN based on the functional subdivision by Yeo et al. (2011); see supplementary Table 1.\n\nTo measure FC and construct connectivity matrices we applied wavelet coherence on the time-series of each possible pair of the 194 brain regions within the frequency range 0.06 and 0.12 Hz (Chang and Glover 2010). Wavelet coherence has several advantages over Pearson’s correlations, including denoising properties and robustness to outliers (Gu et al. 2017; Fadili and Bullmore 2004; Achard et al. 2006). The 0.06–0.12 Hz frequency range was chosen because it has been suggested to be a reliable and robust range that is associated with cognitive performance (Zhang et al. 2016; Bassett et al. 2013). We applied wavelet coherence to the entire rs-fMRI scan to calculate the network measures (see below). An overview of the (pre)processing pipeline is provided in Fig. 1.\n\nAt the global level, we calculated global efficiency and global clustering coefficient (Gcc). Global efficiency is the inverse of the average path length (i.e., the maximum connectivity between each pair of nodes), with high efficiency meaning that information can rapidly travel through the whole network (Latora and Marchiori 2001). Gcc is equivalent to the proportion of the actual number of edges between the nearest neighbors of a node to all possible edges and signifies the tendency of the whole network to segregate into locally interconnected triplets that function as a specialized subunit (Rubinov and Sporns 2010). Test–retest reliability of global efficiency and Gcc are fair-to-good (Welton et al. 2015). At the subnetwork level, we calculated efficiency and clustering coefficient for each of the four RSNs (DMN, FPN, DAN and VAN). In addition, we determined the mean FC between each of the four RSNs (resulting in six between-network mean FC values). Test–retest reliability of these measures at the subnetwork level is unknown."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 69,
+            "text": "Resting-state network topology and planning ability in healthy adults",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 102,
+            "end": 106,
+            "text": "2020",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 120,
+            "end": 162,
+            "text": "https://doi.org/10.1007/s00429-019-02004-6",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 253,
+            "end": 364,
+            "text": "Chris Vriend · Margot J. Wagenmakers · Odile A. van den Heuvel · Ysbrand D. van der Werf",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7074,
+            "end": 7089,
+            "text": "Springer Nature",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1463,
+            "end": 1526,
+            "text": "higher global efficiency was associated with slower performance",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6910,
+            "end": 6967,
+            "text": "Creative Commons Attribution 4.0 International License.",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6969,
+            "end": 7055,
+            "text": "We will make the here reported data available \nto researchers upon reasonable request.",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3435,
+            "end": 3503,
+            "text": "GE Signa HDxt \n3 T MRI scanner (General Electric, Milwaukee, WI, USA)",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3916,
+            "end": 3947,
+            "text": "40 ascending  slices per volume",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3985,
+            "end": 4010,
+            "text": "thickness = 2.8 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3895,
+            "end": 3911,
+            "text": "flip angle = 80°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4012,
+            "end": 4035,
+            "text": "interslice gap = 0.2 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3750,
+            "end": 3767,
+            "text": "duration: 5.9 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3672,
+            "end": 3683,
+            "text": "eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3869,
+            "end": 3890,
+            "text": "field of view = 24 cm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3828,
+            "end": 3838,
+            "text": "TR = 1.8 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3840,
+            "end": 3850,
+            "text": "TE = 35 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3949,
+            "end": 4010,
+            "text": "3.75 × 3.75 mm in plane resolution; slice  thickness = 2.8 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6590,
+            "end": 6626,
+            "text": "total sample size of 62 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4284,
+            "end": 4329,
+            "text": "FMRIB’s Software Library version 5.0.10 (FSL)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 853,
+            "end": 871,
+            "text": "resting-state fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6610,
+            "end": 6612,
+            "text": "62",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6634,
+            "end": 6661,
+            "text": "between 21 and 74 years old",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6683,
+            "end": 6691,
+            "text": "33 males",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6806,
+            "end": 6827,
+            "text": "Handedness (R/L) 54/7",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6543,
+            "end": 6567,
+            "text": "seven had to be excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3069,
+            "end": 3147,
+            "text": "approved by the Medical \nEthical Committee of the VU University Medical Centre",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3229,
+            "end": 3266,
+            "text": "mean \naccuracy and mean reaction time",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4333,
+            "end": 4371,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ],
+          "id": "m0030"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4353,
+            "end": 4371,
+            "text": "first four volumes were discarded",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4373,
+            "end": 4410,
+            "text": "2",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0032"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4391,
+            "end": 4394,
+            "text": "BET",
+            "labels": [
+              "Skull stripping — Algorithm"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4412,
+            "end": 4521,
+            "text": "3",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0034"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4487,
+            "end": 4491,
+            "text": "FAST",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4523,
+            "end": 4607,
+            "text": "4",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0036"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4564,
+            "end": 4571,
+            "text": "McF-\nLIRT",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4609,
+            "end": 4672,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ],
+          "id": "m0038"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4633,
+            "end": 4672,
+            "text": "5 mm full width at half maximum \n(FWHM) kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4674,
+            "end": 4915,
+            "text": "6",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ],
+          "id": "m0040"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4748,
+            "end": 4915,
+            "text": "mean relative root mean squared dis-\nplacement (RMS) > 0.2 mm, or > 20 volumes with frame-\nwise relative RMS displacement > 0.25 mm",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "ICA AROMA",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4981,
+            "end": 4999,
+            "text": "7",
+            "labels": [
+              "ICA AROMA — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0042"
+        },
+        {
+          "from_name": "ICA AROMA",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4989,
+            "end": 4999,
+            "text": "ICA-AROMA",
+            "labels": [
+              "ICA AROMA — Algorithm"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5001,
+            "end": 5140,
+            "text": "8",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0044"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5082,
+            "end": 5140,
+            "text": "removing \nsignal from the WM and CSF",
+            "labels": [
+              "Other confound regression — Algorithm"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5169,
+            "end": 5198,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0046"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5182,
+            "end": 5190,
+            "text": "high-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5192,
+            "end": 5205,
+            "text": "100 s cut-off",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5208,
+            "end": 5295,
+            "text": "10",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0049"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5246,
+            "end": 5257,
+            "text": "FSL epi_reg",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5227,
+            "end": 5256,
+            "text": "boundary-based registration",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8950,
+            "end": 8967,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0052"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8950,
+            "end": 8967,
+            "text": "Brainnetome Atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9550,
+            "end": 9603,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9042,
+            "end": 9051,
+            "text": "FSL FIRST",
+            "labels": [
+              "ROI definition — Software"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9125,
+            "end": 9147,
+            "text": "FSL’s cerebellar atlas",
+            "labels": [
+              "ROI definition — Software"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9550,
+            "end": 9603,
+            "text": "total of 194 common brain regions across all subjects",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9605,
+            "end": 9647,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0058"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9605,
+            "end": 9647,
+            "text": "Time-series were extracted from each node.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9648,
+            "end": 9808,
+            "text": "4",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0060"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9648,
+            "end": 9808,
+            "text": "The cortical nodes were subdivided into four RSN: the DMN, FPN, DAN and VAN based on the functional subdivision by Yeo et al. (2011); see supplementary Table 1.",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9648,
+            "end": 9808,
+            "text": "The cortical nodes were subdivided into four RSN: the DMN, FPN, DAN and VAN based on the functional subdivision by Yeo et al. (2011); see supplementary Table 1.",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9860,
+            "end": 9998,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0063"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9860,
+            "end": 9998,
+            "text": "we applied wavelet coherence on the time-series of each possible pair of the 194 brain regions within the frequency range 0.06 and 0.12 Hz",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9982,
+            "end": 9998,
+            "text": "0.06 and 0.12 Hz",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10604,
+            "end": 10676,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0066"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10604,
+            "end": 10676,
+            "text": "we calculated global efficiency and global clustering coefficient (Gcc).",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11302,
+            "end": 11429,
+            "text": "At the subnetwork level, we calculated efficiency and clustering coefficient for each of the four RSNs (DMN, FPN, DAN and VAN).",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11443,
+            "end": 11549,
+            "text": "we determined the mean FC between each of the four RSNs (resulting in six between-network mean FC values).",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0069"
+        }
+      ]
+    }
+  ]
+}

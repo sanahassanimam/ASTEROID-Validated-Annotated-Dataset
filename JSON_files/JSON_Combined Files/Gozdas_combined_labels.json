@@ -1,0 +1,1291 @@
+{
+  "data": {
+    "text": "Developmental changes in functional brain networks from birth through adolescence\nElveda Gozdas1 | Scott K. Holland2 | Mekibib Altaye3 | CMIND Authorship Consortium\nHum Brain Mapp. 2019;40:1434–1444. https://doi.org/10.1002/hbm.24457\n© 2018 Wiley Periodicals, Inc.\nAbstract\nHere we use graph theory analysis to examine the influence of age, sex, and neurocognitive measures on developmental changes to the global and regional topology of functional brain networks derived from fMRI data recorded in 189 healthy subjects from the age of 0–18 years during rest.\n\n2.1 | Participants\nOne hundred and eighty-nine (n = 189) participants were selected from Cincinnati MR Imaging of Neurodevelopment (C-MIND) (http://research.cchmc.org/c-mind) database of functional neuroimaging and behavioral data from typically developing children.\nThe C-MIND database only contains data from normally developing children with strict exclusion of chronic illness, gestation less than 37 or greater than 42 weeks, birth weight less than the 10th percentile, history of head trauma with a loss of consciousness, special education, orthodontic braces or other metallic implants and standard MRI compatibility contraindications.\nThe study was approved by the Institutional Review Board at Cincinnati Children's Hospital Medical Center; informed consent and assent (where appropriate) were obtained from a parent/guardian and the participant.\nParticipants between the ages 0 and 2 years of age were scanned while asleep. Participants between the ages 3 and 18 years of age were scanned while awake.\n\n2.2 | MRI acquisition\nOne hundred and fifty-six (n = 156) subjects were imaged on a Philips 3 T Achieva system and a 32-channel head coil. About 33 subjects were imaged on a Siemens Magnetom Trio-Tim scanner.\nEPI–fMRI scan parameters between the scanners were homogenized to minimize systematic variation in the data from the two machines. TR/TE = 2,000/35 ms, FOV = 24 cm × 24 cm, matrix = 80 × 80, and slice thickness = 4 mm, yielding spatial resolution of 3 × 3 × 4 mm. Thirty-six slices were acquired, covering the entire brain. One hundred and fifty whole-brain volumes were acquired.\nPrior to acquisition of the functional image data, the scanner was programmed to execute a “dummy scan” interval consisting of 2 TR periods, for which the scans were not recorded. In addition, the first acquired image was also discarded during post-processing to insure image contrast at relaxation equilibrium. Total scan time for resting state acquisition plus dummy scans was 5 min 8 s.\n\n2.3.1 | Preprocessing\nFor the resting state functional connectivity analysis, all images were preprocessed in SPM8. The resting state functional image series was corrected for head motion by realigning all images to the mean of all functional volumes. The data of nine subjects were discarded from further analysis due to head motion because they had a higher mean frame-wise displacement (mFD) than group average (Yan et al., 2013). Among the remaining 189 subjects, the head motion parameters showed no significant correlation with age.\nThe mean functional image was co-registered to a corresponding T1-weighted high-resolution image. To optimize segmentation and normalization across the age span of all subjects, we created age specific templates for five age groups: 0–2, 3–5, 6–8, 9–12, and 13–18 years. After motion correction, structural images were brain-extracted and tissue-type segmentation was implemented. The resulting images were then aligned to MNI space using nonlinear registration and then averaged to create an age-specific template in SPM8. T1-weighted images were re-segmented into gray matter, white matter, and cerebrospinal fluid (CSF) using the age specific probability maps and then all functional images were normalized to these templates and resampled to voxel size 2 × 2 × 2 mm. Subsequently, normalized functional images were smoothed with 8 mm FWHM kernel.\n\n2.3.2 | Functional brain networks construction\nA whole brain parcellation method was recently introduced based on a data-driven approach to generate functionally homogeneous regions of interest (ROIs) by spatially parcellating whole-brain resting state fMRI data into regions of maximal coherence in the time course of voxels within each ROI (Craddock et al., 2012). This method can be used to create a parcellation atlas of any desired number of ROIs, though it has been shown that 150–200 ROIs provides a good compromise between functional homogeneity of the regions, interpretability of connectivity results and computational data reduction. We implemented this method for parcellation of normalized whole brain data. The pyClusterROI software (http://ccraddock.github.io/cluster_roi/) was used to parcellate whole brain functional data of each group into 200 regions.\n\n2.3.3 | ROI-to-ROI functional connectivity\nWith 200 ROIs defined in the normalized and pre-processed resting state brain imaging data from all subjects, we computed functional connectivity using the Conn functional connectivity toolbox (Whitfield-Gabrieli & Nieto-Castanon, 2012). The residual BOLD time-series was extracted from gray matter voxels within the 200 defined ROIs in the preprocessed resting state fMRI data. The resting state fMRI time series was corrected on a voxel-by-voxel basis using the anatomical component correction (aCompCor) method, which removes the principal components attributed to white matter and cerebrospinal fluid signals (Behzadi, Restom, Liau, & Liu, 2007) and eliminates the need for a global signal regression (Chai, Castañón, Öngür, & Whitfield-Gabrieli, 2012; Murphy, Birn, Handwerker, Jones, & Bandettini, 2009). Additional post-processing of time series data was performed using the Artifact Detection Tool (ART) (Mazaika, Hoeft, Glover, & Reiss, 2009) to identify image frames at the subject level with extreme motion (>1 mm relative to time series average) as outliers. These frames as well as six subject-specific motion parameters and their first derivatives, were also calculated as potential confounds in subsequent analysis stages. The residual BOLD time-series in each voxel was band-pass filtered at 0.008–0.08 Hz to focus on low frequency fluctuations (Fox et al., 2005).\nThese correlation coefficients for each subject were converted to z-values using Fisher's transform to improve the normality. False discovery rate (FDR; p < .05) was used to correct for multiple comparisons in calculating the significance of each ROI–ROI connection (Benjamini & Hochberg, 1995).\n\n2.3.4 | Functional network analysis\nUsing a threshold of p < .05 (FDR corrected), significant correlation values in the covariance matrix between all 200 ROIs were assigned a binary value of 1 when the connection between region i and region j was present and 0 otherwise, to construct an unweighted connectivity matrix from each of the 200 ROIs for each participant. Graph theory analysis was computed using the Brain Connectivity Toolbox (http://www.brain-connectivity-toolbox.net/).\n\n2.4 | Correlation of network topology with age, sex, and behavioral measures\nAll children in the C-MIND study participated in an extensive neurocognitive assessment battery within a few weeks of the functional MR imaging session. Neurocognitive testing included tests of general intellectual function [Wechsler Intelligence Scales: Wechsler Pre-school and Primary Scale of Intelligence, Third Edition (WPPSI-III, ages 2:6–5); Wechsler Intelligence Scale for Children, Fourth Edition (WISC-IV, ages 6–16) Wechsler Adult Intelligence Scale, Fourth Edition (WAIS-IV, ages 17 and 18, Wechsler, 1981) and vocabulary (the Expressive Vocabulary Test-2 (EVT-2) (Williams, 2007).\n\nThese correlation coefficients for each subject were converted to z-values using Fisher's transform to improve the normality. False discovery rate (FDR; p < .05) was used to correct for multiple comparisons in calculating the significance of each ROI–ROI connection (Benjamini & Hochberg, 1995).\nAdditionally, the 200 × 200 correlation matrix for each subject was estimated by computing Pearson’s correlation coefficients between each ROI time-series and the time-series of all other ROIs.\n\nFunctional brain networks construction\nA major consideration in graph theory approaches to functional brain\nimaging data is how to define the nodes of the network. Many previousstudies have used anatomical atlases as nodes (Merhar et al., 2016; Wu\net al., 2013). However, anatomical atlases often have poor functional\nhomogeneity and do not present functional connectivity patterns accu-rately (Craddock, James, Holtzheimer, Hu, & Mayberg, 2012). A wholebrain parcellation method was recently introduced based on a data-driven approach to generate functionally homogeneous regions of inter-est (ROIs) by spatially parcellating whole-brain resting state fMRI datainto regions of maximal coherence in the time course of voxels withineach ROI (Craddock et al., 2012). This method can be used to create a\nparcellation atlas of any desired number of ROIs, though it has been\nshown that 150 –200 ROIs provides a good compromise between func-\ntional homogeneity of the regions, interpretability of connectivityresults and computational data reduction. We implemented this methodfor parcellation of normalized whole brain data. The pyClusterROI soft-ware (http://ccraddock.github.io/cluster_roi/) was used to parcellatewhole brain functional data of each group into 200 regions.\n2.3.3 |ROI-to-ROI functional connectivity\nWith 200 ROIs defined in the normalized and pre-processed resting\nstate brain imaging data from all subjects, we computed functional con-nectivity using the Conn functional connectivity toolbox (Whitfield-\nGabrieli & Nieto-Castanon, 2012). The residual BOLD time-series was\nextracted from gray matter voxels within the 200 defined ROIs in thepreprocessed resting state fMRI data. The resting state fMRI time serieswas corrected on a voxel-by-voxel basis using the anatomical compo-nent correction (aCompCor) method, which removes the principal com-ponents attributed to white matter and cerebrospinal fluid signals(Behzadi, Restom, Liau, & Liu, 2007) and eliminates the need for a globalsignal regression (Chai, Castañón, Öngür, & Whitfield-Gabrieli, 2012;Murphy, Birn, Handwerker, Jones, & Bandettini, 2009). Additional post-processing of time series data was performed using the Artifact Detec-tion Tool (ART) (Mazaika, Hoeft, Glover, & Reiss, 2009) to identify image\nframes at the subject level with extreme motion (>1 mm relative to time\nseries average) as outliers. These frames as well as six subject-specificmotion parameters and their first derivatives, were also calculated aspotential confounds in subsequent analysis stages. The residual BOLDtime-series in each voxel was band-pass filtered at 0.008 –0.08 Hz to\nfocus on low frequency fluctuations (Fox et al., 2005).\nFollowing the temporal preprocessing of fMRI data, an ROI-to-ROI\nfunctional connectivity analysis was performed by grouping voxels intothe 200 ROIs defined from the age specific atlases, and estimating the200×200 correlation matrix for each subject by computing Pearson ’s\ncorrelation coefficients between each ROI time-series and the time-series of all other ROIs. These correlation coefficients for each subjectwere converted to z-values using Fisher's transform to improve thenormality. False discovery rate (FDR; p< .05) was used to correct for\nmultiple comparisons in calculating the significance of each ROI –ROI\nconnection (Benjamini & Hochberg, 1995).\n2.3.4 |Functional network analysis\nUsing a threshold of p< .05 (FDR corrected), significant correlation\nvalues in the covariance matrix between all 200 ROIs were assigned abinary value of 1 when the connection between region iand region j\nwas present and 0 otherwise, to construct an unweighted connectivitymatrix from each of the 200 ROIs for each participant. Graphtheory analysis was computed using the Brain Connectivity Toolbox(http://www.brain-connectivity-toolbox.net/) which operates onthe unweighted covariance matrix. To explore global topologicalproperties of the whole brain functional networks, we computed\nGlobal Efficiency, Local Efficiency, Small-Worldness, Modularity, and\nRich-Club coefficient. Here, the global network parameters are brieflydefined as follows.1436 GOZDAS ET AL.\nGlobal efficiency is defined as the average inverse shortest charac-\nteristic path length between all pairs of nodes (Latora & Marchiori,\n2001). Global efficiency for a network Gwith Nnodes is given as:\nEglobGðÞ ¼1\nNN−1ðÞX\n1≤i,j≤N,i6¼j1\nLij\nwhere, Lijis the characteristic path length between nodes iandjin the\nnetwork.\nLocal efficiency is computed as the average of the global efficiency\nof each node's neighborhood sub-graph:\nElocGðÞ ¼1\nNX\n1≤i≤NEglobGiðÞ\nwhere, Giis the sub-graph of the nearest neighbors of node i. In con-\ntrast to global efficiency, local efficiency represents the capacity to\ntransfer information within the neighbors of a given node, and a highLocal Efficiency reflects efficient information transfer in the immedi-ate neighborhood of each node (Latora & Marchiori, 2001).\nBetweenness centrality of a node is the fraction of shortest paths\nbetween all other pairs of nodes in the network that actually pass\nthrough the node of interest (Freeman, 1978). This measure has beenused to identify the most central nodes in a network, which reflectsthe importance of the specific node in transferring information to\nother nodes. A node with high betweenness centrality is crucial to\nefficient communication.\nNode degree (k) is computed as the number of links to other nodes\nin the network.\nModularity (Q) quantifies the degree to which the network may be\npartitioned into a subdivision that has higher connections with eachother than with the rest of the network (Newman, 2006).\nSmall-worldness is an important model that quantifies the balance\nbetween network segregation and integration. To examine small-world properties of a network the normalized clustering coefficient γ\n=C/C\nrandand normalized characteristic path length λ=L/Lrandare\ncomputed (Watts & Strogatz, 1998). C and L are the clustering coeffi-cient and the characteristic path length of a network and C\nrandand\nLrandare the mean clustering coefficient and the characteristic path\nlength of the matched random networks. Clustering coefficient ( C)i s\ndescribed as the fraction of the node's neighbors that are also neigh-bors of each other. Characteristic path length ( L) is defined as the\naverage of the shortest path length between all pairs of nodes. Typi-\ncally, a network is considered a small-world when it meets the follow-\ning conditions: γ>1 , σ>1, and λ≈1; where, σ=(C/C\nrand)/(L/Lrand).\nThe Rich-Club coefficient of a network is calculated over a range\nof degree kafter removing all nodes with degree ≤k. The Rich-Club\ncoefficient ;(k) for any kis computed as the ratio of connections\nbetween the remaining nodes Ek>with a degree of at least kand the\ntotal number of possible connections between them. The Rich-Club\ncoefficient ;(k) is given formally by the following:\n;kðÞ ¼2Ek>.\nNk>Nk>−1 ðÞ\nWe computed the normalized Rich-Club coefficient ;norm(k) for\nthe unweighted connectivity matrices as follows:\n;norm kðÞ¼;kðÞ.\n;randkðÞwhere, ;rand(k) is the average Rich-Club coefficient over 1,000 random\nnetworks.\nA normalized Rich-Club clustering coefficient ;norm(k) > 1 over a\nrange of kindicates Rich-Club organization in the network (Van den\nHeuvel & Sporns, 2011).\n2.4 |Correlation of network topology with age, sex,\nand behavioral measures\nTo assess whether the observed changes in network properties relate\nto age, sex, or neurocognitive abilities in the children, we evaluated theeffects of association of these measures with global and regional net-\nwork properties. For each child, the age in months at the time of the\nresting state fMRI scan and the sex were extracted from the C-MINDdatabase. All children in the C-MIND study participated in an extensiveneurocognitive assessment battery within a few weeks of the functionalMR imaging session. Neurocognitive testing included tests of generalintellectual function [Wechsler Intelligence Scales: Wechsler Pre-schooland Primary Scale of Intelligence, Third Edition (WPPSI-III, ages 2:6 –5);\nWechsler Intelligence Scale for Children, Fourth Edition (WISC-IV, ages\n6–16) Wechsler Adult Intelligence Scale, Fourth Edition (WAIS-IV, ages\n17 and 18, Wechsler, 1981) and vocabulary (the Expressive VocabularyTest-2 (EVT-2) (Williams, 2007).\nWe found no significant correlation between age and neurocogni-\ntive measures ( p> .5) and no significant difference between boys and\ngirls ( p> .6). Scores from these tests are included in statistical analysis\nmodels with brain network measures to pin point brain regions and\nconnections that facilitate greater cognitive ability during develop-ment. Younger participants were excluded from the analysis becauseneurocognitive data were not available.\n2.5 |Statistical analysis\nTo determine the changes in the functional networks across develop-\nment, a general linear model (GLM) was applied to analyze the effects\nof age, sex and neurocognitive measures and their interactions on thenetwork parameters. We performed multiple linear regressions whichincluded age and age\n2as predictors with sex and mean frame-wise\ndisplacement (mFD) derived from the head motion parameters(Power, Barnes, Snyder, Schlaggar, & Petersen, 2012) as other covari-ates to detect the linear and quadratic developmental trajectories. TheGLM models were determined as follows:\nY\n1¼β0+β1xage + β2xsex + β3xmFD\nY2¼β0+β1xage + β2xage2+β3xsex + β4xmFD\nTo examine the sex-related differences and their development we\nused another GLM model including age, sex, and sex-by-age interac-tions to examine both positive (boys > girls) and negative (girls > boys)contrasts as well as positive and negative age-by-sex interactions.\nY\n3¼β0+β1xage + β2xsex + β3xsexxage + β4xmFD\nFor the analysis of the IQ-related differences, we first applied a\nmultiple linear regression Y3on both IQ and each network parameter\nto model the effects of age, sex, and their interactions.GOZDAS ET AL. 1437\nAll statistical analysis was performed in RStudio (https://www.\nrstudio.com)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 81,
+            "text": "Developmental changes in functional brain networks from birth through adolescence",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 82,
+            "end": 95,
+            "text": "Elveda Gozdas",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 181,
+            "end": 185,
+            "text": "2019",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 241,
+            "end": 264,
+            "text": "Wiley Periodicals, Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 200,
+            "end": 233,
+            "text": "https://doi.org/10.1002/hbm.24457",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 286,
+            "end": 373,
+            "text": "graph theory analysis to examine the influence of age, sex, and neurocognitive measures",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1658,
+            "end": 1677,
+            "text": "Philips 3 T Achieva",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1748,
+            "end": 1773,
+            "text": "Siemens Magnetom Trio-Tim",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2047,
+            "end": 2064,
+            "text": "Thirty-six slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1978,
+            "end": 2000,
+            "text": "slice thickness = 4 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1914,
+            "end": 1933,
+            "text": "TR/TE = 2,000/35 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1914,
+            "end": 1933,
+            "text": "TR/TE = 2,000/35 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1935,
+            "end": 1954,
+            "text": "FOV = 24 cm × 24 cm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2033,
+            "end": 2045,
+            "text": "3 × 3 × 4 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2543,
+            "end": 2552,
+            "text": "5 min 8 s",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1473,
+            "end": 1493,
+            "text": "scanned while asleep",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1552,
+            "end": 1571,
+            "text": "scanned while awake",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 547,
+            "end": 558,
+            "text": "during rest",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 499,
+            "end": 519,
+            "text": "189 healthy subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2665,
+            "end": 2669,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 609,
+            "end": 616,
+            "text": "n = 189",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Age",
+            "Handedness",
+            "Male/Female",
+            "Group matching"
+          ],
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 536,
+            "end": 546,
+            "text": "0–18 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 906,
+            "end": 1202,
+            "text": "strict exclusion of chronic illness, gestation less than 37 or greater than 42 weeks, birth weight less than the 10th percentile, history of head trauma with a loss of consciousness, special education, orthodontic braces or other metallic implants and standard MRI compatibility contraindications",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2819,
+            "end": 2847,
+            "text": "nine subjects were discarded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1218,
+            "end": 1260,
+            "text": "approved by the Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7328,
+            "end": 7356,
+            "text": "Wechsler Intelligence Scales",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2256,
+            "end": 2266,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ],
+          "id": "m0027"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2291,
+            "end": 2295,
+            "text": "2 TR",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2361,
+            "end": 2400,
+            "text": "first acquired image was also discarded",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2746,
+            "end": 2767,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0030"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2665,
+            "end": 2669,
+            "text": "SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2746,
+            "end": 2767,
+            "text": "realigning all images",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2819,
+            "end": 2847,
+            "text": "3",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0033"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2915,
+            "end": 2949,
+            "text": "mean frame-wise displacement (mFD)",
+            "labels": [
+              "Exclusion — Algorithm"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3124,
+            "end": 3168,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0035"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2665,
+            "end": 2669,
+            "text": "SPM8",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3124,
+            "end": 3137,
+            "text": "co-registered",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3413,
+            "end": 3428,
+            "text": "5",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0038"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2665,
+            "end": 2669,
+            "text": "SPM8",
+            "labels": [
+              "Skull stripping — Software"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3413,
+            "end": 3428,
+            "text": "brain-extracted",
+            "labels": [
+              "Skull stripping — Algorithm"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3433,
+            "end": 3457,
+            "text": "6",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0041"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2665,
+            "end": 2669,
+            "text": "SPM8",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3204,
+            "end": 3216,
+            "text": "segmentation",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3506,
+            "end": 3526,
+            "text": "7",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2665,
+            "end": 2669,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3533,
+            "end": 3555,
+            "text": "nonlinear registration",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3770,
+            "end": 3822,
+            "text": "8",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [],
+          "id": "m0047"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2665,
+            "end": 2669,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3793,
+            "end": 3822,
+            "text": "normalized to these templates",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3840,
+            "end": 3863,
+            "text": "voxel size 2 × 2 × 2 mm",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3913,
+            "end": 3936,
+            "text": "9",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [],
+          "id": "m0051"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2665,
+            "end": 2669,
+            "text": "SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3913,
+            "end": 3921,
+            "text": "smoothed",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3927,
+            "end": 3936,
+            "text": "8 mm FWHM",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5326,
+            "end": 5368,
+            "text": "10",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0055"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5359,
+            "end": 5367,
+            "text": "aCompCor",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5744,
+            "end": 5773,
+            "text": "11",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [],
+          "id": "m0057"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5744,
+            "end": 5773,
+            "text": "Artifact Detection Tool (ART)",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5923,
+            "end": 5931,
+            "text": "outliers",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5881,
+            "end": 5886,
+            "text": ">1 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5957,
+            "end": 5995,
+            "text": "12",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3032,
+            "end": 3049,
+            "text": "motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6148,
+            "end": 6166,
+            "text": "13",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0063"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6148,
+            "end": 6157,
+            "text": "band-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6170,
+            "end": 6183,
+            "text": "0.008–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8990,
+            "end": 9110,
+            "text": "parcellation atlas of any desired number of ROIs, though it has been\nshown that 150 –200 ROIs provides a good compromise",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9313,
+            "end": 9330,
+            "text": "pyClusterROI soft",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9442,
+            "end": 9462,
+            "text": "into 200 regions.\n2.",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9746,
+            "end": 9837,
+            "text": "residual BOLD time-series was\nextracted from gray matter voxels within the 200 defined ROIs",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11133,
+            "end": 11207,
+            "text": "computing Pearson ’s\ncorrelation coefficients between each ROI time-series",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9619,
+            "end": 9699,
+            "text": "uted functional con-nectivity using the Conn functional connectivity toolbox (Wh",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11294,
+            "end": 11345,
+            "text": "were converted to z-values using Fisher's transform",
+            "labels": [
+              "Connectivity normalization — Algorithm/Type"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11371,
+            "end": 11510,
+            "text": "False discovery rate (FDR; p< .05) was used to correct for\nmultiple comparisons in calculating the significance of each ROI –ROI\nconnection",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11812,
+            "end": 11844,
+            "text": "construct an unweighted connecti",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12149,
+            "end": 12253,
+            "text": "we computed\nGlobal Efficiency, Local Efficiency, Small-Worldness, Modularity, and\nRich-Club coefficient.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11947,
+            "end": 11973,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 17003,
+            "end": 17180,
+            "text": "To determine the changes in the functional networks across develop-\nment, a general linear model (GLM) was applied to analyze the effects\nof age, sex and neurocognitive measures",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8990,
+            "end": 9110,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0078"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9313,
+            "end": 9330,
+            "text": "2",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ],
+          "id": "m0079"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9746,
+            "end": 9837,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0080"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11133,
+            "end": 11207,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0081"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11294,
+            "end": 11345,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0082"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11371,
+            "end": 11510,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0083"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11812,
+            "end": 11844,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0084"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12149,
+            "end": 12253,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ],
+          "id": "m0085"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 17003,
+            "end": 17180,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0086"
+        }
+      ]
+    }
+  ]
+}

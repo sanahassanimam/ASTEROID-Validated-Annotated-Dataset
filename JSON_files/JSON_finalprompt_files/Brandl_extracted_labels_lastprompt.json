@@ -1,0 +1,731 @@
+{
+  "data": {
+    "text": "Cerebral Cortex, September 2018;28: 3082–3094\ndoi: 10.1093/cercor/bhx178\n© The Author 2017. Published by Oxford University Press.\n\nIncreased Global Interaction Across Functional Brain Modules During Cognitive Emotion Regulation\nFelix Brandl1,2, Satja Mulej Bratec1,2,3, Xiyao Xie2,4, Afra M. Wohlschläger1,2, Valentin Riedl1,2, Chun Meng1,2,5 and Christian Sorg1,2,6\n\nAbstract\nCognitive emotion regulation (CER) enables humans to flexibly modulate their emotions.\n\nParticipants\nNineteen healthy female subjects (mean age 24.8 ± 2.4 years) were recruited for the fMRI-based CER experiment. Subjects had to be free of any current or past neurological or psychiatric disorders, as verified by interview and psychometrics (Beck Depression Inventory and State-Trait Anxiety Inventory), and without any psychotropic medication. Only females were selected to exclude any gender bias in emotion processing and regulation. The study was approved by the ethics committee of Technische Universität München, and written informed consent was obtained from all participants. Furthermore, all subjects were right-handed native German speakers with normal or corrected-to-normal vision.\n\nTask Paradigm\nAfter a 20 min training of the paradigm outside the scanner, each participant completed 2 task runs in the MRI scanner. Each run comprised one task condition defined by the regulation strategy and consisted of 80 trials. Runs were counterbalanced across subjects. In the Attend condition, subjects were instructed to attentively look at the pictures and to not change the evoked emotional feelings. In the Regulate condition, subjects were instructed to down-regulate their emotions using a so-called antecedent-focused strategy of cognitive reappraisal in the form of self-distancing (e.g., “The content of the images has nothing to do with me or my situation. I am not affected and none of my loved ones is affected”). Each trial started with a fixation cross presented for 1 s, followed by the instruction (2 s) of whether to simply attend to the stimulus or to regulate the emotions induced by the upcoming picture, an anticipation phase (6 s), a picture presentation phase (6 s), and a rating phase (3 s). During the picture presentation phase, aversive pictures from the International Affective Picture System (IAPS) were presented to elicit negative emotions. Overall, pictures were presented in 40 trials (i.e., in 50% of the 80 trials employed per condition); in the other 50% of trials, no picture was shown. After each trial, subjects rated the intensity of their emotional feelings on a 7-point scale ranging from −3 = very negative to +3 = very positive.\n\nfMRI Acquisition and Preprocessing\nThe experiment was conducted on a three Tesla Siemens scanner at the Klinikum rechts der Isar, Technische Universität München. T1-weighted anatomical images were obtained using an MPRAGE sequence (1 × 1 × 1 mm3 resolution. Functional T2* images were acquired using a gradient-echo EPI sequence (repetition time: 2 s, echo time: 30 ms, flip angle: 90°, acquisition matrix: 64 × 64, 35 slices, slice thickness: 3 mm, interslice gap: 0.6 mm; 3 × 3 × 3 mm3 resolution). In each of the 2 task conditions, 881 functional images were obtained per subject. Data preprocessing was performed using SPM8 (Wellcome Department of Cognitive Neurology, London, UK). For each subject, the first two volumes of each session were discarded to account for magnetization effects. The remaining functional images were slice-timed, head motion corrected, coregistered to T1 images, spatially normalized into Montreal Neurological Institute (MNI) standard space through T1-based segmentation, and spatially smoothed with a Gaussian kernel of 8 mm FWHM (full width at half maximum). To control for confounding influences of spatial smoothing, we repeated the complete analysis with smoothing kernels of 6, 4, and 2 mm FWHM.\n\nConstruction of Connectivity Matrices\nNodes were defined by 286 cortical and subcortical spherical ROIs. 241 isocortical and 8 cerebellar ROIs with 4 mm radius each, as well as 5 thalamic ROIs with 3 mm radius, were taken from Power et al. (2011). For each hemisphere, 8 hippocampus ROIs with 2 mm radius and 6 striatum ROIs with 3 mm radius were created. For the amygdala, 2 ROIs (basolateral and centromedial amygdala) with 2 mm radius were generated in each hemisphere. Seed time-courses for each node were obtained by extracting voxel-wise BOLD time series and then averaging them across all voxels in the ROI. Edges were calculated by connectomic psychophysiological interaction using the generalized PPI (gPPI) method. To control for nuisance variables, we additionally added 6 head motion regressors to the model, specifically rotation and translation in 3 directions each. Absolute beta values of PPI interaction regressors, reflecting the strength of task-dependent functional connectivity between each pair of ROIs, were then entered as edge weights into the connectivity matrix.\n\nCER Success\nThese emotional intensity scores were then, for each condition, averaged over all trials and compared via paired two-sample t-test between Attend and Regulate conditions."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 228,
+            "end": 366,
+            "text": "Felix Brandl1,2, Satja Mulej Bratec1,2,3, Xiyao Xie2,4, Afra M. Wohlschläger1,2, Valentin Riedl1,2, Chun Meng1,2,5 and Christian Sorg1,2,6",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 131,
+            "end": 227,
+            "text": "Increased Global Interaction Across Functional Brain Modules During Cognitive Emotion Regulation",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 17,
+            "end": 45,
+            "text": "September 2018;28: 3082–3094",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 46,
+            "end": 72,
+            "text": "doi: 10.1093/cercor/bhx178",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 92,
+            "end": 129,
+            "text": "Published by Oxford University Press.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 377,
+            "end": 463,
+            "text": "Cognitive emotion regulation (CER) enables humans to flexibly modulate their emotions.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2985,
+            "end": 3005,
+            "text": "repetition time: 2 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3007,
+            "end": 3023,
+            "text": "echo time: 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3025,
+            "end": 3040,
+            "text": "flip angle: 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3071,
+            "end": 3080,
+            "text": "35 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3082,
+            "end": 3103,
+            "text": "slice thickness: 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3105,
+            "end": 3127,
+            "text": "interslice gap: 0.6 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3129,
+            "end": 3153,
+            "text": "3 × 3 × 3 mm3 resolution",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 478,
+            "end": 510,
+            "text": "Nineteen healthy female subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3278,
+            "end": 3339,
+            "text": "SPM8 (Wellcome Department of Cognitive Neurology, London, UK)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2985,
+            "end": 3005,
+            "text": "repetition time: 2 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)",
+            "Brand",
+            "Duration (s)",
+            "Eyes open/closed",
+            "Field of View (cm)",
+            "Resting or Task/If Task, what task?"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 478,
+            "end": 510,
+            "text": "Nineteen healthy female subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 512,
+            "end": 537,
+            "text": "mean age 24.8 ± 2.4 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1092,
+            "end": 1127,
+            "text": "right-handed native German speakers",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 822,
+            "end": 913,
+            "text": "Only females were selected to exclude any gender bias in emotion processing and regulation.",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 589,
+            "end": 821,
+            "text": "Subjects had to be free of any current or past neurological or psychiatric disorders, as verified by interview and psychometrics (Beck Depression Inventory and State-Trait Anxiety Inventory), and without any psychotropic medication.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 478,
+            "end": 510,
+            "text": "Nineteen healthy female subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 914,
+            "end": 1060,
+            "text": "The study was approved by the ethics committee of Technische Universität München, and written informed consent was obtained from all participants.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2505,
+            "end": 2653,
+            "text": "After each trial, subjects rated the intensity of their emotional feelings on a 7-point scale ranging from −3 = very negative to +3 = very positive.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1450,
+            "end": 1584,
+            "text": "In the Attend condition, subjects were instructed to attentively look at the pictures and to not change the evoked emotional feelings.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1585,
+            "end": 1906,
+            "text": "In the Regulate condition, subjects were instructed to down-regulate their emotions using a so-called antecedent-focused strategy of cognitive reappraisal in the form of self-distancing (e.g., “The content of the images has nothing to do with me or my situation. I am not affected and none of my loved ones is affected”).",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2197,
+            "end": 2352,
+            "text": "During the picture presentation phase, aversive pictures from the International Affective Picture System (IAPS) were presented to elicit negative emotions.",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2353,
+            "end": 2504,
+            "text": "Overall, pictures were presented in 40 trials (i.e., in 50% of the 80 trials employed per condition); in the other 50% of trials, no picture was shown.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1306,
+            "end": 1406,
+            "text": "Each run comprised one task condition defined by the regulation strategy and consisted of 80 trials.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1907,
+            "end": 2196,
+            "text": "Each trial started with a fixation cross presented for 1 s, followed by the instruction (2 s) of whether to simply attend to the stimulus or to regulate the emotions induced by the upcoming picture, an anticipation phase (6 s), a picture presentation phase (6 s), and a rating phase (3 s).",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1306,
+            "end": 1406,
+            "text": "Each run comprised one task condition defined by the regulation strategy and consisted of 80 trials.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "Missing_sublabels": [
+            "ISI distribution",
+            "Length of blocks",
+            "Efficiency optimization",
+            "Block/event correlation"
+          ]
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4994,
+            "end": 5164,
+            "text": "These emotional intensity scores were then, for each condition, averaged over all trials and compared via paired two-sample t-test between Attend and Regulate conditions.",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "Missing_sublabels": [
+            "Omnibus ANOVA"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3359,
+            "end": 3360,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm",
+            "Removal Init Vol — Parameters"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3278,
+            "end": 3339,
+            "text": "SPM8 (Wellcome Department of Cognitive Neurology, London, UK)",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3359,
+            "end": 3411,
+            "text": "the first two volumes of each session were discarded",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3482,
+            "end": 3483,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3278,
+            "end": 3339,
+            "text": "SPM8 (Wellcome Department of Cognitive Neurology, London, UK)",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3482,
+            "end": 3498,
+            "text": "were slice-timed",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3500,
+            "end": 3501,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3278,
+            "end": 3339,
+            "text": "SPM8 (Wellcome Department of Cognitive Neurology, London, UK)",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3500,
+            "end": 3521,
+            "text": "head motion corrected",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3523,
+            "end": 3524,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3278,
+            "end": 3339,
+            "text": "SPM8 (Wellcome Department of Cognitive Neurology, London, UK)",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3523,
+            "end": 3548,
+            "text": "coregistered to T1 images",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3550,
+            "end": 3551,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3278,
+            "end": 3339,
+            "text": "SPM8 (Wellcome Department of Cognitive Neurology, London, UK)",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3550,
+            "end": 3658,
+            "text": "spatially normalized into Montreal Neurological Institute (MNI) standard space through T1-based segmentation",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3664,
+            "end": 3665,
+            "text": "6",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3278,
+            "end": 3339,
+            "text": "SPM8 (Wellcome Department of Cognitive Neurology, London, UK)",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3664,
+            "end": 3747,
+            "text": "8 mm FWHM",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4651,
+            "end": 4652,
+            "text": "7",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4651,
+            "end": 4771,
+            "text": "we additionally added 6 head motion regressors to the model, specifically rotation and translation in 3 directions each.",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

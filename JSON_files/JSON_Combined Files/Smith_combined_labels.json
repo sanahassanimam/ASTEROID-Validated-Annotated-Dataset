@@ -1,0 +1,1310 @@
+{
+  "data": {
+    "text": "Higher levels of trait emotional awareness are\nassociated with more efficient global information\nintegration throughout the brain: a graph-theoretic\nanalysis of resting state functional connectivity\nRyan Smith, Anna Sanova, Anna Alkozei, Richard D. Lane, and\nWilliam D. S. Killgore\n\nSocial Cognitive and Affective Neuroscience, 2018, 665–675\n\ndoi: 10.1093/scan/nsy047\nPublished by Oxford University Press. Open Access under CC BY-NC 4.0.\n\nParticipants\n\nWe recruited 26 adults (13 females; mean age ¼23.1 6 4.0) from\nthe general population of Tucson, AZ to participate in the pre-\nsent study, via Internet advertisements and flyers. Participants\ndid not have any history of neurological or psychiatric disorders\n(assessed using a phone screen questionnaire based on criteria\nwithin the Diagnostic and Statistical Manual for Mental\nDisorders, fourth edition; DSM-IV-TR), they were not taking any\npsychoactive medications, they did not report any other chronic\ndiseases, they were all right-handed, and they all had English as\na primary language (assessed via self-report). Prior to enroll-\nment, all participants provided written informed consent.\nParticipants received nominal financial compensation for their\ntime. The Institutional Review Board of the University of\n\nArizona reviewed and approved the research protocol of the\npresent study.\n\nProcedure\n\nEach participant underwent a resting state functional MRI scan (see Neuroimaging methods section).\n\nNeuroimaging methods\n\nWe used a 3T Siemens Skyra MRI scanner (Siemens, Erlangen,\nGermany) with a 32-channel head coil to collect neuroimaging\ndata. T1-weighted structural images (3D MPRAGE) were\nacquired (TR/TE/flip angle ¼2.1 s/2.33 ms/12�) covering 176 sagit-\ntal slices (256 �256) with a slice thickness of 1 mm (voxel\nsize ¼1�1�1). Functional T2*-weighted scans were acquired\nover 32 transverse slices (2.5 mm thickness; matrix: 88 �84; field\nof view ¼240 mm). An interleaved sequence was used to collect\neach volume (TR/TE/flip angle ¼2 s/25 ms/90�). The T2* sequence\nvoxel size was 2.5�2.5�3.5 mm (i.e. with a 40% slice gap, allow-\ning collection of 300 volumes within a 10-min acquisition time).\n\nResting-state preprocessing\n\nWe used the publicly available CONN functional connectivity\ntoolbox (version 16.a; https://www.nitrc.org/projects/conn), in\nconjunction with SPM12 (Wellcome Department of Cognitive\nNeurology, London, UK; http://www.fil.ion.ucl.ac.uk/spm), to\nperform all preprocessing steps (using CONN’s default prepro-\ncessing pipeline), as well as subsequent statistical analyses, on\nall collected MRI scans. In this preprocessing pipeline, raw func-\ntional images are slice-time corrected, realigned (motion cor-\nrected), unwarped, and coregistered to each subject’s MPRAGE\nimage in accordance with standard algorithms. Images are then\nnormalized to Montreal Neurological Institute coordinate space,\nspatially smoothed (8 mm full-width at half maximum) and\nresliced to 2�2�2 mm voxels. We also used the Artifact\nDetection Tool (ART; http://www.nitrc.org/projects/artifact_de\ntect/) to regress out scans as nuisance covariates in the first-\nlevel analysis exceeding 3 s.d. in mean global intensity and\nscan-to-scan motion that exceeded 0.5 mm. These were added\nin addition to covariates for the six rotation/translation move-\nment parameters.\n\nGraph theory analyses\n\nGraph theory analyses were performed using the default func-\ntional connectivity processing pipeline in the CONN toolbox (for\ndetails, see Whitfield-Gabrieli and Nieto-Castanon, 2012). Using\nthis processing pipeline, physiological and other sources of\nnoise were estimated with the aCompcor method (Behzadi et al.,\n2007; Whitfield-Gabrieli et al., 2009; Chai et al., 2012); they were\nthen removed along with the movement- and artifact-related\ncovariates mentioned above. The residual BOLD time-series was\nthen band-pass filtered (0.008–0.09 Hz). Every participant’s\nstructural image was segmented into gray matter, white matter,\nand cerebral spinal fluid using SPM12. White matter and cere-\nbral spinal fluid noise effects were removed through regression.\nThe regions of interest (ROIs) in the present study were derived\nfrom a freely available ROI atlas defined by correlated activation\npatterns (http://findlab.stanford.edu/functional_ROIs.html). The\n90 ROIs within this atlas span several networks: the anterior\nand posterior SNs, dorsal and ventral DMNs, left and right ECNs,\n...\n\nGraph theory analyses\n\nGraph theory analyses were performed using the default func-\ntional connectivity processing pipeline in the CONN toolbox (for\ndetails, see Whitfield-Gabrieli and Nieto-Castanon, 2012). Using\nthis processing pipeline, physiological and other sources of\nnoise were estimated with the aCompcor method (Behzadi et al.,\n2007; Whitfield-Gabrieli et al., 2009; Chai et al., 2012); they were\nthen removed along with the movement- and artifact-related\ncovariates mentioned above. The residual BOLD time-series was\nthen band-pass filtered (0.008–0.09 Hz). Every participant’s\nstructural image was segmented into gray matter, white matter,\nand cerebral spinal fluid using SPM12. White matter and cere-\nbral spinal fluid noise effects were removed through regression.\nThe regions of interest (ROIs) in the present study were derived\nfrom a freely available ROI atlas defined by correlated activation\npatterns (http://findlab.stanford.edu/functional_ROIs.html). The\n90 ROIs within this atlas span several networks: the anterior\nand posterior SNs, dorsal and ventral DMNs, left and right ECNs,\nauditory network, basal ganglia network, higher visual network,\nlanguage network, sensorimotor network, primary visual net-\nwork, visuospatial network and precuneus network (for details,\nsee Shirer et al., 2012). However, rather than focus on any of\nthese networks in isolation, we treated all ROIs as “nodes” with-\nin a whole-brain network.\n\nWe extracted the residual BOLD time course for each ROI for\neach participant to produce single-participant Pearson’s correl-\nation maps for the time courses of all pairs of ROIs. At the se-\ncond level, controlling for age, gender and IQ, we used the\nCONN toolbox’s automated graph theory analysis algorithms\n(for a detailed description, see https://sites.google.com/view/\nconn/resources/manuals) to examine the relationship between\nLEAS TOTAL scores and several graph theory metrics: (i) Average\npath length, defined as the mean shortest path length among all\npossible pairs of nodes, represents the efficiency of information\ntransfer between ROIs (for this measure, CONN only computes\nthe average path length across connected nodes; i.e. the ana-\nlysis excludes ROIs with no connections to the graph, as the\naverage path length from this node to any other node would be\ninfinite). (ii) The global efficiency of the network, defined as the\nmean inverse shortest path length for all possible pairs of\nnodes, represents a complementary measure of the efficiency\nof information transfer among all ROIs. (iii) Local efficiency, which\ncan be thought of as the global efficiency of the sub-network\nconsisting only of a node’s neighbors (regions to which a given\nROI has direct functional connections; excluding the ROI itself);\nat the whole-network level, local efficiency reflects the average\nsub-network efficiency across all ROIs, and indicates the net-\nwork’s ability to effectively compensate for the localized failure\nof a single node. (iv) The clustering coefficient, which reflects the\ndegree to which nodes tend to cluster together (i.e. the regions\nto which an ROI is directly connected also have direct connec-\ntions among themselves); on the whole-network level, the clus-\ntering coefficient can be thought of as the average level of\nclustering (as defined above) across all ROIs—representing the\naverage efficiency of information transfer within local ROI clus-\nters. (v) The degree of connectivity is the number of edges linked\nto a node, representing the number of direct functional connec-\ntions between an ROI and other ROIs. Average degree, also\ncalled ‘network density’, is a measure of the interconnectedness\nof the network as a whole.\n\nEach of these metrics can be seen as complementary meas-\nures of how efficiently the information represented within a\ngiven node could be passed to (i.e. made available to) any other\nnode in the network (for a review of these graph theory metrics,\nsee Bullmore and Sporns, 2009). We predicted that individuals\nwith higher tEA would display greater efficiency of information\ntransfer throughout the brain, such that, for the whole-brain\nnetwork, higher LEAS TOTAL scores would be associated with\nshorter average path length, higher global and local efficiency, a\ngreater clustering coefficient, and higher network density. For\nthese analyses, we initially set a binary ROI-to-ROI correlation\nthreshold of r¼0.3 to define the presence/absence of edges/con-\nnections between all possible pairs of nodes. However, as there\nis little consensus in the field about proper a priori threshold se-\nlection in graph theoretic neural network analyses, we repeated\nthe analyses with thresholds of r¼0.2 and r¼0.4 as well (see\nSupplementary Results).\n\nAfter confirming our a priori hypotheses regarding whole-\nnetwork-level relationships between LEAS TOTAL scores and\nthe above-mentioned graph theory metrics, we also explored\nROI-specific graph-theoretic results using a false discovery\nrate (FDR)-corrected P-value threshold of P(cid:4)0.05 (all reported\nP-values are two-tailed).\n\nFinally, we then re-performed the analyses of several of the\ngraph theory metrics above, while controlling for individual dif-\nferences in network density (average degree). This was done in\norder to clarify between two possible interpretations of our\nthe relationship between"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 46,
+            "text": "Higher levels of trait emotional awareness are",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 199,
+            "end": 281,
+            "text": "Ryan Smith, Anna Sanova, Anna Alkozei, Richard D. Lane, and\nWilliam D. S. Killgore",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 328,
+            "end": 332,
+            "text": "2018",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 368,
+            "end": 437,
+            "text": "Published by Oxford University Press. Open Access under CC BY-NC 4.0.",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 343,
+            "end": 367,
+            "text": "doi: 10.1093/scan/nsy047",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 368,
+            "end": 437,
+            "text": "Published by Oxford University Press. Open Access under CC BY-NC 4.0.",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1486,
+            "end": 1514,
+            "text": "3T Siemens Skyra MRI scanner",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1976,
+            "end": 2007,
+            "text": "TR/TE/flip angle ¼2 s/25 ms/90�",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1976,
+            "end": 2007,
+            "text": "TR/TE/flip angle ¼2 s/25 ms/90�",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1976,
+            "end": 2007,
+            "text": "TR/TE/flip angle ¼2 s/25 ms/90�",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1790,
+            "end": 1918,
+            "text": "Functional T2*-weighted scans were acquired\nover 32 transverse slices (2.5 mm thickness; matrix: 88 �84; field\nof view ¼240 mm).",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1790,
+            "end": 1918,
+            "text": "Functional T2*-weighted scans were acquired\nover 32 transverse slices (2.5 mm thickness; matrix: 88 �84; field\nof view ¼240 mm).",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1790,
+            "end": 1918,
+            "text": "Functional T2*-weighted scans were acquired\nover 32 transverse slices (2.5 mm thickness; matrix: 88 �84; field\nof view ¼240 mm).",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2027,
+            "end": 2056,
+            "text": "voxel size was 2.5�2.5�3.5 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2096,
+            "end": 2154,
+            "text": "collection of 300 volumes within a 10-min acquisition time",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 453,
+            "end": 510,
+            "text": "We recruited 26 adults (13 females; mean age ¼23.1 6 4.0)",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2218,
+            "end": 2268,
+            "text": "CONN functional connectivity\ntoolbox (version 16.a",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2328,
+            "end": 2424,
+            "text": "SPM12 (Wellcome Department of Cognitive\nNeurology, London, UK; http://www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1383,
+            "end": 1416,
+            "text": "resting state functional MRI scan",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 453,
+            "end": 510,
+            "text": "We recruited 26 adults (13 females; mean age ¼23.1 6 4.0)",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Age",
+            "Handedness",
+            "Male/Female",
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ],
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 453,
+            "end": 510,
+            "text": "We recruited 26 adults (13 females; mean age ¼23.1 6 4.0)",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 453,
+            "end": 510,
+            "text": "We recruited 26 adults (13 females; mean age ¼23.1 6 4.0)",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 968,
+            "end": 994,
+            "text": "they were all right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 645,
+            "end": 710,
+            "text": "did not have any history of neurological or psychiatric disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1215,
+            "end": 1319,
+            "text": "The Institutional Review Board of the University of\n\nArizona reviewed and approved the research protocol",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2642,
+            "end": 2662,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2328,
+            "end": 2424,
+            "text": "SPM12 (Wellcome Department of Cognitive\nNeurology, London, UK; http://www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0027"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2642,
+            "end": 2662,
+            "text": "slice-time corrected",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2664,
+            "end": 2694,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2328,
+            "end": 2424,
+            "text": "SPM12 (Wellcome Department of Cognitive\nNeurology, London, UK; http://www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0030"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2664,
+            "end": 2694,
+            "text": "realigned (motion cor-\nrected)",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2696,
+            "end": 2704,
+            "text": "3",
+            "labels": [
+              "Unwarp — Step Number"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2328,
+            "end": 2424,
+            "text": "SPM12 (Wellcome Department of Cognitive\nNeurology, London, UK; http://www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "Unwarp — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0033"
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2696,
+            "end": 2704,
+            "text": "unwarped",
+            "labels": [
+              "Unwarp — Algorithm"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2710,
+            "end": 2747,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2328,
+            "end": 2424,
+            "text": "SPM12 (Wellcome Department of Cognitive\nNeurology, London, UK; http://www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0036"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2710,
+            "end": 2747,
+            "text": "coregistered to each subject’s MPRAGE",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2810,
+            "end": 2872,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2328,
+            "end": 2424,
+            "text": "SPM12 (Wellcome Department of Cognitive\nNeurology, London, UK; http://www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2810,
+            "end": 2872,
+            "text": "normalized to Montreal Neurological Institute coordinate space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2931,
+            "end": 2958,
+            "text": "resliced to 2�2�2 mm voxels",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2874,
+            "end": 2926,
+            "text": "6",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2328,
+            "end": 2424,
+            "text": "SPM12 (Wellcome Department of Cognitive\nNeurology, London, UK; http://www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2874,
+            "end": 2926,
+            "text": "spatially smoothed (8 mm full-width at half maximum)",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2874,
+            "end": 2926,
+            "text": "spatially smoothed (8 mm full-width at half maximum)",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2977,
+            "end": 3005,
+            "text": "7",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2977,
+            "end": 3005,
+            "text": "Artifact\nDetection Tool (ART",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2977,
+            "end": 3005,
+            "text": "Artifact\nDetection Tool (ART",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3129,
+            "end": 3215,
+            "text": "exceeding 3 s.d. in mean global intensity and\nscan-to-scan motion that exceeded 0.5 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3249,
+            "end": 3314,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2328,
+            "end": 2424,
+            "text": "SPM12 (Wellcome Department of Cognitive\nNeurology, London, UK; http://www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "motion regression — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0051"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3249,
+            "end": 3314,
+            "text": "covariates for the six rotation/translation move-\nment parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3622,
+            "end": 3637,
+            "text": "9",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2218,
+            "end": 2268,
+            "text": "CONN functional connectivity\ntoolbox (version 16.a",
+            "labels": [
+              "aCompCor — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0054"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3622,
+            "end": 3637,
+            "text": "aCompcor method",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3850,
+            "end": 3884,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2218,
+            "end": 2268,
+            "text": "CONN functional connectivity\ntoolbox (version 16.a",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3850,
+            "end": 3884,
+            "text": "band-pass filtered (0.008–0.09 Hz)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3850,
+            "end": 3884,
+            "text": "band-pass filtered (0.008–0.09 Hz)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3927,
+            "end": 4006,
+            "text": "11",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2328,
+            "end": 2424,
+            "text": "SPM12 (Wellcome Department of Cognitive\nNeurology, London, UK; http://www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3927,
+            "end": 4006,
+            "text": "segmented into gray matter, white matter,\nand cerebral spinal fluid using SPM12",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4008,
+            "end": 4094,
+            "text": "12",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2328,
+            "end": 2424,
+            "text": "SPM12 (Wellcome Department of Cognitive\nNeurology, London, UK; http://www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0064"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4008,
+            "end": 4094,
+            "text": "White matter and cere-\nbral spinal fluid noise effects were removed through regression",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5345,
+            "end": 5395,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5276,
+            "end": 5344,
+            "text": "freely available ROI atlas defined by correlated activation\npatterns",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5345,
+            "end": 5395,
+            "text": "(http://findlab.stanford.edu/functional_ROIs.html)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5719,
+            "end": 5738,
+            "text": "Shirer et al., 2012",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5401,
+            "end": 5700,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5810,
+            "end": 5837,
+            "text": "treated all ROIs as “nodes”",
+            "labels": [
+              "ROI definition — Type"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5401,
+            "end": 5700,
+            "text": "90 ROIs within this atlas span several networks: the anterior\nand posterior SNs, dorsal and ventral DMNs, left and right ECNs,\nauditory network, basal ganglia network, higher visual network,\nlanguage network, sensorimotor network, primary visual net-\nwork, visuospatial network and precuneus network",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5874,
+            "end": 5913,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5874,
+            "end": 5913,
+            "text": "extracted the residual BOLD time course",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4730,
+            "end": 4745,
+            "text": "aCompcor method",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5978,
+            "end": 6006,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5978,
+            "end": 6006,
+            "text": "Pearson’s correl-\nation maps",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6015,
+            "end": 6048,
+            "text": "time courses of all pairs of ROIs",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8846,
+            "end": 8885,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8783,
+            "end": 8822,
+            "text": "binary ROI-to-ROI correlation\nthreshold",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8846,
+            "end": 8885,
+            "text": "presence/absence of edges/con-\nnections",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8813,
+            "end": 8831,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0082"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8813,
+            "end": 8831,
+            "text": "threshold of r¼0.3",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9092,
+            "end": 9111,
+            "text": "thresholds of r¼0.2",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9116,
+            "end": 9121,
+            "text": "r¼0.4",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6325,
+            "end": 8022,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0086"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4556,
+            "end": 4568,
+            "text": "CONN toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0087"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6136,
+            "end": 6178,
+            "text": "automated graph theory analysis algorithms",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0088"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6325,
+            "end": 8022,
+            "text": "several graph theory metrics: (i) Average\npath length, defined as the mean shortest path length among all\npossible pairs of nodes, represents the efficiency of information\ntransfer between ROIs (for this measure, CONN only computes\nthe average path length across connected nodes; i.e. the ana-\nlysis excludes ROIs with no connections to the graph, as the\naverage path length from this node to any other node would be\ninfinite). (ii) The global efficiency of the network, defined as the\nmean inverse shortest path length for all possible pairs of\nnodes, represents a complementary measure of the efficiency\nof information transfer among all ROIs. (iii) Local efficiency, which\ncan be thought of as the global efficiency of the sub-network\nconsisting only of a node’s neighbors (regions to which a given\nROI has direct functional connections; excluding the ROI itself);\nat the whole-network level, local efficiency reflects the average\nsub-network efficiency across all ROIs, and indicates the net-\nwork’s ability to effectively compensate for the localized failure\nof a single node. (iv) The clustering coefficient, which reflects the\ndegree to which nodes tend to cluster together (i.e. the regions\nto which an ROI is directly connected also have direct connec-\ntions among themselves); on the whole-network level, the clus-\ntering coefficient can be thought of as the average level of\nclustering (as defined above) across all ROIs—representing the\naverage efficiency of information transfer within local ROI clus-\nters. (v) The degree of connectivity is the number of edges linked\nto a node, representing the number of direct functional connec-\ntions between an ROI and other ROIs. Average degree",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0089"
+        }
+      ]
+    }
+  ]
+}

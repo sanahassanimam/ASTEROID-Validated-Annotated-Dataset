@@ -1,0 +1,850 @@
+{
+  "data": {
+    "text": "Intelligence is associated with the \nmodular structure of intrinsic brain \nnetworks\nKirsten Hilger1,2, Matthias Ekman3, Christian J. Fiebach  1,2,3 & Ulrike Basten1\n\nScientific RepoRts | 7: 16088  | DOI:10.1038/s41598-017-15795-7\n\nGeneral intelligence is a psychological construct that captures in a single metric the overall level of \nbehavioural and cognitive performance in an individual. While previous research has attempted to \nlocalise intelligence in circumscribed brain regions, more recent work focuses on functional interactions \nbetween regions. However, even though brain networks are characterised by substantial modularity, \nit is unclear whether and how the brain’s modular organisation is associated with general intelligence. \nModelling subject-specific brain network graphs from functional MRI resting-state data (N = 309), \nwe found that intelligence was not associated with global modularity features (e.g., number or size \nof modules) or the whole-brain proportions of different node types (e.g., connector hubs or provincial \nhubs). In contrast, we observed characteristic associations between intelligence and node-specific \nmeasures of within- and between-module connectivity, particularly in frontal and parietal brain regions \nthat have previously been linked to intelligence.\n\nMethods\nParticipants. The data used for this study were acquired by the Nathan Kline S. Institute for Psychiatric \nResearch and made available by the 1000 Functional Connectomes Project INDI (Enhanced NKI Rockland \nSample24, http://fcon_1000.projects.nitrc.org/indi/enhanced/). Institutional review board approval for this pro-\nject was obtained at the Nathan Kline Institute (#239708). All methods were carried out in accordance with \nthese guidelines and all participants gave written informed consent. We used a subsample of 309 participants, \nfor which complete neuroimaging data were available (age: 18–60 years, M = 38.93, SD = 13.94; gender: 199 \nfemale, 110 male; handedness: 262 right, 22 left, 25 ambidextrous). For this sample, the Full Scale Intelligence \nQuotient (FSIQ), as assessed with the Wechsler Abbreviated Scale of Intelligence (WASI)25, ranged from 67 to 135 \n(M = 99.12, SD = 13.23).\n\nfMRI Data Acquisition. MRI data were acquired on a 3 Tesla whole-body MRI scanner (MAGNETOM \nTrio Tim, Siemens, Erlangen, Germany). Functional resting-state data were obtained using a T2*-weighted \nBOLD-sensitive gradient-echo EPI sequence with 38 transversal axial slices of 3 mm thickness (120 volumes; \nfield of view [FOV] 216 × 216 mm; repetition time [TR] 2500 ms; echo time [TE] 30 ms; flip angle 80°; voxel \nsize 3 × 3 × 3 mm; acquisition time 5.05 min). For coregistration, three-dimensional high-resolution anatomical \nscans were obtained with a sagittal T1-weighted, Magnetization Prepared-Rapid Gradient Echo sequence scan \n(176 sagittal slices; FOV 250 × 250 mm; TR 1900 ms; TE 2.5 ms; flip angle 9°; voxel size 1 × 1 × 1 mm; acquisition \ntime 4.18 min).\n\nPreprocessing. Data was preprocessed using FSL (http://www.fmrib.ox.ac.uk/fsl/) and AFNI (http://afni.\nnimh.nih.gov/afni) with the scripts released by the 1000 Functional Connectomes Project (http://www.nitrc.org/\nprojects/fcon_1000), comprising: 1. Discarding the first four EPI volumes to allow for signal equilibration, 2. \nSlice-time correction, 3. Three-dimensional motion correction, 4. Time-series despiking, 5. Spatial smoothing \n(6 mm full-width half-maximum Gaussian kernel), 6. Four-dimensional mean-based intensity normalisation, \n7. Bandpass temporal filtering (0.005–0.1 Hz), 8. Removing linear and quadratic trends, 9. Normalisation of the \nindividual EPI volumes to MNI152 space (3 × 3 × 3 mm) via nonlinear transformation and by the use of each \nsubject’s anatomical scan, 10. Elimination of nine nuisance signals (white matter, cerebrospinal fluid, global mean, \nsix motion parameters) by regression.\n\nGraph Analyses. Graph analyses were performed with the open source python package network-tools26, spe-\ncifically developed for the analysis of functional and structural brain network graphs.\n\nIntelligence-related differences in modular network organisation. All individual-differences analyses were done \nafter exclusion of outliers, i.e., subjects with values > 3 SD above/below the mean of the respective variable of \ninterest.\n\nData availability statement. The data used in the present work can be accessed under the following link: \nhttp://fcon_1000.projects.nitrc.org/indi/enhanced/.\n\nOpen Access This article is licensed under a Creative Commons Attribution 4.0 International \nLicense"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 83,
+            "text": "Intelligence is associated with the \nmodular structure of intrinsic brain \nnetworks",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 84,
+            "end": 164,
+            "text": "Kirsten Hilger1,2, Matthias Ekman3, Christian J. Fiebach  1,2,3 & Ulrike Basten1",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 203,
+            "end": 229,
+            "text": "10.1038/s41598-017-15795-7",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 166,
+            "end": 184,
+            "text": "Scientific RepoRts",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 231,
+            "end": 391,
+            "text": "General intelligence is a psychological construct that captures in a single metric the overall level of \nbehavioural and cognitive performance in an individual.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4492,
+            "end": 4503,
+            "text": "Open Access",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1530,
+            "end": 1580,
+            "text": "http://fcon_1000.projects.nitrc.org/indi/enhanced/",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 833,
+            "end": 840,
+            "text": "N = 309",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2296,
+            "end": 2342,
+            "text": "MAGNETOM \nTrio Tim, Siemens, Erlangen, Germany",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2458,
+            "end": 2485,
+            "text": "38 transversal axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2489,
+            "end": 2503,
+            "text": "3 mm thickness",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2553,
+            "end": 2581,
+            "text": "repetition time [TR] 2500 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2583,
+            "end": 2603,
+            "text": "echo time [TE] 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2605,
+            "end": 2619,
+            "text": "flip angle 80°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2519,
+            "end": 2551,
+            "text": "field of view [FOV] 216 × 216 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2621,
+            "end": 2645,
+            "text": "voxel \nsize 3 × 3 × 3 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2647,
+            "end": 2672,
+            "text": "acquisition time 5.05 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 813,
+            "end": 826,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3065,
+            "end": 3069,
+            "text": "AFNI",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1833,
+            "end": 1849,
+            "text": "309 participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Inclusion criteria",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1905,
+            "end": 1944,
+            "text": "age: 18–60 years, M = 38.93, SD = 13.94",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1954,
+            "end": 1975,
+            "text": "199 \nfemale, 110 male",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1989,
+            "end": 2024,
+            "text": "262 right, 22 left, 25 ambidextrous",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4207,
+            "end": 4269,
+            "text": "after exclusion of outliers, i.e., subjects with values > 3 SD",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1583,
+            "end": 1618,
+            "text": "Institutional review board approval",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2048,
+            "end": 2160,
+            "text": "Full Scale Intelligence \nQuotient (FSIQ), as assessed with the Wechsler Abbreviated Scale of Intelligence (WASI)",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3231,
+            "end": 3268,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Algorithm",
+            "Removal Init Vol — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3308,
+            "end": 3329,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3334,
+            "end": 3369,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3374,
+            "end": 3395,
+            "text": "4",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Despiking — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Despiking — Algorithm",
+            "Despiking — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3400,
+            "end": 3465,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3420,
+            "end": 3464,
+            "text": "6 mm full-width half-maximum Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3470,
+            "end": 3521,
+            "text": "6",
+            "labels": [
+              "Intensity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Intensity normalization — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Intensity normalization — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3487,
+            "end": 3497,
+            "text": "mean-based",
+            "labels": [
+              "Intensity normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3527,
+            "end": 3569,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3527,
+            "end": 3535,
+            "text": "bandpass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3556,
+            "end": 3568,
+            "text": "0.005–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3574,
+            "end": 3610,
+            "text": "8",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Temporal detrending — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Type"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3583,
+            "end": 3610,
+            "text": "linear and quadratic trends",
+            "labels": [
+              "Temporal detrending — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3615,
+            "end": 3719,
+            "text": "9",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3663,
+            "end": 3690,
+            "text": "MNI152 space (3 × 3 × 3 mm)",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3724,
+            "end": 3769,
+            "text": "10",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Algorithm",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": -1,
+            "end": 121,
+            "text": "11",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": -1,
+            "end": 68,
+            "text": "white matter, cerebrospinal fluid, global mean, six motion parameters",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3862,
+            "end": 3883,
+            "text": "12",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "motion regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3862,
+            "end": 3883,
+            "text": "six motion parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3848,
+            "end": 3859,
+            "text": "13",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3024,
+            "end": 3027,
+            "text": "FSL",
+            "labels": [
+              "Global signal — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3848,
+            "end": 3859,
+            "text": "global mean",
+            "labels": [
+              "Global signal — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

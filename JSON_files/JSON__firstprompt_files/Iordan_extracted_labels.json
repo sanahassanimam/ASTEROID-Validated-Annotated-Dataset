@@ -1,0 +1,886 @@
+{
+  "data": {
+    "text": "Aging and Network Properties: Stability Over Time and Links with Learning during Working Memory Training\nFrontiers in Aging Neuroscience | Volume 9 | Article 419\ndoi: 10.3389/fnagi.2017.00419\nPublished: 04 January 2018\nAuthors: Alexandru D. Iordan, Katherine A. Cooke, Kyle D. Moored, Benjamin Katz, Martin Buschkuehl,\nSusanne M. Jaeggi, John Jonides, Scott J. Peltier, Thad A. Polk, Patricia A. Reuter-Lorenz\n\nGrowing evidence suggests that healthy aging affects the configuration of large-scale functional brain networks. This includes reducing network modularity and local efficiency. However, the stability of these effects over time and their potential role in learning remain poorly understood. The goal of the present study was to further clarify previously reported age effects on “resting-state” networks, to test their reliability over time, and to assess their relation to subsequent learning during training.\n\nImaging Protocol\nFunctional MRI data were acquired during 8 min of resting state, following completion of a verbal WM task, in 2 sessions 2 weeks apart (t1, t2). Participants were instructed to view a fixation cross in the center of the screen while keeping their mind calm and relaxed. Imaging data were collected using a 3 T General Electric MR750 scanner with an eight-channel head coil. Functional images were acquired in ascending order using a spiral-in sequence, with MR parameters: TR = 2,000 ms; TE = 30 ms; flip angle = 90°; field of view = 220 × 220 mm²; matrix size = 64 × 64; slice thickness = 3 mm, no gap; 43 slices; voxel size = 3.44 × 3.44 × 3 mm³. After an initial 10 s of signal stabilization, 235 volumes were acquired. A high-resolution T1-weighted anatomical image was also collected using SPGR (TR = 12.24 ms; TE = 5.18 ms; flip angle = 15°; field of view = 256 × 256 mm²; matrix size = 256 × 256; slice thickness = 1 mm; 156 slices; voxel size = 1 × 1 × 1 mm³). Images were de-spiked in k-space and reconstructed using an in-house iterative reconstruction algorithm with field-map correction.\n\nPreprocessing\nPreprocessing was performed using SPM12. Functional images were slice-time corrected, realigned, and co-registered to the anatomical image using a mean functional image. A study-specific anatomical template was created using DARTEL based on segmented gray matter and white matter tissue classes. The DARTEL flowfields and MNI transformation were then applied to the functional images and to the segments, and the functional images were resampled to 3 × 3 × 3 mm³ voxel size. To minimize artificial local spatial correlations, no additional spatial smoothing was applied.\n\nIdentification of outlier scans was performed using Artifact Detection Tools (ART). Scans were classified as outliers if frame-to-frame difference exceeded 0.5 mm in composite motion or 3 standard deviations in the global mean signal.\n\nFunctional Connectivity Analysis\nTo remove physiological and other sources of noise from the fMRI time series we used linear regression and the anatomical CompCor method, as implemented in CONN. Each participant’s white matter and cerebrospinal fluid segments, eroded by 1 voxel to minimize partial volume effects, were used as noise ROIs. The following temporal covariates were added to the model: signal extracted from each participant’s noise ROIs (5 principal component analysis parameters for each), motion parameters (3 rotation and 3 translation parameters, plus their first-order temporal derivatives), regressors for each outlier scan (“scrubbing”), and a session-onset regressor. The residual fMRI time series were band-pass filtered (0.01 Hz < f < 0.1 Hz).\n\nParticipants\nA sample of 23 younger adults (YA) and 23 healthy, cognitively normal older adults (OA) were recruited. All participants were right-handed, native English speakers with normal or corrected-to-normal hearing and vision and were screened for history of head injury, psychiatric illness, or alcohol/drug abuse. Data from 3 OA were excluded due to technical issues related to brain-imaging data acquisition. Thus, the sample for fMRI analyses consisted of 23 YA (age range: 18–28; 9 females; mean age 21.3 ± 2.5 years) and 20 OA (age range: 64–76; 9 females; mean age 68.3 ± 3.6 years). For analyses linking fMRI with behavioral results, 2 additional participants (1 OA) were excluded due to technical issues, and thus these analyses were reported on 22 YA and 19 OA.\n\nEthics\nThe University of Michigan Institutional Review Board approved all procedures, and all participants provided informed consent prior to participating.\n\nBehavioral measure\nThe adaptive training task consisted of a modified WM item-recognition task. Here, we focus on training-related improvements in WM performance as measured by mean set size achieved during each training session for each participant.\n\nAvailability\nThis is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 104,
+            "text": "Aging and Network Properties: Stability Over Time and Links with Learning during Working Memory Training",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 214,
+            "end": 218,
+            "text": "2018",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 105,
+            "end": 136,
+            "text": "Frontiers in Aging Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 167,
+            "end": 191,
+            "text": "10.3389/fnagi.2017.00419",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 228,
+            "end": 247,
+            "text": "Alexandru D. Iordan",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 411,
+            "end": 523,
+            "text": "Growing evidence suggests that healthy aging affects the configuration of large-scale functional brain networks.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4843,
+            "end": 4854,
+            "text": "open-access",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1245,
+            "end": 1271,
+            "text": "3 T General Electric MR750",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1543,
+            "end": 1552,
+            "text": "43 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1511,
+            "end": 1533,
+            "text": "slice thickness = 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1439,
+            "end": 1455,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1535,
+            "end": 1541,
+            "text": "no gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 980,
+            "end": 985,
+            "text": "8 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1116,
+            "end": 1137,
+            "text": "view a fixation cross",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1457,
+            "end": 1486,
+            "text": "field of view = 220 × 220 mm²",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1412,
+            "end": 1425,
+            "text": "TR = 2,000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1427,
+            "end": 1437,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1554,
+            "end": 1586,
+            "text": "voxel size = 3.44 × 3.44 × 3 mm³",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2088,
+            "end": 2093,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 989,
+            "end": 1002,
+            "text": "resting state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4096,
+            "end": 4101,
+            "text": "23 YA",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4163,
+            "end": 4168,
+            "text": "20 OA",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3656,
+            "end": 3685,
+            "text": "23 younger adults (YA) and 23",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3952,
+            "end": 3980,
+            "text": "Data from 3 OA were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4096,
+            "end": 4130,
+            "text": "23 YA (age range: 18–28; 9 females",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4163,
+            "end": 4197,
+            "text": "20 OA (age range: 64–76; 9 females",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4103,
+            "end": 4119,
+            "text": "age range: 18–28",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4170,
+            "end": 4186,
+            "text": "age range: 64–76",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4121,
+            "end": 4130,
+            "text": "9 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4188,
+            "end": 4197,
+            "text": "9 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3770,
+            "end": 3782,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3784,
+            "end": 3861,
+            "text": "native English speakers with normal or corrected-to-normal hearing and vision",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3871,
+            "end": 3950,
+            "text": "screened for history of head injury, psychiatric illness, or alcohol/drug abuse",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4443,
+            "end": 4478,
+            "text": "Institutional Review Board approved",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4525,
+            "end": 4541,
+            "text": "informed consent",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4744,
+            "end": 4757,
+            "text": "mean set size",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1968,
+            "end": 2011,
+            "text": "in-house iterative reconstruction algorithm",
+            "labels": [
+              "Field map correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2017,
+            "end": 2037,
+            "text": "field-map correction",
+            "labels": [
+              "Field map correction — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1908,
+            "end": 1958,
+            "text": "1",
+            "labels": [
+              "Field map correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2088,
+            "end": 2093,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2118,
+            "end": 2138,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2088,
+            "end": 2093,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2140,
+            "end": 2149,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2088,
+            "end": 2093,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2155,
+            "end": 2192,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2279,
+            "end": 2285,
+            "text": "DARTEL",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2295,
+            "end": 2333,
+            "text": "segmented gray matter and white matter",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2295,
+            "end": 2333,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2376,
+            "end": 2394,
+            "text": "MNI transformation",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2490,
+            "end": 2516,
+            "text": "resampled to 3 × 3 × 3 mm³",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2361,
+            "end": 2412,
+            "text": "6",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2678,
+            "end": 2708,
+            "text": "Artifact Detection Tools (ART)",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2782,
+            "end": 2788,
+            "text": "0.5 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2812,
+            "end": 2833,
+            "text": "3 standard deviations",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2710,
+            "end": 2743,
+            "text": "7",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3051,
+            "end": 3055,
+            "text": "CONN",
+            "labels": [
+              "aCompCor — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3314,
+            "end": 3364,
+            "text": "5 principal component analysis parameters for each",
+            "labels": [
+              "aCompCor — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3123,
+            "end": 3140,
+            "text": "eroded by 1 voxel",
+            "labels": [
+              "aCompCor — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3006,
+            "end": 3024,
+            "text": "anatomical CompCor",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3006,
+            "end": 3031,
+            "text": "8",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3367,
+            "end": 3471,
+            "text": "motion parameters (3 rotation and 3 translation parameters, plus their first-order temporal derivatives)",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3367,
+            "end": 3425,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3527,
+            "end": 3550,
+            "text": "session-onset regressor",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3527,
+            "end": 3550,
+            "text": "10",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3587,
+            "end": 3605,
+            "text": "band-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3607,
+            "end": 3627,
+            "text": "0.01 Hz < f < 0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3587,
+            "end": 3605,
+            "text": "11",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

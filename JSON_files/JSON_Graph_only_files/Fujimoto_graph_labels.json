@@ -1,0 +1,310 @@
+{
+  "data": {
+    "text": "The parcellation analyses based on boundary\nmapping ( Margulies et al., 2007; Cohen et al., 2008;\nBiswal et al., 2010; Hirose et al., 2012, 2013, 2016;\nZhang and Li, 2012; Zhang et al., 2012; Wig et al.,\n2014b; Laumann et al., 2015; Poldrack et al., 2015;Glasser et al., 2016; Gordon et al., 2016, 2017; Osada\net al., 2017, 2019; Ogawa et al., 2018 ) were applied to\nthe cerebral cortical surface. Mean gray matter signalwas regressed out, followed by\nspatial smoothing (FWHM =\n6 mm). Each vertex in the corticalsurface of each subject was usedas a seed to calculate its correla-\ntions with all the vertices. Spatial\npattern similarity of the correlationmaps was evaluated using correla-\ntion coeﬃcients, and similarity\nmaps were generated. Spatial gra-dients of the similarity maps were\ncomputed for each seed vertex,\nand the gradient maps of individualsubjects were averaged across the\nsubjects. After spatial smoothing\n(FWHM = 6 mm), a two-dimen-sional watershed algorithm wasapplied to the gradient maps, and\nthe binary watershed maps were\naveraged across seed vertices togenerate a boundary probability\nmap. The watershed algorithm\nwas again applied to the boundaryprobability map to delineate parcel-\nlated regions.\nFor subsequent analyses, to\navoid non-uniform signal to noiseratio caused by the diﬀerent\nnumber of vertices in the parcels,\nwe deﬁned regions of interest(ROIs) of 40 vertices closest to\nthe centroid of each parcel. When\na parcel contained less than 40vertices, the ROI included all the\nvertices in the parcel.\n\n\nNetwork construction and\ncentrality calculation\nCorrelation coeﬃcients of prepro-\ncessed time-series of functional\nimages were calculated as themagnitude values of functional\nconnectivity between the parcels.\nThe correlation coeﬃcientsbetween the parcels weretransformed to zvalues using\nFisher transformation and then\nnormalized to the standard normaldistribution (average = 0 and\nstandard deviation = 1). Nodes of\nthe network represented the parcels, and edgesrepresented the connectivity. To deﬁne a binary\nundirected network for each subject, a proportional\nthreshold of 9% was performed on the matrix offunctional connectivity. The threshold was determinedbased on the clustering coeﬃcients such that the\nnumber of clusters (the structure of three nodes that\nwere all connected with each other via edges) in thenetwork was maximized using a reasonable number of\nedges ( Rubinov and Sporns, 2010; van den Heuvel and\nSporns, 2013; Sporns, 2014 ). The binarized matrix was\nFig. 2. Parcellated areas and ROIs. (A)Areal boundary in the whole cerebral cortex delineated using\nboundary mapping methods. Diﬀerent areas are indicated by diﬀerent colors. (B)Regions of interest\n(ROIs) in the delineated areas. Subsequent analyses were performed using the ROIs in these areasto match the number of vertices across diﬀerent areas.166 U. Fujimoto et al. / Neuroscience 433 (2020) 163–173\n\n---PAGEBREAK---\n\ntermed the adjacency matrix denoting the presence or\nabsence of functional connections. The centrality indexof each parcel was calculated using the adjacency matrix.\nWe employed the betweenness centrality that\nmeasures the proportion of shortest paths between allnode pairs in the network ( Freeman, 1978; Brandes,\n2001 ). We used the Brain Connectivity Toolbox\n(Rubinov and Sporns, 2010 ) to deﬁne the network and\ncalculate the betweenness centrality of each parcel. If\ninformation was conveyed in the network along the short-\nest path, a node with high betweenness centrality medi-ates a high proportion of information traﬃc. Such nodesmay control the information passage or may act as a bot-\ntleneck of information ﬂow. The betweenness centrality of\nnode i was calculated as the proportion of shortest pathsbetween nodes j and h that pass through node i.\nbi¼1\nN/C01ðÞ N/C02ðÞX\nh–i;h–j;j–iqhjiðÞ\nqhj;\nwhere, qhj(i) is the number of shortest paths between\nnodes hand jthat pass through node i, and qhjis the\nnumber of shortest paths between node hand node j.N\nis the number of nodes.\n\n\nIn total, 377 parcels (192 in left hemisphere and 185 in\nright hemisphere) were identiﬁed in the cortical surfaces\n(Fig. 2 A). ROIs consisted of 40 vertices closest to the\ncentroid ( Fig. 2 B). For the 57 parcels that contained\nless than 40 vertices, the ROI included all the vertices in\nthe parcel. The mean number of vertices in one ROI ofa parcel was 38.8 ± 3.7 (mean ± SD).\nCentrality index\nCorrelation between parcels were calculated on the basis\nof ROIs in the cortical parcels. The correlation matrix ofboth hemispheres was calculated and was binarized togenerate the adjacency matrix. Fig. 3 shows the\ncentrality index in the whole brain averaged across the\nsubjects. Parcels with high central index were observedin the supramarginal gyrus, anterior temporal cortex and\nprecuneus.\n\n\nWe also calculated the\nparticipation coeﬃcient, which\nmeasures the degree of inter-network interconnections of aregion that acts as a hub to\nfacilitate inter-network integration\n(Rubinov and Sporns, 2010 ). The\nparticipation coeﬃcient in ROI 1\nwas 0.37 ± 0.20, whereas that in\nROI 2 was 0.41 ± 0.20. The diﬀer-ence in centrality was not signiﬁ-\ncant ( t(19) = 0.57, p= 0.58). ROI\n1 did not show signiﬁcant correla-tion with the activity ( r= 0.28,\np= 0.23), nor did ROI 2\n(r=/C00.24, p= 0.31).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 43,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 35,
+            "end": 51,
+            "text": "boundary\nmapping",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1357,
+            "end": 1436,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type",
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1357,
+            "end": 1436,
+            "text": "regions of interest(ROIs) of 40 vertices closest to\nthe centroid of each parcel",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1583,
+            "end": 1616,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1583,
+            "end": 1743,
+            "text": "Correlation coeﬃcients of prepro-\ncessed time-series of functional\nimages were calculated as themagnitude values of functional\nconnectivity between the parcels.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1794,
+            "end": 1844,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1794,
+            "end": 1844,
+            "text": "transformed to zvalues using\nFisher transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1854,
+            "end": 1941,
+            "text": "normalized to the standard normaldistribution (average = 0 and\nstandard deviation = 1).",
+            "labels": [
+              "Connectivity normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2038,
+            "end": 2063,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2038,
+            "end": 2063,
+            "text": "binary\nundirected network",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2084,
+            "end": 2126,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2084,
+            "end": 2126,
+            "text": "proportional\nthreshold of 9% was performed",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2084,
+            "end": 2126,
+            "text": "proportional\nthreshold of 9% was performed",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3115,
+            "end": 3137,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3268,
+            "end": 3294,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3115,
+            "end": 3137,
+            "text": "betweenness centrality",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3686,
+            "end": 3790,
+            "text": "node i was calculated as the proportion of shortest pathsbetween nodes j and h that pass through node i.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4834,
+            "end": 4857,
+            "text": "participation coeﬃcient",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4630,
+            "end": 4695,
+            "text": "8",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4630,
+            "end": 4695,
+            "text": "averaged across subjects",
+            "labels": [
+              "Result aggregation — Type"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

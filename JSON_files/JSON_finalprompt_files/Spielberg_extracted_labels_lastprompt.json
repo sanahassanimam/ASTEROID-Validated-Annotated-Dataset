@@ -1,0 +1,399 @@
+{
+  "data": {
+    "text": "Flexible brain network reconfiguration supporting\ninhibitory control\nJeffrey M. Spielberga,b,1, Gregory A. Millerc,d, Wendy Hellerd, and Marie T. Baniche\n\nEdited by Danielle S. Bassett, University of Pennsylvania, Philadelphia, PA, and accepted by the Editorial Board June 30, 2015 (received for review January\n2, 2015)\n\nThe ability to inhibit distracting stimuli from interfering with goal-\ndirected behavior is crucial for success in most spheres of life. Despite\nan abundance of studies examining regional brain activation, knowl-\nedge of the brain networks involved in inhibitory control remains\nquite limited. To address this critical gap, we applied graph theory\ntools to functional magnetic resonance imaging data collectedwhile a\nlarge sample of adults (n = 101) performed a color-word Stroop task.\nHigher demand for inhibitory control was associated with restructur-\ning of the global network into a configuration that was more opti-\nmized for specialized processing (functional segregation), more ef-\nficient at communicating the output of such processing across the\nnetwork (functional integration), and more resilient to potential in-\nterruption (resilience). In addition, there were regional changes with\nright inferior frontal sulcus and right anterior insula occupying more\ncentral positions as network hubs, and dorsal anterior cingulate cor-\ntex becoming more tightly coupled with its regional subnetwork.\nGiven the crucial role of inhibitory control in goal-directed behavior,\npresent findings identifying functional network organization support-\ning inhibitory control have the potential to provide additional insights\ninto how inhibitory control may break down in a wide variety of\nindividuals with neurological or psychiatric difficulties.\n\ninhibitory control | inhibition | brain network | graph theory |\ndorsal anterior cingulate\n\n10020–10025 | PNAS | August 11, 2015 | vol. 112 | no. 32 www.pnas.org/cgi/doi/10.1073/pnas.1500048112\n\nResults\nInhibitory Control-Related Network Connections. The Network\nBased Statistic (NBS) toolbox (32) was used to identify specific\nnetwork connections that varied with demand for inhibitory\ncontrol. Higher demand for inhibitory control (incongruent >\ncongruent) was associated with stronger coupling in a network\n(11 nodes, 10 links; corrected P < 0.001) centered on medial\ndACC, right inferior frontal sulcus (IFS; BA46), and right\nanterior insula (AI). As shown in Fig. 1, more than half of the\nnodes in the network were prefrontal. Fig. 2 shows connection\nstrengths for the relevant links by condition. See SI Results for\nanalyses of incongruent vs. neutral.\n\nInhibitory Control-Related Graph Theory Properties. The Graph\nTheoretic GLM (GTG) toolbox (33) was used to identify\nproperties that varied with inhibitory control demands. Local\nefficiency and transitivity indexed functional segregation; global\nefficiency indexed functional integration; node strength, partici-\npation coefficient, and within-module degree Z-score indexed\ndistinct aspects of centrality; and assortativity and local assorta-\ntivity indexed resilience. Three measures reflect a property of the\nglobal network (i.e., including all nodes in the brain): assortativity,\nthe extent to which highly connected nodes are linked to other\nhighly connected nodes; global efficiency, the efficiency of global\nnetwork communication (i.e., the extent to which nodes are con-\nnected to each other through the fewest possible number of\nnodes); and transitivity, the amount of clustering present in the\nnetwork (i.e., the extent to which neighbors of a node also connect\nto each other). Condition-related differences in global properties\nreflect overall network restructuring. Five measures reflect a\nproperty of an individual node: local efficiency, the efficiency of\ncommunication in the local subnetwork (nodes connected to that\nspecific node); node strength, the overall influence of a node on the\nnetwork; local assortativity, the extent to which a node is connected\nto nodes with a similar influence on the network (i.e., whether a\nnode is highly connected to nodes with similar vs. stronger or\nweaker node strength); participation coefficient, the extent to which\na node is connected to nodes in different modules; and within-\nmodule degree Z-score, the extent to which a node is connected to\nother nodes within its own module. Modules are sets of nodes\nhaving more within- than between-module coupling. Node-specific\nproperties were examined only for dACC, right IFS, and right AI,\n\nHigher demand for inhibitory control was associated with\n\nincreases in all network-wide properties: transitivity (P = 0.002\n[0.015]), global efficiency (P = 0.003 [0.024]), and assortativity\n(P < 0.001 [0.002]). Higher transitivity is often associated with\ngreater functional specialization, whereas greater global effi-\nciency indicates more efficient overall network communication,\nand higher assortativity suggests that the network is more resilient\nto disruption (34, 35).\n\ninhibitory control was related to increases in node strength (dACC,\nP < 0.001 [<0.001]; right IFS, P < 0.001 [0.004]; right AI, P < 0.001\n[<0.001]) and local efficiency (dACC, P < 0.001 [<0.001]; right IFS,\nP < 0.001 [0.011]; right AI, P < 0.001 [<0.001]). Thus, each node\nhad a greater overall impact on network processing when the en-\nvironment required stronger inhibitory control (node strength), and,\nat the same time, the network of connections surrounding each\nnode also became more tightly clustered together (local efficiency).\n\ncontrol was associated with stronger local assortativity for only\nright AI (P = 0.002 [0.009]) (IFS and AI, P > 0.8).\n\nMaterials and Methods\nFirst-Level Processing. Final sample size was 101 (63% female, mean age =\n34.2 y, range 19–51 y). See SI Materials and Methods for details regarding\nthe sample, task design, MRI acquisition and preprocessing, and creation of\nconnectivity matrices.\n\nIdentification of Inhibitory Control-Related Network Connections. To identify\nnetwork connections that varied with the demand for inhibitory control,\nconnectivity matrices were entered as repeated-measures dependent vari-\nables into the NBS toolbox, with task condition (e.g., incongruent vs. con-\ngruent) as the repeatedmeasure. An individual-connection-level threshold of\nt = 3.4 was used with extent-based correction for multiple comparisons,\n5,000 permutations, and an overall corrected α < 0.05.\n\nIdentification of Inhibitory Control-Related Graph Theory Properties. To\nidentify topological properties that varied with inhibitory control demands,\nconnectivity matrices were entered into the GTG toolbox (www.nitrc.org/\nprojects/metalab_gtg), which computed properties for each condition/par-\nticipant by using the Brain Connectivity Toolbox (29). Seven graph-theory\nproperties were computed separately for each task condition by using matrices\nthresholded to include only positive connections (see SI Materials andMethods\nfor follow-up analyses to rule out bias due to this threshold and detail on\nmodularity assignment).\n\nRelationships with Behavior. To elucidate the behavioral impact of network\nshifts, significant network measures were correlated with behavioral mea-\nsures (mean RT and error rate). Condition difference scores were created, and\npartial correlations were computed between network and behavioral mea-\nsures, removing the variance associated with age and block counterbalancing\norder (see SI Materials and Methods for details).\n\nRegional Task-Activation. To provide context for network analyses, we ran a\ntypical GLM analysis to determine which regions showed greater regional\ntask activation in incongruent than congruent (SI Materials and Methods).\nPartial correlations were computed with behavior."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 69,
+            "end": 89,
+            "text": "Jeffrey M. Spielberg",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 68,
+            "text": "Flexible brain network reconfiguration supporting\ninhibitory control",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 277,
+            "end": 281,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1868,
+            "end": 1872,
+            "text": "PNAS",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1932,
+            "end": 1955,
+            "text": "10.1073/pnas.1500048112",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 762,
+            "end": 769,
+            "text": "n = 101",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 783,
+            "end": 800,
+            "text": "color-word Stroop",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "Missing_sublabels": [
+            "Brand",
+            "TR (ms)",
+            "TE (ms)",
+            "Voxel Size (mm x mm x mm)",
+            "Eyes open/closed",
+            "Flip angle",
+            "Field of View (cm)",
+            "Slice thickness",
+            "Number of slices",
+            "Inter-slice gap",
+            "Duration (s)",
+            "Most-used software for preprocessing"
+          ]
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2196,
+            "end": 2219,
+            "text": "incongruent >\ncongruent",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5693,
+            "end": 5718,
+            "text": "Final sample size was 101",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5720,
+            "end": 5730,
+            "text": "63% female",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5732,
+            "end": 5764,
+            "text": "mean age =\n34.2 y, range 19–51 y",
+            "labels": [
+              "Age"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6858,
+            "end": 6915,
+            "text": "1",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Negative correlation — Algorithm",
+            "Negative correlation — Parameters",
+            "Negative correlation — Software"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6858,
+            "end": 6915,
+            "text": "matrices\nthresholded to include only positive connections",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4234,
+            "end": 4241,
+            "text": "2",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Network definition — Parameters",
+            "Network definition — Software",
+            "Network definition — Type"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4234,
+            "end": 4241,
+            "text": "modules",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3291,
+            "end": 3308,
+            "text": "3",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Software",
+            "Graph measures — Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3291,
+            "end": 3308,
+            "text": "global efficiency",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2815,
+            "end": 2827,
+            "text": "transitivity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3031,
+            "end": 3044,
+            "text": "assortativity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4145,
+            "end": 4170,
+            "text": "participation coefficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2958,
+            "end": 2986,
+            "text": "within-module degree Z-score",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3754,
+            "end": 3770,
+            "text": "local efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7273,
+            "end": 7293,
+            "text": "4",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Result aggregation — Software",
+            "Result aggregation — Type"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7273,
+            "end": 7293,
+            "text": "partial correlations",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6364,
+            "end": 6382,
+            "text": "5,000 permutations",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6399,
+            "end": 6417,
+            "text": "corrected α < 0.05",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,838 @@
+{
+  "data": {
+    "text": "Dynamic reconfiguration of the functional brain network after musical training in young adults\nQiongling Li · Xuetong Wang · Shaoyi Wang · Yongqi Xie · Xinwei Li · Yachao Xie · Shuyu Li\nBrain Structure and Function (2019) 224:1781–1795\nhttps://doi.org/10.1007/s00429-019-01867-z\n\nSixty young healthy adults (29 males) were recruited from the local university, and all were native Chinese speakers. Written informed consent was obtained from each participant with a complete description of the study, and the study was approved by the local ethics committee. Participants were excluded if they met any of the following criteria: (1) history of neurologic or psychiatric diseases or health problems affecting dexterity; (2) any experience of musical training; (3) a score of 14 or higher on the beck depression inventory (BDI); (4) left handers or mixed handers defined by a handedness questionnaire (a modified version of the edinburgh handedness inventory); (5) a score lower than 20 or higher than 80 on the advanced measures of music audiation (AMMA); and (6) IQ score higher than 140 obtained by the Wechsler Adult Intelligence Scale-Revised Chinese Revised Version (WAIS-RC).\n\nThe study design was a within-subject experiment with participants randomly assigned to the training group or control group. Due to a failure to comply with the training rules or health problems not related to the study design, four participants (three males and one female) dropped out, resulting in 29 participants (13 males) in the training group and 27 participants (13 males) in the control group. Participants in the training group received 24 weeks of piano training, while participants in the control group did not receive any training. All participants in both the training group and control group received behavioral tests and scanning sessions at three time points (Tp): at the beginning (Tp1) and the end (Tp2) of the 24 weeks training and 12 weeks after training ended (Tp3). Behavioral tests included three subtests of the WAIS-RC (block design, digit symbol, and digit span) and trail-making tests (parts A and B), which assess the visual, spatial processing, motor and sequential memory abilities.\n\nAll participants in the training group received the piano training program, which included professional instruction, practice with the instructions and a final piano performance. Professional instructions, including music theory, progressive difficulty in piano performance and technical finger motor exercises, were provided by professional musicians once a week in the form of 1-h one-to-two teaching sessions. The weekly 1-h course began with correcting errors in music theory followed by an explanation of new theoretical concepts and practicing new pieces. A minimum practice time of five 30-min sessions and a maximum practice time of seven 60-min sessions per week in the assigned room was required, and the practice time was logged.\n\nMRI scans were collected at each of the three measurement time points in the study. All the MRI data were obtained using a SIEMENS Trio Tim 3.0 T scanner with a 12-channel phased array head coil. The 3D high-resolution brain structural images were acquired using T1-weighted MPRAGE sequences with TR = 2530 ms, TE = 3.39 ms, inversion time (TI) = 1100 ms, flip angle = 7°, FOV = 256 mm × 256 mm, in-plane resolution = 256 × 256, slice thickness = 1.33 mm, and 144 sagittal slices. During the resting-state session, participants were instructed to hold still, stay relaxed and keep their eyes closed. The functional MRI data were obtained using an echo-planar imaging (EPI) sequence with the following parameters: 33 axial slices, thickness/gap = 3.5/0.7 mm, in-plane resolution = 64 × 64, repeat time (TR) = 2000 ms, echo time (TE) = 30 ms, flip angle = 90°, and a field of view (FOV) = 200 mm × 200 mm.\n\nData preprocessing was conducted using the Data Processing Assistant for the Resting-State Toolbox (DPARSF). The first ten volumes were discarded. The remaining data were slice-timing corrected for interleaving and realigned to the first image in the series for head motion correction. The resulting data were normalized to the Montreal Neurological Institute (MNI) space and spatially smoothed with an 8-mm Gaussian kernel. Spurious variances were removed through linear regression, including 24 parameters from head motion correction, the global mean signal, the white matter signal, the cerebrospinal fluid signal, and head motion scrubbing (each “bad” volume with framewise displacement > 0.2 mm and their one forward and two back neighbors as a regressor). Finally, the preprocessed data were subjected to bandpass temporal filtering (0.01–0.1 Hz).\n\nA functionally defined atlas (Power et al., 2011) was employed to generate 264 ROIs as 5-mm radius spheres centered on reported coordinates. The average time series for each ROI was extracted. Wavelet decomposition (MODWT with Daubechies least asymmetric length 8) was applied and pairwise interregional wavelet correlations were estimated and averaged across two scales to produce the mean wavelet correlation matrix.\n\nFor each subject at each time point, a sliding time window approach divided each BOLD time series into 141 windows with window length L = 50 TRs and step = 1 TR, yielding 141 wavelet correlation matrices (264 × 264). An ordinal multilayer network coupled consecutive windows via identity links. A dynamic community detection algorithm (multilayer Louvain) optimized the modularity quality function with structural resolution γ = 1 and interlayer coupling ω = 1; optimization was repeated 100 times and statistics were averaged.\n\nA total of 56 subjects participated, with 29 in the training group (13 males, age 23.1 ± 1.37) and 27 in the control group (13 males, age 23.33 ± 1.39). No significant differences between groups at baseline were found in gender, age, education, BDI, IQ or AMMA scores."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 94,
+            "text": "Dynamic reconfiguration of the functional brain network after musical training in young adults",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 236,
+            "end": 278,
+            "text": "https://doi.org/10.1007/s00429-019-01867-z",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 95,
+            "end": 107,
+            "text": "Qiongling Li",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 216,
+            "end": 220,
+            "text": "2019",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 186,
+            "end": 214,
+            "text": "Brain Structure and Function",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 236,
+            "end": 278,
+            "text": "https://doi.org/10.1007/s00429-019-01867-z",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3061,
+            "end": 3083,
+            "text": "SIEMENS Trio Tim 3.0 T",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3651,
+            "end": 3666,
+            "text": "33 axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3668,
+            "end": 3694,
+            "text": "thickness/gap = 3.5/0.7 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3779,
+            "end": 3795,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3525,
+            "end": 3536,
+            "text": "eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3818,
+            "end": 3840,
+            "text": "FOV) = 200 mm × 200 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3740,
+            "end": 3753,
+            "text": "TR) = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3766,
+            "end": 3777,
+            "text": "TE) = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3696,
+            "end": 3725,
+            "text": "in-plane resolution = 64 × 64",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3430,
+            "end": 3443,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5647,
+            "end": 5682,
+            "text": "A total of 56 subjects participated",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5689,
+            "end": 5723,
+            "text": "29 in the training group (13 males",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5746,
+            "end": 5779,
+            "text": "27 in the control group (13 males",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5725,
+            "end": 5740,
+            "text": "age 23.1 ± 1.37",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5781,
+            "end": 5797,
+            "text": "age 23.33 ± 1.39",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 830,
+            "end": 859,
+            "text": "left handers or mixed handers",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 558,
+            "end": 626,
+            "text": "Participants were excluded if they met any of the following criteria",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1409,
+            "end": 1467,
+            "text": "four participants (three males and one female) dropped out",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5800,
+            "end": 5853,
+            "text": "No significant differences between groups at baseline",
+            "labels": [
+              "Group matching"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 518,
+            "end": 556,
+            "text": "approved by the local ethics committee",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1970,
+            "end": 2109,
+            "text": "Behavioral tests included three subtests of the WAIS-RC (block design, digit symbol, and digit span) and trail-making tests (parts A and B)",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3952,
+            "end": 3988,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm",
+            "Removal Init Vol — Parameters"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3950,
+            "text": "Data Processing Assistant for the Resting-State Toolbox (DPARSF)",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3956,
+            "end": 3973,
+            "text": "first ten volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4014,
+            "end": 4036,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3950,
+            "text": "Data Processing Assistant for the Resting-State Toolbox (DPARSF)",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4058,
+            "end": 4127,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3950,
+            "text": "Data Processing Assistant for the Resting-State Toolbox (DPARSF)",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4153,
+            "end": 4214,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Algorithm",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3950,
+            "text": "Data Processing Assistant for the Resting-State Toolbox (DPARSF)",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4219,
+            "end": 4266,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3950,
+            "text": "Data Processing Assistant for the Resting-State Toolbox (DPARSF)",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4246,
+            "end": 4266,
+            "text": "8-mm Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4337,
+            "end": 4378,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Type",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3950,
+            "text": "Data Processing Assistant for the Resting-State Toolbox (DPARSF)",
+            "labels": [
+              "motion regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4337,
+            "end": 4378,
+            "text": "24 parameters from head motion correction",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4337,
+            "end": 4350,
+            "text": "24 parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4380,
+            "end": 4402,
+            "text": "7",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Global signal — Software",
+            "Global signal — Parameters"
+          ]
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3950,
+            "text": "Data Processing Assistant for the Resting-State Toolbox (DPARSF)",
+            "labels": [
+              "Global signal — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4404,
+            "end": 4459,
+            "text": "8",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Algorithm",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3950,
+            "text": "Data Processing Assistant for the Resting-State Toolbox (DPARSF)",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4465,
+            "end": 4486,
+            "text": "9",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Software",
+            "Scrubbing — Parameters"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3950,
+            "text": "Data Processing Assistant for the Resting-State Toolbox (DPARSF)",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4511,
+            "end": 4587,
+            "text": "framewise displacement > 0.2 mm and their one forward and two back neighbors",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4654,
+            "end": 4695,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software",
+            "Temporal filt — Parameters",
+            "Temporal filt — Type"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3950,
+            "text": "Data Processing Assistant for the Resting-State Toolbox (DPARSF)",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4683,
+            "end": 4694,
+            "text": "0.01–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4654,
+            "end": 4681,
+            "text": "bandpass temporal filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4698,
+            "end": 4747,
+            "text": "A functionally defined atlas (Power et al., 2011)",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4839,
+            "end": 4889,
+            "text": "The average time series for each ROI was extracted",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4979,
+            "end": 5037,
+            "text": "pairwise interregional wavelet correlations were estimated",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5413,
+            "end": 5515,
+            "text": "A dynamic community detection algorithm (multilayer Louvain) optimized the modularity quality function",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5580,
+            "end": 5644,
+            "text": "optimization was repeated 100 times and statistics were averaged",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3430,
+            "end": 3443,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "data": {
+    "text": "2.4.2 Functional Network Construction—The input data for the modularity analyses \nare functional networks, representing all pairwise correlations of regional task-related \nactivation. We specifically used a beta time series approach (Cisler et al., 2014; Rissman et \nal., 2004), which considers two regions to be functionally connected if the beta time series of \nthe regions are correlated (Fornito et al., 2011a; Fornito et al., 2011b; Geib et al., 2017; Geib \net al., 2015; Schedlbauer et al., 2014). To obtain the beta values for each trial, we modeled \nevery trial individually (a total of 70 regressors for each run and a total of five runs) with a \nstick function at stimulus onset convolved with a standard hemodynamic response function. \nThese beta values were then sorted by the three trial types of interest – nonsingleton target, \nsingleton target, and target absent trials.\n\nIn graph theory, a network is viewed as consisting of nodes (here, brain regions of interest; \nROIs) and edges (here, the functional connections between nodes). For functional network \nconstruction, we used a total of 397 ROIs, comprising a subparcellated version of the \nHarvard-Oxford Atlas (Tzourio-Mazoyer et al., 2002), excluding the cerebral white matter, \nlateral ventricles and brain-stem ROIs (see Supplementary Table 1 for a full list of ROIs). \nFor each ROI, for each trial type of interest, we extracted the beta time series, and correlated \nthe beta time series of each ROI with every other ROI. This resulted in three undirected, \nweighted connectivity matrices for each trial type representing the pairwise Pearson \ncorrelations between the mean beta time series of each ROI with every other ROI within the \nnetwork (397 × 397 matrices). The correlation values between each ROI represent the \nfunctional connectivity strength between ROIs. The three connectivity matrices represent the \nfunctional networks for each trial type – nonsingleton target, singleton target, and target \nabsent networks. Negative connections were removed from the connectivity matrices\n\nNeuroimage. Author manuscript; available in PMC 2018 July 15.\n\nbecause of our specific interest in PageRank centrality which may not be estimated in the \npresence of negative connections (Telesford et al., 2011), and values within the diagonal of \neach connectivity matrix were set to zero.\n\n2.4.3 Modularity—After network construction, we conducted a modularity analysis on the \nnonsingleton target network. The nonsingleton target network was used for the modularity \nanalyses because this condition served as the reference trial type when examining the size \nsingleton (singleton target – nonsingleton target) and target detection (nonsingleton target – \ntarget absent) effects. To conduct the modularity analysis, we first averaged each \nparticipant’s nonsingleton target connectivity matrix to yield an averaged, nonsingleton \ntarget connectivity matrix (collapsed across all ages). We then ran a Louvain algorithm \n(Blondel et al., 2008), contained within the Brain Connectivity Toolbox (Rubinov and \nSporns, 2010; https://sites.google.com/site/bctnet/), on the averaged nonsingleton target \nconnectivity matrix. We applied the Louvain algorithm on the nonsingleton target network \nten times because network modularity is an optimization algorithm, and identifying the \nperfect partition is a non-deterministic polynomial-time hard problem (Brandes et al., 2006). \nThe run that produced the highest Q value was considered the best partition and the \naccompanying community assignments were used for subsequent analyses herein. Similar to \nChan et al. (2014), the same community assignments were used across all ages. All results \noverlaid on brain surfaces were created with BrainNet Viewer (Xia et al., 2013) and are \nshown overlaid onto BrainMesh_ICBM152 within MNI standard space (neurological \nconvention).\n\nAfter running the modularity analysis on the nonsingleton target network, we calculated \ndegree centrality and PageRank centrality for each of the nodes in all three networks of \ninterest (Rubinov and Sporns, 2010). Degree centrality was calculated by summing the total \nweights maintained by a node. PageRank centrality was calculated using a damping value of \n0.85 (Boldi et al., 2009). Both of these measures have previously been used to assess the \ncentrality of nodes within functional networks (e.g., Geib et al., 2017; Geib et al., 2015; Zuo \net al., 2012). For each module within each network, we averaged the centrality measures \nacross the ROIs (separately for degree and PageRank centrality) to create a composite \ndegree and PageRank centrality score for each module (e.g., frontoparietal module degree \ncentrality within the singleton target network)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1106,
+            "end": 1180,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1106,
+            "end": 1180,
+            "text": "397 ROIs, comprising a subparcellated version of the \nHarvard-Oxford Atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1106,
+            "end": 1180,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1106,
+            "end": 1180,
+            "text": "397 ROIs, comprising a subparcellated version of the \nHarvard-Oxford Atlas",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1391,
+            "end": 1496,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1391,
+            "end": 1496,
+            "text": "we extracted the beta time series, and correlated \nthe beta time series of each ROI with every other ROI.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1601,
+            "end": 1718,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1601,
+            "end": 1718,
+            "text": "pairwise Pearson \ncorrelations between the mean beta time series of each ROI with every other ROI within the \nnetwork",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1514,
+            "end": 1583,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1514,
+            "end": 1583,
+            "text": "three undirected, \nweighted connectivity matrices for each trial type",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2000,
+            "end": 2064,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2000,
+            "end": 2064,
+            "text": "Negative connections were removed from the connectivity matrices",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2954,
+            "end": 3058,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2954,
+            "end": 3058,
+            "text": "We then ran a Louvain algorithm \n(Blondel et al., 2008), contained within the Brain Connectivity Toolbox",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2954,
+            "end": 3058,
+            "text": "We then ran a Louvain algorithm \n(Blondel et al., 2008), contained within the Brain Connectivity Toolbox",
+            "labels": [
+              "Network definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3958,
+            "end": 4099,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4100,
+            "end": 4184,
+            "text": "Degree centrality was calculated by summing the total \nweights maintained by a node.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4185,
+            "end": 4250,
+            "text": "PageRank centrality was calculated using a damping value of \n0.85",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2954,
+            "end": 3058,
+            "text": "We then ran a Louvain algorithm \n(Blondel et al., 2008), contained within the Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4185,
+            "end": 4250,
+            "text": "PageRank centrality was calculated using a damping value of \n0.85",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4486,
+            "end": 4662,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4486,
+            "end": 4662,
+            "text": "we averaged the centrality measures \nacross the ROIs (separately for degree and PageRank centrality) to create a composite \ndegree and PageRank centrality score for each module",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

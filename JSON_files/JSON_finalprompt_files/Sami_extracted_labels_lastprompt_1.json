@@ -1,0 +1,665 @@
+{
+  "data": {
+    "text": "ORIGINAL RESEARCH ARTICLE\npublished: 15 May 2013\ndoi: 10.3389/fnhum.2013.00166\nGraph network analysis of immediate motor-learning\ninduced changes in resting state BOLD\nS. Sami* and R. C. Miall\nBehavioural Brain Sciences Centre, School of Psychology, University of Birmingham, Birmingham, UK\nFrontiers in Human Neuroscience\n\n\nRecent studies have demonstrated that following learning tasks, changes in the resting state activity of the brain shape regional connections in functionally specific circuits. Here we expand on these findings by comparing changes induced in the resting state immediately following four motor tasks. Two groups of participants performed a visuo-motor joystick task with one group adapting to a transformed relationship between joystick and cursor. Two other groups were trained in either explicit or implicit procedural sequence learning. Resting state BOLD data were collected immediately before and after the tasks. We then used graph theory-based approaches that include statistical measures of functional integration and segregation to characterize changes in biologically plausible brain connectivity networks within each group. Our results demonstrate that motor learning reorganizes resting brain networks with an increase in local information transfer, as indicated by local efficiency measures that affect the brain’s small world network architecture. This was particularly apparent when comparing two distinct forms of explicit motor learning: procedural learning and the joystick learning task. Both groups showed notable increases in local efficiency. However, a change in local efficiency in the inferior frontal and cerebellar regions also distinguishes between the two learning tasks. Additional graph analytic measures on the “non-learning” visuo-motor performance task revealed reversed topological patterns in comparison with the three learning tasks. These findings underscore the utility of graph-based network analysis as a novel means to compare both regional and global changes in functional brain connectivity in the resting state following motor learning tasks.\n\n\nTwo groups of twelve healthy individuals participated in either an explicit (task 1) or implicit (task 2) version of the serial reaction time task (SRTT; Robertson, 2007). All participants were right handed, as confirmed by the Edinburgh handedness questionnaire. All participants (mean age 23.6 ± 5.2 years) gave written informed consent, and received either cash or credit for their participation.\n\n\nParticipants recalling more than four items of the sequence were excluded from the implicit condition. All the participants were instructed to respond as quickly and as accurately as possible to the target location by a button press. Moreover, instructions to participants differed depending on which group they participated in. The implicit participants were unaware of the underlying sequence; while the explicit participants were aware of the existence of a sequence that was highlighted by a different color than the embedded random sequences.\n\n\nTwo groups of twelve individuals participated in one of two visuo-motor tracking tasks. Participants used an MR compatible joystick to control a cursor with their non-preferred left hand. For the test group (task 3) there was an angular displacement between target and cursor accumulating by 10° every min for 10 min, reaching a maximum of 90°, while for the control group (task 4) there was no such displacement, and the movements of joystick and cursor were congruent.\n\n\nFor all 4 experiments, scans were conducted at the Birmingham University Imaging Centre (BUIC), University of Birmingham, Birmingham, UK; the experiments were approved by the University’s local ethical panel, and all participants gave written informed consent. The MRI unit was a 3 Tesla Philips Achieva scanner (Koninklijke Philips Electronics N.V., Eindhoven, Netherlands). Each participants had a high-resolution T1-weighted structural scan where the TR = 8.4 ms, TE = 3.8 ms, flip angle = 8° and FOV = 232 × 288 × 175 mm). In all functional scans the TR = 2800 ms, TE = 35 ms, and flip angle = 85°. An 8 channel (SENSE factor 2) head coil was used. EPI volumes consisted of forty-nine 96 × 96 axial slices of 2.5 × 2.5 × 3 mm voxels. Using an FOV of 240 × 147 × 240 mm, the entire cerebral cortex and cerebellum were covered.\n\n\nAll data were motion-corrected and normalized to a standard template using the statistical parametric mapping software (SPM8; Friston et al., 2006). Pre-processing included regression of motion parameters, nuisance signals, and global signal, followed by band-pass filtering at 0.01–0.1 Hz to isolate the low-frequency fluctuations characteristic of resting connectivity. Data was then parcellated into 116 regions using the Automatic Anatomical Labeling (AAL) atlas as implemented by IBASPM (Tzourio-Mazoyer et al., 2002; Alemán-Gómez et al., 2006). This resulted in an averaged fMRI time series for 116 regions (nodes) for each subject, which were used for subsequent graph network analysis.\n\n\nTo create network graphs for every participant, we used the Matlab-based Connectivity Decoding Toolkit (Richiardi et al., 2011). This software applies the outcome of the widely adopted IBASPM structural atlas to form a functional atlas by averaging the time series data for each region. It then performs a discrete wavelet transformation on the averaged time series data, filtering it into four separate frequency sub-bands. Here we adopted the use of a standard sub-band (0.06–0.1 Hz), which has been widely used for resting state analysis. In practice this sub-band has been shown to effectively filter out physiological noise in upper frequencies, and avoids measurement errors connected with lower frequencies. For functional connectivity between the 116 parcellated regions, the Pearson correlation was computed between all pairs of node time series to generate a 116 × 116 correlation matrix (i.e., the adjacency matrix) for each subject. The adjacency matrix represents a very densely connected network that makes it difficult to test the reliability of the connections. For simplicity the adjacency matrix is thresholded and further binarized to maintain only the most reliable connections. In this study we adopted five thresholds of r = 0.3, 0.4, 0.5, 0.6, and 0.7.\n\n\nWe tested for significant differences between the pre- and post-motor task resting-state network measurements using the non-parametric Wilcoxon statistical hypothesis test when comparing related groups, at identical thresholds for each network measure. Additionally, we corrected for multiple comparisons to identify within group and between-group differences across all network measures.\n\n\nFor the SRTT both groups showed procedural learning following the training exposure phase of the SRTT task. Comparing pre- and post-training for the implicit task, there was a significant reduction in reaction times (p < 0.05), while the explicit task showed a greater difference (p < 0.01). There was also a marked difference between the performance of these two groups, with significantly reduced reaction times for the explicit group (p = 0.01).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 168,
+            "end": 192,
+            "text": "S. Sami* and R. C. Miall",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 79,
+            "end": 167,
+            "text": "Graph network analysis of immediate motor-learning\ninduced changes in resting state BOLD",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44,
+            "end": 48,
+            "text": "2013",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 291,
+            "end": 322,
+            "text": "Frontiers in Human Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54,
+            "end": 78,
+            "text": "10.3389/fnhum.2013.00166",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 325,
+            "end": 501,
+            "text": "Recent studies have demonstrated that following learning tasks, changes in the resting state activity of the brain shape regional connections in functionally specific circuits.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 291,
+            "end": 322,
+            "text": "Frontiers in Human Neuroscience",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "Missing_sublabels": [
+            "Data",
+            "Code",
+            "Preregistered",
+            "Remarks"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3819,
+            "end": 3913,
+            "text": "3 Tesla Philips Achieva scanner (Koninklijke Philips Electronics N.V., Eindhoven, Netherlands)",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)",
+            "Inter-slice gap",
+            "Duration (s)",
+            "Eyes open/closed",
+            "Number of individuals for final analyses",
+            "Most-used software for preprocessing",
+            "Resting or Task/If Task, what task?"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4217,
+            "end": 4248,
+            "text": "forty-nine 96 × 96 axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4252,
+            "end": 4275,
+            "text": "2.5 × 2.5 × 3 mm voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4094,
+            "end": 4106,
+            "text": "TR = 2800 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4108,
+            "end": 4118,
+            "text": "TE = 35 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4124,
+            "end": 4140,
+            "text": "flip angle = 85°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4286,
+            "end": 4311,
+            "text": "FOV of 240 × 147 × 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2114,
+            "end": 2154,
+            "text": "Two groups of twelve healthy individuals",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Male/Female",
+            "Rejected subjects",
+            "Group matching",
+            "Age",
+            "Handedness",
+            "Inclusion criteria"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2396,
+            "end": 2421,
+            "text": "mean age 23.6 ± 5.2 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2308,
+            "end": 2376,
+            "text": "right handed, as confirmed by the Edinburgh handedness questionnaire",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2135,
+            "end": 2154,
+            "text": "healthy individuals",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3677,
+            "end": 3799,
+            "text": "the experiments were approved by the University’s local ethical panel, and all participants gave written informed consent.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6900,
+            "end": 7184,
+            "text": "there was a significant reduction in reaction times (p < 0.05), while the explicit task showed a greater difference (p < 0.01). There was also a marked difference between the performance of these two groups, with significantly reduced reaction times for the explicit group (p = 0.01).",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2308,
+            "end": 2376,
+            "text": "right handed, as confirmed by the Edinburgh handedness questionnaire",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "Missing_sublabels": [
+            "Stimuli",
+            "Stimuli repetition"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4450,
+            "end": 4451,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4450,
+            "end": 4518,
+            "text": "statistical parametric mapping software (SPM8; Friston et al., 2006)",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4450,
+            "end": 4451,
+            "text": "2",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4450,
+            "end": 4518,
+            "text": "statistical parametric mapping software (SPM8; Friston et al., 2006)",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Algorithm",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4544,
+            "end": 4545,
+            "text": "3",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4544,
+            "end": 4575,
+            "text": "regression of motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4577,
+            "end": 4578,
+            "text": "4",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4577,
+            "end": 4593,
+            "text": "nuisance signals",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4599,
+            "end": 4600,
+            "text": "5",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4599,
+            "end": 4612,
+            "text": "global signal",
+            "labels": [
+              "Global signal — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Global signal — Software",
+            "Global signal — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4626,
+            "end": 4627,
+            "text": "6",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4626,
+            "end": 4660,
+            "text": "band-pass filtering at 0.01–0.1 Hz",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4649,
+            "end": 4660,
+            "text": "0.01–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4796,
+            "end": 4797,
+            "text": "7",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4796,
+            "end": 4837,
+            "text": "Automatic Anatomical Labeling (AAL) atlas",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5373,
+            "end": 5374,
+            "text": "8",
+            "labels": [
+              "wavelet decomposition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5373,
+            "end": 5404,
+            "text": "discrete wavelet transformation",
+            "labels": [
+              "wavelet decomposition — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5521,
+            "end": 5552,
+            "text": "standard sub-band (0.06–0.1 Hz)",
+            "labels": [
+              "wavelet decomposition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "wavelet decomposition — Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5851,
+            "end": 5852,
+            "text": "9",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5851,
+            "end": 5870,
+            "text": "Pearson correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software",
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6291,
+            "end": 6292,
+            "text": "10",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6291,
+            "end": 6341,
+            "text": "five thresholds of r = 0.3, 0.4, 0.5, 0.6, and 0.7",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Sparsity control — Software",
+            "Sparsity control — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6465,
+            "end": 6466,
+            "text": "11",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6465,
+            "end": 6516,
+            "text": "non-parametric Wilcoxon statistical hypothesis test",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Result aggregation — Software",
+            "Result aggregation — Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

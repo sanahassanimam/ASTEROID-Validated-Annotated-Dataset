@@ -1,0 +1,1317 @@
+{
+  "data": {
+    "text": "Allocentric representation in the human amygdala and ventral visual stream\nHallvard Røe Evensmoen, Lars M. Rimol, Anderson M. Winkler, Richard Betzel, Tor Ivar Hansen, Hamed Nili, and Asta Håberg\nEvensmoen et al., 2021, Cell Reports 34, 108658\nhttps://doi.org/10.1016/j.celrep.2020.108658\n\nParticipants\nThirty-one men (18 - 27 years, mean 21 years) with no history of neurological disorders, head trauma, previous or current DSM-\nIV axis I diagnosis of psychiatric illness, including substance abuse, were recruited. Moreover, we only recruited male subjects\nin order to reduce variability in the data. They were all right handed, ascertained with the Edinburgh Handedness Inventory, with\nmean score 88.4 ± 29.7%. All participants provided written informed consent prior to participation and received 1000 Norwe-\ngian kroner as reimbursement. The study was approved by the Regional Committee for Medical Research Ethics in central\nNorway.\n\nImage acquisition\nFunctional and anatomical MR images were acquired with a 32-channel Head Matrix Coil on a 3T Siemens Trio scanner, and on a 3T\nSiemens Skyra scanner replacing the Trio for the last seven participants (Siemens AG, Erlangen, Germany) (see Ladstein et al., 2016).\nFoam pads were used to minimize head motion. The fMRI stimuli were presented using a LCD monitor with 1280 3 1024 resolution,\nand the subject moved inside the environment using a MRI compatible joystick (Current Designs, Philadelphia, US).\n\nT2* weighted, blood-oxygen-level-dependent (BOLD) sensitive images were acquired during the environmental encoding task, us-\ning a 2D echo-planar imaging pulse sequence and limited field of view (FOV) optimized to cover themedial temporal lobe with highest\npossible spatial resolution. The slices were positioned as close to 90� on the anterior-posterior direction of the hippocampus as\npossible. FOV = 220 mm x 220 mm, slice thickness = 1.9 mm (no gap), number of slices = 40, matrix = 116x116 yielding\n1.9x1.9x1.9mm3 voxels (TR = 2110.8 ms, TE = 28 ms, flip angle = 90�). For the last seven participants, the 2D echo-planar imaging\nparameters differed slightly (FOV = 220 mm x 220 mm, slice thickness = 2.0 mm (no gap), number of slices = 40, matrix = 116x116\nyielding 1.9x1.9x2.0mm3 voxels, TR = 2253.2 ms, TE = 28 ms, flip angle = 90�). GRAPPA acceleration was used, with a factor of four.\nScanning parameters were optimized for reduction of susceptibility-induced signal loss in areas near the medial temporal lobe, and\nthere was no effect of an anterior-posterior distortion correction (Holland et al., 2010), so this step was dropped from the image pre-\nprocessing. Each functional run contained 143 volumes, and for the last seven participants 134 volumes. For anatomical reference, a\nT1 weighted (T1W) 3D volume was acquired using a MPRAGE sequence (TR = 2300 ms, TE = 2.94 ms, FOV = 256 mm x 256 mm x\n192 mm, matrix 256x256x192 yielding a resolution of 1.0x1.0x1.0 mm3, flip angle = 8�).\n\nfMRI paradigm\nThe participants were exposed to a total of 35 virtual environments during BOLD fMRI scanning. The fMRI paradigm was a block\ndesign consisting of seven runs, with 5 blocks in each run, with one environment per block. Within each block, there were three\nperiods; environmental exploration (30 s), post-exploration (with fixation cross; 15 s), and an odd-even task (15 s) (Figure 1A).\nBetween runs, the participants were tested on recall of environmental information from each of the five blocks. The environments\nwere presented in a random sequence across participants, within and between runs.\n\nEach environment was a room with a door and an outer perimeter (walls), which had one of 10 geometric shapes. All environments\nwere between 50 and 90 virtual m2 large and contained five unique, unrelated objects (Figures 1A and 1B). Within each environment,\nthe objects were positioned in a unique pattern (Figure 1B). In the environmental exploration period, the participants started out posi-\ntioned at the door of the room (environment) andwere free to explore the environment froma first-person perspective (using a joystick\nwith moving speed set to two virtual m/s) (Figure 1A). Average movement across all participants and all environments was 26.4 ± 7.8\nvirtual meters. The participants were instructed to memorize the environment in the post-exploration period, while fixating on a cross\non the computer screen. During the odd-even task, the participants were instructed to push the right joystick button when an even\nnumber (< 100) appeared on the screen and the left joystick button when an odd number (< 100) appeared (numbers presented at\nrandom). The participants were explicitly instructed to focus on getting the odd-even judgments correct, and behavioral data were\nanalyzed to verify compliance. The purpose of the odd- even period was to function as an implicit baseline for fMRI data analysis.\n\nMeasures of post-exploration accuracy\nPattern accuracy indicates whether the participant accurately reproduced the positional pattern of the five objects presented in a\ngiven block, regardless of the identity of the objects (Figure 1C). The participant response (drag-and-drop into the 2D overview)\nwas translated so that the geometric center (centroid) of the recalled positional pattern matched the center of the correct positional\npattern (as originally presented during the environmental exploration period). Then the recalled positional pattern was rotated into\nalignment with the correct positional pattern, minimizing the root mean square deviation between the patterns (Kabsch, 1976).\nNext, the recalled positional pattern was scaled (up or down) minimizing the root mean square deviation between the patterns\n(Umeyama, 1991). The purpose of the first two transformations (translation, rotation) was to disentangle the positional pattern as\nsuch from its relation to the environment’s perimeter (walls of the room). The purpose of scaling was to account for the fact that hu-\nman spatial representations are sometimes compressed or expanded (Tversky, 1992). After these transformations, Pattern accuracy\nwas obtained as the inverse of the total sum of squares error after all transformations had been performed. Pattern accuracy was\nclassified as fine, medium, coarse, or “failed.”\n\nEnvironmental geometry indicates how accurately the recalled positional pattern was located relative to the perimeter of the envi-\nronment.\n\nThe third allocentric measure obtained from the allocentric position test was Euclidean map, defined as a response obtaining high\nscores on both Pattern accuracy and Environmental geometry (Figure 1C). A high Euclidean map score means the participant\ncorrectly recalled the positional pattern as such, i.e., the angles and relative distances between the objects, as well as accurately\nrecalling the positioning of this pattern relative to the perimeter of the environment.\n\nFinally, Object identity indicates how accurately the participant recalled which object was placed where within the positional\npattern (Figure 1C).\n\nfMRI preprocessing\nPreprocessing of the fMRI data was performed using FMRIPREP (Esteban et al., 2019) (https://fmriprep.readthedocs.io/en/stable/\nindex.html), a Nipype based tool (https://nipype.readthedocs.io/en/latest/). Each T1-weighted volume was corrected for intensity\nnon-uniformity using N4BiasFieldCorrection v2.1.0 and skull-stripped using antsBrainExtraction.sh v2.1.0 (using the OASIS template)\n(ANTs v2.1.0, http://stnava.github.io/ANTs/). Brain surfaces were reconstructed using recon-all from FreeSurfer v6.0.0 (https://surfer.\nnmr.mgh.harvard.edu/fswiki), and the brain mask estimated previously was refined with a custom variation of the method to reconcile\nANTs-derived and FreeSurfer-derived segmentations of the cortical gray-matter of Mindboggle (https://mindboggle.info/). Spatial\nnormalization to the ICBM 152 Nonlinear Asymmetrical template version 2009c (http://www.bic.mni.mcgill.ca/ServicesAtlases/\nICBM152NLin2009) was performed through nonlinear registration with the antsRegistration tool of ANTs, using brain-extracted ver-\nsions of both T1-weighted volume and template. Brain tissue segmentation of cerebrospinal fluid, white-matter, and gray-matter was\nperformed on the brain-extracted T1-weighted image using fast (FSL v5.0.9). Functional data were motion corrected using mcflirt\n(FSL). This was followed by co-registration to the corresponding T1-weighted image using boundary-based registration with 9 de-\ngrees of freedom, using bbregister (FreeSurfer v6.0.0). Motion correcting transformations, BOLD-to-T1w transformation and T1w-\nto-template (MNI) warp were concatenated and applied in a single step using antsApplyTransforms with Lanczos interpolation.\n\nData and code availability\nAccess to data by qualified investigators are subject to scientific and ethical review and must comply with the European\nUnion General Data Protection Regulations (GDPR), Norwegian laws and regulations, and NTNU regulations. Completion of\na material transfer agreement (MTA) signed by an institutional official will be required in order to access the data. Access\nto the fMRI paradigm can be achieved through completion of a material transfer agreement (MTA) signed by an institutional\nofficial.\n\nTitle: Allocentric representation in the human amygdala and ventral visual stream\n\nThe peak voxel ROIs used consisted of the peak voxel as well as neighboring voxels, resulting in seven voxels in total (to allow for some individual anatomical variation).\n\npairwise correlation analyses (Kendall’s tA) 2014) produced one correlation matrix for the environmental exploration periods and one for the post-exploration periods. A higher\nKendall’s tA wasinterpreted as indicatingstronger functional connectivity. The two-sided Wilcoxon signed rank test wasperformedon a group level, allowing for assessment of whether the connectivity (Kendall’s t ) between pairs of searchlights or nodes was sig-nificant. A significance level of alpha = 0.05 was used, corrected for multiple comparisons using a 5% false discovery rate (FDR).\n\nGraph analysis\nGraph analyses of the allocentric network were performed separately for the environmental exploration and the post-exploration\nperiod, consisting of (1) a multiresolution consensus clustering analysis to evaluate hierarchical connectivity (Jeub et al., 2018), (2)\nevaluation of the centrality ofindividual nodes within the network by using graph measures from the Brain Connectivity toolbox (Ru-\nbinovandSporns,2010)(https://sites.google.com/site/bctnet/),and(3)analysisoftherelationshipbetweenaveragebehavioralper-\nformanceandglobalgraphmeasuresfromtheBrainConnectivitytoolbox.Theaveragenetworkacrossalltheparticipantswasinves-\ntigated. In addition, the participants’ individual networks were analyzed to explore individual differences in connectivity. Negative\nedge weights were set to zero.\nFirst,amultiresolution consensus clustering analysis (Jeub etal., 2018)wasused toevaluate thelevel ofhierarchical organization\nwithintheallocentricMTLnetwork.Weappliedaneventsamplingproceduretoestimatethemodularpartitioningofthenetworkfora\nset of 10000 samples (see below) that covered all scales present in the network approximately equally. Modularity for each sample\nwas evaluated using the iterated GenLouvain algorithm, resulting in a set of multiresolution partitions. The complete set of multire-\nsolution partitions was then tested for hierarchical clustering using a divisive consensus clustering algorithm. The hierarchical\nconsensus clustering algorithm started with the partition where all nodes were part of one module, and then divided all modules\nbasedonsignificantpairwiseco-classificationofnodesuntilnomodulecouldbefurthersubdivided.Thisresultedinatreeofnested\npartitions,withasetoflevelsthateachrepresentedauniquepartition.Atestlevelofalpha<0.05wasusedforallbranchesinthetree\n(see below). The sample size and the p value threshold in the multiresolution clustering analysis were selected by evaluating which\ncombination of p value threshold (0.05, 0.01,0.001, or 0.0001) and partition size in the initial ensemble (1000, 10000, 100000, or\n1000000)thatgavethehighestaverageZ-scoreoftherand-coefficient,whencomparingthefinest-levelpartitionforeachcombina-\ntionofpvaluethresholdandpartitionsizewiththefinest-levelpartitionforallothercombinationsofpvaluethresholdsandnumberof\npartitions.Further,weextractedthenumberofmodulesinthetop-levelpartitionofthetree.Finally,tocomparethetop-levelpartition\nfor each individual with the top-level partition estimated at a group level we used the adjusted Rand similarity coefficient and the\nZ-score of the Rand coefficient if the adjusted Rand similarity coefficient was relatively small (positive Z-scores imply that the\npartitions are similar) (Traud et al., 2011).\nWealsoincluded‘‘leave-onesubjectout’’and‘‘leave-onetrialout’’clusterstabilityanalyses.The‘‘leave-onesubjectout’’analysis\ninvolved removing the data from one subject before running the multiresolution consensus clustering analysis, and then comparing\nthetop-levelpartitionfromthisanalysiswiththetop-levelpartitionfromallthesubjects(similartotheclusterstabilityanalysisimple-\nmented in the R package clValid (Brock et al., 2008) (https://cran.r-project.org/web/packages/clValid/index.html)). The measure\nused for this comparison was the adjusted Rand similarity coefficient, and the Z-score of the Rand coefficient in cases where\nthe adjusted Rand similarity coefficient was relatively small (Traud et al., 2011). The ‘‘leave-one trial out’’ was identical to the\n‘‘leave-one subject out’’ except that individual trials were left out of the analysis instead of subjects.\nSecond, a set of measures that described the centrality of the nodes in the allocentric network and the overall global efficiency of\ntheallocentricnetworkwereestimatedusingtheBrainConnectivitytoolbox(RubinovandSporns,2010)inMATLAB.Fortheindivid-\nual nodes within the network from each subject, degree centrality, betweenness centrality, eigenvector centrality, participation,\nwithin-module degree z-score, strength, and clustering were estimated. The scores for these individual node measures were then\nstandardized within the subject-specific allocentric MTL networks:\nx (cid:1)m\nz = i ; 1%i%N\ni s\nusing the mean m and the standard deviation s across all nodes. Finally, for each node in the allocentric MTL network a two-sided\nWilcoxonsignedranktestwasperformedonthegrouplevelforeachofthe centralitymeasures,toassesswhetheranyofthenodes\nshowed a higher level of centrality than the other nodes. A significance threshold of p = 0.05 was used, corrected for multiple com-\nparisonsusinga5%FalseDiscoveryRate(FDR).ThebrainnetworkswerevisualizedusingtheBrainNetViewer(Xiaetal.,2013).For\nthenetworkasawhole,globalefficiencywasestimated(see(BullmoreandSporns,2012;RubinovandSporns,2010)fordetailsand\ninterpretations of these measures).\nThird, we explored the relationships between average behavioral performance (Pattern accuracy, Environmental geometry,\nEuclideanmap,Object identity) andglobal graph measuresfrom theparticipants’ individualnetworks (global efficiency andnumber\nof top-level modules in the allocentric network). The global graph measures were used as dependent variables in separate mixed\nlinearmodelsimplementedinR,asdescribedabove.Theindependentvariableswereselectedonthebasisofwhethertheirinclusion\nimproved the second-order AIC value in each case. First, we tested for random intercepts across participants. The fixed effects\nCell Reports 34, 108658, January 19, 2021 e6\n\nindependent variables tested for inclusion wereallspatialmeasuresinseparatemodels(Patternaccuracy,Environmentalgeometry,\nEuclidean map, and Object identity), time (environmental exploration and post-exploration), interaction effects (‘‘spatial measure’’\n* time), while the global graph measure density was included as a nuisance variable (see Table S7). Once the best model was\nselected, the relationship between behavioral performance and global graph measure was tested for statistical significance. A significance threshold of p = 0.05 was used,andtheanalyseswereFDR correctedforthetotalnumberofexplanatory variables,across\nall models, (Table S7), with a 5% expected false positive rate."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 73,
+            "text": "Allocentric representation in the human amygdala and ventral visual stream",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 74,
+            "end": 210,
+            "text": "Hallvard Røe Evensmoen, Lars M. Rimol, Anderson M. Winkler, Richard Betzel, Tor Ivar Hansen, Hamed Nili, and Asta Håberg",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 214,
+            "end": 218,
+            "text": "2021",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 220,
+            "end": 232,
+            "text": "Cell Reports",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 244,
+            "end": 286,
+            "text": "https://doi.org/10.1016/j.celrep.2020.108658",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8963,
+            "end": 9045,
+            "text": "Access to data by qualified investigators are subject to scientific and ethical review and must comply with the European",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9079,
+            "end": 9234,
+            "text": "Completion of\na material transfer agreement (MTA) signed by an institutional official will be required in order to access the data.",
+            "labels": [
+              "Remarks"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1510,
+            "end": 1534,
+            "text": "3T Siemens Trio scanner",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1539,
+            "end": 1560,
+            "text": "3T\nSiemens Skyra scanner",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2013,
+            "end": 2038,
+            "text": "number of slices = 40",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1968,
+            "end": 2001,
+            "text": "slice thickness = 1.9 mm (no gap)",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2289,
+            "end": 2322,
+            "text": "slice thickness = 2.0 mm (no gap)",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2128,
+            "end": 2143,
+            "text": "flip angle = 90",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1903,
+            "end": 1927,
+            "text": "FOV = 220 mm x 220 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2058,
+            "end": 2073,
+            "text": "TR = 2110.8 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2407,
+            "end": 2422,
+            "text": "TR = 2253.2 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2075,
+            "end": 2085,
+            "text": "TE = 28 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2090,
+            "end": 2113,
+            "text": "1.9x1.9x1.9mm3 voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2382,
+            "end": 2405,
+            "text": "1.9x1.9x2.0mm3 voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1187,
+            "end": 1202,
+            "text": "Thirty-one men",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7208,
+            "end": 7217,
+            "text": "FMRIPREP",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3092,
+            "end": 3105,
+            "text": "block\ndesign",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3119,
+            "end": 3156,
+            "text": "seven runs, with 5 blocks in each run",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3235,
+            "end": 3267,
+            "text": "environmental exploration (30 s)",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3269,
+            "end": 3313,
+            "text": "post-exploration (with fixation cross; 15 s)",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3322,
+            "end": 3342,
+            "text": "odd-even task (15 s)",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4628,
+            "end": 4722,
+            "text": "The participants were explicitly instructed to focus on getting the odd-even judgments correct",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2854,
+            "end": 2941,
+            "text": "The participants were exposed to a total of 35 virtual environments during BOLD fMRI scanning.",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1187,
+            "end": 1202,
+            "text": "Thirty-one men",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1204,
+            "end": 1234,
+            "text": "(18 - 27 years, mean 21 years)",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1399,
+            "end": 1427,
+            "text": "They were all right handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1307,
+            "end": 1342,
+            "text": "we only recruited male subjects",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1469,
+            "end": 1522,
+            "text": "All participants provided written informed consent prior to participation",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1573,
+            "end": 1673,
+            "text": "The study was approved by the Regional Committee for Medical Research Ethics in central\nNorway.",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3732,
+            "end": 3814,
+            "text": "Pattern accuracy indicates whether the participant accurately reproduced the positional pattern",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4212,
+            "end": 4317,
+            "text": "Environmental geometry indicates how accurately the recalled positional pattern was located relative to the perimeter",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4384,
+            "end": 4499,
+            "text": "Euclidean map, defined as a response obtaining high\nscores on both Pattern accuracy and Environmental geometry",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7332,
+            "end": 7360,
+            "text": "N4BiasFieldCorrection v2.1.0",
+            "labels": [
+              "INU correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "INU correction — Parameters"
+          ],
+          "id": "m0038"
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7443,
+            "end": 7455,
+            "text": "(ANTs v2.1.0",
+            "labels": [
+              "INU correction — Software"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7332,
+            "end": 7333,
+            "text": "1",
+            "labels": [
+              "INU correction — Step Number"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7386,
+            "end": 7415,
+            "text": "antsBrainExtraction.sh v2.1.0",
+            "labels": [
+              "Skull stripping — Software"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7386,
+            "end": 7415,
+            "text": "antsBrainExtraction.sh v2.1.0",
+            "labels": [
+              "Skull stripping — Algorithm"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7416,
+            "end": 7442,
+            "text": "(using the OASIS template)",
+            "labels": [
+              "Skull stripping — Parameters"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7386,
+            "end": 7387,
+            "text": "2",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Surface reconstruction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7529,
+            "end": 7561,
+            "text": "recon-all from FreeSurfer v6.0.0",
+            "labels": [
+              "Surface reconstruction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Surface reconstruction — Parameters"
+          ],
+          "id": "m0045"
+        },
+        {
+          "from_name": "Surface reconstruction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7529,
+            "end": 7561,
+            "text": "recon-all from FreeSurfer v6.0.0",
+            "labels": [
+              "Surface reconstruction — Algorithm"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Surface reconstruction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7529,
+            "end": 7530,
+            "text": "3",
+            "labels": [
+              "Surface reconstruction — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8033,
+            "end": 8049,
+            "text": "antsRegistration",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8033,
+            "end": 8049,
+            "text": "antsRegistration",
+            "labels": [
+              "Spatial normalization — Algorithm"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7860,
+            "end": 7914,
+            "text": "ICBM 152 Nonlinear Asymmetrical template version 2009c",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8033,
+            "end": 8034,
+            "text": "4",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8282,
+            "end": 8296,
+            "text": "fast (FSL v5.0.9)",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Parameters"
+          ],
+          "id": "m0052"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8273,
+            "end": 8277,
+            "text": "fast",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8273,
+            "end": 8274,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8342,
+            "end": 8349,
+            "text": "mcflirt",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Parameters"
+          ],
+          "id": "m0055"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8342,
+            "end": 8349,
+            "text": "mcflirt",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8342,
+            "end": 8343,
+            "text": "6",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8502,
+            "end": 8532,
+            "text": "bbregister (FreeSurfer v6.0.0)",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8439,
+            "end": 8466,
+            "text": "boundary-based registration",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8509,
+            "end": 8529,
+            "text": "9 de-\ngrees of freedom",
+            "labels": [
+              "Coregistration — Parameters"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8502,
+            "end": 8503,
+            "text": "7",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8681,
+            "end": 8700,
+            "text": "antsApplyTransforms",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8681,
+            "end": 8700,
+            "text": "antsApplyTransforms",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8706,
+            "end": 8727,
+            "text": "Lanczos interpolation",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8681,
+            "end": 8682,
+            "text": "8",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9341,
+            "end": 9356,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9434,
+            "end": 9446,
+            "text": "seven voxels",
+            "labels": [
+              "ROI definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9541,
+            "end": 9553,
+            "text": "2",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9541,
+            "end": 9553,
+            "text": "Kendall’s tA",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9979,
+            "end": 9991,
+            "text": "alpha = 0.05",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10045,
+            "end": 10074,
+            "text": "5% false discovery rate (FDR)",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10247,
+            "end": 10292,
+            "text": "3",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10247,
+            "end": 10292,
+            "text": "multiresolution consensus clustering analysis",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11280,
+            "end": 11309,
+            "text": "iterated GenLouvain algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11462,
+            "end": 11501,
+            "text": "divisive consensus clustering algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11133,
+            "end": 11146,
+            "text": "10000 samples",
+            "labels": [
+              "Network definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11839,
+            "end": 11849,
+            "text": "alpha<0.05",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10846,
+            "end": 10884,
+            "text": "4",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10873,
+            "end": 10884,
+            "text": "set to zero",
+            "labels": [
+              "Negative correlation — Type"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13968,
+            "end": 13985,
+            "text": "5",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10456,
+            "end": 10482,
+            "text": "Brain Connectivity toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13898,
+            "end": 13904,
+            "text": "MATLAB",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0082"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13968,
+            "end": 13985,
+            "text": "degree centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13987,
+            "end": 14009,
+            "text": "betweenness centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14011,
+            "end": 14033,
+            "text": "eigenvector centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14035,
+            "end": 14063,
+            "text": "participation",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0086"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13786,
+            "end": 13803,
+            "text": "global efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0087"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10673,
+            "end": 10720,
+            "text": "6",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "id": "m0088"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10673,
+            "end": 10720,
+            "text": "average network across all the participants",
+            "labels": [
+              "Result aggregation — Type"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0089"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13569,
+            "end": 13590,
+            "text": "leave-one subject out",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0090"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 15856,
+            "end": 15899,
+            "text": "density",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0091"
+        }
+      ]
+    }
+  ]
+}

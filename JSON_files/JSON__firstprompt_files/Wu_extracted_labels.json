@@ -1,0 +1,734 @@
+{
+  "data": {
+    "text": "Topological Organization of Functional Brain Networks\nin Healthy Children: Differences in Relation to Age, Sex,\nand Intelligence\nKai Wu1,5*, Yasuyuki Taki1,2, Kazunori Sato1, Hiroshi Hashizume2, Yuko Sassa2, Hikaru Takeuchi3,\n\nBenjamin Thyreau2, Yong He6, Alan C. Evans7, Xiaobo Li8, Ryuta Kawashima2,3,4, Hiroshi Fukuda1\n\nAbstract\n\nRecent studies have demonstrated developmental changes of functional brain networks derived from functional\nconnectivity using graph theoretical analysis, which has been rapidly translated to studies of brain network organization.\nHowever, little is known about sex- and IQ-related differences in the topological organization of functional brain networks\nduring development. In this study, resting-state fMRI (rs-fMRI) was used to map the functional brain networks in 51 healthy\nchildren. We then investigated the effects of age, sex, and IQ on economic small-world properties and regional nodal\nproperties of the functional brain networks. At a global level of whole networks, we found significant age-related increases\nin the small-worldness and local efficiency, significant higher values of the global efficiency in boys compared with girls, and\nno significant IQ-related difference. Age-related increases in the regional nodal properties were found predominately in the\nfrontal brain regions, whereas the parietal, temporal, and occipital brain regions showed age-related decreases. Significant\nsex-related differences in the regional nodal properties were found in various brain regions, primarily related to the default\nmode, language, and vision systems. Positive correlations between IQ and the regional nodal properties were found in\nseveral brain regions related to the attention system, whereas negative correlations were found in various brain regions\nprimarily involved in the default mode, emotion, and language systems. Together, our findings of the network topology of\nthe functional brain networks in healthy children and its relationship with age, sex, and IQ bring new insights into the\nunderstanding of brain maturation and cognitive development during childhood and adolescence.\n\nCitation: Wu K, Taki Y, Sato K, Hashizume H, Sassa Y, et al. (2013) Topological Organization of Functional Brain Networks in Healthy Children: Differences in\nRelation to Age, Sex, and Intelligence. PLoS ONE 8(2): e55347. doi:10.1371/journal.pone.0055347\n\nReceived August 14, 2012; Accepted December 22, 2012; Published February 4, 2013\n\nEthics Statement\nWritten informed consent was obtained from each subject and\nhis/her parent after the receipt of a full explanation of the purpose\nand procedures of the study, according to the Declaration of\nHelsinki (1991), prior to MR image scanning. Approval for these\nexperiments was obtained from the ethics committee of Tohoku\nUniversity School of Medicine.\n\nSubjects\nWe collected brain MR images from 291 subjects (146 boys, 145\ngirls; age range, 5.6–18.4 years) who were recruited from various\nkindergartens, elementary schools, junior high schools, and high\nschools in Miyagi Prefecture in Japan [20,21,22,23,24]. Briefly, all\nsubjects were healthy children without any history of neurological\nor psychiatric disorders. We announced that only right-handed\nchildren can participate in this study in an advertisement used in\nthe subject recruitment and also confirmed that all subjects were\nright-handed using the self-writing questionnaire ‘‘Edinburgh\nHandedness Inventory’’ [25].\n\nIn this study, we acquired the rs-fMRI and IQ data from a\nsubset of all subjects, including 60 healthy Japanese children (24\nboys, 36 girls; 5.7–18.4 years). Trained examiners collected IQs\nfrom subjects over the age of 16 years by administering the\nJapanese version of the Wechsler Adult Intelligence Scale (WAIS),\n3rd edition [26]. For subjects younger than 16 years of age, the\nJapanese version of the Wechsler Intelligence Scale for Children\n(WISC), 3rd edition [27] was used. Full-scale IQs from the score of\nthe WAIS/WISC for each subject were calculated.\n\nImage acquisition and preprocessing\nAll images were collected using a 3-T Philips Intera Achieva\n\nscanner. A total of 34 transaxial gradient-echo images (64664\n\nmatrix, TR = 2000 msec, TE = 30 msec, flip angle = 70u,\nFOV = 24 cm, 3.75 mm slice thickness-3.75*3.75*3.75 voxels)\n\ncovering the entire brain were acquired using an echo planar\n\nsequence. For this scan, 160 functional volumes were obtained.\n\nThe subjects were instructed to keep their eyes closed, relax their\n\nminds, and remain motionless as much as possible during the EPI\n\ndata acquisition.\n\nFor each subject, the first ten volumes were discarded to allow\n\nfor T1 equilibration effects and the adaptation of the subjects to\n\nthe circumstances, leaving 150 volumes for further analysis. Image\n\npreprocessing was carried out using the SPM5 package (http://\n\nwww.fil.ion.ucl.ac.uk/spm) and Data Processing Assistant for\n\nResting-State fMRI (DPARSF) [28]. First, all functional images\n\nwere corrected for the acquisition time delay between the slices of\n\neach volume using the sinc interpolation and for the geometrical\n\ndisplacement due to head movement using a six-parameter (rigid\n\nbody) spatial transformation [29]. Nine subjects (6 boys/3 girls)\n\nwere excluded according to the criteria that head motion was less\n\nthan 3 mm of displacement or 3 degrees of rotation in any\n\ndirection. After the correction, the images of 51 subjects (18 boys/\n\n33 girls) were normalized to the stereotaxic space [30] using an\n\noptimum 12-parameter affine transformation and nonlinear\n\ndeformations [31] and then resampled to 3-mm isotropic voxels.\n\nFinally, the resulting data were further temporally band-pass\n\nfiltered (0.01–0.1 Hz) to reduce the effects of low-frequency drift\n\nand high-frequency physiological noises.\n\nConstruction of functional brain networks\nTo construct a functional brain network, we employed an\n\nautomated anatomical labeling (AAL) atlas [32] to parcellate the\n\nwhole brain into 90 regions (45 in each hemisphere, N = 90). The\n\nnames of the 90 regions and their corresponding abbreviations are\n\nlisted in Table S1. The mean time series of each region was then\n\nacquired by averaging the time series of all voxels within that\n\nregion. Several sources of spurious variances arising from the\n\nestimated head-motion profiles, white matter signals, and whole\n\nbrain signals were further removed by multiple linear regression\n\nanalysis [33,34]. The residual of this regression was then used to\n\nsubstitute for the raw mean time series of the corresponding\n\nregions. The functional connectivity between a pair of regions was\n\ndefined as the Pearson’s correlation coefficient in the residual time\n\ncourses. Thus, a functional connectivity matrix (or correlation\n\nmatrix) (rij, N6N) can be obtained for each subject. Each functional\n\nconnectivity matrix can be converted to a binary, undirected\n\nnetwork G using a cost threshold (t, 0,t,1), which is equivalent to\n\nthe ratio between the number of edges and all possible edges [35].\n\nIn this study, we first applied a range of cost threshold\n\n(0.05#t#0.5, step = 0.01) to investigate the network properties.\n\nSuch a thresholding approach can normalize all networks to have\n\nthe same number of edges or wiring cost and thus provide an\n\navenue to detect age-related changes in the topological organiza-\n\ntion [36,37]. Finally, we adopted the following complementary\n\napproaches to select the small-world regime as a range of cost\n\nthreshold (0.2#t#0.35): (1) the average of the number of\n\nconnections over all nodes is larger than the log of the number\n\nof nodes (N = 90) ensuring that the small-world properties are\n\nestimable [38] and (2) the resulting brain networks are sparse but\n\nfully connected and have distinguishable properties in comparison\n\nwith the degree-matched random and regular networks, respec-\n\ntively [39,40,41].\n\nCopyright: © 2013 Wu et al. This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted\nuse, distribution, and reproduction in any medium, provided the original author and source are credited."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 128,
+            "text": "Topological Organization of Functional Brain Networks\nin Healthy Children: Differences in Relation to Age, Sex,\nand Intelligence",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 129,
+            "end": 225,
+            "text": "Kai Wu1,5*, Yasuyuki Taki1,2, Kazunori Sato1, Hiroshi Hashizume2, Yuko Sassa2, Hikaru Takeuchi3,",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2196,
+            "end": 2202,
+            "text": "(2013)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2356,
+            "end": 2388,
+            "text": "doi:10.1371/journal.pone.0055347",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 708,
+            "end": 821,
+            "text": "In this study, resting-state fMRI (rs-fMRI) was used to map the functional brain networks in 51 healthy\nchildren.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7911,
+            "end": 7930,
+            "text": "open-access article",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4095,
+            "end": 4121,
+            "text": "3-T Philips Intera Achieva",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4143,
+            "end": 4177,
+            "text": "34 transaxial gradient-echo images",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4194,
+            "end": 4208,
+            "text": "TR = 2000 msec",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4210,
+            "end": 4222,
+            "text": "TE = 30 msec",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4224,
+            "end": 4240,
+            "text": "flip angle = 70u",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4242,
+            "end": 4253,
+            "text": "FOV = 24 cm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4255,
+            "end": 4300,
+            "text": "3.75 mm slice thickness-3.75*3.75*3.75 voxels",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4461,
+            "end": 4483,
+            "text": "keep their eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5598,
+            "end": 5619,
+            "text": "3-mm isotropic voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5401,
+            "end": 5422,
+            "text": "images of 51 subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 723,
+            "end": 751,
+            "text": "resting-state fMRI (rs-fMRI)",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5401,
+            "end": 5422,
+            "text": "images of 51 subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3603,
+            "end": 3617,
+            "text": "5.7–18.4 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3224,
+            "end": 3236,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3584,
+            "end": 3601,
+            "text": "24\nboys, 36 girls",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3122,
+            "end": 3200,
+            "text": "healthy children without any history of neurological\nor psychiatric disorders.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5206,
+            "end": 5236,
+            "text": "Nine subjects (6 boys/3 girls)",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2778,
+            "end": 2834,
+            "text": "ethics committee of Tohoku\nUniversity School of Medicine",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4600,
+            "end": 4636,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4908,
+            "end": 4935,
+            "text": "Resting-State fMRI (DPARSF)",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4600,
+            "end": 4636,
+            "text": "the first ten volumes were discarded",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4995,
+            "end": 5036,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4823,
+            "end": 4835,
+            "text": "SPM5 package",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5063,
+            "end": 5081,
+            "text": "sinc interpolation",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5149,
+            "end": 5199,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4823,
+            "end": 4835,
+            "text": "SPM5 package",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5149,
+            "end": 5176,
+            "text": "six-parameter (rigid\n\nbody)",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5206,
+            "end": 5236,
+            "text": "4",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5206,
+            "end": 5236,
+            "text": "Nine subjects (6 boys/3 girls)",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Exclusion — Software",
+            "Exclusion — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5449,
+            "end": 5484,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4823,
+            "end": 4835,
+            "text": "SPM5 package",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5508,
+            "end": 5527,
+            "text": "12-parameter affine",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5585,
+            "end": 5619,
+            "text": "resampled to 3-mm isotropic voxels",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5663,
+            "end": 5707,
+            "text": "6",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4908,
+            "end": 4935,
+            "text": "Resting-State fMRI (DPARSF)",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5674,
+            "end": 5683,
+            "text": "band-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5663,
+            "end": 5707,
+            "text": "temporally band-pass\n\nfiltered (0.01–0.1 Hz)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6299,
+            "end": 6367,
+            "text": "7",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6299,
+            "end": 6367,
+            "text": "head-motion profiles, white matter signals, and whole\n\nbrain signals",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Extract regressors — Software",
+            "Extract regressors — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5895,
+            "end": 5936,
+            "text": "8",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5895,
+            "end": 5936,
+            "text": "automated anatomical labeling (AAL) atlas",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5961,
+            "end": 5988,
+            "text": "whole brain into 90 regions",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6114,
+            "end": 6149,
+            "text": "9",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6114,
+            "end": 6149,
+            "text": "The mean time series of each region",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6633,
+            "end": 6666,
+            "text": "10",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6633,
+            "end": 6666,
+            "text": "Pearson’s correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2333,
+            "end": 2341,
+            "text": "PLoS ONE",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4823,
+            "end": 4835,
+            "text": "SPM5 package",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4461,
+            "end": 4496,
+            "text": "keep their eyes closed, relax their",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

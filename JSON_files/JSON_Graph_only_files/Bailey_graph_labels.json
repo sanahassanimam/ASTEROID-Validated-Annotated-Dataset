@@ -1,0 +1,284 @@
+{
+  "data": {
+    "text": "Network definition\nTo build off of previous work, we created networks using 264 nodes originally published by Power and colleagues (2011) [31]. The node set covers the entire brain, including subcortical areas, and has been extensively used in graph theory analyses since its publication (e.g., [32–34]). Suggested RSN assignments for each node, totaling 13 unique networks, are also available and were used to partition the network into different RSNs. fMRI timeseries correlations were calculated between each of the 264 nodes, resulting in a single connectivity array for each subject at each time point. Matrices were then thresholded into binary maps at r = 0.15. (To confirm that this particular threshold did not unduly influence results, we also tested thresholds at r = 0.05, 0.10 and 0.20. No significant effect on the results was found.)\n\nNetwork analysis\nGlobal modularity (Q) quantifies how well the whole-brain network segregates into component RSNs. High modularity indicates that the network has much higher connectivity within RSNs compared to between RSNs; low modularity suggests that nodes do not segregate into RSNs well. For undirected and binary networks, each connection in the array is given a positive value if it links nodes in the same RSN, and it is then weighted based on the degree of each node and the total network. (For a detailed treatment, see [35].) Connection-level values were aggregated to get node-by-node and global measures of modularity for each individual, which were then mean-centered and scaled to unit variance.\n\nA GLM was used to determine the relationship between global modularity and individual performance on the TOWRE (total word efficiency, standard score). If subject data was available at multiple timepoints (n = 30), it was averaged together to produce a single value. Multiple supplementary analyses were also completed to ensure that effects were not driven by cohort or motion confounds: models were also analyzed for grades 3 and 4 separately, and also when including a measure of subject motion (mean global signal change). We also examined whether there were differences in the modularity relationship between TOWRE subtests (sight word efficiency (SWE) and phonemic decoding efficiency (PDE)).\n\nTo test whether there was an RSN-level trend in the modularity-to-reading relationships, node modularity values were also investigated. For the set of nodes comprising each RSN, a one-sample t test was performed to see whether the RSN average was significantly greater than the global node average.\n\nMapping dyslexia abnormalities onto hub areas\nTwo decades of neuroimaging research have allowed a relative consensus to form as to which brain regions are commonly dysfunctional in dyslexia. To determine whether there was any pattern related to network architecture in these areas, we gathered all activations from three meta-analyses comparing fMRI responses for individuals with dyslexia to typical readers [7–9]. The meta-analyses encompassed a total of 68 studies comparing dyslexic and typically developing individuals. Sample populations included children and adults under different experimental conditions. All brain areas that showed atypical activation in dyslexia (either greater or less activity) were included. When an activation spanned a large area, all reported local maxima were included.\n\nTo get measures of hubness across the brain, we used data from a connectomics study by Power and colleagues [36]. That study reports the participation coefficient for each of the 264 nodes previously described. The participation coefficient reflects the diversity of a node’s connectivity to different RSNs, where a higher value indicates that the node is correlated with many different RSNs. Activations from the dyslexia meta-analyses were then mapped to the geometrically closest node from this dataset, resulting in a small set of dyslexia-related nodes and a larger, unaffected set. The nodes and descriptions, along with their suggested system and atlas label, are available as an Additional file 1.\n\nThe distribution of participation coefficients across the 264 nodes was non-normal, with a large group of areas having low participation coefficients (i.e., affiliated with few RSNs) and a smaller hub-like group. Therefore, a Wilcoxon rank-sum test was performed on the participation coefficients for the two groups, which tests for the equivalence of two distributions in a non-parametric fashion.\n\nAcross the three meta-analyses, 32 of the 264 nodes showed abnormal functioning in dyslexia. Figure 3 shows the node-by-node distribution of participation coefficients for the entire set. The median participation coefficient for unaffected nodes was 1.47; for dyslexia-related nodes it was 3.28. A Wilcoxon rank-sum test between the dyslexia and unaffected nodes showed that dyslexia affects brain areas with higher participation coefficients than would otherwise be expected (U = 4946.0, p <0.001)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 50,
+            "end": 143,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 50,
+            "end": 143,
+            "text": "we created networks using 264 nodes originally published by Power and colleagues (2011) [31].",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 50,
+            "end": 143,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 50,
+            "end": 143,
+            "text": "we created networks using 264 nodes originally published by Power and colleagues (2011) [31].",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 454,
+            "end": 607,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 454,
+            "end": 607,
+            "text": "fMRI timeseries correlations were calculated between each of the 264 nodes, resulting in a single connectivity array for each subject at each time point.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1143,
+            "end": 1348,
+            "text": "4",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1143,
+            "end": 1348,
+            "text": "For undirected and binary networks, each connection in the array is given a positive value if it links nodes in the same RSN, and it is then weighted based on the degree of each node and the total network.",
+            "labels": [
+              "Graph characteristics — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 608,
+            "end": 799,
+            "text": "5",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 608,
+            "end": 799,
+            "text": "Correlation thresholding",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 608,
+            "end": 799,
+            "text": "Matrices were then thresholded into binary maps at r = 0.15. (To confirm that this particular threshold did not unduly influence results, we also tested thresholds at r = 0.05, 0.10 and 0.20.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 867,
+            "end": 964,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 867,
+            "end": 964,
+            "text": "Global modularity (Q) quantifies how well the whole-brain network segregates into component RSNs.",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3579,
+            "end": 3760,
+            "text": "The participation coefficient reflects the diversity of a node’s connectivity to different RSNs, where a higher value indicates that the node is correlated with many different RSNs.",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1562,
+            "end": 1713,
+            "text": "7",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1562,
+            "end": 1713,
+            "text": "A GLM was used to determine the relationship between global modularity and individual performance on the TOWRE (total word efficiency, standard score).",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2262,
+            "end": 2397,
+            "text": "To test whether there was an RSN-level trend in the modularity-to-reading relationships, node modularity values were also investigated.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4288,
+            "end": 4473,
+            "text": "Therefore, a Wilcoxon rank-sum test was performed on the participation coefficients for the two groups, which tests for the equivalence of two distributions in a non-parametric fashion.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4475,
+            "end": 4567,
+            "text": "Across the three meta-analyses, 32 of the 264 nodes showed abnormal functioning in dyslexia.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,742 @@
+{
+  "data": {
+    "text": "Interference control at the response level: Functional\nnetworks reveal higher efficiency in the bilingual brain\nPierre Berroir, Ladan Ghazi-Saidi, Tanya Dash, Daniel Adrover-Roig, Habib Benali, Ana Ines Ansaldo\nJournal of Neurolinguistics 43 (2017) 4e16\nhttp://dx.doi.org/10.1016/j.jneuroling.2016.09.007\n© 2016 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).\n\nThe bilingual advantage in interference control tasks has been studied with the Simon task, among others. The mixed evidence from the existing studies has led to contradictions in the literature regarding the bilingual advantage. Moreover, fMRI evidence on the neural basis of interference control mechanisms with the Simon task is limited. Previous work by our team showed that equivalent performance on the Simon task was associated with different activation maps in elderly bilinguals and monolinguals. This study aims to provide a more in-depth perspective on the neural bases of performance on the Simon task in elderly bilinguals and monolinguals, by adopting a network perspective for the functional connectivity analysis.\n\nThe sample of participants was described in a previous study by our research group, in which we examined the neural substrates underlying interference control between monolinguals and bilinguals using a classical independent group comparison. The monolinguals had French as their only language (n = 10, 4 males) and the bilingual participants were late French-English speakers (n = 10; first language, L1: French, 4 males). Monolinguals and bilinguals were equivalent in terms of age (monolinguals = 74.5, SD = 7.1; bilinguals = 74.2, SD = 7.4) and years of education (monolinguals = 16.1, SD = 3.28; bilinguals = 17.2, SD = 3.1). All of them were right-handed, as assessed by the Edinburgh Handedness Inventory.\n\nExclusion criteria for the sample were a history of any neurological condition, traumatic brain injury or cerebrovascular disease; use of drugs; history of intracranial surgery, encephalitis or meningitis; unstable medical or metabolic condition; evidence of psychiatric syndrome; history of alcoholism or drug addiction and/or excessive alcohol consumption; general anesthesia in the last six months; uncorrected hearing and/or vision problems; and use of cholinesterase inhibitors, antidepressants, and/or anxiolytics.\n\nParticipants underwent a familiarization session in the simulator room. They were then tested with the Simon task during an event-related fMRI session. In the Simon task, yellow or blue squares are presented on the left or right side of the screen, and participants are instructed to press one response key (left side) if a yellow square appears and another response key (right side) if a blue square is shown, irrespective of the position of the squares. Congruent trials (N = 30) are those in which the correct response key is on the same side as the stimulus; incongruent trials (N = 30) are those in which the reverse is true; and control trials have the same stimuli presented in the center of the screen. The response keys were placed comfortably, one under each hand, and participants placed their index fingers on the two keys, and were instructed to respond as quickly as possible without making errors. The event-related fMRI design included a total of 90 trials, all of them beginning with a fixation cross as a warning cue shown in the center of the screen for 150 ms, followed by a 500- to 600-ms interval (jittered). The stimulus (40 mm square) then appeared for 400 ms on the left or right side for experimental trials or in the center for control trials. A response was allowed for a maximum of 2000 ms post stimulus onset. After a jittered 1000- to 1400-ms blank interval, the warning cue for the next trial appeared. Consequently, the trial time ranged from 4050 to 4550 ms. The stimuli were projected onto a dark screen in the left or right visual field at 11.68° offset from a central fixation point. This study was approved by the ethics committee of the Reseau de Neuroimagerie au Quebec.\n\nHigh-resolution T1-weighted 3D anatomical images were acquired using a standard head coil and tilted coronal gradient echo sequence (time to repetition, TR = 3 s; echo time, TE = 4 ms; inversion time, TI = 250 ms; flip angle = 12°; field of view, FOV = 256 × 260; matrix size = 230 × 256; slice thickness = 1.1–1.5 mm). T2-weighted functional images were acquired using an echo planar imaging (EPI) pulse sequence, in an axial plane aligned with the AC–PC axis (TE = 44 ms; flip angle = 90°; FOV = 215 mm; matrix = 64 × 64).\n\nMRI data were preprocessed using the statistical parametric mapping software SPM8. The fMRI volumes were corrected for slice timing and head motion then spatially smoothed with an isotropic Gaussian kernel (full-width at half-maximum 8 mm). For each participant, spatial registration was carried out using a rigid transformation of the fMRI data to the anatomical volume. This co-registration transferred the fMRI volumes into the native space of each patient.\n\nA set of regions of interest (ROIs or nodes) was defined using FreeSurfer. Thus, the cortical surface and the main subcortical brain structures were labeled on their T1-weighted anatomical image, providing a segmentation that retains the personal anatomy. Finally, the labeled volumes were re-sliced and resampled into the functional volume resolution in order to extract the EPI signal. Each functional network was set up with 160 selected ROIs, 80 for each hemisphere.\n\nThe time series of all voxels within an ROI were spatially averaged to determine the representative intrinsic BOLD signal of that ROI. A time course corresponding to approximately 10.5 min of acquisitions was obtained for each ROI. To remove spurious sources of variance, linear and quadratic drifts, and motion parameters, averaged ventricular, white matter and global brain signals were regressed out.\n\nPairwise inter-regional Pearson correlations were estimated between the BOLD time signals of each ROI, resulting in an individual correlation matrix with the corr function of the statistical toolbox of MATLAB. The hypothesis that a given correlation coefficient was null was tested to remove nonsignificant edges and emphasize the network topology. This function also returns a matrix of p-values to test the hypothesis of no correlation against the alternative that there is a nonzero correlation between two nodes. If an element of this p-value matrix is small (less than 0.05) then the corresponding element of the correlation matrix is significantly different from zero.\n\nFunctional brain connectivity networks can be modeled as graphs and examined with graph theory. In a given graph, nodes correspond to the previously defined ROIs, and the edges are defined based on the value of the correlation matrix. If the correlation between two ROIs is different from zero, an edge is defined between these two nodes; otherwise, there is no edge between them. Given that a Pearson correlation is a symmetric function, the edges can also be considered as undirected. In summary, the functional brain connectivity network is modeled by an undirected weighted graph of 160 regions, where the weight values are indicated in the correlation matrix.\n\nGraph theory offers a set of metrics that analyzes the fine-scale functional properties of a network. Individual graph theory metrics were computed using MATLAB software, in-house scripts and the Brain Connectivity Toolbox. We compared the properties of density and integration across groups, to see whether the metric calculated on the nodes was comparable across the two groups. Specifically, density is reflected by the ratio between the number of edges within a graph and the theoretical maximum number of edges. Integration represents the amount of information flow and is a measure of the mutual dependence between two variables.\n\nTo determine the specific topology that characterized the functional network of bilingual in contrast to the monolingual participants, functional connectivity was explored with the degree of connectivity (k). The degree of connectivity (k) is defined as the number of edges connecting the node within the graph. Following this, Student's t-tests were performed between both groups for the k value of each node. Moreover, in order to further explore the source of this higher degree of connectivity, statistical analyses were performed specifically on the edges that were linked to the spotted nodes.\n\nA 2 (group: monolinguals, bilinguals) × 3 (trial type: control, congruent, incongruent) ANOVA was performed on both response times (RTs) and accuracy rates (ARs) for the Simon task. Specifically, there was a main effect of trial type for both RT (F(1, 20) = 33.9, p < 0.0001) and AR (F(1, 20) = 15.15, p < 0.0001). Post hoc contrasts revealed both slower RTs and lower ARs for the incongruent condition than for the control and congruent conditions. No main effects of group were observed. Speed–accuracy trade-offs, as measured by the inverse efficiency score (RT/AR), did not reveal statistically significant differences between the two groups for any type of trial. In addition, two different costs were calculated for the Simon task; the first refers to the difference between the incongruent and congruent trials for both RT and AR and is labeled as the Simon effect. The second refers to the difference between the incongruent and control condition for both RT and AR and is labeled as the Simon cost.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 111,
+            "text": "Interference control at the response level: Functional\nnetworks reveal higher efficiency in the bilingual brain",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 112,
+            "end": 126,
+            "text": "Pierre Berroir",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 243,
+            "end": 247,
+            "text": "2017",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 338,
+            "end": 351,
+            "text": "Elsevier Ltd.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 254,
+            "end": 304,
+            "text": "http://dx.doi.org/10.1016/j.jneuroling.2016.09.007",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 973,
+            "end": 1196,
+            "text": "This study aims to provide a more in-depth perspective on the neural bases of performance on the Simon task in elderly bilinguals and monolinguals, by adopting a network perspective for the functional connectivity analysis.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 352,
+            "end": 412,
+            "text": "This is an open access article under the CC BY-NC-ND license",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1493,
+            "end": 1508,
+            "text": "n = 10, 4 males",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1683,
+            "end": 1741,
+            "text": "monolinguals = 74.5, SD = 7.1; bilinguals = 74.2, SD = 7.4",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1829,
+            "end": 1858,
+            "text": "All of them were right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1501,
+            "end": 1508,
+            "text": "4 males",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1622,
+            "end": 1765,
+            "text": "Monolinguals and bilinguals were equivalent in terms of age (monolinguals = 74.5, SD = 7.1; bilinguals = 74.2, SD = 7.4) and years of education",
+            "labels": [
+              "Group matching"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1912,
+            "end": 2042,
+            "text": "Exclusion criteria for the sample were a history of any neurological condition, traumatic brain injury or cerebrovascular disease;",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4055,
+            "end": 4144,
+            "text": "This study was approved by the ethics committee of the Reseau de Neuroimagerie au Quebec.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4360,
+            "end": 4376,
+            "text": "flip angle = 12°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4620,
+            "end": 4636,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4608,
+            "end": 4618,
+            "text": "TE = 44 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4638,
+            "end": 4650,
+            "text": "FOV = 215 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4435,
+            "end": 4463,
+            "text": "slice thickness = 1.1–1.5 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4749,
+            "end": 4753,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1441,
+            "end": 1621,
+            "text": "The monolinguals had French as their only language (n = 10, 4 males) and the bilingual participants were late French-English speakers (n = 10; first language, L1: French, 4 males).",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2506,
+            "end": 2585,
+            "text": "They were then tested with the Simon task during an event-related fMRI session.",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3347,
+            "end": 3406,
+            "text": "The event-related fMRI design included a total of 90 trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2890,
+            "end": 3144,
+            "text": "Congruent trials (N = 30) are those in which the correct response key is on the same side as the stimulus; incongruent trials (N = 30) are those in which the reverse is true; and control trials have the same stimuli presented in the center of the screen.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3869,
+            "end": 3926,
+            "text": "Consequently, the trial time ranged from 4050 to 4550 ms.",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3515,
+            "end": 3564,
+            "text": "followed by a 500- to 600-ms interval (jittered).",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3774,
+            "end": 3868,
+            "text": "After a jittered 1000- to 1400-ms blank interval, the warning cue for the next trial appeared.",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2889,
+            "text": "participants are instructed to press one response key (left side) if a yellow square appears and another response key (right side) if a blue square is shown, irrespective of the position of the squares.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2586,
+            "end": 2681,
+            "text": "In the Simon task, yellow or blue squares are presented on the left or right side of the screen",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2890,
+            "end": 3144,
+            "text": "Congruent trials (N = 30) are those in which the correct response key is on the same side as the stimulus; incongruent trials (N = 30) are those in which the reverse is true; and control trials have the same stimuli presented in the center of the screen.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8591,
+            "end": 8772,
+            "text": "A 2 (group: monolinguals, bilinguals) × 3 (trial type: control, congruent, incongruent) ANOVA was performed on both response times (RTs) and accuracy rates (ARs) for the Simon task.",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8906,
+            "end": 9040,
+            "text": "Post hoc contrasts revealed both slower RTs and lower ARs for the incongruent condition than for the control and congruent conditions.",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8787,
+            "end": 8905,
+            "text": "there was a main effect of trial type for both RT (F(1, 20) = 33.9, p < 0.0001) and AR (F(1, 20) = 15.15, p < 0.0001).",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4749,
+            "end": 4753,
+            "text": "SPM8",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Step Number",
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4777,
+            "end": 4803,
+            "text": "corrected for slice timing",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4749,
+            "end": 4753,
+            "text": "SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Step Number",
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4808,
+            "end": 4819,
+            "text": "head motion",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4749,
+            "end": 4753,
+            "text": "SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4879,
+            "end": 4910,
+            "text": "full-width at half-maximum 8 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Step Number",
+            "Spatial smooth — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4749,
+            "end": 4753,
+            "text": "SPM8",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4935,
+            "end": 5042,
+            "text": "spatial registration was carried out using a rigid transformation of the fMRI data to the anatomical volume",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Step Number",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5197,
+            "end": 5207,
+            "text": "FreeSurfer",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5134,
+            "end": 5208,
+            "text": "A set of regions of interest (ROIs or nodes) was defined using FreeSurfer.",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Step Number",
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5522,
+            "end": 5604,
+            "text": "Each functional network was set up with 160 selected ROIs, 80 for each hemisphere.",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "ROI definition — Step Number",
+            "ROI definition — Software",
+            "ROI definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5606,
+            "end": 5740,
+            "text": "The time series of all voxels within an ROI were spatially averaged to determine the representative intrinsic BOLD signal of that ROI.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Step Number",
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5878,
+            "end": 6009,
+            "text": "linear and quadratic drifts, and motion parameters, averaged ventricular, white matter and global brain signals were regressed out.",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Step Number",
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6213,
+            "end": 6219,
+            "text": "MATLAB",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6011,
+            "end": 6112,
+            "text": "Pairwise inter-regional Pearson correlations were estimated between the BOLD time signals of each ROI",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Step Number",
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7186,
+            "end": 7285,
+            "text": "the functional brain connectivity network is modeled by an undirected weighted graph of 160 regions",
+            "labels": [
+              "Graph characteristics — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph characteristics — Step Number",
+            "Graph characteristics — Software",
+            "Graph characteristics — Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7549,
+            "end": 7575,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7353,
+            "end": 7454,
+            "text": "Graph theory offers a set of metrics that analyzes the fine-scale functional properties of a network.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Step Number",
+            "Graph measures — Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8302,
+            "end": 8400,
+            "text": "Following this, Student's t-tests were performed between both groups for the k value of each node.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Result aggregation — Step Number",
+            "Result aggregation — Software",
+            "Result aggregation — Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

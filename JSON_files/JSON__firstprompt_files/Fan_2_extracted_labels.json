@@ -1,0 +1,962 @@
+{
+  "data": {
+    "text": "Development of the default-mode network during childhood and adolescence: A longitudinal resting-state fMRI study\nNeuroImage 226 (2021) 117581\nhttps://doi.org/10.1016/j.neuroimage.2020.117581\n\nWe used a longitudinal rsfMRI dataset comprising 360 typically developing children aged 6.1–12.9 years (F/M = 163/197) from the Children School Functions and Brain Development project (CBD, Beijing Cohort). Some of these children underwent repeated MRI scans with an interval of approximately one year, leading to 643 MRI scans in total. All children were recruited from primary schools in Beijing and were cognitively normal, assessed by a well-validated Chinese standardized cognitive ability test (Dong and Lin, 2011). Exclusion criteria included significant physical illness or head injury and a history of neurological/psychiatric disorders. The children were prohibited from taking any drugs or caffeine on the day of the behavioral tests and MRI scans. After data quality control, 152 rsfMRI scans were excluded due to T1 artifacts (N = 40), field map errors (N = 6), excessive head motion (N = 94), and “bad” time points (N = 12) (for details, see data preprocessing). Finally, rsfMRI data of 305 children (6.2–12.4 years of age at baseline, F/M = 143/162, 491 scans in total) remained. To compare with adults, we additionally used an rsfMRI dataset comprising 62 healthy young adults (F/M = 37/25, 22.4 ± 2.4 years of age, range: 18.1–28.8 years), which was also collected using the same procedure. One adult was excluded due to field map error, and 61 adults (F/M = 37/24, 18.1–28.8 years of age) ultimately remained. All the children’s parents/guardians and the adults provided written informed consent approved by the Ethics Committee of Beijing Normal University.\n\nMultimodal MRI data were collected in a Siemens Prisma 3T MRI scanner with a 64-channel head coil at Peking University, Beijing. During the scanning, foam pads were used to reduce the head motion of participants. The rsfMRI data were obtained with an echo-planar imaging sequence with the following parameters: repetition time (TR) = 2000 ms, echo time (TE) = 30 ms, flip angle (FA) = 90°, field of view (FOV) = 224 × 224 mm², matrix size = 64 × 64, axial slices = 33, thickness/gap = 3.5/0.7 mm, and volumes = 240 (8 min). During rsfMRI scanning, participants were instructed to relax and fixate on a bright cross-hair centered in the scanner screen. Prior to the rsfMRI scanning, the field map was acquired using a 2-dimensional dual gradient-echo sequence: TR = 400 ms, TE1 = 4.92 ms, TE2 = 7.38 ms, FA = 60°, FOV = 224 × 224 mm², matrix size = 64 × 64, axial slices = 33, and thickness/gap = 3.5/0.7 mm. T1-weighted structural images were acquired using a sagittal 3D-MPRAGE sequence: TR = 2530 ms, TE = 2.98 ms, inversion time = 1100 ms, FA = 7°, FOV = 256 × 224 mm², matrix size = 256 × 224, slice thickness = 1 mm, and scan time = 5 min and 58 s.\n\nFor each child, functional data preprocessing was carried out using SPM12 (https://www.fil.ion.ucl.ac.uk/spm) and DPABI 3.0. We first performed the removal of the first 10 volumes, slice timing correction, field map-based distortion correction and head motion correction. Ninety-four scans were excluded due to excessive head motion, with the maximal displacement above 3 mm, the maximal rotation above 3° or a mean framewise displacement (FD) across time greater than 0.5 mm. Twelve scans with more than 50 “bad” time points were further discarded, where the “bad” time points were defined as those with FD above 0.5 mm. Then, the individual functional images were coregistered with the T1 image and spatially normalized to a custom pediatric template. Specifically, the spatial normalization procedure was performed with four steps: i) the individual T1 images were segmented into gray matter, white matter, and cerebrospinal fluid tissue maps using the Chinese Pediatric Atlases (CHN-PD) (6–12 years); ii) the resulting spatially normalized tissue maps in CHN-PD space were separately averaged across all the scans to generate the custom tissue templates; iii) the individual T1 images were segmented again with the custom tissue templates as a reference; and iv) the individual functional images were spatially normalized to the custom space by applying transformation parameters estimated during the second T1 segmentation and were resampled to 3-mm isotropic voxels. The spatially normalized images were smoothed with a Gaussian kernel with a full-width half maximum value of 4 mm. Next, we performed linear detrend and nuisance signal regression, during which 24-parameter head motion parameters, “bad” time points with FD above 0.5 mm, white matter, cerebrospinal fluid, and global brain signals were included as covariates. Twelve scans were further excluded due to an excessive proportion of “bad” time points (i.e., more than 50 “bad” time points). Finally, temporal bandpass filtering (0.01–0.1 Hz) was performed.\n\nData and code availability statement: In this study, the authors used a longitudinal resting-state functional MRI data from the Children School Functions and Brain Development project (CBD, Beijing Cohort). Some study data and codes are available at GitHub (https://github.com/fanfengmei/CBD-BNU-DMN)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 113,
+            "text": "Development of the default-mode network during childhood and adolescence: A longitudinal resting-state fMRI study",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 130,
+            "end": 134,
+            "text": "2021",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 114,
+            "end": 124,
+            "text": "NeuroImage",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 143,
+            "end": 191,
+            "text": "https://doi.org/10.1016/j.neuroimage.2020.117581",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5160,
+            "end": 5209,
+            "text": "Some study data and codes are available at GitHub",
+            "labels": [
+              "Data",
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1811,
+            "end": 1840,
+            "text": "Siemens Prisma 3T MRI scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2221,
+            "end": 2238,
+            "text": "axial slices = 33",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2240,
+            "end": 2266,
+            "text": "thickness/gap = 3.5/0.7 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2240,
+            "end": 2266,
+            "text": "thickness/gap = 3.5/0.7 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2138,
+            "end": 2159,
+            "text": "flip angle (FA) = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2161,
+            "end": 2196,
+            "text": "field of view (FOV) = 224 × 224 mm²",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2082,
+            "end": 2112,
+            "text": "repetition time (TR) = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2114,
+            "end": 2136,
+            "text": "echo time (TE) = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2272,
+            "end": 2293,
+            "text": "volumes = 240 (8 min)",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2337,
+            "end": 2390,
+            "text": "instructed to relax and fixate on a bright cross-hair",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4363,
+            "end": 4397,
+            "text": "resampled to 3-mm isotropic voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5038,
+            "end": 5066,
+            "text": "resting-state functional MRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1179,
+            "end": 1206,
+            "text": "rsfMRI data of 305 children",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2994,
+            "end": 2999,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2337,
+            "end": 2390,
+            "text": "instructed to relax and fixate on a bright cross-hair",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1179,
+            "end": 1206,
+            "text": "rsfMRI data of 305 children",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1208,
+            "end": 1241,
+            "text": "6.2–12.4 years of age at baseline",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1243,
+            "end": 1256,
+            "text": "F/M = 143/162",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 600,
+            "end": 692,
+            "text": "cognitively normal, assessed by a well-validated Chinese standardized cognitive ability test",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 981,
+            "end": 1130,
+            "text": "152 rsfMRI scans were excluded due to T1 artifacts (N = 40), field map errors (N = 6), excessive head motion (N = 94), and “bad” time points (N = 12)",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1682,
+            "end": 1768,
+            "text": "written informed consent approved by the Ethics Committee of Beijing Normal University",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3074,
+            "end": 3105,
+            "text": "removal of the first 10 volumes",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2994,
+            "end": 2999,
+            "text": "SPM12",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3089,
+            "end": 3105,
+            "text": "first 10 volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3107,
+            "end": 3130,
+            "text": "slice timing correction",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2994,
+            "end": 2999,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3132,
+            "end": 3169,
+            "text": "field map-based distortion correction",
+            "labels": [
+              "Field map correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2994,
+            "end": 2999,
+            "text": "SPM12",
+            "labels": [
+              "Field map correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1042,
+            "end": 1051,
+            "text": "field map",
+            "labels": [
+              "Field map correction — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3174,
+            "end": 3196,
+            "text": "head motion correction",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2994,
+            "end": 2999,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3198,
+            "end": 3258,
+            "text": "Ninety-four scans were excluded due to excessive head motion",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3269,
+            "end": 3401,
+            "text": "maximal displacement above 3 mm, the maximal rotation above 3° or a mean framewise displacement (FD) across time greater than 0.5 mm",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3592,
+            "end": 3622,
+            "text": "coregistered with the T1 image",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2994,
+            "end": 2999,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3789,
+            "end": 3871,
+            "text": "were segmented into gray matter, white matter, and cerebrospinal fluid tissue maps",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2994,
+            "end": 2999,
+            "text": "SPM12",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3882,
+            "end": 3929,
+            "text": "Chinese Pediatric Atlases (CHN-PD) (6–12 years)",
+            "labels": [
+              "Segmentation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4226,
+            "end": 4271,
+            "text": "were spatially normalized to the custom space",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2994,
+            "end": 2999,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4363,
+            "end": 4397,
+            "text": "resampled to 3-mm isotropic voxels",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4436,
+            "end": 4467,
+            "text": "smoothed with a Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2994,
+            "end": 2999,
+            "text": "SPM12",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4475,
+            "end": 4512,
+            "text": "full-width half maximum value of 4 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4523,
+            "end": 4547,
+            "text": "performed linear detrend",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3040,
+            "end": 3049,
+            "text": "DPABI 3.0",
+            "labels": [
+              "Temporal detrending — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4533,
+            "end": 4547,
+            "text": "linear detrend",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4533,
+            "end": 4547,
+            "text": "linear detrend",
+            "labels": [
+              "Temporal detrending — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4593,
+            "end": 4628,
+            "text": "24-parameter head motion parameters",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3040,
+            "end": 3049,
+            "text": "DPABI 3.0",
+            "labels": [
+              "motion regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4593,
+            "end": 4628,
+            "text": "24-parameter head motion parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3531,
+            "end": 3546,
+            "text": "FD above 0.5 mm",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3040,
+            "end": 3049,
+            "text": "DPABI 3.0",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3531,
+            "end": 3546,
+            "text": "FD above 0.5 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4552,
+            "end": 4578,
+            "text": "nuisance signal regression",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3040,
+            "end": 3049,
+            "text": "DPABI 3.0",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4552,
+            "end": 4578,
+            "text": "nuisance signal regression",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4670,
+            "end": 4703,
+            "text": "white matter, cerebrospinal fluid",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4709,
+            "end": 4729,
+            "text": "global brain signals",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3040,
+            "end": 3049,
+            "text": "DPABI 3.0",
+            "labels": [
+              "Global signal — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4709,
+            "end": 4729,
+            "text": "global brain signals",
+            "labels": [
+              "Global signal — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4895,
+            "end": 4936,
+            "text": "temporal bandpass filtering (0.01–0.1 Hz)",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3040,
+            "end": 3049,
+            "text": "DPABI 3.0",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4904,
+            "end": 4912,
+            "text": "bandpass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4924,
+            "end": 4935,
+            "text": "0.01–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1121 @@
+{
+  "data": {
+    "text": "Citation: Quante L, Kluger DS, Bürkner PC, Ekman M, Schubotz RI (2018) Graph measures in task-based fMRI: Functional integration during read-out of visual and auditory information. PLoS ONE 13(11): e0207119. https://doi.org/10.1371/journal.pone.0207119\n\nData Availability Statement: The data underlying the results presented in the study are available from the Open Science Framework and are accessible under the following URL: https://osf.io/m9hc3/.\n\nFunding: The authors received no specific funding for this work.\n\nThis study investigated how attending to auditory and visual information systematically changes graph theoretical measures of integration and functional connectivity between three network modules: auditory, visual, and a joint task core. Functional MRI BOLD activity was recorded while healthy volunteers attended to colour and/or pitch information presented within an audiovisual stimulus sequence.\n\nTwenty-eight right-handed volunteers (18–29 years, mean 23.7 ± 2.83 SD years old, 7 male) with normal or corrected-to-normal vision participated in the experiment after giving written informed consent. None of them reported a history of medical, neurological or psychiatric disorders or substance abuse. Participants were compensated with course credit or payment. Two additional participants were excluded because of drop out and heavy leg movements during the fMRI session. The study protocol was conducted in accordance with ethical standards of the Declaration of Helsinki and approved by the local ethics committee of the University of Münster.\n\nParticipants exploited auditory and visual information from a 12-second stimulus sequence to subsequently predict the location of a target in a visual search display. Every trial started with a fixation cross (200 ms) followed by a cue (1300 ms). The deterministic cue indicated which source of information was predictive of the target location and therefore allowed participants to focus on auditory information (A) and/or visual information (V). Every participant was presented 48 VA trials, 24 VX trials, 24 AX trials, and 48 XX trials in pseudo-randomised order, with overall balanced transition probabilities.\n\nParticipants were presented sequences of 11 audio-visual stimuli which consisted of a visual pattern and a piano-like chord played simultaneously. Each video started with a standard stimulus, consisting of a balanced mixture of coloured dots. Over the course of the next 10 stimuli presented in each trial, dots changed their colour incrementally until every dot had the same colour (either red or blue). Trials were made up of ten successive variations of a five-note standard chord; all notes were gradually shifted upwards or downwards over the course of an auditory sequence until the final chord exclusively comprised notes from either the highest or the lowest octave.\n\nThe visual search display consisted of 80 black letters “T” on a grey background. For each trial, one letter “T” was replaced by the target (L or rotated L).\n\nWhole-brain images were collected on a 3T Siemens Magnetom Prisma MR tomograph using a 20-channel head coil. Functional images were acquired using a gradient T2*-weighted single-shot gradient-echo planar sequence sensitive to BOLD contrast (64 × 64 data acquisition matrix, 192 mm field of view, 90˚ flip angle, repetition time = 2000 ms, echo time = 30 ms). Each volume consisted of 33 adjacent axial slices with a slice thickness of 3 mm and a gap of 1 mm, resulting in a voxel size of 3 × 3 × 4 mm3. Structural data were acquired for each participant using a standard Siemens 3-D T1-weighted MPRAGE sequence with isotropic voxels (1 × 1 × 1 mm3).\n\nBrain image preprocessing and basic statistical analyses were conducted using SPM12. Functional images were realigned based on three rotation and three translation parameters, slice time corrected, and co-registered to the structural scan. Structural scans were segmented into grey matter, white matter and cerebrospinal fluid. Structural and functional scans were normalised to the Montreal Neuroimaging Institute (MNI) template. Functional images were high-pass filtered (128 s period cutoff) and spatially smoothed with an 8 mm FWHM Gaussian kernel. For connectivity analyses, we additionally performed linear detrending and despiking, and regressed out the six realignment parameters, their temporal derivatives, and the first five PCA components for both white matter and ventricle voxels from the unsmoothed preprocessed functional images using the CONN toolbox. For confound removal, the toolbox uses the aCompCor strategy.\n\nEvent-related BOLD responses were estimated using a general linear model approach. The model comprised a total of 15 regressors plus intercept. Regressors of interest represented the four main conditions (VA, VX, AX, and XX), each modeled with an event duration of 12 seconds and convolved with the canonical hemodynamic response function. As regressors of nuisance, we included right and left button presses, cue presentation, visual search and area restriction of the search, as well as the six realignment parameters. Four contrasts were generated for each participant: VX>AX, VA>XX, VX>XX, and AX>XX. General task activations were assessed by the conjunction VA>XX ∩ VX>XX ∩ AX>XX.\n\nNodes represented contrast peak voxels, and edges were defined as correlations between confound-corrected BOLD time series. Sixteen peak voxels were chosen from the conjunction contrast, and six peak voxels each from contrasts VX>AX and AX>VX, resulting in a total of 28 nodes. Every node was created by surrounding the corresponding peak voxel with a 6-mm-radius sphere and used to average, for every participant, BOLD series of voxels within a sphere (nvoxels = 33). Averaged BOLD series were used to calculate Pearson correlations between all pairs of nodes. Correlation coefficients were Fisher’s Z transformed. Negative correlations were set to zero for graph measure calculation. MATLAB and the Brain Connectivity Toolbox were used to compute connection strength and weighted graph measures.\n\nTo measure integration and core-periphery interaction, we analyzed connection strengths within and between modules and nodal graph measures by fitting generalised linear multilevel models. The R package brms, an interface to the programming language Stan, was used to estimate the models in a Bayesian framework.\n\nPerformance during training and the fMRI session was assessed through error rates and reaction times on correctly answered trials. The average error rate of the fourth part of the training, which corresponded to condition VA, was 3.27% (± 3.42 SD) and the average reaction time was 1659.80 ms (± 527.91 SD). The average error rate of the fMRI session was 1.61% (± 1.52 SD; range 0–4.86%) and did not differ significantly between conditions. The average reaction time was 2507.48 ms (± 613.93 SD) and differed significantly between conditions."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10,
+            "end": 63,
+            "text": "Quante L, Kluger DS, Bürkner PC, Ekman M, Schubotz RI",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 71,
+            "end": 179,
+            "text": "Graph measures in task-based fMRI: Functional integration during read-out of visual and auditory information",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 64,
+            "end": 70,
+            "text": "(2018)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 181,
+            "end": 189,
+            "text": "PLoS ONE",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 208,
+            "end": 252,
+            "text": "https://doi.org/10.1371/journal.pone.0207119",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 518,
+            "end": 755,
+            "text": "This study investigated how attending to auditory and visual information systematically changes graph theoretical measures of integration and functional connectivity between three network modules: auditory, visual, and a joint task core.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 283,
+            "end": 450,
+            "text": "The data underlying the results presented in the study are available from the Open Science Framework and are accessible under the following URL: https://osf.io/m9hc3/.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 461,
+            "end": 516,
+            "text": "The authors received no specific funding for this work.",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3060,
+            "end": 3099,
+            "text": "3T Siemens Magnetom Prisma MR tomograph",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3405,
+            "end": 3429,
+            "text": "33 adjacent axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3437,
+            "end": 3460,
+            "text": "slice thickness of 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3317,
+            "end": 3331,
+            "text": "90˚ flip angle",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3467,
+            "end": 3478,
+            "text": "gap of 1 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3295,
+            "end": 3315,
+            "text": "192 mm field of view",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3333,
+            "end": 3358,
+            "text": "repetition time = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3360,
+            "end": 3377,
+            "text": "echo time = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3495,
+            "end": 3522,
+            "text": "voxel size of 3 × 3 × 4 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 919,
+            "end": 955,
+            "text": "Twenty-eight right-handed volunteers",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3672,
+            "end": 3756,
+            "text": "Brain image preprocessing and basic statistical analyses were conducted using SPM12.",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1570,
+            "end": 1736,
+            "text": "Participants exploited auditory and visual information from a 12-second stimulus sequence to subsequently predict the location of a target in a visual search display.",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2018,
+            "end": 2184,
+            "text": "Every participant was presented 48 VA trials, 24 VX trials, 24 AX trials, and 48 XX trials in pseudo-randomised order, with overall balanced transition probabilities.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1632,
+            "end": 1659,
+            "text": "12-second stimulus sequence",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1737,
+            "end": 1816,
+            "text": "Every trial started with a fixation cross (200 ms) followed by a cue (1300 ms).",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1570,
+            "end": 1736,
+            "text": "Participants exploited auditory and visual information from a 12-second stimulus sequence to subsequently predict the location of a target in a visual search display.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2186,
+            "end": 2332,
+            "text": "Participants were presented sequences of 11 audio-visual stimuli which consisted of a visual pattern and a piano-like chord played simultaneously.",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2214,
+            "end": 2250,
+            "text": "sequences of 11 audio-visual stimuli",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5125,
+            "end": 5208,
+            "text": "Four contrasts were generated for each participant: VX>AX, VA>XX, VX>XX, and AX>XX.",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 919,
+            "end": 1008,
+            "text": "Twenty-eight right-handed volunteers (18–29 years, mean 23.7 ± 2.83 SD years old, 7 male)",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 957,
+            "end": 999,
+            "text": "18–29 years, mean 23.7 ± 2.83 SD years old",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 932,
+            "end": 944,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1001,
+            "end": 1007,
+            "text": "7 male",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1009,
+            "end": 1050,
+            "text": "with normal or corrected-to-normal vision",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1284,
+            "end": 1394,
+            "text": "Two additional participants were excluded because of drop out and heavy leg movements during the fMRI session.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1500,
+            "end": 1568,
+            "text": "approved by the local ethics committee of the University of Münster.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6535,
+            "end": 6711,
+            "text": "The average error rate of the fourth part of the training, which corresponded to condition VA, was 3.27% (± 3.42 SD) and the average reaction time was 1659.80 ms (± 527.91 SD).",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6712,
+            "end": 6946,
+            "text": "The average error rate of the fMRI session was 1.61% (± 1.52 SD; range 0–4.86%) and did not differ significantly between conditions. The average reaction time was 2507.48 ms (± 613.93 SD) and differed significantly between conditions.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3757,
+            "end": 3846,
+            "text": "Functional images were realigned based on three rotation and three translation parameters",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3750,
+            "end": 3755,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3799,
+            "end": 3846,
+            "text": "three rotation and three translation parameters",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3848,
+            "end": 3868,
+            "text": "slice time corrected",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3750,
+            "end": 3755,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3874,
+            "end": 3910,
+            "text": "co-registered to the structural scan",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3750,
+            "end": 3755,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3912,
+            "end": 3999,
+            "text": "Structural scans were segmented into grey matter, white matter and cerebrospinal fluid.",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3750,
+            "end": 3755,
+            "text": "SPM12",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4000,
+            "end": 4102,
+            "text": "Structural and functional scans were normalised to the Montreal Neuroimaging Institute (MNI) template.",
+            "labels": [
+              "Spatial normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3750,
+            "end": 3755,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4055,
+            "end": 4101,
+            "text": "Montreal Neuroimaging Institute (MNI) template",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4103,
+            "end": 4166,
+            "text": "Functional images were high-pass filtered (128 s period cutoff)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4126,
+            "end": 4144,
+            "text": "high-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4146,
+            "end": 4165,
+            "text": "128 s period cutoff",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4171,
+            "end": 4223,
+            "text": "spatially smoothed with an 8 mm FWHM Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3750,
+            "end": 3755,
+            "text": "SPM12",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4198,
+            "end": 4223,
+            "text": "8 mm FWHM Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4278,
+            "end": 4295,
+            "text": "linear detrending",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4278,
+            "end": 4295,
+            "text": "linear detrending",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4300,
+            "end": 4309,
+            "text": "despiking",
+            "labels": [
+              "Despiking — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4300,
+            "end": 4309,
+            "text": "despiking",
+            "labels": [
+              "Despiking — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4315,
+            "end": 4387,
+            "text": "regressed out the six realignment parameters, their temporal derivatives",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4315,
+            "end": 4387,
+            "text": "regressed out the six realignment parameters, their temporal derivatives",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4584,
+            "end": 4601,
+            "text": "aCompCor strategy",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4584,
+            "end": 4601,
+            "text": "aCompCor strategy",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4393,
+            "end": 4465,
+            "text": "the first five PCA components for both white matter and ventricle voxels",
+            "labels": [
+              "aCompCor — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3757,
+            "end": 3758,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Type"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3848,
+            "end": 3849,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Parameters",
+            "Slice timing correction — Type"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3874,
+            "end": 3875,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Parameters",
+            "Coregistration — Type"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3912,
+            "end": 3913,
+            "text": "4",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Parameters",
+            "Segmentation — Type"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4000,
+            "end": 4001,
+            "text": "5",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization — Type"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4103,
+            "end": 4104,
+            "text": "6",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Algorithm",
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4171,
+            "end": 4172,
+            "text": "7",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Type"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4278,
+            "end": 4279,
+            "text": "8",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Algorithm",
+            "Temporal detrending — Parameters",
+            "Temporal detrending — Software"
+          ]
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4300,
+            "end": 4301,
+            "text": "9",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Despiking — Algorithm",
+            "Despiking — Parameters",
+            "Despiking — Software"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4315,
+            "end": 4317,
+            "text": "10",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Algorithm",
+            "motion regression — Parameters",
+            "motion regression — Software"
+          ]
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4584,
+            "end": 4586,
+            "text": "11",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "aCompCor — Algorithm",
+            "aCompCor — Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5415,
+            "end": 5568,
+            "text": "Sixteen peak voxels were chosen from the conjunction contrast, and six peak voxels each from contrasts VX>AX and AX>VX, resulting in a total of 28 nodes.",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5643,
+            "end": 5661,
+            "text": "6-mm-radius sphere",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5706,
+            "end": 5758,
+            "text": "BOLD series of voxels within a sphere (nvoxels = 33)",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5804,
+            "end": 5852,
+            "text": "Pearson correlations between all pairs of nodes.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5853,
+            "end": 5906,
+            "text": "Correlation coefficients were Fisher’s Z transformed.",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5907,
+            "end": 5976,
+            "text": "Negative correlations were set to zero for graph measure calculation.",
+            "labels": [
+              "Negative correlation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5977,
+            "end": 6088,
+            "text": "MATLAB and the Brain Connectivity Toolbox were used to compute connection strength and weighted graph measures.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6233,
+            "end": 6278,
+            "text": "fitting generalised linear multilevel models.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "data": {
+    "title": "Emotion Regulation and Complex Brain Networks: Association Between Expressive Suppression and Efficiency in the Fronto-Parietal Network and Default-Mode Network",
+    "text": "Network Construction and Graphic\nAnalyses\nGraph analyses were conducted using graph theoretical network\nanalysis (GRETNA; Wang et al., 2015). The present study\nadopted the 10 predefined networks based on the parcellation\nof the brain with 264 cortical and subcortical 10-mm diameter\nspherical regions (for detailed information, see Power et al.,\n2011; Cole et al., 2013). For each of the 10 networks in\neach participant’s dataset, regional time series were calculated\nby averaging voxel time series in each of the N regions in\nthat network, and a N × N functional connectivity matrix\n\nwas constructed by computing the Pearson correlation (with\nFisher transformation) between each pair of regional time\nseries of the N regions. The brain regions represented network\nnodes and the correlations between nodes represented network\nedges. The adjacency matrix was then computed from the\ncorrelation matrix by applying a threshold, which resulted in the binary undirected graph. Note that different thresholds would\ngenerate graphs of different connection density or sparsity,\nand network properties are suggested to be examined over a\nwide range of thresholds since currently there is no ‘‘good’’\nthreshold for graphic analysis (Bullmore and Sporns, 2009;\nLanger et al., 2012; Power et al., 2013). Therefore network\n\nthresholding in the present study used Fisher transformed r\nvalues ranging from 0.15 to 0.85 (Achard et al., 2006; He et al.,\n2007; Langer et al., 2012; Arnold et al., 2014; Santarnecchi\net al., 2014), with the aim of a more comprehensive analysis.\nMoreover, whether a network would have the property of the\nsmall world was evaluated for each threshold. The small-world\ntopology is characterized through the characteristic path length\nL and clustering coefficient C(Watts and Strogatz, 1998). The\ncharacteristic path length is defined as the average of the shortest\npath lengths between any pair of nodes in the network. The\nclustering coefficient is defined as the average of the clustering\ncoefficients over all nodes, where the clustering coefficient of a\nnode is defined as the proportion of possible connections that\nactually exist between the nearest neighbors of a node. Compared\nwith random networks that have the same number of nodes,\nsame mean degree and same degree distribution as the real\nnetwork (e.g., brain network) of interest, if the real network\nhas higher clustering coefficient and similar characteristic path\nlength (i.e., g=Cnet/Cran>1,l=Lnet/Lran\u00181, with Cnet\nand Lnetindicating the clustering coefficient and characteristic\npath length of the real network, respectively, and Cranand\nLranindicating the clustering coefficient and characteristic path\nlength of the random network, respectively), the real network\nwould be considered as a small world (Watts and Strogatz,\n1998). The ratio between the two parameters gand l(g/l)can be defined as a parameter sto measure the small-wordness, with s>1 indicating that a network exhibits smallworld property (Humphries et al., 2006). Moreover, before\ncalculating the small-world-ness, it is recommended to first\nevaluate whether small word property of a network is estimable,\nwhich is indicated when the mean degree (k) of the network\nis larger than the log of the number (n) of the network’s\nnodes (i.e., k>log(n); Watts and Strogatz, 1998). Note that\nsmall-world property tends to be not estimable for higher\nthresholds. This is because as the threshold increases, more\nweak connections will be removed from the network and the\nnetwork will become sparser. As a result, the mean degree will\ndecrease and is more likely to be less than the log of the number\nof the network’s nodes (Watts and Strogatz, 1998; Achard\net al., 2006; He et al., 2007). In the present study investigating\nbrain networks, for each of the whole brain network and the\n10 predefined networks, following the procedure described by\nJäncke and Langer (2011) and Langer et al. (2012), the correlation\nmatrices of all participants were first averaged to obtain an\naverage correlation matrix and the corresponding adjacency\nmatrix was calculated. Then for each threshold, whether small\nword property of a network is estimable was evaluated, and\nthe small-word-ness ( s) was calculated. Note that the following\nanalyses only included the thresholds at which small word\nproperty of a network was estimable (i.e., k>log(n)) and\n\nAfter that, global efficiency was calculated for\neach network at each threshold for each participant, which was\nmathematically expressed as the inverse of the average shortest\npath length in the network (Wang et al., 2010; Beaty et al.,\n2016)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 172,
+            "end": 194,
+            "text": "1",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 172,
+            "end": 194,
+            "text": "10 predefined networks",
+            "labels": [
+              "Network definition — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 208,
+            "end": 300,
+            "text": "2",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 239,
+            "end": 300,
+            "text": "264 cortical and subcortical 10-mm diameter\nspherical regions",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 332,
+            "end": 369,
+            "text": "Power et al.,\n2011; Cole et al., 2013",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 431,
+            "end": 498,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 471,
+            "end": 498,
+            "text": "averaging voxel time series",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 618,
+            "end": 666,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 618,
+            "end": 637,
+            "text": "Pearson correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 644,
+            "end": 665,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 644,
+            "end": 665,
+            "text": "Fisher transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 947,
+            "end": 970,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 947,
+            "end": 970,
+            "text": "binary undirected graph",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1350,
+            "end": 1403,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1391,
+            "end": 1403,
+            "text": "0.15 to 0.85",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 903,
+            "end": 923,
+            "text": "applying a threshold",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3284,
+            "end": 3292,
+            "text": "k>log(n)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4384,
+            "end": 4416,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4384,
+            "end": 4401,
+            "text": "global efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1719,
+            "end": 1745,
+            "text": "characteristic path length",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1752,
+            "end": 1774,
+            "text": "clustering coefficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4516,
+            "end": 4559,
+            "text": "inverse of the average shortest\npath length",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 114,
+            "end": 120,
+            "text": "GRETNA",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

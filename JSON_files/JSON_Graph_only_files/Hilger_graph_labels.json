@@ -1,0 +1,275 @@
+{
+  "data": {
+    "text": "Data was preprocessed using the software FSL (FSL Version 5.0;\nFMRIB Software Library, http://www.fmrib.ox.ac.uk/fsl/; Smith et al.,\n2004) and AFNI (http://afni.nimh.nih.gov/afni) with the preprocessing\nscripts that have been released as part of the 1000 Functional\nConnectomes Project (http://www.nitrc.org/projects/fcon_1000;\nBiswal et al., 2010). Preprocessing comprised the following steps: 1.\nThe first four EPI volumes from each resting-state scan were discarded\nto allow for equilibration of the signal, 2. Slice time correction, 3.\nThree-dimensional motion correction, 4. Time series despiking, 5. Spa-\ntial smoothing by using a 6 mm full-width half-maximum (FWHM)\nGaussian kernel, 6. Four-dimensional mean-based intensity normaliza-\ntion, 7. Bandpass temporal filtering (0.005–0.1 Hz), 8. Removing of lin-\near and quadratic trends, 9. Estimation of a nonlinear transformation\nfrom each individual space to MNI152 space (3.0 × 3.0 × 3.0 mm\nresolution) via each subject's high-resolution anatomical scan, 10. Elim-\nination of nine nuisance signals by regression (signals of white matter\nand cerebrospinal fluid, global mean, and six motion parameters). Re-\ngression of the global mean was applied to eliminate non-neural noise\nin the data and to enhance the specificity of our analyses (Fox, Zhang,\nSnyder, & Raichle, 2009; Weissenbacher et al., 2009). The application\nof global signal regression in preprocessing has been criticized for intro-\nducing spurious anti-correlations into resting state data (Murphy, Birn,\nHandwerker, Jones, & Bandettini, 2009). However, as we exclusively\nfocus our analyses on positive correlations, potentially arising spurious\nnegative correlations will not affect the interpretation of our results.\n\nAll analyses were restricted to gray matter regions of the brain by ap-\nplying a gray matter mask on the data. For node definition the functional\ndata was down-sampled to 6.0 × 6.0 × 6.0 mm resolution, which result-\ned in 5411 voxels that cover the entire gray matter of each individual\nand that served as nodes for the graph analyses.\n\nFor network construction, the time series of each node was correlat-\ned with the time series of each other node across 260 time points using\nPearson's product moment correlation. The correlation matrix A with\nthe dimension 5411 × 5411 was calculated for each subject separately\nand edges were assumed to be present between nodes showing high\npositive correlations. In a first step, we excluded all edges of physically\nshort distance (i.e., all ties terminating within 20 mm of a source\nnode; see Power et al., 2011). Following previously published sugges-\ntions for the comparison of graph structures between persons in the\nstudy of individual differences (e.g., van den Heuvel et al., 2009), we\nmodeled the brain's functional network by constructing thresholded bi-\nnary graphs. As most graph metrics are strongly influenced by (a) the\nnumber of nodes and (b) the density of the graph (Van Wijk, Stam, &\nDaffertshofer, 2010), it has been suggested that these parameters\nshould be held constant for the comparison of graphs, when the primary\ninterest lies in comparing measures of network structure between per-\nsons (Bollobás and Thomason, 1985; Bullmore & Bassett, 2011; van\nWijk et al., 2010). In our analyses, the number of nodes is fixed as all in-\ndividual networks were based on the same parcellation scheme (i.e.,\n5411 voxel nodes).\n\nAlso following suggestions for individual differences analyses, we re-\nalized a fixed density of the graphs by applying proportional thresholds\nand binarizing the graphs. In a binary graph, a fixed density is guaran-\nteed by an identical number of edges for all individuals. In contrast,\nweighted graphs will usually vary in density (mean weight of edges),\neven if the number of edges is held constant across individuals. In the\ncontext of individual differences studies, the presence of individual dif-\nferences in the mean weight of edges has been criticized for biasing the\ncomparison of topological properties (van Wijk et al., 2010; Ginestet et\nal., 2011, 2014). Specifically, the use of weighted graphs has been criti-\ncized as inappropriate for the calculation of graph metrics based on the\nidentification of shortest paths, as the weighted versions of these mea-\nsures are strongly influenced by (and sometimes even equivalent to)\nthe mean of all weights in the graphs (Ginestet et al., 2014). This directly\nconcerns the measures used in our study, i.e., nodal efficiency and global\nefficiency, which is why we decided to base the calculation of all graph\nmetrics on proportionally thresholded binary graphs. Nevertheless for\npurpose of comparison, we also calculated as supplemental analyses\nthe graph metrics of interest on the basis of weighted graphs. However,\nit is important to keep in mind that differences in results between bina-\nry and weighted graphs are to be expected as nodal efficiency reflects\ndifferent local network properties for binary as opposed to weighted\ngraphs.\n\nProportional thresholds for graph construction were defined by\nselecting a specific percentage of edges with highest correlations as\nthe basis for binary adjacency matrices. This thresholding procedure\nalso excluded all negative edges from the analysis (for discussion, see\nFox et al., 2009; Weissenbacher et al., 2009; Murphy et al., 2009). Across\nindividuals, the number of excluded negative edges varied between\n6,694,077 and 7,786,425 (M = 7,265,955; SD = 233,317; total number\nof edges = 14,636,755) and was not related to intelligence (r = 0.00,\np = 0.98; Bayes Factor representing evidence for the null hypothesis:\nBF01 = 5.89; see below Section 2.5.4 for more details). We used five dif-\nferent thresholds of 10, 15, 20, 25, and 30% edge density. This resulted in\nfive different binary adjacency matrices per person, representing the\nstrongest 10, 15, 20, 25, and 30% of functional connections between\nnodes, respectively. These adjacency matrices define the graphs that\nmodel the brain's functional network. Graph theoretical metrics de-\nscribing topological characteristics of the graphs were calculated sepa-\nrately for the five graphs and then averaged for each participant,\nproviding an integrated measure of graph characterizing properties.\nWe decided to model the individual brain networks over this range of\nthresholds to enhance the reliability of our findings, as graph theoretical\nmeasures have been shown to be sensitive to different connectivity\nthresholds (Power et al., 2011; Power, Fair, Schlaggar, & Petersen,\n2010, for discussion see van Wijk et al., 2010), and our aim was to detect\neffects that are robust across a wider range of thresholds.\n\nTo study efficiency-related topological characteristics of the func-\ntional brain network graphs and to investigate how these properties re-\nlate to individual differences in intelligence, we computed the graph\nmetrics of nodal efficiency and global efficiency. To identify hub regions\nin the functional network, we determined each node's degree centrality\nas a measure of its relative importance for network communication.\n\nNodal efficiency is defined as inversely propor-\ntional to the average shortest distance between node i and all other\nnodes j of the graph:\nEi ¼ 1\nN−1\nX\nj\n1\ndij\nwhere N is the number of nodes and dij is the shortest path length be-\ntween node i and node j in graph A (Latora & Marchiori, 2003, 2001).\nThus, for every node in the network, the algorithm identifies the length\nof the shortest paths between a given node i and all other nodes j in the\nnetwork. Then it calculates the average of the lengths of all shortest\npaths identified for node i.\n\nGlobal efficiency was computed as the mean of\nall nodes' nodal efficiency values. This is defined as inversely\nproportional to the average shortest distance between all nodes of the\ngraph:\nEglob ¼ 1\nN\nX\ni∈Ν\nEi\nwhere N is the number of nodes and Ei is the nodal efficiency of node i\n(Latora & Marchiori, 2001). This global metric (i.e., one value for the\nwhole brain network) reflects the efficiency of a parallel working sys-\ntem, where all the nodes in the network exchange information simulta-\nneously (Latora & Marchiori, 2003, 2001) and is therefore a measure of\nintegration and global communication efficiency superior to the often-\nused averaged characteristic path length, which captures only serial as-\npects of information transfer (Achard & Bullmore, 2007).\n\nDegree centrality. The degree of each node in the network was\ncomputed as the number of edges connected to this node:\nki ¼ X\njεN\naij\nwhere N is the set of all nodes in the network and aij is the connection\nstatus (i.e., 1 for connected vs. 0 for disconnected) between node i and\nnode j (Rubinov & Sporns, 2010). A node's degree centrality therefore\nspecifies the number of its direct neighbors. From a neurobiological per-\nspective, nodes with a high degree are directly interacting with many\nother nodes and are consequently topologically central and important\nfor the network (Rubinov & Sporns, 2010). While there exist multiple\nmeasures of centrality, degree centrality represents the most local and\ndirectly quantifiable metric for graph analyses (Zuo et al., 2012).\n\nAll graphs were modeled and metrics calculated using the open\nsource python package network-tools (Ekman & Linssen, 2015), which\nhas been developed for the analysis of structural and functional brain\nnetwork graphs. For the illustration of nodal efficiency and degree\ncentrality in Figs. 1 and 3, the brain maps of these metrics were\nsmoothed with a 3 mm FWHM Gaussian kernel."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1855,
+            "end": 1870,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1895,
+            "end": 1940,
+            "text": "down-sampled to 6.0 × 6.0 × 6.0 mm resolution",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2107,
+            "end": 2145,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2077,
+            "end": 2101,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2218,
+            "end": 2254,
+            "text": "Pearson's product moment correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2828,
+            "end": 2843,
+            "text": "4",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2828,
+            "end": 2843,
+            "text": "thresholded bi-",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3499,
+            "end": 3526,
+            "text": "5",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3539,
+            "end": 3562,
+            "text": "proportional thresholds",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5732,
+            "end": 5768,
+            "text": "10, 15, 20, 25, and 30% edge density",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5222,
+            "end": 5267,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5222,
+            "end": 5267,
+            "text": "excluded all negative edges from the analysis",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6891,
+            "end": 6946,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6891,
+            "end": 6946,
+            "text": "graph\nmetrics of nodal efficiency and global efficiency",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9285,
+            "end": 9298,
+            "text": "network-tools",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6166,
+            "end": 6200,
+            "text": "8",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6166,
+            "end": 6200,
+            "text": "then averaged for each participant",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6150,
+            "end": 6179,
+            "text": "five graphs and then averaged",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

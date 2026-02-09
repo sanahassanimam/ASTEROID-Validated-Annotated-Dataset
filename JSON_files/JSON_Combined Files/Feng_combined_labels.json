@@ -1,0 +1,1284 @@
+{
+  "data": {
+    "text": "Dynamic brain architectures in local brain activity and functional network efficiency associate with efficient reading in bilinguals\nGangyi Feng, Hsuan-Chih Chen, Zude Zhu, Yong He, Suiping Wang\nNeuroImage 119 (2015) 103–118\nhttp://dx.doi.org/10.1016/j.neuroimage.2015.05.100\n© 2015 Elsevier Inc. All rights reserved.\n\nParticipants\nForty healthy Chinese–English bilinguals participated in the fMRI experiment (10 males; age = 23.2 ± 1.5 [mean ± SD] years). They were all right-handed, with normal or corrected-to-normal vision, and without neurological impairment, as confirmed by questionnaires and short interviews. All participants were native speakers of Chinese who started to learn English as their second language after 10 years of age (mean age of acquisition, AOA = 12.2 years old). With the exception of two participants, all of them had previously passed the CET-4 (level 4 of College English Test).\n\nBefore the experiment, all participants signed written consent forms approved by the institutional review boards of South China Normal University and Southwest University.\n\nStimuli and procedure\nA blocked design was employed in the fMRI experiment. We presented one story in each run, which lasted a total of 12.2 min, including a 30-s resting period before and after each story presentation. Each run was composed of 13 reading blocks (35.5 s on average for each block) and 12 resting blocks that were inserted between every two reading blocks. The duration of each resting block is dependent on the duration of the preceding reading block (mean duration of resting block: 17.5 s, range from 14 to 22 s). Using the rapid serial visual presentation procedure (RSVP), narrative stimuli were presented word-by-word or constituent-by-constituent. Each word/constituent lasted 300 ms. Different inter-stimulus intervals were used between different constituents: the duration was 100 ms for constituents in the middle of a sentence, 500 ms for constituents ending with a comma, and 1500 ms for constituents ending with a period.\n\nMRI data acquisition\nImaging data were acquired using a Siemens Trio 3T MRI system with a standard head coil. During the functional runs, the whole-brain blood oxygen level-dependent (BOLD) signals were recorded by a T2*-weighted gradient echo-planar imaging (EPI) pulse sequence using an interleaved scanning method (TR = 2000 ms, TE = 30 ms, flip angle = 90°, 32 slices, slice thickness = 4 mm, voxel size 3 × 3 × 4 mm3). In the structural imaging run, T1-weighted high resolution structural images were acquired using an MP-RAGE sequence (192 slices, TE = 3.03 ms; slice thickness = 1 mm; voxel size 1 × 1 × 1 mm3).\n\nUnivariate activation analysis\nAll imaging data were preprocessed using SPM8. The initial five images of the functional data were discarded to improve the equilibrium state of magnetization. Next, brain scans were corrected for head movement by spatially realigning them with the first brain volume, and mean functional images were computed. To normalize functional images, the mean functional image was coregistered with the structural image and segmented for each participant. The parameters obtained in the segmentation step were used to normalize the functional images onto the Montreal Neurological Institute space. Finally, normalized images were resampled into a spatial resolution of 2 × 2 × 2 mm3 and smoothed with a Gaussian kernel of 6-mm full width at half maximum. Whole-brain statistical analysis was performed using general linear modeling (GLM). Six head movement parameters were included as nuisance regressors.\n\nData preprocessing for graph-theory analysis\nIn order to exclude effects due to stimulus presentation, we only analyzed the residuals ε of the general linear model. Then we applied temporal band-pass filtering (0.008 < f < 0.1 Hz) to the residuals to reduce low-frequency drift and high-frequency physiological noises. Finally, nuisance signals, including averaged whole-brain signals, cerebral white matter, and cerebrospinal fluid, as well as six direction head movement parameters, were linearly regressed out of the functional time series.\n\nBrain network construction and threshold selection\nNodes were defined by two gray-matter templates based on Automated Anatomical Labeling (AAL): AAL-90 and AAL-1024. Representative mean time series for each node were extracted by averaging all voxel time series within that region. Functional connectivity between all possible pairs of nodes was measured by calculating Pearson's correlation coefficients, yielding a 90 × 90 or 1024 × 1024 correlation matrix per participant. Thresholding used a sparsity (connection cost) range of 0.06–0.5 to generate unweighted binary adjacency matrices.\n\nNetwork metrics and community detection\nGlobal efficiency (Eglob), local efficiency (Eloc), characteristic path length (Lp), clustering coefficient (Cp), small-worldness (σ), and maximal cost-efficiency (CEmax) were computed across thresholds and summarized as area under the curve (AUC). Modularity (Q) and network modules were identified using the Louvain algorithm. Group-level correlation matrices were averaged after Fisher's r-to-z transformation.\n\nReading comprehension performance\nThe accuracy in the narrative reading comprehension task were 90% (SD = 7) for L1 (Chinese) and 79% (SD = 18) for L2 (English).\n\nBrain network construction and threshold selection\nUsing graph theory, the human brain network is abstracted and modeled as a graph, which is composed of a set of nodes linked by edges. In the graph-theory analysis of fMRI data, nodes represent a set of regions or voxels, and edges represent the functional connectivity between those nodes (Bullmore and Bassett, 2011; Bullmore and Sporns, 2009). In this study, to define the nodes of the brain network, we divided the preprocessed images into a set of regions using two gray-matter templates. Given that different parcellation templates and nodal scales may result in considerable variation of network metrics (Fornito et al., 2010; Wang et al., 2009), we used two templates to cross-validate our results. Both templates are defined by the atlas of Automated Anatomical Labeling (Tzourio-Mazoyer et al., 2002), but in different nodal resolutions. One template, AAL-90, is composed of 90 regions (45 regions in each hemisphere, see Table 2 for details), and the other, AAL-1024, is composed of 1024 regions (512 regions in each hemisphere). Subsequently, representative mean time series for each node were extracted from the preprocessed data for each run by averaging all voxel time series within that region. Next, to define network edges, functional connectivity between all possible pairs of nodes was measured by calculating Pearson's correlation coefficients. As a result, a 90 × 90 correlation matrix (AAL-90 template) and a 1024 × 1024 correlation matrix (AAL-1024 template) were obtained for each participant. Finally, a specified threshold was applied to each correlation matrix to convert it into an unweighted binary adjacency matrix: if the absolute value of the correlation between any pair of nodes was greater than the given threshold, then an edge (represented by a 1 in the adjacency matrix) was constructed between that pair, otherwise no edge was constructed (represented by a 0). We used the sparsity threshold approach, a wide range of network densities, to threshold all of the correlation matrices and generate the binary matrices. Connection sparsity (i.e., connection cost) is defined as the ratio of the number of existing edges divided by the number of all possible edges in the graph. For example, if we set cost = 0.1, the strongest 10% of connections would be preserved. This unbiased approach enabled us to directly compare network metrics between conditions while minimizing possible confounds that would result from the use of a single fixed threshold (Bullmore and Bassett, 2011). As previous findings have shown that networks with high connection cost (N0.5) tend to be less meaningful biologically, and low connection cost tend to result in a fragmented network organization (Achard and Bullmore, 2007; Bullmore and Bassett, 2011; Bullmore and Sporns, 2012), we selected costs within the range of 0.06–0.5, increasing with a regular increment of 0.02, to threshold each correlation matrix. All network metrics were calculated separately for each binary network in this pre-defined cost range.\n\nNetwork metrics\nThree network metrics, global efficiency (Eglob), local efficiency (Eloc), and maximal cost-efficiency (CEmax), were the main focus of the graph-theory analysis. The conventional “small-world” organization measures (Watts and Strogatz, 1998), including characteristic path length (Lp), normalized Lp (λ), clustering coefficient (Cp), normalized Cp (γ) and small-worldness index Sigma (σ = γ/λ) were also calculated as references for determining if the network fell within the “small-world” regime (σ > 1) (Bullmore and Bassett, 2011).\nGlobal efficiency is a network topological metric that can measure the efficiency of parallel information transfer within a given graph G. Eglob(i) represents the global efficiency of an individual node i and is defined as follows:\nEglob(i) = 1/(N−1) * Σ_{i≠j∈G} 1/Lij\nwhere N denotes the total number of nodes within G, and Lij denotes the shortest path length between nodes i and j. Thus, Eglob(i) is the average of the inverse shortest path lengths from node i to all other nodes. This measure is superior to the conventional characteristic path length Lp (averaged Lij across all network nodes, Watts and Strogatz, 1998) because it allows the computation of a finite value for graphs with disconnected nodes, as well as accounting for how efficiently the network transfers information in parallel between network nodes (Latora and Marchiori, 2001). Larger Eglob indicates higher efficiency of signal communication, i.e., fewer processing steps between global brain network nodes.\nThe local efficiency measures the communication efficiency of a subgraph with locally connected nodes. Eloc(i) is the global efficiency calculated for Gi, the sub-graph composed of the directly connected neighbors of node i, and is defined as follows:\nEloc(i) = 1/(N_Gi * (N_Gi − 1)) * Σ_{j,k∈Gi} 1/Ljk\nwhere N_Gi is the number of nodes within the Gi, excluding node i itself (Achard and Bullmore, 2007; Latora and Marchiori, 2001). This metric is similar to the conventional clustering coefficient that measures how clustered the nodes of the network are, but Eloc also shows how efficient local communication is between the neighbors of node i (Achard and Bullmore, 2007).\nWe also investigated the economical properties of the generated networks by calculating maximal cost-efficiency (CEmax), where cost-efficiency (CE) is defined as follows:\nCE = Eglob − cost\nIn the pre-defined range of connection costs, there will typically be a maximal value of CE, which is denoted as CEmax. CEmax is a metric independent of any specific threshold choice and has been observed to be a useful measure of network economy (Achard and Bullmore, 2007; Sheppard et al., 2012). All the above-mentioned nodal metrics were calculated at a whole-brain level by averaging them across all network nodes.\nFinally, we used modular partition analysis to identify the RN and DMN based on the connectivity pattern, and further investigated whether L1 and L2 reading exhibit similar or different functional network community topologies (Bullmore and Sporns, 2009; He et al., 2009). A module is defined theoretically as a set of densely interconnected nodes with sparse connections to nodes in other modules (Fortunato, 2010). Previous studies have estimated this modular organization by calculating a quantitative parameter known as modularity, Q (Newman, 2006). Here, we used the heuristic modularity maximizing algorithm known as the Louvain algorithm, proposed by Blondel et al. (2008), to calculate the optimized Q and partition network nodes into sets of modules.\n\nStatistical comparison and result aggregation\nFor statistical analyses of those network metrics, we chose a range of connection costs according to two criteria: (1) at least 95% of the nodes were connected; (2) all constructed networks needed to be within the “small-world” regime (σ > 1) for each participant. These criteria ensured the resulting brain graphs had maximally connected nodes while simultaneously exhibiting “small-world” properties. As a result, we selected the cost range from 0.1 to 0.5 in both template schemas. In addition, we calculated the areas under the curve (AUC) of all network metrics over the selected cost range. This procedure provides a summarized measure for each network metric independent of any specific threshold choice (Achard and Bullmore, 2007), and has been demonstrated to be sensitive to differences between networks (Wang et al., 2009; Zhang et al., 2011).\nTo determine whether narrative reading in L1 exhibits different network properties from that of L2, both at whole-brain and nodal levels, we first compared the AUC of Eglob, Eloc, Lp, Cp, and modularity Q of L1 and L2, as well as CEmax at the whole-brain level by using nonparametric permutation tests (Nichols and Holmes, 2002).\n\nGroup-level partition and regions of interest analysis\nIn this study, we observed reading-related network (RN) and default-mode network (DMN) were activated and deactivated during narrative reading, respectively (see Fig. 2). To identify the RN and DMN modules based on the functional connectivity patterns for further regions of interest (ROI) analysis, we applied a group-level network partition analysis. A group-level correlation matrix was obtained by averaging Fisher's r-to-z transformed correlation matrices across languages and participants (He et al., 2009). Then, we constructed a group-level binary graph using a connection cost threshold of 0.247 for AAL-90 and of 0.153 for AAL-1024. We chose these two connection costs because participants' functional brain networks reached their maximal cost-efficiency at these two values. That is, the function networks were close to the optimal cost-efficiency organization at these costs. Afterwards, the graphs were partitioned into modules by applying the Louvain algorithm, as mentioned above (Blondel et al., 2008).\nTo further investigate the differences in network topology and local brain activity between L1 and L2 reading, we performed ROI analyses on RN and DMN ROIs that were identified by the previously-mentioned modular partition analysis. RN ROI was constructed by combining all the regions within RN module into one large ROI. Similarly, the DMN ROI was constructed by combining all regions within DMN module. Then, we extracted and averaged the Eglob, Eloc, and activation amplitude (Reading condition minus Rest condition) for each ROI, and further performed nonparametric permutation tests to compare these measures between L1 and L2 at group level.\n\nCorrelation between network efficiency and local BOLD signal changes\nWe further employed cross-region and cross-subject correlation analyses to directly investigate the relationship between local BOLD signal changes and network topological efficiency. Firstly, the mean effect size of reading-related activity (Reading–Rest) was extracted for each voxel. We then averaged the values of all voxels within each parcellated region on the AAL-90 template. Secondly, the values of Eglob, Eloc and local BOLD signal changes were transformed into z-scores. Finally, both cross-region and cross-subject partial correlation analyses were used to calculate the correlation value between local BOLD signal changes and Eglob (BOLD-Eglob correlation), and between local BOLD signal changes and Eloc (BOLD-Eloc correlation)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 132,
+            "text": "Dynamic brain architectures in local brain activity and functional network efficiency associate with efficient reading in bilinguals",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 133,
+            "end": 194,
+            "text": "Gangyi Feng, Hsuan-Chih Chen, Zude Zhu, Yong He, Suiping Wang",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 211,
+            "end": 215,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 283,
+            "end": 296,
+            "text": "Elsevier Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 225,
+            "end": 275,
+            "text": "http://dx.doi.org/10.1016/j.neuroimage.2015.05.100",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 225,
+            "end": 275,
+            "text": "http://dx.doi.org/10.1016/j.neuroimage.2015.05.100",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2093,
+            "end": 2119,
+            "text": "Siemens Trio 3T MRI system",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2355,
+            "end": 2367,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2369,
+            "end": 2379,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2381,
+            "end": 2397,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2399,
+            "end": 2408,
+            "text": "32 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2410,
+            "end": 2432,
+            "text": "slice thickness = 4 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2434,
+            "end": 2458,
+            "text": "voxel size 3 × 3 × 4 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2326,
+            "end": 2353,
+            "text": "interleaved scanning method",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1221,
+            "end": 1229,
+            "text": "12.2 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2729,
+            "end": 2733,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 332,
+            "end": 372,
+            "text": "Forty healthy Chinese–English bilinguals",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1107,
+            "end": 1160,
+            "text": "A blocked design was employed in the fMRI experiment.",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1330,
+            "end": 1347,
+            "text": "13 reading blocks",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1387,
+            "end": 1404,
+            "text": "12 resting blocks",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1349,
+            "end": 1381,
+            "text": "35.5 s on average for each block",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1554,
+            "end": 1592,
+            "text": "mean duration of resting block: 17.5 s",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1887,
+            "end": 2034,
+            "text": "100 ms for constituents in the middle of a sentence, 500 ms for constituents ending with a comma, and 1500 ms for constituents ending with a period",
+            "labels": [
+              "ISI distribution"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5233,
+            "end": 5264,
+            "text": "narrative reading comprehension",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1628,
+            "end": 1677,
+            "text": "rapid serial visual presentation procedure (RSVP)",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1712,
+            "end": 1754,
+            "text": "word-by-word or constituent-by-constituent",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3488,
+            "end": 3517,
+            "text": "general linear modeling (GLM)",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 332,
+            "end": 372,
+            "text": "Forty healthy Chinese–English bilinguals",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 409,
+            "end": 418,
+            "text": "(10 males",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 420,
+            "end": 436,
+            "text": "age = 23.2 ± 1.5",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 467,
+            "end": 483,
+            "text": "all right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 490,
+            "end": 526,
+            "text": "normal or corrected-to-normal vision",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 532,
+            "end": 563,
+            "text": "without neurological impairment",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 640,
+            "end": 666,
+            "text": "native speakers of Chinese",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 981,
+            "end": 1082,
+            "text": "approved by the institutional review boards of South China Normal University and Southwest University",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5275,
+            "end": 5339,
+            "text": "90% (SD = 7) for L1 (Chinese) and 79% (SD = 18) for L2 (English)",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2735,
+            "end": 2796,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2747,
+            "end": 2758,
+            "text": "five images",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2871,
+            "end": 2922,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2902,
+            "end": 2922,
+            "text": "spatially realigning",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3061,
+            "end": 3099,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3061,
+            "end": 3073,
+            "text": "coregistered",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3104,
+            "end": 3134,
+            "text": "4",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3104,
+            "end": 3113,
+            "text": "segmented",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3198,
+            "end": 3276,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3239,
+            "end": 3270,
+            "text": "Montreal Neurological Institute",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3367,
+            "end": 3433,
+            "text": "6",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3402,
+            "end": 3433,
+            "text": "6-mm full width at half maximum",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3768,
+            "end": 3817,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3798,
+            "end": 3816,
+            "text": "0.008 < f < 0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3943,
+            "end": 3971,
+            "text": "8",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3943,
+            "end": 3971,
+            "text": "averaged whole-brain signals",
+            "labels": [
+              "Global signal — Type"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4032,
+            "end": 4099,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3523,
+            "end": 3547,
+            "text": "head movement parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3519,
+            "end": 3584,
+            "text": "10",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3519,
+            "end": 3547,
+            "text": "Six head movement parameters",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5797,
+            "end": 5885,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0057"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6100,
+            "end": 6240,
+            "text": "Both templates are defined by the atlas of Automated Anatomical Labeling (Tzourio-Mazoyer et al., 2002), but in different nodal resolutions.",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6241,
+            "end": 6433,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0059"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6241,
+            "end": 6433,
+            "text": "One template, AAL-90, is composed of 90 regions (45 regions in each hemisphere, see Table 2 for details), and the other, AAL-1024, is composed of 1024 regions (512 regions in each hemisphere).",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6448,
+            "end": 6603,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6448,
+            "end": 6603,
+            "text": "representative mean time series for each node were extracted from the preprocessed data for each run by averaging all voxel time series within that region.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6635,
+            "end": 6758,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0063"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6635,
+            "end": 6758,
+            "text": "functional connectivity between all possible pairs of nodes was measured by calculating Pearson's correlation coefficients.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13643,
+            "end": 13803,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0065"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13643,
+            "end": 13803,
+            "text": "A group-level correlation matrix was obtained by averaging Fisher's r-to-z transformed correlation matrices across languages and participants (He et al., 2009).",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6985,
+            "end": 7038,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0067"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6985,
+            "end": 7038,
+            "text": "convert it into an unweighted binary adjacency matrix",
+            "labels": [
+              "Graph characteristics — Algorithm/Type"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7040,
+            "end": 7293,
+            "text": "8",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0069"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7040,
+            "end": 7293,
+            "text": "if the absolute value of the correlation between any pair of nodes was greater than the given threshold, then an edge (represented by a 1 in the adjacency matrix) was constructed between that pair, otherwise no edge was constructed (represented by a 0).",
+            "labels": [
+              "Negative correlation — Algorithm/Type"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7294,
+            "end": 7448,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0071"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7294,
+            "end": 7448,
+            "text": "We used the sparsity threshold approach, a wide range of network densities, to threshold all of the correlation matrices and generate the binary matrices.",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7449,
+            "end": 7606,
+            "text": "Connection sparsity (i.e., connection cost) is defined as the ratio of the number of existing edges divided by the number of all possible edges in the graph.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7607,
+            "end": 7694,
+            "text": "For example, if we set cost = 0.1, the strongest 10% of connections would be preserved.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8189,
+            "end": 8319,
+            "text": "we selected costs within the range of 0.06–0.5, increasing with a regular increment of 0.02, to threshold each correlation matrix.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8440,
+            "end": 8601,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0076"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8440,
+            "end": 8601,
+            "text": "Three network metrics, global efficiency (Eglob), local efficiency (Eloc), and maximal cost-efficiency (CEmax), were the main focus of the graph-theory analysis.",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8975,
+            "end": 9113,
+            "text": "Global efficiency is a network topological metric that can measure the efficiency of parallel information transfer within a given graph G.",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9959,
+            "end": 10061,
+            "text": "The local efficiency measures the communication efficiency of a subgraph with locally connected nodes.",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10634,
+            "end": 10804,
+            "text": "We also investigated the economical properties of the generated networks by calculating maximal cost-efficiency (CEmax), where cost-efficiency (CE) is defined as follows:",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8602,
+            "end": 8974,
+            "text": "The conventional “small-world” organization measures (Watts and Strogatz, 1998), including characteristic path length (Lp), normalized Lp (λ), clustering coefficient (Cp), normalized Cp (γ) and small-worldness index Sigma (σ = γ/λ) were also calculated as references for determining if the network fell within the “small-world” regime (σ > 1) (Bullmore and Bassett, 2011).",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10805,
+            "end": 10822,
+            "text": "CE = Eglob − cost",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0082"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11243,
+            "end": 11468,
+            "text": "6",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0083"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11243,
+            "end": 11468,
+            "text": "Finally, we used modular partition analysis to identify the RN and DMN based on the connectivity pattern, and further investigated whether L1 and L2 reading exhibit similar or different functional network community topologies",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11796,
+            "end": 12001,
+            "text": "Here, we used the heuristic modularity maximizing algorithm known as the Louvain algorithm, proposed by Blondel et al. (2008), to calculate the optimized Q and partition network nodes into sets of modules.",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12547,
+            "end": 12645,
+            "text": "11",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0086"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12547,
+            "end": 12645,
+            "text": "we calculated the areas under the curve (AUC) of all network metrics over the selected cost range.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0087"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12452,
+            "end": 12533,
+            "text": "As a result, we selected the cost range from 0.1 to 0.5 in both template schemas.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0088"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,752 @@
+{
+  "data": {
+    "text": "The Segregation and Integration of Distinct Brain Networks and Their Relationship to Cognition\n\nJessica R. Cohen and Mark D’Esposito\nThe Journal of Neuroscience, November 30, 2016 • 36(48):12083–12094\nDOI:10.1523/JNEUROSCI.2965-15.2016\n\n\nSignificance Statement\n\nDuring motor execution, segregation of distinct networks increased. Conversely, during working memory, integration across networks increased. These changes in network organization were related to better behavioral performance.\n\nParticipants\nThirty-five healthy young adult participants were recruited (mean age 21.74 years, SD 2.73, 17 females). All participants provided written informed consent according to the procedures of the University of California, Berkeley Committee for the Protection of Human Subjects. Five participants were excluded for falling asleep during a resting scan; therefore, 30 participants were included in the analyses (mean age 22.07 years, SD 2.73, 13 females).\n\nSequence tapping task.\nEach participant performed four runs of ~7.5 min of the task, for a total of 48 right-then-left and 48 interleaved sequences. Each run began with a 10 s fixation followed by 12 right-then-left and 12 interleaved sequences. On each trial, a visual cue (“right-then-left” or “interleaved”) indicated which sequence to execute. Intertrial interval length was randomly jittered so that total trial length was 16, 18, or 20 s.\n\nN-back task.\nThere were 32 n-back blocks divided evenly over 4 runs: 10 0-back, 11 2-back, and 11 3-back ordered pseudorandomly. Each block consisted of 20 trials plus 5 randomly placed null events. Each trial included the stimulus (an uppercase letter) presented for 1 s, followed by a 1 s delay. Each block began with a 6 s instruction period and a 10 s fixation period; each block was followed by a 20 s fixation period. There were 20% targets, 15% lures, and 65% nontargets in the 2-back and 3-back conditions.\n\nfMRI data acquisition\nWhole-brain functional data were acquired using a T2*-weighted EPI sequence (37 descending axial slices, slice thickness 3.5 mm, interslice distance 0.7 mm, TR 2000 ms, TE 24 ms, flip angle 60°, matrix 64 × 64, field of view 224 mm). A total of 300 volumes were collected for each resting state run, 224 for each run of the sequence tapping task, and 345 for each run of the n-back task. A high-resolution T1-weighted structural 3D MP-RAGE was also acquired (slice thickness 1 mm, TR 2300 ms, TE 2.98 ms, flip angle 9°, matrix 256 × 256, field of view 256 mm). PsychoPy software was used to present stimuli and record responses for the sequence tapping task and E-Prime software was used for the n-back task.\n\nfMRI data processing\nFunctional image preprocessing was performed using AFNI. Images were corrected for differences in motion and slice timing acquisition, the brain was extracted from the skull, and images were coregistered into each participant’s high-resolution structural space. The MP-RAGE was segmented using SPM8 to create white matter and ventricle ROIs as nuisance regressors. Functional images were then spatially smoothed with a 6 mm FWHM Gaussian kernel. Finally, the functional time-series were band-pass filtered (0.009–0.08 Hz) and signal from movement, white matter, and ventricles (as well as temporal derivatives) was regressed out simultaneously.\n\nMotion quality control\nAverage frame-wise displacement (FD) across each run was minimal (mean 0.14 mm; max 0.34 mm; average percentage of volumes with > 0.3 mm motion 4.67%). Motion did not differ across tasks (F(2,84) 0.57, p 0.57).\n\nFunctional connectivity and graph analysis\nTime-series were averaged within ROIs from the Harvard–Oxford and Power atlases and correlated to form connectivity matrices. Graphs were constructed with the Brain Connectivity Toolbox; consensus clustering used the Louvain algorithm. Graph-theoretic metrics were computed with an in-house Python toolbox (Brainx) based on NetworkX.\n\nBehavioral performance\nParticipants completed each right-then-left sequence in 2336.5 ms and each interleaved sequence in 2486.8 ms on average. Mean interleaved condition accuracy was 88.8%; mean 3-back lure accuracy was 69.4%."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 96,
+            "end": 112,
+            "text": "Jessica R. Cohen",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 94,
+            "text": "The Segregation and Integration of Distinct Brain Networks and Their Relationship to Cognition",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 175,
+            "end": 179,
+            "text": "2016",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 133,
+            "end": 160,
+            "text": "The Journal of Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 201,
+            "end": 235,
+            "text": "DOI:10.1523/JNEUROSCI.2965-15.2016",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 262,
+            "end": 403,
+            "text": "During motor execution, segregation of distinct networks increased. Conversely, during working memory, integration across networks increased.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2095,
+            "end": 2105,
+            "text": "TR 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2107,
+            "end": 2115,
+            "text": "TE 24 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2117,
+            "end": 2131,
+            "text": "flip angle 60°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2015,
+            "end": 2041,
+            "text": "37 descending axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2043,
+            "end": 2065,
+            "text": "slice thickness 3.5 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2067,
+            "end": 2093,
+            "text": "interslice distance 0.7 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2149,
+            "end": 2169,
+            "text": "field of view 224 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2720,
+            "end": 2724,
+            "text": "AFNI",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2219,
+            "end": 2236,
+            "text": "resting state run",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2183,
+            "end": 2236,
+            "text": "300 volumes were collected for each resting state run",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1633,
+            "end": 1652,
+            "text": "an uppercase letter",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1413,
+            "end": 1440,
+            "text": "There were 32 n-back blocks",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1553,
+            "end": 1562,
+            "text": "20 trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1333,
+            "end": 1350,
+            "text": "randomly jittered",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1382,
+            "end": 1397,
+            "text": "16, 18, or 20 s",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 503,
+            "end": 547,
+            "text": "Thirty-five healthy young adult participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 564,
+            "end": 584,
+            "text": "mean age 21.74 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 595,
+            "end": 605,
+            "text": "17 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 777,
+            "end": 808,
+            "text": "Five participants were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 862,
+            "end": 907,
+            "text": "30 participants were included in the analyses",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 909,
+            "end": 929,
+            "text": "mean age 22.07 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 940,
+            "end": 950,
+            "text": "13 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 634,
+            "end": 775,
+            "text": "written informed consent according to the procedures of the University of California, Berkeley Committee for the Protection of Human Subjects",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4072,
+            "end": 4117,
+            "text": "Mean interleaved condition accuracy was 88.8%",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4119,
+            "end": 4154,
+            "text": "mean 3-back lure accuracy was 69.4%",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2720,
+            "end": 2724,
+            "text": "AFNI",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2778,
+            "end": 2790,
+            "text": "slice timing",
+            "labels": [
+              "Slice timing correction — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2778,
+            "end": 2779,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2720,
+            "end": 2724,
+            "text": "AFNI",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2767,
+            "end": 2773,
+            "text": "motion",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2767,
+            "end": 2768,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2720,
+            "end": 2724,
+            "text": "AFNI",
+            "labels": [
+              "Skull extraction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2804,
+            "end": 2827,
+            "text": "the brain was extracted",
+            "labels": [
+              "Skull extraction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2804,
+            "end": 2805,
+            "text": "3",
+            "labels": [
+              "Skull extraction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2860,
+            "end": 2872,
+            "text": "coregistered",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2860,
+            "end": 2861,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2963,
+            "end": 2967,
+            "text": "SPM8",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2947,
+            "end": 2967,
+            "text": "segmented using SPM8",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2978,
+            "end": 3009,
+            "text": "white matter and ventricle ROIs",
+            "labels": [
+              "Segmentation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2947,
+            "end": 2948,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2720,
+            "end": 2724,
+            "text": "AFNI",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3062,
+            "end": 3080,
+            "text": "spatially smoothed",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3088,
+            "end": 3097,
+            "text": "6 mm FWHM",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3062,
+            "end": 3063,
+            "text": "6",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3156,
+            "end": 3174,
+            "text": "band-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3176,
+            "end": 3189,
+            "text": "0.009–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3156,
+            "end": 3157,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3207,
+            "end": 3215,
+            "text": "movement",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3207,
+            "end": 3208,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3217,
+            "end": 3297,
+            "text": "white matter, and ventricles (as well as temporal derivatives) was regressed out",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3217,
+            "end": 3218,
+            "text": "9",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

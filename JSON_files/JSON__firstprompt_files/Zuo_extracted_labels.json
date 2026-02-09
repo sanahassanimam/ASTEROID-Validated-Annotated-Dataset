@@ -1,0 +1,758 @@
+{
+  "data": {
+    "text": "Both activated and less- activated regions identified by functional MRI reconfigure to support task executions\n\nBrain and Behavior. 2018;8:e00893. https://doi.org/10.1002/brb3.893\n\nNianming Zuo; Zhengyi Yang; Yong Liu; Jin Li; Tianzi Jiang\n\nThe dataset was collected on a 3T MRI Skyra scanner (Siemens, Germany) using a standard 32 channel head coil. The magnetic field produced by the coil was modeled to provide a customized distortion correction. The primary scanning parameters were as follows: repetition time (TR), 720 ms; echo time (TE), 33.1 ms; flip angle, 52°; field of view, 208 × 180 mm; slice thickness, 2.0 mm; and voxel size, 2.0- mm isotropic cube (Van Essen et al., 2013). The HCP data were already preprocessed, well aligned, and registered to the Montreal Neurological Institute (MNI) 2- mm standard space when we received it. The main preprocessing steps taken included (Glasser et al., 2013): (1) gradient nonlinearity distortion; (2) 6 degrees of freedom (DOF) FSL/FLIRT- based motion correction; (3) FSL/top- up- based distortion correction; (4) registration to a T1 space image; and (5) FSL/FNIRT- based registration to MNI 2- mm space. After receiving the above preprocessed data from HCP, we further band- pass- filtered the data at 0.009–0.08 Hz to reduce low- frequency drift and high- frequency noise (Vatansever, Menon, Manktelow, Sahakian, & Stamatakis, 2015). The mean signal of the white matter and cerebrospinal fluid (CSF) and the movement parameters and its derivatives (in the Movement_parameters.txt file in HCP S500 release) were regressed out as confounding factors. Since we used a series of ROIs in this study to sample the gray matter of the entire brain (described below), a smoothing step was not applied here. In addition, global signal regression was not conducted because its use is controversial and there is no consensus about its physiological interpretation (Bassett, Yang, Wymbs, & Grafton, 2015; Mayhew et al., 2016).\n\nSome data were excluded using the following criteria: (1) the data reported on the Known-Issues page of the HCP website, htttps://wiki.humanconnectome.org/display/PublicData/HCP+Data+Release+Updates%3A+Known+Issues+and+Planned+fixes; (2) data that did not have complete time points as indicated by the correct number of frames for each mental state (see Table 1); (3) data that did not have a full EV record to accompany the fMRI data; and (4) data acquired without left–right (LR) or right–left (RL) phase encoding. In the end, 453 subjects (age 29.1 ± 3.5 years, 188 male) were used in the subsequent analyses. The task datasets contained seven conventional tasks, including working memory (WM), gambling, motor, language, social cognition, relational processing, and emotion processing, each of which had been designed to activate specific functional regions (Barch et al., 2013).\n\nTABLE 1 The number of scanning frames and the run duration for each task fMRI data collection in HCP data.\nWorking memory — Frames per run: 405; Run duration: 5:01.\nGambling — Frames per run: 253; Run duration: 3:12.\nMotor — Frames per run: 284; Run duration: 3:34.\nLanguage — Frames per run: 316; Run duration: 3:57.\nSocial cognition — Frames per run: 274; Run duration: 3:27.\nRelational processing — Frames per run: 232; Run duration: 2:56.\nEmotion processing — Frames per run: 176; Run duration: 2:16.\n\nThe detection of the activation regions for the seven tasks was implemented using FSL (version 5.0.9)/FEAT (version 6.00). At the subject level, a within-subjects fixed-effects analysis in FSL/FEAT was used to estimate the average effects across the runs, with a cluster-based threshold Z = 1.96 as the activation threshold and p = .05 as the Monte Carlo-based cluster-level correction. Then, at the group level, a mixed-effects analysis implemented in FSL/FLAME (FMRIB’s local analysis of mixed effects) was used to estimate the average effects, with a cluster-based threshold Z = 2.32 and p = .05.\n\nAll the source code in this study (in MATLAB) and the activation maps are available in https://github.com/nmzuo/Act-L-Act-network. This is an open access article under the terms of the Creative Commons Attribution License.\n\nDATA STATEMENT: Data were provided by the HCP, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657) funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research, and by the McDonnell Center for Systems Neuroscience at Washington University.\n\nWe tested the different contributions from the two regions using a two-way ANOVA with [Subjects * States] × [Classes of Regions]."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 110,
+            "text": "Both activated and less- activated regions identified by functional MRI reconfigure to support task executions",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 181,
+            "end": 193,
+            "text": "Nianming Zuo",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 195,
+            "end": 207,
+            "text": "Zhengyi Yang",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 209,
+            "end": 217,
+            "text": "Yong Liu",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 219,
+            "end": 225,
+            "text": "Jin Li",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 227,
+            "end": 239,
+            "text": "Tianzi Jiang",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 112,
+            "end": 130,
+            "text": "Brain and Behavior",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 132,
+            "end": 136,
+            "text": "2018",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 147,
+            "end": 179,
+            "text": "https://doi.org/10.1002/brb3.893",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4107,
+            "end": 4126,
+            "text": "open access article",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4052,
+            "end": 4094,
+            "text": "https://github.com/nmzuo/Act-L-Act-network",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4205,
+            "end": 4234,
+            "text": "Data were provided by the HCP",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 272,
+            "end": 311,
+            "text": "3T MRI Skyra scanner (Siemens, Germany)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 521,
+            "end": 527,
+            "text": "720 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 545,
+            "end": 552,
+            "text": "33.1 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 566,
+            "end": 569,
+            "text": "52°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 586,
+            "end": 598,
+            "text": "208 × 180 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 617,
+            "end": 623,
+            "text": "2.0 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 641,
+            "end": 663,
+            "text": "2.0- mm isotropic cube",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2502,
+            "end": 2514,
+            "text": "453 subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2650,
+            "end": 2761,
+            "text": "working memory (WM), gambling, motor, language, social cognition, relational processing, and emotion processing",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3446,
+            "end": 3485,
+            "text": "FSL (version 5.0.9)/FEAT (version 6.00)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2965,
+            "end": 3022,
+            "text": "Working memory — Frames per run: 405; Run duration: 5:01.",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3023,
+            "end": 3074,
+            "text": "Gambling — Frames per run: 253; Run duration: 3:12.",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3075,
+            "end": 3123,
+            "text": "Motor — Frames per run: 284; Run duration: 3:34.",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3124,
+            "end": 3175,
+            "text": "Language — Frames per run: 316; Run duration: 3:57.",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3176,
+            "end": 3235,
+            "text": "Social cognition — Frames per run: 274; Run duration: 3:27.",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3236,
+            "end": 3300,
+            "text": "Relational processing — Frames per run: 232; Run duration: 2:56.",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3301,
+            "end": 3362,
+            "text": "Emotion processing — Frames per run: 176; Run duration: 2:16.",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2502,
+            "end": 2514,
+            "text": "453 subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2516,
+            "end": 2536,
+            "text": "age 29.1 ± 3.5 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2538,
+            "end": 2546,
+            "text": "188 male",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1988,
+            "end": 2025,
+            "text": "excluded using the following criteria",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Gradient Distortion Correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 918,
+            "end": 950,
+            "text": "gradient nonlinearity distortion",
+            "labels": [
+              "Gradient Distortion Correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Gradient Distortion Correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 918,
+            "end": 919,
+            "text": "1",
+            "labels": [
+              "Gradient Distortion Correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Gradient Distortion Correction — Software",
+            "Gradient Distortion Correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 983,
+            "end": 1017,
+            "text": "FSL/FLIRT- based motion correction",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 956,
+            "end": 982,
+            "text": "6 degrees of freedom (DOF)",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1000,
+            "end": 1017,
+            "text": "motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 983,
+            "end": 984,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1023,
+            "end": 1063,
+            "text": "FSL/top- up- based distortion correction",
+            "labels": [
+              "Unwarp — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1023,
+            "end": 1035,
+            "text": "FSL/top- up-",
+            "labels": [
+              "Unwarp — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1023,
+            "end": 1024,
+            "text": "3",
+            "labels": [
+              "Unwarp — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Unwarp — Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1069,
+            "end": 1101,
+            "text": "registration to a T1 space image",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1069,
+            "end": 1070,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1111,
+            "end": 1159,
+            "text": "FSL/FNIRT- based registration to MNI 2- mm space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1111,
+            "end": 1120,
+            "text": "FSL/FNIRT",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1144,
+            "end": 1153,
+            "text": "MNI 2- mm",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1111,
+            "end": 1112,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1226,
+            "end": 1246,
+            "text": "band- pass- filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1259,
+            "end": 1272,
+            "text": "0.009–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1226,
+            "end": 1227,
+            "text": "6",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1466,
+            "end": 1505,
+            "text": "movement parameters and its derivatives",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1466,
+            "end": 1467,
+            "text": "7",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Type"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1415,
+            "end": 1457,
+            "text": "white matter and cerebrospinal fluid (CSF)",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1415,
+            "end": 1416,
+            "text": "8",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Type"
+          ]
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4579,
+            "end": 4592,
+            "text": "two-way ANOVA",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

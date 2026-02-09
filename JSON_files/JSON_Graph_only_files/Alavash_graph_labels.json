@@ -1,0 +1,444 @@
+{
+  "data": {
+    "title": "Is functional integration of resting state brain networks an unspecific biomarker for working memory performance?",
+    "text": "Connectivity analysis and network constructionParcellation scheme\nTo subdivide the brain in different subregions the parcellation routine from Fornito et al. (2010) andZalesky et al. (2010) was applied.\nThis approach randomly parcellates the anatomically delineated and labelled T1 volume provided by the AAL toolbox in SPM ( TzourioMazoyer et al., 2002 ) into a number of cortical regions (in our case\n462 regions). In contrast to other approaches, this parcellation has the\nadvantage of generating similar-sized brain parcels. Thus, if time series\nare averaged across voxels within a parcel, mean time series are equallyaffected by noise and are equally reliable. To document that our results\non both global and nodal levels can be reproduced when a different\nparcellation scheme is employed ( Craddock et al., 2012 )w ea d d e df u r -\nther analyses in the Supplementary material (see Inline SupplementaryTables S1 and S3, Inline Supplementary Fig. S1).\nInline Supplementary Tables S1 and S3, Fig. S1 can be found online at\nhttp://dx.doi.org/10.1016/j.neuroimage.2014.12.046 .\n\nIn order to minimize the effects of spurious temporal correlations induced by physiological and movement artefacts the six rigid-body\nmovement parameters from the realignment procedure and two additional mean time series extracted from areas within white-matter and\nventricles were regressed out from the local time series. It has been\npreviously shown that the behavioural correlates of the brain functional\nnetwork topology are best observed in the frequency range below\n0.1 Hz ( Achard et al., 2006 ). Therefore regional time series were bandpass filtered by means of maximum overlap discrete wavelet transform\n(MODWT; Percival and Walden, 2006 ) within four frequency intervals\n(in the range of 0.02 –0.33 Hz, each corresponding to a wavelet scale).\nAs the result of our analysis of functional connectivity revealed the\nstrongest difference in correlations between mean connectivity and\neach the CS and the SWM task in wavelet scale 2 (see scale 2 (0.08 –0.17 Hz). The behavioural relevance of this frequency\nrange was also documented in our previous work. In Giessing et al.\n(2013) we found that experimentally induced changes in performance predominately correlated with changes in functional connectivity in the same frequency components. In order to obtain a\nmeasure of association between each pair of cortical regions, Pearson\ncorrelation between wavelet coef ficients were computed which in\nturn gave an NbyNassociation matrix ( Ndenotes the number of\nnodes) for the resting state data set of each subject. The global\nstrength of functional connectivity was estimated by computing\nthe mean of each association matrix.\norg/10.1016/j.neuroimage.2014.12.046 .\nNetworks were constructed at 16 equally spaced connection densities (cost thresholds), in the range of 5% –50%. The connection density\nreflects the percentage of edges in a graph and is de fined as the number\nof edges in the graph relative to the maximum possible number of edges\n((N×(N−1) / 2) where Nequals the number of nodes). Binary graphs\nat each arbitrary connection density were constructed by thresholdingeach association matrix to create an adjacency matrix. Binary instead\nof weighted graphs were used in order to disentangle differences in\nnetwork densities from differences in topology ( Ginestet et al., 2011 ).\nThe above thresholding was implemented by means of an algorithmwhich is based on the minimum spanning tree of a graph. This algorithm ensures that all regional nodes are connected by at least one\nedge to the rest of the network, even at the sparsest connection density\n(Alexander-Bloch et al., 2010 ). Once the minimum spanning tree was\ndetected, edges were rank thresholded and added in the order of their absolute correlation strength.\n\nNetwork diagnostics\nTo analyse network integration on different organizational levels\nthree key topological properties were estimated for each graph at\neach connection density ( Latora and Marchiori, 2001 ): network efficiency, modularity and clustering. For each topological property we computed a global network metric which characterizes the topological\nproperty at the whole brain scale (global scale) and a regional metric\ncharacterizing the same property but for a certain brain node (nodal\nscale).\nEfficiency\nFor a given network g comprised of N nodes, global efficiency E\nglobal\ncaptures the integration of the entire network and is estimated by theinverse of the harmonic mean of the minimum path lengths (the\nsmallest number of intervening edges) between each pair of nodes Li,j:\nEglobal¼1\nNN−1ðÞX\ni≠j∈G1\nLi;j: ð1Þ\nThus networks which have a highly integrated organization, characterized by a short minimum path length between any pair of regionalnodes, will have high global efficiency.\nThe nodal efficiency at node i,E\nnodal (i), is likewise inversely related to\nthe path length of connections between a particular node and the rest of\nthe network:\nEnodal i ðÞ¼1\nN−1ðÞX\nj∈G1\nLi;j: ð2Þ\nEven though nodal efficiency measures regional properties of a\nnetwork, it still describes the integration of a particular node with the\nentire network.\n\nModularity\nModularity estimates the decomposability of a network into smaller\nsub-networks which are relatively densely intra-connected, and relatively sparsely interconnected. To estimate modularity resting state networks were decomposed into non-overlapping modules by maximizing\nthe modularity index Q(Newman, 2006 ) through the Louvain algorithm\navailable from Brain Connectivity Toolbox ( Blondel et al., 2008; Rubinov\nand Sporns, 2010 ).\nQ has a scalar value between −1 and 1, which is de fined as:\nQ¼1\n2mX\ni;jAi;j−kikj\n2m/C20/C21\nδci;cj/C16/C17\nð3Þ\nwhere Ai,jrepresents the weight (zero or one in the case of a binary network) of the edge between node iand j,ki=ΣjAi,jis the sum of the\nweights of the edges attached to node i(also called strength of node i),\nciis the community to which node ibelongs, the δ-function δ(u,v)i s1\nifu=vand 0 otherwise and m¼1\n2∑\ni;jAi;j. The maximization of the\nmodularity index Qgives a partition of the network into modules such\nthat the total edge weight within modules is as large as possible, relative\nto a most commonly used null model whose total within-module edge\nweights followkikj\n2m.\nDue to stochastic initialization of the greedy optimization, the\nmodule detection algorithm was applied 100 times for each network\nper threshold and the partition which delivered the highest Qvalue\nwas kept. Qis high if a network can be decomposed into modules\nTable 2\nCorrelation between nodal clustering and working memory performance.\nAnatomical label xayzr CSbrSWMcpdiffdpdiff fdrepdiff fdr relf\nR. inferior frontal gyrus 54 28 −4 0.65 −0.17 0.0003 0.045 9e−09\nL. anterior cingulate −2 30 20 0.55 −0.25 0.0007 0.045 6.2e−07\nR. cingulate g. 4 28 30 0.59 −0.19 0.0008 0.045 1.6e−07\nR. superior temporal gyrus 52 −50 18 0.50 −0.32 0.0006 0.045 1.7e−06\nL. superior temporal gyrus −42 −60 18 0.40 −0.43 0.0005 0.045 2.9e−06\nL. middle temporal gyrus −58 −14 −10 0.57 −0.28 0.0003 0.045 4.9e−07\nL. parahippocampal gyrus −22 −36 −12 0.48 −0.31 0.0009 0.046 2.2e−06\nL. intraparietal sulcus −36 −48 48 0.50 −0.35 0.0004 0.045 1.5e−06\nL. intraparietal sulcus −30 −70 30 0.48 −0.37 0.0004 0.045 1.8e−06\nax,y,a n d zdenote MNI coordinates of the brain nodes (centre of gravity)\nbCorrelation between clustering and the CS test\ncCorrelation between clustering and the SWM test\ndp-value testing the difference between the correlations\neFDR-corrected p-value testing the difference between the correlations\nfFDR-corrected p-value testing the difference between the correlations corrected for different reliabilities of the CS and the SWM tests187 M. Alavash et al. / NeuroImage 108 (2015) 182 –193\n\nwith many connections within and only a few connections between\nthem. Thus a high Qreflects high network integration within modules\nand high segregation between modules on an intermediate level ofnetwork organization.\nTo de fine a network diagnostic which quanti fies the modular structure at a regional scale we estimated the edge ratio W\neof each module M\n(Baumes et al., 2005; Wang et al., 2009 ). This metric captures the density of connections within a brain module relative to the total number ofconnections to the nodes inside and outside the module:\nW\neMðÞ ¼EMðÞ\nEMðÞ þ EoutMðÞð4Þ\nwhere E(M) is the number of edges within module MandEout(M)i st h e\nnumber of edges connecting the nodes inside module Mto nodes\noutside the module. For the analysis on nodal level we computed We\nfor each module and assigned this value to each node of the module.\n\nClustering\nTo estimate the integration of nodes surrounding a certain node we\ncomputed the clustering coef ficient for each node iof the network. The\nclustering coef ficient of node iis equal to the ratio L/T, where Lis the\nnumber of edges between nodes that are directly connected with\nnode i,a n d Tis the number of edges that could possibly exist between\nthese nearest neighbours of node i(Watts and Strogatz, 1998 ). This\ncan be averaged over all nodes to estimate the clustering of the graph\nas a whole. Thus networks that have a cliquish organization, characterized by many connections between the nearest neighbours of any given\nnode, will have high clustering.\n\nControlling effects of network densities\nTo show that our results are stable across different network densities\nwe used two different approaches for the analyses on the global scale. In\nthefirst approach we performed statistical tests on equally spaced\nsampling points within the investigated range of network density. Inthe second approach we averaged graph metrics across the entire\nrange of network density to avoid multiple comparisons at individual\nsampling points and to reduce the dependency of any signi ficant differences in network topology on the arbitrary choice of a single connectiondensity. This approach has been used in previous graph analyses\n(Bassett et al., 2008; Lynall et al., 2010; Giessing et al., 2013 ) and its theoretical background was discussed in detail by Ginestet et al. (2011) ."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 305,
+            "end": 323,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 305,
+            "end": 323,
+            "text": "AAL toolbox in SPM",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 305,
+            "end": 355,
+            "text": "AAL toolbox in SPM ( TzourioMazoyer et al., 2002 )",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 403,
+            "end": 414,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 403,
+            "end": 414,
+            "text": "462 regions",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 594,
+            "end": 610,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1270,
+            "end": 1357,
+            "text": "two additional mean time series extracted from areas within white-matter and\nventricles",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2410,
+            "end": 2429,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2410,
+            "end": 2429,
+            "text": "Pearson\ncorrelation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2778,
+            "end": 2816,
+            "text": "5",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2778,
+            "end": 2834,
+            "text": "16 equally spaced connection densities (cost thresholds)",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2836,
+            "end": 2859,
+            "text": "in the range of 5% –50%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3460,
+            "end": 3492,
+            "text": "minimum spanning tree of a graph",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3080,
+            "end": 3093,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3080,
+            "end": 3093,
+            "text": "Binary graphs",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3218,
+            "end": 3251,
+            "text": "Binary instead\nof weighted graphs",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3782,
+            "end": 3811,
+            "text": "7",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3782,
+            "end": 3811,
+            "text": "absolute correlation strength",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4022,
+            "end": 4067,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4022,
+            "end": 4067,
+            "text": "network efficiency, modularity and clustering",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4374,
+            "end": 4391,
+            "text": "global efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4042,
+            "end": 4052,
+            "text": "modularity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8730,
+            "end": 8753,
+            "text": "clustering coef ficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5497,
+            "end": 5514,
+            "text": "9",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5497,
+            "end": 5514,
+            "text": "Louvain algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5530,
+            "end": 5556,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Network definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6364,
+            "end": 6412,
+            "text": "module detection algorithm was applied 100 times",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9653,
+            "end": 9718,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9653,
+            "end": 9718,
+            "text": "averaged graph metrics across the entire\nrange of network density",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9547,
+            "end": 9626,
+            "text": "equally spaced\nsampling points within the investigated range of network density",
+            "labels": [
+              "Result aggregation — Type"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,711 @@
+{
+  "data": {
+    "text": "Olfactory Network Differences in Master Sommeliers:\nConnectivity Analysis Using Granger Causality\nand Graph Theoretical Approach\nKarthik Sreenivasan,1 Xiaowei Zhuang,1 Sarah J. Banks,1 Virendra Mishra,1 Zhengshi Yang,1\nGopikrishna Deshpande,2–4 and Dietmar Cordes1,5\nBRAIN CONNECTIVITY\nVolume 7, Number 2, 2017\nª Mary Ann Liebert, Inc.\nDOI: 10.1089/brain.2016.0458\n\nAbstract\nPrevious studies investigating the differences in olfactory processing and judgments between trained sommeliers\nand controls have shown increased activations in brain regions involving higher level cognitive processes in sommeliers. However, there is little information about the influence of expertise on causal connectivity and topological properties of the connectivity networks between these regions. Therefore, the current study focuses on\naddressing these questions in a functional magnetic resonance imaging (fMRI) study of olfactory perception\nin Master Sommeliers. fMRI data were acquired from Master Sommeliers and control participants during different olfactory and nonolfactory tasks. Mean time series were extracted from 90 different regions of interest (ROIs;\nbased on Automated Anatomical Labeling atlas). The underlying neuronal variables were extracted using blind\nhemodynamic deconvolution and then input into a dynamic multivariate autoregressive model to obtain connectivity between every pair of ROIs as a function of time. These connectivity values were then statistically compared to obtain paths that were significantly different between the two groups. The obtained connectivity\nmatrices were further studied using graph theoretical methods. In sommeliers, significantly greater connectivity\nwas observed in connections involving the precuneus, caudate, putamen, and several frontal and temporal regions. The controls showed increased connectivity from the left hippocampus to the frontal regions. Furthermore,\nthe sommeliers exhibited significantly higher small-world topology than the controls. These findings are significant, given that learning about neuroplasticity in adulthood in these regions may then have added clinical\nimportance in diseases such as Alzheimer’s and Parkinson’s where early neurodegeneration is isolated to regions\nimportant in smell.\n\nMaterials and Methods\nSubjects\nA total of 26 healthy adults participated in the study.\nThirteen Master Sommeliers (11 male, 2 female; age:\n44.42 – 10.2 years; years as Master Sommelier: 8.92 – 7.4)\nand 13 controls (11 male, 2 female; age: 34 – 5.8 years).\nAll methodology was reviewed and approved by the Cleveland Clinic Institutional Review Board (IRB) for the imaging\nstudy. Informed consent was obtained from all participants\nbefore taking part in the study.\nMaster Sommeliers were recruited from the Las Vegas resort community and surrounding regions by S.J.B. with the\nassistance of Jay James, a Master Sommelier extensively involved in both training of sommeliers and in the local community. Control participants were recruited via advertising\nand word of mouth from among the local professional and academic community at the University of Nevada, Las Vegas. A\n10-item multiple-choice wine quiz was developed to assess\nthe extent of wine knowledge in the controls. Controls who\nscored 30–90% (mean of 64%) were included in the study\nsince they were not likely to have a higher level of wine-related knowledge than most of the nonsommelier population\nand less likely to be considered as a naive control group.\n\nData acquisition\nAll images were acquired on a Siemens Verio 3 Tesla MRI\nscanner with a birdcage head coil. A high-resolution\n(1 · 1 · 1.2 mm) structural image was acquired using a T1-\n-weighted gradient echo 3D MP-RAGE sequence (repetition\ntime [TR] = 2300 ms, echo time [TE] = 2.98 ms, flip\nangle = 9). The structural scan was of no importance to\nthe analysis in this study. Functional scans were acquired\nusing gradient echo T2*-weighted echo planar imaging\n(EPI), optimized for BOLD (blood oxygen level dependent)\ncontrast. Imaging parameters were TR= 2500 ms, TE = 28\nms, flip angle = 80, field of view = 256 mm; slice thickness\n4 mm; in-plane resolution = 2 · 2 mm. A total of 240 volumes\nwere obtained during each of 2 trial sessions.\n\nOverview of the olfactory imaging system\nBefore entering the scanner, subjects were fitted with a\nmodified medical-grade oxygen face mask. The custom\nmask was modified to accommodate the placement of eight\npolyurethane tubes immediately below the nose. A small\nglass bottle was attached to the end of each of the tubes.\nThe bottles contained a small amount (4 mL) of either wine\n(two red and two white wine bottles), or nonwine (three bottles), or nothing (one bottle). Additional tubing from each of\nthese bottles connected them to the olfactometer. The olfactometer is a computer-controlled pneumatic stimulator\n(Institute for Biomagnetism and Biosignal analysis, University of Munster, Germany) that provides air pulses of well-defined duration.\n\nExperimental stimuli\nThe entire study consisted of 2 runs of 80 trials and lasted\n*20 min. Two olfactory and two nonolfactory were presented\npseudorandomly in an event-related design. There was a 2-sec\nvisual cue at the beginning of each trial informing participants\nwhich task to perform during the subsequent stimulus presentation that lasted 4 sec. The fixation period between the trials\nvaried from 0 to 5500 ms. By using a pseudorandomized stimulus presentation, we were able to ensure that there were sufficient intervals between olfactory stimulus presentations to\nallow for recovery of the olfactory system and to avoid the effects of habituation.\nDuring the olfactory tasks, a single odorant was presented.\nThe participants were instructed to smell and were informed\nas to which olfactory task to perform. Odorants were delivered for 4 sec. For one of the olfactory tasks, participants\nreported whether the odorant was red or white wine, and for\nthe other, they reported if the odorant presented was a wine\nor a nonwine. For the olfactory tasks, two white wines, two\nred wines, and three nonwine mixtures (a blend of white verjus with a small amount of vodka, and some combination of\nfresh lemon juice and very dilute pear or apricot essence)\nwere chosen. Wines were opened, and nonwines mixed\nfresh, for each imaging session, with a maximum of three participants being run in a session.\nOne of the nonolfactory task was a motor task, where the\nparticipants received a 4-sec stream of air through an olfactometer channel that contained no odorant and were asked to\nrespond by arbitrarily pressing the left or right button. The\nother nonolfactory task was a visual discrimination task during which participants were randomly presented a pixelated\nimage of a fingerprint or zebra pattern and were asked\nwhether the image was a fingerprint or a zebra pattern.\n\nData analysis\nFMRI data were preprocessed using SPM12. All the statistical analyses were performed using MATLAB 2015a.\nEPI data were input into a standard preprocessing pipeline\nthat performed slice time correction, realignment, coregistration, and normalization to the Montreal Neurological\nInstitute (MNI) 2 mm template. Finally, data were smoothed\nwith an 8 mm Gaussian kernel. Ninety different cortical regions of interest (ROIs; excluding cerebellum) were identified based on the Automated Anatomical Labeling atlas\n(Tzourio-Mazoyer et al., 2002). No global signal regression\nwas performed (Aguirre et al., 1998; Glasser et al., 2013;\nMurphy et al., 2009). Average time series were extracted\nfrom these regions for all participants. These average time\nseries were standardized and then the latent neuronal state\nvariables were obtained by hemodynamic deconvolution\nof the fMRI time series using the CKF. A boxcar function\ncorresponding to the input stimulus was used as the exogenous input to the deconvolution model along with normalized fMRI time series from previously identified activated\nROI. The hidden neuronal variables obtained after deconvolution were input into the MVAR model (model order 4) to\nobtain dynamic effective connectivity between every pair of\nROI for all the participants.\n\nGraph theory analysis\nThe topological properties of functional networks were investigated by graph theoretical analysis. The causal connectivity matrices obtained from the connectivity model were used\nfor the analysis. Each matrix was thresholded into a set of weighted graphs (i.e., networks) by selecting the strongest\nconnections until the desired sparsity was reached. Connection sparsity (S; ratio of the existing edges to the maximum\npossible number of edges in a network) was used as a thresholding measure in the current study. The threshold was applied to ensure that the networks being compared had the\nsame number of nodes and edges to analyze between-group\ndifferences in the network organization. A threshold range\nof 0.10 < S < 0.50 with an interval of 0.01 was applied to each\nconnectivity matrix. At each S, we obtained network characteristics, including small-world parameters and network efficiency.\nSmall-world properties were originally proposed by Watts\nand Strogatz. They involved determination of weighted clustering coefficient (C), weighted characteristic path length\n(L), normalized weighted clustering coefficient (CN), and\nnormalized weighted characteristic path length (LN). The C\nof a network quantifies the degree of local interconnectivity\nin a network and is expressed as the average of clustering\ncoefficients across all nodes in the network. The clustering\ncoefficient of a node is defined as the likelihood that the\nneighborhoods of node i are connected to each other. To\nstudy the network efficiency, we obtained the local (Elocal)\nand global efficiency (Eglobal) of the connectivity networks.\nThe efficiency is a measure of how well a network exchanges information. Global efficiency quantifies the exchange of information on a global scale in the network and the\nlocal efficiency is a measure of how well local subgraphs exchange information when the node under consideration is\neliminated. All of the above network measures were calculated using the appropriate functions provided in the Brain\nConnectivity Toolbox (Rubinov and Sporns, 2010). To evaluate the between-group differences in overall topological\ncharacteristics, we calculated the area under the curve (AUC)\nover the whole range of thresholds. The AUC provides a summarized scalar for topological characterization of brain networks independent of single threshold selection.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 129,
+            "end": 218,
+            "text": "Karthik Sreenivasan,1 Xiaowei Zhuang,1 Sarah J. Banks,1 Virendra Mishra,1 Zhengshi Yang,1",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 128,
+            "text": "Olfactory Network Differences in Master Sommeliers:\nConnectivity Analysis Using Granger Causality\nand Graph Theoretical Approach",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 306,
+            "end": 310,
+            "text": "2017",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 313,
+            "end": 335,
+            "text": "Mary Ann Liebert, Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 341,
+            "end": 364,
+            "text": "10.1089/brain.2016.0458",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 375,
+            "end": 607,
+            "text": "Previous studies investigating the differences in olfactory processing and judgments between trained sommeliers\nand controls have shown increased activations in brain regions involving higher level cognitive processes in sommeliers.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3527,
+            "end": 3552,
+            "text": "Siemens Verio 3 Tesla MRI",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4098,
+            "end": 4118,
+            "text": "slice thickness\n4 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4057,
+            "end": 4072,
+            "text": "flip angle = 80",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3768,
+            "end": 3782,
+            "text": "flip\nangle = 9",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4074,
+            "end": 4096,
+            "text": "field of view = 256 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4032,
+            "end": 4043,
+            "text": "TR= 2500 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4045,
+            "end": 4055,
+            "text": "TE = 28\nms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3606,
+            "end": 3622,
+            "text": "(1 · 1 · 1.2 mm)",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4120,
+            "end": 4150,
+            "text": "in-plane resolution = 2 · 2 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2294,
+            "end": 2349,
+            "text": "A total of 26 healthy adults participated in the study.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6854,
+            "end": 6894,
+            "text": "FMRI data were preprocessed using SPM12.",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 852,
+            "end": 926,
+            "text": "functional magnetic resonance imaging (fMRI) study of olfactory perception",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2294,
+            "end": 2349,
+            "text": "A total of 26 healthy adults participated in the study.",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2350,
+            "end": 2518,
+            "text": "Thirteen Master Sommeliers (11 male, 2 female; age:\n44.42 – 10.2 years; years as Master Sommelier: 8.92 – 7.4)\nand 13 controls (11 male, 2 female; age: 34 – 5.8 years).",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2397,
+            "end": 2518,
+            "text": "age:\n44.42 – 10.2 years; years as Master Sommelier: 8.92 – 7.4)\nand 13 controls (11 male, 2 female; age: 34 – 5.8 years).",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2294,
+            "end": 2349,
+            "text": "A total of 26 healthy adults participated in the study.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3235,
+            "end": 3302,
+            "text": "Controls who\nscored 30–90% (mean of 64%) were included in the study",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2519,
+            "end": 2640,
+            "text": "All methodology was reviewed and approved by the Cleveland Clinic Institutional Review Board (IRB) for the imaging\nstudy.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5024,
+            "end": 5043,
+            "text": "2 runs of 80 trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5284,
+            "end": 5323,
+            "text": "stimulus presentation that lasted 4 sec",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5329,
+            "end": 5389,
+            "text": "fixation period between the trials\nvaried from 0 to 5500 ms.",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5689,
+            "end": 5787,
+            "text": "The participants were instructed to smell and were informed\nas to which olfactory task to perform.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6028,
+            "end": 6224,
+            "text": "two white wines, two\nred wines, and three nonwine mixtures (a blend of white verjus with a small amount of vodka, and some combination of\nfresh lemon juice and very dilute pear or apricot essence)",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6718,
+            "end": 6767,
+            "text": "pixelated\nimage of a fingerprint or zebra pattern",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 149,
+            "end": 150,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6888,
+            "end": 6893,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Realignment",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 241,
+            "end": 242,
+            "text": "2",
+            "labels": [
+              "Realignment — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Realignment — Software",
+            "Realignment — Algorithm",
+            "Realignment — Parameters"
+          ]
+        },
+        {
+          "from_name": "Realignment",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6888,
+            "end": 6893,
+            "text": "SPM12",
+            "labels": [
+              "Realignment — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2466,
+            "end": 2467,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Algorithm",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6888,
+            "end": 6893,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 243,
+            "end": 244,
+            "text": "4",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization — Software",
+            "Spatial normalization — Algorithm",
+            "Spatial normalization — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7089,
+            "end": 7161,
+            "text": "normalization to the Montreal Neurological\nInstitute (MNI) 2 mm template",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 265,
+            "end": 266,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm",
+            "Spatial smooth — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7182,
+            "end": 7219,
+            "text": "smoothed\nwith an 8 mm Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 358,
+            "end": 359,
+            "text": "6",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Algorithm",
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1158,
+            "end": 1193,
+            "text": "Automated Anatomical Labeling atlas",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 293,
+            "end": 294,
+            "text": "7",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "ROI definition — Software",
+            "ROI definition — Algorithm",
+            "ROI definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7221,
+            "end": 7311,
+            "text": "Ninety different cortical regions of interest (ROIs; excluding cerebellum) were identified",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 346,
+            "end": 347,
+            "text": "8",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Algorithm",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7502,
+            "end": 7577,
+            "text": "Average time series were extracted\nfrom these regions for all participants.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 347,
+            "end": 348,
+            "text": "9",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software",
+            "Compute connectivity — Algorithm",
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8007,
+            "end": 8141,
+            "text": "input into the MVAR model (model order 4) to\nobtain dynamic effective connectivity between every pair of\nROI for all the participants.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 341,
+            "end": 343,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Software",
+            "Graph measures — Algorithm",
+            "Graph measures — Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9163,
+            "end": 9346,
+            "text": "weighted clustering coefficient (C), weighted characteristic path length\n(L), normalized weighted clustering coefficient (CN), and\nnormalized weighted characteristic path length (LN).",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

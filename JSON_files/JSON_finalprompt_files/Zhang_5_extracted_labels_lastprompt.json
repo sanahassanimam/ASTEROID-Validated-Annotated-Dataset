@@ -1,0 +1,1019 @@
+{
+  "data": {
+    "text": "Large-scale network topology reveals brain functional abnormality in Chinese dyslexic children\n\nNeuropsychologia 157 (2021) 107886\n\nAvailable online 7 May 2021\n\nLarge-scale network topology reveals brain functional abnormality in Chinese dyslexic children\n\nJia Zhang, Lanfang Liu, Hehui Li, Xiaoxia Feng, Manli Zhang, Li Liu, Xiangzhi Meng, Guosheng Ding\n\nhttps://doi.org/10.1016/j.neuropsychologia.2021.107886\n\nTwenty-eight typically developing (TD) children (mean age = 10.45, standard deviation [SD] = 0.93 years) and twenty dyslexic (DYS) children (mean age = 10.28, SD = 0.91 years) were recruited. All of them were native Mandarin children without any neurological disorders. They were third, fourth- or fifth-grade students from several primary schools in Beijing. All of the participants were right-handed and had normal nonverbal IQ, assessed by Raven’s Standard Progressive Matrices (Raven and Court, 1998). And they met the criteria of head motion not exceeding 3 mm maximum translation or 3◦ rotation in all the fMRI data. Written consent was obtained from the participants and their guardians before the experiment and this study was approved by the ethical review board of Beijing Normal University.\n\nTable 1 shows the demographic information and reading performance for typically developing children (TD) and dyslexic children (DYS). Sample size 28 20. Gender (male/female) 11/17 12/8. Age (years) 10.45 (0.93) 10.28 (0.91).\n\nThe images during a phonological rhyming judgment task were obtained for each participant. A block design was implemented in the phonological task, in which four task blocks (hereafter referred to as “task”) and five baseline blocks (hereafter referred to as “baseline”) were presented alternately. During the task, the participants were asked to determine whether the two simultaneously presented Chinese characters rhymed with each other, as quickly and accurately as possible. The duration of each trial was 3000 ms, including a period of 2500 ms for characters presentation followed by a 500 ms blank screen. Participants responded by pressing the appropriate button. Half of them used their left hand to make a “yes” response (rhyming), and the right hand to make a “no” response (not rhyming); the other half used the opposite hand to make responses for counterbalancing. Stimuli were projected onto a screen placed in front of the MR scanner and were viewed using a mirror mounted on the head coil. Stimuli were presented and responses were recorded with E-prime software. During baseline, participants were told to look at a centered fixation point and make no responses. In addition, resting-state scans lasting for 7.2 min were collected, during which the participants were informed to close their eyes, keep their head and body still, and think of nothing.\n\nAll of the functional data images were collected on a 3T Siemens scanner at the MRI Center of State Key Laboratory of Cognitive Neuroscience and Learning in Beijing Normal University. The acquisition parameters for all of the functional images were as follows: slice number = 40 (contiguous axial slices), slice thickness = 3 mm, voxel size = 3 × 3 × 3 mm, TR = 2400 ms, TE = 30 ms, flip angle = 81◦, matrix = 64 × 64. High-resolution T1-weighted 3D images were also collected with the following parameters: slice number = 176, slice thickness = 1 mm, voxel size = 1 × 1 × 1 mm, TR = 2300 ms, TE = 4.18 ms, flip angle = 9◦, matrix = 256 × 256.\n\nThe functional image preprocessing was performed with DPARSF (http://rfmri.org/DPARSF, Yan et al., 2016). For the phonological task, first the first five time points of each participant’s functional images were discarded to allow for equilibration of the magnetic field. Second, a slice-timing correction was performed with the middle slice in every volume as a reference slice. Then, we used all participants’ structural images to create a study-specific template by DARTEL, and all functional images were realigned and coregistered to the Montreal Neurological Institute (MNI) space using the DARTEL approach. After normalization, spatial smoothing was performed with an 8 mm full-width at half maximum (FWHM). In addition, then linear trends removing and high-pass filtering (a cutoff of 1/128 Hz) were applied. Additionally, Friston-24 head motion parameters (Friston et al., 1996), white matter signal, and CSF signal were regressed out to reduce physiological noise. Given that low-frequency (0.01–0.1 Hz) fluctuations in blood oxygenation level-dependent signal are highly synchronized when individuals are scanned at rest (Biswal et al., 1997), a bandpass temporal filtering of 0.01–0.1 was applied to the resting-state data (Koyama et al., 2010; Yan et al., 2016).\n\nFor the analysis in this step, the graph theoretical analysis was performed in GRETNA (https://www.nitrc.org/projects/gretna/) (Wang et al., 2015). We used the Automated Anatomical Labeling (AAL) atlas (Tzourio-Mazoyer et al., 2002) to perform network construction. We calculated the time series of each region by averaging all voxel time series within this region. For the phonological task, the time series were first standardized within each block (mean = 0, SD = 1), and then concatenated. The Pearson’s correlation coefficient across each pair of regional time series was calculated, resulting in 90 × 90 connectivity matrices for each participant. Then, binary brain networks were generated with a set of sparsity thresholds (ranging from 0.1 to 0.4, with steps of 0.01). For the resting state, we extracted the first 53 TRs in order to keep the data length equal to that used in the task state and then also calculated the Pearson’s correlation coefficient across the resting-state time series.\n\nWe tested global network properties that reflect functional segregation (local efficiency and clustering coefficient) and functional integration (characteristic path length and global efficiency) for each participant during the task and resting states. Moreover, we calculated the area under the curves (AUC) for each property of the network topology and performed 5000 permutations on the sparsity-integrated measures."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 94,
+            "text": "Large-scale network topology reveals brain functional abnormality in Chinese dyslexic children",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 257,
+            "end": 354,
+            "text": "Jia Zhang, Lanfang Liu, Hehui Li, Xiaoxia Feng, Manli Zhang, Li Liu, Xiangzhi Meng, Guosheng Ding",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 118,
+            "end": 122,
+            "text": "2021",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 356,
+            "end": 410,
+            "text": "https://doi.org/10.1016/j.neuropsychologia.2021.107886",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "Missing_sublabels": [
+            "Publisher",
+            "Summary"
+          ]
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 96,
+            "end": 130,
+            "text": "Neuropsychologia 157 (2021) 107886",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "Missing_sublabels": [
+            "Data",
+            "Code",
+            "Preregistered",
+            "Remarks"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 412,
+            "end": 603,
+            "text": "Twenty-eight typically developing (TD) children (mean age = 10.45, standard deviation [SD] = 0.93 years) and twenty dyslexic (DYS) children (mean age = 10.28, SD = 0.91 years) were recruited.",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 461,
+            "end": 515,
+            "text": "mean age = 10.45, standard deviation [SD] = 0.93 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 772,
+            "end": 813,
+            "text": "All of the participants were right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 604,
+            "end": 681,
+            "text": "All of them were native Mandarin children without any neurological disorders.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 772,
+            "end": 917,
+            "text": "All of the participants were right-handed and had normal nonverbal IQ, assessed by Raven’s Standard Progressive Matrices (Raven and Court, 1998).",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 922,
+            "end": 1034,
+            "text": "they met the criteria of head motion not exceeding 3 mm maximum translation or 3◦ rotation in all the fMRI data.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "Missing_sublabels": [
+            "Group matching",
+            "Rejected subjects"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1368,
+            "end": 1400,
+            "text": "Gender (male/female) 11/17 12/8.",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1132,
+            "end": 1213,
+            "text": "this study was approved by the ethical review board of Beijing Normal University.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1441,
+            "end": 1531,
+            "text": "The images during a phonological rhyming judgment task were obtained for each participant.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2864,
+            "end": 2882,
+            "text": "3T Siemens scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3071,
+            "end": 3114,
+            "text": "slice number = 40 (contiguous axial slices)",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3116,
+            "end": 3138,
+            "text": "slice thickness = 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3140,
+            "end": 3165,
+            "text": "voxel size = 3 × 3 × 3 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3167,
+            "end": 3179,
+            "text": "TR = 2400 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3181,
+            "end": 3191,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3193,
+            "end": 3209,
+            "text": "flip angle = 81◦",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)",
+            "Inter-slice gap",
+            "Duration (s)",
+            "Eyes open/closed",
+            "Field of View (cm)",
+            "Number of individuals for final analyses",
+            "Most-used software for preprocessing",
+            "Resting or Task/If Task, what task?"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1461,
+            "end": 1495,
+            "text": "phonological rhyming judgment task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2634,
+            "end": 2688,
+            "text": "resting-state scans lasting for 7.2 min were collected",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2707,
+            "end": 2808,
+            "text": "participants were informed to close their eyes, keep their head and body still, and think of nothing.",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2634,
+            "end": 2673,
+            "text": "resting-state scans lasting for 7.2 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3455,
+            "end": 3515,
+            "text": "The functional image preprocessing was performed with DPARSF",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1757,
+            "end": 1920,
+            "text": "the participants were asked to determine whether the two simultaneously presented Chinese characters rhymed with each other, as quickly and accurately as possible.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1810,
+            "end": 1857,
+            "text": "two simultaneously presented Chinese characters",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1598,
+            "end": 1739,
+            "text": "four task blocks (hereafter referred to as “task”) and five baseline blocks (hereafter referred to as “baseline”) were presented alternately.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1598,
+            "end": 1739,
+            "text": "four task blocks (hereafter referred to as “task”) and five baseline blocks (hereafter referred to as “baseline”) were presented alternately.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1921,
+            "end": 2053,
+            "text": "The duration of each trial was 3000 ms, including a period of 2500 ms for characters presentation followed by a 500 ms blank screen.",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "Missing_sublabels": [
+            "ISI distribution",
+            "Length of blocks",
+            "Efficiency optimization",
+            "Block/event correlation"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3588,
+            "end": 3725,
+            "text": "first the first five time points of each participant’s functional images were discarded to allow for equilibration of the magnetic field.",
+            "labels": [
+              "Removal Init Vol — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3588,
+            "end": 3725,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3726,
+            "end": 3833,
+            "text": "Second, a slice-timing correction was performed with the middle slice in every volume as a reference slice.",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3783,
+            "end": 3833,
+            "text": "middle slice in every volume as a reference slice.",
+            "labels": [
+              "Slice timing correction — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3726,
+            "end": 3833,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3957,
+            "end": 3971,
+            "text": "were realigned",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3935,
+            "end": 4066,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3976,
+            "end": 4066,
+            "text": "coregistered to the Montreal Neurological Institute (MNI) space using the DARTEL approach.",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3976,
+            "end": 4066,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4067,
+            "end": 4167,
+            "text": "After normalization, spatial smoothing was performed with an 8 mm full-width at half maximum (FWHM).",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4128,
+            "end": 4166,
+            "text": "8 mm full-width at half maximum (FWHM)",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4067,
+            "end": 4167,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3509,
+            "end": 3559,
+            "text": "DPARSF (http://rfmri.org/DPARSF, Yan et al., 2016)",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4186,
+            "end": 4208,
+            "text": "linear trends removing",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4186,
+            "end": 4208,
+            "text": "6",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Software",
+            "Temporal detrending — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4213,
+            "end": 4255,
+            "text": "high-pass filtering (a cutoff of 1/128 Hz)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4234,
+            "end": 4254,
+            "text": "a cutoff of 1/128 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4213,
+            "end": 4255,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4284,
+            "end": 4340,
+            "text": "Friston-24 head motion parameters (Friston et al., 1996)",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4284,
+            "end": 4340,
+            "text": "Friston-24 head motion parameters (Friston et al., 1996)",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4284,
+            "end": 4427,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4342,
+            "end": 4427,
+            "text": "white matter signal, and CSF signal were regressed out to reduce physiological noise.",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4284,
+            "end": 4427,
+            "text": "9",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4610,
+            "end": 4649,
+            "text": "bandpass temporal filtering of 0.01–0.1",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4454,
+            "end": 4462,
+            "text": "0.01–0.1",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4608,
+            "end": 4687,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4878,
+            "end": 4995,
+            "text": "We used the Automated Anatomical Labeling (AAL) atlas (Tzourio-Mazoyer et al., 2002) to perform network construction.",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4878,
+            "end": 4995,
+            "text": "10",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4996,
+            "end": 5095,
+            "text": "We calculated the time series of each region by averaging all voxel time series within this region.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4996,
+            "end": 5095,
+            "text": "11",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5224,
+            "end": 5317,
+            "text": "The Pearson’s correlation coefficient across each pair of regional time series was calculated",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5332,
+            "end": 5361,
+            "text": "90 × 90 connectivity matrices",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5224,
+            "end": 5383,
+            "text": "12",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5384,
+            "end": 5507,
+            "text": "Then, binary brain networks were generated with a set of sparsity thresholds (ranging from 0.1 to 0.4, with steps of 0.01).",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5462,
+            "end": 5505,
+            "text": "ranging from 0.1 to 0.4, with steps of 0.01",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5384,
+            "end": 5507,
+            "text": "13",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Sparsity control — Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5782,
+            "end": 5928,
+            "text": "functional segregation (local efficiency and clustering coefficient) and functional integration (characteristic path length and global efficiency)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5733,
+            "end": 5985,
+            "text": "14",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Software",
+            "Graph measures — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6014,
+            "end": 6083,
+            "text": "area under the curves (AUC) for each property of the network topology",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5986,
+            "end": 6152,
+            "text": "15",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Result aggregation — Software",
+            "Result aggregation — Algorithm",
+            "Result aggregation — Type"
+          ]
+        }
+      ]
+    }
+  ]
+}

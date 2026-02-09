@@ -1,0 +1,307 @@
+{
+  "data": {
+    "title": "Dynamic reorganization of the frontal parietal network during cognitive control and episodic memory",
+    "text": "Title: Dynamic reorganization of the frontal parietal network during cognitive control and episodic memory\n\nData processing and network construction\nEach participant’s brain data were parcellated into discrete regions of interest obtained from the Power atlas. Twenty-one Power nodes were removed due to low signal and two bilateral medial temporal lobe nodes were added, resulting in 245 nodes across the whole brain. Beta-series pairwise correlations were computed for all nodes and Fisher z-transformed, yielding a 245 × 245 connectivity matrix.\n\nGroup functional connectivity graphs were constructed by summing the 5% thresholded individual connectivity matrices across subjects and applying a subsequent 5% threshold to identify consistently strong connections, followed by binarization.\n\nGraph analysis\nCommunity structure was extracted using the Louvain modularity algorithm implemented in the Brain Connectivity Toolbox. Modularity (Q) and module partitions were computed repeatedly (1,000 iterations) across proportional thresholds ranging from 0.05 to 0.60 in steps of 0.05, and the partition with the highest modularity value was retained.\n\nNetwork reorganization was quantified using mutual information and variation of information between high and low cognitive-control conditions. Participation coefficient was computed to assess integration of the frontal parietal network across tasks."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 140,
+            "end": 151,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 140,
+            "end": 151,
+            "text": "Power atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 277,
+            "end": 286,
+            "text": "245 nodes",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 311,
+            "end": 322,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 311,
+            "end": 322,
+            "text": "Beta-series",
+            "labels": [
+              "Time series ROI — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 344,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 344,
+            "text": "pairwise correlations",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 377,
+            "end": 397,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 377,
+            "end": 397,
+            "text": "Fisher z-transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 671,
+            "end": 683,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 671,
+            "end": 683,
+            "text": "binarization",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 511,
+            "end": 525,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 511,
+            "end": 513,
+            "text": "5%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 745,
+            "end": 773,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 745,
+            "end": 773,
+            "text": "Louvain modularity algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 793,
+            "end": 819,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Network definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 821,
+            "end": 835,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 821,
+            "end": 835,
+            "text": "Modularity (Q)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1187,
+            "end": 1212,
+            "text": "Participation coefficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 902,
+            "end": 932,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 946,
+            "end": 958,
+            "text": "0.05 to 0.60",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

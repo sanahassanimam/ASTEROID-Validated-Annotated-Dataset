@@ -1,0 +1,263 @@
+{
+  "data": {
+    "text": "RS-fMRI and T1-weighted images were preprocessed with FMRIB’s Software Library version 5.0.10 (FSL; (Smith et al. 2004)). The first four volumes were discarded to reach steady-state magnetization. Non-brain tissue was removed using BET and the structural image was segmented into gray (GM), white matter (WM) and cerebrospinal fluid (CSF) using FAST. Functional images were re-aligned using McFLIRT and the resulting six rigid-body parameters were used to calculate the motion parameters. Functional images were spatially smoothed with a 5 mm full width at half maximum (FWHM) kernel. Subjects with significant motion during scanning, defined as a mean relative root mean squared displacement (RMS)>0.2 mm, or>20 volumes with framewise relative RMS displacement>0.25 mm, were excluded (Ciric et al. 2017). Because rs-fMRI is exceptionally sensitive to motion artefacts (Power et al. 2015), we additionally performed ICA-AROMA (Pruim et al. 2015). ICA-AROMA is a single-subject denoising strategy based on independent component analysis (ICA) that automatically identifies motion-related components in the functional data based on their high-frequency content, correlation with the motion parameters and edge and CSF fraction and removes their variance from the data (Pruim et al. 2015). ICA-AROMA has been shown to provide a good trade-off between reducing noise and preserving BOLD signal (Ciric et al. 2017; Parkes et al. 2018). After ICA-AROMA, additional nuisance regression was performed by removing signal from the WM and CSF and functional images were high-pass filtered (100 s cut-off).\n\nThe functional scan was registered to the anatomical T1-scans using boundary-based registration (FSL epi_reg). The anatomical image was parcellated into 225 nodes; 210 cortical nodes were defined based on the Brainnetome Atlas (Fan et al. 2016), 14 subcortical nodes were individually segmented using FSL FIRST (Patenaude et al. 2011) and one cerebellar node was defined based on the FSL’s cerebellar atlas (Diedrichsen et al. 2009). EPI distortions during fMRI can lead to signal drop-out. To account for signal dropout near air/tissue boundaries during scanning, we applied a mask to the functional scan to exclude voxels with signal intensities in the lowest quartile of the robust range (Meijer et al. 2017). Nodes were discarded if they comprised less than four signal-containing voxels. This rendered a total of 194 common brain regions across all subjects. Time-series were extracted from each node. The cortical nodes were subdivided into four RSN: the DMN, FPN, DAN and VAN based on the functional subdivision by Yeo et al. (2011); see supplementary Table 1.\n\nTo measure FC and construct connectivity matrices we applied wavelet coherence on the time-series of each possible pair of the 194 brain regions within the frequency range 0.06 and 0.12 Hz (Chang and Glover 2010). Wavelet coherence has several advantages over Pearson’s correlations, including denoising properties and robustness to outliers (Gu et al. 2017; Fadili and Bullmore 2004; Achard et al. 2006). The 0.06–0.12 Hz frequency range was chosen because it has been suggested to be a reliable and robust range that is associated with cognitive performance (Zhang et al. 2016; Bassett et al. 2013). We applied wavelet coherence to the entire rs-fMRI scan to calculate the network measures (see below). An overview of the (pre)processing pipeline is provided in Fig. 1.\n\nAt the global level, we calculated global efficiency and global clustering coefficient (Gcc). Global efficiency is the inverse of the average path length (i.e., the maximum connectivity between each pair of nodes), with high efficiency meaning that information can rapidly travel through the whole network (Latora and Marchiori 2001). Gcc is equivalent to the proportion of the actual number of edges between the nearest neighbors of a node to all possible edges and signifies the tendency of the whole network to segregate into locally interconnected triplets that function as a specialized subunit (Rubinov and Sporns 2010). Test–retest reliability of global efficiency and Gcc are fair-to-good (Welton et al. 2015). At the subnetwork level, we calculated efficiency and clustering coefficient for each of the four RSNs (DMN, FPN, DAN and VAN). In addition, we determined the mean FC between each of the four RSNs (resulting in six between-network mean FC values). Test–retest reliability of these measures at the subnetwork level is unknown."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1805,
+            "end": 1822,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1805,
+            "end": 1822,
+            "text": "Brainnetome Atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2405,
+            "end": 2458,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1897,
+            "end": 1906,
+            "text": "FSL FIRST",
+            "labels": [
+              "ROI definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1980,
+            "end": 2002,
+            "text": "FSL’s cerebellar atlas",
+            "labels": [
+              "ROI definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2405,
+            "end": 2458,
+            "text": "total of 194 common brain regions across all subjects",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2460,
+            "end": 2502,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2460,
+            "end": 2502,
+            "text": "Time-series were extracted from each node.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2503,
+            "end": 2663,
+            "text": "4",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2503,
+            "end": 2663,
+            "text": "The cortical nodes were subdivided into four RSN: the DMN, FPN, DAN and VAN based on the functional subdivision by Yeo et al. (2011); see supplementary Table 1.",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2503,
+            "end": 2663,
+            "text": "The cortical nodes were subdivided into four RSN: the DMN, FPN, DAN and VAN based on the functional subdivision by Yeo et al. (2011); see supplementary Table 1.",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2715,
+            "end": 2853,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2715,
+            "end": 2853,
+            "text": "we applied wavelet coherence on the time-series of each possible pair of the 194 brain regions within the frequency range 0.06 and 0.12 Hz",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2837,
+            "end": 2853,
+            "text": "0.06 and 0.12 Hz",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3459,
+            "end": 3531,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3459,
+            "end": 3531,
+            "text": "we calculated global efficiency and global clustering coefficient (Gcc).",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4157,
+            "end": 4284,
+            "text": "At the subnetwork level, we calculated efficiency and clustering coefficient for each of the four RSNs (DMN, FPN, DAN and VAN).",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4298,
+            "end": 4404,
+            "text": "we determined the mean FC between each of the four RSNs (resulting in six between-network mean FC values).",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

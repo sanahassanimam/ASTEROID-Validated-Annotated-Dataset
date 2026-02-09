@@ -1,0 +1,871 @@
+{
+  "data": {
+    "text": "Neural Network Configuration and Efficiency Underlies\nIndividual Differences in Spatial Orientation Ability\nAiden E. G. F. Arnold, Andrea B. Protzner, Signe Bray, Richard M. Levy,\nand Giuseppe Iaria\nJournal of Cognitive Neuroscience 26:2, pp. 380–394\ndoi:10.1162/jocn_a_00491\nSpatial orientation is a complex cognitive process requiring\nthe integration of information processed in a distributed system\nof brain regions.\n\n\nParticipants\nSixteen healthy, right-handed volunteers (nine women,\nmean age = 22 years, age range = 18–36 years) with\nno psychiatric or neurological disorders and normal or\ncorrected-to-normal vision participated in the study. All\nparticipants provided written informed consent as ap-\nproved by the local research ethics board (CHREB 22848).\n\n\nBehavioral Tasks\nFollowing the spatial learning task, participants performed an orientation decision task. Six experimental trials were randomized with six control trials within a single run. During experimental trials, participants saw the instructions “Left/Right” for 2 sec, followed by a fixation cross that jittered between 4 and 6 sec. This was followed by a central image of a ground-level view of one of the four landmarks with a second image displaying a second landmark on the right side of the screen. Before the run, participants were instructed to treat the central image as their starting point and the secondary image on the right side of the screen as their target destination. The secondary image presented a landmark without a background. After image onset, participants had 10 sec to respond whether they should turn left or right to travel from the primary landmark to the secondary landmark by following the shortest path possible. Responses were made on a two-button Lumina response box. An index finger button represented a left turn, and a middle finger button represented a right turn. All responses were made with the right hand.\n\n\nMRI Data Acquisition\nParticipants were scanned using a 3T GE Signa scanner with an eight-channel head coil at the Seaman Family MR Research Centre at the University of Calgary. Both resting-state and task-based functional scans were acquired using a T2*-weighted EPI sequence (repetition time = 2500 msec, FOV = 24.0 cm, 3 × 3 × 3 mm voxels in interleaved acquisition, flip angle = 77). Resting-state scans were conducted before task-based scans for either 5 min (total volumes = 120, nine participants) or 10 min (total volumes = 240, seven participants). High-resolution 3-D anatomical images were acquired using a SPGR sequence (180 slices, FOV = 25.6 cm, 1 × 1 × 1 mm voxels, flip angle = 11). Lastly, 60 direction diffusion tensor images were acquired using a 2-D spin echo sequence (repetition time = 8000 msec, FOV = 25.6 cm, bo = 1000, 64 slices).\n\n\nTask fMRI Data Processing\nTask-based fMRI data from the orientation decision task were preprocessed using SPM8. Data were corrected for movement by realigning to the first volume of each scan, resliced into a 2-mm isotropic voxel space, normalized to the Montreal Neurological Institute (MNI) EPI template using a 12-parameter affine transformation, and smoothed using an 8-mm FWHM Gaussian kernel.\n\n\nResting-state fMRI Data Processing\nResting-state fMRI data were preprocessed spatially using the same pipeline as the task-based fMRI data and temporally processed using the CONN functional connectivity toolbox. To control for cardiac and respiratory artifacts in the resting-state signal, the anatomical aCompCor method of signal regression was carried out after segmenting the 3-D anatomical scans into gray matter, white matter, and CSF. This was computed by estimating orthogonal time series using a PCA of the BOLD signal from the white matter and CSF images. These temporal confounding factors were then treated as nuisance variables and regressed from the resting-state time series of each voxel in the gray matter for each participant. To further minimize spurious correlations, motion correction parameters from the spatial realignment were regressed out as nuisance variables, as was the average effect across each section (block convolved with a hemodynamic response function) for each participant. The residual time series data were then band-passed through a 0.01–0.001 Hz filter to isolate brain signal that had been used to evaluate global efficiency measures in resting-state networks. The time series for each ROI was computed by averaging the temporally filtered residual time series for each voxel within the ROI. Bivariate correlation matrices between each ROI time series were then calculated, and a Fisher transformation (inverse hyperbolic tangent function) was then applied at the single-subject level to normalize the distribution of bivariate correlation values.\n\n\nGraph Theory Analysis on Resting-state MRI Data\nGraph theory measures were computed using the CONN functional connectivity toolbox inside the SPM program shell. We used an iterative stepwise pipeline that involves four steps to assess both global efficiency of graphs based on resting-state fMRI data and the closeness centrality of nodes within those graphs. First, network nodes were defined. For the first analysis assessing global efficiency on the task PLS network, we used the 12 clusters extracted from the output of the task PLS analysis. For the second analysis assessing closeness centrality, we added the four clusters from the behavior PLS analysis to the original 12 clusters. Second, we averaged the preprocessed BOLD signal for each voxel within our two sets of ROIs and used the Fisher transformed correlation between each ROI as a measure of association between each node. Third, we generated an association matrix between each node in the network and set a threshold of r > 0.15 for each node to define an undirected graph (i.e., adjacency matrix), such that each ROI is associated with a node in the graph and the Fisher transformed r value between each node is used to create the edges within the network. Fourth, we calculated the global efficiency for each participant by computing the average inverse shortest path length between node n to all other nodes in each set. This allowed us to evaluate global efficiency across all nodes contained in each network and measure the closeness centrality of each network node.\n\n\nBehavioral Performance\nThirteen participants (seven women, mean age = 21.77, age range = 18–36 years) of the 16 participants correctly recalled the location of each of the four landmarks. Immediately following the spatial learning task, the orientation decision task was performed. Participants displayed a high degree of interindividual variability in their ability to correctly make orientation decisions based on previously encoded spatial information (M = 3.08, SD = 1.55; RT M = 4938 msec, SD = 1652). We identified no significant performance differences between genders, and we found no significant correlation between accuracy and age of the participants.\n\n\nGlobal Efficiency within a Functionally Defined Orientation Network\nA graph theoretical analysis was conducted using 12 clusters extracted from our task PLS that were uniquely associated with making orientation decisions. Global efficiency values were calculated using resting-state fMRI data and then regressed against accuracy in the orientation decision task. The results of this analysis were significant, indicating that increased global efficiency within this network supported more accurate orientation decision-making.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 107,
+            "text": "Neural Network Configuration and Efficiency Underlies\nIndividual Differences in Spatial Orientation Ability",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 108,
+            "end": 198,
+            "text": "Aiden E. G. F. Arnold, Andrea B. Protzner, Signe Bray, Richard M. Levy,\nand Giuseppe Iaria",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 199,
+            "end": 250,
+            "text": "Journal of Cognitive Neuroscience 26:2, pp. 380–394",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 199,
+            "end": 250,
+            "text": "Journal of Cognitive Neuroscience 26:2, pp. 380–394",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 251,
+            "end": 275,
+            "text": "doi:10.1162/jocn_a_00491",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 276,
+            "end": 419,
+            "text": "Spatial orientation is a complex cognitive process requiring\nthe integration of information processed in a distributed system\nof brain regions.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 435,
+            "end": 648,
+            "text": "Sixteen healthy, right-handed volunteers (nine women,\nmean age = 22 years, age range = 18–36 years) with\nno psychiatric or neurological disorders and normal or\ncorrected-to-normal vision participated in the study.",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 435,
+            "end": 648,
+            "text": "Sixteen healthy, right-handed volunteers (nine women,\nmean age = 22 years, age range = 18–36 years) with\nno psychiatric or neurological disorders and normal or\ncorrected-to-normal vision participated in the study.",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 435,
+            "end": 648,
+            "text": "Sixteen healthy, right-handed volunteers (nine women,\nmean age = 22 years, age range = 18–36 years) with\nno psychiatric or neurological disorders and normal or\ncorrected-to-normal vision participated in the study.",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 435,
+            "end": 648,
+            "text": "Sixteen healthy, right-handed volunteers (nine women,\nmean age = 22 years, age range = 18–36 years) with\nno psychiatric or neurological disorders and normal or\ncorrected-to-normal vision participated in the study.",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 435,
+            "end": 648,
+            "text": "Sixteen healthy, right-handed volunteers (nine women,\nmean age = 22 years, age range = 18–36 years) with\nno psychiatric or neurological disorders and normal or\ncorrected-to-normal vision participated in the study.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6339,
+            "end": 6503,
+            "text": "Thirteen participants (seven women, mean age = 21.77, age range = 18–36 years) of the 16 participants correctly recalled the location of each of the four landmarks.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 653,
+            "end": 763,
+            "text": "participants provided written informed consent as ap-\nproved by the local research ethics board (CHREB 22848).",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 783,
+            "end": 872,
+            "text": "Following the spatial learning task, participants performed an orientation decision task.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 986,
+            "end": 1107,
+            "text": "participants saw the instructions “Left/Right” for 2 sec, followed by a fixation cross that jittered between 4 and 6 sec.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1129,
+            "end": 1278,
+            "text": "a central image of a ground-level view of one of the four landmarks with a second image displaying a second landmark on the right side of the screen.",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1171,
+            "end": 1196,
+            "text": "one of the four landmarks",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 873,
+            "end": 957,
+            "text": "Six experimental trials were randomized with six control trials within a single run.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1542,
+            "end": 1615,
+            "text": "participants had 10 sec to respond whether they should turn left or right",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1078,
+            "end": 1107,
+            "text": "jittered between 4 and 6 sec.",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1945,
+            "end": 2100,
+            "text": "Participants were scanned using a 3T GE Signa scanner with an eight-channel head coil at the Seaman Family MR Research Centre at the University of Calgary.",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2174,
+            "end": 2310,
+            "text": "T2*-weighted EPI sequence (repetition time = 2500 msec, FOV = 24.0 cm, 3 × 3 × 3 mm voxels in interleaved acquisition, flip angle = 77).",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2174,
+            "end": 2310,
+            "text": "T2*-weighted EPI sequence (repetition time = 2500 msec, FOV = 24.0 cm, 3 × 3 × 3 mm voxels in interleaved acquisition, flip angle = 77).",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2174,
+            "end": 2310,
+            "text": "T2*-weighted EPI sequence (repetition time = 2500 msec, FOV = 24.0 cm, 3 × 3 × 3 mm voxels in interleaved acquisition, flip angle = 77).",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2174,
+            "end": 2310,
+            "text": "T2*-weighted EPI sequence (repetition time = 2500 msec, FOV = 24.0 cm, 3 × 3 × 3 mm voxels in interleaved acquisition, flip angle = 77).",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2481,
+            "end": 2621,
+            "text": "High-resolution 3-D anatomical images were acquired using a SPGR sequence (180 slices, FOV = 25.6 cm, 1 × 1 × 1 mm voxels, flip angle = 11).",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6598,
+            "end": 6822,
+            "text": "Participants displayed a high degree of interindividual variability in their ability to correctly make orientation decisions based on previously encoded spatial information (M = 3.08, SD = 1.55; RT M = 4938 msec, SD = 1652).",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2894,
+            "end": 2895,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2869,
+            "end": 2893,
+            "text": "preprocessed using SPM8.",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2930,
+            "end": 2973,
+            "text": "realigning to the first volume of each scan",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3019,
+            "end": 3020,
+            "text": "2",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2869,
+            "end": 2893,
+            "text": "preprocessed using SPM8.",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3094,
+            "end": 3130,
+            "text": "a 12-parameter affine transformation",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3132,
+            "end": 3133,
+            "text": "3",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": []
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2869,
+            "end": 2893,
+            "text": "preprocessed using SPM8.",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3136,
+            "end": 3179,
+            "text": "smoothed using an 8-mm FWHM Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3154,
+            "end": 3179,
+            "text": "8-mm FWHM Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3473,
+            "end": 3474,
+            "text": "4",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "aCompCor — Parameters"
+          ]
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3357,
+            "end": 3394,
+            "text": "CONN functional connectivity toolbox.",
+            "labels": [
+              "aCompCor — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3477,
+            "end": 3524,
+            "text": "anatomical aCompCor method of signal regression",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3970,
+            "end": 3971,
+            "text": "5",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3970,
+            "end": 4068,
+            "text": "motion correction parameters from the spatial realignment were regressed out as nuisance variables",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4070,
+            "end": 4071,
+            "text": "6",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4081,
+            "end": 4170,
+            "text": "average effect across each section (block convolved with a hemodynamic response function)",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4193,
+            "end": 4194,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4233,
+            "end": 4275,
+            "text": "band-passed through a 0.01–0.001 Hz filter",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4255,
+            "end": 4268,
+            "text": "0.01–0.001 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4385,
+            "end": 4386,
+            "text": "8",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4430,
+            "end": 4514,
+            "text": "averaging the temporally filtered residual time series for each voxel within the ROI",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4516,
+            "end": 4517,
+            "text": "9",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software",
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4516,
+            "end": 4596,
+            "text": "Bivariate correlation matrices between each ROI time series were then calculated",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4602,
+            "end": 4603,
+            "text": "10",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Connectivity normalization — Software"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4602,
+            "end": 4663,
+            "text": "a Fisher transformation (inverse hyperbolic tangent function)",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4712,
+            "end": 4770,
+            "text": "normalize the distribution of bivariate correlation values",
+            "labels": [
+              "Connectivity normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5134,
+            "end": 5135,
+            "text": "11",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5245,
+            "end": 5319,
+            "text": "we used the 12 clusters extracted from the output of the task PLS analysis",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5245,
+            "end": 5319,
+            "text": "we used the 12 clusters extracted from the output of the task PLS analysis",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5671,
+            "end": 5672,
+            "text": "12",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Network definition — Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5743,
+            "end": 5814,
+            "text": "set a threshold of r > 0.15 for each node to define an undirected graph",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5749,
+            "end": 5770,
+            "text": "threshold of r > 0.15",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6008,
+            "end": 6009,
+            "text": "13",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6011,
+            "end": 6118,
+            "text": "calculated the global efficiency for each participant by computing the average inverse shortest path length",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4331,
+            "end": 4348,
+            "text": "global efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

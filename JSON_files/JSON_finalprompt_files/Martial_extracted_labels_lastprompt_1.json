@@ -1,0 +1,1158 @@
+{
+  "data": {
+    "text": "From nose to brain: The effect of lemon inhalation observed by whole brain voxel to voxel functional connectivity\n\nCharlotte Martial, Anne-Lise Poirrier, Laurence Pottier, Hélèna Cassol, Sepehr Mortaheb, Rajanikant Panda, Mateo Lopez, Thibault Perrin, Antoine Boilevin, Olivia Gosseries and Steven Laureys\n\ncortex 165 (2023) 119–128. https://doi.org/10.1016/j.cortex.2023.04.012. © 2023 The Author(s). Published by Elsevier Ltd. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).\n\nLemon fragrance is known for its stimulating properties, but its mechanisms of action are not well known yet. This study aimed to examine the effect of lemon essential oil inhalation on healthy participants’ alertness level and their neural correlates using magnetic resonance imaging (MRI). Twenty-one healthy men underwent functional MRI scans in different conditions: a resting state condition, a condition where they were exposed to passive lemon smelling (alternating exposure to lemon and breathing fresh air), and a control condition without lemon fragrance diffusion—the order of the last two conditions being randomized. Alertness levels were assessed immediately after each condition using the Karolinska Sleepiness Scale. Voxel-wise whole-brain global functional connectivity and graph theory analyses were computed to investigate brain functional connectivity and network topology alterations. After lemon fragrance inhalation, we observed a higher level of alertness as compared to resting state—but not compared to control condition. During lemon fragrance inhalation, we found increased global functional connectivity in the thalamus, paralleled by decreased global connectivity in several cortical regions such as precuneus, postcentral and precentral gyrus, lateral occipital cortex and paracingulate gyrus. Graph theory analysis revealed increased network integration in cortical regions typically involved in olfaction and emotion processing such as olfactory bulb, hypothalamus and thalamus, while decreased network segregation in several regions of the posterior part of the brain during olfaction as compared to resting state. The present findings suggest that lemon essential oil inhalation could increase the level of alertness.\n\nA sample of young men (between 21 and 30 years old) were recruited via media advertising and word-of-mouth. Exclusion criteria (established prior to data acquisition) were left-handed, a history of brain trauma, neurosurgical or psychiatric disorder, olfactory dysfunction, addiction, asthma, nasal polyps, claustrophobia, MRI contraindications, smoker, allergic skin reaction to fragrances and scores at the “Sniffin’ Sticks” test falling below the 25th percentile. We did not perform a power analysis.\n\nThe study was approved and carried out in accordance with the recommendations of the ethics committee of the Faculty of Medicine of the University of Liege. All participants completed a written informed consent in accordance with the Declaration of Helsinki and its later amendments. No part of the study procedures and analyses was pre-registered prior to the research being conducted. We report how we determined our sample size, all data exclusions (if any), all inclusion/exclusion criteria, whether inclusion/exclusion criteria were established prior to data analysis, all manipulations, and all measures in the study.\n\nDuring the fMRI session, structural (T1-weighted) MRI images were first acquired. Then, four functional sequences were acquired: (1) a resting state; (2) “odor imagery” condition: a mental imagery task in which they were asked to imagine smelling an odor; (3) “olfactory” condition: an olfactory task in which they were invited to smell the citrus fragrance; and (4) a control condition consisting of the exact same procedure as the olfactory task except that the citrus fragrance was not diffused. The last two sequences were randomized. Participants were randomly assigned to one of the two protocol orders (olfactory condition followed by the control condition vs. the control condition followed by the olfactory condition). For all functional sequences, instructions stated to normally breathe through the nose and to keep eyes closed. During the olfactory condition sequence, 12 alternating periods of olfactory stimulation (lasting 6 s) and rest (i.e., no stimulation at all) (lasting 24 s) were acquired. The olfactory stimulation was delayed for 13 s after the start of the sequence acquisition. The odor stimulus was presented thanks to a MRI-compatible diffuser. Immediately after each functional sequence, we administrated the Karolinska Sleepiness Scale verbally, inside the scanner.\n\nThe natural lemon essential oil organic (citrus limon peel oil) supplied by Naissance corporation was used. Lemon essential oil administration was performed by an electrical MRI-compatible diffuser developed by the Valeo company. A fan (RL65-21/12H Model; 12 V) connected to a power supply (B&K Precision Model BK1550) diffused the essential oil via a stream of air. The fragrance was diffused through a polytetrafluoroethylene (PTFE) pipe to avoid smell contamination over time, going out of the pipe at the speed of 3.5 m/sec. In the MRI room, the pipe was attached to a belt worn by the participant on the torso. A small bag of paraffin beads was imbued with the fragrance and put just before the olfactory condition in the cartridge in order to be diffused. Another similar diffuser system was also used in the control condition to reproduce the exact same conditions as the olfactory condition but without fragrance diffusion.\n\nAll structural and functional images were acquired on a 3 T Siemens Magnetom Vida scanner at the University Hospital Center of Liege (Belgium). A high-resolution T1-weighted image was acquired: T1-weighted 3D gradient echo images using 176 slices, repetition time = 2500 ms, echo time = 2.27 ms, voxel size = 1 × 1 × 1 mm3, flip angle = 4, field of view = 240 × 256 mm2. Multislices T2-weighted fMRI images (sequence of 6.13 min) were obtained: 300 volumes, 39 slices, voxel size = 3.0 × 3.0 × 3.0 mm3, repetition time = 728 ms, echo time = 30 ms, flip angle = 35, field of view = 192 mm, number of voxel = 64 × 64 × 39, delay = 0, slice order = interleaved descending.\n\nData preprocessing was performed using a locally developed pipeline using Statistical Parametric Mapping (SPM) 12 and Artifact Detection Tools (ART). We performed slice timing correction, followed by the realignment of all the functional volumes to the first volume and, in a second pass, to their average. Estimated motion parameters were then used for artifact detection. Realigned functional images were registered to the bias-corrected structural image in the participant space (rigid-body transformation with normalized mutual information cost function). After extracting white matter (WM), grey matter (GM), and cerebrospinal fluid (CSF) masks, all the data and masks were normalized into the standard stereotaxic Montreal Neurological Institute (MNI) space (MNI152 with 2 mm resolution), and functional data were smoothed using a Gaussian kernel of 6-mm full width at half-maximum. WM and CSF masks were further eroded by one voxel. For noise reduction, we modeled the influence of the noise as a voxel specific linear combination of multiple empirically estimated noise sources by deriving the first five principal components from WM and CSF masked functional data separately. These nuisance regressors together with detected outlier volumes, effect of rest/task period, motion parameters and their first-order derivative were regressed out from the voxel-level time series and the denoised time series were temporally band-pass filtered (.008–.09 Hz) using CONN's denoising procedure.\n\nTo assess the brain connectivity in a data driven approach, voxel-wise whole-brain global functional connectivity (GFC) was conducted using the CONN-functional connectivity toolbox. The GFC is a measure of global coherence that computes the average connectivity of every seed voxel to the entire brain. Constant and linear trend regressors were used to create a design matrix in the first-level general linear model (GLM). The designed GLM was fitted to the smoothed data. Further, to assess the network topological organizations, we performed graph theory analyses using CONN toolbox. First, we extracted the time series of BOLD signal using AAL atlas for 100 brain region of interests (ROIs) consisting of cortical and subcortical regions. Then, we constructed the brain connectivity matrix using ROIs-to-ROIs Pearson correlation. Followed by, the connectivity matrix was thresholded and binarised. On the binarised connectivity matrix, we calculated brain network integration and segregation using global and local efficiency respectively.\n\nThe data and the analysis code that support the findings of this study are available from the corresponding author upon request and after meeting the condition established by the local ethical committee (i.e., data sharing agreement).\n\nTwenty-one healthy men (mean age 24 ± 3 years) were included in the present study.\n\nNo participant was excluded due to the Sniffin’ Sticks test."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 113,
+            "text": "From nose to brain: The effect of lemon inhalation observed by whole brain voxel to voxel functional connectivity",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 115,
+            "end": 132,
+            "text": "Charlotte Martial",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 319,
+            "end": 323,
+            "text": "2023",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 415,
+            "end": 427,
+            "text": "Elsevier Ltd",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 334,
+            "end": 378,
+            "text": "https://doi.org/10.1016/j.cortex.2023.04.012",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 642,
+            "end": 823,
+            "text": "This study aimed to examine the effect of lemon essential oil inhalation on healthy participants’ alertness level and their neural correlates using magnetic resonance imaging (MRI).",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 429,
+            "end": 530,
+            "text": "This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8856,
+            "end": 8983,
+            "text": "The data and the analysis code that support the findings of this study are available from the corresponding author upon request",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8856,
+            "end": 8983,
+            "text": "The data and the analysis code that support the findings of this study are available from the corresponding author upon request",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3075,
+            "end": 3177,
+            "text": "No part of the study procedures and analyses was pre-registered prior to the research being conducted.",
+            "labels": [
+              "Preregistered"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8988,
+            "end": 9090,
+            "text": "after meeting the condition established by the local ethical committee (i.e., data sharing agreement).",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5706,
+            "end": 5727,
+            "text": "Siemens Magnetom Vida",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6104,
+            "end": 6113,
+            "text": "39 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6194,
+            "end": 6209,
+            "text": "flip angle = 35",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6054,
+            "end": 6074,
+            "text": "sequence of 6.13 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6211,
+            "end": 6233,
+            "text": "field of view = 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6149,
+            "end": 6173,
+            "text": "repetition time = 728 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6175,
+            "end": 6192,
+            "text": "echo time = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6115,
+            "end": 6147,
+            "text": "voxel size = 3.0 × 3.0 × 3.0 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9092,
+            "end": 9174,
+            "text": "Twenty-one healthy men (mean age 24 ± 3 years) were included in the present study.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6391,
+            "end": 6430,
+            "text": "Statistical Parametric Mapping (SPM) 12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3549,
+            "end": 3914,
+            "text": "a resting state; (2) “odor imagery” condition: a mental imagery task in which they were asked to imagine smelling an odor; (3) “olfactory” condition: an olfactory task in which they were invited to smell the citrus fragrance; and (4) a control condition consisting of the exact same procedure as the olfactory task except that the citrus fragrance was not diffused.",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4235,
+            "end": 4254,
+            "text": "to keep eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4297,
+            "end": 4412,
+            "text": "12 alternating periods of olfactory stimulation (lasting 6 s) and rest (i.e., no stimulation at all) (lasting 24 s)",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4346,
+            "end": 4357,
+            "text": "lasting 6 s",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4399,
+            "end": 4411,
+            "text": "lasting 24 s",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4144,
+            "end": 4255,
+            "text": "For all functional sequences, instructions stated to normally breathe through the nose and to keep eyes closed.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4520,
+            "end": 4588,
+            "text": "The odor stimulus was presented thanks to a MRI-compatible diffuser.",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4297,
+            "end": 4412,
+            "text": "12 alternating periods of olfactory stimulation (lasting 6 s) and rest (i.e., no stimulation at all) (lasting 24 s)",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 824,
+            "end": 846,
+            "text": "Twenty-one healthy men",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2309,
+            "end": 2336,
+            "text": "between 21 and 30 years old",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2298,
+            "end": 2307,
+            "text": "young men",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2458,
+            "end": 2469,
+            "text": "left-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2681,
+            "end": 2751,
+            "text": "scores at the “Sniffin’ Sticks” test falling below the 25th percentile",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9176,
+            "end": 9236,
+            "text": "No participant was excluded due to the Sniffin’ Sticks test.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2791,
+            "end": 2947,
+            "text": "The study was approved and carried out in accordance with the recommendations of the ethics committee of the Faculty of Medicine of the University of Liege.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1162,
+            "end": 1264,
+            "text": "Alertness levels were assessed immediately after each condition using the Karolinska Sleepiness Scale.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6480,
+            "end": 6503,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6391,
+            "end": 6430,
+            "text": "Statistical Parametric Mapping (SPM) 12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6505,
+            "end": 6582,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6391,
+            "end": 6430,
+            "text": "Statistical Parametric Mapping (SPM) 12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6521,
+            "end": 6562,
+            "text": "realignment of all the functional volumes",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6691,
+            "end": 6773,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6391,
+            "end": 6430,
+            "text": "Statistical Parametric Mapping (SPM) 12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6800,
+            "end": 6874,
+            "text": "rigid-body transformation with normalized mutual information cost function",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6996,
+            "end": 7110,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6391,
+            "end": 6430,
+            "text": "Statistical Parametric Mapping (SPM) 12",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6996,
+            "end": 7080,
+            "text": "normalized into the standard stereotaxic Montreal Neurological Institute (MNI) space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7082,
+            "end": 7109,
+            "text": "MNI152 with 2 mm resolution",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7116,
+            "end": 7204,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6391,
+            "end": 6430,
+            "text": "Statistical Parametric Mapping (SPM) 12",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7154,
+            "end": 7169,
+            "text": "Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7173,
+            "end": 7204,
+            "text": "6-mm full width at half-maximum",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7406,
+            "end": 7500,
+            "text": "6",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7783,
+            "end": 7809,
+            "text": "CONN's denoising procedure",
+            "labels": [
+              "Extract regressors — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7430,
+            "end": 7450,
+            "text": "principal components",
+            "labels": [
+              "Extract regressors — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7419,
+            "end": 7450,
+            "text": "first five principal components",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7419,
+            "end": 7500,
+            "text": "7",
+            "labels": [
+              "CompCor — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7783,
+            "end": 7809,
+            "text": "CONN's denoising procedure",
+            "labels": [
+              "CompCor — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7430,
+            "end": 7500,
+            "text": "principal components from WM and CSF masked functional data separately",
+            "labels": [
+              "CompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7419,
+            "end": 7450,
+            "text": "first five principal components",
+            "labels": [
+              "CompCor — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7596,
+            "end": 7698,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7783,
+            "end": 7809,
+            "text": "CONN's denoising procedure",
+            "labels": [
+              "motion regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7652,
+            "end": 7698,
+            "text": "regressed out from the voxel-level time series",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7596,
+            "end": 7646,
+            "text": "motion parameters and their first-order derivative",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7502,
+            "end": 7698,
+            "text": "9",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7783,
+            "end": 7809,
+            "text": "CONN's denoising procedure",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7358,
+            "end": 7402,
+            "text": "multiple empirically estimated noise sources",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7542,
+            "end": 7646,
+            "text": "detected outlier volumes, effect of rest/task period, motion parameters and their first-order derivative",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7733,
+            "end": 7809,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7783,
+            "end": 7809,
+            "text": "CONN's denoising procedure",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7744,
+            "end": 7762,
+            "text": "band-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7764,
+            "end": 7775,
+            "text": ".008–.09 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8449,
+            "end": 8552,
+            "text": "11",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8384,
+            "end": 8396,
+            "text": "CONN toolbox",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8455,
+            "end": 8464,
+            "text": "AAL atlas",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8469,
+            "end": 8552,
+            "text": "100 brain region of interests (ROIs) consisting of cortical and subcortical regions",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8405,
+            "end": 8552,
+            "text": "12",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8384,
+            "end": 8396,
+            "text": "CONN toolbox",
+            "labels": [
+              "Time series ROI — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8422,
+            "end": 8448,
+            "text": "time series of BOLD signal",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8469,
+            "end": 8552,
+            "text": "100 brain region of interests (ROIs) consisting of cortical and subcortical regions",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8579,
+            "end": 8643,
+            "text": "13",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8384,
+            "end": 8396,
+            "text": "CONN toolbox",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8611,
+            "end": 8643,
+            "text": "ROIs-to-ROIs Pearson correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8751,
+            "end": 8853,
+            "text": "14",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8384,
+            "end": 8396,
+            "text": "CONN toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8813,
+            "end": 8840,
+            "text": "global and local efficiency",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

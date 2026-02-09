@@ -1,0 +1,829 @@
+{
+  "data": {
+    "text": "RESEARCH ARTICLE\nLongitudinal functional brain network reconfiguration in healthy aging\nBrigitta Malagurski, Franziskus Liem, Jessica Oschwald, Susan Mérillat, Lutz Jäncke\nDOI: 10.1002/hbm.25161\nHum Brain Mapp. 2020;41:4829–4845. Human Brain Mapping published by Wiley Periodicals LLC.\n\nAbstract\nHealthy aging is associated with changes in cognitive performance and functional brain organization. Here, we used a longitudinal dataset consisting of four occasions of resting-state-fMRI and cognitive testing in 150 healthy older adults. We applied a graph-theoretic analysis to investigate the time-evolving modular structure of the whole-brain network, by maximizing the multilayer modularity across four time points.\n\nParticipants\nLongitudinal resting-state fMRI (rs-fMRI) data were taken from the Longitudinal Healthy Aging Brain Database Project (LHAB; Switzerland)—an ongoing project conducted at the University of Zurich. We used data from the first four measurement occasions (baseline, 1-year follow-up, 2-year follow-up, 4-year follow-up). The baseline dataset included 232 participants (age at baseline: M = 70.8, range = 64–87; females: 114). Inclusion criteria for study participation at baseline were age ≥64, right-handedness, fluent German language proficiency, a score of ≥26 on the Mini Mental State Examination, no self-reported neurological disease of the central nervous system and no contraindications to MRI. The study was approved by the ethical committee of the canton of Zurich. Participation was voluntary and all participants gave written informed consent in accordance with the declaration of Helsinki. For the present analysis, we only included participants with complete rs-fMRI data (four measurement occasions). At 4-year follow-up, the dataset still comprised 74.6% of the baseline sample (n = 173), of which 86.7% (n = 150, age at baseline: M = 69.8, range = 64–83; females: 71) had complete data for rs-fMRI.\n\nNeuropsychological assessment\nProcessing speed was assessed using four psychometric paper-pencil tests: the number of correct responses across two test parts of the Identical Pictures Test; the number of correct responses within 2 minutes on the Digit Symbol Test; time in seconds, including the time used when an error was made, needed to finish the Trail-Making-Test A; and number of correct responses within 2 minutes on the LPS14, a subtest from the Leistungsprüfsystem 50+. Learning and memory encoding was defined using the number of correctly reproduced abstract designs at the first five trials of the DCS figural memory test, and total correct responses over five immediate free recall trials from the Verbal Learning and Memory Test.\n\nMRI acquisition\nMRI scans were acquired at the University Hospital of Zurich on a Philips Ingenia 3T scanner (Philips Medical Systems, Best, The Netherlands). T1-weighted structural images were acquired using a gradient echo sequence (3D turbo field echo, 160 slices, TR = 8.1 ms, TE = 3.7 ms, FOV = 240 × 240 × 160 mm, flip angle = 8°, isotropic voxel size = 1.0 × 1.0 × 1.0 mm3). Two hundred and twenty-five multislice T2*-weighted volumes were retrieved with a gradient echo-planar sequence using transverse slice orientation (43 slices; voxel size: 3.5 × 3.5 × 3.5 mm3; TR = 2,000 ms; TE = 21 ms; flip angle = 76°; FOV = 220 × 220 × 150 mm).\n\nMRI preprocessing\nPreprocessing was performed using the fMRIPrep BIDS app (v1.0.5), a Nipype based tool. Each T1-weighted volume was corrected for intensity nonuniformity using N4 Bias Field Correction v2.1.0 and skull-stripped using ANTs v2.1.0 with the OASIS template. Spatial normalization to the ICBM 152 Nonlinear Asymmetrical template version 2009c was performed through nonlinear registration with the antsRegistration tool of ANTs v2.1.0, using brain-extracted versions of both the T1-weighted volume and the template. Brain tissue segmentation of cerebrospinal fluid, white matter, and gray matter was performed on the brain-extracted T1-weighted image using FAST (FSL v5.0.9). Functional data were slice-time corrected using 3dTshift from AFNI v16.2.07 and motion corrected using MCFLIRT (FSL v5.0.9). This was followed by coregistration to the corresponding T1-weighted image using boundary-based registration with 9 degrees of freedom, implemented in FLIRT (FSL). Motion-correcting transformations, BOLD-to-T1-weighted transformation, and T1-weighted-to-template (MNI) warp were concatenated and applied in a single step using antsApplyTransforms from ANTs v2.1.0 with Lanczos interpolation. Further preprocessing steps were performed using the CONN toolbox. Confound regressors were defined according to the 36-parameter model: six motion parameters, signals estimated from cerebrospinal fluid and white matter, global signal, their first derivatives, quadratic terms, and squares of derivatives were regressed out from functional data separately for each run. The resting-state fMRI data were temporally bandpass filtered in the 0.01–0.1 Hz frequency range, with simultaneous filtering and nuisance regression. Global signal regression was performed in accordance with previous studies on aging.\n\nNetwork definition\nThe regions of interest used to build the network were selected from the atlas of Schaefer and colleagues, corresponding to 200 cortical regions classified into seven well-known resting state networks according to the Yeo-Krienen atlas: frontoparietal control, default mode, dorsal attention, salience ventral attention, limbic, somatomotor, and visual networks. The time series were averaged over the voxels in each region of interest and correlated between each pair of nodes using Pearson correlation. Each correlation coefficient was then Fisher r-to-z transformed, and negative z values were excluded from the analysis in accordance with previous studies.\n\nData availability\nThe data for this manuscript are not publicly available. Since data collection was started in 2011, when public data sharing and open science were not yet widely discussed, the consent does not allow for the public sharing of the data. At the moment, data can only be accessed via collaborations with the University Research Priority Program \"Dynamics of Healthy Aging\".\n\nOpen access\nThis is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 88,
+            "end": 107,
+            "text": "Brigitta Malagurski",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 17,
+            "end": 87,
+            "text": "Longitudinal functional brain network reconfiguration in healthy aging",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 211,
+            "end": 215,
+            "text": "2020",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 230,
+            "end": 285,
+            "text": "Human Brain Mapping published by Wiley Periodicals LLC.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 177,
+            "end": 194,
+            "text": "10.1002/hbm.25161",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 296,
+            "end": 535,
+            "text": "Healthy aging is associated with changes in cognitive performance and functional brain organization. Here, we used a longitudinal dataset consisting of four occasions of resting-state-fMRI and cognitive testing in 150 healthy older adults.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6230,
+            "end": 6320,
+            "text": "This is an open access article under the terms of the Creative Commons Attribution License",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5846,
+            "end": 5902,
+            "text": "The data for this manuscript are not publicly available.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2771,
+            "end": 2789,
+            "text": "Philips Ingenia 3T",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3219,
+            "end": 3228,
+            "text": "43 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3290,
+            "end": 3306,
+            "text": "flip angle = 76°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3308,
+            "end": 3332,
+            "text": "FOV = 220 × 220 × 150 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3263,
+            "end": 3276,
+            "text": "TR = 2,000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3278,
+            "end": 3288,
+            "text": "TE = 21 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3230,
+            "end": 3261,
+            "text": "voxel size: 3.5 × 3.5 × 3.5 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1848,
+            "end": 1855,
+            "text": "n = 150",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 745,
+            "end": 773,
+            "text": "resting-state fMRI (rs-fMRI)",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3392,
+            "end": 3418,
+            "text": "fMRIPrep BIDS app (v1.0.5)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1048,
+            "end": 1094,
+            "text": "The baseline dataset included 232 participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1096,
+            "end": 1136,
+            "text": "age at baseline: M = 70.8, range = 64–87",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1222,
+            "end": 1238,
+            "text": "right-handedness",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1138,
+            "end": 1150,
+            "text": "females: 114",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1153,
+            "end": 1429,
+            "text": "Inclusion criteria for study participation at baseline were age ≥64, right-handedness, fluent German language proficiency, a score of ≥26 on the Mini Mental State Examination, no self-reported neurological disease of the central nervous system and no contraindications to MRI.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1430,
+            "end": 1502,
+            "text": "The study was approved by the ethical committee of the canton of Zurich.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2048,
+            "end": 2207,
+            "text": "the number of correct responses across two test parts of the Identical Pictures Test; the number of correct responses within 2 minutes on the Digit Symbol Test",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3441,
+            "end": 3442,
+            "text": "1",
+            "labels": [
+              "INU correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3513,
+            "end": 3544,
+            "text": "N4 Bias Field Correction v2.1.0",
+            "labels": [
+              "INU correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "INU correction — Algorithm",
+            "INU correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3545,
+            "end": 3546,
+            "text": "2",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3570,
+            "end": 3581,
+            "text": "ANTs v2.1.0",
+            "labels": [
+              "Skull stripping — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Skull stripping — Algorithm",
+            "Skull stripping — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3607,
+            "end": 3608,
+            "text": "3",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3745,
+            "end": 3781,
+            "text": "antsRegistration tool of ANTs v2.1.0",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization — Algorithm",
+            "Spatial normalization — Parameters"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3863,
+            "end": 3864,
+            "text": "4",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4004,
+            "end": 4021,
+            "text": "FAST (FSL v5.0.9)",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Algorithm",
+            "Segmentation — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4023,
+            "end": 4024,
+            "text": "5",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4071,
+            "end": 4098,
+            "text": "3dTshift from AFNI v16.2.07",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4099,
+            "end": 4100,
+            "text": "6",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4126,
+            "end": 4146,
+            "text": "MCFLIRT (FSL v5.0.9)",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4148,
+            "end": 4149,
+            "text": "7",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4299,
+            "end": 4310,
+            "text": "FLIRT (FSL)",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Algorithm",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4312,
+            "end": 4313,
+            "text": "8",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4475,
+            "end": 4511,
+            "text": "antsApplyTransforms from ANTs v2.1.0",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Algorithm",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4607,
+            "end": 4608,
+            "text": "9",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4657,
+            "end": 4675,
+            "text": "36-parameter model",
+            "labels": [
+              "Extract regressors — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Extract regressors — Software",
+            "Extract regressors — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4677,
+            "end": 4678,
+            "text": "10",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4677,
+            "end": 4698,
+            "text": "six motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5061,
+            "end": 5062,
+            "text": "11",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5061,
+            "end": 5085,
+            "text": "Global signal regression",
+            "labels": [
+              "Global signal — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Global signal — Software",
+            "Global signal — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4910,
+            "end": 4911,
+            "text": "12",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4954,
+            "end": 4971,
+            "text": "bandpass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software",
+            "Temporal filt — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4979,
+            "end": 4990,
+            "text": "0.01–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Regressors filter",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5008,
+            "end": 5009,
+            "text": "13",
+            "labels": [
+              "Regressors filter — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Regressors filter",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5013,
+            "end": 5059,
+            "text": "simultaneous filtering and nuisance regression",
+            "labels": [
+              "Regressors filter — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Regressors filter — Software",
+            "Regressors filter — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5221,
+            "end": 5366,
+            "text": "selected from the atlas of Schaefer and colleagues, corresponding to 200 cortical regions classified into seven well-known resting state networks",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Step Number",
+            "Atlas definition — Software",
+            "Atlas definition — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5529,
+            "end": 5601,
+            "text": "The time series were averaged over the voxels in each region of interest",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Step Number",
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5650,
+            "end": 5669,
+            "text": "Pearson correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Step Number",
+            "Compute connectivity — Software",
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5709,
+            "end": 5734,
+            "text": "Fisher r-to-z transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Connectivity normalization — Step Number",
+            "Connectivity normalization — Software",
+            "Connectivity normalization — Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5740,
+            "end": 5771,
+            "text": "negative z values were excluded",
+            "labels": [
+              "Negative correlation — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Negative correlation — Step Number",
+            "Negative correlation — Software",
+            "Negative correlation — Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "data": {
+    "text": "The regions of interest (ROIs) used to construct the network properties were selected from the Schaefer atlas (Schaefer et al., 2018), corresponding to 100 cortical regions classified into seven resting-state networks, namely, frontoparietal control, DMN, DAN, salience ventral attention, LIMB, SM, and VIS networks (Figure 1 and Supplementary Table 1). 3dNetCorr command from the analysis of functional neuroimaging (Cox, 1996) was used to produce the network adjacency matrix for each participant. The mean time-series for each region was correlated with the mean time-series for all other regions and extracted for each participant. Furthermore, these time courses are used to estimate the size of signal fluctuation in each node, as well as to estimate the connectivity between pairs of nodes using L2-regularization (rho = 0.5 for ridge regression option in FSLNets). More details can be found in the study by Miller et al. (2016). A partial correlation, r, between all pairs of signals was computed to form a 100-by-100 (i.e., Schaefer atlas) connectivity matrix, which was then Fisher z-transformed. Self-connections and negative correlations were set to zero. As rs-fMRI can vary across magnitude, the use of undirected weighted matrices may provide a more comprehensive picture of the functional brain networks. The stronger the weights, the stronger the connections between nodes. In addition, we used an undirected graph because the rs-fMRI data do not permit inferences about the possible direction of information flow. However, the undirected graph is useful as it allows us to identify existing connections between specific pairs of network nodes (Fornito et al., 2016). Therefore, we used weighted undirected matrices in our study.\n\nAll graph theory measures were derived using the Brain Connectivity Toolbox (Rubinov and Sporns, 2010). Functional integration can be assessed by global efficiency, which refers to the transmission of information at a global level, and characteristic path length, which is the average shortest distance between any two nodes in the network. To assess network segregation, which characterizes the specialized processing of the brain at a local level, we calculated the Louvain modularity and transitivity. Louvain modularity is a community detection method, which iteratively transforms the network into a set of communities, each consisting of a group of nodes. Higher modularity values indicate denser within-modular connections but sparer connections between nodes that are in different modules. Transitivity refers to the sum of all the clustering coefficients around each node in the network and is normalized collectively. Finally, strength (i.e., weighted degree) is described as the sum of all neighboring edge weights. High connectivity strength indicates a stronger connectivity between the regions, which provides an estimation of functional importance of each network. Subsequently, we averaged the two hemispheres to derive a value for each node and averaged within each network to derive a value for each of the 7 networks for strength measures. A total of eleven graph theory measures were used in the current study."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 95,
+            "end": 109,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 95,
+            "end": 109,
+            "text": "Schaefer atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 152,
+            "end": 172,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 152,
+            "end": 172,
+            "text": "100 cortical regions",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 500,
+            "end": 536,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 500,
+            "end": 536,
+            "text": "The mean time-series for each region",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 354,
+            "end": 416,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 354,
+            "end": 416,
+            "text": "3dNetCorr command from the analysis of functional neuroimaging",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 937,
+            "end": 1004,
+            "text": "A partial correlation, r, between all pairs of signals was computed",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1015,
+            "end": 1068,
+            "text": "100-by-100 (i.e., Schaefer atlas) connectivity matrix",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 803,
+            "end": 871,
+            "text": "L2-regularization (rho = 0.5 for ridge regression option in FSLNets)",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1085,
+            "end": 1105,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1085,
+            "end": 1105,
+            "text": "Fisher z-transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1107,
+            "end": 1166,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1107,
+            "end": 1166,
+            "text": "Self-connections and negative correlations were set to zero",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1217,
+            "end": 1245,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1217,
+            "end": 1245,
+            "text": "undirected weighted matrices",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1404,
+            "end": 1431,
+            "text": "we used an undirected graph",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 189,
+            "end": 315,
+            "text": "8",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 189,
+            "end": 315,
+            "text": "seven resting-state networks, namely, frontoparietal control, DMN, DAN, salience ventral attention, LIMB, SM, and VIS networks",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1797,
+            "end": 1823,
+            "text": "9",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1797,
+            "end": 1823,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1894,
+            "end": 2087,
+            "text": "global efficiency, which refers to the transmission of information at a global level, and characteristic path length, which is the average shortest distance between any two nodes in the network",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2198,
+            "end": 2251,
+            "text": "we calculated the Louvain modularity and transitivity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2676,
+            "end": 2773,
+            "text": "Finally, strength (i.e., weighted degree) is described as the sum of all neighboring edge weights",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2928,
+            "end": 3105,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2928,
+            "end": 3105,
+            "text": "Subsequently, we averaged the two hemispheres to derive a value for each node and averaged within each network to derive a value for each of the 7 networks for strength measures",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2928,
+            "end": 3105,
+            "text": "Subsequently, we averaged the two hemispheres to derive a value for each node and averaged within each network to derive a value for each of the 7 networks for strength measures",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

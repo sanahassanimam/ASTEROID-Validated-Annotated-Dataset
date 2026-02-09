@@ -1,0 +1,162 @@
+{ "data": { "text": "fMRI data acquisition and processing. All images were acquired using Siemens Magnetom 3 T Trio scanner using a 32-channel head coil and processed exactly as previously described. … fMRI images were processed using FSL tools (FMRIB Software Library version 5.0; available at: https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/) … Pre-processing of rs-fMRI data (using FSL FEAT tool) included slice timing and motion correction, spatial smoothing (3 mm FWHM kernel), nuisance signal regression via GLM analysis, temporal band pass filtering (0.009–0.1 Hz), linear registration of functional images to structural images, and non-linear registration of structural images to MNI 152 template … MCFLIRT … DVARS …\n\nGraph theory measures. Weighted connectivity matrices for each brain network were computed across all subjects. Craddock’s 800 parcellated brain atlas was used to extract the mean time series signal … 662 regions common across subjects were identified. … a connectivity matrix consisting of 662 × 662 pairwise correlations between the average BOLD times series signals was computed and normalized using Fisher’s Z-transformation. Fisher Z-transformed correlations were then multiplied by their standard deviation (approximated as σ = 1/√(n − 3) …). Statistically significant positive correlations (p < 0.05) were identified and retained based on Bonferroni-corrected Z-thresholds … Negative and non-significant correlations were dropped. Next, the thresholded Z scores were rescaled to represent connection weights ranging from 0 to 1. … in weighted graphs connection weights … preserved … Subject-wise weighted connectivity matrices were next derived for each of the 7 brain network maps, namely, visual, somatosensory, limbic, default mode, dorsal attention, ventral attention and frontoparietal (brain masks available at: https://surfer.nmr.mgh.harvard.edu/fsl-wiki/CorticalParcellationYeo2011). … Global efficiency provides a measure of how effectively information is integrated across the entire network. … Local efficiency measures how interconnected neighboring nodes are to each other …" }, "annotations": [ { "result": [ { "from_name": "Time series ROI", "to_name": "text", "type": "labels", "value": { "start": 154, "end": 196, "text": "FSL tools (FMRIB Software Library version 5.0)", "labels": ["Time series ROI — Software"] } }, { "from_name": "Time series ROI", "to_name": "text", "type": "labels", "value": { "start": 233, "end": 243, "text": "FSL FEAT", "labels": ["Time series ROI — Software"] } }, { "from_name": "Time series ROI", "to_name": "text", "type": "labels", "value": { "start": 392, "end": 414, "text": "band pass filtering (0.009–0.1 Hz)", "labels": ["Time series ROI — Parameters"] } }, { "from_name": "Time series ROI", "to_name": "text", "type": "labels", "value": { "start": 587, "end": 594, "text": "DVARS", "labels": ["Time series ROI — Algorithm/Type"] } }, { "from_name": "Time series ROI", "to_name": "text", "type": "labels", "value": { "start": 0, "end": 5, "text": "3", "labels": ["Time series ROI — Step Number"] } },
+    {
+      "from_name": "Atlas definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 729, "end": 758, "text": "Craddock’s 800 parcellated brain atlas", "labels": ["Atlas definition — Parameters"] }
+    },
+    {
+      "from_name": "Atlas definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 706, "end": 713, "text": "atlas", "labels": ["Atlas definition — Type"] }
+    },
+    {
+      "from_name": "Atlas definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 660, "end": 666, "text": "1", "labels": ["Atlas definition — Step Number"] }
+    },
+
+    {
+      "from_name": "ROI definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 800, "end": 811, "text": "662 regions", "labels": ["ROI definition — Parameters"] }
+    },
+    {
+      "from_name": "ROI definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 660, "end": 666, "text": "2", "labels": ["ROI definition — Step Number"] }
+    },
+
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 873, "end": 909, "text": "662 × 662 pairwise correlations", "labels": ["Compute connectivity — Parameters"] }
+    },
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 889, "end": 909, "text": "pairwise correlations", "labels": ["Compute connectivity — Algorithm"] }
+    },
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 660, "end": 666, "text": "4", "labels": ["Compute connectivity — Step Number"] }
+    },
+
+    {
+      "from_name": "Connectivity normalization",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 930, "end": 956, "text": "Fisher’s Z-transformation", "labels": ["Connectivity normalization — Algorithm"] }
+    },
+    {
+      "from_name": "Connectivity normalization",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 957, "end": 999, "text": "σ = 1/√(n − 3)", "labels": ["Connectivity normalization — Parameters"] }
+    },
+    {
+      "from_name": "Connectivity normalization",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 660, "end": 666, "text": "5", "labels": ["Connectivity normalization — Step Number"] }
+    },
+
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1009, "end": 1059, "text": "Bonferroni-corrected Z-thresholds", "labels": ["Sparsity control — Algorithm/Type"] }
+    },
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 992, "end": 1006, "text": "p < 0.05", "labels": ["Sparsity control — Parameters"] }
+    },
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 660, "end": 666, "text": "9", "labels": ["Sparsity control — Step Number"] }
+    },
+
+    {
+      "from_name": "Negative correlation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1061, "end": 1099, "text": "Negative and non-significant correlations were dropped", "labels": ["Negative correlation — Type"] }
+    },
+    {
+      "from_name": "Negative correlation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 660, "end": 666, "text": "8", "labels": ["Negative correlation — Step Number"] }
+    },
+
+    {
+      "from_name": "Graph characteristics",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1111, "end": 1142, "text": "connection weights ranging from 0 to 1", "labels": ["Graph characteristics — Parameters"] }
+    },
+    {
+      "from_name": "Graph characteristics",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1148, "end": 1161, "text": "weighted graphs", "labels": ["Graph characteristics — Algorithm/Type"] }
+    },
+    {
+      "from_name": "Graph characteristics",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 660, "end": 666, "text": "7", "labels": ["Graph characteristics — Step Number"] }
+    },
+
+    {
+      "from_name": "Network definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1183, "end": 1278, "text": "visual, somatosensory, limbic, default mode, dorsal attention, ventral attention and frontoparietal", "labels": ["Network definition — Parameters"] }
+    },
+    {
+      "from_name": "Network definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1229, "end": 1278, "text": "frontoparietal", "labels": ["Network definition — Algorithm/Type"] }
+    },
+    {
+      "from_name": "Network definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 660, "end": 666, "text": "6", "labels": ["Network definition — Step Number"] }
+    },
+
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1301, "end": 1317, "text": "Global efficiency", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1383, "end": 1398, "text": "Local efficiency", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 660, "end": 666, "text": "10", "labels": ["Graph measures — Step Number"] }
+    }
+  ]
+}
+] }

@@ -1,0 +1,1301 @@
+{
+  "data": {
+    "text": "Aging and Network Properties: Stability Over Time and Links with Learning during Working Memory Training\nFrontiers in Aging Neuroscience | Volume 9 | Article 419\ndoi: 10.3389/fnagi.2017.00419\nPublished: 04 January 2018\nAuthors: Alexandru D. Iordan, Katherine A. Cooke, Kyle D. Moored, Benjamin Katz, Martin Buschkuehl,\nSusanne M. Jaeggi, John Jonides, Scott J. Peltier, Thad A. Polk, Patricia A. Reuter-Lorenz\n\nGrowing evidence suggests that healthy aging affects the configuration of large-scale functional brain networks. This includes reducing network modularity and local efficiency. However, the stability of these effects over time and their potential role in learning remain poorly understood. The goal of the present study was to further clarify previously reported age effects on “resting-state” networks, to test their reliability over time, and to assess their relation to subsequent learning during training.\n\nImaging Protocol\nFunctional MRI data were acquired during 8 min of resting state, following completion of a verbal WM task, in 2 sessions 2 weeks apart (t1, t2). Participants were instructed to view a fixation cross in the center of the screen while keeping their mind calm and relaxed. Imaging data were collected using a 3 T General Electric MR750 scanner with an eight-channel head coil. Functional images were acquired in ascending order using a spiral-in sequence, with MR parameters: TR = 2,000 ms; TE = 30 ms; flip angle = 90°; field of view = 220 × 220 mm²; matrix size = 64 × 64; slice thickness = 3 mm, no gap; 43 slices; voxel size = 3.44 × 3.44 × 3 mm³. After an initial 10 s of signal stabilization, 235 volumes were acquired. A high-resolution T1-weighted anatomical image was also collected using SPGR (TR = 12.24 ms; TE = 5.18 ms; flip angle = 15°; field of view = 256 × 256 mm²; matrix size = 256 × 256; slice thickness = 1 mm; 156 slices; voxel size = 1 × 1 × 1 mm³). Images were de-spiked in k-space and reconstructed using an in-house iterative reconstruction algorithm with field-map correction.\n\nPreprocessing\nPreprocessing was performed using SPM12. Functional images were slice-time corrected, realigned, and co-registered to the anatomical image using a mean functional image. A study-specific anatomical template was created using DARTEL based on segmented gray matter and white matter tissue classes. The DARTEL flowfields and MNI transformation were then applied to the functional images and to the segments, and the functional images were resampled to 3 × 3 × 3 mm³ voxel size. To minimize artificial local spatial correlations, no additional spatial smoothing was applied.\n\nIdentification of outlier scans was performed using Artifact Detection Tools (ART). Scans were classified as outliers if frame-to-frame difference exceeded 0.5 mm in composite motion or 3 standard deviations in the global mean signal.\n\nFunctional Connectivity Analysis\nTo remove physiological and other sources of noise from the fMRI time series we used linear regression and the anatomical CompCor method, as implemented in CONN. Each participant’s white matter and cerebrospinal fluid segments, eroded by 1 voxel to minimize partial volume effects, were used as noise ROIs. The following temporal covariates were added to the model: signal extracted from each participant’s noise ROIs (5 principal component analysis parameters for each), motion parameters (3 rotation and 3 translation parameters, plus their first-order temporal derivatives), regressors for each outlier scan (“scrubbing”), and a session-onset regressor. The residual fMRI time series were band-pass filtered (0.01 Hz < f < 0.1 Hz).\n\nParticipants\nA sample of 23 younger adults (YA) and 23 healthy, cognitively normal older adults (OA) were recruited. All participants were right-handed, native English speakers with normal or corrected-to-normal hearing and vision and were screened for history of head injury, psychiatric illness, or alcohol/drug abuse. Data from 3 OA were excluded due to technical issues related to brain-imaging data acquisition. Thus, the sample for fMRI analyses consisted of 23 YA (age range: 18–28; 9 females; mean age 21.3 ± 2.5 years) and 20 OA (age range: 64–76; 9 females; mean age 68.3 ± 3.6 years). For analyses linking fMRI with behavioral results, 2 additional participants (1 OA) were excluded due to technical issues, and thus these analyses were reported on 22 YA and 19 OA.\n\nEthics\nThe University of Michigan Institutional Review Board approved all procedures, and all participants provided informed consent prior to participating.\n\nBehavioral measure\nThe adaptive training task consisted of a modified WM item-recognition task. Here, we focus on training-related improvements in WM performance as measured by mean set size achieved during each training session for each participant.\n\nAvailability\nThis is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY).\n\n\nPreprocessing\nPreprocessing was performed using\n(Wellcome\nDepartment of Cognitive Neurology, London). Functional\nimages were slice-time corrected, realigned, and co-registered\nto the anatomical image using a mean functional image. A\nstudy-speciﬁc anatomical template was created (younger and\nolder adults together; Geerligs et al., 2015), using Diﬀeomorphic\nAnatomical Registration Through Exponentiated Lie Algebra\n(DARTEL) (Ashburner, 2007), based on segmented gray matter\nand white matter tissue classes, to optimize inter-participant\nalignment (Klein et al., 2009). The DARTEL ﬂowﬁelds and MNI\ntransformation were then applied to the functional images and\nto the segments, and the functional images were resampled\nto 3 × 3 × 3 mm3 voxel size. To minimize artiﬁcial local\nspatial correlations, no additional spatial smoothing was applied\n(Salvador et al., 2005; Achard et al., 2006; Achard and Bullmore,\n2007; Wang et al., 2010, 2011; Liao et al., 2011; Zalesky et al.,\n2012; Alakorkko et al., 2017).\n\nGraph Construction\nFunctional Connectivity Analysis\nBrain-wide functional connectivity analyses were performed\nusing the Connectivity Toolbox (CONN; Whitﬁeld-Gabrieli and\nNieto-Castanon, 2012). To construct a brain-wide graph, we\nemployed a commonly used functional atlas (Power et al., 2011),\nwhich comprises 264 meta-analytically deﬁned coordinates,\nincluding cortical and subcortical areas; a 5 mm-radius sphere\nwas centered at each of these coordinates. To ensure that\nthe graph comprised regions that were not susceptible to\nfMRI signal drop-out, each sphere was ﬁltered through a\nsample-level signal intensity mask, calculated as follows: First,\nbinary masks were calculated for each subject, at each time\npoint, thresholded at >70% mean signal\nintensity (Geerligs\net al., 2015), computed over all voxels, using ART. Then,\na sample-level mask was calculated, across all subjects and\ntime points, using logical conjunction (see Supplementary\nFigure 2 for an illustration of the mask). Regions with fewer\nthan 8 voxels (∼50% volume) overlap with the sample-\nlevel mask were excluded,\ninterest\n(ROIs).\n\nTo remove physiological and other sources of noise from\ntime series we used linear regression and the\nthe fMRI\nanatomical CompCor method (Behzadi et al., 2007; Chai et al.,\n2012; Muschelli et al., 2014), as implemented in CONN. Each\nparticipant’s white matter and cerebrospinal ﬂuid segments,\neroded by 1 voxel to minimize partial volume eﬀects, were used\nas noise ROIs. The following temporal covariates were added\nto the model: signal extracted from each participant’s noise\nROIs (5 principal component analysis parameters for each2),\nmotion parameters (3 rotation and 3 translation parameters,\nplus their ﬁrst-order temporal derivatives), regressors for each\noutlier scan (i.e., “scrubbing”; one covariate was added for\neach outlier scan, consisting of 0’s everywhere but the outlier\nscan, coded as “1”), and a session-onset regressor (a delta\nfunction convolved with the hemodynamic response function\nplus its ﬁrst-order temporal derivative). The residual fMRI\ntime series were band-pass ﬁltered (0.01 Hz < f < 0.1 Hz).\nPearson correlation coeﬃcients were computed between the\n\n2Regressing out multiple principal components from noise ROIs typically leads\nto better noise correction than regressing out the average noise signal because\nphysiological noise (including motion) is not spatially homogeneous across the\nbrain (Chai et al., 2012; Muschelli et al., 2014).\n\nfunctional ROIs,\n\nfollowed by\ntime courses of all pairs of\nFisher-z transformation, and the diagonal of the connectivity\nmatrix was set to zero. Graph construction and analyses were\nperformed separately for each group and time point, using tools\nfrom the Brain Connectivity Toolbox (Rubinov and Sporns,\n2010).\n\nGroup-Level Consensus Partitions\nTo achieve a community structure representative of each\ngroup, we used the Louvain community detection algorithm\n(Blondel et al., 2008), in conjunction with consensus clustering\n(Lancichinetti and Fortunato, 2012). This approach capitalizes\non the consistency of each node’s module aﬃliation across a\nset of partitions, to circumvent the known degeneracy of the\nLouvain algorithm (i.e., multiple partitioning solutions) (Good\net al., 2010). To obtain a unique (i.e., threshold-independent)\nsolution for each group, the Louvain algorithm was applied on\nweighted graph edges (positive only); see Cohen and D’Esposito\n(2016) for a similar approach. The group-level consensus\npartitions were employed to derive node–module assignments\nused for analyses at the level of individual modules/networks (see\nNetwork Measures sub-section below) and for display purposes\n(Figure 1).\n\nConsensus clustering was applied ﬁrst at the individual level,\nto generate a robust partition for each participant, and then\nat the group level, to generate a representative partition for\neach group and at each time point; see Dwyer et al. (2014)\nfor a similar approach. First, to generate a robust partition for\neach participant, the Louvain algorithm was run 500 times.\nBecause the algorithm is susceptible to local maxima, each initial\npartition was optimized using iterative community ﬁne-tuning\n(Sun et al., 2009), which maximizes modularity by reassigning the\nnodes to modules and iterating the Louvain algorithm. For each\nparticipant, we constructed an agreement matrix representing\nthe fraction of runs in which each pair of nodes was assigned\nto the same module. The Louvain algorithm was then iteratively\nrun on the agreement matrix (500 Louvain runs at each step),\nto generate a consensus partition for each participant. For each\niteration, the agreement matrix was recalculated and thresholded,\nuntil a single representative partition was obtained for each\nparticipant. Second, to generate a group-level representative\npartition, an agreement matrix was calculated based on the\nconsensus partitions of all participants in one group. The\nLouvain algorithm was then run on the agreement matrix to\nobtain a consensus partition for each group, as described above.\nThe resolution parameter of the Louvain community detection\nalgorithm (γ ) and the thresholding parameter for the agreement\nmatrix (τ ) were determined using a procedure that maximized\nmodularity over all group-level partitions. Speciﬁcally, we ran\nthe procedure described above for typical ranges of values\nfor both parameters and chose those values that, on average,\nmaximized modularity across all 4 group-level partitions (see\nbelow for a formal description of modularity). The value\nranges were γ between 1 and 1.5 and τ between 0.2 and 0.5,\nwith increments of 0.05 for each parameter. The maximum\naverage modularity was Q = 0.71, achieved for γ = 1.25\n\nFIGURE 1 | Representative group-level partitions. Functional networks were identiﬁed separately for each group and time point, using consensus partitioning. Five\nmain modules were identiﬁed in both YA and OA, consistent with the main functional networks described in the literature (see main text for details). Nodes are\ncolor-coded by module, and within-module connections are displayed in the same color as the nodes. Nodes not belonging to the ﬁve main modules are displayed in\ngray. For illustration purposes, the force-directed graph displays 20% of the strongest connections and the anatomical projection displays nodes that form 2% of the\nstrongest connections. The force-direct graph and anatomical projection were displayed using Gephi (http://gephi.org) and BrainNet Viewer (http://www.nitrc.org/\nprojects/bnv/), respectively.\n\nand τ = 0.5, and these parameters were used for subsequent\nanalyses.\n\nConnection Density Thresholding\nWe used density-based thresholding, which equates the number\nof edges across graphs and allows proper between-groups\ncomparisons (van Wijk et al., 2010; Garrison et al., 2015). To\nensure that results were not due to any speciﬁc threshold,\ncalculations were performed for a range comprising 2–10% of the\nstrongest connections, in 1% increments. This threshold range\nis similar to that used in generating the Power et al. (2011)\nfunctional atlas and matches the range previously employed\nby Geerligs et al. (2015), thus enabling comparison of results.\nIn general, stringent threshold ranges are preferable because\ninclusion of false-positive connections is more detrimental to\nnetwork measures computation than exclusion of false-negative\nconnections (Zalesky et al., 2016). The average number of\ndisconnected nodes at each threshold in the 2–10% range\nwas as follows: 47, 27, 17, 10, 7, 4, 3, 2, and 1. Because\naverage connectivity was similar across groups (as assessed\nby permutation testing on positive edges; t1, 2: p’s > 0.2),\ndensity-based thresholding was likely unbiased across groups\n(Zalesky et al., 2016; van den Heuvel et al., 2017). To calculate\nnetwork measures, connectivity values were binarized for each\nthreshold (i.e., 1 if above, 0 if below threshold). Between-\ngroups comparisons of graph-theoretic measures used binarized\ngraphs and reported graph metrics are values averaged across all\nthresholds, unless speciﬁed otherwise.\n\nNetwork Measures\nTo assess the strength of module segregation, we calculated the\nmodularity index (Q) (Newman and Girvan, 2004; Newman,\n\n2006), which compares the observed intra-module connectivity\nwith that which is expected by chance. Higher modularity\nvalues indicate stronger separation of the graph’s modules. The\nmodularity index is formally deﬁned as follows:\n\n[Aij − γ eij]δ(mi, mj)\n\nwhere E is the number of graph edges, A is the adjacency matrix,\nγ is the resolution parameter, e is the null model [e = kikj/2E,\nwhere ki and kj are the degrees (i.e., number of connections) of\nthe nodes i and j], and δ is an indicator that equals 1 if nodes i\nand j belong to the same module and 0 otherwise. The modularity\nscore for each participant was calculated as the average over 500\nruns of the Louvain algorithm with iterative community ﬁne-\ntuning. For consistency with the consensus clustering procedure\ndescribed above, the same resolution parameter (γ = 1.25) was\nused.\n\nwhere N is the number of nodes in the graph and Lij is the shortest\npath length between nodes i and j. By contrast, local eﬃciency is\na node-speciﬁc measure, and is deﬁned relative to the sub-graph\ncomprising the immediate neighbors of a node. Local eﬃciencies\nfor all nodes were averaged to provide an estimate of the mean\n\nto assess the convergence of results based on\nthe graph-theoretic measures described above with simpler\nconnectivity analyses, we calculated within- and between-module\nconnectivity using an approach similar to Geerligs et al. (2015).\nFor completeness, this procedure was performed separately\nfor positive and negative connectivity values. First, the initial\nconnectivity matrices were thresholded by retaining values that\nsurvived a false discovery rate (FDR) correction (q < 0.05)\n(Benjamini and Hochberg, 1995) and setting all the other values\nto zero. Then, for each module and pair of modules, we computed\nthe sum of all connectivity values and divided by the number of\npossible connections to estimate within- and between-modules\nconnectivity. Of note, this procedure was used only for the\nanalysis of within- and between-networks connectivity, and it\ndid not inﬂuence the previously introduced graph-theoretic\nmeasures, which were all calculated on unweighted (i.e., binary)\ngraphs.\n\nbased on randomizing group memberships; see Alexander-Bloch\net al. (2012) for a similar approach. Between-groups similarity\nin the actual data was calculated for each density threshold,\nby averaging the pair-wise partition similarity for all subjects\nacross the two groups, separately at each time point. For each\nsubject, we used the partition with the highest modularity for\neach threshold, calculated over 500 Louvain repetitions with\ncommunity ﬁne-tuning and resolution γ = 1.25. The null\ndistribution was calculated in a similar way, using the randomly\ndivided groups over 5,000 permutations, while retaining original\ngroup sizes. If the actual between-groups NMI was smaller\nthan the 5th percentile of the null distribution, the diﬀerence\nwas considered signiﬁcant. Furthermore, to determine whether\none group showed more similar partitions than the other, we\nexamined within-group partition similarity. This analysis was\nperformed in a similar way, by averaging pair-wise partition\nsimilarity separately for subjects in each group. Finally, to\nexamine diﬀerences in the stability of partitions over time,\nwe calculated within-subject partition similarity over the two\nsessions. A between-group diﬀerence in partition similarity over\ntime was tested directly, using permutation testing (Groppe et al.,\n2011).\n\nAge Differences in Network Measures\nAge diﬀerences in network measures were ﬁrst assessed brain-\nwide (modularity, global eﬃciency, and local eﬃciency) and\nthen signiﬁcant results were followed-up by analyses at the level\nof each module or network (participation coeﬃcient and local\neﬃciency). To ensure comparability at the level of individual\nnetworks, each module was represented only by those nodes\nthat were consistently assigned to the same module, both across\ngroups and time points, based on the group-level consensus\npartitions; see Geerligs et al. (2015) for a similar approach.\nBetween-groups diﬀerences in network properties were assessed\nusing permutation testing, and a family-wise error (FWE)\ncorrection for multiple comparisons based on the “max statistic”\nmethod (Blair and Karniski, 1993; Groppe et al., 2011) was\napplied to account for simultaneous testing of the ﬁve main\nmodules identiﬁed (see Results section). As mentioned above, an\nancillary analysis of within- and between-modules connectivity\nwas also performed and the same FWE correction for multiple\ncomparisons was applied for this analysis as well.\n\nReliability Analysis\nThe intraclass correlation coeﬃcient (ICC) was employed to\nmeasure the absolute agreement for each graph metric between\nthe two sessions (McGraw and Wong, 1996; Welton et al., 2015).\nWe used a mixed model3 ICC(A, k) to estimate the degree\nof absolute agreement of measurements that are averages of\nk = 2 independent measurements on randomly selected subjects.\n\nTo assess links between network measures and learning\nrates, we calculated correlations between brain-wide network\nmeasures and early learning slopes, separately for each group\nand at each time point. We focused on early learning rates\nbecause age diﬀerences were identiﬁed in early but not in late\nlearning slopes. Due to relatively small sample sizes, we employed\nSpearman’s rank correlation coeﬃcient (ρ) to minimize inﬂuence\nfrom extreme values. Signiﬁcant brain-wide results were followed\nby assessments at the level of each module/network, corrected\nfor multiple comparisons using the permutation-based “max\nstatistic” method (Groppe et al., 2011). We took multiple steps to\nassess the robustness of our ﬁndings, using a procedure similar to\nGallen et al. (2016a). First, to assess whether the relations between\nnetwork measures and learning rates were constantly present\nover the threshold range, we tested these relations separately\nfor each threshold. Second, given the absence of diﬀerences in\nmotion across groups and time points (see Preprocessing sub-\nsection above), we performed partial Spearman correlations (ρp)\nto examine whether controlling for motion altered the relations\nbetween brain-wide network measures and learning rates.\n\nYA and OA, consistent with the main functional networks\ndescribed in the literature (Power et al., 2011; Yeo et al.,\n2011): fronto-parietal (FPN), cingulo-opercular/salience (CON),\ndefault-mode (DMN), visual (Vis) and somato-sensorimotor\n(SMN) (Figure 1). The community structure of the partitions\nfor each age group was examined using normalized mutual\ninformation (NMI). Results showed diﬀerences in node-module\nassignment between YA and OA, at both time points (Figure 2).\nFirst, analysis of between-groups partition similarity showed that\nsimilarity of community structure between YA and OA was\nsigniﬁcantly lower than expected based on the permuted data\n(t1, 2: p’s < 0.001; Figure 2A). Second, analysis of within-group\npartition similarity showed less similarity for OA as a group.\nSpeciﬁcally, partition similarity for YA was higher (t1: p = 0.003;\nt2: p < 0.001) whereas for OA was lower (t1: p = 0.007;\nt2: p = 0.003) than expected based on the permuted data\n(Supplementary Figure 3). This indicates that there is greater\nheterogeneity in OA’s partitions, i.e., their partitions are less\nsimilar to one another than YA’s partitions. Finally, analysis of\nwithin-subject similarity across time showed less within-subject\nconsistency for OA (p = 0.001; Figure 2B), indicating more\nvariability in node-module assignment in OA across time. In\nsummary, although similar functional networks were identiﬁed\nin both YA and OA, their composition diﬀered between groups,\nand OA showed less similarity, both as a group and across time,\ncompared to YA.\n\nBrain-Wide Network Measures\nAt a brain-wide level, OA showed lower modularity indices at\nboth time points (t1: p = 0.046, t2: p < 0.001), indicating lower\nintra-module connectivity compared to YA. Furthermore, OA\nconsistently showed lower local eﬃciency (t1, 2: p’s < 0.001),\nwhile global eﬃciency was not signiﬁcantly diﬀerent across\ngroups (t1, 2: p’s > 0.1), suggesting age diﬀerences in local\nbut not global integration of information (Figure 3). Ancillary\ncorrelation analyses between age and brain-wide network\nmeasures within the OA group revealed no signiﬁcant results\n(p’s > 0.05).\n\nReliability Analysis of Brain-Wide Network Measures\nReliability of brain-wide network measures was assessed\nusing intraclass correlation (ICC), by calculating the absolute\nagreement of each graph metric across sessions. Brain-wide\nmeasures showed overall moderate to strong ICC over time\n(range 0.51–0.74), with the highest agreement for local eﬃciency\n(Figure 4). For each group, the agreement ranged from fair\n(>0.2) to strong (>0.6), with YA showing lowest agreement\nfor global eﬃciency. Examination of the proﬁles of ICC values\n\nFIGURE 2 | Age differences in community structure. Similarity of community structure between YA and OA was signiﬁcantly lower than expected based on the\npermuted data, at both time points and consistently across all thresholds (A). Also, OA showed less within-subject partition similarity across time (B). Boxplots in the\nright panel depict values averaged across all thresholds. NMI, normalized mutual information; t1, time point 1; t2, time point 2; YA, younger adults (blue color); OA,\nolder adults (red color). Magenta asterisks indicate p < 0.05 for each threshold. **p < 0.01, across all thresholds.\n\nIndividual Network Measures\nNetwork properties were also assessed at the level of each\nindividual network (Figure 5). To ensure comparability across\ngroups and time points, each network was represented by\nonly those nodes that were consistently assigned to the same\nnetwork, both across groups and time points (see Methods\nsection for details). OA showed greater participation coeﬃcient\nfor CON (t1: pFWE < 0.001; t2: pFWE = 0.002) and SMN (t1,\n2: pFWE’s < 0.001), indicating that, compared to YA, a larger\nproportion of the nodes in these networks had connections\noutside the networks they belonged to. OA also showed lower\nlocal eﬃciency for CON (t1: pFWE = 0.014; t2: pFWE = 0.008)\nat both time points, and for DMN (pFWE = 0.029) and\nSMN (pFWE = 0.01) at t2. We also examined within- and\nbetween-network connectivity, using a procedure similar to\nGeerligs et al. (2015). Regarding within-networks connectivity,\nOA showed lower connectivity within DMN (t1: pFWE = 0.04;\nt2: pFWE = 0.018) and within CON (pFWE = 0.035) at t1,\ncompared to YA. Regarding between-networks connectivity, OA\nshowed greater positive connectivity between FPN and SMN\n(pFWE = 0.005) and between CON and SMN (pFWE = 0.048),\nas well as lower negative connectivity (anticorrelation) between\nCON and SMN (pFWE = 0.043), at t2. No other age diﬀerences\nin between-networks connectivity survived FWE correction for\nmultiple comparisons. Ancillary correlation analyses between age\nand individual network measures within the OA group identiﬁed\n\na signiﬁcant negative correlation between age and within-DMN\nconnectivity at t1 (ρ = −0.65, pFWE = 0.015).\n\nIn summary, OA showed lower brain-wide modularity\nand local eﬃciency compared to YA, with the diﬀerence\nin local eﬃciency showing most consistency across time. At\nthe level of\nindividual networks, CON showed substantial\ndiﬀerences between groups, reﬂected in all examined properties.\nAdditionally, DMN and SMN were characterized by lower intra-\nnetwork connectivity and greater participation, respectively,\nin OA.\n\nLinks with Learning during WM Training\nTo assess links between network measures and performance\nduring cognitive training, we calculated Spearman correlation\ncoeﬃcients, separately for each group and at each time point.\nSimilar to the assessment of age diﬀerences in network measures,\nsigniﬁcant brain-wide results were followed by analyses of\nrobustness and assessments at the level of individual networks.\n\nBrain-Wide Network Measures\nInterestingly, signiﬁcant relations between network measures\nand learning rates were detected only for OA and only at t1.\nSpeciﬁcally, modularity (ρ = 0.51, p = 0.028) and local eﬃciency\n(ρ = 0.59, p = 0.01) were positively correlated with early learning\nrates, whereas global eﬃciency (ρ = −0.61, p = 0.007) was\nnegatively correlated with early learning rates (Figure 6, top\npanel). Ancillary analyses were performed to test for inﬂuences\nof educational level and sex on these results. There were no\nsigniﬁcant correlations between the number of years of education\nand networks measures (p’s > 0.5), and controlling for the\n\nFIGURE 3 | Age differences in brain-wide network measures. At a brain-wide level, OA showed lower modularity and local efﬁciency compared to YA, whereas global\nefﬁciency was not signiﬁcantly different across groups. Boxplots in the left panel depict values averaged across all thresholds. YA, younger adults (blue color); OA,\nolder adults (red color); t1, time point 1; t2, time point 2. Magenta asterisks indicate p < 0.05 for each threshold. *p < 0.05, ***p < 0.001, across all thresholds.\n\nnumber of years of education did not substantially inﬂuence\nthe relations between network measures and learning rates.\nAlso, Spearman correlations performed separately by sex showed\nsimilar trends in both males and females, and there were no sex\ndiﬀerences in correlation strengths (p’s > 0.6).\n\ncorrelations) did not substantially alter the relations between\nany of the brain-wide network measures and learning rates\n(modularity: ρp = 0.49, p = 0.04; local eﬃciency: ρp = 0.55,\np = 0.019; global eﬃciency: ρp = −0.59, p = 0.01).\n\nIndividual Network Measures\nTo further elucidate the relations between network characteristics\nand early learning rates, signiﬁcant results at the brain-wide level\nwere followed-up by analyses at the level of individual networks.\nThe results showed that participation of CON at t1 was negatively\ncorrelated with learning rates in OA (ρ = −0.81, pFWE < 0.001),\nconsistent with the brain-wide results. No other correlations\nsurvived FWE correction for multiple comparisons.\n\nFIGURE 4 | Reliability of brain-wide network measures. (Top) Brain-wide measures showed overall moderate to strong ICC over time, and for each group the\nagreement ranged from fair (>0.2) to strong (>0.6); bar graphs depict ICC values calculated across all thresholds. (Bottom) Reliability of network measures was\ngenerally stable across thresholds, with the exception of global efﬁciency for YA; line graphs depict ICC values calculated for each threshold. ICC, intraclass correlation\ncoefﬁcient; ALL, all subjects (magenta color); YA, younger adults (blue color); OA, older adults (red color).\n\nArnemann, K. L., Chen, A. J., Novakovic-Agopian, T., Gratton, C., Nomura, E.\nM., and D’Esposito, M. (2015). Functional brain network modularity predicts\nresponse to cognitive training after brain injury. Neurology 84, 1568–1574.\ndoi: 10.1212/WNL.0000000000001476\n\nJ., Zuo, X.-N., and Sporns, O.\n(2014). Changes in structural and functional connectivity among resting-\nstate networks across\nthe human lifespan. Neuroimage 102, 345–357.\ndoi: 10.1016/j.neuroimage.2014.07.067\n\nChai, X. J., Castanon, A. N., Ongur, D., and Whitﬁeld-Gabrieli, S. (2012).\nAnticorrelations in resting state networks without global signal regression.\nNeuroimage 59, 1420–1428. doi: 10.1016/j.neuroimage.2011.08.048\n\nChan, M. Y., Park, D. C., Savalia, N. K., Petersen, S. E., and Wig, G. S. (2014).\nDecreased segregation of brain systems across the healthy adult lifespan. Proc.\nNatl. Acad. Sci. U. S. A. 111, E4997–E5006. doi: 10.1073/pnas.1415122111\nCiric, R., Wolf, D. H., Power, J. D., Roalf, D. R., Baum, G. L., Ruparel, K., et al.\n(2017). Benchmarking of participant-level confound regression strategies for\nthe control of motion artifact in studies of functional connectivity. Neuroimage\n154, 174–187. doi: 10.1016/j.neuroimage.2017.03.020\n\nFerreira, L. K., Regina, A. C., Kovacevic, N., Martin Mda, G., Santos, P. P., Carneiro\nCde, G., et al. (2016). Aging eﬀects on whole-brain functional connectivity in\nadults free of cognitive and psychiatric disorders. Cereb. Cortex 26, 3851–3865.\ndoi: 10.1093/cercor/bhv190\n\nGeerligs, L., Renken, R. J., Saliasi, E., Maurits, N. M., and Lorist, M. M. (2015).\nA brain-wide study of age-related changes in functional connectivity. Cereb.\nCortex 25, 1987–1999. doi: 10.1093/cercor/bhu012\n\nGeerligs, L., Tsvetanov, K. A., and Henson, R. N. (2017). Challenges in measuring\nindividual diﬀerences in functional connectivity using fMRI: the case of healthy\naging. Hum. Brain Mapp. 38, 4125–4156. doi: 10.1002/hbm.23653\n\nGood, B. H., de Montjoye, Y.-A., and Clauset, A. (2010). Performance of\nmodularity maximization in practical contexts. Phys. Rev. E 81:046106.\ndoi: 10.1103/PhysRevE.81.046106\n\n(2014).\nWorking memory-related changes in functional connectivity persist beyond\ntask disengagement. Hum. Brain Mapp. 35, 1004–1017. doi: 10.1002/hbm.\n22230\n\n(2003).\nFunctional connectivity in the resting brain: a network analysis of the\ndefault mode hypothesis. Proc. Natl. Acad. Sci. U.S.A. 100, 253–258.\ndoi: 10.1073/pnas.0135058100\n\nHoney, C. J., Sporns, O., Cammoun, L., Gigandet, X., Thiran, J. P., Meuli,\nR., et al. (2009). Predicting human resting-state functional connectivity\nfrom structural connectivity. Proc. Natl. Acad. Sci. U.S.A. 106, 2035–2040.\ndoi: 10.1073/pnas.0811168106\n\nLancichinetti, A., and Fortunato, S. (2012). Consensus clustering in complex\n\n(2003). Economic small-world behavior\nJ. B Condens. Matter 32, 249–263.\n\nJ., Marinazzo, D., Xu, Q., Wang, Z., Yuan, C., et al.\n(2011). Small-world directed networks in the human brain: multivariate\nGranger causality analysis of resting-state fMRI. Neuroimage 54, 2683–2694.\ndoi: 10.1016/j.neuroimage.2010.11.007\n\nMcGraw, K. O., and Wong, S. P. (1996). Forming inferences about some intraclass\ncorrelation coeﬃcients. Psychol. Methods 1:30. doi: 10.1037/1082-989X.1.1.30\nMeier, T. B., Desphande, A. S., Vergun, S., Nair, V. A., Song, J., Biswal, B. B.,\net al. (2012). Support vector machine classiﬁcation and characterization of age-\nrelated reorganization of functional brain networks. Neuroimage 60, 601–613.\ndoi: 10.1016/j.neuroimage.2011.12.052\n\nMeunier, D., Lambiotte, R., Fornito, A., Ersche, K., and Bullmore, E. T.\n(2009b). Hierarchical modularity in human brain functional networks. Front.\nNeuroinformatics 3:37. doi: 10.3389/neuro.11.037.2009\n\nNewman, M. E. J. (2006). Modularity and community structure in networks. Proc.\n\nOnoda, K., and Yamaguchi, S. (2013). Small-worldness and modularity of the\nresting-state functional brain network decrease with aging. Neurosci. Lett. 556,\n104–108. doi: 10.1016/j.neulet.2013.10.023\n\nSadaghiani, S., Poline, J.-B., Kleinschmidt, A., and D’Esposito, M. (2015). Ongoing\ndynamics in large-scale functional connectivity predict perception. Proc. Natl.\nAcad. Sci. U.S.A. 112, 8463–8468. doi: 10.1073/pnas.1420687112\n\nSala-Llonch, R., Bartrés-Faz, D., and Junqué, C. (2015). Reorganization of brain\nnetworks in aging: a review of functional connectivity studies. Front. Psychol.\n6:663. doi: 10.3389/fpsyg.2015.00663\n\n(2005).\nUndirected graphs of\nfunctional connectivity in\nwhole brain networks. Philos. Trans. R. Soc. Lond. B Biol. Sci. 360, 937–946.\ndoi: 10.1098/rstb.2005.1645\n\nShrout, P. E., and Fleiss, J. L. (1979). Intraclass correlations: uses in assessing rater\n\nSong, J., Birn, R. M., Boly, M., Meier, T. B., Nair, V. A., Meyerand, M.\nE., et al. (2014). Age-related reorganizational changes in modularity and\nfunctional connectivity of human brain networks. Brain Connect. 4, 662–676.\ndoi: 10.1089/brain.2014.0286\n\nSporns, O., Tononi, G., and Edelman, G. M. (2000). Theoretical neuroanatomy:\nrelating anatomical and functional connectivity in graphs and cortical\nconnection matrices. Cereb. Cortex 10, 127–141. doi: 10.1093/cercor/10.2.127\nStanley, M. L., Simpson, S. L., Dagenbach, D., Lyday, R. G., Burdette,\nJ. H., and Laurienti, P. J. (2015). Changes in brain network eﬃciency\nand working memory performance in aging. PLoS ONE 10:e0123950.\ndoi: 10.1371/journal.pone.0123950\n\nStevens, A. A., Tappon, S. C., Garg, A., and Fair, D. A. (2012). Functional brain\nnetwork modularity captures inter- and intra-individual variation in working\nmemory capacity. PLoS ONE 7:e30468. doi: 10.1371/journal.pone.0030468\nSun, Y., Danila, B., Josi´c, K., and Bassler, K. E. (2009). Improved community\nstructure detection using a modiﬁed ﬁne-tuning strategy. Europhys. Lett.\n86:28004. doi: 10.1209/0295-5075/86/28004\n\nvan den Heuvel, M. P., de Lange, S. C., Zalesky, A., Seguin, C., Yeo, B.\nT. T., and Schmidt, R. (2017). Proportional thresholding in resting-state\nfMRI functional connectivity networks and consequences for patient-control\nconnectome studies: issues and recommendations. Neuroimage 152, 437–449.\ndoi: 10.1016/j.neuroimage.2017.02.005\n\nWhitﬁeld-Gabrieli, S., and Nieto-Castanon, A. (2012). Conn: a functional\nconnectivity toolbox for correlated and anticorrelated brain networks. Brain\nConnect. 2, 125–141. doi: 10.1089/brain.2012.0073\n\nYeo, B. T. T., Krienen, F. M., Sepulcre, J., Sabuncu, M. R., Lashkari, D.,\nHollinshead, M., et al. (2011). The organization of the human cerebral cortex\nestimated by intrinsic functional connectivity. J. Neurophysiol. 106, 1125–1165.\ndoi: 10.1152/jn.00338.2011\n\nZalesky, A., Fornito, A., and Bullmore, E. (2012). On the use of correlation\nas a measure of network connectivity. Neuroimage 60, 2096–2106.\ndoi: 10.1016/j.neuroimage.2012.02.001\n\nThe goals of\ninvestigation were to assess the\nreplicability of previously reported age eﬀects on resting-state\nnetworks, to examine their reliability over time, and to assess\ntheir relation to behavioral outcomes (namely learning rates\nduring a cognitive training intervention). Similar to previous\ninvestigations, we identiﬁed both consistencies in network\nstructure and diﬀerences in module composition between\ngroups. Notably, OA showed less similarity of their network\npartitions compared to YA, both as a group and across time.\nRegarding brain-wide network measures, OA showed lower\nmodularity and local eﬃciency compared to YA, with the\ndiﬀerence in local eﬃciency showing most consistency across\ntime. At the level of individual networks, OA showed substantial\ndiﬀerences in CON, reﬂected in all examined metrics, as\nwell as lower intra-network connectivity in DMN and greater\nparticipation of SMN. Finally, baseline brain-wide network\n\nRegarding age diﬀerences in network measures, we identiﬁed\nreliable age diﬀerences in brain-wide modularity and local\neﬃciency, consistent with previous investigations (Achard and\n\nBullmore, 2007; Onoda and Yamaguchi, 2013; Betzel et al.,\n2014; Cao M. et al., 2014; Song et al., 2014; Geerligs et al.,\n2015). Modularity indexes the degree to which a graph can\nbe partitioned into multiple communities, and is considered a\ncentral principle of brain organization, supporting functional\nsegregation and integration through communication within- and\nbetween-modules, respectively (Dehaene et al., 1998; Sporns\net al., 2000; Meunier et al., 2009b; Sporns and Betzel, 2015). Thus,\nresults showing lower modularity in OA compared to YA suggest\nloss of functional speciﬁcity of the brain networks with aging\n(Ferreira and Busatto, 2013; Damoiseaux, 2017; Naik et al., 2017).\nGlobal eﬃciency indexes graph-wide integration and has been\nlinked with information exchange among distributed regions,\nwhereas local eﬃciency indexes regional-level integration and\nhas been linked with fault tolerance within specialized areas\n(Latora and Marchiori, 2003; Achard and Bullmore, 2007). In\ngeneral, the argument is that brains maximize cost-eﬃciency\nby favoring dense short-range connections and sparse long-\nrange connections, because the latter are more costly (Achard\n\nand Bullmore, 2007; Bullmore and Sporns, 2012). Thus, results\nshowing lower local eﬃciency in OA compared to YA suggest a\nreduction of cost-eﬃciency in aging; under conditions of similar\nconnection density, which is considered a proxy for wiring cost,\neﬃciency is lower in OA compared to YA (Achard and Bullmore,\n2007; Geerligs et al., 2015). It should be noted, however, that\nwiring costs can only be approximated in functional networks,\nbecause two functionally connected regions do not necessarily\nshare a direct structural link (Rubinov and Sporns, 2010; Zalesky\net al., 2012). In fact, modularity and local eﬃciency are related\nmeasures, such that a system with denser local connections\nalso tends to be more modular (Bullmore and Sporns, 2012).\nOn the other hand, similar global eﬃciency irrespective of\nage has been explained by a greater number of inter-module\nconnections in OA; speciﬁcally, more inter-module connections\nmay counterbalance less intra-module connections, resulting in\nsimilar amounts of shortest path lengths between distant nodes\n(Song et al., 2014; Geerligs et al., 2015). In sum, these ﬁndings\nare consistent with overall patterns of decreased within- and\n\nFIGURE 6 | Relations between network measures and learning during WM training. (Top) Modularity (ρ = 0.51, p = 0.028) and local efﬁciency (ρ = 0.59, p = 0.01)\nwere positively correlated, whereas global efﬁciency (ρ = −0.61, p = 0.007) was negatively correlated with early learning rates in OA (red color), only at t1; blue and\nred lines show least squares lines. (Bottom) Relations between network measures and learning rates (Spearman correlation) were fairly constant across thresholds.\nt1, time point 1; YA, younger adults (blue color); OA, older adults (red color). *p < 0.05, for each threshold.\n\nfor better\nunderstanding task-related neural over-activation in OA relative\nto YA, which has been linked with both compensation and\ndediﬀerentiation (Cabeza, 2002; Park et al., 2004, 2010; Davis\net al., 2008; Grady, 2008; Reuter-Lorenz and Cappell, 2008;\nReuter-Lorenz and Park, 2014). Task-related over-activation in\nOA may be related to altered intrinsic network dynamics,\nreﬂected in diﬀerences in modularity and local eﬃciency “at\nrest.” Whereas the loss of functional speciﬁcity in aging (reﬂected\nby the decline in modularity) is consistent with the idea of\ndediﬀerentiation, reduced cost-eﬃciency (reﬂected by the decline\nin local eﬃciency) may be linked to compensatory processes\nthat are overall less eﬃcient than the primary computations\n(Reuter-Lorenz and Park, 2014). Thus, dediﬀerentiation and\ncompensation may both be expressions of the same process of\nfunctional recalibration due to declining structure with aging\n(Naik et al., 2017). This also highlights the critical need for better\nintegrating resting-state and task-related approaches, in order\nto develop a practical understanding of neurocognitive function\nand age-related change (Iordan and Reuter-Lorenz, 2016; see also\nGallen et al., 2016b).\n\net al., 2014; La Corte et al., 2016). The cingulo-opercular network\n(or salience network, in alternative taxonomies) is anchored\nin the anterior cingulate and frontal operculum/anterior insula\nregions, and has been implicated both in stable set-maintenance\n(Dosenbach et al., 2006, 2007, 2008; Power and Petersen, 2013)\nand multimodal sensory integration (Seeley et al., 2007; Bressler\nand Menon, 2010; Menon, 2011). The present results, showing\nboth higher participation coeﬃcients and lower local eﬃciency\nand intra-module connectivity for CON in OA, suggest age-\nrelated dediﬀerentiation of this network and support the idea\nof changes in CON functionality as a hallmark of healthy aging\n(Meier et al., 2012; Onoda et al., 2012; He et al., 2014; La Corte\net al., 2016). Greater participation coeﬃcients for CON and SMN\nin OA indicate greater propensity of the nodes within these two\nnetworks to form links outside their own modules, and suggest\nthat CON and SMN may drive the observed age diﬀerences in\nbrain-wide modularity. Furthermore, local eﬃciency in CON\nwas also consistently lower in OA, suggesting an age-related\ndecline in local integration of information at the level of this\nnetwork. In addition to CON, DMN showed consistent lower\nintra-module connectivity in OA relative to YA, in line with\nprevious evidence (Andrews-Hanna et al., 2007; Damoiseaux\net al., 2008; Ferreira and Busatto, 2013; Geerligs et al., 2015;\nGrady et al., 2016; Damoiseaux, 2017). Interestingly, our results\ndid not show greater FPN-DMN inter-network connectivity in\nOA relative to YA (Geerligs et al., 2015; Turner and Spreng,\n2015), which might have been related to the inclusion of relatively\nyounger, high-functioning OA in our sample. Supporting this\ninterpretation, a recent longitudinal study in OA (Ng et al.,\n2016) identiﬁed a u-shaped trajectory in which FPN-DMN\ninter-network connectivity initially decreased and then increased\nwith age, with a turning point around 65–70 years of age.\nAn alternative interpretation is that the functional interactions\nbetween FPN and DMN in OA might have been inﬂuenced by\nresidual task-eﬀects, as outlined above.\n\nRegarding links between network measures and learning rates\nduring training, the present results showed that higher resting-\nstate modularity and local eﬃciency, as well as lower global\neﬃciency prior to training, were associated with better early\nlearning in OA. Early learning rates are thought to reﬂect the\ninitial attainment of peak performance within an individual’s\nbaseline performance range, rather than plasticity per se (Lövden\net al., 2010). Notably, associations between network properties\nand early learning rates were observed only for OA and only\nat t1. While the presence of these associations only in OA\ncould be interpreted in line with evidence pointing to age-\nrelated dissociations in the relations between network eﬃciency\nand cognitive performance (Stanley et al., 2015), the lack of\nconsistency of these relations across time might be attributable\nto diﬀerences in residual task-eﬀects related to the phenomenon\nof task exposure which may have,\ninﬂuenced the\nreliability of network measures across time. Speciﬁcally, if task\nexposure altered strategies for WM task performance across\nthe two sessions for older but not for younger adults, the\nresting-state activity, which was always recorded subsequent to\ntask performance, may have been diﬀerentially aﬀected. Future\nanalyses comparing the eﬀects of task exposure on diﬀerences\n\nAlthough evidence linking network properties with beneﬁts\naccrued over the course of cognitive training is scarce, the\npresent results are in line with previous ﬁndings showing\npositive relations for modularity in OA (Gallen et al., 2016a)\nand in patients with traumatic brain injury (Arnemann et al.,\n2015). Consistent with the idea that modularity supports\nboth functional segregation and integration, previous evidence\nhas positively linked modularity with cognitive performance\n(Stevens et al., 2012; Sadaghiani et al., 2015), and thus greater\nmodularity during resting-state may reﬂect a more “optimal”\nfunctional organization that promotes cognitive improvements\nwith training (Gallen et al., 2016a). Results at the level of\nindividual networks add speciﬁcity to this interpretation, by\nassociating lower CON participation coeﬃcients with higher\nlearning rates in OA. Combined with evidence showing greater\nparticipation coeﬃcients for this network in OA as a group, the\npresent ﬁndings provide preliminary evidence for a link between\npreserved CON segregation and better learning in OA.\n\nThe present results linking network properties at rest with\nlearning rates can be interpreted in the light of evidence from\ninvestigations of task-related performance (Stanley et al., 2015;\nCohen and D’Esposito, 2016; Bolt et al., 2017). Speciﬁcally,\ninvestigations comparing network properties across resting\nand task contexts have shown that cognitive task states are\ncharacterized by overall lower modularity and local eﬃciency,\nas well as greater global eﬃciency, and that such levels are\npositively associated with cognitive performance at the individual\nlevel in YA (Cohen and D’Esposito, 2016; Bolt et al., 2017).\nConsistent with this evidence, age-related investigations have\nlinked lower local eﬃciency during task performance with better\nWM performance irrespective of age, whereas greater global\neﬃciency was associated with better WM performance in YA\nbut relatively worse WM performance in OA (Stanley et al.,\n2015). By contrast, prior investigations (Gallen et al., 2016a),\nas well as the present results, point to a seemingly inverse\npattern characterizing the relationship between modularity “at\nrest” and learning rates in OA, whereby greater modularity\nand local eﬃciency, as well as lower global eﬃciency “at\nrest”, are associated with better learning. Although relations\nbetween resting and task-related network conﬁgurations are still\nnot well understood, the present evidence suggests that the\npotential for dynamic network reconﬁguration across diﬀerent\nstates might play an important role for understanding cognition\nand its plasticity in aging (Cole et al., 2014, 2016; Krienen\net al., 2014; Iordan and Reuter-Lorenz, 2016). However, the\nexploratory nature of these ﬁndings advises their interpretation\nwith caution.\n\nA substantial body of evidence suggests that aging inﬂuences\nthe functional organization of the brain, both globally and at\nthe level of individual brain networks (reviewed in Ferreira\nand Busatto, 2013; Dennis and Thompson, 2014; Sala-Llonch\net al., 2015; Damoiseaux, 2017). The functional organization\nof the brain has traditionally been studied using fMRI-based\n“resting-state” functional connectivity (Greicius et al., 2003;\nPower et al., 2011) and more recently, with graph-theoretic\nanalyses (Bullmore and Sporns, 2009; Rubinov and Sporns,\n2010). The graph-theoretic approach enables characterization\nof the brain’s connectivity structure and derives measures that\nassess global and local features that may be important for\nnetwork function (Bullmore and Sporns, 2009; Rubinov and\nSporns, 2010). One such measure is modularity (Newman and\nGirvan, 2004; Newman, 2006), which indexes the extent to\nwhich a graph is organized into separate modules with dense\nwithin- and sparse between-modules connections, a fundamental\nprinciple thought to support the brain’s functional segregation\nand integration (Dehaene et al., 1998; Sporns and Betzel,\n2015). A number of prior investigations have identiﬁed lower\nmodularity in aging (Onoda and Yamaguchi, 2013; Betzel et al.,\n2014; Cao M. et al., 2014; Song et al., 2014; Geerligs et al.,\n2015; but see Meunier et al., 2009a), with networks becoming\nless distinct due to increased between- and decreased within-\nmodule integration. This evidence is consistent with the idea\nof functional dediﬀerentiation (Park et al., 2004, 2010; Grady,\n2012). Another set of measures characterizes the eﬃciency of\ninformation ﬂow across the graph. Global eﬃciency indexes\ngraph-wide integration and has been linked with the capacity for\nrapid information exchange among distributed regions, whereas\nlocal eﬃciency indexes integration at a regional level and has been\nlinked with fault tolerance within specialized regions (Latora\nand Marchiori, 2003; Achard and Bullmore, 2007). Previous\ninvestigations have associated aging with lower local eﬃciency\n(Achard and Bullmore, 2007; Cao M. et al., 2014; Song et al., 2014;\nGeerligs et al., 2015), while global eﬃciency was reported to be\nsimilar irrespective of age (Cao M. et al., 2014; Song et al., 2014;\nGeerligs et al., 2015; but see Achard and Bullmore, 2007).\n\nthe level of individual networks, and current evidence suggests\ndiﬀerential eﬀects of aging on particular brain networks (Ferreira\nand Busatto, 2013; Dennis and Thompson, 2014; Sala-Llonch\net al., 2015; Damoiseaux, 2017). Although the majority of\ninvestigations have targeted the default-mode network (DMN),\nshowing lower functional connectivity between its diﬀerent\nsub-components with aging (Andrews-Hanna et al., 2007;\nDamoiseaux et al., 2008), recent evidence also points to age eﬀects\nin other brain networks, such as the cingulo-opercular/salience\nand sensorimotor networks (Meier et al., 2012; Onoda et al., 2012;\nHe et al., 2014; Geerligs et al., 2015; La Corte et al., 2016)1. Thus,\nto complement information provided by brain-wide network\nassessments, metrics applied at the level of individual networks\ncan also be employed. This includes the participation coeﬃcient,\nwhich indexes the relation between intra- and inter-network\nconnectivity for each node (Guimerà and Amaral, 2005).\n\nIn sum, although there are some inconsistencies across\nstudies, available evidence points to lower within- and higher\nbetween-network connectivity with aging. This is expressed\ntopologically as lower modularity, and is associated with lower\nlocal eﬃciency and preserved global eﬃciency, compared to\nyounger age (see Damoiseaux, 2017 for a recent discussion). The\nﬁrst main goal of the present study was to assess the replicability\nof these previously reported age eﬀects on functional network\nconﬁguration.\n\nInconsistencies across investigations of age diﬀerences in\nnetwork properties may stem from methodological diﬀerences\nbut also from variability of network measures over time (van\nWijk et al., 2010; Zalesky et al., 2016; Ciric et al., 2017; Geerligs\net al., 2017). One way to assess reliability is by measuring the\nsame subjects at two or more time-points, while using the same\nmethodology, and quantifying the level of agreement between\nmeasurements by calculating the intraclass correlation coeﬃcient\n(ICC) (Shrout and Fleiss, 1979; McGraw and Wong, 1996). A\nmeta-analysis of test-retest reliability of graph-theoretic brain-\nnetwork metrics identiﬁed overall good reliability (Welton et al.,\n2015). However, the available evidence related to aging is very\nlimited. Investigations of age diﬀerences in network properties\nhave typically used singular assessments, and hence the reliability\nof such eﬀects over time is not clear (but see Geerligs et al., 2017).\nThus, the second main goal of the present investigation was to\nextend the assessment of age diﬀerences in network properties to\nmultiple time points within the same individuals and to evaluate\nreliability.\n\n1While graph theory has been typically employed to assess global and local\nmeasures of connectivity, much evidence regarding aging eﬀects on speciﬁc brain\nnetworks has been derived using complementary approaches, such as seed-based\nfunctional connectivity and independent component analysis. Although these\napproaches diﬀer in important ways (see Ferreira and Busatto, 2013; Dennis and\nThompson, 2014 for recent discussions), results have been overall convergent (see\nGeerligs et al., 2015 for a recent graph theory investigation at the level of individual\nnetworks).\n\nneed to be disentangled from variability of network measures\nin the absence of\nintervention. Recent evidence suggests\npotential links between baseline properties of functional brain\norganization and beneﬁts accrued over the course of cognitive\ntraining in older adults (Gallen et al., 2016a), although at this\npoint such evidence is only preliminary. Although a growing\nbody of studies suggests that some working memory (WM)\ninterventions may alter functional network organization and\nhave beneﬁcial, albeit limited, eﬀects on cognitive functioning\n(Buschkuehl et al., 2008; Lustig et al., 2009; Brehmer et al.,\n2014; Karbach and Verhaeghen, 2014; Stepankova et al., 2014;\nBallesteros et al., 2015; Bherer, 2015; Mewborn et al., 2017;\nRomán et al., 2017), evidence linking baseline functional network\ncharacteristics with training is limited (Arnemann et al., 2015;\nGallen et al., 2016a). In one investigation of this topic, Gallen\net al. (2016a) showed that older adults displaying greater network\nmodularity at baseline also showed greater improvements in gist\nreasoning, following a strategic memory and reasoning training\nintervention (Vas et al., 2011). However, the potential role of\nother network properties in learning remains largely unknown.\nThus, the third main goal of this investigation was to assess\nrelations between baseline network properties and subsequent\nlearning during training in older adults.\n\nThese questions were investigated in a sample comprising\nboth healthy younger and older adults, using resting-state fMRI\ndata acquired in 2 diﬀerent sessions, both preceding a WM\ntraining intervention. A complete treatment of training outcomes\nand other behavioral data will be reported separately. Based\non the extant evidence, we expected to ﬁnd lower modularity\nand local eﬃciency in older compared to younger adults, and\nsimilar global eﬃciency across groups. We also expected these\ndiﬀerences to be stable over time. Finally, the limited evidence\nlinking network properties with training eﬀects suggests that\nmodularity is beneﬁcial (Gallen et al., 2016a); therefore, we\nexpected that network properties, in particular modularity (i.e.,\nas reﬂected in the modularity index), would be linked to learning\nrates."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 104,
+            "text": "Aging and Network Properties: Stability Over Time and Links with Learning during Working Memory Training",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 214,
+            "end": 218,
+            "text": "2018",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 105,
+            "end": 136,
+            "text": "Frontiers in Aging Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 167,
+            "end": 191,
+            "text": "10.3389/fnagi.2017.00419",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 228,
+            "end": 247,
+            "text": "Alexandru D. Iordan",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 411,
+            "end": 523,
+            "text": "Growing evidence suggests that healthy aging affects the configuration of large-scale functional brain networks.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4843,
+            "end": 4854,
+            "text": "open-access",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1245,
+            "end": 1271,
+            "text": "3 T General Electric MR750",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1543,
+            "end": 1552,
+            "text": "43 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1511,
+            "end": 1533,
+            "text": "slice thickness = 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1439,
+            "end": 1455,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1535,
+            "end": 1541,
+            "text": "no gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 980,
+            "end": 985,
+            "text": "8 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1116,
+            "end": 1137,
+            "text": "view a fixation cross",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1457,
+            "end": 1486,
+            "text": "field of view = 220 × 220 mm²",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1412,
+            "end": 1425,
+            "text": "TR = 2,000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1427,
+            "end": 1437,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1554,
+            "end": 1586,
+            "text": "voxel size = 3.44 × 3.44 × 3 mm³",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2088,
+            "end": 2093,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 989,
+            "end": 1002,
+            "text": "resting state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4096,
+            "end": 4101,
+            "text": "23 YA",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4163,
+            "end": 4168,
+            "text": "20 OA",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3656,
+            "end": 3685,
+            "text": "23 younger adults (YA) and 23",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3952,
+            "end": 3980,
+            "text": "Data from 3 OA were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4096,
+            "end": 4130,
+            "text": "23 YA (age range: 18–28; 9 females",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4163,
+            "end": 4197,
+            "text": "20 OA (age range: 64–76; 9 females",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4103,
+            "end": 4119,
+            "text": "age range: 18–28",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4170,
+            "end": 4186,
+            "text": "age range: 64–76",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4121,
+            "end": 4130,
+            "text": "9 females",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4188,
+            "end": 4197,
+            "text": "9 females",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3770,
+            "end": 3782,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3784,
+            "end": 3861,
+            "text": "native English speakers with normal or corrected-to-normal hearing and vision",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3871,
+            "end": 3950,
+            "text": "screened for history of head injury, psychiatric illness, or alcohol/drug abuse",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4443,
+            "end": 4478,
+            "text": "Institutional Review Board approved",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4525,
+            "end": 4541,
+            "text": "informed consent",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4744,
+            "end": 4757,
+            "text": "mean set size",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1968,
+            "end": 2011,
+            "text": "in-house iterative reconstruction algorithm",
+            "labels": [
+              "Field map correction — Software"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2017,
+            "end": 2037,
+            "text": "field-map correction",
+            "labels": [
+              "Field map correction — Parameters"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1908,
+            "end": 1958,
+            "text": "1",
+            "labels": [
+              "Field map correction — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2088,
+            "end": 2093,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2118,
+            "end": 2138,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2088,
+            "end": 2093,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ],
+          "id": "m0042"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2140,
+            "end": 2149,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2088,
+            "end": 2093,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2155,
+            "end": 2192,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2279,
+            "end": 2285,
+            "text": "DARTEL",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2295,
+            "end": 2333,
+            "text": "segmented gray matter and white matter",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2295,
+            "end": 2333,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2376,
+            "end": 2394,
+            "text": "MNI transformation",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2490,
+            "end": 2516,
+            "text": "resampled to 3 × 3 × 3 mm³",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2361,
+            "end": 2412,
+            "text": "6",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2678,
+            "end": 2708,
+            "text": "Artifact Detection Tools (ART)",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2782,
+            "end": 2788,
+            "text": "0.5 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2812,
+            "end": 2833,
+            "text": "3 standard deviations",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2710,
+            "end": 2743,
+            "text": "7",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3051,
+            "end": 3055,
+            "text": "CONN",
+            "labels": [
+              "aCompCor — Software"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3314,
+            "end": 3364,
+            "text": "5 principal component analysis parameters for each",
+            "labels": [
+              "aCompCor — Parameters"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3123,
+            "end": 3140,
+            "text": "eroded by 1 voxel",
+            "labels": [
+              "aCompCor — Parameters"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3006,
+            "end": 3024,
+            "text": "anatomical CompCor",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3006,
+            "end": 3031,
+            "text": "8",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3367,
+            "end": 3471,
+            "text": "motion parameters (3 rotation and 3 translation parameters, plus their first-order temporal derivatives)",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3367,
+            "end": 3425,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3527,
+            "end": 3550,
+            "text": "session-onset regressor",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3527,
+            "end": 3550,
+            "text": "10",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3587,
+            "end": 3605,
+            "text": "band-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3607,
+            "end": 3627,
+            "text": "0.01 Hz < f < 0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3587,
+            "end": 3605,
+            "text": "11",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6206,
+            "end": 6301,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6206,
+            "end": 6301,
+            "text": "functional atlas (Power et al., 2011),\nwhich comprises 264 meta-analytically deﬁned coordinates",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6347,
+            "end": 6407,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6347,
+            "end": 6407,
+            "text": "5 mm-radius sphere\nwas centered at each of these coordinates",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8081,
+            "end": 8088,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8081,
+            "end": 8088,
+            "text": "Pearson",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8487,
+            "end": 8495,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type",
+              "Parameters"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8487,
+            "end": 8495,
+            "text": "Fisher-z",
+            "labels": [
+              "Connectivity normalization — Type"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8847,
+            "end": 8949,
+            "text": "5",
+            "labels": [
+              "Network definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8847,
+            "end": 8949,
+            "text": "Louvain community detection algorithm\n(Blondel et al., 2008), in conjunction with consensus clustering",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11665,
+            "end": 12524,
+            "text": "γ = 1.25\n\nFIGURE 1 | Representative group-level partitions. Functional networks were identiﬁed separately for each group and time point, using consensus partitioning. Five\nmain modules were identiﬁed in both YA and OA, consistent with the main functional networks described in the literature (see main text for details). Nodes are\ncolor-coded by module, and within-module connections are displayed in the same color as the nodes. Nodes not belonging to the ﬁve main modules are displayed in\ngray. For illustration purposes, the force-directed graph displays 20% of the strongest connections and the anatomical projection displays nodes that form 2% of the\nstrongest connections. The force-direct graph and anatomical projection were displayed using Gephi (http://gephi.org) and BrainNet Viewer (http://www.nitrc.org/\nprojects/bnv/), respectively.\n\nand τ = 0.5",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13816,
+            "end": 13884,
+            "text": "9",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13816,
+            "end": 13884,
+            "text": "binarized for each\nthreshold (i.e., 1 if above, 0 if below threshold",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9346,
+            "end": 9359,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type",
+              "Parameters"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9346,
+            "end": 9359,
+            "text": "positive only",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0082"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12905,
+            "end": 12957,
+            "text": "8",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12905,
+            "end": 12957,
+            "text": "2–10% of the\nstrongest connections, in 1% increments",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10180,
+            "end": 10190,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8683,
+            "end": 8736,
+            "text": "Brain Connectivity Toolbox (Rubinov and Sporns,\n2010)",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0086"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10180,
+            "end": 10190,
+            "text": "modularity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0087"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 23457,
+            "end": 23487,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0088"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 23457,
+            "end": 23487,
+            "text": "averaged across all thresholds",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0089"
+        }
+      ]
+    }
+  ]
+}

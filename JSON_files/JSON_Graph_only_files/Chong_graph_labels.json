@@ -1,0 +1,298 @@
+{
+  "data": {
+    "text": "Construction of functional connectivity matrices. Undirected, weighted\nfunctional connectivity matrices (“graphs”) were generated for each par-\nticipant at each time point. Individual preprocessed functional images in\nstandard space were first parcellated into 114 cortical ROIs (“nodes”)\ndefined by a previous functional connectivity-based parcellation scheme\n(Yeo et al., 2011). Functional graphs for each individual were then com-\nputed by calculating the correlation between the mean BOLD time series\nof each pair of ROIs (“edges”). All diagonal elements and negative con-\nnections in the matrices were set to 0.\n\nDerivation of group-level network modular structure. Group-level net-\nwork modular structures of young participants as well as elderly partici-\npants at each of the three time points were derived using a previously\ndescribed two-step consensus community detection method (Lancichi-\nnetti and Fortunato, 2012; Bertolero et al., 2015). In this method, we first\nran community detection on individual functional graphs to generate\nindividual-level modular structures. Then, we summed across the indi-\nvidual modular assignments to produce a group-level allegiance matrix\n(Braun et al., 2015), and subsequently performed community detection\non the allegiance matrix to produce the group-level modular structure.\nFor both steps, community detection was performed across a range of\ncosts (0.10 – 0.30, in 0.001 steps) using Louvain methods (Blondel et al.,\n2008) based on maximizing modularity and repeated using a range of\ngamma values from 1 to 10. The range of costs for the community detec-\ntion was set to be the same as the range used to compute the graph\ntheoretical measures (determination of network cost thresholds is de-\nscribed in the next section).\n\nTo select gamma values at the individual and group level for further\nanalyses, we computed the partition similarity of all possible group-level\npartitions to the a priori network partition defined by Yeo et al. (2011)\nusing the z score of the Rand coefficient (Traud et al., 2011). The Rand z\nscore (zRand(cid:4)(cid:5)) denotes the similarity of two partitions (cid:4)and (cid:5)beyond\nchance and is defined as follows:\n\nzRand(cid:4)(cid:5) (cid:6)\n\n(cid:2)w(cid:4)(cid:5) (cid:8)\n\n(cid:3)\n\nM(cid:4)M(cid:5)\nM\n\n1\n(cid:7)\n\nw(cid:4)(cid:5)\n\n(1)\n\nwhere M is the total number of pairs of nodes in the network, M(cid:4) is the\nnumber of pairs that are assigned to the same module in partition (cid:4), M(cid:5)\nis the number of pairs that are assigned to the same module in partition (cid:5),\nw(cid:4)(cid:5) is the number of pairs that are assigned to the same module both in\npartition (cid:4)and partition (cid:5), and (cid:7)\nw(cid:4)(cid:5) is the SD of w(cid:4)(cid:5) under a hypergeo-\nmetric distribution with the same number and size of modules. We noted\nthat the optimal group-level partition (i.e., partition with highest simi-\nlarity to the a priori network partition) (Yeo et al., 2011) differed in terms\nof the gamma values and number of modules for different subsets of\nparticipants. Therefore, to compare across partitions of different groups,\nwe identified a consensus individual and group gamma value that\nshowed (1) the highest average Rand z scores across group partitions\n\n\fChong et al. • Longitudinal Brain Organization Changes in Aging\n\nJ. Neurosci., July 10, 2019 • 39(28):5534 –5550 • 5537\n\nTable 3. Mean similarity of group-level partitions to an a priori network\nparcellation (Yeo et al., 2011)a\n\nRand z score (number of modules)\nof group-level partition\n\nMean Rand\nz score across\nthe three group-\nlevel partitions\n\nYoung\nadults\n\nElderly at\nbaseline\n\nYoung adults (cid:8)\nelderly at baseline\n\nGamma parameters\nInd (cid:4) 1, Grp (cid:4) 2\nInd (cid:4) 2, Grp (cid:4) 2b\nInd (cid:4) 3, Grp (cid:4) 2\nInd (cid:4) 4, Grp (cid:4) 2\nInd (cid:4) 1, Grp (cid:4) 3\nInd (cid:4) 2, Grp (cid:4) 3\nInd (cid:4) 3, Grp (cid:4) 3\nInd (cid:4) 4, Grp (cid:4) 3\naInd, Individual-level gamma; Grp, group-level gamma.\nbBased on the mean Rand z score, the combination of individual gamma (cid:4) 2 and group gamma (cid:4) 2 was selected.\n\n39.48 (6)\n37.53 (6)\n35.93 (7)\n34.78 (7)\n34.95 (11)\n32.77 (8)\n34.32 (9)\n32.44 (11)\n\n32.98 (7)\n36.13 (7)\n40.22 (8)\n40.46 (10)\n38.04 (7)\n35.26 (7)\n43.94 (10)\n39.63 (10)\n\n40.56 (6)\n43.62 (8)\n40.80 (7)\n39.29 (7)\n41.44 (8)\n39.06 (8)\n37.33 (8)\n30.98 (10)\n\n37.67\n39.09\n38.98\n38.18\n38.14\n35.69\n38.53\n34.35\n\nderived from young participants, elderly participants at baseline, and\nyoung plus elderly participants at baseline, and (2) had six to nine mod-\nules across the various group partitions (in line with the eight a priori\nnetwork partitions) (Yeo et al., 2011). This corresponded to a gamma\nvalue of 2 both at the individual and group level (for a comparison of\nmean Rand z scores across several combinations of gamma parameters,\nsee Table 3).\n\nwhole-brain\n\nwhole-brain vs zRandelderly at baseline\n\nTo test for group differences (young vs elderly) in similarity of group\npartitions to the a priori brain network partition (Yeo et al., 2011) (i.e.,\nzRandyoung\n), we calculated 95% CIs for the Rand\nz scores of young and elderly group partitions, respectively, using sub-\nsampling methods. For each group (young or elderly), we first derived\n1000 group partitions based on subsamples of 45 participants (constitut-\ning at least 80% of participants in the young adults sample). We then\ncalculated Rand z scores (relative to the a priori partition) for each of the\n1000 group partitions. To obtain the 95% CIs for the young and elderly\ngroup partitions, we calculated the 2.5% (lower bound of the CI) and\n97.5% (upper bound of the CI) percentile of the Rand z score distribution\nfrom the 1000 group partitions for each group. Differences in Rand z\nscores between young and elderly group partitions were considered to be\nsignificant ((cid:4)(cid:4) 0.05) if there were no overlap in CIs of the two groups.\nFor the cross-sectional analyses, measures of distinctiveness (i.e., par-\nticipation coefficient, within-module degree, and system segregation)\nwere computed using the group-level modular partition based on the\nfunctional graphs of all healthy young participants. For the longitudinal\nanalyses, measures of distinctiveness were computed using the group-\nlevel modular structure based on the functional graphs of all elderly\nparticipants at their baseline time point.\n\nGraph theoretical analysis. Following our previous approach (Wang et\nal., 2018), graph theoretical measures were computed for each partici-\npant at each time point using in-house scripts based on the brain con-\nnectivity toolbox (Rubinov and Sporns, 2010). Measures were computed\nover a range of network cost thresholds (0.10 (cid:3) cost (cid:3) 0.30, step (cid:4) 0.01)\nthat met the following criteria: (1) average number of edges per node was\nlarger than the log of the total number of nodes (Watts and Strogatz,\n1998; Wang et al., 2009); (2) 80% of the nodes were fully connected\n(Bassett et al., 2008); and (3) small-worldness of the networks was (cid:6)1\n(Watts and Strogatz, 1998). Composite values for each graph theoretical\nmeasure were then obtained by integrating each measure across the en-\ntire range of cost thresholds. We computed the following measures of\nnetwork integration, segregation, and distinctiveness."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 50,
+            "end": 103,
+            "text": "1",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 50,
+            "end": 103,
+            "text": "Undirected, weighted\nfunctional connectivity matrices",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 244,
+            "end": 380,
+            "text": "2",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 244,
+            "end": 380,
+            "text": "parcellated into 114 cortical ROIs (“nodes”)\ndefined by a previous functional connectivity-based parcellation scheme\n(Yeo et al., 2011).",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 244,
+            "end": 380,
+            "text": "3",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 244,
+            "end": 380,
+            "text": "parcellated into 114 cortical ROIs (“nodes”)\ndefined by a previous functional connectivity-based parcellation scheme\n(Yeo et al., 2011).",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 459,
+            "end": 536,
+            "text": "4",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 459,
+            "end": 536,
+            "text": "correlation between the mean BOLD time series\nof each pair of ROIs (“edges”).",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 459,
+            "end": 536,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 459,
+            "end": 536,
+            "text": "correlation between the mean BOLD time series\nof each pair of ROIs (“edges”).",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 537,
+            "end": 616,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 537,
+            "end": 616,
+            "text": "All diagonal elements and negative con-\nnections in the matrices were set to 0.",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1325,
+            "end": 1561,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1325,
+            "end": 1561,
+            "text": "For both steps, community detection was performed across a range of\ncosts (0.10 – 0.30, in 0.001 steps) using Louvain methods (Blondel et al.,\n2008) based on maximizing modularity and repeated using a range of\ngamma values from 1 to 10.",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6458,
+            "end": 6748,
+            "text": "8",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6458,
+            "end": 6748,
+            "text": "graph theoretical measures were computed for each partici-\npant at each time point using in-house scripts based on the brain con-\nnectivity toolbox (Rubinov and Sporns, 2010). Measures were computed\nover a range of network cost thresholds (0.10 (cid:3) cost (cid:3) 0.30, step (cid:4) 0.01)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7066,
+            "end": 7210,
+            "text": "9",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7066,
+            "end": 7210,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7066,
+            "end": 7210,
+            "text": "Composite values for each graph theoretical\nmeasure were then obtained by integrating each measure across the en-\ntire range of cost thresholds.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

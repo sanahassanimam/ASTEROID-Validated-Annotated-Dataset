@@ -1,0 +1,485 @@
+{
+  "data": {
+    "text": "In order to perform the functional connectivity analyses described below, the coordinates of the 264 ROIs identified by Power et al. (2011) were transferred to native space via non-linear registration of the subject’s structural scan to the MNI template using the ANTS software package. Next, a 10 mm radius spherical mask was generated for each coordinate and intersected with the FreeSurfer gray matter mask in order to derive the gray matter-registered ROI masks for each of the 264 ROIs. An intermodal, intra-subject, rigid-body registration of the fMRI reference image and T1 scan was then performed using FLIRT with 6 degrees of freedom, normalized mutual information as the cost function (Jenkinson and Smith, 2001), in order to transfer ROI masks from T1 space to fMRI space. These transferred ROI masks were used to average all voxels within each mask to obtain a single fMRI time-series for each of the 264 ROIs.\n\nTime-series data from each ROI were used to generate correlation matrices among all ROIs (264 ROIs by 264 ROIs), and were then z-transformed to generate normalized correlation matrices for each participant. The diagonal of each correlation matrix was set to zero for all graph theory analyses, and “NA” for all average correlation analyses, in order to remove correlations between an area and itself from analyses. Additionally, ROIs with centers located within 20 mm of one another were set to “NA” as per Power et al. (2011). ROIs were then labeled based on the Power et al. (2011) network assignments, with the following networks being selected for analysis based on their inclusion in similar past studies (Chan et al., 2014; Geerligs et al., 2015; for visual depiction of all network ROIs please see Figure 1): Somatomotor Hand (Hand; 30 ROIs), Visual (Vis; 31 ROIs), Somatomotor Mouth (Mouth; 5 ROIs), Auditory (Aud; 13 ROIs), Default Mode (DMN; 58 ROIs), Salience (Sal; 18 ROIs), Cingulo-Opercular (CO; 14 ROIs), Frontoparietal (FP; 25 ROIs), Dorsal Attention (DAN; 11 ROIs), and Ventral Attention (VAN; 9 ROIs).\n\nFunctional Connectivity Analyses\nIndividual z-transformed correlation matrices were used to compute several measures of functional connectivity:\nPositive/Negative Correlation Weights\nAverage positive and negative correlation were computed within and between all networks of interest. Within-network correlations were characterized as those reflecting correlations between ROIs within a specific network; between-network correlations were characterized as those reflecting correlations between ROIs from one network and those of all other networks. Average positive correlation was computed by setting all negative correlation values to “NA,” then taking the average within- and between-network positive correlation for each network (see Figure 2). Average negative correlation was computed by setting all positive correlation values to “NA,” then taking the average within- and between-network negative correlation for each network (see Figure 3). Due to few negative within-network correlations (and concern as to how to interpret these values), only between-network negative correlations were included in the analysis of negative correlations. Thus, data from this analysis included the average within-network positive correlation (10 values), average between-network positive correlation (10 values), and average between-network negative correlation (10 values) for each participant. In order to examine the effect of age group on these metrics, a 4 (age group: YA, yMA, oMA, OA) × 2 (correlation direction: within, between) × 10 (network: Vis, Hand, Mouth, Aud, DMN, Sal, FP, CO, DAN, VAN) MANCOVA (covariate: scrubbing percentage) was performed for positive correlations, and a 4 (age group: YA, yMA, oMA, OA) × 10 (network: Vis, Hand, Mouth, Aud, DMN, Sal, FP, CO, DAN, VAN) MANCOVA (covariate: scrubbing percentage) was performed for negative between-network correlations. Significant interactions were probed using follow-up MANCOVA and ANOVA analyses.\n\nThese data were also used to derive the metric of system segregation introduced by Wig and colleagues (Chan et al., 2014, 2017; Wig, 2017). This metric reflects the degree to which the brain segments into networks (or systems) that function independently of one another – high values reflect greater functional separation between networks, while lower values reflect less functional separation between networks. In order to compute this metric, only positive correlations among the ten networks identified above were considered, and all negative correlations were set to zero (Chan et al., 2014, 2017). Then, the average within- and between-network correlations were calculated, and the whole-brain system segregation was defined as:\nSS = (z̄within − z̄between) / z̄within\nA one-way ANOVA was used to test whether the four age groups differed on this metric.\n\nGraph Theory Metrics of Connectivity\nSeveral graph theory metrics of functional connectivity were also computed using the Brain Connectivity Toolbox (Rubinov and Sporns, 2010) in order to measure additional aspects of global and nodal connectivity. Global connectivity was assessed using the graph theory metrics of modularity (the extent to which the correlation matrix can be partitioned into networks that maximize within-group connections and minimize between-group connections) (Newman, 2006) and global efficiency (average inverse shortest path length) (Latora and Marchiori, 2001).\n\nNodal connectivity was assessed using the graph theory metrics of participation coefficient (using Power network partitioning – metric reflecting the number of between-network connections relative to the total number of connections at each node) (Guimera and Nunes Amaral, 2005) and local efficiency (global efficiency metric computed on the neighborhood of the node) (Latora and Marchiori, 2001). All nodal metrics were then averaged by network in order to examine any effect of network membership on these metrics. In order to ensure that results were not biased by the connectivity weight threshold applied to the correlation matrices, a range of thresholds between 2–10% (in increments of 1%) was applied to matrices during computation of each metric (Geerligs et al., 2015). Based on this thresholding, all graph theory metrics were only computed on positive correlation weights. As such, all graph theory analyses evaluated the effects of both age group and threshold on the metric of interest. In order to assess the effect of age group on graph theory metrics, a 4 (age group: YA, yMA, oMA, OA) × 9 (threshold: 2–10%) × 10 (network) MANCOVA (covariate: scrubbing percentage) was conducted for each local metric, and a 4 (age group: YA, yMA, oMA, OA) × 9 (threshold: 2–10%) MANCOVA (covariate: scrubbing percentage) was conducted for each global metric."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 120,
+            "end": 156,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 97,
+            "end": 139,
+            "text": "264 ROIs identified by Power et al. (2011)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 295,
+            "end": 322,
+            "text": "10 mm radius spherical mask",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 293,
+            "end": 356,
+            "text": "a 10 mm radius spherical mask was generated for each coordinate",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 293,
+            "end": 356,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 817,
+            "end": 921,
+            "text": "used to average all voxels within each mask to obtain a single fMRI time-series for each of the 264 ROIs",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 817,
+            "end": 921,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 924,
+            "end": 1035,
+            "text": "Time-series data from each ROI were used to generate correlation matrices among all ROIs (264 ROIs by 264 ROIs)",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 924,
+            "end": 1035,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1037,
+            "end": 1130,
+            "text": "and were then z-transformed to generate normalized correlation matrices for each participant.",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1037,
+            "end": 1130,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1131,
+            "end": 1216,
+            "text": "The diagonal of each correlation matrix was set to zero for all graph theory analyses",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1353,
+            "end": 1423,
+            "text": "ROIs with centers located within 20 mm of one another were set to “NA”",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1131,
+            "end": 1216,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1452,
+            "end": 1527,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1452,
+            "end": 1527,
+            "text": "ROIs were then labeled based on the Power et al. (2011) network assignments",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1740,
+            "end": 2043,
+            "text": "Somatomotor Hand (Hand; 30 ROIs), Visual (Vis; 31 ROIs), Somatomotor Mouth (Mouth; 5 ROIs), Auditory (Aud; 13 ROIs), Default Mode (DMN; 58 ROIs), Salience (Sal; 18 ROIs), Cingulo-Opercular (CO; 14 ROIs), Frontoparietal (FP; 25 ROIs), Dorsal Attention (DAN; 11 ROIs), and Ventral Attention (VAN; 9 ROIs).",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2593,
+            "end": 2776,
+            "text": "Average positive correlation was computed by setting all negative correlation values to “NA,” then taking the average within- and between-network positive correlation for each network",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2793,
+            "end": 2976,
+            "text": "Average negative correlation was computed by setting all positive correlation values to “NA,” then taking the average within- and between-network negative correlation for each network",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4741,
+            "end": 4779,
+            "text": "SS = (z̄within − z̄between) / z̄within",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4989,
+            "end": 5042,
+            "text": "Brain Connectivity Toolbox (Rubinov and Sporns, 2010)",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5183,
+            "end": 5349,
+            "text": "modularity (the extent to which the correlation matrix can be partitioned into networks that maximize within-group connections and minimize between-group connections)",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5369,
+            "end": 5425,
+            "text": "global efficiency (average inverse shortest path length)",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5523,
+            "end": 5702,
+            "text": "participation coefficient (using Power network partitioning – metric reflecting the number of between-network connections relative to the total number of connections at each node)",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5740,
+            "end": 5824,
+            "text": "local efficiency (global efficiency metric computed on the neighborhood of the node)",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2593,
+            "end": 2776,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2593,
+            "end": 2776,
+            "text": "Average positive correlation was computed by setting all negative correlation values to “NA,” then taking the average within- and between-network positive correlation for each network",
+            "labels": [
+              "Negative correlation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2793,
+            "end": 2976,
+            "text": "Average negative correlation was computed by setting all positive correlation values to “NA,” then taking the average within- and between-network negative correlation for each network",
+            "labels": [
+              "Negative correlation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3092,
+            "end": 3190,
+            "text": "only between-network negative correlations were included in the analysis of negative correlations.",
+            "labels": [
+              "Negative correlation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4540,
+            "end": 4582,
+            "text": "all negative correlations were set to zero",
+            "labels": [
+              "Negative correlation — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2593,
+            "end": 2776,
+            "text": "9",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6096,
+            "end": 6211,
+            "text": "a range of thresholds between 2–10% (in increments of 1%) was applied to matrices during computation of each metric",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6096,
+            "end": 6211,
+            "text": "a range of thresholds between 2–10% (in increments of 1%) was applied to matrices during computation of each metric",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6096,
+            "end": 6211,
+            "text": "10",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

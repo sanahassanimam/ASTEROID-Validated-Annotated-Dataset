@@ -1,0 +1,319 @@
+{
+  "data": {
+    "text": "Brain network construction was based on the 264 regions of interest (ROIs) described by Power et al. (2011), which consist of 5-mm radius spheres, encompassed in 13 different functional networks. This atlas has been widely applied in pediatric studies (Satterthwaite et al., 2013a, Satterthwaite et al., 2014; Gu et al., 2015; Marek et al., 2015; Ciric et al., 2017; Chai et al., 2017; Gracia-Tabuenca et al., 2020). Edges were calculated as the functional connectivity between every pair of ROIs, via the Pearson’s cross-correlation from their average time series. Based on these matrices, weighted graph theory metrics were computed to characterize network organization features. The sum of edges or weighted degree (d), clustering coefficient (C), efficiency (E), and characteristic path length (L) were estimated to account for centrality, segregation, and integration in terms of functional network organization (Rubinov and Sporns, 2010). C was calculated based on the Barrat formula (Barrat et al., 2004). L was calculated as the average shortest-paths based on the Dijkstra algorithm (Dijkstra, 1959), where pairwise distances were set as the inverse of the corresponding functional connectivity edge. E was computed as the average of the inverse of the shortest-paths of the connectome. For L, the shortest-path of disconnected nodes was set to the maximum observed value of the network in order to avoid infinite outcomes (Fornito et al., 2010). Barrat and Dijkstra’s algorithms were calculated via the R package 'igraph' (Csardi and Nepusz, 2006; RRID:SCR_019225).\n\nTo evaluate the robustness at different connectivity thresholds, network parameters were computed in a range of 1% to 48% of connectivity densities. At the 25% connectivity density, the terms of the model with lower AIC were tested via the Likelihood Ratio Test (LRT). That is, we computed the LRT of the full model and a null model dropping the term of interest (Stasinopoulos and Rigby 2007). In addition, network properties were estimated for each functional network at the 25% connectivity density; significance was corrected with a false discovery rate (FDR q < 0.05; Benjamini and Hochberg, 1995) for the thirteen functional networks defined in the atlas (Power et al., 2011)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 196,
+            "end": 230,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 196,
+            "end": 230,
+            "text": "This atlas has been widely applied",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44,
+            "end": 74,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44,
+            "end": 74,
+            "text": "264 regions of interest (ROIs)",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 126,
+            "end": 145,
+            "text": "5-mm radius spheres",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 539,
+            "end": 564,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 539,
+            "end": 564,
+            "text": "their average time series",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 506,
+            "end": 533,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 506,
+            "end": 533,
+            "text": "Pearson’s cross-correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 162,
+            "end": 194,
+            "text": "5",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 162,
+            "end": 194,
+            "text": "13 different functional networks",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 591,
+            "end": 620,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 591,
+            "end": 620,
+            "text": "weighted graph theory metrics",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1680,
+            "end": 1724,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1680,
+            "end": 1724,
+            "text": "range of 1% to 48% of connectivity densities",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 702,
+            "end": 801,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 702,
+            "end": 801,
+            "text": "weighted degree (d), clustering coefficient (C), efficiency (E), and characteristic path length (L)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1726,
+            "end": 1757,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1817,
+            "end": 1844,
+            "text": "Likelihood Ratio Test (LRT)",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1726,
+            "end": 1757,
+            "text": "At the 25% connectivity density",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2114,
+            "end": 2148,
+            "text": "false discovery rate (FDR q < 0.05",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

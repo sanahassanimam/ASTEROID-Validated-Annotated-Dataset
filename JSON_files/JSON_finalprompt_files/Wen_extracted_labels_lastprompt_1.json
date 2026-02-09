@@ -1,0 +1,1019 @@
+{
+  "data": {
+    "text": "Reconfiguration of the Brain Functional Network Associated with Visual Task Demands\nWen X, Zhang D, Liang B, Zhang R, Wang Z, Wang J, et al. (2015) Reconfiguration of the Brain Functional Network Associated with Visual Task Demands. PLoS ONE 10(7): e0132518. doi:10.1371/journal.pone.0132518\n\nNeuroimaging studies have demonstrated that the topological properties of resting-state brain functional networks are modulated through task performances. However, the reconfiguration of functional networks associated with distinct degrees of task demands is not well understood. In the present study, we acquired fMRI data from 18 healthy adult volunteers during resting-state (RS) and two visual tasks (i.e., visual stimulus watching, VSW; and visual stimulus decision, VSD). Subsequently, we constructed the functional brain networks associated with these three conditions and analyzed the changes in the topological properties (e.g., network efficiency, wiring-cost, modularity, and robustness) among them.\n\nData have been deposited to the Harvard Dataverse Network: (http://dx.doi.org/10.7910/DVN/KMVPBQ), (doi:10.7910/DVN/KMVPBQ).\nThis is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.\n\nEighteen healthy volunteers (age = 23.6 ± 1.65 years, 10 males) participated in the present study. All participants were enrolled in South China Normal University, Guangzhou, China. The exclusion criteria included psychiatric or neurological illness, head trauma, and any implant, device, or object in the body. All the participants provided written informed consent, and the protocol was approved through the Research Ethics Review Board of South China Normal University.\n\nThree cognitive conditions (i.e., RS, VSW, and VSD) were used in the present study, and the participants with normal or corrected-to-normal vision, were fitted with earplugs and provided a hand-fitted keyboard for each condition. The functional images for these three conditions were acquired in a single session. Briefly, each participant was instructed to lie still with eyes closed and not fall asleep during the RS scan, and we acquired 240 volume images in 8 min. Under the VSW condition, each participant was instructed to watch the block stimuli, presented as a series of pictures displayed on the center of a screen in random order. In each block, the visual stimulus lasted 26.4 s, with alternating 12-s intervals of cross cursor epoch. The scan time was 10.2 min for the VSW. For VSD, a one-back task was applied, in which the participant was asked to press the button on the hand-fitted keyboard to indicate whether the presented picture was the same as the one before it. The scan time was 16.8 min. For each participant, the scans were counterbalanced across participants to minimize the effect of condition order.\n\nAll MRI data were obtained on a 3 T Siemens Trio Tim MR scanner with a 12-channel phased array head coil in South China Normal University. The fMRI data were acquired using a gradient-echo echo-planar imaging (EPI) sequence with the following parameters: TR = 2000 ms, TE = 30 ms, Flip angle = 90°, matrix = 64 × 64, FOV = 220 × 220 mm2, thickness/gap = 3.5/0.8 mm, and 32 axial slices covering the whole brain. In addition, 3D high-resolution brain structural images were obtained using a 3D T1-weighted MP-RAGE sequence with the following parameters: TR = 1900 ms, TE = 2.52 ms, Flip angle = 9°, matrix = 256 × 256, FOV = 230 × 230 mm2, thickness = 1.0 mm, and 176 sagittal slices.\n\nAll MRI data were processed using DPARSF_V2.0 based on the SPM8 toolkit (http://www.fil.ion.ucl.ac.uk/spm/). Consistent data processing procedures were applied for the three cognitive conditions. The fMRI data of the three conditions for each subject were processed separately. To minimize the effects of the length of the time series on network analysis, we used the first 8 min fMRI data of VSW and VSD to yield 240 time points that are comparable to the RS condition. As described previously, the following procedures were adopted. First, the first 10 volume images were removed from the fMRI data for scanner stabilization and participant adaptation to the environment. Subsequently, slice timing and realignment were performed to correct for the acquisition time delay and head motions, respectively. We assessed the head motion of each participant, and no participant was excluded according to these criteria (i.e., the head motion in any direction was not more than 1.5 mm or 1.5°). We adopted the maximum head motion of the time series to represent the head motion profile in any direction for each condition of each subject, and used repeated measures ANOVA to analyze the differences of head motion in any direction among the three conditions. Notably, the head motion profiles were matched among the three conditions. The acquired functional images were further spatially normalized to a standard MNI template and resampled to a voxel size of 3×3×3 mm3. Here, we did not perform spatial smoothing. To reduce low frequency drift and the physiological noise of fMRI data, the linear detrend was removed, and 0.01Hz high-pass filtering was used. Moreover, we regressed out the nuisance covariates, including the 6 head motion parameters and the white matter and cerebrospinal fluid (CSF) signals. The global signal was not regressed out due to recent debates.\n\nTo define the node of the functional network, we applied a functional template as proposed in a previous study. This functional template (referred to as “Fun160” in the present study) comprised 160 regions of interest (ROIs), spanning across the cerebral cortex, subcortical structures, and the cerebellum. The set of ROIs were generated around the peak coordinates previously identified from meta-analysis data of multiple brain functions using 10 mm diameter spheres. As previously described, the time series for each ROI was extracted by averaging the signals of all voxels within that region. For each cognitive condition of each subject, a 160 × 160 correlation matrix was obtained after calculating Pearson’s correlation coefficient for the time courses between any pair of ROIs. In the present study, we adopted a binary network for further analysis. To obtain the binary matrix, we applied a statistical-specific threshold to the correlation matrix. Briefly, when calculating the Pearson’s correlation coefficient, the corresponding p-value of each element in the matrix was also calculated, the p-value was used to compare with a statistical threshold. Then, the matrix elements, whose corresponding p-values passed through the statistical threshold, were retained for each correlation matrix, whereas the elements were set to zero when the p-values did not pass through the threshold. We used a rigorous Bonferroni method (p < 0.05) to correct for multiple comparisons, such that the p-threshold equaled 0.05 divided by the total number of non-repeated elements (i.e. total number = 160 × 159 / 2). Finally, a binary functional network was obtained for each subject in each cognitive condition.\n\nWe characterized the whole-brain topological organization of the brain functional networks using the following eight global parameters: the average degree (K), clustering coefficient (Cp), local efficiency (Eloc), characteristic path length (Lp), global efficiency (Eglob), small-worldness (σ), average physical distance of functional connections (Dp), and modularity (Q). The K and Dp can be used to describe the connection density and wiring-cost of forming a network, respectively. Although the global parameters well describe the topological organization of the brain functional network, nodal analysis provides more useful information for the individual brain regions. In the present study, we used nodal efficiency (Enod) to describe the nodal topology of the brain network. In addition, we evaluated the stability of functional networks using the network robustness (R), characterized by the degree of tolerance against targeted attack. Briefly, we removed the nodes in decreasing order of the Enod value and recalculated the size of the largest connected component after removing one node each time. The robustness is represented as the area under the curve plotted according to the component size and node number. More robust networks retain a larger connected component, even when several nodes have been removed.\n\nWe used one-way repeated measures ANOVA models across the three cognitive conditions (RS, VSW and VSD) to detect the main effects of task demands on each of the global parameters, K, Cp, Eloc, Lp, Eglob, σ, Dp, and Q. When a significant main effect was observed for a given parameter, we further performed post-hoc paired t-tests (Bonferroni correction for post-hoc comparisons) to determine the simple effect of the task demands. For the nodal parameter, we performed the same ANOVA and post-hoc comparison methods to detect the main and simple effects of task demands on the Enod in each region. Because of the large number of regions, the false discovery rate (FDR) was adopted to correct the multiple comparisons of ANOVA models across regions, and the Bonferroni correction was applied to post-hoc comparisons in regions exhibiting significant main effects. Moreover, we also compared the network robustness across the three cognitive conditions using the same procedures.\n\nThe reproducibility of our results was validated using the following procedures. We employed two additional brain templates, i.e., the AAL90 and Fun268, to define the network nodes for estimating the influence of the different parcellation schemes on our findings. In addition to the binary network analysis, we also implemented the weighted network and repeated the network analysis."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 84,
+            "end": 147,
+            "text": "Wen X, Zhang D, Liang B, Zhang R, Wang Z, Wang J, et al. (2015)",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 83,
+            "text": "Reconfiguration of the Brain Functional Network Associated with Visual Task Demands",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 141,
+            "end": 147,
+            "text": "(2015)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 233,
+            "end": 241,
+            "text": "PLoS ONE",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 259,
+            "end": 291,
+            "text": "doi:10.1371/journal.pone.0132518",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 293,
+            "end": 447,
+            "text": "Neuroimaging studies have demonstrated that the topological properties of resting-state brain functional networks are modulated through task performances.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1005,
+            "end": 1129,
+            "text": "Data have been deposited to the Harvard Dataverse Network: (http://dx.doi.org/10.7910/DVN/KMVPBQ), (doi:10.7910/DVN/KMVPBQ).",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1130,
+            "end": 1232,
+            "text": "This is an open access article distributed under the terms of the Creative Commons Attribution License",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1234,
+            "end": 1365,
+            "text": "which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1367,
+            "end": 1394,
+            "text": "Eighteen healthy volunteers",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Age",
+            "Handedness",
+            "Male/Female",
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1396,
+            "end": 1419,
+            "text": "age = 23.6 ± 1.65 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1421,
+            "end": 1429,
+            "text": "10 males",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1549,
+            "end": 1678,
+            "text": "The exclusion criteria included psychiatric or neurological illness, head trauma, and any implant, device, or object in the body.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4514,
+            "end": 4541,
+            "text": "no participant was excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1739,
+            "end": 1838,
+            "text": "the protocol was approved through the Research Ethics Review Board of South China Normal University",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3225,
+            "end": 3237,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3239,
+            "end": 3249,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3251,
+            "end": 3267,
+            "text": "Flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3340,
+            "end": 3380,
+            "text": "32 axial slices covering the whole brain",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3308,
+            "end": 3334,
+            "text": "thickness/gap = 3.5/0.8 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3308,
+            "end": 3334,
+            "text": "thickness/gap = 3.5/0.8 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3287,
+            "end": 3306,
+            "text": "FOV = 220 × 220 mm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5080,
+            "end": 5118,
+            "text": "resampled to a voxel size of 3×3×3 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2199,
+            "end": 2264,
+            "text": "lie still with eyes closed and not fall asleep during the RS scan",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2282,
+            "end": 2308,
+            "text": "240 volume images in 8 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1367,
+            "end": 1394,
+            "text": "Eighteen healthy volunteers",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3655,
+            "end": 3726,
+            "text": "All MRI data were processed using DPARSF_V2.0 based on the SPM8 toolkit",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 657,
+            "end": 769,
+            "text": "resting-state (RS) and two visual tasks (i.e., visual stimulus watching, VSW; and visual stimulus decision, VSD)",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)",
+            "Number of slices",
+            "Slice thickness",
+            "Flip angle",
+            "Inter-slice gap",
+            "Duration (s)",
+            "Eyes open/closed",
+            "Field of View (cm)",
+            "TR (ms)",
+            "TE (ms)",
+            "Voxel Size (mm x mm x mm)",
+            "Number of individuals for final analyses",
+            "Most-used software for preprocessing"
+          ]
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2482,
+            "end": 2586,
+            "text": "In each block, the visual stimulus lasted 26.4 s, with alternating 12-s intervals of cross cursor epoch.",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "Missing_sublabels": [
+            "Number of blocks/trials",
+            "Length of each trial",
+            "ISI distribution",
+            "Efficiency optimization",
+            "Block/event correlation"
+          ]
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2335,
+            "end": 2481,
+            "text": "each participant was instructed to watch the block stimuli, presented as a series of pictures displayed on the center of a screen in random order.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2380,
+            "end": 2481,
+            "text": "block stimuli, presented as a series of pictures displayed on the center of a screen in random order.",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2636,
+            "end": 2824,
+            "text": "a one-back task was applied, in which the participant was asked to press the button on the hand-fitted keyboard to indicate whether the presented picture was the same as the one before it.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          },
+          "Missing_sublabels": []
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8555,
+            "end": 8657,
+            "text": "We used one-way repeated measures ANOVA models across the three cognitive conditions (RS, VSW and VSD)",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8840,
+            "end": 8985,
+            "text": "we further performed post-hoc paired t-tests (Bonferroni correction for post-hoc comparisons) to determine the simple effect of the task demands.",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "Missing_sublabels": []
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5636,
+            "end": 5748,
+            "text": "This functional template (referred to as “Fun160” in the present study) comprised 160 regions of interest (ROIs)",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5964,
+            "end": 5992,
+            "text": "using 10 mm diameter spheres",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6019,
+            "end": 6119,
+            "text": "the time series for each ROI was extracted by averaging the signals of all voxels within that region",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6167,
+            "end": 6308,
+            "text": "a 160 × 160 correlation matrix was obtained after calculating Pearson’s correlation coefficient for the time courses between any pair of ROIs",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6332,
+            "end": 6380,
+            "text": "we adopted a binary network for further analysis",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6919,
+            "end": 7002,
+            "text": "We used a rigorous Bonferroni method (p < 0.05) to correct for multiple comparisons",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7366,
+            "end": 7601,
+            "text": "the average degree (K), clustering coefficient (Cp), local efficiency (Eloc), characteristic path length (Lp), global efficiency (Eglob), small-worldness (σ), average physical distance of functional connections (Dp), and modularity (Q)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8555,
+            "end": 8657,
+            "text": "We used one-way repeated measures ANOVA models across the three cognitive conditions (RS, VSW and VSD)",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4207,
+            "end": 4208,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm",
+            "Removal Init Vol — Parameters"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3655,
+            "end": 3726,
+            "text": "All MRI data were processed using DPARSF_V2.0 based on the SPM8 toolkit",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4190,
+            "end": 4328,
+            "text": "First, the first 10 volume images were removed from the fMRI data for scanner stabilization and participant adaptation to the environment.",
+            "labels": [
+              "Removal Init Vol — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4201,
+            "end": 4236,
+            "text": "first 10 volume images were removed",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3697,
+            "end": 3698,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3655,
+            "end": 3726,
+            "text": "All MRI data were processed using DPARSF_V2.0 based on the SPM8 toolkit",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4343,
+            "end": 4460,
+            "text": "slice timing and realignment were performed to correct for the acquisition time delay and head motions, respectively.",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5109,
+            "end": 5110,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3655,
+            "end": 3726,
+            "text": "All MRI data were processed using DPARSF_V2.0 based on the SPM8 toolkit",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4343,
+            "end": 4460,
+            "text": "slice timing and realignment were performed to correct for the acquisition time delay and head motions, respectively.",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4070,
+            "end": 4071,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Algorithm",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3655,
+            "end": 3726,
+            "text": "All MRI data were processed using DPARSF_V2.0 based on the SPM8 toolkit",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4984,
+            "end": 5119,
+            "text": "The acquired functional images were further spatially normalized to a standard MNI template and resampled to a voxel size of 3×3×3 mm3.",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5080,
+            "end": 5118,
+            "text": "resampled to a voxel size of 3×3×3 mm3",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4630,
+            "end": 4631,
+            "text": "5",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Software",
+            "Temporal detrending — Type",
+            "Temporal detrending — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3655,
+            "end": 3726,
+            "text": "All MRI data were processed using DPARSF_V2.0 based on the SPM8 toolkit",
+            "labels": [
+              "Temporal detrending — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5236,
+            "end": 5308,
+            "text": "the linear detrend was removed, and 0.01Hz high-pass filtering was used.",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5236,
+            "end": 5266,
+            "text": "the linear detrend was removed",
+            "labels": [
+              "Temporal detrending — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5375,
+            "end": 5376,
+            "text": "6",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software",
+            "Temporal filt — Type",
+            "Temporal filt — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3655,
+            "end": 3726,
+            "text": "All MRI data were processed using DPARSF_V2.0 based on the SPM8 toolkit",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5272,
+            "end": 5308,
+            "text": "0.01Hz high-pass filtering was used.",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5272,
+            "end": 5307,
+            "text": "0.01Hz high-pass filtering was used",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5361,
+            "end": 5362,
+            "text": "7",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Type",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3655,
+            "end": 3726,
+            "text": "All MRI data were processed using DPARSF_V2.0 based on the SPM8 toolkit",
+            "labels": [
+              "motion regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5361,
+            "end": 5459,
+            "text": "including the 6 head motion parameters and the white matter and cerebrospinal fluid (CSF) signals.",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5375,
+            "end": 5399,
+            "text": "6 head motion parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3717,
+            "end": 3718,
+            "text": "8",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Type",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3655,
+            "end": 3726,
+            "text": "All MRI data were processed using DPARSF_V2.0 based on the SPM8 toolkit",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5361,
+            "end": 5459,
+            "text": "including the 6 head motion parameters and the white matter and cerebrospinal fluid (CSF) signals.",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5408,
+            "end": 5458,
+            "text": "white matter and cerebrospinal fluid (CSF) signals",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

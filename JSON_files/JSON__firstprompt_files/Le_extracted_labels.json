@@ -1,0 +1,1129 @@
+{
+  "data": {
+    "text": "Functional neural network configuration in late childhood varies by age and cognitive state\n\nDevelopmental Cognitive Neuroscience 45 (2020) 100862. https://doi.org/10.1016/j.dcn.2020.100862\n\nThang M. Le; Anna S. Huang; Jonathan O’Rawe; Hoi-Chung Leung\n\nGraph measures of network architecture, functional integration, and flexibility were calculated for each of the four states.\n\nA total of 60 participants (28 females, age 9–12, mean ± SD: 10.72 ± .88 years) with usable resting state fMRI data were used in the community detection analysis; and a total of 52 participants (27 females, 10.77 ± .90 years) with complete fMRI data for all four task states were used in the analysis of network properties. Informed consent was obtained from parents of subjects prior to participation in accordance to the Stony Brook University Institutional Review Board.\n\nResting: Resting state fMRI data were acquired in two runs (11 min 52 s total), during which participants were instructed to relax and look at the center of a target covering the whole screen. Resting-state sessions were performed prior to the task-state sessions.\n\nReward task: On each trial, after a 2-s fixation, two doors were displayed on the screen for 2 s and participants were instructed to indicate their choice by pressing the left or right button. After an 800-ms fixation, feedback of monetary gain (“You Win”) or loss (“You Lose”) was displayed for 1.2 s. There was a total of 60 trials (30 win, 30 loss), with win/loss trials in a pseudorandom order. The intertrial interval (ITI) was jittered (mean: 2.5 s, range: 0–14 s), with an average trial duration of 8 s. There were 2 runs with each run lasting 4 min 20 s.\n\nPerception task: There were 4 different block conditions: neutral faces, sad faces, happy faces, and houses. Each block was 16-s long and contained 4 trials. On each trial, a 600-ms fixation cross was followed by the simultaneous presentation of two images for 3000 ms, either two faces or two houses, and participants made a button press to indicate whether the two images were identical or different (50/50 chance). There were 3 blocks per condition, presented in a pseudorandom order. These task blocks were interleaved with 14 s of fixation. The run lasted 6 min and 12 s.\n\nWorking memory task: We used a 1-back spatial working memory paradigm with two load conditions (Load 1 and Load 3). The two load conditions were presented in blocks of 5 trials. On each trial except the first trial of each block, participants pressed a button to indicate whether any rabbit was in a different location from the previous trial. Each task block lasted 17 s with a 13-s fixation period between blocks. There were two runs of 4 min 12 s each (8 blocks/run).\n\nData were collected on a 3 T Siemens Tim Trio whole-body MRI system (Erlangen, Germany). Whole-brain structural anatomical images were acquired with a T1-weighted MPRAGE sequence (TR = 2400 ms; TE = 3.16 ms; slices = 176; flip angle = 8°; FOV = 256 × 256; matrix = 256 × 256; resolution = 1 × 1 × 1 mm3). T2*-weighted EPI was acquired (TR = 2000 ms; TE = 30 ms; slices = 37; flip angle = 90; FOV = 224 × 224; matrix = 64 × 64; resolution = 3.5 × 3.5 × 3.5 mm3). Two runs of resting state (175 volumes each), two runs of the reward task (123 volumes each), one run of the perception task (183 volumes), and two runs of the working memory task (127 volumes each) were acquired. Each session began with 3 dummy scans which were discarded prior to data analysis.\n\nImages were preprocessed with SPM12. Standard preprocessing steps were applied to each dataset including slice timing correction, volume alignment for motion correction, and co-registration of anatomical to the mean EPI image. A unified segmentation algorithm was applied to the high-resolution structural images to separate gray matter, white matter, and CSF. The functional and anatomical images were then spatially normalized into the MNI space using affine nonlinear transformation, and then spatially smoothed with a 4-mm full-width at half-maximum Gaussian kernel.\n\nMovement was visually inspected and calculated using the Artifact Detection Tools (ART). Runs with significant motion (> 3-mm translation peak-to-peak and/or 1.5° rotation) and significant change in signal global mean (> 3 SD) were removed. Outlier volumes were identified for frame-to-frame displacement that exceeded 0.5 mm and/or rotation > 1.5°. Prior to assessing functional connectivity, a nuisance regression was constructed to control for 6 motion parameters up to their second derivatives, volumes with excessive motion, modeled physiological signal generated through aCompCor of the white matter and CSF voxels, and the linear drift.\n\nFor resting state data, the residuals of this regression were then filtered utilizing a bandpass between 0.008 and 0.09 Hz and despiked using the CONN toolbox. For the task state data, no low pass filter was applied (i.e., bandpass = .008 Hz – Inf) to preserve the possible presence of task signals at higher frequencies. We chose not to regress out the global signal. To reduce potential influence of transient task-related effects, all visual and motor events were treated as events of no interest in a standard GLM; the residuals were used to estimate functional connectivity during the tasks. Only relevant task blocks were included in the time series, with 6 s of hemodynamic delay accounted for, and concatenated prior to correlation calculation.\n\nWe conducted Pearson correlations between time series in all pairs of regions from the 264-ROI atlas from Power et al. (2011). ROIs were spheres of 5-mm radius centered at those coordinates. Correlation coefficients were Fisher’s Z transformed and used for all subsequent computations.\n\nTo determine network architecture, we used the Louvain community detection algorithm. Optimal parameters (density threshold = 0.045; structural resolution = 2.2) produced a twelve-community partition similar to prior work. The algorithm was run 150 times and an agreement matrix was subjected to consensus clustering to yield a final partition for each subject and state. Brain Connectivity Toolbox and custom MATLAB scripts were used to compute global efficiency, local efficiency, participation coefficient, number of connector hubs, and modularity."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 191,
+            "end": 202,
+            "text": "Thang M. Le",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 91,
+            "text": "Functional neural network configuration in late childhood varies by age and cognitive state",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 134,
+            "end": 138,
+            "text": "2020",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 93,
+            "end": 129,
+            "text": "Developmental Cognitive Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 148,
+            "end": 189,
+            "text": "https://doi.org/10.1016/j.dcn.2020.100862",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 253,
+            "end": 377,
+            "text": "Graph measures of network architecture, functional integration, and flexibility were calculated for each of the four states.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 93,
+            "end": 147,
+            "text": "Developmental Cognitive Neuroscience 45 (2020) 100862.",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2763,
+            "end": 2779,
+            "text": "Siemens Tim Trio",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3070,
+            "end": 3082,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3084,
+            "end": 3094,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3096,
+            "end": 3107,
+            "text": "slices = 37",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3109,
+            "end": 3124,
+            "text": "flip angle = 90",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3126,
+            "end": 3141,
+            "text": "FOV = 224 × 224",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3161,
+            "end": 3193,
+            "text": "resolution = 3.5 × 3.5 × 3.5 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3340,
+            "end": 3394,
+            "text": "two runs of the working memory task (127 volumes each)",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 979,
+            "end": 1019,
+            "text": "relax and look at the center of a target",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 854,
+            "end": 861,
+            "text": "Resting",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 557,
+            "end": 572,
+            "text": "52 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 390,
+            "end": 405,
+            "text": "60 participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 407,
+            "end": 417,
+            "text": "28 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 419,
+            "end": 427,
+            "text": "age 9–12",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 703,
+            "end": 732,
+            "text": "Informed consent was obtained",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 802,
+            "end": 851,
+            "text": "Stony Brook University Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 947,
+            "end": 1019,
+            "text": "participants were instructed to relax and look at the center of a target",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1170,
+            "end": 1194,
+            "text": "two doors were displayed",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1930,
+            "end": 1940,
+            "text": "two images",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1444,
+            "end": 1453,
+            "text": "60 trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1808,
+            "end": 1817,
+            "text": "16-s long",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1523,
+            "end": 1590,
+            "text": "intertrial interval (ITI) was jittered (mean: 2.5 s, range: 0–14 s)",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1600,
+            "end": 1629,
+            "text": "average trial duration of 8 s",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3434,
+            "end": 3447,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3434,
+            "end": 3447,
+            "text": "3 dummy scans",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3599,
+            "end": 3622,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3624,
+            "end": 3662,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3645,
+            "end": 3662,
+            "text": "motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3668,
+            "end": 3719,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3723,
+            "end": 3753,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3723,
+            "end": 3743,
+            "text": "unified segmentation",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3902,
+            "end": 3922,
+            "text": "6",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3948,
+            "end": 3979,
+            "text": "affine nonlinear transformation",
+            "labels": [
+              "Spatial normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3932,
+            "end": 3941,
+            "text": "MNI space",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3990,
+            "end": 4063,
+            "text": "7",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4016,
+            "end": 4047,
+            "text": "4-mm full-width at half-maximum",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4307,
+            "end": 4338,
+            "text": "8",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4123,
+            "end": 4147,
+            "text": "Artifact Detection Tools",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4385,
+            "end": 4414,
+            "text": "0.5 mm and/or rotation > 1.5°",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4643,
+            "end": 4651,
+            "text": "9",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4643,
+            "end": 4651,
+            "text": "aCompCor",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4659,
+            "end": 4686,
+            "text": "white matter and CSF voxels",
+            "labels": [
+              "aCompCor — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4513,
+            "end": 4532,
+            "text": "10",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4513,
+            "end": 4532,
+            "text": "6 motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4545,
+            "end": 4563,
+            "text": "second derivatives",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4799,
+            "end": 4833,
+            "text": "11",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4799,
+            "end": 4807,
+            "text": "bandpass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4816,
+            "end": 4833,
+            "text": "0.008 and 0.09 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4838,
+            "end": 4869,
+            "text": "12",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4857,
+            "end": 4869,
+            "text": "CONN toolbox",
+            "labels": [
+              "Despiking — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5166,
+            "end": 5228,
+            "text": "13",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5225,
+            "end": 5228,
+            "text": "GLM",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5149,
+            "end": 5172,
+            "text": "visual and motor events",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Regressors filter",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4896,
+            "end": 4959,
+            "text": "14",
+            "labels": [
+              "Regressors filter — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Regressors filter",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4945,
+            "end": 4958,
+            "text": ".008 Hz – Inf",
+            "labels": [
+              "Regressors filter — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5308,
+            "end": 5411,
+            "text": "15",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5373,
+            "end": 5397,
+            "text": "6 s of hemodynamic delay",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5552,
+            "end": 5565,
+            "text": "16",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5602,
+            "end": 5624,
+            "text": "spheres of 5-mm radius",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5507,
+            "end": 5542,
+            "text": "17",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5355,
+            "end": 5366,
+            "text": "time series",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5478,
+            "end": 5498,
+            "text": "18",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5478,
+            "end": 5498,
+            "text": "Pearson correlations",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5686,
+            "end": 5708,
+            "text": "Fisher’s Z transformed",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5799,
+            "end": 5836,
+            "text": "19",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5799,
+            "end": 5806,
+            "text": "Louvain",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5858,
+            "end": 5912,
+            "text": "density threshold = 0.045; structural resolution = 2.2",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5925,
+            "end": 5951,
+            "text": "20",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5925,
+            "end": 5951,
+            "text": "twelve-community partition",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6198,
+            "end": 6302,
+            "text": "21",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6124,
+            "end": 6150,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6155,
+            "end": 6186,
+            "text": "custom MATLAB scripts were used",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

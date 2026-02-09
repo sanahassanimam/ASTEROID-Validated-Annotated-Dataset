@@ -1,0 +1,1103 @@
+{
+  "data": {
+    "text": "Resting-State Functional Connectivity and Network Analysis of Cerebellum with Respect to IQ and Gender\n\nORIGINAL RESEARCH\npublished: 26 April 2017\ndoi: 10.3389/fnhum.2017.00189\nFrontiers in Human Neuroscience | Volume 11 | Article 189\nCitation:\nPezoulas VC, Zervakis M, Michelogiannis S and Klados MA (2017) Resting-State Functional Connectivity and Network Analysis of Cerebellum with Respect to IQ and Gender.\nFront. Hum. Neurosci. 11:189. doi: 10.3389/fnhum.2017.00189\n\nSubjects\nOur data was collected from the Human Connectome Project (HCP) database. Functional magnetic resonance imaging (fMRI) data was initially acquired from 492 healthy subjects at rest with eyes open with relaxed fixation on a projected bright cross-hair on a dark background. All subjects with psychiatric history, extensive substance use and hard alcohol history have been removed. Additional information related to siblings and twins have been obtained, and the population has been restricted to only one member of a sibling/twin pair. Fluid IQ scores were obtained per subject prior to scanning. Subjects were separated based on their fluid IQ scores into two groups as described in the following section.\n\nIQ Groups Formation\nIn this study, IQ score is defined as the number of correct responses per subject on an abbreviated Raven’s patterns test. To define low and high-IQ groups, we used the distribution from all 492 subjects. The low-IQ group includes 69 subjects, whereas the high-IQ group is composed of 67 subjects; the mid-IQ subjects were discarded so that our population of interest consists of 136 well-separated subjects (69 low-IQ/67 high-IQ). There are 25 males and 44 females in the low-IQ group, while 29 males and 38 females are involved in the high-IQ group. Ages are provided in intervals: 22–25 (17/9), 26–30 (24/32), 31–35 (28/25), and one subject older than 36 years (high-IQ group).\n\nResting State fMRI Data\nResting-state BOLD fMRI data were obtained through a gradient-echo EPI sequence from a 3T scanner (91 volumes; TR = 720 ms, TE = 33.1 ms, FA = 52°, FOV = 208 × 180 mm, slice thickness = 2.0 mm; 2.0 mm isotropic voxels). Pre-processed BOLD time-series (15 min duration, 1,200 frames) were acquired from the selected 136 subjects. HCP investigators performed preprocessing and denoising using FSL’s MELODIC and FIX, as well as volume- and surface-based pipelines.\n\nPreprocessing\nThe first volume-based pipeline removes spatial distortions, realigns volumes using FSL’s FLIRT-based motion correction, normalizes the intensity of 4D images to a global mean, registers data into MNI space and finally masks the data with the final brain mask derived from FreeSurfer segmentation. The second surface-based pipeline transforms the time series to CIFTI gray-ordinates space with 2 mm average surface vertex and subcortical spacing. Surface data was smoothed using a 2 mm FWHM kernel and ICA components were classified with FIX to reconstruct de-noised signals.\n\nGraph Analysis\nCerebellum was parcellated into 28 lobules/ROIs using the SUIT atlas; Vermis Crus I was excluded. Functional connectivity was assessed by computing Pearson’s correlation coefficients between each pair of the 27 ROIs; negative correlations were discarded from further analysis. Minimum Spanning Trees (MSTs) were constructed using Kruskal’s algorithm and global/local metrics were computed. Statistical analysis used 1-way unbalanced ANOVA with FDR correction (α = 0.05) to compare (i) low vs high IQ, (ii) males within IQ groups, and (iii) females within IQ groups.\n\nResults (selected)\nCerebellum manifests a small-world network structure in both IQ populations (low-IQ: 1.2644 ± 0.1765; high-IQ: 1.2126 ± 0.1010). Significant differences between low and high-IQ groups were found for average clustering coefficient, connectivity, diameter and radius. In females, additional differences included small-worldness. Hubs included Left VI (highest betweenness and degree in 36–52% of subjects across groups).\n\nEthics Statement\nThe HCP consent procedure was approved by the Washington University institutional review board. Data use followed open-access terms of the Human Connectome Project.\n\nAvailability & Publisher\nFull-text: Frontiers in Human Neuroscience (CC BY). DOI: 10.3389/fnhum.2017.00189. Publisher: Frontiers."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 102,
+            "text": "Resting-State Functional Connectivity and Network Analysis of Cerebellum with Respect to IQ and Gender",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 245,
+            "end": 300,
+            "text": "Pezoulas VC, Zervakis M, Michelogiannis S and Klados MA",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 301,
+            "end": 307,
+            "text": "(2017)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 177,
+            "end": 208,
+            "text": "Frontiers in Human Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 152,
+            "end": 176,
+            "text": "10.3389/fnhum.2017.00189",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3569,
+            "end": 3644,
+            "text": "Cerebellum manifests a small-world network structure in both IQ populations",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4197,
+            "end": 4248,
+            "text": "Full-text: Frontiers in Human Neuroscience (CC BY).",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 514,
+            "end": 544,
+            "text": "Human Connectome Project (HCP)",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 177,
+            "end": 208,
+            "text": "Frontiers in Human Neuroscience",
+            "labels": [
+              "Code"
+            ]
+          },
+          "Missing_sublabels": [
+            "Code"
+          ]
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 177,
+            "end": 208,
+            "text": "Frontiers in Human Neuroscience",
+            "labels": [
+              "Preregistered"
+            ]
+          },
+          "Missing_sublabels": [
+            "Preregistered"
+          ]
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4240,
+            "end": 4247,
+            "text": "(CC BY)",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 482,
+            "end": 485,
+            "text": "Our",
+            "labels": [
+              "Multicenter study? (Y/N)"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 482,
+            "end": 485,
+            "text": "Our",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "Missing_sublabels": [
+            "Brand"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 482,
+            "end": 485,
+            "text": "Our",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "Missing_sublabels": [
+            "Number of slices"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2082,
+            "end": 2106,
+            "text": "slice thickness = 2.0 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2052,
+            "end": 2060,
+            "text": "FA = 52°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1914,
+            "end": 1917,
+            "text": "Res",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "Missing_sublabels": [
+            "Inter-slice gap"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2166,
+            "end": 2195,
+            "text": "15 min duration, 1,200 frames",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 667,
+            "end": 698,
+            "text": "eyes open with relaxed fixation",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2062,
+            "end": 2080,
+            "text": "FOV = 208 × 180 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2025,
+            "end": 2036,
+            "text": "TR = 720 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2038,
+            "end": 2050,
+            "text": "TE = 33.1 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2108,
+            "end": 2131,
+            "text": "2.0 mm isotropic voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1588,
+            "end": 1615,
+            "text": "136 well-separated subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2305,
+            "end": 2318,
+            "text": "FSL’s MELODIC",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1914,
+            "end": 1937,
+            "text": "Resting-state BOLD fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2968,
+            "end": 2973,
+            "text": "Graph",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "Missing_sublabels": [
+            "Number of blocks/trials"
+          ]
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2968,
+            "end": 2973,
+            "text": "Graph",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "Missing_sublabels": [
+            "Length of each trial"
+          ]
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2968,
+            "end": 2973,
+            "text": "Graph",
+            "labels": [
+              "ISI distribution"
+            ]
+          },
+          "Missing_sublabels": [
+            "ISI distribution"
+          ]
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2968,
+            "end": 2973,
+            "text": "Graph",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "Missing_sublabels": [
+            "Length of blocks"
+          ]
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2968,
+            "end": 2973,
+            "text": "Graph",
+            "labels": [
+              "Efficiency optimization"
+            ]
+          },
+          "Missing_sublabels": [
+            "Efficiency optimization"
+          ]
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2968,
+            "end": 2973,
+            "text": "Graph",
+            "labels": [
+              "Block/event correlation"
+            ]
+          },
+          "Missing_sublabels": [
+            "Block/event correlation"
+          ]
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 667,
+            "end": 698,
+            "text": "eyes open with relaxed fixation",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 704,
+            "end": 752,
+            "text": "projected bright cross-hair on a dark background",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 704,
+            "end": 711,
+            "text": "project",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          },
+          "Missing_sublabels": [
+            "Stimuli repetition"
+          ]
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3399,
+            "end": 3421,
+            "text": "1-way unbalanced ANOVA",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3453,
+            "end": 3547,
+            "text": "to compare (i) low vs high IQ, (ii) males within IQ groups, and (iii) females within IQ groups",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1588,
+            "end": 1615,
+            "text": "136 well-separated subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1760,
+            "end": 1871,
+            "text": "Ages are provided in intervals: 22–25 (17/9), 26–30 (24/32), 31–35 (28/25), and one subject older than 36 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 473,
+            "end": 480,
+            "text": "Subject",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1640,
+            "end": 1759,
+            "text": "There are 25 males and 44 females in the low-IQ group, while 29 males and 38 females are involved in the high-IQ group.",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 754,
+            "end": 860,
+            "text": "All subjects with psychiatric history, extensive substance use and hard alcohol history have been removed.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1506,
+            "end": 1540,
+            "text": "the mid-IQ subjects were discarded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 473,
+            "end": 480,
+            "text": "Subject",
+            "labels": [
+              "Group matching"
+            ]
+          },
+          "Missing_sublabels": [
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4036,
+            "end": 4100,
+            "text": "approved by the Washington University institutional review board",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1296,
+            "end": 1329,
+            "text": "abbreviated Raven’s patterns test",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2423,
+            "end": 2450,
+            "text": "1",
+            "labels": [
+              "Unwarp — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2423,
+            "end": 2428,
+            "text": "remov",
+            "labels": [
+              "Unwarp — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Unwarp — Software"
+          ]
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2423,
+            "end": 2428,
+            "text": "remov",
+            "labels": [
+              "Unwarp — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Unwarp — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2423,
+            "end": 2428,
+            "text": "remov",
+            "labels": [
+              "Unwarp — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Unwarp — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2452,
+            "end": 2510,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2475,
+            "end": 2486,
+            "text": "FSL’s FLIRT",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2493,
+            "end": 2510,
+            "text": "motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2452,
+            "end": 2457,
+            "text": "reali",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2512,
+            "end": 2566,
+            "text": "3",
+            "labels": [
+              "Intensity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2512,
+            "end": 2517,
+            "text": "norma",
+            "labels": [
+              "Intensity normalization — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Intensity normalization — Software"
+          ]
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2512,
+            "end": 2517,
+            "text": "norma",
+            "labels": [
+              "Intensity normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Intensity normalization — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2555,
+            "end": 2566,
+            "text": "global mean",
+            "labels": [
+              "Intensity normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2568,
+            "end": 2597,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2588,
+            "end": 2591,
+            "text": "MNI",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2568,
+            "end": 2597,
+            "text": "registers data into MNI space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2568,
+            "end": 2573,
+            "text": "regis",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2610,
+            "end": 2687,
+            "text": "5",
+            "labels": [
+              "Skull extraction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2664,
+            "end": 2674,
+            "text": "FreeSurfer",
+            "labels": [
+              "Skull extraction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2675,
+            "end": 2687,
+            "text": "segmentation",
+            "labels": [
+              "Skull extraction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2610,
+            "end": 2615,
+            "text": "masks",
+            "labels": [
+              "Skull extraction — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Skull extraction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2723,
+            "end": 2779,
+            "text": "6",
+            "labels": [
+              "Surface — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2753,
+            "end": 2758,
+            "text": "CIFTI",
+            "labels": [
+              "Surface — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2723,
+            "end": 2779,
+            "text": "transforms the time series to CIFTI gray-ordinates space",
+            "labels": [
+              "Surface — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2785,
+            "end": 2812,
+            "text": "2 mm average surface vertex",
+            "labels": [
+              "Surface — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2855,
+            "end": 2888,
+            "text": "7",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2855,
+            "end": 2860,
+            "text": "smoot",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2855,
+            "end": 2860,
+            "text": "smoot",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2872,
+            "end": 2881,
+            "text": "2 mm FWHM",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2929,
+            "end": 2965,
+            "text": "8",
+            "labels": [
+              "ICA FIX — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2323,
+            "end": 2326,
+            "text": "FIX",
+            "labels": [
+              "ICA FIX — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2323,
+            "end": 2326,
+            "text": "FIX",
+            "labels": [
+              "ICA FIX — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2929,
+            "end": 2934,
+            "text": "FIX t",
+            "labels": [
+              "ICA FIX — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "ICA FIX — Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

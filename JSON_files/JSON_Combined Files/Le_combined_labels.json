@@ -1,0 +1,1464 @@
+{
+  "data": {
+    "text": "Functional neural network configuration in late childhood varies by age and cognitive state\n\nDevelopmental Cognitive Neuroscience 45 (2020) 100862. https://doi.org/10.1016/j.dcn.2020.100862\n\nThang M. Le; Anna S. Huang; Jonathan O’Rawe; Hoi-Chung Leung\n\nGraph measures of network architecture, functional integration, and flexibility were calculated for each of the four states.\n\nA total of 60 participants (28 females, age 9–12, mean ± SD: 10.72 ± .88 years) with usable resting state fMRI data were used in the community detection analysis; and a total of 52 participants (27 females, 10.77 ± .90 years) with complete fMRI data for all four task states were used in the analysis of network properties. Informed consent was obtained from parents of subjects prior to participation in accordance to the Stony Brook University Institutional Review Board.\n\nResting: Resting state fMRI data were acquired in two runs (11 min 52 s total), during which participants were instructed to relax and look at the center of a target covering the whole screen. Resting-state sessions were performed prior to the task-state sessions.\n\nReward task: On each trial, after a 2-s fixation, two doors were displayed on the screen for 2 s and participants were instructed to indicate their choice by pressing the left or right button. After an 800-ms fixation, feedback of monetary gain (“You Win”) or loss (“You Lose”) was displayed for 1.2 s. There was a total of 60 trials (30 win, 30 loss), with win/loss trials in a pseudorandom order. The intertrial interval (ITI) was jittered (mean: 2.5 s, range: 0–14 s), with an average trial duration of 8 s. There were 2 runs with each run lasting 4 min 20 s.\n\nPerception task: There were 4 different block conditions: neutral faces, sad faces, happy faces, and houses. Each block was 16-s long and contained 4 trials. On each trial, a 600-ms fixation cross was followed by the simultaneous presentation of two images for 3000 ms, either two faces or two houses, and participants made a button press to indicate whether the two images were identical or different (50/50 chance). There were 3 blocks per condition, presented in a pseudorandom order. These task blocks were interleaved with 14 s of fixation. The run lasted 6 min and 12 s.\n\nWorking memory task: We used a 1-back spatial working memory paradigm with two load conditions (Load 1 and Load 3). The two load conditions were presented in blocks of 5 trials. On each trial except the first trial of each block, participants pressed a button to indicate whether any rabbit was in a different location from the previous trial. Each task block lasted 17 s with a 13-s fixation period between blocks. There were two runs of 4 min 12 s each (8 blocks/run).\n\nData were collected on a 3 T Siemens Tim Trio whole-body MRI system (Erlangen, Germany). Whole-brain structural anatomical images were acquired with a T1-weighted MPRAGE sequence (TR = 2400 ms; TE = 3.16 ms; slices = 176; flip angle = 8°; FOV = 256 × 256; matrix = 256 × 256; resolution = 1 × 1 × 1 mm3). T2*-weighted EPI was acquired (TR = 2000 ms; TE = 30 ms; slices = 37; flip angle = 90; FOV = 224 × 224; matrix = 64 × 64; resolution = 3.5 × 3.5 × 3.5 mm3). Two runs of resting state (175 volumes each), two runs of the reward task (123 volumes each), one run of the perception task (183 volumes), and two runs of the working memory task (127 volumes each) were acquired. Each session began with 3 dummy scans which were discarded prior to data analysis.\n\nImages were preprocessed with SPM12. Standard preprocessing steps were applied to each dataset including slice timing correction, volume alignment for motion correction, and co-registration of anatomical to the mean EPI image. A unified segmentation algorithm was applied to the high-resolution structural images to separate gray matter, white matter, and CSF. The functional and anatomical images were then spatially normalized into the MNI space using affine nonlinear transformation, and then spatially smoothed with a 4-mm full-width at half-maximum Gaussian kernel.\n\nMovement was visually inspected and calculated using the Artifact Detection Tools (ART). Runs with significant motion (> 3-mm translation peak-to-peak and/or 1.5° rotation) and significant change in signal global mean (> 3 SD) were removed. Outlier volumes were identified for frame-to-frame displacement that exceeded 0.5 mm and/or rotation > 1.5°. Prior to assessing functional connectivity, a nuisance regression was constructed to control for 6 motion parameters up to their second derivatives, volumes with excessive motion, modeled physiological signal generated through aCompCor of the white matter and CSF voxels, and the linear drift.\n\nFor resting state data, the residuals of this regression were then filtered utilizing a bandpass between 0.008 and 0.09 Hz and despiked using the CONN toolbox. For the task state data, no low pass filter was applied (i.e., bandpass = .008 Hz – Inf) to preserve the possible presence of task signals at higher frequencies. We chose not to regress out the global signal. To reduce potential influence of transient task-related effects, all visual and motor events were treated as events of no interest in a standard GLM; the residuals were used to estimate functional connectivity during the tasks. Only relevant task blocks were included in the time series, with 6 s of hemodynamic delay accounted for, and concatenated prior to correlation calculation.\n\nWe conducted Pearson correlations between time series in all pairs of regions from the 264-ROI atlas from Power et al. (2011). ROIs were spheres of 5-mm radius centered at those coordinates. Correlation coefficients were Fisher’s Z transformed and used for all subsequent computations.\n\nTo determine network architecture, we used the Louvain community detection algorithm. Optimal parameters (density threshold = 0.045; structural resolution = 2.2) produced a twelve-community partition similar to prior work. The algorithm was run 150 times and an agreement matrix was subjected to consensus clustering to yield a final partition for each subject and state. Brain Connectivity Toolbox and custom MATLAB scripts were used to compute global efficiency, local efficiency, participation coefficient, number of connector hubs, and modularity.\n\nWe chose not to regress out the global signal in order to retain the interpretability of negative correlations (Murphy et al., 2009). In addition, to reduce potential influence of transient task-related effects, all visual and motor events were treated as events of no interest in a standard general linear model regression. The residuals from these regression models were used to estimate functional connectivity during the tasks. Only relevant task blocks were included in the time series (i.e., no fixation blocks), with 6 s of hemodynamic delay accounted for, and concatenated prior to correlation calculation.\n\nWe first conducted Pearson correlations between time series in all pairs of regions from the commonly used 264 cortical and subcortical regions-of-interest (ROIs) atlas from Power et al. (2011). ROIs were spheres of 5-mm radius centered at the coordinates as previously performed in similar analyses (Cohen and D’Esposito, 2016; Cole et al., 2014). Correlation coefficients were Fisher’s Z transformed and used for all subsequent computations. As there is no clear consensus on the treatment of task events, we conducted another set of analyses without the removal of task events and produced similar results, as expected from previous reports (Cohen and D’Esposito, 2016). Here, we chose to report the findings with task events removed.\n\nCommunity Detection. To determine the network architecture during resting-state, we used the Louvain community detection algorithm with two free parameters to partition the 264 ROIs into functional modules (i.e., networks of highly interconnected brain regions). The density parameter determines the threshold of connection strength. Connections with strength below this threshold were removed prior to community detection. The structural resolution parameter was used to restrict the number of communities identified in the functional connectivity matrix. To be consistent with previous work (Cole et al., 2014), we applied the same range for density threshold (40 % to 2 % in steps of 2.5) and resolution (0–3 in steps of 0.2). Each set of parameters was evaluated based on the resulting partition. The parameters were considered superior if they successfully partitioned the ROIs into functional modules as previously identified in the literature (Power et al., 2011). As such, optimal density threshold of 0.045 and resolution of 2.2 were chosen as they produced a twelve-community partition similar to Power et al. (2011). The optimal parameters obtained from resting-state community detection were subsequently applied to the task data to identify communities in the three task states. As the Louvain algorithm is stochastic, we ran this algorithm 150 times to obtain 150 partitions. These partitions were then used to create an agreement matrix which was subjected to consensus clustering (Lancichinetti et al., 2009) to yield a final partition for each subject and each task state.\n\nTo examine architectural changes within each module across the four cognitive states, community detection was applied to key neurocognitive modules including FPN, salience, DMN, visual, and SMN using data from each of the four states. These networks represent the cognitive and sensory domains likely recruited by the different cognitive demands engaged during the performance of the three distinct tasks. Changes in network architecture across states, both at the whole-brain and module levels, were quantified by adjusted Rand index (ARI) (Arabie and Hubert, 1985) which measures the similarity between two partitions while accounting for chance of similarity due to randomness. We calculated the partition similarity between the child and the CB samples to delineate potential age effects. Brain network graphs were visualized with BrainNet Viewer (Xia et al., 2013).\n\nAt the whole-brain level, we examined the degree of integration changes in network connectivity between the resting and the three task states. Brain Connectivity Toolbox (Rubinov and Sporns, 2010) (https://sites.google.com/site/bctnet/) and custom MATLAB scripts were used to calculate these measures. Connectivity matrices were thresholded with the density of 0.045 (as determined by community detection optimization) prior to obtaining the graph metrics.\n\nFor the measures of integration, we used global efficiency, local efficiency, participation coefficient, number of connector hubs, and modularity. Global efficiency is the measure of average inverse shortest path length between nodes within a network (Latora and Marchiori, 2001), with higher global efficiency indicative of stronger connections between modules or high degree of integration. Global efficiency is defined as follows: Eglobal = 1/[N(N − 1)] Σ_{i≠j∈G} (1/Li,j), where L is the minimum path length and N is the number of nodes in graph. Local efficiency is the global efficiency computed on neighboring nodes (i.e., the inverse of the average shortest path connecting all neighbors of that node), with high local efficiency indicative of low integration. Participation coefficient refers to the measure of diversity of intermodular connections of individual nodes. A network with high participation coefficient contains nodes that have dense connections with other networks and is thus more integrated. Participation coefficient is defined as follows: PCi = 1 − Σ_{s=1}^{NM} (kis/ki)^2 where kis is the degree (number of connections) of node i to other nodes in its own network (s), and ki is the degree of node i regardless of network membership. A connector hub is a node that displays a high-degree of diverse inter-modular connectivity (van den Heuvel and Sporns, 2013). Here, connector hubs were defined as nodes with high participation coefficient (>0.8) and low within-module degree (<1.5) (Guimerà and Nunes Amaral, 2005a, 2005b). An increase in the number of connector hubs reflects an increase in integration. Modularity is the degree to which the network may be subdivided into non-overlapping groups of nodes such that the number of within-group edges is maximized while the number of between-group edges is minimized.\n\nAt the module level, we assessed the flexibility of connectivity pattern for the five functional modules across the four cognitive states. Flexibility refers to the degree of change in connectivity patterns of a network across multiple states. Specifically, we used connectivity variability, nodal membership change, and module partition similarity. Connectivity variability is the variability in connectivity strength measured by standard deviation across the four cognitive states (Cole et al., 2013). High variability indicates a high degree of flexibility. Nodal membership change is the probability of a node switching its membership to a different module upon transition from one state to another, calculated by the number of times a node changes membership normalized by the total possible number of changes (Bassett et al., 2010). To avoid potential bias for/against any network(s) or state(s), nodal membership changes were averaged across the three resting-to-task switches (i.e., rest to reward, rest to perception, and rest to working memory) in the current study. Module partition similarity is the architectural similarity between resting partition and a task partition for a given module. High similarity indicates stable module architecture and thus low flexibility. The same community detection procedure used for whole-brain architecture was performed for each state and each module.\n\nNext, we examined functional integration in the 52 children with usable data from the resting and three task states. Greater whole-brain network integration was found for all task states relative to the resting state. Specifically, the task states exhibited significant increases in global efficiency, number of connector hubs, and participation coefficient compared to the resting state. There was a significant decrease in local efficiency from the resting to task states. However, modularity did not significantly differ across the four states. As reduced modularity was associated with increased cognitive processing in adults (Cohen and D’Esposito, 2016), we examined the effect of age on modularity and found that the older the participants, the lower the degree of modularity in task state (averaged across the three tasks).\n\nTo examine functional flexibility, we used the DMN, FPN, Salience, Visual, and SMN functional modules identified in the resting state and extracted connectivity variability, nodal membership change, and partition similarity across the four states for each network. Among the networks, FPN showed the higher variability in connectivity strength across states than DMN, visual network, SMN, and Salience network, whereas variability was lowest in the visual network. Similarly, FPN showed the highest nodal membership change. In addition, relative to all other modules, FPN and Salience showed lowest rest-task partition similarity, indicating a higher degree of architectural changes. In sum, FPN (and to a lesser degree, Salience) showed greatest functional flexibility whereas sensory and motor modules exhibited relatively more stable connectivity patterns across the four states."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 191,
+            "end": 202,
+            "text": "Thang M. Le",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 91,
+            "text": "Functional neural network configuration in late childhood varies by age and cognitive state",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 134,
+            "end": 138,
+            "text": "2020",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 93,
+            "end": 129,
+            "text": "Developmental Cognitive Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 148,
+            "end": 189,
+            "text": "https://doi.org/10.1016/j.dcn.2020.100862",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 253,
+            "end": 377,
+            "text": "Graph measures of network architecture, functional integration, and flexibility were calculated for each of the four states.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 93,
+            "end": 147,
+            "text": "Developmental Cognitive Neuroscience 45 (2020) 100862.",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2763,
+            "end": 2779,
+            "text": "Siemens Tim Trio",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3070,
+            "end": 3082,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3084,
+            "end": 3094,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3096,
+            "end": 3107,
+            "text": "slices = 37",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3109,
+            "end": 3124,
+            "text": "flip angle = 90",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3126,
+            "end": 3141,
+            "text": "FOV = 224 × 224",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3161,
+            "end": 3193,
+            "text": "resolution = 3.5 × 3.5 × 3.5 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3340,
+            "end": 3394,
+            "text": "two runs of the working memory task (127 volumes each)",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 979,
+            "end": 1019,
+            "text": "relax and look at the center of a target",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 854,
+            "end": 861,
+            "text": "Resting",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 557,
+            "end": 572,
+            "text": "52 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 390,
+            "end": 405,
+            "text": "60 participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 407,
+            "end": 417,
+            "text": "28 females",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 419,
+            "end": 427,
+            "text": "age 9–12",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 703,
+            "end": 732,
+            "text": "Informed consent was obtained",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 802,
+            "end": 851,
+            "text": "Stony Brook University Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 947,
+            "end": 1019,
+            "text": "participants were instructed to relax and look at the center of a target",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1170,
+            "end": 1194,
+            "text": "two doors were displayed",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1930,
+            "end": 1940,
+            "text": "two images",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1444,
+            "end": 1453,
+            "text": "60 trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1808,
+            "end": 1817,
+            "text": "16-s long",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1523,
+            "end": 1590,
+            "text": "intertrial interval (ITI) was jittered (mean: 2.5 s, range: 0–14 s)",
+            "labels": [
+              "ISI distribution"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1600,
+            "end": 1629,
+            "text": "average trial duration of 8 s",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3434,
+            "end": 3447,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3434,
+            "end": 3447,
+            "text": "3 dummy scans",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3599,
+            "end": 3622,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3624,
+            "end": 3662,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3645,
+            "end": 3662,
+            "text": "motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3668,
+            "end": 3719,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3723,
+            "end": 3753,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3723,
+            "end": 3743,
+            "text": "unified segmentation",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3902,
+            "end": 3922,
+            "text": "6",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3948,
+            "end": 3979,
+            "text": "affine nonlinear transformation",
+            "labels": [
+              "Spatial normalization — Algorithm"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3932,
+            "end": 3941,
+            "text": "MNI space",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3990,
+            "end": 4063,
+            "text": "7",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3529,
+            "text": "SPM12",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4016,
+            "end": 4047,
+            "text": "4-mm full-width at half-maximum",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4307,
+            "end": 4338,
+            "text": "8",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4123,
+            "end": 4147,
+            "text": "Artifact Detection Tools",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4385,
+            "end": 4414,
+            "text": "0.5 mm and/or rotation > 1.5°",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4643,
+            "end": 4651,
+            "text": "9",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4643,
+            "end": 4651,
+            "text": "aCompCor",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4659,
+            "end": 4686,
+            "text": "white matter and CSF voxels",
+            "labels": [
+              "aCompCor — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4513,
+            "end": 4532,
+            "text": "10",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4513,
+            "end": 4532,
+            "text": "6 motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4545,
+            "end": 4563,
+            "text": "second derivatives",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4799,
+            "end": 4833,
+            "text": "11",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4799,
+            "end": 4807,
+            "text": "bandpass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4816,
+            "end": 4833,
+            "text": "0.008 and 0.09 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4838,
+            "end": 4869,
+            "text": "12",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4857,
+            "end": 4869,
+            "text": "CONN toolbox",
+            "labels": [
+              "Despiking — Software"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5166,
+            "end": 5228,
+            "text": "13",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5225,
+            "end": 5228,
+            "text": "GLM",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5149,
+            "end": 5172,
+            "text": "visual and motor events",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Regressors filter",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4896,
+            "end": 4959,
+            "text": "14",
+            "labels": [
+              "Regressors filter — Step Number"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Regressors filter",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4945,
+            "end": 4958,
+            "text": ".008 Hz – Inf",
+            "labels": [
+              "Regressors filter — Parameters"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5308,
+            "end": 5411,
+            "text": "15",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5373,
+            "end": 5397,
+            "text": "6 s of hemodynamic delay",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6921,
+            "end": 7115,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ],
+          "id": "m0072"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6921,
+            "end": 7115,
+            "text": "We first conducted Pearson correlations between time series in all pairs of regions from the commonly used 264 cortical and subcortical regions-of-interest (ROIs) atlas from Power et al. (2011).",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7116,
+            "end": 7269,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0074"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7116,
+            "end": 7269,
+            "text": "ROIs were spheres of 5-mm radius centered at the coordinates as previously performed in similar analyses (Cohen and D’Esposito, 2016; Cole et al., 2014).",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6737,
+            "end": 6919,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0076"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6737,
+            "end": 6919,
+            "text": "Only relevant task blocks were included in the time series (i.e., no fixation blocks), with 6 s of hemodynamic delay accounted for, and concatenated prior to correlation calculation.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6921,
+            "end": 7115,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0078"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6921,
+            "end": 7115,
+            "text": "We first conducted Pearson correlations between time series in all pairs of regions from the commonly used 264 cortical and subcortical regions-of-interest (ROIs) atlas from Power et al. (2011).",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7270,
+            "end": 7364,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0080"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7270,
+            "end": 7364,
+            "text": "Correlation coefficients were Fisher’s Z transformed and used for all subsequent computations.",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7660,
+            "end": 7922,
+            "text": "6",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0082"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7660,
+            "end": 7922,
+            "text": "Community Detection. To determine the network architecture during resting-state, we used the Louvain community detection algorithm with two free parameters to partition the 264 ROIs into functional modules (i.e., networks of highly interconnected brain regions).",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7923,
+            "end": 7993,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0084"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7923,
+            "end": 7993,
+            "text": "The density parameter determines the threshold of connection strength.",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6305,
+            "end": 6438,
+            "text": "8",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0086"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6305,
+            "end": 6438,
+            "text": "We chose not to regress out the global signal in order to retain the interpretability of negative correlations (Murphy et al., 2009).",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0087"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8632,
+            "end": 8787,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0088"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8632,
+            "end": 8787,
+            "text": "As such, optimal density threshold of 0.045 and resolution of 2.2 were chosen as they produced a twelve-community partition similar to Power et al. (2011).",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0089"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10425,
+            "end": 10579,
+            "text": "Connectivity matrices were thresholded with the density of 0.045 (as determined by community detection optimization) prior to obtaining the graph metrics.",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          },
+          "id": "m0090"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10728,
+            "end": 10973,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0091"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10728,
+            "end": 10973,
+            "text": "Global efficiency is the measure of average inverse shortest path length between nodes within a network (Latora and Marchiori, 2001), with higher global efficiency indicative of stronger connections between modules or high degree of integration.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0092"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11132,
+            "end": 11349,
+            "text": "Local efficiency is the global efficiency computed on neighboring nodes (i.e., the inverse of the average shortest path connecting all neighbors of that node), with high local efficiency indicative of low integration.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0093"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11350,
+            "end": 11459,
+            "text": "Participation coefficient refers to the measure of diversity of intermodular connections of individual nodes.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0094"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11843,
+            "end": 11969,
+            "text": "A connector hub is a node that displays a high-degree of diverse inter-modular connectivity (van den Heuvel and Sporns, 2013).",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0095"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12215,
+            "end": 12425,
+            "text": "Modularity is the degree to which the network may be subdivided into non-overlapping groups of nodes such that the number of within-group edges is maximized while the number of between-group edges is minimized.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0096"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10266,
+            "end": 10424,
+            "text": "Brain Connectivity Toolbox; custom MATLAB scripts",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0097"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13830,
+            "end": 13946,
+            "text": "11",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0098"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13830,
+            "end": 13946,
+            "text": "Next, we examined functional integration in the 52 children with usable data from the resting and three task states.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "id": "m0099"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14663,
+            "end": 14927,
+            "text": "To examine functional flexibility, we used the DMN, FPN, Salience, Visual, and SMN functional modules identified in the resting state and extracted connectivity variability, nodal membership change, and partition similarity across the four states for each network.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "id": "m0100"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13830,
+            "end": 13946,
+            "text": "Next, we examined functional integration in the 52 children with usable data from the resting and three task states.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0101"
+        }
+      ]
+    }
+  ]
+}

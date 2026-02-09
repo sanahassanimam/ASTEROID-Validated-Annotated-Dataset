@@ -1,0 +1,226 @@
+{
+  "data": {
+    "title": "Dynamical Complexity Fingerprints of Occupation-Dependent Brain Functional Networks in Professional Seafarers",
+    "text": "Yanetal. DynamicalComplexityinSeafarers’Brain\nfingerprints of occupation-dependent brain functional networks from rs-fMRI data by the sliding window method and establish\nin professional seafarers. dynamic sample entropy mappings of seafarers and non-\nseafarers, and then analyze and discuss the results of the dynamic\nentropy maps. Further, we applied a SampEn-based approach\nMATERIALS AND METHODS\nto establish functional connections in complex network analysis\nbetween brain regions of the dynamical entropy map sequences,\nData Acquisition and Preprocessing\nwhere the SampEn measurement was proved to be sensitive to\nAll MRI data from subjects of 20 seafarers (all male, mean age of both non-linear and linear correlations (Pritchard et al., 2014).\n49years,righthanded)and20educationlevel-,gender-,andage-\nmatched healthy control subjects (all male, mean age of 51 years,\nright handed) were collected from the Shanghai Key Laboratory\nFormation of Dynamical Brain Entropy\nof Magnetic Resonance. All participants were informed about\nMapping Analysis\nthe purpose of the study and signed a written consent form\nThe sliding window method is used to slide a certain window\naccording to procedures approved by the IRB of East China\nlength on the time axis in a given step to extract the BOLD signal\nNormalUniversity(ECNU).Forallsubjects,nohistoryofmental\nwithin the window, thereby obtaining the time-varying BOLD\nillness or neurological diseases were reported, and all seafarers\nsignal in the brain region (Lindquist et al., 2014; Hindriks et al.,\nhave more than 10 years of sailing experience, and they work\n2016;Jiaetal.,2017;Vergaraetal.,2019).Studieshaveshownthat\nand live under strict militarized management on the sea. On the\nthe effect of data length (N) on SampEn is small when the data\ncontrary, the recruited control subjects were from the land work\nlengthgraduallydecreasesfromN =128toN =85,accompanying\nposition of university campus security guard without long-term\nthe gradual increase of its noise (Sokunbi, 2014; Wang et al.,\nsailingexperience.Formoredetails,pleaserefertoWangN.etal.\n2014). Therefore, in order to achieve a relatively higher signal-\n(2017, 2018).\nto-noise ratio, in this paper, we chose a window length of 70\nThe scanning parameters were listed as follows: GE 3.0\n(80, 90) TRs, about 140–180 s. Then, the transient complexity\nTesla with gradient echo EPI, slice number = 36, covering the\nmap of brain activities was calculated by SampEn of the sliding\nwhole brain area; sensitivity acceleration factor = 2.0, time of\n∗ window data. Finally, the brain imaging data of the seafarers and\nrepetition (TR) = 2.0 s, scanning resolution = 80 80, in-plane\nresolution = 3.75 mm × 3.75 mm, slice thickness = 4 mm, non-seafarers were analyzed based on the dynamic time series of\nthe brain entropy maps (see Figure 1). The detailed procedures\ntime points = 160.\nandformulationofdynamicbrainentropymappinganalysiswere\nAll data preprocessing was performed by DPARSF1, which\npresented as follows:\nis based on the SPM2 and REST3 toolbox. The preprocessing\n(1) With regard to the preprocessed fMRI images, using the\nsteps for rs-fMRI data of each subject in this study are as\nsliding window method, the time window with a given window\nfollows: (1) slice timing with the 39th slice as reference slice;\nlength of 70 (80, 90) TRs slides in steps of 1 TR, resulting in\n(2) realignment; (3) normalization by EPI template (resampling\nvoxel size = 3 mm × 3 mm × 3 mm); (4) spatial smooth by a 81 (71, 61) windows. As mentioned earlier, the fMRI image\n, ,....,\nsequenceisrepresentedbyX X X ,andthegivenwindow\nGaussian kernel with FWHM = 8mm. 1 2 N\nlength is Len, the fMRI image sequence contained in the ith\nDynamical Brain Complexity Analysis window is X i , X i+1 ,..., X i+Len−1 ; a total of M = N − Len + 1\ntime windows are obtained.\n\nFramework\n(2) In a given ith time window, with the seafarers and non-\nPrevious studies have shown the dynamic remodeling property\nseafarers data described earlier, a brain entropy map based\nin brain function during the task or task-free condition reflected\non SampEn was constructed for each of the subjects. For\nby complexity (Sporns, 2011; Cole et al., 2013; Calhoun et al.,\nthe calculation of SampEn, we set the parameter m (initial\n2014; Zalesky et al., 2014; Braun et al., 2015; Preti et al., 2017;\nembedding dimension) equal to 2 based on preliminary\nVidaurre et al., 2017; Shi et al., 2019; Fu et al., 2020; Lurie et al.,\ninvestigations (Sokunbi, 2014). Following Wang et al. (2014),\n2020). In this section, the DBCA framework based on sample\nwe set the parameter r (similarity criterion) equal to 0.3 of\nentropy (SampEn) was proposed for capturing the dynamical\nthe average of standard deviation (SD) of each pair of the\ncomplexity, which is applied to measure the occupation-\ntime series. In brief, let u and v represent two time series:\ndependent complexity fingerprints of the professional seafarers.\nu = [u ( 1 ), u ( 2 ),..., u ( N )] and v = [v ( 1 ), v ( 2 ),..., v ( N )],\nThe DBCA framework was depicted in Figure 1, which was\nwhere N is the number of data points in each series. With m\nmade up of dynamic brain entropy mapping analysis and\nand r fixed (as defined earlier), we form two vector sequences\nbrain-entropy-based complex network analysis, generating the\nx and y : x ( i ) = [u ( i ), u ( i + 1 ),..., u ( i + m − 1 )] and\nm m m\ndynamic complexity mapping of local brain areas and the\ny ( i ) = [v ( i ), v ( i + 1 ),..., v ( i + m − 1 )]. Then, for each\nm\ntopological complexity features of connectivity across the brain\ni ≤ N − m + 1, we define\nareas, respectively. Specifically, we firstly extracted BOLD signals\n1http://rfmri.org/DPARSF\n2http://www.fil.ion.ucl.ac.uk/spm/software/ B m\ni\n( r ) = ( N − m + 1 )−1 (cid:8) j ≤ N − m|d ( x\nm\n( i ), y\nm\n( j )) < r (cid:9)\n3http://www.restfmri.net/forum/REST (1)\nFrontiersinNeuroscience|www.frontiersin.org 3 March2022|Volume16|Article830808\n\nA network with small worldness should meet two conditions:\nnormalizedclusteringcoefficient γ = C p > 1andnormalized\nC\nrand\ncharacteristic path length λ = L / L ≈ 1, where C\np rand p\nand L are the average clustering coefficient and average path\np\nlength on all nodes in the target network, respectively (Watts\nand Strogatz, 1998); C and L are the average clustering\nrand rand\ncoefficient and average characteristic path length of the random\nnetwork, respectively (Maslov and Sneppen, 2002). Generally,\nrandomnetworkshavesmallerclusteringcoefficientsandshorter\ncharacteristic paths due to their randomness. Lower L indicates\np\nhigher communication efficiency between the entire brain area\n(Kaiser and Hilgetag, 2006; Rubinov and Sporns, 2010). In order\ntoavoidtheinfluenceofanothernetwork,thenormalizedC and\np\nL arecalculated,respectively.Comparedwithrandomnetworks,\np\nsmall-world networks have similar L and higher C , so small-\np p\nγ\nworld networks can be quantified as S = > 1.\nλ\nEfficiency\nFIGURE4|Negativelyactivatedbrainregionsregardingdynamicalbrain Efficiency is an index that describes the brain network from the\nentropymaps(seafarers’entropyvalue<non-seafarers’entropyvalue;\nperspective of biological and functional information flow within\nAlphaSimcorrection,p<0.05).\nthebrain(RubinovandSporns,2010).Theefficiencyofthewhole\nbrain network and the regional one can be evaluated.\n\nGlobal efficiency: the shorter the shortest path length L of a\ni\nnode, the faster the information transfer between the node and\nThe framework of dynamical brain entropy mapping analysis\nother nodes, which means the higher the global efficiency E of\nglob\nis displayed in Figure 2.\nthe node (Rubinov and Sporns, 2010). We define it as\n1 X X 1\nE = (6)\nDynamical Entropy Based Complex glob n ( n − 1 ) d\nij\ni∈N j(cid:54)=i∈N\nNetwork Analysis\nThe connection patterns in the human brain have been where d denotes the shortest path length between\nij\ncharacterized as various networks, from microscopic neurons nodes i and j.\n(Yu et al., 2008; Bonifazi et al., 2009) to macroscopic whole-brain Local efficiency: Local efficiency is the same attribute as global\nanalysis (Achard et al., 2006; Hagmann et al., 2008; Hayasaka efficiency, but the calculation of local efficiency is performed in\nand Laurienti, 2010; Yao et al., 2013; Wang N. et al., 2015; theneighborhoodofanodeinthenetwork(RubinovandSporns,\nWang et al., 2016; Shi et al., 2018, 2021; Yang et al., 2019, 2010). The formulation can be expressed as\n2020; Ou et al., 2020; Nie et al., 2021). In order to unveil\n1 X\nthe topological properties of functional networks caused by E = E ( G ) (7)\nloc loc i\nn\noccupation between the seafarers and non-seafarers, we used i∈N\ndifferentslidingwindowlengthstoobtaindynamicbrainentropy\n( )\nwhere E G is the local efficiency of G .\nsequences and then applied Pearson correlation coefficients loc i i\n(PCC) and the Automated Anatomical Labeling (AAL) template\n(Tzourio-Mazoyer et al., 2002) to calculate the correlation of\nEXPERIMENTAL RESULTS\nthe whole brain interval, so as to calculate the whole brain\nnetworkconnectivity.Aftercreatingacorrelationnetwork,based\nDynamical Entropy Maps Between\non proportional thresholds (K), we calculated two interesting\nSeafarers and Non-seafarers\ntopological parameters based on complex network analysis for\nthe seafarers and non-seafarers: small-worldness and efficiency The negatively activated brain areas using dynamical brain\n(Wang J. et al., 2015). The framework of dynamical entropy- entropy mapping analysis under different window length\nbased complex network analysis is displayed in Figure 3. (Len = 70, 80, 90 TRs) shown in Figure 4 indicates that the\nFrontiersinNeuroscience|www.frontiersin.org 6 March2022|Volume16|Article830808\n\nYanetal. DynamicalComplexityinSeafarers’Brain\ndynamical brain entropy value of seafarers is lower than that of DISCUSSION\nthe control group. The activated area is mainly concentrated in\nthecerebellum,especiallythebilateralCerebelum_8brainareain In this work, we demonstrated a DBCA framework using sample\ntheAALbrainatlas.TheMNIcoordinatesandthecorresponding entropy to explore the complexity fingerprints at both voxel level\nareas are recorded in Tables 1–3, respectively. and brain connectivity topology levels, which was made up of\nThe positively activated brain areas using dynamical brain dynamical brain entropy mapping analysis and brain entropy\nentropy mapping analysis under different window length based on complex network analysis. Taking the seafarer as an\n(Len = 70, 80, and 90 TRs) shown in Figure 5 indicates that exemplar, the DBCA simultaneously generated the dynamical\nthe seafarer’s dynamic brain entropy value exceeds the expected brain entropy maps and related connectivity topology exhibiting\nvalue. The activation area is mainly concentrated in the fusiform the qualitative complexity differences, which suggested the long-\ngyrus, especially the brain area Brodmann area 20 (BA20), which term seafarer’s experience really reshaped the brain functional\ninvolves the activated brain area, and the corresponding MNI network, and provided the new evidence about the occupational\ncoordinates are recorded in Tables 4–6, respectively. neuroplasticity.\n\nLocal Activity Changes of Functional\nDynamical Entropy-Based Complex\nNeuroplasticity in Seafarers\nNetwork Analysis Between Seafarers\nThe sliding window model has become a popular model for\nand Non-seafarers\nhandling typical fMRI data (Allen et al., 2014). Studies have\nFirst, the average and variance of small world attributes considered about the dynamic and non-linear changes of BOLD\n(i.e., small world, feature path length, and clustering signal (Sokunbi, 2014; Niu et al., 2018; Zheng et al., 2020), which\ncoefficient) and network efficiency (i.e., global efficiency can be characterized by the complexity of the fMRI time series.\nand local efficiency) within the range of 0.05 ≤ K ≤ 0.3 As for us, under different window lengths, the brain complexity\n(step size = 0.05) under different sliding window estimated by the sample entropy of seafarers and non-seafarers\nlengths were calculated for the seafarers and non- alwaysshowedsignificantresults,indicatingthatthelengthofthe\nseafarers, and the results are shown in Figures 6–8, sliding window is not sensitive to changes in brain complexity.\nrespectively. Second, the two groups compared across Our result is estimated by computing brain entropy maps of\nthe proportional thresholds (K) by means of two-way entire subjects using a series of sliding windows.\nanalysis of variance (ANOVA), the details are listed in Similar to the previous results of seafarers (Wang N.\n\nTopological Changes of Functional\nNeuroplasticity in Seafarers\ngroup in the cerebellum (Cerebelum_9_R/Cerebelum_8_R and Characterizing complex systems like the human brain can help\nCerebelum_8_L) were significantly lower than those in the non- in understanding its structure and function; especially with the\nseafarer group, which is crucial for fine motor coordination. advantageofrs-fMRI,itcanmeetthebasicrequirementforusing\nThe findings indicated that the seafarers’ plasticity changes are complex network strategies that assess different brain areas over\nstable and construct a regularity system in the cerebellum. time (Onias et al., 2014). To date, most brain network studies\nTABLE4|MNIcoordinatesofpositivelyactivatedbrainregionsandrelatedbrainregions(seafarers’brainentropyvalue>non-seafarers’brainentropyvalue,Len=70\nTRs,AlphaSimcorrection,p<0.05withclustersize>207voxels).\n\nFIGURE7|Theaveragenormalizedpathlengthandaveragenormalizedclusteringcoefficientoftheseafarersandnon-seafarersbasedonbrainentropytimeseries\nunderdifferentwindowlengthsanddifferentthresholds.\nhave used linear correlations between brain regions to construct We are considering the so-called non-linear measurement that\nand interpret brain networks, like PCC. However, the PCC and refers to a method that is sensitive to both linearity and non-\nlinear correlation are only sensitive to the linear component and linearity,suchassampleentropy.Furthermore,complexnetwork\nmay ignore the non-linear relationship between brain regions. analysis can extract feature indicators in the brain network, and\nFrontiersinNeuroscience|www.frontiersin.org 9 March2022|Volume16|Article830808\n\nTABLE7|Themeanofallnetworkparametersforseafarersandnon-seafarersatLen=70TRsarepresented,aswellastheresultsoftwo-wayANOVA(p-value).\nProperties Parameters Groups Thresholds\n0.05 0.1 0.15 0.2 0.25 0.3 p-value\nSmall-world C Seafarers 0.29 0.43 0.49 0.54 0.57 0.59 0.3702\np\nNon- 0.29 0.42 0.49 0.54 0.57 0.59\nγ Seafarers 2.33 1.83 1.56 1.43 1.33 1.26 0.8918\nNon- 2.29 1.81 1.57 1.44 1.35 1.27\nL Seafarers 7.27 3.64 2.67 2.24 1.97 1.80 0.005\np\nNon- 7.25 3.56 2.49 2.06 1.81 1.65\nλ Seafarers 1.31 1.15 1.10 1.06 1.04 1.03 0.1024\nNon- 1.35 1.19 1.11 1.07 1.04 1.02\nS Seafarers 1.80 1.59 1.41 1.35 1.28 1.23 0.4718\nNon- 1.73 1.54 1.42 1.35 1.30 1.25\nNetworkefficiency E Seafarers 0.15 0.30 0.39 0.47 0.53 0.57 0.0352\nglob\nNon- 0.15 0.30 0.42 0.50 0.56 0.61\nE Seafarers 0.36 0.53 0.62 0.68 0.72 0.74 0.2325\nloc\nNon- 0.35 0.52 0.63 0.69 0.74 0.76\nValuesinboldindicatestatisticallysignificantdifferences.\ngraphtheoryisanimportanttoolfordescribingnetworkfeatures. based on brain entropy map sequences, in order to detect the\nRecently, merging evidence suggests that functional connectivity topological changes of functional neuroplasticity in seafarers.\nnetworks change dynamically over time (Hutchison et al., 2013; We also find that the difference between seafarers and\nHindriks et al., 2016). Specifically, the dynamic connectivity non-seafarers becomes more significant as the window length\nnetworks constructed from the original fMRI time series increases. This may be because the sample entropy is less than\ndemonstrate less discrimination and less robustness in terms 85 at the time point, where the entropy value calculation ignores\nof topological measures such as small-worldness and efficiency the detailed information in the BOLD signal (Chen et al., 2009);\nfor classification between the seafarers and the control group meanwhile, in the shorter-length data, the sample entropy is\nthan the dynamic entropy-based connectivity networks (see insufficient in distinguishing ability (Sokunbi, 2014).\n\nSupplementary Figures 1–3 and Supplementary Table 1). In In our results, the seafarer group demonstrates longer path\naddition, the dynamical complexity changes are the focus of this lengths across all thresholds, the average path length L of the\np\n<\nstudy. Therefore, we estimated dynamic connectivity networks seafarergroupincreasedsignificantly(p=0.0296 0.05,Len=90\nFrontiersinNeuroscience|www.frontiersin.org 10 March2022|Volume16|Article830808\n\nYanetal. DynamicalComplexityinSeafarers’Brain\nTABLE8|Themeanofallnetworkparametersforseafarersandnon-seafarersatLen=80TRsarepresented,aswellastheresultsoftwo-wayANOVA(p-value).\nProperties Parameters Groups Thresholds\n0.05 0.1 0.15 0.2 0.25 0.3 p-value\nSmall-world C Seafarers 0.30 0.42 0.50 0.54 0.57 0.60 0.1694\np\nNon- 0.30 0.43 0.50 0.54 0.57 0.59\nγ Seafarers 2.48 1.85 1.62 1.46 1.37 1.29 0.6618\nNon- 2.48 1.86 1.62 1.47 1.37 1.29\nL Seafarers 7.14 3.76 2.73 2.24 1.96 1.77 0.0038\np\nNon- 6.97 3.31 2.36 2.00 1.77 1.63\nλ Seafarers 1.33 1.21 1.13 1.09 1.06 1.04 0.0125\nNon- 1.33 1.19 1.11 1.07 1.04 1.02\nS Seafarers 1.89 1.55 1.45 1.35 1.29 1.24 0.0336\nNon- 1.88 1.58 1.46 1.38 1.32 1.26\nNetworkefficiency E Seafarers 0.15 0.29 0.39 0.47 0.53 0.58 0.0049\nglob\nNon- 0.16 0.32 0.43 0.50 0.57 0.62\nE Seafarers 0.37 0.53 0.64 0.68 0.73 0.75 0.0331\nloc\nNon- 0.37 0.54 0.64 0.70 0.74 0.77\nValuesinboldindicatestatisticallysignificantdifferences.\n\nTABLE9|Themeanofallnetworkparametersforseafarersandnon-seafarersatLen=90TRsarepresented,aswellastheresultsoftwo-wayANOVA(p-value).\nProperties Parameters Groups Thresholds\n0.05 0.1 0.15 0.2 0.25 0.3 p-value\nSmall-world C Seafarers 0.28 0.43 0.51 0.55 0.58 0.60 0.2785\np\nNon- 0.30 0.43 0.50 0.54 0.56 0.58\nγ Seafarers 2.17 1.78 1.58 1.46 1.36 1.29 0.0174\nNon- 2.49 1.97 1.74 1.56 1.43 1.33\nL Seafarers 7.42 3.70 2.68 2.20 1.92 1.75 0.0296\np\nNon- 6.49 3.20 2.38 1.99 1.76 1.62\nλ Seafarers 1.31 1.20 1.14 1.09 1.06 1.04 0.0160\nNon- 1.33 1.17 1.12 1.07 1.04 1.02\nS Seafarers 1.69 1.51 1.40 1.34 1.29 1.25 0.0022\nNon- 1.90 1.68 1.56 1.46 1.38 1.31\nNetworkefficiency E Seafarers 0.15 0.29 0.39 0.47 0.53 0.58 0.0005\nglob\nNon- 0.16 0.32 0.43 0.51 0.57 0.62\nE Seafarers 0.35 0.54 0.64 0.69 0.73 0.76 0.0009\nloc\nNon- 0.37 0.55 0.65 0.70 0.74 0.76\nValuesinboldindicatestatisticallysignificantdifferences.\nγ\nTRs). Similarly, we note that the difference in path length is was significantly lower than that of the non-seafarer group\n< <\nsignificant at p 0.05 above threshold K = 0.1, as more edges (p = 0.0174 0.05, Len = 90 TRs). However, we rarely found\nare retained (see Supplementary Table 2). In the small-world the difference in clustering coefficient across all thresholds (see\nbrain network, a shorter path length indicates a small amount Supplementary Table 2), which would indicate that there are\nof intermediate transmission in the integration pathway, thereby no between-group differences in the ability to “modularize”\nconsolidatingtheaccurateandrapidtransmissionofinformation information processing. Under different window lengths, both\nin integrated neural communication (Kaiser and Hilgetag, 2006). the seafarer group and the non-seafarer group have small-\nOn the contrary, a large number of intermediate transmissions world network attributes (S 1), which indicates that the small-\nwill result in greater signal loss, signal distortion, and slower world network is an inherent attribute of the human brain\nprocessing speed. Therefore, the study shows that the increased regardless of occupation.\npath length can be explained by the weaker processing speed With regard to the efficiency, the network efficiency of\nof the seafarers’ brain network. Although there is no significant the same seafarer group is relatively low. The average global\n<\ndifference in the average clustering coefficient C between the efficiency E (p = 0.0005 0.05, Len = 90 TRs) and average\np glob\n> <\nseafarer group and the non-seafarer group (p = 0.2785 0.05, local efficiency E (p = 0.0009 0.05, Len = 90 TRs) is\nloc\nLen = 90 TRs), the average normalized clustering coefficient significantly different with the non-seafarer group. Interestingly,\nFrontiersinNeuroscience|www.frontiersin.org 11 March2022|Volume16|Article830808\n\nCONCLUSION\nFUNDING\nIn order to investigate the dynamical complexity fingerprints\nThis work was supported by National Natural Science\nderived from the fMRI data, in this study, a novel DBCA\nFoundation of China (Nos. 61971289 and 82001160), Project of\nframework was proposed to explore the dynamical complexity\n“Six Talent Peaks” of Jiangsu Province (No. SWYY-017), Project\nof brain activity and topological complexity changes of brain\nof Huaguoshan Mountain Talent Plan—Doctors for Innovation\nconnectivity. Further, taking the professional seafarers as an\nand Entrepreneurship, Shenzhen Fundamental Research Project\nexemplar, the complexity fingerprints related to occupational\n(No. JCYJ20170412111316339), and Shenzhen Talent Peacock\nfactors impacting functional neuroplasticity were explored,\nPlan (No. 827-000083).\nwhich validated the effectiveness of the proposed DBCA. On\none hand, the dynamical brain entropy mapping analysis\nin DBCA showed that the seafarers with lower dynamical\nbrain entropy values had stronger consistent brain activity SUPPLEMENTARY MATERIAL\nin the cerebellum, which possibly contributed to the career\nperformance in seafarers such as navigation skills, keeping The Supplementary Material for this article can be found online\nbalance, etc. On the other hand, based on the brain entropy- at: https://www.frontiersin.org/articles/10.3389/fnins.2022.\nbased complex network analysis, it was found that the 830808/full#supplementary-material\nFrontiersinNeuroscience|www.frontiersin.org 12 March2022|Volume16|Article830808\n\nA resilient, low-frequency, small-world human brain functional network with Hlinka, J., Paluš, M., Vejmelka, M., Mantini, D., and Corbetta, M. (2011).\nhighlyconnectedassociationcorticalhubs.J.Neurosci.26,63–72. Functional connectivity in resting-state fMRI: is linear correlation sufficient?\n\nCole,M.W.,Reynolds,J.R.,Power,J.D.,Repovs,G.,Anticevic,A.,andBraver,T.S. NeuroImage20,962–974.\n(2013). Multi-task connectivity reveals flexible hubs for adaptive task control. Latora, V., and Marchiori, M. (2001). Efficient behavior of small-world networks.\n\nAnesthesiology106,696–706. Mears,D.,andPollard,H.B.(2016).Networkscienceandthehumanbrain:using\nFu, Z., Sui, J., Turner, J. A., Du, Y., Assaf, M., Pearlson, G. D., et al. (2020). graph theory to understand the brain and one of its hubs, the amygdala, in\nDynamic functional network reconfiguration underlying the pathophysiology healthanddisease.J.Neurosci.Res.94,590–605.\nof schizophrenia and autism spectrum disorder.Hum. Brain Mapp. 42, 80–94. Nie, W., Zeng, W., Yang, J., Shi, Y., Zhao, L., Li, Y., et al. (2021). Extraction\ndoi:10.1002/hbm.25205 andanalysisofdynamicfunctionalconnectomepatternsinmigrainesufferers:\n\nNat.Commun.5:5672. Niu, Y., Wang, B., Zhou, M., Xue, J., Shapour, H., Cao, R., et al. (2018).\nGoldberger, A. L., Peng, C. K., and Lipsitz, L. A. (2002). What is physiologic Dynamic complexity of spontaneous bold activity in Alzheimer’s disease and\ncomplexity and how does it change with aging and disease? Neurobiol. Aging mild cognitive impairment using multiscale entropy analysis. Front. Neurosci.\n23,23–26. 12:677.doi:10.3389/fnins.2018.00677\nGu, H., Pan, B., Chen, G., and Duan, L. (2014). Biological experimental Onias, H., Viol, A., Palhano-Fontes, F., Andrade, K. C., Sturzbecher, M.,\ndemonstrationofbifurcationsfromburstingtospikingpredictedbytheoretical Viswanathan, G., et al. (2014). Brain complex network analysis by means of\nmodels.NonlinearDyn.78,391–407. resting state fMRI and graph analysis: will it be helpful in clinical epilepsy?\n\nRubinov, M., and Sporns, O. (2010). Complex network measures of brain Wang,N.,Zeng,W.,Chen,D.,Yin,J.,andChen,L.(2015).Anovelbrainnetworks\nconnectivity:usesandinterpretations.Neuroimage52,1059–1069. enhancementmodel(BNEM)forBOLDfMRIdataanalysiswithhighlyspatial\nShafiei, G., Zeighami, Y., Clark, C. A., Coull, J. T., Nagano-Saito, A., Leyton, M., reproducibility.IEEEJ.Biomed.HealthInf.20,1107–1119.\net al. (2019). Dopamine signaling modulates the stability and integration of Wang,N.,Zeng,W.,Shi,Y.,andYan,H.(2017).Brainfunctionalplasticitydriven\nintrinsicbrainnetworks.Cereb.Cortex29,397–409.doi:10.1093/cercor/bhy264 bycareerexperience:aresting-statefMRIstudyoftheseafarer.Front.Psychol.\n\nShi, Y., Zeng, W., and Guo, S. (2019). The occupational brain plasticity study 8:1786.doi:10.3389/fpsyg.2017.01786\nusing dynamic functional connectivity between multi-networks: take seafarers Wang, Z., Li, Y., Childress, A. R., and Detre, J. A. (2014). Brain entropy\nforexample.IEEEAccess7,148098–148107. mapping using fMRI. PLoS One 9:e89948. doi: 10.1371/journal.pone.008\nShi, Y., Zeng, W., and Wang, N. (2021). The brain alteration of Seafarer revealed 9948\nby activated functional connectivity mode in fMRI data analysis. Front. Hum. Watts, D. J., and Strogatz, S. H. (1998). Collective dynamics of ‘small-world’\nNeurosci.15:656638.doi:10.3389/fnhum.2021.656638 networks.Nature393,440–442.\n\nDelcroix,N.,etal.(2002).AutomatedanatomicallabelingofactivationsinSPM Zheng, H., Onoda, K., Nagai, A., and Yamaguchi, S. (2020). Reduced dynamic\nusing a macroscopic anatomical parcellation of the MNI MRI single-subject complexity of BOLD signals differentiates mild cognitive impairment from\nbrain.Neuroimage15,273–289. normalaging.Front.AgingNeurosci.12:90.doi:10.3389/fnagi.2020.00090\nvandenHeuvel,M.P.,Stam,C.J.,Boersma,M.,andPol,H.H.(2008).Small-world\nandscale-freeorganizationofvoxel-basedresting-statefunctionalconnectivity Conflict of Interest: The authors declare that the research was conducted in the\ninthehumanbrain.Neuroimage43,528–539. absence of any commercial or financial relationships that could be construed as a\nVergara,V.M.,Abrol,A.,andCalhoun,V.D.(2019).Anaverageslidingwindow potentialconflictofinterest.\ncorrelationmethodfordynamicfunctionalconnectivity.Hum.BrainMapp.40,\n2089–2103. Publisher’sNote:Allclaimsexpressedinthisarticlearesolelythoseoftheauthors\nVidaurre,D.,Smith,S.M.,andWoolrich,M.W.(2017).Brainnetworkdynamics anddonotnecessarilyrepresentthoseoftheiraffiliatedorganizations,orthoseof\nare hierarchically organized in time. Proc. Natl. Acad. Sci. U.S.A. 114, 12827– thepublisher,theeditorsandthereviewers.Anyproductthatmaybeevaluatedin\n12832. this article, or claim that may be made by its manufacturer, is not guaranteed or\nWang, B., Niu, Y., Miao, L., Cao, R., Yan, P., Guo, H., et al. (2017). Decreased endorsedbythepublisher.\ncomplexityinAlzheimer’sdisease:resting-statefMRIevidenceofbrainentropy\nmapping.Front.AgingNeurosci.9:378.doi:10.3389/fnagi.2017.00378 Copyright © 2022 Yan, Wu, Chen, Yang, Xu, Zeng, Zhang, Chang and Wang."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8848,
+            "end": 8892,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8848,
+            "end": 8892,
+            "text": "Automated Anatomical Labeling (AAL) template",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8793,
+            "end": 8812,
+            "text": "2",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8793,
+            "end": 8812,
+            "text": "Pearson correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9131,
+            "end": 9158,
+            "text": "3",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9131,
+            "end": 9158,
+            "text": "proportional thresholds (K)",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11862,
+            "end": 11876,
+            "text": "0.05 ≤ K ≤ 0.3",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11942,
+            "end": 11958,
+            "text": "step size = 0.05",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9312,
+            "end": 9327,
+            "text": "4",
+            "labels": [
+              "Graph measures — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9312,
+            "end": 9327,
+            "text": "small-worldness",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6082,
+            "end": 6110,
+            "text": "characteristic path length λ",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7208,
+            "end": 7210,
+            "text": "lp",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6605,
+            "end": 6615,
+            "text": "efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11464,
+            "end": 11484,
+            "text": "5",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12519,
+            "end": 12524,
+            "text": "ANOVA",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

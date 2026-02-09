@@ -1,0 +1,930 @@
+{
+  "data": {
+    "text": "Task-dependent reorganization of functional connectivity networks during visual semantic decision making\nMatthew N. DeSalvo, Linda Douw, Shigetoshi Takaya, Hesheng Liu & Steven M. Stufflebeam\nBrain and Behavior 2014; 4(6): 877–885\ndoi: 10.1002/brb3.286\n\nIntroduction: Functional MRI is widely used to study task-related changes in neuronal activity as well as resting-state functional connectivity. In this study, we explore task-related changes in functional connectivity networks using fMRI. Dynamic connectivity may represent a new measure of neural network robustness that would impact both clinical and research efforts. However, prior studies of task-related changes in functional connectivity have shown apparently conflicting results, leading to several competing hypotheses regarding the relationship between task-related and resting-state brain networks. Methods: We used a graph theory-based network approach to compare functional connectivity in healthy subjects between the resting state and when performing a clinically used semantic decision task. We analyzed fMRI data from 21 healthy, right-handed subjects.\n\nData from 21 healthy right-handed subjects (ages 20–55 (mean ± SD = 26.7 ± 9.0), six men and 15 women) who were recruited from the community were retrospectively analyzed. Subjects were native English speakers with normal or corrected-to-normal vision, no history of neuropsychiatric conditions, and no active use of psychoactive medications. This study was approved by our institutional review board and all subjects gave signed informed consent.\n\nMagnetic resonance imaging was performed on a 3T TimTrio system (Siemens, Erlangen, Germany) with a vendor-produced 32-channel head coil. High-resolution T1-weighted MP-RAGE sequences were acquired with TR = 2530 ms, TE = 1.74 ms, flip angle = 7° resulting in a matrix of 256 × 256 × 176 isotropic 1 mm voxels. Resting-state functional data were acquired using a gradient-echo echo-planar pulse sequence sensitive to BOLD contrast with TR = 5000 ms, TE = 30 ms, flip angle = 90°, 55 axial slices of 128 × 112 voxels at 2 mm isotropic resolution resulting in 76 frames over 380 sec. Task runs were acquired with TR = 2000 ms, TE = 30 ms, flip angle = 90°, 33 axial 3.6 mm thick slices of 64 × 64 voxels at 3 mm × 3 mm in-plane resolution resulting in 116 frames over 232 sec.\n\nEach subject underwent 2 resting-state runs during which they passively fixated on a visual cross-hair centered on a screen. Patients were instructed to stay awake and remain as still as possible without any additional task instruction. Each subject underwent 3 task runs in which they decided whether centrally presented visual words represented abstract or concrete entities. Participants were instructed to respond promptly and accurately with a right-hand keypress. Task runs were organized in alternating blocks of 28 sec of rest and 36 sec of task with a new word presented every 3 sec, for a total of seven blocks. Stimuli were projected onto a screen positioned at the head of the magnet bore. Resting-state data were consistently acquired after task runs, and the stimulus paradigm was the same across all subjects.\n\nUsing FreeSurfer version 5.1 and the Lausanne 2008 parcellation provided by the Connectome Mapper, cortical surface representations of MPRAGE volumes were divided into 1000 regions of interest (ROIs) that spanned the entire cortex.\n\nMRI preprocessing procedures for functional data were based on those applied by Buckner et al. (2009) and adapted to a surface-based approach. These procedures included removal of the first four volumes to allow for T1-equilibration effects, compensation for slice-dependent time shifts, motion correction, and projection to FreeSurfer fsaverage5 surface. Motion correction results were inspected to ensure that each run had <1 mm translation and <1° rotation in any direction. Motion-corrected fMRI data were registered to the FreeSurfer processed MPRAGE volume. Temporal filtering removed constant and linear trends over each run while retaining frequencies below 0.08 Hz. Several sources of spurious variance were regressed: six parameters of rigid body head motion, whole-brain average signal, signal averaged over the lateral ventricles, and signal averaged over the deep cerebral white matter. Finally, processed fMRI data were averaged across each ROI to yield 1000 time series.\n\nFunctional connectivity between pairwise ROIs was calculated using Pearson’s correlation coefficient. Because removal of global signal causes a negative shift in the distribution of correlation coefficients introducing spurious anticorrelations, only correlations above the 60th percentile (top 40%) were retained, removing all negative correlations.\n\nThis set of thresholded pairwise correlations was used to define a 1000 × 1000 weighted, undirected adjacency matrix for each run. Network properties were calculated using the Brain Connectivity Toolbox and customized MATLAB R2012b scripts. For each ROI, we calculated the following network parameters: Degree, Modularity, within-module connectivity using the z-score of within-module degree, and between-module connectivity using the participation coefficient. To view the anatomical distribution of these modules, we displayed them as color-coded regions on cortical surface templates.\n\nConnectivity measures were averaged across the three task runs and two rest runs for each subject, and were compared using pairwise Student’s t-tests with correction for multiple comparisons using false discovery rate at q < 0.05.\n\nThis is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 105,
+            "end": 123,
+            "text": "Matthew N. DeSalvo",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 104,
+            "text": "Task-dependent reorganization of functional connectivity networks during visual semantic decision making",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 211,
+            "end": 215,
+            "text": "2014",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 192,
+            "end": 210,
+            "text": "Brain and Behavior",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 236,
+            "end": 252,
+            "text": "10.1002/brb3.286",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 254,
+            "end": 398,
+            "text": "Introduction: Functional MRI is widely used to study task-related changes in neuronal activity as well as resting-state functional connectivity.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5570,
+            "end": 5771,
+            "text": "This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1621,
+            "end": 1667,
+            "text": "3T TimTrio system (Siemens, Erlangen, Germany)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2055,
+            "end": 2070,
+            "text": "55 axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2230,
+            "end": 2258,
+            "text": "33 axial 3.6 mm thick slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2239,
+            "end": 2258,
+            "text": "3.6 mm thick slices",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2037,
+            "end": 2053,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2133,
+            "end": 2155,
+            "text": "76 frames over 380 sec",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2325,
+            "end": 2348,
+            "text": "116 frames over 232 sec",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2011,
+            "end": 2023,
+            "text": "TR = 5000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2186,
+            "end": 2198,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2025,
+            "end": 2035,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2094,
+            "end": 2119,
+            "text": "2 mm isotropic resolution",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1863,
+            "end": 1884,
+            "text": "isotropic 1 mm voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1063,
+            "end": 1124,
+            "text": "We analyzed fMRI data from 21 healthy, right-handed subjects.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3177,
+            "end": 3205,
+            "text": "Using FreeSurfer version 5.1",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1039,
+            "end": 1061,
+            "text": "semantic decision task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2413,
+            "end": 2474,
+            "text": "passively fixated on a visual cross-hair centered on a screen",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2944,
+            "end": 2972,
+            "text": "for a total of seven blocks.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2861,
+            "end": 2904,
+            "text": "blocks of 28 sec of rest and 36 sec of task",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2910,
+            "end": 2942,
+            "text": "a new word presented every 3 sec",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2729,
+            "end": 2820,
+            "text": "Participants were instructed to respond promptly and accurately with a right-hand keypress.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2653,
+            "end": 2727,
+            "text": "centrally presented visual words represented abstract or concrete entities",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2910,
+            "end": 2942,
+            "text": "a new word presented every 3 sec",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5338,
+            "end": 5568,
+            "text": "Connectivity measures were averaged across the three task runs and two rest runs for each subject, and were compared using pairwise Student’s t-tests with correction for multiple comparisons using false discovery rate at q < 0.05.",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1126,
+            "end": 1168,
+            "text": "Data from 21 healthy right-handed subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1170,
+            "end": 1205,
+            "text": "ages 20–55 (mean ± SD = 26.7 ± 9.0)",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1102,
+            "end": 1123,
+            "text": "right-handed subjects",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1207,
+            "end": 1227,
+            "text": "six men and 15 women",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1298,
+            "end": 1468,
+            "text": "Subjects were native English speakers with normal or corrected-to-normal vision, no history of neuropsychiatric conditions, and no active use of psychoactive medications.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1469,
+            "end": 1573,
+            "text": "This study was approved by our institutional review board and all subjects gave signed informed consent.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3210,
+            "end": 3274,
+            "text": "the Lausanne 2008 parcellation provided by the Connectome Mapper",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3210,
+            "end": 3211,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3579,
+            "end": 3650,
+            "text": "removal of the first four volumes to allow for T1-equilibration effects",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3579,
+            "end": 3580,
+            "text": "2",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3652,
+            "end": 3696,
+            "text": "compensation for slice-dependent time shifts",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3652,
+            "end": 3653,
+            "text": "3",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3698,
+            "end": 3764,
+            "text": "motion correction, and projection to FreeSurfer fsaverage5 surface",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3698,
+            "end": 3699,
+            "text": "4",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3721,
+            "end": 3764,
+            "text": "projection to FreeSurfer fsaverage5 surface",
+            "labels": [
+              "Surface — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3721,
+            "end": 3722,
+            "text": "5",
+            "labels": [
+              "Surface — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Surface — Software",
+            "Surface — Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3888,
+            "end": 3973,
+            "text": "Motion-corrected fMRI data were registered to the FreeSurfer processed MPRAGE volume.",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3888,
+            "end": 3889,
+            "text": "6",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3974,
+            "end": 4084,
+            "text": "Temporal filtering removed constant and linear trends over each run while retaining frequencies below 0.08 Hz.",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3974,
+            "end": 3975,
+            "text": "7",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Software",
+            "Temporal detrending — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4048,
+            "end": 4083,
+            "text": "retaining frequencies below 0.08 Hz",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4048,
+            "end": 4049,
+            "text": "8",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software",
+            "Temporal filt — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4076,
+            "end": 4083,
+            "text": "0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4138,
+            "end": 4178,
+            "text": "six parameters of rigid body head motion",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4138,
+            "end": 4139,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4180,
+            "end": 4206,
+            "text": "whole-brain average signal",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4180,
+            "end": 4182,
+            "text": "10",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Global signal — Software",
+            "Global signal — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4208,
+            "end": 4308,
+            "text": "signal averaged over the lateral ventricles, and signal averaged over the deep cerebral white matter",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4208,
+            "end": 4210,
+            "text": "11",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4319,
+            "end": 4395,
+            "text": "processed fMRI data were averaged across each ROI to yield 1000 time series.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4319,
+            "end": 4321,
+            "text": "12",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4397,
+            "end": 4498,
+            "text": "Functional connectivity between pairwise ROIs was calculated using Pearson’s correlation coefficient.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4643,
+            "end": 4747,
+            "text": "only correlations above the 60th percentile (top 40%) were retained, removing all negative correlations.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4816,
+            "end": 4879,
+            "text": "1000 × 1000 weighted, undirected adjacency matrix for each run.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4990,
+            "end": 5210,
+            "text": "For each ROI, we calculated the following network parameters: Degree, Modularity, within-module connectivity using the z-score of within-module degree, and between-module connectivity using the participation coefficient.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5211,
+            "end": 5336,
+            "text": "To view the anatomical distribution of these modules, we displayed them as color-coded regions on cortical surface templates.",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5338,
+            "end": 5435,
+            "text": "Connectivity measures were averaged across the three task runs and two rest runs for each subject",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

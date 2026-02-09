@@ -1,0 +1,1000 @@
+{
+  "data": {
+    "text": "Resting-state low-frequency fluctuations reflect individual \ndifferences in spoken language learning\n\nZhizhou Denga,b, Bharath Chandrasekaranc,d,e,f,g, Suiping Wanga,**, and Patrick C.M. \nWongb,h,*\n\na Center for the Study of Applied Psychology and Guangdong Key Laboratory of Mental Health \nand Cognitive Science, South China Normal University, Guangzhou, China\n\nb Department of Linguistics and Modern Languages, The Chinese University of Hong Kong, Hong \nKong\n\nc Department of Communication Sciences and Disorders, Moody College of Communication, The \nUniversity of Texas at Austin, Austin, TX, USA\n\nd Department of Psychology, College of Liberal Arts, The University of Texas at Austin, Austin, \nTX, USA\n\ne Department of Linguistics, College of Liberal Arts, The University of Texas at Austin, Austin, TX, \nUSA\n\nf Institute of Mental Health Research, College of Liberal Arts, The University of Texas at Austin, \nAustin, TX, USA\n\ng Institute for Neuroscience, The University of Texas at Austin, Austin, TX, USA\n\nh Brain and Mind Institute, The Chinese University of Hong Kong, Hong Kong\n\nCortex. 2016 March ; 76: 63–78. doi:10.1016/j.cortex.2015.11.020.\n\nSupplementary data related to this article can be found at http://dx.doi.org/10.1016/j.cortex.2015.11.020.\n\nHHS Public Access — Author manuscript; Cortex. Author manuscript; available in PMC 2017 March 01.\n\nTwenty right-handed adults (9 males; 25.90 ± 4.79 years old) participated in this study. The \nparticipants were native speakers of American English with no prior exposure to Mandarin \nChinese or any other tone language. None of the participants were amateur or professional \nmusicians, and had more than 6 years of continuous musical experience or learned music prior to 7 years of \nage. All participants passed a hearing screening test (<25 dB HL at 500, 1000, 2000 and 4000 Hz). The participants provided informed consent in accordance with \nthe Institutional Review Board of Northwestern University.\n\nFor all participants, MR images were acquired using a Siemens 3T Trio MRI scanner \n(Erlangen, Germany). Axial anatomical images were acquired using a T1-weighted high-\nresolution 3D volume [MPRAGE; repetition time (TR) = 2300 msec, echo time (TE) = 3.36 \nmsec, flip angle = 9°, matrix size = 256 × 256, field of view (FOV) = 22 cm, and slice \nthickness = 1 mm].\n\nFunctional images at rest were acquired axially using a susceptibility T2*-weighted echo \nplanar imaging (EPI) pulse sequence (TE = 21 msec, TR = 2000 msec, flip angle = 90°, in-\nplane resolution = 3.4375 mm × 3.4375 mm, 36 slices with a slice thickness = 3 mm, and \nFOV = 220 mm). The participants were instructed to relax, close their eyes and remain \nawake throughout the 7-min scan (211 volumes).\n\nRS-fMRI data were analyzed using SPM8 (http://www.fil.ion.ucl.ac.uk/spm), REST, and \nthe Data Processing Assistant for Resting-State fMRI (DPARSF). The first 10 volumes of the images were removed. The remaining volumes were \ncorrected for slice-timing and motion. No participant exhibited head motion that exceeded 2 \nmm in translation or more than 2.5° in angular rotation along any axis. Next, each \nparticipant's anatomical image was co-registered to the mean functional image obtained \nfrom the slice correction and segmented into gray, white, and cerebrospinal fluid (CSF) \ntissue compartments. Then, the functional images were spatially normalized onto the \nMontreal Neurological Institute space using the parameters obtained during segmentation \nand resampled in 3-mm3 voxels. The functional data were spatially smoothed with a 4-mm \nfull-width at half-maximum (FWHM) Gaussian kernel. After removing the linear trend, a \nband-pass filter (.01–.08 Hz) was applied to retain the low-frequency signals.\n\nFor the graph theory analyses, the data preprocessed as above were used without spatial smoothing \nto avoid local correlation artifacts. Additionally, the six head-motion parameters, the CSF and the white matter signals \nwere removed by multiple linear regression. We did not regress out the global mean signal.\n\nWe performed spatial ICA using Group ICA from the fMRI Toolbox (GIFT). The network interaction analyses were based on the preprocessed data described above \nusing spatial smoothing. Additionally, the six head-motion parameters, the CSF and white \nmatter signals, and the global mean signal were removed by multiple linear regression.\n\nAs shown in Fig. 1, the learning curves of the 20 participants indicated improvement. A mean proportion of correct \nperformance of .642 (SD = .235) was achieved in the Generalization Test and was above the .2 chance level.\n\nThe network nodes were defined by segmenting the data into 90 regions (45 regions per hemisphere) using the AAL template (Tzourio-Mazoyer et al., 2002). For each participant, the time series of each region was extracted by averaging the time series across all voxels in the region. Pearson's correlation coefficients between the time series of each possible pair of the 90 regions were subsequently calculated to generate a symmetric correlation matrix. Each correlation matrix was thresholded to obtain an undirected binarized graph in which nodes represented regions and the edges represented connections. A fixed network cost value (defined as the total number of edges in a network divided by the maximum possible number of edges) was used to threshold each correlation matrix. This approach ensured that each network had the same number of edges or wiring cost. For a binary graph G w with N nodes, the edge between the nodes ( I,j ) is represented by a ij , which is either 1 if an edge exists between these two nodes ( a ij = 1 if |r ij | r c , where r ij represents the correlation between nodes i and j and r c represents the cost threshold), or 0 if it does not (|r ij | < r c ). To ensure that the results were not dependent on a specific cost value, each correlation matrix was thresholded over a range of .10-.40 at intervals of .02. The parcellation scheme of the AAL-1024 atlas (512 ROIs for each hemisphere) was based on the method reported in previous studies (Fornito, Zalesky, & Bullmore, 2010; Zalesky et al., 2010)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 102,
+            "end": 197,
+            "text": "Zhizhou Denga,b, Bharath Chandrasekaranc,d,e,f,g, Suiping Wanga,**, and Patrick C.M. \nWongb,h,*",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 100,
+            "text": "Resting-state low-frequency fluctuations reflect individual \ndifferences in spoken language learning",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1097,
+            "end": 1101,
+            "text": "2016",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1089,
+            "end": 1095,
+            "text": "Cortex",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1125,
+            "end": 1153,
+            "text": "10.1016/j.cortex.2015.11.020",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1330,
+            "end": 1361,
+            "text": "available in PMC 2017 March 01.",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1156,
+            "end": 1262,
+            "text": "Supplementary data related to this article can be found at http://dx.doi.org/10.1016/j.cortex.2015.11.020.",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2021,
+            "end": 2048,
+            "text": "Siemens 3T Trio MRI scanner",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2551,
+            "end": 2560,
+            "text": "36 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2568,
+            "end": 2590,
+            "text": "slice thickness = 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2487,
+            "end": 2503,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2705,
+            "end": 2729,
+            "text": "7-min scan (211 volumes)",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2655,
+            "end": 2671,
+            "text": "close their eyes",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2597,
+            "end": 2609,
+            "text": "FOV = 220 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2471,
+            "end": 2485,
+            "text": "TR = 2000 msec",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2457,
+            "end": 2469,
+            "text": "TE = 21 msec",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2505,
+            "end": 2549,
+            "text": "in-\nplane resolution = 3.4375 mm × 3.4375 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1363,
+            "end": 1389,
+            "text": "Twenty right-handed adults",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2765,
+            "end": 2769,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2330,
+            "end": 2355,
+            "text": "Functional images at rest",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1363,
+            "end": 1389,
+            "text": "Twenty right-handed adults",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1400,
+            "end": 1422,
+            "text": "25.90 ± 4.79 years old",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1370,
+            "end": 1382,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1391,
+            "end": 1398,
+            "text": "9 males",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1475,
+            "end": 1581,
+            "text": "native speakers of American English with no prior exposure to Mandarin \nChinese or any other tone language",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1911,
+            "end": 1964,
+            "text": "Institutional Review Board of Northwestern University",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4556,
+            "end": 4575,
+            "text": "Generalization Test",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4519,
+            "end": 4523,
+            "text": ".642",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2890,
+            "end": 2891,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2884,
+            "end": 2900,
+            "text": "first 10 volumes",
+            "labels": [
+              "Removal Init Vol — Algorithm"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2884,
+            "end": 2900,
+            "text": "first 10 volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0031"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2971,
+            "end": 2972,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2765,
+            "end": 2769,
+            "text": "SPM8",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2971,
+            "end": 2983,
+            "text": "slice-timing",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0034"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2988,
+            "end": 2989,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2988,
+            "end": 2994,
+            "text": "motion",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0036"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3169,
+            "end": 3170,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2765,
+            "end": 2769,
+            "text": "SPM8",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3169,
+            "end": 3182,
+            "text": "co-registered",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0039"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3252,
+            "end": 3253,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2765,
+            "end": 2769,
+            "text": "SPM8",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3252,
+            "end": 3261,
+            "text": "segmented",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0042"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3365,
+            "end": 3366,
+            "text": "6",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2765,
+            "end": 2769,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3365,
+            "end": 3385,
+            "text": "spatially normalized",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3489,
+            "end": 3514,
+            "text": "resampled in 3-mm3 voxels",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3541,
+            "end": 3542,
+            "text": "7",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2765,
+            "end": 2769,
+            "text": "SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3541,
+            "end": 3622,
+            "text": "spatially smoothed with a 4-mm \nfull-width at half-maximum (FWHM) Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3541,
+            "end": 3622,
+            "text": "spatially smoothed with a 4-mm \nfull-width at half-maximum (FWHM) Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3630,
+            "end": 3631,
+            "text": "8",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3630,
+            "end": 3655,
+            "text": "removing the linear trend",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0052"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3660,
+            "end": 3661,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3660,
+            "end": 3689,
+            "text": "band-pass filter (.01–.08 Hz)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3660,
+            "end": 3689,
+            "text": "band-pass filter (.01–.08 Hz)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0055"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4712,
+            "end": 4732,
+            "text": "AAL template",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4733,
+            "end": 4739,
+            "text": "template",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4762,
+            "end": 4777,
+            "text": "time series of each region",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4782,
+            "end": 4797,
+            "text": "averaging the time series",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4842,
+            "end": 4857,
+            "text": "Pearson's correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4912,
+            "end": 4927,
+            "text": "fixed network cost value",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4932,
+            "end": 4947,
+            "text": ".10-.40 at intervals of .02",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4962,
+            "end": 4977,
+            "text": "undirected binarized graph",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4992,
+            "end": 5007,
+            "text": "correlation matrix",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5012,
+            "end": 5027,
+            "text": "binary graph G w",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5032,
+            "end": 5047,
+            "text": "N nodes",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5052,
+            "end": 5067,
+            "text": "a ij",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5072,
+            "end": 5087,
+            "text": "r ij",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5092,
+            "end": 5107,
+            "text": "r c",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0069"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,719 @@
+{
+  "data": {
+    "text": "Age- and Sex-Related Topological Organization of Human Brain Functional Networks and Their Relationship to Cognition\nHeidi Foo1*, Anbupalam Thalamuthu1, Jiyang Jiang1, Forrest Koch1, Karen A. Mather1,2, Wei Wen1 and Perminder S. Sachdev1,3\nFront. Aging Neurosci. 13:758817. 2021.\ndoi: 10.3389/fnagi.2021.758817\n\nAge and sex associated with changes in the functional brain network topology and cognition in large population of older adults have been poorly understood. We explored this question further by examining differences in 11 resting-state graph theory measures with respect to age, sex, and their relationships with cognitive performance in 17,127 United Kingdom Biobank participants (mean = 62.83 ± 7.41 years). Age was associated with an overall decrease in the effectiveness of network communication (i.e., integration) and loss of functional specialization (i.e., segregation) of specific brain regions. Sex differences were also observed, with women showing more efficient networks, which were less segregated than in men (FDR adjusted p < 0.05). The age-related changes were also more apparent in men than in women, which suggests that men may be more vulnerable to cognitive decline with age. Interestingly, while network segregation and strength of limbic network were only nominally associated with cognitive performance, the network measures collectively were significantly associated with cognition (FDR adjusted p ≤ 0.002). This may imply that individual measures may be inadequate to capture much of the variance in the neural activity or its output and need further refinement. The complexity of the organization of the functional brain may be shaped by the age and sex of an individual, which ultimately may influence the cognitive performance of older adults. Age and sex stratification may be used to inform clinical neuroscience research to identify older adults at risk of cognitive dysfunction.\n\nThe rs-fMRI measures the spontaneous brain activity as low-frequency fluctuations in blood oxygen level-dependent (BOLD) signals and is used to understand the brain function.\n\nParticipants\nThe data from 20,598 participants of European ancestry with rs-fMRI scans from the United Kingdom Biobank (aged between 44 and 80 years) (Sudlow et al., 2015) were accessed in March 2019. The imaging assessment took place at three different assessment centers: Manchester, Newcastle, and Reading, United Kingdom. This project was approved by the National Health Service National Research Ethics Service (approval letter dated June 17, 2011, ref. 11/NW/0382), project 10279.\n\nImaging Preprocessing and Graph Theory Analysis\nAll participants underwent an rs-fMRI scan on a Siemens Skyra 3T scanner (Siemens Medical Solutions, Erlangen, Germany). The rs-fMRI that was obtained using a blood oxygen level-dependent (BOLD) sequence and an echo-planar imaging (EPI) sequence (TR = 0.735 s, TE = 39 ms, FoV = 88 × 88 × 64, voxel resolution 2.4 mm × 2.4 mm × 2.4 mm) lasted for ∼6 min. We analyzed the rs-fMRI data that were previously preprocessed by the United Kingdom Biobank (Alfaro-Almagro et al., 2018). The preprocessing steps involved motion correction, intensity normalization, smoothing [i.e., Gaussian kernel of full width at half maximum (FWHM), 5 mm], high-pass temporal filtering, EPI unwarping, and gradient distortion correction. Independent Component Analysis (ICA) + FMRIB’s ICA-based X-noiseifier (FIX) processing was then used to remove structural artifacts. Participants with motion of > 2 mm/degree of translation/rotation were removed. After the image preprocessing and quality control, 18,500 participants remained.\n\nThe regions of interest (ROIs) used to construct the network properties were selected from the Schaefer atlas (Schaefer et al., 2018), corresponding to 100 cortical regions classified into seven resting-state networks, namely, frontoparietal control, default mode, dorsal attention, salience ventral attention, limbic, somatomotor, and visual networks. 3dNetCorr command from the Analysis of Functional NeuroImages (AFNI) package was used to produce the network adjacency matrix for each participant. The mean time-series for each region was correlated with the mean time-series for all other regions and extracted for each participant. Furthermore, these time courses were used to estimate the size of signal fluctuation in each node, as well as to estimate the connectivity between pairs of nodes using L2-regularization (rho = 0.5 for ridge regression option in FSLNets). A partial correlation, r, between all pairs of signals was computed to form a 100-by-100 connectivity matrix, which was then Fisher z-transformed. Self-connections and negative correlations were set to zero. We used weighted undirected matrices in our study.\n\nAll graph theory measures were derived using the Brain Connectivity Toolbox. Functional integration was assessed by global efficiency, which refers to the transmission of information at a global level, and characteristic path length, which is the average shortest distance between any two nodes in the network. To assess network segregation, which characterizes the specialized processing of the brain at a local level, we calculated the Louvain modularity and transitivity. Finally, strength (i.e., weighted degree) was described as the sum of all neighboring edge weights. Subsequently, we averaged the two hemispheres to derive a value for each node and averaged within each network to derive a value for each of the seven networks for strength measures. A total of eleven graph theory measures were used in the current study.\n\nCognition\nCognitive assessments were administered on a touchscreen computer and were acquired at the imaging visit (instance 2). Seven tests from the United Kingdom Biobank battery of tests were selected to represent three cognitive domains, namely, processing speed, memory, and executive function, in this study. All test scores were first z-transformed and then averaged to form domain scores. Processing speed domain included the following tests: “Reaction Time” (average time to correctly identify matches in a “snap”-like card game task), “Trail Making A” (time taken to complete a numeric path), and “Symbol Digit Substitution” (number of correct symbol–number matches within the time limit). “Numeric memory” (maximum number of digits remembered correctly) and “pairs matching” (number of incorrect visual matching) represented the memory domain, whereas “Trail Making B” (time taken to complete an alphanumeric path) and “fluid intelligence” (total number of logic and reasoning questions correctly answered) formed the executive function domain. Global cognition was computed by averaging the domain scores and z-transforming.\n\nStatistical Analysis\nStatistical analyses were performed using the R software (version 4.0.0). The graph theory measures were normalized using rank transformation within the “rntransform” function in R from the GeneABEL package, and age was z-transformed for the regression analysis. We controlled for imaging covariates, including head size, head motion from rs-fMRI, and volumetric scaling factor needed to normalize for head size, as well as scanning site and education. The network measures were residualized for imaging covariates and assessment center and used in all subsequent analyses. Multiple linear regression models were used to examine age and sex effects on the network measures and to study whether the network measures influenced cognitive functions. Multivariate analysis was carried out using penalized regression analysis with the elastic net algorithm implemented in the glmnet package, and likelihood ratio tests, p-values, and the incremental R-square were computed by comparing models with and without network measures.\n\nSample Characteristics\nThe current sample of 17,127 participants is a group of generally healthy middle-aged and older adults (range = 45.17–80.67 years, mean age = 62.83 ± 7.41 years) after including only samples with cognition and graph theory data. Of this sample, 9,037 were women and 8,090 were men, with an overall mean of 15.73 ± 4.74 years of education.\n\nData Availability Statement\nThe datasets presented in this article are not readily available because United Kingdom Biobank restriction. Requests to access the datasets should be directed to access@ukbiobank.ac.uk.\n\nEthics Statement\nThe studies involving human participants were reviewed and approved by United Kingdom Biobank. The patients/participants provided their written informed consent to participate in this study.\n\nOpen Access\nThis is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 116,
+            "text": "Age- and Sex-Related Topological Organization of Human Brain Functional Networks and Their Relationship to Cognition",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 117,
+            "end": 239,
+            "text": "Heidi Foo1*, Anbupalam Thalamuthu1, Jiyang Jiang1, Forrest Koch1, Karen A. Mather1,2, Wei Wen1 and Perminder S. Sachdev1,3",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 274,
+            "end": 278,
+            "text": "2021",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 280,
+            "end": 310,
+            "text": "doi: 10.3389/fnagi.2021.758817",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 312,
+            "end": 467,
+            "text": "Age and sex associated with changes in the functional brain network topology and cognition in large population of older adults have been poorly understood.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8186,
+            "end": 8294,
+            "text": "The datasets presented in this article are not readily available because United Kingdom Biobank restriction.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8295,
+            "end": 8372,
+            "text": "Requests to access the datasets should be directed to access@ukbiobank.ac.uk.",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8595,
+            "end": 8706,
+            "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY).",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2684,
+            "end": 2708,
+            "text": "Siemens Skyra 3T scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2883,
+            "end": 2895,
+            "text": "TR = 0.735 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2897,
+            "end": 2907,
+            "text": "TE = 39 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2909,
+            "end": 2927,
+            "text": "FoV = 88 × 88 × 64",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2929,
+            "end": 2970,
+            "text": "voxel resolution 2.4 mm × 2.4 mm × 2.4 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2972,
+            "end": 2989,
+            "text": "lasted for ∼6 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1928,
+            "end": 1975,
+            "text": "rs-fMRI measures the spontaneous brain activity",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7840,
+            "end": 7859,
+            "text": "17,127 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2127,
+            "end": 2146,
+            "text": "20,598 participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7840,
+            "end": 7859,
+            "text": "17,127 participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2220,
+            "end": 2248,
+            "text": "aged between 44 and 80 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7922,
+            "end": 7978,
+            "text": "range = 45.17–80.67 years, mean age = 62.83 ± 7.41 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8063,
+            "end": 8098,
+            "text": "9,037 were women and 8,090 were men",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2134,
+            "end": 2218,
+            "text": "participants of European ancestry with rs-fMRI scans from the United Kingdom Biobank",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3484,
+            "end": 3563,
+            "text": "Participants with motion of > 2 mm/degree of translation/rotation were removed.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2426,
+            "end": 2586,
+            "text": "This project was approved by the National Health Service National Research Ethics Service (approval letter dated June 17, 2011, ref. 11/NW/0382), project 10279.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8391,
+            "end": 8485,
+            "text": "The studies involving human participants were reviewed and approved by United Kingdom Biobank.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5741,
+            "end": 5926,
+            "text": "Seven tests from the United Kingdom Biobank battery of tests were selected to represent three cognitive domains, namely, processing speed, memory, and executive function, in this study.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3148,
+            "end": 3165,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3148,
+            "end": 3165,
+            "text": "motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3167,
+            "end": 3190,
+            "text": "2",
+            "labels": [
+              "Intensity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Intensity normalization — Software",
+            "Intensity normalization — Parameters"
+          ]
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3167,
+            "end": 3190,
+            "text": "intensity normalization",
+            "labels": [
+              "Intensity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3192,
+            "end": 3268,
+            "text": "3",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3192,
+            "end": 3268,
+            "text": "smoothing [i.e., Gaussian kernel of full width at half maximum (FWHM), 5 mm]",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3209,
+            "end": 3267,
+            "text": "Gaussian kernel of full width at half maximum (FWHM), 5 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3270,
+            "end": 3298,
+            "text": "4",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software",
+            "Temporal filt — Parameters",
+            "Temporal filt — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3270,
+            "end": 3298,
+            "text": "high-pass temporal filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3300,
+            "end": 3313,
+            "text": "5",
+            "labels": [
+              "Unwarp — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Unwarp — Software",
+            "Unwarp — Parameters"
+          ]
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3300,
+            "end": 3313,
+            "text": "EPI unwarping",
+            "labels": [
+              "Unwarp — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Gradient Distortion Correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3319,
+            "end": 3349,
+            "text": "6",
+            "labels": [
+              "Gradient Distortion Correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Gradient Distortion Correction — Software",
+            "Gradient Distortion Correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Gradient Distortion Correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3319,
+            "end": 3349,
+            "text": "gradient distortion correction",
+            "labels": [
+              "Gradient Distortion Correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3390,
+            "end": 3437,
+            "text": "7",
+            "labels": [
+              "ICA FIX — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "ICA FIX — Parameters",
+            "ICA FIX — Algorithm"
+          ]
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3390,
+            "end": 3437,
+            "text": "FMRIB’s ICA-based X-noiseifier (FIX) processing",
+            "labels": [
+              "ICA FIX — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3390,
+            "end": 3437,
+            "text": "FMRIB’s ICA-based X-noiseifier (FIX) processing",
+            "labels": [
+              "ICA FIX — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3484,
+            "end": 3563,
+            "text": "8",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Exclusion — Software",
+            "Exclusion — Parameters"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3484,
+            "end": 3563,
+            "text": "Participants with motion of > 2 mm/degree of translation/rotation were removed.",
+            "labels": [
+              "Exclusion — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3741,
+            "end": 3755,
+            "text": "Schaefer atlas",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3798,
+            "end": 3863,
+            "text": "100 cortical regions classified into seven resting-state networks",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3798,
+            "end": 3998,
+            "text": "100 cortical regions classified into seven resting-state networks, namely, frontoparietal control, default mode, dorsal attention, salience ventral attention, limbic, somatomotor, and visual networks.",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4147,
+            "end": 4282,
+            "text": "The mean time-series for each region was correlated with the mean time-series for all other regions and extracted for each participant.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4521,
+            "end": 4667,
+            "text": "A partial correlation, r, between all pairs of signals was computed to form a 100-by-100 connectivity matrix, which was then Fisher z-transformed.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4646,
+            "end": 4666,
+            "text": "Fisher z-transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4668,
+            "end": 4728,
+            "text": "Self-connections and negative correlations were set to zero.",
+            "labels": [
+              "Negative correlation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5539,
+            "end": 5610,
+            "text": "A total of eleven graph theory measures were used in the current study.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

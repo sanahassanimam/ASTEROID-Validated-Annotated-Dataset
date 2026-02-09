@@ -1,0 +1,302 @@
+{
+  "data": {
+    "text": "Figure 1A shows the procedure to calculate a centrality map on\nthe standard brain surface. The time-series of the preprocessed data\nwere averaged across vertices in each parcel. For this purpose, the HCP\nparcellation, including 180 parcels in each hemisphere (Glasser et al.,\n2016), was employed. The averaged time-series in each parcel for each\nfMRI run was normalized to mean and standard deviation values of 0\nand 1, respectively. The time-series were subsequently concatenated\nacross the fMRI runs of each participant for centrality analysis. A cor-\nrelation matrix was calculated for the concatenated time-series across\nall parcels.\n\nFigure 1A shows the procedure to calculate a centrality map on\nthe standard brain surface. The time-series of the preprocessed data\nwere averaged across vertices in each parcel. For this purpose, the HCP\nparcellation, including 180 parcels in each hemisphere (Glasser et al.,\n2016), was employed. The averaged time-series in each parcel for each\nfMRI run was normalized to mean and standard deviation values of 0\nand 1, respectively. The time-series were subsequently concatenated\nacross the fMRI runs of each participant for centrality analysis. A cor-\nrelation matrix was calculated for the concatenated time-series across\nall parcels. Midnight Scan Club scripts (github.com/MidnightScanClub,\nGordon et al., 2017) were used to read and write CIFTI files. The HCP\nConnectomeWorkbench (Marcus et al., 2011, RRID:SCR_008750) was\nused to calculate the correlation matrix and visualize the results.\n\nA proportional 7.5% threshold was applied to the correlation matrix to\ngenerate an adjacency matrix, which represented a binary undirected\nnetwork (van den Heuvel et al., 2017; Figure 1). The adjacency matrix\nwas used for calculating EC and PC. The threshold was determined\nbased on the flow coefficient (Honey et al., 2007). As opposed to EC\nand PC, the flow coefficient is a local centrality metric. With respect to\nthe network construction, the network nodes are expected to influence\nor communicate with each other more intensively. The mean flow coef-\nficients across participants were calculated at 2.5%, 5.0%, 7.5%, 10.0%,\n12.5%, and 15% proportions. The peak was found at 7.5%.\n\nEC evaluates the importance of each network node—parcel—\n(Lohmann et al., 2010; Zuo et al., 2012). All connections in the adja-\ncency matrix were used to calculate EC. Therefore, EC integrates the\nconnectivity information about all functionally connected parcels. EC\nof parcel i was calculated as below:\nECi = 1 / λ1 A μ1 = 1 / λ1 Σ_j aij μ1(j).\n\nPC of parcel i was also calculated for the brain network (Guimerà &\nNunes Amaral, 2005; Power et al., 2013):\nPCi = 1 − Σ_m∈M (Ki(m) / Ki)^2.\nM is the total set of network communities estimated using Louvain\ncommunity detection (Rubinov & Sporns, 2010), Ki is the number of\nconnections associated with parcel i, and Ki(m) is the number of con-\nnections between parcel i and all parcels in community m. PC can be\nused to define a parcel acting as a connector hub between modules\n(i.e. local sub-networks) (Guimerà & Nunes Amaral, 2005; Rubinov &\nSporns, 2010; Bertolero et al., 2015; Cohen & D’Esposito, 2016).\n\nBoth time-varying eigenvector centrality (tEC) and participation\ncoefficient (tPC) were calculated using the sliding window technique\n(Shakil et al., 2016). The window was set to 50 s (from before 25 s to\nafter 25 s). The tEC and the tPC were calculated every second in time\nwith the scan TR in MOVIE, except the first and the last 25 s. At time t,\nthe adjacency matrix A(t) was calculated. Then, the tEC of parcel i at\ntime t was calculated as below:\ntECi(t) = 1 / λ1(t) A(t) μ1(t) = 1 / λ1(t) Σ_j aij(t) μ1(j,t).\nThe total set of network communities of time t, M(t), was estimated\nfrom the adjacency matrix A(t). The tPC of parcel i was also calculated\nas below:\ntPCi(t) = 1 − Σ_m∈M(t) (Ki(m,t) / Ki(t))^2.\n\nThe brain connectivity toolbox (Rubinov & Sporns, 2010,\nRRID:SCR_004841) was used to calculate flow coefficient, EC,\nPC, tEC, and tPC.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 196,
+            "end": 296,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 196,
+            "end": 296,
+            "text": "the HCP\nparcellation, including 180 parcels in each hemisphere (Glasser et al.,\n2016), was employed.",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 196,
+            "end": 296,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 132,
+            "end": 177,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 132,
+            "end": 177,
+            "text": "were averaged across vertices in each parcel.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 434,
+            "end": 546,
+            "text": "4",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 434,
+            "end": 546,
+            "text": "The time-series were subsequently concatenated\nacross the fMRI runs of each participant for centrality analysis.",
+            "labels": [
+              "Combine block — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 547,
+            "end": 637,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 547,
+            "end": 637,
+            "text": "A cor-\nrelation matrix was calculated for the concatenated time-series across\nall parcels.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1396,
+            "end": 1534,
+            "text": "The HCP\nConnectomeWorkbench (Marcus et al., 2011, RRID:SCR_008750) was\nused to calculate the correlation matrix and visualize the results.",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2711,
+            "end": 2970,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2711,
+            "end": 2970,
+            "text": "M is the total set of network communities estimated using Louvain\ncommunity detection (Rubinov & Sporns, 2010), Ki is the number of\nconnections associated with parcel i, and Ki(m) is the number of con-\nnections between parcel i and all parcels in community m.",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2711,
+            "end": 2970,
+            "text": "M is the total set of network communities estimated using Louvain\ncommunity detection (Rubinov & Sporns, 2010), Ki is the number of\nconnections associated with parcel i, and Ki(m) is the number of con-\nnections between parcel i and all parcels in community m.",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1637,
+            "end": 1723,
+            "text": "8",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1536,
+            "end": 1723,
+            "text": "10",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1536,
+            "end": 1723,
+            "text": "A proportional 7.5% threshold was applied to the correlation matrix to\ngenerate an adjacency matrix, which represented a binary undirected\nnetwork (van den Heuvel et al., 2017; Figure 1).",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1536,
+            "end": 1723,
+            "text": "A proportional 7.5% threshold was applied to the correlation matrix to\ngenerate an adjacency matrix, which represented a binary undirected\nnetwork (van den Heuvel et al., 2017; Figure 1).",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2223,
+            "end": 2321,
+            "text": "11",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2223,
+            "end": 2321,
+            "text": "EC evaluates the importance of each network node—parcel—\n(Lohmann et al., 2010; Zuo et al., 2012).",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3890,
+            "end": 4024,
+            "text": "The brain connectivity toolbox (Rubinov & Sporns, 2010,\nRRID:SCR_004841) was used to calculate flow coefficient, EC,\nPC, tEC, and tPC.",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

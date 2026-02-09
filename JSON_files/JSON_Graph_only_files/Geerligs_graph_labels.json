@@ -1,0 +1,493 @@
+{
+  "data": {
+    "text": "For functional connectivity analysis the brain-wide graph of 264 putative functional areas (10 mm diameter spheres) created by Power et al.\n(2011) was used. The functional areas in this graph were defined\nbased on meta-analysis and functional connectivity mapping so that\neach area represents an element of brain organization. To make sure\nthat the graph only included areas that did not suffer from susceptibility artifacts, a group mask was created. First, participant-specific\nbinary images were created by thresholding functional images at 70%\nof mean signal intensity. A group mask was created by multiplying the\nbinary images of all participants. If the group mask overlapped <50%\nwith a functional area, this area was excluded from analysis (i.e., 29\nfunctional areas). Average time courses were extracted for the remaining 235 functional areas. Pearson correlation coefficients were computed between the time courses of all functional areas in each\nparticipant separately. To remove connections which might be due to\nre-slicing or motion-induced artifacts, correlations between areas <20\nmm apart were set to zero (Power et al. 2011). The diagonal of the correlation matrix was set to zero to remove correlations between an area\nand itself.\n\nThresholding\nBased on the correlation matrix, graphs were constructed for each participant. Graph characteristics, such as modularity and global efficiency are\naffected by the number of nodes, but also by the number of edges in a\ngraph (van Wijk et al. 2010). For each participant, the correlation matrix\nwas thresholded to enhance the contrast between relevant (strong) and\nirrelevant (weak) connectivity values. This was done in such a way that\nthe number of edges in the graph was constant. A threshold was selected\nusing the method below, in order to maximize the amount of information\nobtained about the network on the group level.\nFor a range of thresholds (selecting between 1 and 50% strongest\nconnections), and for both age groups separately, we applied the following procedure. For each participant, the correlation matrix was binarized by setting the connections above the predefined threshold to 1\nand all other connections to zero. Subsequently these binarized matrices were averaged over all participants within each group. This averaged matrix is referred to as the “actual” matrix. Information theory\nwas applied to compute the entropy over the actual matrix (Shannon\n1948). Applying the procedure described above to both age groups separately, resulted\nin a threshold set at the 2.8% strongest connections in the network for\nthe younger participants and 2.6% for the older participants. Therefore, a threshold of 2.7% was selected (see Supplementary Fig. 2).\n\nGraph Analysis\nNetwork measures were calculated using functions implemented in the\nBrain Connectivity Toolbox (Rubinov and Sporns 2010, www.\nbrain-connectivity-toolbox.net). Modularity is the extent to which a\ngraph can be divided into modules with a large number of within\nmodule connections and a minimal number of between module connections (Girvan and Newman 2002). Network modularity estimates were computed using the algorithm by Blondel et al. (2008), using the average modularity across 50\nruns of the algorithm. In addition, local and global efficiency were assessed (Latora and Marchiori 2001).\n\nThe graph was partitioned into modules separately for younger and\nolder participants. As input to the partitioning algorithm, we computed\naverages of the binary matrices of all participants (correlation matrices\nthresholded at 2.7%) in each age group. To achieve the optimal\nmodule division, we adopted a 2-step procedure, similar to the one\napplied by Rubinov and Sporns (2011). An initial partition into\nmodules was created using the algorithm by Blondel et al. (2008),\nwhich attempts to maximize within module connections and minimize\nbetween module connections. As the approach is susceptible to the occurrence of local maxima, this procedure was repeated 500 times. Subsequently, all of these partitions were refined, using a modularity\nfine-tuning algorithm (Sun et al. 2009) which randomly assigns nodes\nto different modules or randomly creates a separate module. Changes\nthat led to an increase in modularity were retained. The fine-tuning\nalgorithm was applied repeatedly until the modularity of the partitioning no longer increased, and the partitioning with the highest modularity was used for further analyses.\n\nTo compare the module decompositions in older and younger\nparticipants, we used normalized mutual information (NMI). NMI\nmeasures how much information is provided by one set of assignments\nabout another set of assignments (Strehl and Ghosh 2003) and varies\nfrom 0 (no mutual information) to 1 (identical node assignments).\n\nTo find modules which were representative for both the older and\nthe younger participants, we used the intersection of the modules\ndefined in the 2 groups. Only nodes that belonged to a specific\nmodule in both groups, were taken as representative of that module\nfor both groups. For each of the 5\nlarge networks defined in this manner, we computed the average\nlocal efficiency and participation coefficient. The participation coefficient is an index of the number of between module connections\nversus the total number of connections of a certain node (Guimerà\nand Amaral 2005).\n\nTo examine the connectivity within and between all the different\nmodules we developed a specific procedure, which was performed\nseparately for both negative and positive connections. For this analysis\nthe original weighted graph was used. Correlations with P < 0.05 after\nfalse discovery rate correction (FDR, Benjamini and Hochberg 1995)\nwere retained, while all other correlations were set to zero."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 41,
+            "end": 64,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 61,
+            "end": 115,
+            "text": "264 putative functional areas (10 mm diameter spheres)",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 777,
+            "end": 812,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 777,
+            "end": 812,
+            "text": "Average time courses were extracted",
+            "labels": [
+              "Time series ROI — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 821,
+            "end": 851,
+            "text": "remaining 235 functional areas",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 853,
+            "end": 885,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 853,
+            "end": 885,
+            "text": "Pearson correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1065,
+            "end": 1121,
+            "text": "correlations between areas <20\nmm apart were set to zero",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1887,
+            "end": 1951,
+            "text": "4",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1536,
+            "end": 1570,
+            "text": "correlation matrix\nwas thresholded",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1924,
+            "end": 1963,
+            "text": "between 1 and 50% strongest\nconnections",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2667,
+            "end": 2684,
+            "text": "threshold of 2.7%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2064,
+            "end": 2096,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2064,
+            "end": 2096,
+            "text": "correlation matrix was binarized",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2100,
+            "end": 2193,
+            "text": "setting the connections above the predefined threshold to 1\nand all other connections to zero",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5565,
+            "end": 5597,
+            "text": "original weighted graph was used",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2742,
+            "end": 2774,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ],
+            "Missing_sublabels": []
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2810,
+            "end": 2836,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3150,
+            "end": 3184,
+            "text": "algorithm by Blondel et al. (2008)",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3261,
+            "end": 3288,
+            "text": "local and global efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5162,
+            "end": 5187,
+            "text": "participation coefficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4537,
+            "end": 4572,
+            "text": "normalized mutual information (NMI)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3196,
+            "end": 3229,
+            "text": "7",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3196,
+            "end": 3229,
+            "text": "average modularity across 50\nruns",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2238,
+            "end": 2268,
+            "text": "averaged over all participants",
+            "labels": [
+              "Result aggregation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5076,
+            "end": 5092,
+            "text": "5\nlarge networks",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3337,
+            "end": 3371,
+            "text": "8",
+            "labels": [
+              "Network definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3150,
+            "end": 3184,
+            "text": "algorithm by Blondel et al. (2008)",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4064,
+            "end": 4114,
+            "text": "modularity\nfine-tuning algorithm (Sun et al. 2009)",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3970,
+            "end": 4002,
+            "text": "procedure was repeated 500 times",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3638,
+            "end": 3654,
+            "text": "2-step procedure",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5488,
+            "end": 5541,
+            "text": "9",
+            "labels": [
+              "Negative correlation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5488,
+            "end": 5541,
+            "text": "separately for both negative and positive connections",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5617,
+            "end": 5698,
+            "text": "P < 0.05 after\nfalse discovery rate correction (FDR, Benjamini and Hochberg 1995)",
+            "labels": [
+              "Negative correlation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5720,
+            "end": 5759,
+            "text": "all other correlations were set to zero",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

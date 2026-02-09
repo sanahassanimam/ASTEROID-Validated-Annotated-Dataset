@@ -1,0 +1,1339 @@
+{
+  "data": {
+    "text": "Spontaneous eye movements during eyes-open rest reduce resting-state-network modularity by increasing visual-sensorimotor connectivity\n\nCemal Koba, Giuseppe Notaro, Sandra Tamm, Gustav Nilsonne, and Uri Hasson\n\nNetwork Neuroscience, 5(2), 451–476. https://doi.org/10.1162/netn_a_00186. The MIT Press. 2021.\n\nan open access journal • Published under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.\n\nWe used eyes-open resting-state (RS) fMRI with simultaneous eye tracking and found that removing eye-orbit EPI variance reduced connectivity between sensorimotor and visual areas and increased network modularity.\n\nAll data are available online from OpenNeuro, Dataset ds000201 (https://www.openneuro.org/datasets/ds000201/). We include the analysis workflow as Supporting Information, also available via a GitHub repository (Koba, 2021).\n\nData were collected from 86 participants on a 3T MRI scanner (Discovery 750, General Electric) using an 8-channel head coil. For the resting state EPI images: slice thickness 3 mm no gap, axial orientation, 49 slices covering the entire brain, interleaved acquisition inferior to superior, TE = 30, TR = 2.5 sec, flip angle 75°. One RS run per participant was a typical RS scan acquired in absence of sleep deprivation, where participants were asked to fixate on a white cross presented on a gray background for 8 minutes. Three participants did not provide these runs so 83 participants were included in our initial sample. Participants belonged to two age groups: 20–30 years of age (n = 45, Median = 23) and 65–75 years of age (n = 38, Median = 68).\n\nFirst, we applied brain extraction and tissue segmentation (gray matter, white matter, CSF) to the structural T1 images using the antsBrainExtraction function of ANTs software. We registered each participant’s structural image to standard space using non-linear registration (ICBM 2009 nonlinear asymetric template) and saved the inverse of the warps. We also registered the structural and functional images using affine transformation. We also created cerebral spinal fluid (CSF) and white matter masks in MNI space and transformed them to individual space, where they were eroded by one voxel from their outer boundaries to be more conservative. We then extracted the mean time series from these white matter and CSF masks.\n\nWe used AFNI for analyzing the functional RS images. We implemented the following steps: slice time correction, motion correction (base image: first volume of the run), and band-pass filtering (0.01–0.1 Hz). To remove other nuisance sources of variance from the functional time series, we implemented preliminary data-cleaning using regression with the following regressors: (a) motion parameters estimated during motion correction, (b) mean white matter and CSF time series, and (c) frame-wise displacement values. To improve signal to noise of the subsequent regression models that were of primary interest, we then spatially smoothed the cleaned time series with a 6-mm FWHM kernel.\n\nTitle: Spontaneous eye movements during eyes-open rest reduce resting-state-network modularity by increasing visual-sensorimotor connectivity\n\nFunctional Connectivity Networks\nTo create functional connectivity networks, we used a resting-state functional connectivity parcellation based on 500 ROIs (Schaefer et al., 2018). We spatially translated this parcellation into each participant’s individual space and limited ROIs to gray matter. We extracted the mean time series from each ROI.\n\nWe examined the network features after thresholding the connectivity matrices at 12 sparsity levels: 30%, 20%, and 1–10%. We generally used nonbinarized connections maintaining the original weights, with the following exceptions: for node degree we used binarized values.\n\nFrom each participant’s resting-state network we derived the following metrics: node degree, strength, clustering coefficient, transitivity, assortativity, efficiency, number of communities, betweenness centrality, and modularity. These were calculated using the Brain Connectivity Toolbox (Rubinov & Sporns, 2010).\n\nWe tested which of these parameters differed as a result of the EO-EPI removal procedure using paired-sample t tests. We defined a robust result as one that was statistically significant across all 12 levels of sparsity thresholding."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 134,
+            "text": "Spontaneous eye movements during eyes-open rest reduce resting-state-network modularity by increasing visual-sensorimotor connectivity",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 136,
+            "end": 209,
+            "text": "Cemal Koba, Giuseppe Notaro, Sandra Tamm, Gustav Nilsonne, and Uri Hasson",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 301,
+            "end": 305,
+            "text": "2021",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 286,
+            "end": 299,
+            "text": "The MIT Press",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 248,
+            "end": 284,
+            "text": "https://doi.org/10.1162/netn_a_00186",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 420,
+            "end": 632,
+            "text": "We used eyes-open resting-state (RS) fMRI with simultaneous eye tracking and found that removing eye-orbit EPI variance reduced connectivity between sensorimotor and visual areas and increased network modularity.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 308,
+            "end": 330,
+            "text": "an open access journal",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 669,
+            "end": 696,
+            "text": "OpenNeuro, Dataset ds000201",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 826,
+            "end": 856,
+            "text": "GitHub repository (Koba, 2021)",
+            "labels": [
+              "Code"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 781,
+            "end": 803,
+            "text": "Supporting Information",
+            "labels": [
+              "Remarks"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 921,
+            "end": 952,
+            "text": "Discovery 750, General Electric",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1066,
+            "end": 1075,
+            "text": "49 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1018,
+            "end": 1045,
+            "text": "slice thickness 3 mm no gap",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1172,
+            "end": 1186,
+            "text": "flip angle 75°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1039,
+            "end": 1045,
+            "text": "no gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1371,
+            "end": 1380,
+            "text": "8 minutes",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1312,
+            "end": 1335,
+            "text": "fixate on a white cross",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1158,
+            "end": 1170,
+            "text": "TR = 2.5 sec",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1149,
+            "end": 1156,
+            "text": "TE = 30",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1431,
+            "end": 1446,
+            "text": "83 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2348,
+            "end": 2352,
+            "text": "AFNI",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 992,
+            "end": 1005,
+            "text": "resting state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 884,
+            "end": 899,
+            "text": "86 participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Male/Female",
+            "Inclusion criteria"
+          ],
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1382,
+            "end": 1427,
+            "text": "Three participants did not provide these runs",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1525,
+            "end": 1543,
+            "text": "20–30 years of age",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1570,
+            "end": 1588,
+            "text": "65–75 years of age",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1525,
+            "end": 1543,
+            "text": "20–30 years of age",
+            "labels": [
+              "Group matching"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1743,
+            "end": 1762,
+            "text": "1",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1775,
+            "end": 1788,
+            "text": "ANTs software",
+            "labels": [
+              "Skull stripping — Software"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1743,
+            "end": 1762,
+            "text": "antsBrainExtraction",
+            "labels": [
+              "Skull stripping — Algorithm"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1743,
+            "end": 1762,
+            "text": "antsBrainExtraction",
+            "labels": [
+              "Skull stripping — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0031"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1652,
+            "end": 1704,
+            "text": "2",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1775,
+            "end": 1788,
+            "text": "ANTs software",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1652,
+            "end": 1704,
+            "text": "tissue segmentation (gray matter, white matter, CSF)",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1652,
+            "end": 1704,
+            "text": "tissue segmentation (gray matter, white matter, CSF)",
+            "labels": [
+              "Segmentation — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0035"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1864,
+            "end": 1887,
+            "text": "3",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1775,
+            "end": 1788,
+            "text": "ANTs software",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1864,
+            "end": 1887,
+            "text": "non-linear registration",
+            "labels": [
+              "Spatial normalization — Algorithm"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1889,
+            "end": 1927,
+            "text": "ICBM 2009 nonlinear asymetric template",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2027,
+            "end": 2048,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2027,
+            "end": 2048,
+            "text": "affine transformation",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2027,
+            "end": 2048,
+            "text": "affine transformation",
+            "labels": [
+              "Coregistration — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0042"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2311,
+            "end": 2337,
+            "text": "5",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2269,
+            "end": 2299,
+            "text": "extracted the mean time series",
+            "labels": [
+              "Extract regressors — Algorithm"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2777,
+            "end": 2814,
+            "text": "mean white matter and CSF time series",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2311,
+            "end": 2337,
+            "text": "white matter and CSF masks",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0046"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2429,
+            "end": 2450,
+            "text": "6",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2429,
+            "end": 2450,
+            "text": "slice time correction",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2429,
+            "end": 2450,
+            "text": "slice time correction",
+            "labels": [
+              "Slice timing correction — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0049"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2452,
+            "end": 2469,
+            "text": "7",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2452,
+            "end": 2469,
+            "text": "motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2471,
+            "end": 2506,
+            "text": "base image: first volume of the run",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2452,
+            "end": 2469,
+            "text": "motion correction",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0053"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2513,
+            "end": 2546,
+            "text": "8",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2513,
+            "end": 2546,
+            "text": "band-pass filtering (0.01–0.1 Hz)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2513,
+            "end": 2546,
+            "text": "band-pass filtering (0.01–0.1 Hz)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2513,
+            "end": 2546,
+            "text": "band-pass filtering (0.01–0.1 Hz)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0057"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2719,
+            "end": 2771,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2719,
+            "end": 2771,
+            "text": "motion parameters estimated during motion correction",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2719,
+            "end": 2771,
+            "text": "motion parameters estimated during motion correction",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0060"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2777,
+            "end": 2814,
+            "text": "10",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2777,
+            "end": 2814,
+            "text": "mean white matter and CSF time series",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2824,
+            "end": 2854,
+            "text": "frame-wise displacement values",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2777,
+            "end": 2814,
+            "text": "mean white matter and CSF time series",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0064"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2958,
+            "end": 3000,
+            "text": "11",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2958,
+            "end": 3000,
+            "text": "spatially smoothed the cleaned time series",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3008,
+            "end": 3017,
+            "text": "6-mm FWHM",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2958,
+            "end": 3000,
+            "text": "spatially smoothed the cleaned time series",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0068"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3174,
+            "end": 3182,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3174,
+            "end": 3182,
+            "text": "500 ROIs",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3341,
+            "end": 3357,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3341,
+            "end": 3357,
+            "text": "mean time series",
+            "labels": [
+              "Time series ROI — Type"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3455,
+            "end": 3473,
+            "text": "3",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3475,
+            "end": 3478,
+            "text": "30%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3480,
+            "end": 3483,
+            "text": "20%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3489,
+            "end": 3494,
+            "text": "1–10%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3514,
+            "end": 3538,
+            "text": "4",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3514,
+            "end": 3538,
+            "text": "nonbinarized connections",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3628,
+            "end": 3644,
+            "text": "binarized values",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3608,
+            "end": 3619,
+            "text": "5",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3910,
+            "end": 3936,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3608,
+            "end": 3619,
+            "text": "node degree",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0082"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3740,
+            "end": 3748,
+            "text": "strength",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3750,
+            "end": 3772,
+            "text": "clustering coefficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3774,
+            "end": 3786,
+            "text": "transitivity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3788,
+            "end": 3801,
+            "text": "assortativity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0086"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3803,
+            "end": 3813,
+            "text": "efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0087"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3838,
+            "end": 3860,
+            "text": "betweenness centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0088"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3866,
+            "end": 3876,
+            "text": "modularity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0089"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4162,
+            "end": 4196,
+            "text": "6",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0090"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4162,
+            "end": 4196,
+            "text": "12 levels of sparsity thresholding",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0091"
+        }
+      ]
+    }
+  ]
+}

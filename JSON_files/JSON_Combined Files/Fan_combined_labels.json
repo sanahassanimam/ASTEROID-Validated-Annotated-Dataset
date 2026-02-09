@@ -1,0 +1,803 @@
+{
+  "data": {
+    "text": "The Differences in the Whole-Brain Functional Network between Cantonese-Mandarin Bilinguals and Mandarin Monolinguals\n\nBrain Sci. 2021, 11, 310. https://doi.org/10.3390/brainsci11030310\n\n2.1. Participants\n\nThirty-one Cantonese-Mandarin BGs and 31 Mandarin MGs were recruited in Guangzhou, Guangdong Province, China. All the participants in this study were undergraduates and postgraduates. After fMRI scanning, one MG participant was discarded because the scanned image was blurred, and one BG participant was discarded due to the maximum value of the head translation (rotation) of their functional brain data being over 3 mm (3°). Finally, 30 Mandarin MGs and 30 Cantonese-Mandarin BGs who learned Mandarin as their L2 between the ages of 3 and 7 were included in analysis. All subjects were right-handed according to the Edinburgh Handedness Inventory (EHI), and none of them had experienced a head attack nor had any hearing impairment or neurological disorders. All participants signed the informed consent form before the study. The study was approved by the medical ethics committee of Sun Yat-sen University, and the ethic approval code is [L2016] No.036.\n\n2.2. Data Acquisition\n\nDuring rs-fMRI scanning, the subjects were asked to stay still, remain awake, and keep their eyes closed while not thinking about anything. All MRI datasets were acquired through a SIEMENS TRIO 3-T MRI scanner with the use of a 12 channel, phased-array, receiver-only head coil at the Center for the Study of Applied Psychology at the School of Psychology in South China Normal University. For each participant, 240 functional images were obtained using weighted, single-shot echo planar imaging, and the parameters were set as follows: repetition time (TR) = 2000 ms, echo time (TE) = 30 ms, slice thickness = 3.5 mm, voxel size = 3.5 × 3.5 × 3.5 mm, flip angle = 90°, matrix size = 64 × 64, field of view (FOV) = 224 mm, number of slices = 32, and the slices were acquired interleaved. The 256 T1-weighted 3D images were acquired using magnetization-prepared rapid gradient-echo, and the parameters were set as TR = 1900 ms, TE = 2.52 ms, slice thickness = 1.0 mm, voxel size = 1.0 × 1.0 × 1.0 mm, flip angle = 9°, matrix size = 256 × 256, FOV = 256 mm, and number of slices = 176.\n\n2.3. Data Preprocessing\n\nData preprocessing was performed using GRETNA (Version 2.0.0, http://www.nitrc.org/projects/gretna/) based on MATLAB R2016a. Before preprocessing, the first 10 volumes of each subject were discarded, considering adaptation to the environment. Then, we performed slice timing for the remaining 230 volumes to determine the differences among slices and realigned them to the first volume to correct the inevitable head movement during scanning. The subject was discarded if the maximum value of the head translation (rotation) of their functional brain data was over 3 mm (3°). Next, individual functional images were normalized to the Montreal Neurological Institute (MNI) space using the T1 structural data and resampled to 3 × 3 × 3 mm3 isotropic voxels. Finally, we performed linear detrending and bandpass filtering (0.01–0.08 Hz) and removed several nuisance signals from each voxel’s time series to reduce the effects of nonneuronal fluctuations, including head motion profiles from the Friston 24 parameters, the white matter signals, and the cerebrospinal fluid signal. Owing to the controversy of regressing out global signals in rs-fMRI, our study did not regress out the global signal.\n\n2.4. Brain Network Construction\n\nBased on the Automated Anatomical Labeling (AAL) atlas template, the template consists of 90 ROIs (45 for each hemisphere). A node was used to represent a region, and we extracted the time series of the 90 regions. Pearson’s correlation coefficient r between each brain region was calculated as the strength of the functional connectivity between the pair of brain regions according to the extracted time series, so a 90 × 90 correlation coefficient matrix was obtained. Correlation coefficients were further converted into z values by using Fisher’s r-to-z transformation. The functional connectivity between nodes i and j was considered as an edge, and the positive values were retained as weighted network connectivity.\n\n2.6. Graph Analysis\n\nAs there would be different connection densities of graphs when applying different sparsity thresholds, we tested 36 sparsity thresholds ranging from 5% to 40% with an increase of 1% to ensure the stability of network properties. We computed five global network metrics, including the clustering coefficient (Cp), characteristic path length (Lp), small-worldness index, global efficiency (Eg), and local efficiency (Eloc).\n\n2.7. Statistical Analysis of Network Properties\n\nWhen comparing the differences between global topological properties between two groups, a nonparametric permutation test (permutation = 10,000) was used. Age and sex were entered as nuisance covariates to regress out any potential mixed effects. In addition, we used false discovery rate (FDR) correction (at q = 0.05) to reduce false-positive errors caused by multiple comparisons.\n\n2.4. Brain Network Construction\nBased on graph theory, the human brain network was modeled as a graph, and the\nundirected weighted network of the whole brain was created for each participant. First,\nwe constructed the brain functional network for each subject based on the Automated\nAnatomical Labeling (AAL) atlas template [ 38]. The template consists of 90 ROIs (45 for\neach hemisphere) (Table S1) and is widely used in brain network studies [ 39–41], thus\nimproving comparability across studies [ 42]. A node was used to represent a region,\nand using this conﬁguration, we could then extract the time series of the 90 regions.\nSecond, Pearson’s correlation coefﬁcient rbetween each brain region was calculated as\nthe strength of the functional connectivity between the pair of brain regions according\nto the extracted time series, so a 90 \u000290 correlation coefﬁcient matrix was obtained. To\ntest whether functional connectivity was signiﬁcantly different between the BG and MG\ngroups, correlation coefﬁcients were further converted into zvalues by using Fisher’s r-to-z\ntransformation. This transformation generated values that were approximately normally\ndistributed, and a Zstatistic was then used to compare these transformed zvalues to\ndetermine the signiﬁcance of the between-group differences in the correlations [ 43]. The\nfunctional connectivity between nodes i and j was considered as an edge, and the positive\nvalues were retained as weighted network connectivity.\n2.5. Network-Based Statistic (NBS) Analysis\nFirst, to reduce spurious correlations, a one-sample t-test was performed for every\ncorrelation in each group. We retained those correlations whose corresponding pvalues\npassed a statistical threshold of p< 0.05 after Bonferroni correction for each correlation\nmatrix; otherwise, the correlations were set to zero. In addition, we obtained a union\nmask containing connectivity that was signiﬁcant in either of the two groups. Then, we\nperformed two-sample one-tailed t-tests (after controlling for the effects of age and sex)\nwithin this mask to determine group differences in functional connectivity, similar to\nprevious studies [ 39,44,45]. A primary threshold ( p< 1\u000210\u00004) was applied to identify\nsuprathreshold links, among which the connected components and their size (the number\nof links included in the components) were detected. To estimate the signiﬁcance of each\ncomponent, a nonparametric permutation approach was used to derive the null distribution\nof the size of the connected component (5000 permutations). Brieﬂy, all subjects were\nrandomly reallocated into two groups in each permutation, and two-sample one-tailed\nt-tests were performed for the same set of links as mentioned above. The same primary\nthreshold ( p< 1\u000210\u00004) was subsequently used to produce suprathreshold links, within\nwhich the size of the maximal connected component was identiﬁed. Finally, for the\nconnected component of size M identiﬁed in the real grouping of BGs and MGs, we\ncalculated the proportion of the 5000 permutations, for which the maximal connected\ncomponent was larger than M, to determine the corrected pvalue.\nBrain Sci. 2021 ,11, 310 6 of 18\n2.6. Graph Analysis\nGraph theory was used to characterize the topological properties of the human brain\nfunctional networks [ 28,29]. As there would be different connection densities of graphs\nwhen applying different sparsity thresholds, we tested 36 sparsity thresholds ranging from\n5% to 40% with an increase of 1%—as in a previous study [ 46]—to ensure the stability of\nnetwork properties [47].\nWe computed ﬁve global network metrics, including the clustering coefﬁcient ( Cp),\ncharacteristic path length ( Lp), small-worldness index, global efﬁciency ( Eg), and local\nefﬁciency ( Eloc). The Cpmeasures the extent of local interconnectivity or cliquishness of a\ngraph [ 47]. The Lpbetween each possible pair of nodes is the number of edges in the shortest\npath between them, divided by all possible pairs of nodes in the network. It measures the\nextent of overall routing efﬁciency, where a high Lprepresents less efﬁcient information ﬂow\ndue to long routes [ 48]. The small-worldness index is the ratio between the normalized Cp\nand normalized Lp, which are standardized by dividing their values by random networks\npreserving the same degree distribution and connections with the original brain network.\nThose combining high local clustering with short paths, representing an effective system,\nshow features of a small world network [ 48–51].Egis the average inverse shortest path\nlength and captures the extent of information propagation in the network [ 52]. The Eloc is\nthe local efﬁciency computed on node neighborhoods, describing the extent of information\ntransfer of the respective node with all other nodes in the network [52].\n2.7. Statistical Analysis of Network Properties\nNBS analysis and network property calculations were conducted in the network anal-\nysis toolbox GRETNA (Version 2.0.0, http://www.nitrc.org/projects/gretna/ (accessed on\n30 October 2020)), based on MATLAB, while the brain was visualized using the BrainNet\nViewer toolkit (http://www.nitrc.org/projects/bnv/ (accessed on 30 October 2020)). When\ncomparing the differences between global topological properties between two groups, a\nnonparametric permutation test [ 53] (permutation = 10,000) was used. Age and sex were\nentered as nuisance covariates to regress out any potential mixed effects [ 44]. In addition,\nwe used false discovery rate (FDR) correction (at q= 0.05) to reduce false-positive errors\ncaused by multiple comparisons [54,55]."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 117,
+            "text": "The Differences in the Whole-Brain Functional Network between Cantonese-Mandarin Bilinguals and Mandarin Monolinguals",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 145,
+            "end": 185,
+            "text": "https://doi.org/10.3390/brainsci11030310",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 130,
+            "end": 134,
+            "text": "2021",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 145,
+            "end": 185,
+            "text": "https://doi.org/10.3390/brainsci11030310",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "Missing_sublabels": [
+            "Data",
+            "Code",
+            "Preregistered",
+            "Remarks"
+          ],
+          "id": "m0004"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1369,
+            "end": 1397,
+            "text": "SIEMENS TRIO 3-T MRI scanner",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1270,
+            "end": 1292,
+            "text": "keep their eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1748,
+            "end": 1755,
+            "text": "2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1774,
+            "end": 1779,
+            "text": "30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1911,
+            "end": 1932,
+            "text": "number of slices = 32",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1781,
+            "end": 1805,
+            "text": "slice thickness = 3.5 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1840,
+            "end": 1856,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1807,
+            "end": 1838,
+            "text": "voxel size = 3.5 × 3.5 × 3.5 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1881,
+            "end": 1909,
+            "text": "field of view (FOV) = 224 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "Missing_sublabels": [
+            "Duration (s)",
+            "Multicenter study? (Y/N)",
+            "Inter-slice gap",
+            "Most-used software for preprocessing",
+            "Resting or Task/If Task, what task?",
+            "Number of individuals for final analyses"
+          ],
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1188,
+            "end": 1194,
+            "text": "rs-fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 633,
+            "end": 687,
+            "text": "Finally, 30 Mandarin MGs and 30 Cantonese-Mandarin BGs",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2298,
+            "end": 2342,
+            "text": "GRETNA (Version 2.0.0",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 633,
+            "end": 687,
+            "text": "Finally, 30 Mandarin MGs and 30 Cantonese-Mandarin BGs",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 776,
+            "end": 806,
+            "text": "All subjects were right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 411,
+            "end": 519,
+            "text": "one MG participant was discarded because the scanned image was blurred, and one BG participant was discarded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Age",
+            "Male/Female",
+            "Inclusion criteria",
+            "Group matching"
+          ],
+          "id": "m0019"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1125,
+            "end": 1162,
+            "text": "ethic approval code is [L2016] No.036",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2445,
+            "end": 2496,
+            "text": "the first 10 volumes of each subject were discarded",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2445,
+            "end": 2446,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2547,
+            "end": 2571,
+            "text": "slice timing",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2547,
+            "end": 2548,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1966,
+            "end": 1974,
+            "text": "interleaved",
+            "labels": [
+              "Slice timing correction — Parameters"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2649,
+            "end": 2723,
+            "text": "realigned them to the first volume to correct the inevitable head movement",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2649,
+            "end": 2650,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 617,
+            "end": 631,
+            "text": "over 3 mm (3°)",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 617,
+            "end": 618,
+            "text": "4",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2914,
+            "end": 3004,
+            "text": "normalized to the Montreal Neurological Institute (MNI) space using the T1 structural data",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2914,
+            "end": 2915,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3009,
+            "end": 3035,
+            "text": "resampled to 3 × 3 × 3 mm3",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3076,
+            "end": 3093,
+            "text": "linear detrending",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3076,
+            "end": 3077,
+            "text": "6",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3098,
+            "end": 3106,
+            "text": "bandpass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3116,
+            "end": 3129,
+            "text": "0.01–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3098,
+            "end": 3099,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3290,
+            "end": 3311,
+            "text": "Friston 24 parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3290,
+            "end": 3291,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3313,
+            "end": 3373,
+            "text": "the white matter signals, and the cerebrospinal fluid signal",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3313,
+            "end": 3314,
+            "text": "9",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3743,
+            "end": 3778,
+            "text": "Pearson’s correlation coefficient r",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4070,
+            "end": 4100,
+            "text": "Fisher’s r-to-z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4187,
+            "end": 4216,
+            "text": "positive values were retained",
+            "labels": [
+              "Negative correlation"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4390,
+            "end": 4432,
+            "text": "sparsity thresholds ranging from 5% to 40%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4558,
+            "end": 4694,
+            "text": "clustering coefficient (Cp), characteristic path length (Lp), small-worldness index, global efficiency (Eg), and local efficiency (Eloc)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5435,
+            "end": 5454,
+            "text": "AAL) atlas template",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5462,
+            "end": 5494,
+            "text": "The template consists of 90 ROIs",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5718,
+            "end": 5760,
+            "text": "extract the time series of the 90 regions.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5242,
+            "end": 5300,
+            "text": "undirected weighted network of the whole brain was created",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5242,
+            "end": 5300,
+            "text": "1",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0051"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5435,
+            "end": 5454,
+            "text": "2",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0052"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5462,
+            "end": 5494,
+            "text": "3",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0053"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5718,
+            "end": 5760,
+            "text": "4",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0054"
+        }
+      ]
+    }
+  ]
+}

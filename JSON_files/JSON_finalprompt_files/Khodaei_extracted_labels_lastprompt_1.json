@@ -1,0 +1,758 @@
+{
+  "data": {
+    "text": "Neuroimage: Reports 3 (2023) 100165\nAvailable online 20 March 2023\n2666-9560/© 2023 The Authors. Published by Elsevier Inc. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).\nBrain working memory network indices as landmarks of intelligence \nMohammadreza Khodaei, Paul J. Laurienti, Dale Dagenbach, Sean L. Simpson\n\nIdentifying the neural correlates of intelligence has long been a goal in neuroscience. Recently, the field of network neuroscience has attracted researchers’ attention as a means for answering this question. In this study, we employed a mixed-modeling framework for analyzing multi-task brain networks to elucidate the most critical working memory task network topological properties corresponding to individuals’ intelligence differences.\n\nWe used a subset from 1200 Human Connectome Project young adult (HCP-YA) data (Van Essen et al., 2013) with resting state, task-based fMRI during a working memory task, and NIH cognitive scores available for each subject. Resting state fMRI data acquisition was done in two runs with different phase encoding (RL and LR) using a 3T Siemens connectome-Skyra scanner with TR = 720 ms, voxel size = 2 × 2x2 mm and scan time of 864 s/run (1200 vol/run). Task-based fMRI data acquisition was performed with the same imaging protocol (two runs) but in shorter time (303 s/run (420 vol/run)). Each task-based run included eight blocks (four 0-back and four 2-back), with each block lasting for 25 s. Four categories of pictures, including faces, tools, places and body parts, were used as stimuli, with each run including two blocks of each image type. At the start of each block, a 2.5 s cue was presented to specify the task type and the cue (Barch et al., 2013a).\n\nCognitive abilities scores were obtained using NIH cognitive toolbox tests (http://www.nihtoolbox.org). The fluid intelligence composite score was assessed by five tests, including two executive function tests (inhibition and cognitive flexibility), a processing speed test, a working memory test, and an episodic memory test. Crystalized intelligence composite score was estimated by two verbal tasks, including language reading decoding and vocabulary comprehension. The cognitive function composite score, general intelligence, was estimated by averaging the normalized scores of fluid and crystalized cognitive measures, followed by scaling scores based on the new distribution (Heaton et al., 2014; Barch et al., 2013b).\n\nWe used the minimally preprocessed resting state and working memory task fMRI data provided by the HCP (Glasser et al., 2013). Out of 1200, 937 subjects had both resting state and working memory task data in our version of HCP data. Prior to any preprocessing, data went through a quality control check, and subjects with high motion and distortion were removed from the study. More specifically, 116 subjects had artifact issues (74 subjects had movement greater than 2 mm or rotation higher than 2◦, 32 subjects had warping issues and 25 still had fMRI signal artifacts after AROMA noise correction). In addition, we excluded subjects with family relations by finding subjects with the same family identification number and selecting an individual randomly. Out of 937, there were 435 subjects with unique family IDs. Finally, we removed subjects with cognitive test incompletion and missing demographic information. These procedures yielded a final sample size of 379 subjects. We further divided the data into two high and low scoring groups based on the median of three measures of intelligence (general, fluid, and crystallized).\n\nTo further clean the data, we removed the first 10 s of the data (14 vol). Next, we performed motion correction using ICA-Aroma (Pruim et al., 2015) to remove any motion artifacts. Bandpass filtering was done with 0.009 and 0.08 cut off to remove the scanner’s low-frequency drift and physiological low and high-frequency noises. Next, we concatenated the two runs (RL and LR phase encoding). We performed a single regression analysis using SPM12 to remove unwanted signals from time series data. Regressors included the whole brain mean signals for gray matter, white matter and cerebrospinal fluid (CSF), realignment parameters, and a final regressor for the concatenation of the two runs. For working memory data we included additional regressors extracted by modeling the block design for 0-back, rest, and cue blocks. For both rest and task data, we removed artificial excess high-frequency noise derived from the concatenation of the runs, using a continuous wavelet transform with a window size of 30 s, centered at the joint of the two runs.\n\nHCP’s working memory task data includes working memory blocks (2-back blocks), long-term memory blocks (0-back blocks), and the resting state. This design is a preferable design for activation-based analysis. However, using the whole working memory task time series data in a correlation based analysis to study working memory can be misleading. We extracted the time series related to only the 2-back task and concatenated them (Fig. 2) to investigate the brain oscillation associated with the working memory instead of the whole series of events.\n\nFollowing the preprocessing, we parcellated the brain into 268 regions using the Shen Atlas (Shen et al., 2013) and computed the mean time series of voxels in each region for each participant. Connectivity matrices were estimated by computing the correlation between average signals of all region pairs. Two versions of the correlation matrices were estimated, positive weighted connectivity and positive binary connectivity keeping all positive edges regardless of strength. Five network topology measures that cover the main categories of systemic network properties from the positive connectivity matrix were extracted. Fig. 3 illustrates the data preparation steps.\n\nWe used the WFU_MMNET toolbox (Bahrami et al., 2019) for the estimation of Pearson’s correlation networks, topological network measures, and spatial distances.\n\nTable 1. Demographic information and cognitive score of the sample of HCP data used in this study.\nNumber of subjects 379. Gender (male/female) 174/205. Age 28.71 ± 3.70. Handedness (− 100 < x < 100) 65.98 ± 43.29. BMI 26.19 ± 5.01. Income (1/2/3/4/5/6/7/8) 5.03 ± 2.20. Education level (1/2/3) 61/260/58. Race (1/2/3/4/5/6) 1/32/46/282/11/7. Ethnicity 39/332/8. DSM4 alcohol abuse (0/1) 314/65. DSM4 alcohol dependence (0/1) 355/24. Smoke Status (0/1) 320/59. Dimensional change card sort 115.22 ± 9.86. List sorting 111.28 ± 11.19. Pattern completion processing speed 116.21 ± 15.14. Flanker task 111.56 ± 9.82. Picture sequence memory 113.06 ± 13.62. Picture vocabulary 117.21 ± 9.26. Oral reading recognition 117.16 ± 10.62. Fluid cognition composite score 115.94 ± 11.02. Crystalized cognition composite score 118.12 ± 9.65. Total cognition composite score (general intelligence) 122.94 ± 14.24.\n\nData availability. The authors do not have permission to share data.\n\nAppendix A. Supplementary data. Supplementary data to this article can be found online at https://doi.org/10.1016/j.ynirp.2023.100165."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 305,
+            "end": 325,
+            "text": "Mohammadreza Khodaei",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 238,
+            "end": 303,
+            "text": "Brain working memory network indices as landmarks of intelligence",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 23,
+            "end": 35,
+            "text": "2023) 100165",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 97,
+            "end": 123,
+            "text": "Published by Elsevier Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7141,
+            "end": 7184,
+            "text": "https://doi.org/10.1016/j.ynirp.2023.100165",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 379,
+            "end": 466,
+            "text": "Identifying the neural correlates of intelligence has long been a goal in neuroscience.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 124,
+            "end": 184,
+            "text": "This is an open access article under the CC BY-NC-ND license",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6981,
+            "end": 7049,
+            "text": "Data availability. The authors do not have permission to share data.",
+            "labels": [
+              "Data"
+            ]
+          },
+          "Missing_sublabels": [
+            "Code",
+            "Preregistered",
+            "Remarks"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1150,
+            "end": 1185,
+            "text": "3T Siemens connectome-Skyra scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1191,
+            "end": 1202,
+            "text": "TR = 720 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1204,
+            "end": 1227,
+            "text": "voxel size = 2 × 2x2 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1232,
+            "end": 1269,
+            "text": "scan time of 864 s/run (1200 vol/run)",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1364,
+            "end": 1405,
+            "text": "in shorter time (303 s/run (420 vol/run))",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 929,
+            "end": 988,
+            "text": "resting state, task-based fMRI during a working memory task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)",
+            "Number of slices",
+            "Slice thickness",
+            "Flip angle",
+            "Inter-slice gap",
+            "Eyes open/closed",
+            "Field of View (cm)",
+            "TE (ms)",
+            "Number of individuals for final analyses",
+            "Most-used software for preprocessing"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3428,
+            "end": 3489,
+            "text": "These procedures yielded a final sample size of 379 subjects.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4081,
+            "end": 4092,
+            "text": "using SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1407,
+            "end": 1478,
+            "text": "Each task-based run included eight blocks (four 0-back and four 2-back)",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1480,
+            "end": 1513,
+            "text": "with each block lasting for 25 s.",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "Missing_sublabels": [
+            "Length of each trial",
+            "ISI distribution",
+            "Efficiency optimization",
+            "Block/event correlation"
+          ]
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1514,
+            "end": 1610,
+            "text": "Four categories of pictures, including faces, tools, places and body parts, were used as stimuli",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1612,
+            "end": 1666,
+            "text": "with each run including two blocks of each image type.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          },
+          "Missing_sublabels": [
+            "Instructions"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6178,
+            "end": 6201,
+            "text": "Number of subjects 379.",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6202,
+            "end": 6231,
+            "text": "Gender (male/female) 174/205.",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6232,
+            "end": 6249,
+            "text": "Age 28.71 ± 3.70.",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6250,
+            "end": 6293,
+            "text": "Handedness (− 100 < x < 100) 65.98 ± 43.29.",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "Missing_sublabels": [
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2906,
+            "end": 3009,
+            "text": "116 subjects had artifact issues (74 subjects had movement greater than 2 mm or rotation higher than 2◦",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6909,
+            "end": 6979,
+            "text": "Total cognition composite score (general intelligence) 122.94 ± 14.24.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2742,
+            "end": 2742,
+            "text": "1",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2817,
+            "end": 2886,
+            "text": "subjects with high motion and distortion were removed from the study.",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Exclusion — Software",
+            "Exclusion — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3673,
+            "end": 3673,
+            "text": "2",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3673,
+            "end": 3720,
+            "text": "we removed the first 10 s of the data (14 vol).",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm"
+          ]
+        },
+        {
+          "from_name": "ICA AROMA",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3740,
+            "end": 3740,
+            "text": "3",
+            "labels": [
+              "ICA AROMA — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA AROMA",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3740,
+            "end": 3794,
+            "text": "motion correction using ICA-Aroma (Pruim et al., 2015)",
+            "labels": [
+              "ICA AROMA — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "ICA AROMA — Software",
+            "ICA AROMA — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3827,
+            "end": 3827,
+            "text": "4",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3827,
+            "end": 3882,
+            "text": "Bandpass filtering was done with 0.009 and 0.08 cut off",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3860,
+            "end": 3874,
+            "text": "0.009 and 0.08",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Concatenate Runs",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3976,
+            "end": 3976,
+            "text": "5",
+            "labels": [
+              "Concatenate Runs — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Concatenate Runs",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3985,
+            "end": 4038,
+            "text": "concatenated the two runs (RL and LR phase encoding).",
+            "labels": [
+              "Concatenate Runs — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Concatenate Runs — Software",
+            "Concatenate Runs — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4039,
+            "end": 4039,
+            "text": "6",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4081,
+            "end": 4092,
+            "text": "using SPM12",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4143,
+            "end": 4337,
+            "text": "Regressors included the whole brain mean signals for gray matter, white matter and cerebrospinal fluid (CSF), realignment parameters, and a final regressor for the concatenation of the two runs.",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Algorithm"
+          ]
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4592,
+            "end": 4592,
+            "text": "7",
+            "labels": [
+              "wavelet decomposition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4600,
+            "end": 4628,
+            "text": "continuous wavelet transform",
+            "labels": [
+              "wavelet decomposition — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4636,
+            "end": 4655,
+            "text": "window size of 30 s",
+            "labels": [
+              "wavelet decomposition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "wavelet decomposition — Software"
+          ]
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5043,
+            "end": 5043,
+            "text": "8",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5043,
+            "end": 5134,
+            "text": "We extracted the time series related to only the 2-back task and concatenated them (Fig. 2)",
+            "labels": [
+              "Combine block — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Combine block — Software",
+            "Combine block — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5276,
+            "end": 5276,
+            "text": "9",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5276,
+            "end": 5358,
+            "text": "we parcellated the brain into 268 regions using the Shen Atlas (Shen et al., 2013)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5363,
+            "end": 5363,
+            "text": "10",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5363,
+            "end": 5439,
+            "text": "computed the mean time series of voxels in each region for each participant.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5440,
+            "end": 5440,
+            "text": "11",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5440,
+            "end": 5550,
+            "text": "Connectivity matrices were estimated by computing the correlation between average signals of all region pairs.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5918,
+            "end": 5970,
+            "text": "We used the WFU_MMNET toolbox (Bahrami et al., 2019)",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

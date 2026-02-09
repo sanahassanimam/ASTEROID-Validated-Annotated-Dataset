@@ -1,0 +1,781 @@
+{
+  "data": {
+    "text": "Long-Term Effects of Attentional Performance on\nFunctional Brain Network Topology\nThomas P. K. Breckel1*, Christiane M. Thiel1, Edward T. Bullmore2,3,4, Andrew Zalesky5, Ameera X. Patel2, Carsten Giessing1,2\nPLoS ONE 8(9): e74125. doi:10.1371/journal.pone.0074125\nCopyright: © 2013 Breckel et al. This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits\nunrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.\n\nAbstract\nWe compared the topological and spatial properties of brain networks as derived from functional MRI data (N = 20) recorded for 6 mins before and 12 mins after the performance of an attentional task. On average, functional networks measured immediately post-task demonstrated significant and prolonged changes in network organization compared to pre-task networks with higher connectivity strength, more clustering, less efficiency, and shorter distance connections.\n\nThe study was approved by the ethics committee of the German Psychological Association (http://www.dgps.de/, PI: Christiane Thiel, registration number: CT05022008DGPS) and subjects signed written informed consent.\n\nSubjects\nTwenty healthy, right-handed subjects (11 female, 9 male; mean age = 27.0 years, range 24 to 39 years) participated in the experiment.\n\nExperimental Design\nEach scanning session was divided into different time periods in which either resting state (RS) or BOLD activations during task processing were measured. There were one RS block before the task with 256 scans and one RS block following the task with 512 scans. The second RS block was divided into two halves so that in total three RS periods were analysed with 256 scans each (equivalent to 6 min 24 s). During RS data acquisition subjects were instructed to fixate a black fixation cross that was presented in the centre of a light grey background. We instructed subjects to keep their eyes open.\n\nVigilance Task\nDuring the task period, subjects performed a visual vigilance task in which a display with a central black fixation cross (the same as used during the RS condition) and two additional flanker windows were presented. Subjects were instructed to detect a colour change of the central fixation cross from black to red for 300 ms by pressing a response button as fast as possible. In total 96 targets were presented in 32 min. The targets were equally distributed over the experiment by presenting three target stimuli per minute (with random interstimulus intervals within each minute). In the flanker windows, five dots randomly moved with low speed or were kept still. Both phases alternated every 24 s.\n\nFMRI Data Acquisition\nFunctional and structural images were acquired on a 1.5 Tesla MRI scanner (Siemens MAGNETOM Sonata, Siemens AG, Erlangen, Germany). Functional images were obtained using multislice T2*-weighted gradient echo planar imaging (EPI). Each volume consisted of 17 axial slices (voxel size of 3×3 mm, 4 mm in slice thickness, slice gap of 1.6 mm, field of view (FoV) = 200×200 mm², relaxation time (TR) = 1500 ms, echo time (TE) = 50 ms and 90° flip angle). EPI data were continuously measured with the same sequence in all RS and task periods.\n\nFMRI Data Processing and Time-series Analysis\nThe time series of each voxel was corrected for head motion and slice timing offsets using SPM8 (http://www.fil.ion.ucl.ac.uk/spm/). The functional images were spatially normalized to standard stereotaxic MNI space (Montreal Neurological Institute) and regionally parcellated using a template image comprising 442 cortical and subcortical brain regions to estimate the mean fMRI time series for each region for each participant during each RS and task period. To reduce motion effects motion parameters of the spatial realignment were regressed out from the mean time series. Each regional time series was band-pass filtered (wavelet scale 3: 0.042–0.083 Hz) using the maximum overlap discrete wavelet transform (MODWT). For each pair of nodes the wavelet correlation was estimated and the absolute correlation values resulted in a 442×442 association matrix for each subject, RS and task period.\n\nTopological Metrics of Brain Graphs\nBinary graphs of different connection densities were constructed based on the association matrix. A thresholding algorithm starting with the minimum spanning tree (MST) was used. Graphs at 15 different cost levels were constructed in the range of 2.5%–50%. Based on these adjacency matrices we calculated global and local efficiency (clustering) following Latora and Marchiori.\n\nAnalysis of the Behavioural Data\nThe individual vigilance decrement of each subject was estimated by the slope of a robust linear regression analysis with the individual response latencies or reaction times (RTs) as dependent variable and the series of attentional trial numbers as independent variable. The Stanford Sleepiness Scale (SSS) was administered before and after the fMRI experiment to measure subjective feelings of fatigue."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 81,
+            "text": "Long-Term Effects of Attentional Performance on\nFunctional Brain Network Topology",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 82,
+            "end": 207,
+            "text": "Thomas P. K. Breckel1*, Christiane M. Thiel1, Edward T. Bullmore2,3,4, Andrew Zalesky5, Ameera X. Patel2, Carsten Giessing1,2",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 231,
+            "end": 263,
+            "text": "doi:10.1371/journal.pone.0074125",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 275,
+            "end": 281,
+            "text": "© 2013",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 208,
+            "end": 216,
+            "text": "PLoS ONE",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 742,
+            "end": 1008,
+            "text": "On average, functional networks measured immediately post-task demonstrated significant and prolonged changes in network organization compared to pre-task networks with higher connectivity strength, more clustering, less efficiency, and shorter distance connections.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 297,
+            "end": 399,
+            "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1234,
+            "end": 1336,
+            "text": "Twenty healthy, right-handed subjects (11 female, 9 male; mean age = 27.0 years, range 24 to 39 years)",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1234,
+            "end": 1336,
+            "text": "Twenty healthy, right-handed subjects (11 female, 9 male; mean age = 27.0 years, range 24 to 39 years)",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1234,
+            "end": 1336,
+            "text": "Twenty healthy, right-handed subjects (11 female, 9 male; mean age = 27.0 years, range 24 to 39 years)",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1234,
+            "end": 1336,
+            "text": "Twenty healthy, right-handed subjects (11 female, 9 male; mean age = 27.0 years, range 24 to 39 years)",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1234,
+            "end": 1271,
+            "text": "Twenty healthy, right-handed subjects",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "Missing_sublabels": [
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1024,
+            "end": 1096,
+            "text": "approved by the ethics committee of the German Psychological Association",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2807,
+            "end": 2830,
+            "text": "Siemens MAGNETOM Sonata",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2987,
+            "end": 3002,
+            "text": "17 axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3026,
+            "end": 3049,
+            "text": "4 mm in slice thickness",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3166,
+            "end": 3180,
+            "text": "90° flip angle",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3051,
+            "end": 3070,
+            "text": "slice gap of 1.6 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3124,
+            "end": 3137,
+            "text": "TR) = 1500 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3150,
+            "end": 3161,
+            "text": "TE) = 50 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3072,
+            "end": 3105,
+            "text": "field of view (FoV) = 200×200 mm²",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3004,
+            "end": 3049,
+            "text": "voxel size of 3×3 mm, 4 mm in slice thickness",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1942,
+            "end": 1989,
+            "text": "We instructed subjects to keep their eyes open.",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1753,
+            "end": 1794,
+            "text": "256 scans each (equivalent to 6 min 24 s)",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 649,
+            "end": 655,
+            "text": "N = 20",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3402,
+            "end": 3412,
+            "text": "using SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2051,
+            "end": 2072,
+            "text": "visual vigilance task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2732,
+            "end": 2805,
+            "text": "Functional and structural images were acquired on a 1.5 Tesla MRI scanner",
+            "labels": [
+              "Multicenter study? (Y/N)"
+            ]
+          },
+          "Missing_sublabels": [
+            "Y/N explicit statement"
+          ]
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2383,
+            "end": 2428,
+            "text": "In total 96 targets were presented in 32 min.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2533,
+            "end": 2587,
+            "text": "with random interstimulus intervals within each minute",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2674,
+            "end": 2708,
+            "text": "Both phases alternated every 24 s.",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "Missing_sublabels": [
+            "Efficiency optimization",
+            "Block/event correlation",
+            "Length of each trial"
+          ]
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2222,
+            "end": 2382,
+            "text": "Subjects were instructed to detect a colour change of the central fixation cross from black to red for 300 ms by pressing a response button as fast as possible.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2082,
+            "end": 2127,
+            "text": "a display with a central black fixation cross",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2500,
+            "end": 2531,
+            "text": "three target stimuli per minute",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4630,
+            "end": 4662,
+            "text": "Analysis of the Behavioural Data",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "Missing_sublabels": [
+            "Omnibus ANOVA"
+          ]
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4746,
+            "end": 4779,
+            "text": "robust linear regression analysis",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3351,
+            "end": 3412,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3351,
+            "end": 3412,
+            "text": "SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3351,
+            "end": 3412,
+            "text": "rigid-body (6 DOF)",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3351,
+            "end": 3412,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3351,
+            "end": 3412,
+            "text": "SPM8",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3477,
+            "end": 3531,
+            "text": "3",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3477,
+            "end": 3531,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3477,
+            "end": 3531,
+            "text": "Template=MNI",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3581,
+            "end": 3669,
+            "text": "4",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3581,
+            "end": 3669,
+            "text": "AAL sub-parcellation (442 nodes)",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3670,
+            "end": 3723,
+            "text": "5",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters",
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3802,
+            "end": 3865,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3802,
+            "end": 3865,
+            "text": "motion regression",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3923,
+            "end": 3975,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3923,
+            "end": 3975,
+            "text": "band-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3923,
+            "end": 3975,
+            "text": "0.042–0.083 Hz (MODWT)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4061,
+            "end": 4098,
+            "text": "8",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4061,
+            "end": 4098,
+            "text": "wavelet correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4251,
+            "end": 4315,
+            "text": "9",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4251,
+            "end": 4315,
+            "text": "global efficiency; clustering; MST thresholding; cost 2.5–50%",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

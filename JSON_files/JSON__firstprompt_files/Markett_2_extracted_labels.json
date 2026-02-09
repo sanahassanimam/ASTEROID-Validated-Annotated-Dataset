@@ -1,0 +1,796 @@
+{
+  "data": {
+    "text": "Resting state fMRI data were collected from N¼ 23\n(males n¼ 2, females n¼ 21; age M¼ 21.74, SD¼ 5.24) par-\nticipants after obtaining their informed written consent.\nAll participants were free of any psychiatric or neurologi-\ncal condition as assessed by a screening questionnaire and\nhad no contraindications to MRI. The study protocol was\nin accordance with the Declaration of Helsinki and\napproved by the local medical ethics committee of the\nUniversity Hospital Bonn.\n\nAfter completion of the fMRI scan, the participants’ atten-\ntional abilities were assessed by means of the Attentional\nNetwork Test (ANT). The ANT is described in detail else-\nwhere [Fan et al., 2002]. Briefly, participants were con-\nfronted with five horizontal lines that were either presented\nabove or below a central fixation cross on a 15-inch\n(38.1 cm) computer screen. The line in the middle had\narrowheads pointing either to the left or to the right and\nthe participants’ task was to indicate as fast and accurately\nas possible the direction of the arrowhead by pressing a\nbutton on a computer keyboard. Three different manipula-\ntions of this procedure were realized to measure the three\nattentional functions: In some of the trials, a little asterisk\nappeared briefly before the target line’s onset. The benefit\nin response latency from this temporal cue served as an\nindex for the alerting function. Sometimes, the star\nappeared exactly at the same spatial position of the target\narrow. The benefit from this spatial cue served as an index\nfor the orienting network. For the assessment of executive\ncontrol, the four lines flanking the target line appeared with\narrowheads as well. The arrowheads pointed either in the\nsame (i.e., congruent) or in the opposite (i.e., incongruent)\ndirection of the target’s arrowhead. The reaction time differ-\nence between trials with congruent and with incongruent\nflankers was set as an indicator for the executive control\nnetwork’s efficiency. In total, participants performed 312 tri-\nals (including 24 practice trials with feedback). The whole\nprocedure lasted �20 min including breaks.\n\nFrom each participant, 270 T2*-weighted volumes were\nobtained on a Siemens Avanto 1.5T scanner (Siemens,\nErlangen, Germany) at the Life & Brain Center Bonn in a\nsingle 10-min session. Participants were instructed to lie as\nstill as possible with their eyes closed without thinking of\nanything in particular. Each volume consisted of 31 slices\n(Thickness: 3 mm, interslice gap: 0.3 mm) scanned in inter-\nleaved order parallel to the AC-PC plane (TR: 2.5 seconds,\nTE: 45 ms, Flip Angle: 90�, Field of View: 192 mm): Foam\npadding was used to constrain head movements during\nimage acquisition.\n\nPreprocessing of the fMRI data was carried out using\nstatistical parametric mapping (SPM8, http://www.fil.io-\nn.ucl.ac.uk/spm) and the data processing assistant for rest-\ning state fMRI [DPARSF, Yan and Zang, 2010]\nimplemented in Matlab 7.8.0 (Mathworks) running on an\nIntel 2.53 Ghz MacBook Pro. Preprocessing contained the\nfollowing steps: (1) removal of the first ten volumes, (2)\nslice timing to correct for within-scan acquisition time dif-\nferences, (3) realignment of each volume to the session’s\neleventh volume to correct for interscan movement, (4)\nspatial normalization to a standard echo planar imaging\ntemplate, (5) spatial smoothing with a six millimeter full\nwidth at half maximum Gaussian kernel, (5) detrending to\nremove linear trends due to scanner drift, (6) temporal\nbandpass filtering (0.01 – 0.08 hz) to remove noise from\ncardio-respiratory activity and scanner noise and (7)\nregressing out of the six motion parameters, whole-brain\nand white matter signals. The use of global signal regres-\nsion has been questioned because it introduces spurious\nanti-correlations to resting state data [Murphy et al., 2009].\nHowever, it has been demonstrated that global signal\nregression eliminates non-neural noise in resting state data\nand increases the specificity of functional connectivity\nanalyses when positive correlations are investigated [Fox\net al., 2009; Weissenbacher et al., 2009]. Because our study\nfocuses on positive correlations within one network and\nnot on negative correlations between networks, we chose\nto include global signal regression as preprocessing step.\n\nSixteen regions of interest (ROIs) delineating the FPAN\nwere obtained from the literature and converted to MNI\ncoordinates [Fox et al., 2005; Toro et al., 2008]. ROIs were\ndefined as spheres with a 6mm radius around these MNI\ncoordinates (see Table I and Fig. 1). With a 6mm radius,\neach ROI comprised 904.77 mm3 or – with other words –\n33 3mm3 voxels. For the graph analysis, these sixteen ROIs\nwere set as nodes. The BOLD time series was extracted\nfrom each of the 33 voxels in each ROI and then averaged\nacross all voxels in this ROI. Then, the functional connec-\ntivity between each pair of ROIs was computed by means\nof a Pearson correlation. The correlation coefficients in the\nresulting 16×16 matrix were then z-standardized by\nFisher’s r-to-z transformation to approximate a Gaussian\ndistribution. This matrix represents the strength of the\nfunctional connectivity between all 16 areas in the FPAN\nand served as adjacency matrix for the graph analysis.\n... We then modeled the network as an undir-\nected weighted graph G = (V,E) with V representing the\nregions in the FPAN and E the z-valued con-\nnectivity strength between any two of these regions. Edges\nwere thresholded with k ≥ 0, i.e. negative correlations\nwere set to zero. Then, we computed three centrality\nmeasures: degree centrality, eigenvector centrality, and\nbetweenness centrality.\n\nAssessing the Function of the Fronto-Parietal\nAttention Network: Insights from Resting-State\n\nfMRI and the Attentional Network Test\n\nSebastian Markett,1,4* Martin Reuter,1,4 Christian Montag,1,4 Gesine Voigt,1\n\nBernd Lachmann,1 Sarah Rudorf,2,4 Christian E. Elger,2,3,4\n\nand Bernd Weber2,3,4\n\nr Human Brain Mapping 35:1700–1709 (2014) r\n\nVC 2013 Wiley Periodicals, Inc.\n\nDOI: 10.1002/hbm.22285\n\nIn this study, we used functional magnetic resonance imaging (fMRI) to demonstrate that functional connectivity within the fronto-parietal\nnetwork at rest directly relates to attention."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5651,
+            "end": 5782,
+            "text": "Assessing the Function of the Fronto-Parietal\nAttention Network: Insights from Resting-State\n\nfMRI and the Attentional Network Test",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5784,
+            "end": 5801,
+            "text": "Sebastian Markett",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5979,
+            "end": 5985,
+            "text": "(2014)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5997,
+            "end": 6020,
+            "text": "Wiley Periodicals, Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6027,
+            "end": 6044,
+            "text": "10.1002/hbm.22285",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6061,
+            "end": 6231,
+            "text": "we used functional magnetic resonance imaging (fMRI) to demonstrate that functional connectivity within the fronto-parietal\nnetwork at rest directly relates to attention.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2177,
+            "end": 2196,
+            "text": "Siemens Avanto 1.5T",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2443,
+            "end": 2452,
+            "text": "31 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2454,
+            "end": 2469,
+            "text": "Thickness: 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2583,
+            "end": 2598,
+            "text": "Flip Angle: 90�",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2471,
+            "end": 2493,
+            "text": "interslice gap: 0.3 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2362,
+            "end": 2373,
+            "text": "eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2600,
+            "end": 2621,
+            "text": "Field of View: 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2555,
+            "end": 2570,
+            "text": "TR: 2.5 seconds",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2572,
+            "end": 2581,
+            "text": "TE: 45 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44,
+            "end": 49,
+            "text": "N¼ 23",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2786,
+            "end": 2790,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 18,
+            "text": "Resting state fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44,
+            "end": 49,
+            "text": "N¼ 23",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 78,
+            "end": 100,
+            "text": "age M¼ 21.74, SD¼ 5.24",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 50,
+            "end": 76,
+            "text": "(males n¼ 2, females n¼ 21",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 187,
+            "end": 316,
+            "text": "free of any psychiatric or neurologi-\ncal condition as assessed by a screening questionnaire and\nhad no contraindications to MRI.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 391,
+            "end": 470,
+            "text": "approved by the local medical ethics committee of the\nUniversity Hospital Bonn.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1801,
+            "end": 1963,
+            "text": "The reaction time differ-\nence between trials with congruent and with incongruent\nflankers was set as an indicator for the executive control\nnetwork’s efficiency.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 964,
+            "end": 1083,
+            "text": "indicate as fast and accurately\nas possible the direction of the arrowhead by pressing a\nbutton on a computer keyboard.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 719,
+            "end": 740,
+            "text": "five horizontal lines",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1974,
+            "end": 2055,
+            "text": "participants performed 312 tri-\nals (including 24 practice trials with feedback).",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1974,
+            "end": 2055,
+            "text": "participants performed 312 tri-\nals (including 24 practice trials with feedback).",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3047,
+            "end": 3079,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3085,
+            "end": 3097,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2786,
+            "end": 2790,
+            "text": "SPM8",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3161,
+            "end": 3172,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2786,
+            "end": 2790,
+            "text": "SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3161,
+            "end": 3172,
+            "text": "realignment",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3260,
+            "end": 3281,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2786,
+            "end": 2790,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3330,
+            "end": 3347,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2786,
+            "end": 2790,
+            "text": "SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3355,
+            "end": 3374,
+            "text": "six millimeter full",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3418,
+            "end": 3428,
+            "text": "6",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2888,
+            "end": 2894,
+            "text": "DPARSF",
+            "labels": [
+              "Temporal detrending — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3418,
+            "end": 3428,
+            "text": "detrending",
+            "labels": [
+              "Temporal detrending — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3439,
+            "end": 3452,
+            "text": "linear trends",
+            "labels": [
+              "Temporal detrending — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3488,
+            "end": 3523,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3508,
+            "end": 3522,
+            "text": "0.01 – 0.08 hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3621,
+            "end": 3642,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3625,
+            "end": 3642,
+            "text": "motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3693,
+            "end": 3706,
+            "text": "9",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3693,
+            "end": 3706,
+            "text": "global signal",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3660,
+            "end": 3680,
+            "text": "10",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3660,
+            "end": 3680,
+            "text": "white matter signals",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4296,
+            "end": 4351,
+            "text": "11",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4468,
+            "end": 4504,
+            "text": "12",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4711,
+            "end": 4745,
+            "text": "13",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4923,
+            "end": 4942,
+            "text": "14",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4923,
+            "end": 4942,
+            "text": "Pearson correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5031,
+            "end": 5061,
+            "text": "15",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5031,
+            "end": 5061,
+            "text": "Fisher’s r-to-z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5269,
+            "end": 5294,
+            "text": "16",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5494,
+            "end": 5532,
+            "text": "17",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

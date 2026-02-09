@@ -1,0 +1,382 @@
+{
+  "data": {
+    "title": "Assessing the Function of the Fronto-Parietal Attention Network: Insights from Resting-State fMRI and the Attentional Network Test",
+    "text": "Graph and Functional Connectivity Analysis\n\nThe functional connectivity analysis was conducted by a\nmultiple region of interest approach as in Liu et al. [2010].\n\nTABLE I. MNI coordinates of the sixteen nodes in the\nFPAN. Please view the caption of ﬁgure 1 for details on\nthe acronyms\n\nSixteen regions of interest (ROIs) delineating the FPAN\nwere obtained from the literature and converted to MNI\ncoordinates [Fox et al., 2005; Toro et al., 2008]. ROIs were\ndeﬁned as spheres with a 6mm radius around these MNI\ncoordinates (see Table I and Fig. 1). With a 6mm radius,\neach ROI comprised 904.77 mm3 or – with other words –\n33 3mm3 voxels. For the graph analysis, these sixteen ROIs\nwere set as nodes. The BOLD time series was extracted\nfrom each of the 33 voxels in each ROI and then averaged\nacross all voxels in this ROI. Then, the functional connec-\ntivity between each pair of ROIs was computed by means\nof a Pearson correlation. The correlation coefﬁcients in the\nresulting 16 (cid:3) 16 matrix were then z-standardized by\nFisher’s r-to-z transformation to approximate a Gaussian\ndistribution. This matrix represents the strength of the\nfunctional connectivity between all 16 areas in the FPAN\nand served as adjacency matrix for the graph analysis.\nGiven the controversy whether there are one or two\nFPANs, we assessed anterior-posterior and contra-hemi-\nspheric connectivies between the ROIs to test if it was jus-\ntiﬁed to treat all 16 ROIs as part of a unitary network\nspanning both hemispheres. For this purpose we assigned\nthe ROIs to four different sets: right and left anterior\n(DLPFC, FEF and aIns) and right and left posterior nodes\n(IPS, vIPS, IPL and vOC). We computed the mean ante-\nrior-posterior connectivity based on the mean of the pair-\nwise z-standardized correlations between the anterior and\nposterior ROIs (separately for each hemisphere and then\ncollapsed into a single value) for every participant. The\nmean contralateral connectivity was calculated as the\nmean of the pairwise z-standardized correlations between\nthe left and right ROIs (separately for anterior and poste-\nrior sites and then collapsed into a single value). Assess-\nment of statistical signiﬁcance of anterior-posterior and\nleft-right connectivities was performed by two one-sample\n\nt-tests (one-tailed against zero). Furthermore, we com-\nconnectivity analysis\nputed a whole-brain functional\nbetween a seed region in the left IPS (6mm sphere center-\ning around -23, -70, 46, MNI coordinate taken from Toro\net al., 2008]. We then modeled the network as an undir-\nected weighted graph G ¼ (V,E) with V representing the\nregions in the FPAN (see Table I) and E the z-valued con-\nnectivity strength between any two of these regions. Edges\nwere thresholded with k (cid:4) 0,\ni.e. negative correlations\nwere set to zero. Thresholding is regularly applied in the\ncontext of graph theoretical approaches to functional imag-\ning, mainly because the calculation of the centrality meas-\nures requires entries of\nin\nmeaningful measures. Then, we computed three centrality\nmeasures: The degree centrality of node i was calculated\nas the sum of its connecting edges. Eigenvector centrality\nEC of node i was computed as the i-th entry of an eigen-\nvector corresponding to the largest eigenvalue of\nthe\ngraph’s adjacency matrix. Betweenness centrality BC of\nnode i was computed as the sum of the fraction of shortest\npaths between any two nodes passing through it. Compu-\ntation of BC was performed with the Matlab Boost Graph\nLibrary (http://dﬂeich.github.com/matlab-bgl).\n\nFigure 1.\nAnatomical position of the sixteen regions of interest delineating\nintraparietal sulcus;\nthe fronto-parietal attention network. (IPS,\nIPL,\ninferior\nprecentral sulcus; SMA, supplementary motor area; DLPFC,\ndorsolateral prefrontal cortex; vOC, ventral occipital lobe; aIns,\nanterior insula). [Color ﬁgure can be viewed in the online issue,\nwhich is available at wileyonlinelibrary.com.]\n\nand parietal sites. All nodes differed signiﬁcantly from\nzero, no matter what centrality measure was analyzed (all\nP < 0.05, FDR-corrected).\n\ncentrality measures describing the FPAN (3 (cid:3) 16 ¼ 48\nregressors): On each step of the regression procedure, a\nvariable was added to the model if the p-value of its corre-\nsponding F-test fell short of P < 0.05, and a variable was\nremoved if the P-value surpassed a probability of P > 0.1.\nThis method ensures that there are no statistically redun-\ndant predictors in the ﬁnal model. The variance inﬂation\nfactor and tolerance metric for none of the predictors indi-\ncated collinearity (all VIFs <2.291 and all\ntolerances\n>.436). The resulting P-values of the regression proce-\ndures’ F-tests that explained the most variance in the crite-\nrion were Bonferroni-adjusted to control\nfor multiple\ntesting."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 458,
+            "end": 493,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 458,
+            "end": 475,
+            "text": "deﬁned as spheres",
+            "labels": [
+              "ROI definition — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 483,
+            "end": 493,
+            "text": "6mm radius",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 622,
+            "end": 636,
+            "text": "33 3mm3 voxels",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 286,
+            "end": 313,
+            "text": "Sixteen regions of interest",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 704,
+            "end": 734,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 704,
+            "end": 821,
+            "text": "BOLD time series was extracted\nfrom each of the 33 voxels in each ROI and then averaged\nacross all voxels in this ROI",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 704,
+            "end": 821,
+            "text": "BOLD time series was extracted\nfrom each of the 33 voxels in each ROI and then averaged\nacross all voxels in this ROI",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 912,
+            "end": 931,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 912,
+            "end": 931,
+            "text": "Pearson correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 978,
+            "end": 998,
+            "text": "16 (cid:3) 16 matrix",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1027,
+            "end": 1057,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1027,
+            "end": 1057,
+            "text": "Fisher’s r-to-z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1202,
+            "end": 1251,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1202,
+            "end": 1251,
+            "text": "served as adjacency matrix for the graph analysis",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2572,
+            "end": 2587,
+            "text": "graph G ¼ (V,E)",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2656,
+            "end": 2688,
+            "text": "z-valued con-\nnectivity strength",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2769,
+            "end": 2807,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2769,
+            "end": 2807,
+            "text": "negative correlations\nwere set to zero",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3068,
+            "end": 3085,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3068,
+            "end": 3085,
+            "text": "degree centrality",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3147,
+            "end": 3169,
+            "text": "Eigenvector centrality",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3307,
+            "end": 3329,
+            "text": "Betweenness centrality",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3064,
+            "end": 3284,
+            "text": "The degree centrality of node i was calculated\nas the sum of its connecting edges. Eigenvector centrality\nEC of node i was computed as the i-th entry of an eigen-\nvector corresponding to the largest eigenvalue of\nthe\ngra",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3147,
+            "end": 3305,
+            "text": "Eigenvector centrality\nEC of node i was computed as the i-th entry of an eigen-\nvector corresponding to the largest eigenvalue of\nthe\ngraph’s adjacency matrix",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3307,
+            "end": 3441,
+            "text": "Betweenness centrality BC of\nnode i was computed as the sum of the fraction of shortest\npaths between any two nodes passing through it",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3486,
+            "end": 3512,
+            "text": "Matlab Boost Graph\nLibrary",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

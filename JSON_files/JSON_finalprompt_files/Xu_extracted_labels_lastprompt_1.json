@@ -1,0 +1,887 @@
+{
+  "data": {
+    "text": "Age-related changes in functional connectivity between young adulthood and late adulthood†\nXin Xu, Qifan Kuang, Yongqing Zhang, Huijun Wang, Zhining Wen and Menglong Li\nAnalytical Methods, 2015, 7, 4111–4122. DOI: 10.1039/c5ay00699f\nIn this study, we examine functional connectivity, as derived from resting state functional magnetic resonance imaging (R-fMRI), in 90 cortical and subcortical regions in two healthy groups in young adulthood (ages 18–28 years) and late adulthood (ages 63–73 years).\n\nWe performed our analyses on publicly available imaging data from the 1000 Functional Connectomes Project (all data are available at http://fcon_1000.projects.nitrc.org). The TRT reliability was assessed on the NYU TRT dataset. The corresponding institutional review boards approved or provided waivers for the submission of anonymized data, which were obtained with written informed consent from each participant.\n\nAll the data used in this study were selected from the 1000 Functional Connectomes Project (http://fcon_1000.projects.nitrc.org/), the purpose of which is to provide a large-scale functional imaging dataset through collecting resting-state functional magnetic resonance imaging (R-fMRI) datasets from its member sites around the world. This study included 229 healthy young adults from Zang, Y. F. (n = 198, ages 18–26, 76 M/122 F) and Rombouts, S. A. R. B. (n = 31, ages 18–28, 23 M/8 F) and 16 late adulthood from Sorg, C./Riedel, V. (n = 16, ages 63–73, 10 M/6 F). After pre-processing, 206 subjects were finally selected to be analyzed in the following sections. All the neural images were acquired from right-handed subjects who were guided to lie down without moving, close their eyes, and to not think of anything but to stay awake.\n\nThe pre-processing of neural images was mainly based on the toolbox Data Processing Assistant for Resting-State fMRI (DPARSF) and some functions in the REST software (REST) and the statistical parametric mapping software (SPM). DPARSF provides a user-friendly “pipeline” for data analysis of R-fMRI datasets, including noise signal reduction, image normalization and extracting time courses from regions of interest, etc. In general, to ensure signal equilibrium and the participant adapting well to the scanning environment, the first few volumes of each of the R-fMRI images should be discarded.\n\nEach dataset was corrected for head movement by realignment and regression and any subjects presenting excessive motion (greater than 3.0 mm of translation or 3.0 degrees of rotation in any dimension) were discarded. Given that each researcher had originally discarded the first 5 time points of these selected R-fMRI datasets, we did not remove any volumes during the following preprocessing with DPARSF. First, the R-fMRI time series datasets were separately corrected for slice timing because of different time points used by the three laboratories, with the temporal middle volume as a reference. Second, the images from each subject were spatially normalized into Montreal Neurological Institute (MNI) space using unified segmentation on the T1 image, which requires three steps in DPARSF – coregistration, segmentation and writing normalization parameters. After normalization, spatial smoothing was performed. Third, the systematic drift or trend of the blood oxygen level-dependent (BOLD) signal was removed using a linear model and a band-pass filter (0.009–0.08 Hz) was applied to the BOLD signal to reduce the effect of both low-frequency and high-frequency physiologic noise. Finally, from the filtered data, using a default mask, we regressed out the effect of nuisance covariates including head motion parameters, global mean signal, white matter signal and cerebrospinal fluid signal. The preprocessed R-fMRI datasets above were then parcellated into 90 regions, defined by the Automated Anatomical Labeling atlas, to extract the mean time series by averaging all the voxels in each region of interest (ROI) throughout the whole brain. After manually and automatically examining all the processes of preprocessing and the mean time series, we selected 206 subjects in total for our following analysis.\n\nTo examine functional connectivity and network characteristics, an interregional correlation matrix (90 × 90, after Fisher Z-transformation) was obtained for each of the 206 subjects by calculating Pearson's correlation coefficients between all possible pairs of the AAL regions. According to Table 1, each average group of correlation matrices was then created by averaging each corresponding correlation Z value throughout each group, thus generating 7 representative correlation matrices. Then, these correlation matrices were thresholded to create adjacency matrices, the element of which is either 1 if the Z value is greater than the selected threshold or 0 if it is not. To accurately reflect the alterations in the R-fMRI network, sparsity (S), instead of the same correlation threshold, was applied to thresholding the above correlation matrices, ensuring that the network had the same number of edges. In this study, the sparsity is the ratio of the number of existing edges of the R-fMRI network and the possible maximum edges (90 × 89/2 = 4005). For example, if the sparsity was 5%, it means that the network had 200 edges. A wide range of sparsity values (6% ≤ S ≤ 30%) was used to threshold the correlation matrices and estimate the functional connectivity in the fully connected network. Furthermore, we investigated the other graph characteristics with a fixed sparsity (15%). Finally, the R-fMRI networks were created, in which nodes represent the AAL regions and edges represent functional connections between regions.\n\nThe small-world organization of a network was originally described by Watts and Strogatz and is characterized by a higher local clustering and a shorter path length. In this study, the clustering coefficient (Cp) is the average of the clustering coefficient over the 90 AAL regions, where the clustering coefficient of the region i (Ci) is defined as the proportion of edges among the immediately connected neighbors of a region divided by the number of edges that could possibly exist between them. The absolute path length (Lp) is the average of the mean shortest absolute path length over the 90 AAL regions of our brain network, where the mean shortest absolute path length of a region i (Li) is defined as the total shortest absolute path length between node i and all the others divided by N − 1 (i.e., 90 − 1).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 91,
+            "end": 168,
+            "text": "Xin Xu, Qifan Kuang, Yongqing Zhang, Huijun Wang, Zhining Wen and Menglong Li",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 90,
+            "text": "Age-related changes in functional connectivity between young adulthood and late adulthood†",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 189,
+            "end": 193,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 169,
+            "end": 187,
+            "text": "Analytical Methods",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 214,
+            "end": 232,
+            "text": "10.1039/c5ay00699f",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 233,
+            "end": 499,
+            "text": "In this study, we examine functional connectivity, as derived from resting state functional magnetic resonance imaging (R-fMRI), in 90 cortical and subcortical regions in two healthy groups in young adulthood (ages 18–28 years) and late adulthood (ages 63–73 years).",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 571,
+            "end": 670,
+            "text": "1000 Functional Connectomes Project (all data are available at http://fcon_1000.projects.nitrc.org)",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1273,
+            "end": 1297,
+            "text": "229 healthy young adults",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1410,
+            "end": 1427,
+            "text": "16 late adulthood",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1507,
+            "end": 1541,
+            "text": "206 subjects were finally selected",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1325,
+            "end": 1335,
+            "text": "ages 18–26",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 443,
+            "end": 453,
+            "text": "ages 18–28",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 481,
+            "end": 491,
+            "text": "ages 63–73",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1337,
+            "end": 1347,
+            "text": "76 M/122 F",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1396,
+            "end": 1404,
+            "text": "23 M/8 F",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1474,
+            "end": 1482,
+            "text": "10 M/6 F",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1625,
+            "end": 1646,
+            "text": "right-handed subjects",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1277,
+            "end": 1297,
+            "text": "healthy young adults",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 408,
+            "end": 415,
+            "text": "healthy",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2436,
+            "end": 2572,
+            "text": "any subjects presenting excessive motion (greater than 3.0 mm of translation or 3.0 degrees of rotation in any dimension) were discarded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 729,
+            "end": 915,
+            "text": "The corresponding institutional review boards approved or provided waivers for the submission of anonymized data, which were obtained with written informed consent from each participant.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1143,
+            "end": 1212,
+            "text": "resting-state functional magnetic resonance imaging (R-fMRI) datasets",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1507,
+            "end": 1541,
+            "text": "206 subjects were finally selected",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2284,
+            "end": 2355,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm",
+            "Removal Init Vol — Parameters"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2284,
+            "end": 2355,
+            "text": "the first few volumes of each of the R-fMRI images should be discarded.",
+            "labels": [
+              "Removal Init Vol — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2357,
+            "end": 2431,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1980,
+            "end": 1983,
+            "text": "SPM",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2374,
+            "end": 2431,
+            "text": "corrected for head movement by realignment and regression",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2436,
+            "end": 2572,
+            "text": "3",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Exclusion — Software",
+            "Exclusion — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2478,
+            "end": 2556,
+            "text": "greater than 3.0 mm of translation or 3.0 degrees of rotation in any dimension",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2802,
+            "end": 2844,
+            "text": "4",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1876,
+            "end": 1882,
+            "text": "DPARSF",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2818,
+            "end": 2844,
+            "text": "corrected for slice timing",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3153,
+            "end": 3218,
+            "text": "5",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1876,
+            "end": 1882,
+            "text": "DPARSF",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3153,
+            "end": 3167,
+            "text": "coregistration",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3153,
+            "end": 3218,
+            "text": "6",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1876,
+            "end": 1882,
+            "text": "DPARSF",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3084,
+            "end": 3096,
+            "text": "segmentation",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3000,
+            "end": 3112,
+            "text": "7",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1876,
+            "end": 1882,
+            "text": "DPARSF",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3000,
+            "end": 3112,
+            "text": "spatially normalized into Montreal Neurological Institute (MNI) space using unified segmentation on the T1 image",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3220,
+            "end": 3272,
+            "text": "8",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1876,
+            "end": 1882,
+            "text": "DPARSF",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3241,
+            "end": 3272,
+            "text": "spatial smoothing was performed",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3361,
+            "end": 3393,
+            "text": "9",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3365,
+            "end": 3393,
+            "text": "removed using a linear model",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Software",
+            "Temporal detrending — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3398,
+            "end": 3444,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3400,
+            "end": 3416,
+            "text": "band-pass filter",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3418,
+            "end": 3431,
+            "text": "0.009–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3651,
+            "end": 3683,
+            "text": "11",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3661,
+            "end": 3683,
+            "text": "head motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3685,
+            "end": 3703,
+            "text": "12",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Global signal — Software",
+            "Global signal — Parameters"
+          ]
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3685,
+            "end": 3703,
+            "text": "global mean signal",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3705,
+            "end": 3755,
+            "text": "13",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3705,
+            "end": 3755,
+            "text": "white matter signal and cerebrospinal fluid signal",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3850,
+            "end": 3885,
+            "text": "Automated Anatomical Labeling atlas",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3806,
+            "end": 3885,
+            "text": "parcellated into 90 regions, defined by the Automated Anatomical Labeling atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3887,
+            "end": 4006,
+            "text": "to extract the mean time series by averaging all the voxels in each region of interest (ROI) throughout the whole brain",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4361,
+            "end": 4453,
+            "text": "calculating Pearson's correlation coefficients between all possible pairs of the AAL regions",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4239,
+            "end": 4315,
+            "text": "an interregional correlation matrix (90 × 90, after Fisher Z-transformation)",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4291,
+            "end": 4314,
+            "text": "Fisher Z-transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5894,
+            "end": 5994,
+            "text": "the clustering coefficient (Cp) is the average of the clustering coefficient over the 90 AAL regions",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6213,
+            "end": 6323,
+            "text": "The absolute path length (Lp) is the average of the mean shortest absolute path length over the 90 AAL regions",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4477,
+            "end": 4610,
+            "text": "each average group of correlation matrices was then created by averaging each corresponding correlation Z value throughout each group",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

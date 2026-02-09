@@ -1,0 +1,336 @@
+{
+  "data": {
+    "text": "Journal of Communication 00 (2018) 1\u201324\nNetwork Neuroscience Reveals Distinct Neuromarkers of Flow During Media Use\nRichard Huskey, Shelby Wilcox, and Ren\u00e9 Weber\ndoi:10.1093/joc/jqy043\n\nFlow is characterized by a high level of intrinsic reward that results from a balance between task difficulty and individual ability.\n\nIn keeping with current trends in open science, all the code and raw (de-identified) group-level network graphs necessary to recreate our analyses are available from the Open Science Framework project page (https://osf.io/uf5zw/).\n\nIn addition, our stimulus (Asteroid Impact) is open-source and available for all to use and modify.\n\nAll data were collected on a Siemens Magnetom Prisma (3-Tesla) fMRI scanner. The blood-oxygen level\u2013dependent contrast was measured using a multiband echo planar gradient sequence acquired parallel to the AC\u2013PC plane (TR=720.0 ms, TE=37.0 ms, FA=52 degrees, FOV=208 mm, multiband acceleration factor=8). A total of 72 interleaved slices comprised each volume. A high-resolution T1-weighted sagittal sequence was also collected (TR=2500.0 ms, TE=2.22 ms, FA=7, FOV=241 mm, 0.9 mm\u00b3).\n\nOur fMRI data were cleaned following a three-stage pre-processing pipeline comprised primarily of tools from fMRI Expert Analysis Tool v6.0 from the Oxford Center for Functional MRI of the Brain (FMRIB) Software Library (FSL v5.0). In the first stage, data were brain extracted (BET) and spatially aligned (MCFLIRT). In the second stage, the data were filtered for motion artifacts using an independent components analysis based procedure (ICA-AROMA). In the final stage, the functional data were high-pass filtered (sigma=360 s), coregistered to the T1 (FLIRT), and registered to the MNI152 standard template using a nonlinear transformation (FNIRT). Detrended timeseries data were then extracted from these filtered functional data.\n\nA total of 18 subjects completed the study (Mage=22.83; female=77.8%). Subjects were recruited from the University of California Santa Barbara, and all procedures were approved by the University\u2019s institutional review board.\n\nIn this study, subjects completed four experimental runs where they played a well-validated, naturalistic, and open-source experimental video game (Asteroid Impact). We manipulated three experimental conditions, each lasting for 120 s: low-difficulty (ability>difficulty), high-difficulty (difficulty>ability), and balanced-difficulty (difficulty\u2248ability). In the low-difficulty condition, subjects repeatedly played the first (and easiest) level of the game.\n\nTo behaviorally assess flow, we used a secondary-task reaction-time measure (STRT) that required subjects to respond to a simple discrimination task during gameplay.\n\nTo define our network graph, we used the Power et al. (2011) atlas, which defines 264 nodes across major brain sub-networks. We extracted neural timeseries data from each node (within a 5 mm sphere), for each subject and condition. These timeseries data were then correlated using Pearson correlation, resulting in 264\u00d7264 correlation matrices for each subject, run, and condition. These correlation matrices were then averaged to create three group-level correlation matrices, one belonging to each experimental condition.\n\nFor network processing, the adjacency matrix for each condition was proportionally thresholded such that only the strongest 10% of connections were preserved. These thresholded adjacency matrices were then binarized so that connections were coded either as 1 (above threshold) or 0 (below threshold). This resulted in a sparse graph on which network metrics, including average degree and global efficiency, were calculated."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 57,
+            "end": 132,
+            "text": "Network Neuroscience Reveals Distinct\nNeuromarkers of Flow During Media Use",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 133,
+            "end": 147,
+            "text": "Richard Huskey",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2447,
+            "end": 2453,
+            "text": "(2018)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 24,
+            "text": "Journal of Communication",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1717,
+            "end": 1739,
+            "text": "doi:10.1093/joc/jqy043",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 418,
+            "end": 551,
+            "text": "Flow is characterized by a high level of intrins ic reward that results from a balance between\ntask di \ufb03culty and individual ability.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 23430,
+            "end": 23616,
+            "text": "all the code and raw (de-\nidenti\ufb01ed) group-level network graphs necessary to recreate our analyses are avail-\nable from the Open Science Framework project page ( https://osf.io/uf5zw/ ).",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 23430,
+            "end": 23616,
+            "text": "all the code and raw (de-\nidenti\ufb01ed) group-level network graphs necessary to recreate our analyses are avail-\nable from the Open Science Framework project page ( https://osf.io/uf5zw/ ).",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 55805,
+            "end": 55890,
+            "text": "our stimulus (Asteroid\nImpact) is open-source and available for all to use and modify",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 19272,
+            "end": 19305,
+            "text": "Siemens Magnetom Prisma (3-Tesla)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 19487,
+            "end": 19498,
+            "text": "TR=720.0 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 19500,
+            "end": 19511,
+            "text": "TE =37.0 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 19513,
+            "end": 19527,
+            "text": "FA =52 degrees",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 19529,
+            "end": 19540,
+            "text": "FOV =208 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 19590,
+            "end": 19611,
+            "text": "72 interleaved slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 20179,
+            "end": 20300,
+            "text": "fMRI Expert Analysis Tool v6.0 from the Oxford\nCenter for Functional MRI of the Brain (FMRIB) Software Library (FSL v5.0)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21227,
+            "end": 21269,
+            "text": "A total of 18 subjects completed the study",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21272,
+            "end": 21282,
+            "text": "Mage=22.83",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21284,
+            "end": 21297,
+            "text": "female =77.8%",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21300,
+            "end": 21371,
+            "text": "Subjects\nwere recruited from the University of California Santa Barbara",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21377,
+            "end": 21452,
+            "text": "all procedureswere approved by the University \u2019s institutional review board",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 22591,
+            "end": 22633,
+            "text": "secondary-task reaction-time\nmeasure (STRT",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21829,
+            "end": 21969,
+            "text": "manipulated three experimental conditions, each lasting\nfor 120s: low-di \ufb03culty (ability >di\ufb03culty), high-di \ufb03culty (di \ufb03culty>ability), and",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21872,
+            "end": 21893,
+            "text": "each lasting\nfor 120s",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21478,
+            "end": 21601,
+            "text": "completed four experimental runs where they played a well-validated, naturalistic,\nand open-source, experimental video game",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "data": {
+    "text": "Individualized Parcellation. ME-fMRI processed data provides excellent reliability and\ntemporal signal-to-noise, sufficient for individual-subject precision mapping (Lynch et al., 2020;\nLynch, Elbau, and Liston, 2021). An individualized functional parcellation approach was\nimplemented to identify person-specific functional network nodes (Chong et al., 2017). These\nindividualized parcellations were used in both the gradient and edge-level connectivity analyses\nto facilitate comparisons of RSFC between younger and older adults. Poor registration to\nstandardized templates may fail to capture individual variability in functional organization of the\ncortex, and these registration problems may systematically differ across age groups (Braga and\nBuckner, 2017; Chong et al., 2017; Gordon, et al. 2017; Kong et al., 2019; Kong et al., 2021;\nLaumann et al., 2015; Wang et al., 2015). Deriving functionally-defined, person-specific cortical\nparcellations can account for differences at the level of the individual, thereby mitigating\nsystematic registration biases in between-group comparisons. Adopting an individualized\nparcellation approach may also lessen the impact of noise artifacts that can obscure small yet\nreliable group differences, increasing power to detect reliable brain-behavior associations (Kong\net al., 2021).\nWe generated participant-specific functional parcellations to examine individual\ndifferences in functional brain network organization using the Group Prior Individual\nParcellation (GPIP; Chong et al., 2017). This approach enables a more accurate estimation of\n15. CC-BY-NC-ND 4.0 International license available under a(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted January 5, 2022. ; https://doi.org/10.1101/2021.03.31.437922doi: bioRxiv preprint \nparticipant-specific individual functional areas (Chong et al., 2017) and is more sensitive to\ndetecting RSFC associations with behavior (e.g. Kong et al., 2019; Mwilambwe-Tshilobo et al.,\n2019). The main advantage of this approach is that the correspondence among parcel labels is\npreserved across participants, while the parcel boundaries are allowed to shift based on the\nindividual-specific functional network organization of each participant—thus providing a\nsimilar connectivity pattern that is shared across the population. Starting from an initial\npre-defined group parcellation atlas, GPIP first refines each individual’s parcel boundaries\nrelative to their resting-state fMRI data. Next, the concentration (inverse covariance/partial\ncorrelation) matrices from all subjects are jointly estimated using a group sparsity constraint.\nGPIP iterates between these two steps to continuously update the parcel labels until convergence,\ndefined as no more than one vertex changing per parcel or 40 iterations. Compared to other\ngroup-based parcellation approaches, GPIP has shown to improve the homogeneity of the BOLD\nsignal within parcels and the delineation between regions of functional specialization (Chong et\nal., 2017).\nWe extracted MEFC data from each vertex and applied the above parcellation across the\nentire cohort of 301 participants at resolutions of 200 and 400 parcels. For each resolution,\nMEFC data were initialized to a group parcellation atlas developed by Schaefer et al. (2018). We\nuse this cortical parcellation scheme both as the initialization reference for our individualized\ncortical parcellation maps, as well as for our edge-level connectomic analyses described below.\nWe selected the Schaefer atlas for three reasons: (i) It is functionally-derived, and thus more\nclosely aligned with the current study aims, (ii) it has high spatial resolution for different levels\nof granularity (we report findings from both 400 and 200 node parcellations here), and (iii) it is\namong the most commonly reported cortical parcellation atlases in the literature, providing\n16. CC-BY-NC-ND 4.0 International license available under a(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted January 5, 2022. ; https://doi.org/10.1101/2021.03.31.437922doi: bioRxiv preprint \nintrinsic partitioning of nodes within Yeo 7- and 17- network solutions (used in our edge-level\nconnectomics analyses; Yeo et al., 2011).\nFollowing initialization with the Schaefer parcellations, the two-step iterative process\nwas repeated 20 times to produce a final parcellation representing the optimal partition with\nrespect to the entire cortical surface. We calculated homogeneity by taking the average\ncorrelation coefficient of all pairs of vertices in a given parcel and then averaging across all\nparcels. This was repeated at each repetition to observe the incremental change in homogeneity\nas the iterative parcellation proceeded. Homogeneity was calculated first at the participant level\nand then averaged across the entire cohort for a group estimate. For a subset of participants,\nsome parcels from the final partition merged into the medial wall (where no data existed) or into\nparcels belonging to the contralateral hemisphere. Because partitions likely reflect\nparticipant-specific neurobiological variations in functional organization, parcels assigned to the\ncontralateral hemisphere were allowed to retain their original group atlas labels.\n With the\n400-parcel resolution, parcels merging with the medial wall occurred in 69 older adults and 35\nyounger adults, averaging 2-3 parcels in these participants; parcels migrating to the contralateral\nhemisphere occurred in 62 older adults and 24 younger adults, averaging 2-3 parcels. With the\n200-parcel resolution, parcels merging with the medial wall occurred in 18 older adults and 10\nyounger adults, averaging 1 parcel in these participants. No parcels migrated to the contralateral\nhemisphere at this resolution.\nFunctional Connectivity Matrix. A connectivity matrix was constructed for each participant\naccording to their individualized parcel solution. Since the MEFC data consist of ICA coefficient\nsets (coefficient weights for each accepted component x vertex) concatenated by run, we\nextracted and averaged the MEFC data from vertices within each parcel to obtain a parcel-level\n17. CC-BY-NC-ND 4.0 International license available under a(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted January 5, 2022. ; https://doi.org/10.1101/2021.03.31.437922doi: bioRxiv preprint \ncoefficient set. Connectivity was estimated by computing the product-moment correlation\nbetween each parcel’s coefficient set, resulting in a n parcels \n× n parcelsfunctional connectivity matrix\n(Ge, Holmes, Buckner, Smoller, & Sabuncu, 2017). In this approach, RSFC was calculated as the\ncorrelation of the ICA coefficients across parcels, rather than a correlation across BOLD signal\ntime-series, as is typically done (see Kundu et al., 2013). The canonical Fisher’s r-to-z\ntransformation was then applied to normalize the distribution of correlation values and account\nfor variation in MEFC data degrees of freedom, or the number of denoised ICA coefficients (i.e.\nnumber of BOLD components), across individuals (Kundu et al., 2013):\nZ= arctanh(R)･ 𝑑𝑓 − 3\nwhere Ristheproduct-moment correlation value and dfisthenumber ofdenoised ICA\ncoefficients. Computing functional connectivity with approximately independent component\ncoefficients rendered global signal regression unnecessary (Spreng etal.,2019). Critically ,\nME-ICA effectively removes distance-dependent RSFC motion confounds from fMRI data\n(Power etal.,2018). Asshown inSupplemental Figure 2(see also Supplemental Material),\nframewise displacement hadacomparable impact onyounger andolder adult RSFC, ruling out\nmotion as a potential confound in the results reported below .\n18. CC-BY-NC-ND 4.0 International license available under a(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted January 5, 2022. ; https://doi.org/10.1101/2021.03.31.437922doi: bioRxiv preprint \nAnalysis\nBOLD Dimensionality\nA unique advantage of ME-fMRI and the ME-ICA processing framework is that BOLD-\nand non-BOLD-like signals are separated into independent components. A novel metric of\n“BOLD dimensionality,” the number of BOLD components identified by ME-ICA, may then be\nexamined as a data-driven representation of the global network architecture of the brain, and\nused to investigate changes with age (e.g. Kundu et al., 2018). We assessed the test-retest\nreliability of BOLD dimensionality across two runs of data. Total BOLD dimensionality was\nthen compared between age-groups with an independent samples t-test and an ANCOV A\ncontrolling for sex, education, site and estimated whole brain volume (eWBV; sum of grey and\nwhite matter divided by total intracranial volume, derived from FreeSurfer). To observe the\ntrajectory of BOLD dimensionality with increasing age across the lifespan, BOLD\ndimensionality data from an independent developmental sample (N = 51, 10 female; Mage=21.9\nyears; age range, 8.3 – 46.2 years; see Kundu et al., 2018 for details) were pooled with the\ncurrent data. As our sample consisted of two discrete age cohorts, these additional data points\nwere used to properly fit a function between age and BOLD dimensionality. To render the\nsamples comparable and account for differences in acquisition across datasets, BOLD\ndimensionality was scaled by the number of timepoints acquired.\n The relationship between age\nand BOLD dimensionality was then fit to a power law function (see Supplemental Figure 3 for\nunscaled version). Further characterization of BOLD signal dimensionality, including\nassociations with graph analytic measures of participation coefficient, modularity and\nsegregation, and BOLD signal dimensionality’s relationship to whole brain RSFC are reported in\nSupplemental Material (Supplemental Table 1, Supplemental Figures 4 & 5)\n19. CC-BY-NC-ND 4.0 International license available under a(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted January 5, 2022. ; https://doi.org/10.1101/2021.03.31.437922doi: bioRxiv preprint \nGradients & Manifold Eccentricity\nCortical gradients allow for a low dimensional (i.e. macroscle) representation of\nfunctional connectivity that demarcate transitions in whole brain functional connectivity\n(Margulies et al., 2016; Huntenburg et al. 2018). Gradient map embedding has reliably\ndemarcated cortical transitions from unimodal to heteromodal cortex, visual to somatomotor\ncortices, among others (Bethlehem et al. 2020; Margulies et al., 2016; Hong et al. 2020). Cortical\ngradients were computed using functions from the BrainSpace toolbox\n(https://github.com/MICA-MNI/BrainSpace; V os de Wael et al., 2020), as implemented in\nMATLAB. For each participant, the 400 x 400 GPIP functional connectivity matrix was\nthresholded row-wise to the upper 10% of connections to retain only the strongest positive\nconnections (Hong et al., 2019; Margulies et al., 2016). Cosine similarity was computed on the\nsparse matrix to input to the diffusion map embedding algorithm employed below, generating a\nmatrix that captures similarity in whole-brain connectivity patterns between vertices (Hong et al.,\n2019; Margulies et al., 2016).\n \nWe then applied diffusion map embedding, a non-linear dimensionality manifold learning\ntechnique from the family of graph Laplacians (Coifman et al., 2005), to identify gradient\ncomponents at the individual participant level. Each gradient represents a low-dimensional\nembedding/eigenvector estimated from a high-dimensional similarity matrix. In the embedding\nspace, vertices that feature greater similarity in their whole-brain functional connectivity patterns\nappear closer together, whereas vertices that are dissimilar are farther apart. Each embedding\naxis can thus be interpreted as an axis of variance based on connectivity pattern\nsimilarity/dissimilarity. Euclidean distance in the embedded space is equivalent to the diffusion\ndistance between probability distributions centered at those points, each of which is equivalent to\n20. CC-BY-NC-ND 4.0 International license available under a(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted January 5, 2022. ; https://doi.org/10.1101/2021.03.31.437922doi: bioRxiv preprint \nadifference in gradient score. The algorithm is controlled by a single parameter α, which\ncontrols the influence of density of sampling points on the manifold (Margulies et al, 2016). We\nused α = 0.5 in this study, which differentiates diffusion map embedding from Laplacian\neigenmaps, and allows the inclusion of both global and local relationships in the estimation of\nthe embedded space. An iterative Procrustes rotation was performed to align participant-specific\ngradient components to a young-old group average template and enable group comparisons.\nGroup contrasts were conducted using surface-based linear models, as implemented in Surfstat\n(Worsley et al., 2009; http://www. math.mcgill.ca/keith/surfstat/) controlling for sex, education,\nsite and eWBV .\nWe calculated a metric of manifold eccentricity to quantify the diffusivity of vertices in\ngradient space. Following Bethlehem et al. (2020) and Park et al. (2021), we summed the\nsquared Euclidean distance of each vertex from the whole-brain median in a 2-dimensional\ngradient space for each participant. The position of a vertex in gradient space represents a\ncoordinate for where the vertex falls on each gradient’s axis. The proximity of any two vertices\ninforms how similar their functional connectivity profiles are on each gradient. The more diffuse\nvertices are within a network, the more variable and dedifferentiated the functional connectivity\nprofiles. Mean manifold eccentricity was then compared across age groups. Statistical\nsignificance was determined with non-parametric spin-test permutation testing, which overcomes\nbiases in the test statistic due to the spatial autocorrelation inherent to BOLD data\n(Alexander-Bloch et al., 2018).\n An ANCOV A on manifold eccentricity was also conducted\ncontrolling for sex, education, site and eWBV .\nEdge-Level Connectomics\n21. CC-BY-NC-ND 4.0 International license available under a(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted January 5, 2022. ; https://doi.org/10.1101/2021.03.31.437922doi: bioRxiv preprint \nInter-regional functional connectivity group differences were tested with PLS. PLS is a\nmultivariate method that determines the association between two sets of variables by identifying\nlinear combinations of variables in both sets that maximally covary together (McIntosh and\nLobaugh, 2004; McIntosh and Misic, 2013). Crucially, PLS enables whole-brain contrasts of\nunthresholded connectivity matrices, allowing more precise mapping of edgewise age\ndifferences. In our analyses, one set of variables was individual RSFC matrices, while the other\nset represented group assignment or individual difference metrics (e.g., BOLD dimensionality;\nsee Supplemental Material).\n \nFunctional connectivity was assessed at the whole-brain level using the Schaefer atlas\n(Schaefer et al., 2018; Yeo et al., 2011; 400 x 400 matrix; 200 x 200 matrix as supplementary\nanalysis, Supplemental Figure 6). Motivated by prior work (e.g., Grady et al., 2016; Sullivan et\nal., 2019; Spreng et al., 2016), we also examined RSFC among sub-networks of the default,\ndorsal attention, and frontoparietal control networks. For the sub-network analysis, we first\nreassigned each of the 400 parcels to the corresponding network of the Yeo 17-network solution\nfollowing the mapping based on Schaefer et al. (2018). Next, we created a matrix for the\npairwise connections between 8 sub-networks: dorsal attention (DAN-A, DAN-B), frontoparietal\ncontrol (CONT-A, CONT-B, CONT-C), and default (DN-A, DN-B, DN-C), resulting in a\n192x192 parcel matrix. The full 17-network characterization of the 400x400 parcel results, along\nwith the 17-network and sub-network characterizations of the 200x200 matrix, can be found in\nSupplemental Figures 7, 8, and 9. At each level, a data matrix Xwas created using all\nparticipants’ parcellated functional connectivity matrices. The Xmatrix was organized such that\neach row corresponded to an observation (each participant, nested in age groups), and the cells in\neach column corresponded to the unique connections from each participant’s connectivity matrix\n22. CC-BY-NC-ND 4.0 International license available under a(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted January 5, 2022. ; https://doi.org/10.1101/2021.03.31.437922doi: bioRxiv preprint \n(the lower triangle of the matrix). The column means within each group were calculated, and the\ndata in Xwere mean-centered. The mean-centered data were then submitted to singular value\ndecomposition (SVD) to provide mutually orthogonal latent variables. Each latent variable\nrepresents a specific relationship (e.g. RSFC x Group) and consists of three elements: (1) a left\nsingular vector consisting of the weighted connectivity pattern that optimally expresses the\ncovariance, (2) a right singular vector, which represents the weights of the study design variables\nand can be interpreted as data-driven contrast weights between groups, and (3) a scalar singular\nvalue, which represents the covariance strength between the design variables (Group) and RSFC\naccounted for by each latent variable. Brain connectivity scores were calculated by taking\n \nthe dot\nproduct of the left singular vector and each participant’s RSFC matrix. A brain connectivity\nscore, therefore, represents a single measure of the degree to which a participant expresses the\nconnectivity pattern captured by a given latent variable.\n \nAll PLS latent variables were statistically evaluated using permutation testing. Rows of X\nwere randomly reordered and subjected to SVD iteratively, as described above. This was done\n1,000 times to create a distribution of singular values under the null hypothesis of no existing\nrelationships between X and Y for the corresponding PLS analysis: that there is no group\ndifference in whole-brain (or sub-network) RSFC. A p-value was computed for each latent\nvariable as the proportion of permuted singular values greater than or equal to the original\nsingular value. Critically, permutation tests involve the entire multivariate pattern and are\nperformed in a single analytic step, so correction for multiple comparisons is not required\n(McIntosh and Lobaugh, 2004).\n \nBootstrap resampling was used to estimate the reliability of weights for each RSFC edge.\nParticipants were randomly resampled (rows in X) with replacement while respecting group\n23. CC-BY-NC-ND 4.0 International license available under a(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted January 5, 2022. ; https://doi.org/10.1101/2021.03.31.437922doi: bioRxiv preprint \nmembership. The matrix was subjected to SVD and the process was repeated 1,000 times,\ngenerating a sampling distribution for the weights in the singular vectors. To identify individual\nconnections that made a statistically significant contribution to the overall connectivity pattern,\nwe calculated the ratio between each weight in the singular vector and its bootstrap-estimated\nstandard error.\n Bootstrap ratios are equivalent to z-scores if the bootstrap distribution is\napproximately unit normal (Efron and Tibshirani, 1986). Bootstrap ratios were, therefore,\nthresholded at values of ±1.96, corresponding to the 95% CI.\n \nNetwork-Level Contributions\nPLS analyses identified inter-regional connectivity patterns that differed by group and/or\ncovaried with individual difference metrics. For each of these analyses, network-level effects\nwere also examined. To quantify the network-level contributions to the PLS-derived functional\nconnectivity pattern, two separate weighted adjacency matrices were constructed from positive\nand negative RSFC weights. For both matrices, nodes represent parcels defined by the individual\nparcellation, while edges correspond to the thresholded bootstrap ratio of each pairwise\nconnection. Network-level functional connectivity contributions were quantified by assigning\neach parcel according to the network assignment reported by Yeo et al. (2011), and taking the\naverage of all connection weights in a given network, thereby generating a 7 x 7 matrix (17 x 17\nmatrix for the 17-network solution; and an 8 x 8 matrix when examining the default, dorsal\nattention, and frontoparietal control sub-networks). The significance of mean within- and\nbetween- network connectivity was computed by permutation testing. During each permutation,\nnetwork labels for each node were randomly reordered and the mean within- and between-\nnetwork connectivity were recalculated. This process was repeated 1000 times to generate an\nempirical null sampling distribution that indicates no relationship between network assignment\n24. CC-BY-NC-ND 4.0 International license available under a(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted January 5, 2022. ; https://doi.org/10.1101/2021.03.31.437922doi: bioRxiv preprint \nand connectivity pattern (Shafiei et al., 2019). The significance of the pairwise connections to the\nnetwork matrix was determined by estimating the proportion of times the value of the sampling\ndistribution was greater than or equal to the original value.\n \nSpring-Embedded Plots\nSpring-embedded plots were rendered from group average matrices of RSFC data using\nPajek software (Mrvar and Batagelj, 2016). Sparse matrices containing the top 5% of positive\nconnections were entered into Pajek. The plotting of positive edge weights and similar thresholds\napplied to prior investigations of healthy aging (Chan et al., 2014; Geerligs et al., 2015) permit\nmore direct comparison with prior results. A partition was assigned based on the Yeo 7- or\n17-network solution (Yeo et al., 2011) to optimize community (i.e., network) structure for\nvisualization.\n25. CC-BY-NC-ND 4.0 International license available under a(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted January 5, 2022. ; https://doi.org/10.1101/2021.03.31.437922doi: bioRxiv preprint"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3347,
+            "end": 3440,
+            "text": "MEFC data were initialized to a group parcellation atlas developed by Schaefer et al. (2018).",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3638,
+            "end": 3733,
+            "text": "We selected the Schaefer atlas for three reasons: (i) It is functionally-derived, and thus more",
+            "labels": [
+              "ROI definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6334,
+            "end": 6431,
+            "text": "we\nextracted and averaged the MEFC data from vertices within each parcel to obtain a parcel-level",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6202,
+            "end": 6336,
+            "text": "Since the MEFC data consist of ICA coefficient\nsets (coefficient weights for each accepted component x vertex) concatenated by run, we",
+            "labels": [
+              "Combine block — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6797,
+            "end": 6932,
+            "text": "Connectivity was estimated by computing the product-moment correlation\nbetween each parcel’s coefficient set, resulting in a n parcels ",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7226,
+            "end": 7351,
+            "text": "The canonical Fisher’s r-to-z\ntransformation was then applied to normalize the distribution of correlation values and account",
+            "labels": [
+              "Connectivity normalization — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10095,
+            "end": 10193,
+            "text": "associations with graph analytic measures of participation coefficient, modularity and\nsegregation",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11365,
+            "end": 11521,
+            "text": "the 400 x 400 GPIP functional connectivity matrix was\nthresholded row-wise to the upper 10% of connections to retain only the strongest positive\nconnections",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21243,
+            "end": 21417,
+            "text": "Network-level functional connectivity contributions were quantified by assigning\neach parcel according to the network assignment reported by Yeo et al. (2011), and taking the",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4375,
+            "end": 4512,
+            "text": "intrinsic partitioning of nodes within Yeo 7- and 17- network solutions (used in our edge-level\nconnectomics analyses; Yeo et al., 2011).",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4375,
+            "end": 4512,
+            "text": "intrinsic partitioning of nodes within Yeo 7- and 17- network solutions (used in our edge-level\nconnectomics analyses; Yeo et al., 2011).",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3347,
+            "end": 3440,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3638,
+            "end": 3733,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4375,
+            "end": 4512,
+            "text": "3",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6202,
+            "end": 6336,
+            "text": "4",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6334,
+            "end": 6431,
+            "text": "5",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6797,
+            "end": 6932,
+            "text": "6",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7226,
+            "end": 7351,
+            "text": "7",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10095,
+            "end": 10193,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11365,
+            "end": 11521,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21243,
+            "end": 21417,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        }
+      ]
+    }
+  ]
+}

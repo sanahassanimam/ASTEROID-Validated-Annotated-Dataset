@@ -1,0 +1,908 @@
+{
+  "data": {
+    "text": "Predicting errors from reconfiguration patterns in human brain networks\nMatthias Ekman, Jan Derrfuss, Marc Tittgemeyer, and Christian J. Fiebach\nPNAS | October 9, 2012 | vol. 109 | no. 41\nwww.pnas.org/cgi/doi/10.1073/pnas.1207523109\n\nParticipants. Ten healthy volunteers (5 males, mean age 25.3 y) participated with informed consent in accordance with the local ethics committee of the University Hospital in Cologne, Germany. After exclusions for incomplete scans, 9 participants were retained for subsequent analyses. All were right-handed, had normal or corrected-to-normal vision, and had no history of psychiatric or neurological diseases and no structural brain abnormalities.\n\nExperimental Paradigm. Target stimuli consisted of 200 colored and moving dots (0.06° × 0.06° each; lifetime, 50 ms; speed, 14°/s) randomly positioned in a circular fashion around the center of the screen (covering a visual angle of 8°). The dominant movement direction was either inward or outward. We included random movement, such that only a certain percentage of all dots moved coherently inward or outward. The dominant color was either red or blue. Three distractor colors were included that had the same luminance as the target colors (green, yellow, and purple). Depending on a letter cue (C or M) presented at the beginning of each trial, participants had to prepare for either the color or the motion task. In the color condition, participants had to indicate by button press whether the dominant color was red or blue, and in the motion condition participants had to indicate whether the dominant movement direction was inward or outward. Participants were instructed to respond as fast and as correctly as possible. As a control condition, we included trials where participants were not able to prepare for the upcoming task (cue N). Targets in nonpreparation trials consisted either of stationary colored dots or of moving gray dots, so that participants unambiguously knew which task to perform upon target presentation.\n\nTiming was as follows: A cue was presented for 1,000 ms, followed by a variable preparation delay of 5,000, 7,000, or 9,000 ms. The target was presented for 1,000 ms, followed by an intertrial interval of 3,000 ms. Each condition (neutral, color, motion) was presented 72 times in counterbalanced order. After 18 consecutive trials, visual feedback was given to inform about errors in the previous task block. The feedback was followed by a null event (10–14 s). The total duration of the experiment was 49 min.\n\nData Acquisition and Analysis. Functional data were acquired on a Siemens Trio 3T scanner, using an echo planar imaging sequence with 30 interleaved axial slices of 3 mm [field of view 192 mm, 3 × 3 mm in-plane, repetition time (TR) 2 s, echo time 30 ms, flip angle = 90°], as well as a T1-weighted high-resolution MDEFT scan. Image preprocessing was performed using the Oxford Center for Functional Magnetic Resonance Imaging of the Brain (FMRIB) Software Library (FSL). Unsmoothed functional volumes were motion and slice-time corrected.\n\nNetwork Construction. For each fMRI dataset, linear and quadratic trends were removed and potential sources of global effects were regressed out (estimated movement parameters; global mean of each trial). Resulting voxel time courses were shifted by 6 s to account for the hemodynamic lag. For each condition the relevant time points from the preparation delay were extracted (excluding the TR immediately before target presentation) and concatenated over trials [total time points (average ± SEM): color correct, 231.3 ± 7.1; motion correct, 238.7 ± 4.7; color incorrect, 56.7 ± 7.1; motion incorrect, 49.3 ± 4.7]. Mean regional BOLD time series were then subjected to a wavelet decomposition to reconstruct wavelet coefficients in the 0.06- to 0.12-Hz range (scale two). The correlation (coherence) between all possible pairs of regions was calculated to construct four 70 × 70 weighted connectivity matrices, one for each condition. Negative correlations and those that did not pass false discovery rate (FDR) correction [FDR(q = 0.01)] were set to zero.\n\nNode Definition. This map was parcellated into 70 nonoverlapping nodes (radius = 12 mm).\n\nNetwork Decomposition. Functional connectivity matrices were Fisher z transformed and averaged over all preparation conditions and subjects. In contrast to the individual data, the group-averaged matrix was thresholded to retain only 20% of the strongest connections and converted to a binary graph. K-core decomposition first removes all nodes with one connection only (including their edges) and assigns them to the k = 1 shell… nodes with k-shell index = kmax form the core and the remaining nodes form the periphery.\n\nGraph Analysis: Network Quantification. To characterize functional network topologies, a list of 21 weighted network measures (10 local and 11 global measures: namely, local and global degree; average shortest path length; local and global clustering; assortativity; transitivity; modularity; local, global, cost, and nodal efficiency; small-world scalar; betweenness and current flow betweenness centrality; eigenvector, closeness, and core centrality; PageRank; vulnerability; and core closeness) were calculated separately for each subject and condition and concatenated into a network fingerprint containing 711 entries in total. All metrics were calculated using the NetworkX software package.\n\nNetwork Decoding. For each subject and condition, indexes of the network fingerprint were transformed to z-scores and subjected to a pattern classification algorithm [sparse multinomial logistic regression (λ = 0.1), implemented in PyMVPA]. The classifier was trained on all but one subject and the remaining subject was used as an independent test set (leave-one-subject-out). Statistical significance was assessed with 10,000 permutations; weights were FDR-corrected (q = 0.05).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 71,
+            "text": "Predicting errors from reconfiguration patterns in human brain networks",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 72,
+            "end": 86,
+            "text": "Matthias Ekman",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 163,
+            "end": 167,
+            "text": "2012",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 145,
+            "end": 149,
+            "text": "PNAS",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 209,
+            "end": 232,
+            "text": "10.1073/pnas.1207523109",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 188,
+            "end": 232,
+            "text": "www.pnas.org/cgi/doi/10.1073/pnas.1207523109",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 466,
+            "end": 494,
+            "text": "9 participants were retained",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 281,
+            "end": 296,
+            "text": "mean age 25.3 y",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 520,
+            "end": 541,
+            "text": "All were right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 272,
+            "end": 279,
+            "text": "5 males",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 543,
+            "end": 643,
+            "text": "had normal or corrected-to-normal vision, and had no history of psychiatric or neurological diseases",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 427,
+            "end": 464,
+            "text": "After exclusions for incomplete scans",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 333,
+            "end": 416,
+            "text": "in accordance with the local ethics committee of the University Hospital in Cologne",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2600,
+            "end": 2615,
+            "text": "Siemens Trio 3T",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2668,
+            "end": 2703,
+            "text": "30 interleaved axial slices of 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2763,
+            "end": 2770,
+            "text": "TR) 2 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2772,
+            "end": 2787,
+            "text": "echo time 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2789,
+            "end": 2805,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2705,
+            "end": 2725,
+            "text": "field of view 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2727,
+            "end": 2744,
+            "text": "3 × 3 mm in-plane",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1333,
+            "end": 1400,
+            "text": "participants had to prepare for either the color or the motion task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 466,
+            "end": 494,
+            "text": "9 participants were retained",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2982,
+            "end": 3004,
+            "text": "Software Library (FSL)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1426,
+            "end": 1513,
+            "text": "participants had to indicate by button press whether the dominant color was red or blue",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 707,
+            "end": 762,
+            "text": "Target stimuli consisted of 200 colored and moving dots",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2236,
+            "end": 2298,
+            "text": "Each condition (neutral, color, motion) was presented 72 times",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2149,
+            "end": 2186,
+            "text": "The target was presented for 1,000 ms",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2203,
+            "end": 2234,
+            "text": "intertrial interval of 3,000 ms",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2325,
+            "end": 2379,
+            "text": "After 18 consecutive trials, visual feedback was given",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3041,
+            "end": 3072,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2982,
+            "end": 3004,
+            "text": "Software Library (FSL)",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3041,
+            "end": 3072,
+            "text": "motion and slice-time corrected",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3052,
+            "end": 3072,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2982,
+            "end": 3004,
+            "text": "Software Library (FSL)",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3052,
+            "end": 3062,
+            "text": "slice-time",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3120,
+            "end": 3160,
+            "text": "3",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3120,
+            "end": 3147,
+            "text": "linear and quadratic trends",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3221,
+            "end": 3250,
+            "text": "4",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3231,
+            "end": 3250,
+            "text": "movement parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3252,
+            "end": 3277,
+            "text": "5",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3252,
+            "end": 3277,
+            "text": "global mean of each trial",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3812,
+            "end": 3834,
+            "text": "6",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3812,
+            "end": 3828,
+            "text": "0.06- to 0.12-Hz",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3812,
+            "end": 3834,
+            "text": "0.06- to 0.12-Hz range",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4164,
+            "end": 4221,
+            "text": "7",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4164,
+            "end": 4204,
+            "text": "parcellated into 70 nonoverlapping nodes",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4206,
+            "end": 4220,
+            "text": "radius = 12 mm",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3691,
+            "end": 3721,
+            "text": "8",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3691,
+            "end": 3721,
+            "text": "Mean regional BOLD time series",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3848,
+            "end": 3928,
+            "text": "9",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3852,
+            "end": 3875,
+            "text": "correlation (coherence)",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4011,
+            "end": 4098,
+            "text": "10",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4120,
+            "end": 4131,
+            "text": "set to zero",
+            "labels": [
+              "Negative correlation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4100,
+            "end": 4113,
+            "text": "FDR(q = 0.01)",
+            "labels": [
+              "Negative correlation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4285,
+            "end": 4305,
+            "text": "11",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4285,
+            "end": 4305,
+            "text": "Fisher z transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4446,
+            "end": 4490,
+            "text": "12",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4446,
+            "end": 4461,
+            "text": "retain only 20%",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4458,
+            "end": 4461,
+            "text": "20%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4495,
+            "end": 4522,
+            "text": "13",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4510,
+            "end": 4522,
+            "text": "binary graph",
+            "labels": [
+              "Graph characteristics — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4524,
+            "end": 4544,
+            "text": "14",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4524,
+            "end": 4544,
+            "text": "K-core decomposition",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4833,
+            "end": 4871,
+            "text": "15",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4843,
+            "end": 4871,
+            "text": "21 weighted network measures",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5418,
+            "end": 5426,
+            "text": "NetworkX",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4310,
+            "end": 4363,
+            "text": "16",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4310,
+            "end": 4318,
+            "text": "averaged",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5800,
+            "end": 5821,
+            "text": "leave-one-subject-out",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

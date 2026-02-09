@@ -1,0 +1,428 @@
+{
+  "data": {
+    "text": "As the current study focused on the functional connectivity of task-based fMRI, we concatenated the timecourses of task blocks to construct the FC matrix for network analysis (Richiardi et al., 2011).\n\nThe automated anatomical labeling (AAL) parcellation was used for whole-brain partitioning to define the nodes in the brain networks (Tzourio-Mazoyer et al., 2002). For each subject, the time series of each node during the text reading task were calculated by averaging the time series of all voxels within the region. Edges were calculated using the Pearson correlation coefficient between the time courses for each pair of nodes. Due to the ambiguous biological explanation of negative correlations (Fox et al., 2009; Murphy et al., 2009), only positive correlations were retained for further network analyses.\n\nFirst, we explored the developmental effects on functional connectivity strength. Before the group comparisons, a one-sample t-test was conducted in each group on the Fisher-z-transformed Pearson correlation coefficients for the connectivity between all pairs of brain regions. Connections that showed significant results in at least one group (p < 0.05 with FDR correction) were used for subsequent group comparison.\n\nTo further explore the development of brain network topological properties, we constructed the binarized functional brain network for each subject through thresholding the correlation matrices with a set of sparsity thresholds (ranging from 0.05 to 0.5 with a step of 0.05). The mean values of all explored network properties across the sparsity range were used for group comparisons. We explored the developmental effects on nodal and modular properties of the whole-brain network during text reading. The graph theoretical analysis was conducted with GRETNA (http://www.nitrc.org/projects/gretna/) (Wang et al., 2015). Nodal degree is defined as the summed number of edges that connect a given node to the remaining regions, which reveals the importance of the node in the network. For modular analysis, we employed a predefined cognitive components template for the modular analysis which was adapted from Yeo et al. (2015) and generated based on a meta-analysis of task data with 12 cognitive components. M1 to M12 were labelled according to the top tasks for each cognitive component (see Table 2). Brain nodes were grouped to modules according to the template. The intra- and inter-module connectivity were calculated as the summed number of connections within and between-modules and then compared between groups."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 83,
+            "end": 174,
+            "text": "1",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 83,
+            "end": 174,
+            "text": "concatenated the timecourses of task blocks to construct the FC matrix for network analysis",
+            "labels": [
+              "Combine block — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 206,
+            "end": 254,
+            "text": "2",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 206,
+            "end": 254,
+            "text": "automated anatomical labeling (AAL) parcellation",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 268,
+            "end": 334,
+            "text": "3",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 268,
+            "end": 334,
+            "text": "whole-brain partitioning to define the nodes in the brain networks",
+            "labels": [
+              "ROI definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 462,
+            "end": 519,
+            "text": "4",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 462,
+            "end": 519,
+            "text": "averaging the time series of all voxels within the region",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 553,
+            "end": 632,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 553,
+            "end": 632,
+            "text": "Pearson correlation coefficient between the time courses for each pair of nodes",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 744,
+            "end": 813,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 744,
+            "end": 813,
+            "text": "only positive correlations were retained for further network analyses",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 983,
+            "end": 1036,
+            "text": "7",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 983,
+            "end": 1036,
+            "text": "Fisher-z-transformed Pearson correlation coefficients",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1094,
+            "end": 1233,
+            "text": "8",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1094,
+            "end": 1233,
+            "text": "Connections that showed significant results in at least one group (p < 0.05 with FDR correction) were used for subsequent group comparison.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1094,
+            "end": 1233,
+            "text": "Connections that showed significant results in at least one group (p < 0.05 with FDR correction) were used for subsequent group comparison.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1510,
+            "end": 1619,
+            "text": "The mean values of all explored network properties across the sparsity range were used for group comparisons.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1390,
+            "end": 1508,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1390,
+            "end": 1508,
+            "text": "thresholding the correlation matrices with a set of sparsity thresholds (ranging from 0.05 to 0.5 with a step of 0.05)",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1463,
+            "end": 1507,
+            "text": "ranging from 0.05 to 0.5 with a step of 0.05",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1742,
+            "end": 1855,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1742,
+            "end": 1855,
+            "text": "graph theoretical analysis was conducted with GRETNA (http://www.nitrc.org/projects/gretna/) (Wang et al., 2015).",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1856,
+            "end": 1960,
+            "text": "Nodal degree is defined as the summed number of edges that connect a given node to the remaining regions",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2402,
+            "end": 2555,
+            "text": "The intra- and inter-module connectivity were calculated as the summed number of connections within and between-modules and then compared between groups.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2055,
+            "end": 2161,
+            "text": "11",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2055,
+            "end": 2161,
+            "text": "predefined cognitive components template for the modular analysis which was adapted from Yeo et al. (2015)",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2244,
+            "end": 2338,
+            "text": "M1 to M12 were labelled according to the top tasks for each cognitive component (see Table 2).",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2339,
+            "end": 2401,
+            "text": "Brain nodes were grouped to modules according to the template.",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "data": {
+    "title": "Reconfiguration of Brain Network Architectures between Resting-State and Complexity-Dependent Cognitive Reasoning",
+    "text": "Imaging data were preprocessed using an\nadapted version of Matlab (MathWorks, RRID:\nSCR_001622) toolbox Data Processing Assis-\ntant for Resting-State fMRI (DPARSF V 3.0; Chao-\nGan and Yu-Feng, 2010; RRID: SCR_002372).\nBoth resting-state and task data were prepro-\ncessed with the same pipeline (except where\nnoted). DICOM (Digital Images and Commu-\nnications in Medicine) images were first con-\nverted to Nifti format and realigned. T1 images\nwere reoriented, skull-stripped [FMRIB (Ox-\nford Centre of Functional MRI of the Brain)\nSoftware Library Brain Extraction Tool (FSL\nBET); RRID: SCR_009472], and coregistered\nto the Nifti functional images using statistical\nparametric mapping (SPM8; RRID: SCR_007037)\nfunctions. Segmentation and the DARTEL\n(diffeomorphic anatomical registration through\nexponentiated lie algebra) algorithm were used to\nimprove the estimation of non-neural signal in\nsubject space and the spatial normalization (Ash-\nburner, 2007). From each gray matter voxel, the\nfollowing signals were regressed: undesired linear\ntrends, signals from the six head-motion param-\neters (three translation, three rotation), white\nmatter, and CSF (estimated from single-subject\nmasks of white matter and CSF). The CompCor\nmethod (Behzadi et al., 2007) was used to regress\nout residual signal unrelated to neural activity\n(i.e., five principal components derived from\nnoise regions-of-interest in which the time series\ndata were unlikely to be modulated by neural\nactivity). Global signal regression was not\nperformed due to the ongoing controversy as-\nsociated with this step (Saad et al., 2012;\nCaballero-Gaudes and Reynolds, 2017). This\nchoice may increase motion artifacts in the\ndata (Ciric et al., 2017). For this reason, we\nemployed a strict head-motion censoring ap-\nproach (see below). Single-subject functional\nimages were subsequently normalized and\nsmoothed using DARTEL (4 mm 3). Data pro-\ncessing steps also involved filtering (0.01– 0.15\nHz) at a low-frequency component of the\nBOLD signal known to be sensitive to both\nresting-state and task-based functional con-\nnectivity (Sun et al., 2004), therefore allowing\ncomparison of both resting-state and task data.\nHead movement. Participants with head dis-\nplacement (cid:4)3 mm in (cid:4)5% of volumes in any\none scan were excluded. In addition to gross head movement, it has also\nbeen shown that functional connectivity can be influenced by small\nvolume-to-volume “micro” head movements (Van Dijk et al., 2012;\nPower et al., 2014). To ensure micro– head-movement artifacts did not\ncontaminate our findings, both resting-state and task-based data with\nframe-to-frame displacements of (cid:4)0.40 mm were censored (Power et al.,\n2014). Participants with (cid:6)85% of data remaining in any condition were\nexcluded.\n\nFunctional connectivity network construction. For each subject, region-\nally averaged time series were extracted for 264 spheres of 5 mm radius\nsampled across cortical and subcortical gray matter. Spheres were posi-\ntioned according to an existing brain parcellation, based on task activa-\ntions induced by a wide range of behavioral tasks (Power et al., 2011).\nThis parcellation and associated network definitions were generated\nfrom a large cohort of participants (N (cid:4) 300), and has the advantage of\nbeing independent of the imaging data obtained in the current study.\n\nFor both sets of resting-state data (Pre-task and Post-task), functional\nconnectivity was estimated using a temporal Pearson correlation be-\ntween each pair of time series (Zalesky et al., 2012). This resulted in a\n\n264 (cid:2) 264 connectivity matrix for each subject.\nFor the task-based functional connectivity\nanalyses, we used a regression approach (Cole\net al., 2014) rather than psychophysiological\ninteractions (PPIs) as others have used\n(McLaren et al., 2012; Cocchi et al., 2014;\nGerchen et al., 2014). We opted for this ap-\nproach rather than PPIs due to our interest in\nassessing connectivity across both rest and task\nstates. For each brain region of interest, a task\nregressor composed of the condition onsets\nmodeled as boxcar functions convolved with a\ncanonical hemodynamic response function\nwas regressed from the time series. This step\nwas taken to remove variance associated with\ntask-related coactivation (Cole et al., 2014).\nThen, after accounting for the hemodynamic\nlag, the residual time series from each 5 s rea-\nsoning period was concatenated to form in\neach brain region a condition-specific time series of interest. A Pearson\ncorrelation was performed on the resulting regional time series for each\ncondition separately, resulting in a 4 (condition) (cid:2) 264 (cid:2) 264 connec-\ntivity matrix for each subject. Finally, both resting-state and task-based\nmatrices were converted to z scores. Analysis decisions such as z normal-\nization and thresholding were employed so as to be consistent with\nprevious, related work aimed at assessing dynamic reconfiguration of\nconnectivity patterns as a function of task demands (Cole et al., 2014;\nPower et al., 2011). Such choices do, however, affect the resulting graph\nmetrics (Rubinov and Sporns, 2011). Thus, unless otherwise noted [see\nnetwork-based statistic (NBS) analysis, below], weighted graphs of pro-\nportional densities from the top 5% to the top 30% of connections were\nconsidered for analysis. Such network densities have been shown to pro-\nvide robust functional brain-network characterizations (Garrison et al.,\n2015) and are similar to those used in previous, related work (Power et\nal., 2011).\n\nAnalysis overview. We undertook three complementary analyses to\nidentify functional network reorganization due to increasing relational\ncomplexity. First, we calculated and compared community partitions\nthat arose in each of the resting-state and task conditions. Following this,\nwe performed an analysis to identify changes in connectivity associated\nwith performance of the LST using the NBS (Zalesky et al., 2010), a\nsensitive statistical tool that controls for type-I error at the network level.\nTo assess the functional and behavioral impact of the connectivity\nchanges identified in the previous two analyses, we calculated changes in\nglobal efficiency (Achard and Bullmore, 2007) for each functional mod-\nule detected. Moreover, to assess the behavioral implications of the ob-\nserved network changes, we correlated metrics of changes in module\nefficiency with performance accuracy on the LST. When appropriate,\nnonparametric statistics were used for repeated-measures comparisons\n(Friedman test), follow-up tests (Wilcoxon signed rank), and measures\nof effect size (Kendall’s coefficient of concordance, W ).\n\nCommunity detection. A module is a group of nodes in a graph that\ncontains stronger connections within module than expected in an appro-\npriate random network null model. A modularity partition represents\nthe subdivision of a graph into nonoverlapping modules (Fortunato,\n2010). The degree of modularity in a network can be characterized by the\nQ index (Newman and Girvan, 2004), which represents the density of\nwithin-module connections relative to an appropriate random network\nnull model. The aim of community detection is to isolate a module\npartition that maximizes Q according to the following equation:\n\nThis is the modularity equation, where aij represents the weight of the\n\nIn the present study, modules were identified using the Louvain greedy\nalgorithm (Blondel et al., 2008) implemented in the Brain Connectivity\nToolbox (BCT; Rubinov and Sporns, 2010; RRID: SCR_004841). The\nresolution parameter was set to unity ((cid:2) (cid:3) 1). Testing across several\nlevels of (cid:2) showed consistent results. For clarity, we highlight the BCT\nscripts used throughout Materials and Methods. There are multiple pos-\nsible module partitions that maximize Q for each graph, resulting in\ncommunity assignments that vary across each run of the algorithm\n(Good et al., 2010; Sporns and Betzel, 2016). To resolve this variability,\nwe used a consensus approach (Lancichinetti and Fortunato, 2012),\nwhereby module partitions are calculated a number of times (10 3 itera-\ntions, for each participant and condition) and used to calculate an\nagreement matrix (agreement.m). The agreement matrix represents the\ntendency for each pair of nodes to be assigned to the same module across\niterations. Finally, the agreement matrix was subjected to an independent\nmodule partitioning (consensus_und.m), resulting in an individual-level\nmodule partition for each participant in each condition. In this step, the\nresolution parameter was also set to unity ((cid:7)(cid:3) 1), representing the level\nat which the agreement matrix was thresholded before being subjected to\nthe consensus procedure. For example, (cid:7)(cid:3) 1 thresholds the matrix such\nthat only nodes consistently partitioned into the same community across\nall permutations are included. Testing across several levels of (cid:7) showed\nconsistent results. A general community structure including motor-sensory,\nauditory, visual, default-mode, and frontoparietal/cingulo-opercular mod-\nules was entered into the algorithm as the initial community partition. In our\ndata, this choice decreased computation time, presumably because the ini-\ntial community structure was associated with a Q value that was close to\nthe true maximum. Module reconfiguration results were replicated using\ndifferent community affiliation priors, including variations of the origi-\nnal community partitions (Power et al., 2011; Cole et al., 2013) and\npurely data-driven methods (i.e., no community affiliation input).\n\nThe procedure for group-level modular decomposition was imple-\nmented in a similar fashion to the individual-level decompositions\ndescribed above. The critical difference was that instead of creating an\nindividual-level agreement matrix, the agreement matrix represented the\ntendency for each pair of nodes to be assigned to the same module across\nparticipants. The same consensus procedure followed, resulting in a sin-\ngle module partition for each condition for the group of 49 participants.\nResolution parameters were kept identical to the previous individual-\nlevel modularity analysis.\n\nSignificance testing for within-participant differences in modular struc-\nture. To investigate differences in the nodal composition of modules\nacross conditions, we used the variation of information metric (VIn;\nMeila˘, 2007), an information-theoretic measure of partition distance\n\nTable 1. Variation of information statistics\n\nNetwork density\n\nVIn\n\n0.082\n* indicates contrasts where p (cid:6)0.01. VIn, Variation of information.\n\n(partition_distance.m). To ascribe statistical significance to differences\nin partition structure, we used a repeated-measures permutation proce-\ndure to compare real VIn values to appropriate null distributions (Dwyer\net al., 2014). Specifically, half of the participants’ condition labels were ran-\ndomly switched in the contrast of interest (e.g., Binary vs Ternary). This\nresulted in two new sets of individual-level module structures for the con-\ntrast (albeit with shuffled data). The shuffled module structures were then\nsubjected to the previously used pipeline to generate group-level module\npartitions. Finally, VIn was used to quantify the difference between these\npartitions. This procedure was repeated 10 4 times to build a null distribution\nfor each contrast of interest, with which the real data were compared.\n\nPairwise functional connectivity analysis. The NBS (Zalesky et al., 2010;\nRRID: SCR_002454) was used to identify changes in pairwise functional\nconnectivity at rest and during the task. For the first contrast, a paired\nt test was performed between the Pre-task and Post-task resting-state\ndata. For the second contrast, a one-way repeated-measures ANOVA was\nused to compare all four task states (Null, Binary, Ternary, Quaternary).\nFor the analysis, unthresholded functional connectivity matrices were\nused as input into the NBS. Briefly, all possible pairs of connections\n[(264 (cid:2) 263)/2 (cid:3) 34,716] were tested against the null hypothesis, endow-\ning each connection with a test statistic, which was subsequently thresh-\nolded. Here an exploratory F statistic of 20 (equivalent to a t statistic of\n4.47) was used as the threshold, though additional exploratory analyses\nshowed that networks arising using higher or lower t thresholds resem-\nbled the original results. This threshold was adopted because it allowed\nthe detection of effects of medium size while discarding small or spurious\neffects. Familywise error (FWE)-corrected p values were ascribed to the\nresulting networks using a null distribution obtained by 5000 permuta-\ntions. Only components that survived a network-level threshold of p (cid:6)\n0.001 (FWE corrected) were declared significant. This analysis allowed us\nto identify subnetworks that significantly increased or decreased their\nfunctional connectivity across relational reasoning task conditions, pro-\nviding complementary results to the graph analyses.\n\nNetwork efficiency analysis. Global efficiency is defined as the inverse of\nthe average characteristic path length between all nodes in a network\n(Latora and Marchiori, 2001). Assuming that information follows the\nmost direct path, global efficiency provides an index for parallel infor-\nmation transfer in a network (Rubinov and Sporns, 2010). In the context\nof functional brain networks, global efficiency is thought to be an index\nof increased capacity for information exchange (Achard and Bullmore,\n2007). The link between indices of global efficiency and global neural\n\nHere we wanted to investigate differences in network communication\nwithin module, and determine how such difference might relate to be-\nhavior. To do so, we computed global efficiency for each participant, in\neach condition, for the three major modules identified in the initial mod-\nularity analysis (using efficiency_wei.m from the BCT). Importantly,\nmatrix thresholding was performed after dividing the modules to ensure\nany efficiency effects were not due to differences in degree across mod-\nules. Finally, we computed the difference in efficiency between the most-\ndifficult and least-difficult conditions (i.e., Quaternary vs Null) and\ncorrelated this change in efficiency with overall accuracy scores on the\nLST.\n\nFigure 3. Modular structure as a function of reasoning complexity in the LST. a, Alluvial “flow” demonstrating the network affiliations (Power et al., 2011) compared with the Pre-task resting-state (Rosvall\net al., 2009). Each individual streamline represents a node in the network, colored by its original resting-state affiliation as shown on the left (Power et al., 2011). b, VenAtt, Ventral attention; DorAtt, dorsal\nattention; Sc, subcortical; Aud, auditory; Co, cingulo-opercular; Sal, salience; Fpn, fronto-parietal; Vis, visual; Sm, sensorimotor; Dmn, default-mode. Changes in modular structure across the experimental\nconditions.Visualandfrontoparietalmodulesmergedtoformatask-relatedmoduleduringBinary,Ternary,andQuaternaryconditionsoftheLST.Resultsfor15%networkdensityareshown,butstatisticswere\nperformedacrossseveralthresholds.c,Anatomicalrenderingofthetask-relatedmodulesintheQuaternarycondition.Eachsphereiscolor-codedbyitsinitialresting-statemoduleallegiance.d,VInvalues(black\nmarkers) compared with a null distribution (gray markers: fifth–95 th percentile in bold line; first–99 th percentile shown in tails) for the three main contrasts across all network densities. Only the right-most\ncontrast(BinaryvsPre-taskrest)showedaconsistentdifferencebetweenpartitions.e,ComparisonofVInvaluesacrossvisual,sensory,frontoparietal,anddefault-modemodulesineachtaskconditioncompared\nwith rest across all network densities. The frontoparietal module was consistently more variable in relation to other modules. Error bars represent 95% confidence intervals.\n\nFunctional brain\nmodule reconfiguration\nModularity analysis revealed four major\nmodules in the baseline (Pre-task) re-\nsting-state. For clarity, these modules are\nrepresented in reference to Power and col-\nleagues’ (2011) initial network affilia-\ntions. The modules broadly correspond to\nthe sensory, default-mode, visual, and\nfrontoparietal networks.\n\nVIn analysis (Meila˘, 2007) revealed a\nsignificant difference in the community\nstructure of Binary, Ternary, and Quater-\nnary conditions compared with the Pre-\ntask resting-state (mean statistics across\nthresholds are reported in text; Table 1;\nVIn (cid:3) 0.20, p (cid:3) 0.006; VIn (cid:3) 0.21, p (cid:3)\n0.001; VIn (cid:3) 0.20, p (cid:3) 0.003, respectively)\nand Post-task resting-state (VIn (cid:3) 0.18,\np (cid:3) 0.039; VIn (cid:3) 0.20, p (cid:3) 0.005; VIn (cid:3)\n0.19, p (cid:3) 0.016). The difference between\nrest and reasoning states was associated\nwith the emergence of a single, conjoined\nfrontoparietal-visual (FPV) module that\nwas composed of several large-scale net-\nworks identified by Power et al. (2011).\nThe transitory nature of the FPV module\nwas confirmed by its switch back to its\noriginal configuration in the Post-task\nresting-state (i.e., after completion of the\nLST). Figure 3b shows a representation of\nthe reconfiguration of modules across experimental conditions.\nThere was no significant difference between the Pre-task and\nPost-task resting-state community structure (VIn (cid:3) 0.09, p (cid:3)\n0.788). There was also no consistent difference between the Pre-\n\nFigure 4.\nChange in pairwise functional connectivity associated with reasoning complexity. a, Connectogram representation of significant\nchangesinpairwisefunctionalconnectivitythatscaledwithrelationalcomplexity.Edgecolorsindicatedirectionofcorrelationchangeacrossrelational\ncomplexity.Warmcolorsrepresentincreasesinconnectivityandcoolcolorsrepresentdecreasesinconnectivity.LightercolorsrepresenthigherF\nstatistics. Network nodes, plotted as circles, are colored by their initial resting-state networks (Power et al., 2011). Outside the connecto-\ngram, the colored bars represent the modules identified in the previous analysis of data from the Quaternary condition: sensory (orange),\ndefault-mode (red), and FPV modules (green-blue). b, Each individual connection in the subnetwork (averaged across subjects) plotted as\na function of reasoning complexity. Average values for positive and negative connections are shown as bold lines.\n\ntask and Post-task resting-state communities and the Null task\ncondition (VIn (cid:3) 0.16, p (cid:3) 0.08; VIn (cid:3) 0.15 p (cid:3) 0.196, respec-\ntively). These main effects were broadly replicated across all\nthresholds tested (Fig. 3c).\n\nHaving established a difference in community structure, we\nsought to test the relative contribution of each module to the\nobserved reconfiguration. To do so, we implemented a similar\nstrategy to that of Braun and colleagues (2015), whereby VIn was\ncalculated at the individual-community level for our nodes of\ninterest, and compared using repeated-measures statistics. Thus,\nwe compared visual, sensory, frontoparietal, and default-mode\nmodules across all network densities for the Binary–Rest, Ternary–\nRest, and Quaternary–Rest contrasts (conceptually similar to\nfollow-up parametric statistics). Results revealed that the fronto-\nparietal module had higher VIn values (i.e., larger differences in\ncommunity structure) than visual (mean p value across thresh-\nolds, p (cid:6) 0.001), sensory ( p (cid:6) 0.001), and default-mode modules\n( p (cid:6) 0.001; Fig. 3d) across all contrasts.\n\nFinally, the index of modularity, Q, was compared across con-\nditions. This index of modularity increases as more intramodular\nconnections are found than expected by chance (Newman and\nGirvan, 2004). Nonparametric Friedman tests revealed a sig-\nnificant difference in Q across conditions (mean statistic across\nthresholds, (cid:8)2 (cid:3) 51.48, p (cid:6) 0.001). Bonferroni-corrected\nfollow-up tests were performed to compare each task state (Null,\nBinary, Ternary, Quaternary) with each resting-state (Pre-task\nand Post-task). Results revealed that Q was significantly lower in\nthe Ternary (mean Q (cid:3) 0.39) and Quaternary conditions (mean\nQ (cid:3) 0.39) when compared with both Pre-task (mean Q (cid:3) 0.44, z (cid:3)\n3.74, z (cid:3) 4.07, p (cid:6) 0.001) and Post-task resting-states (mean Q (cid:3)\n0.45, z (cid:3) 4.49, z (cid:3) 4.52, p (cid:6) 0.001). No effect was found when\ncomparing Null or Binary conditions with rest. Complementing\nthe observed changes in community structure, analysis of Q\nscores highlights a significant reduction in modularity compared\nwith the resting-state, but only in the task conditions that im-\nposed higher demands on cognitive reasoning.\n\nNBS analysis\nTo further refine our account of module reconfiguration, we\nassessed changes in whole-brain connectivity using the NBS (Za-\nlesky et al., 2010). In line with the result from the first analysis,\na paired t test between Pre-task and Post-task resting-states\nrevealed no significant differences. Our second contrast, a one-\nway repeated-measures ANOVA was performed comparing all\nfour reasoning complexity conditions (Null, Binary, Ternary,\nQuaternary).\n\nA subnetwork comprising 63 nodes and 85 edges changed\nin response to reasoning complexity demands ( p (cid:6) 0.001, FWE\ncorrected at the network level; Fig. 4). Most edges within the subnet-\nwork demonstrated increased functional connectivity (86% of\nedges; Fig. 4, warm colors), but a number of edges also demon-\nstrated a decrease in positive correlations with increasing reason-\ning complexity (Fig. 4b). Consistent with our previous work on\nchanges in functional connectivity during complex reasoning\n(Cocchi et al., 2014; Hearne et al., 2015), the network was largely\ncomposed of nodes encompassing frontoparietal (17%), subcor-\ntical (19%), cingulo-opercular (12%), and default-mode net-\nworks (24%; Power et al., 2011; Table 2). Moreover, nearly all\nedges (95%) were across-network. Two further visual–parietal\nsubnetworks were identified by the NBS, consisting of two and\nthree nodes respectively (not visualized).\n\nTable 2. Significant pairwise changes in functional connectivity associated with\nincreasing relational complexity\nMNI\n\nAutomated Anatomical Labeling atlas was used to define anatomical regions. RSN, Initial Power et al., 2011, resting-state\nnetwork affiliation; Mod, modules defined by modularity analysis in the Quaternary condition (i.e., Figure 3); Co, cingulo-\nopercular; Dmn, default-mode; Fpn, frontoparietal; Vis, visual; Sens, sensory; Sc, subcortical; Sal, salience; Aud, auditory;\nMem, memory; Sshand, somatosensory hand; DorAtt, dorsal attention; FPV, fronto-parietal-visual.\n\ncreases in efficiency within the FPV mod-\nule were associated with better reasoning\nperformance. Neither the default-mode\nor sensory modules demonstrated such a\nrelationship ( p (cid:3) 0.19, p (cid:3) 0.29, respec-\ntively). Further, to probe the reliability of\nthe above finding, we compared change in\nefficiency from Quaternary to the Null-\ntask state, which yielded a similar result\n(r (cid:3) 0.35, p (cid:3) 0.021, Spearman’s r’s (cid:3)\n0.30, p (cid:3) 0.048). The correlation was also\nrobust to partialling out fluid intelligence\nscores based on the Raven’s Matrices test\n(r (cid:3) 0.35, p (cid:3) 0.025). By contrast, there\nwas no correlation between performance\nin the visual search task and module effi-\nciency (N (cid:3) 43, p (cid:3) 0.65), suggesting the\nmodule efficiency– behavior relationships\nwere specific to the LST. Finally, we also\nreplicated these results, as well as the fol-\nlow up VIn results (Fig. 3d), using the\noriginal visual, sensory, default-mode,\nand frontoparietal networks defined by\nPower and colleagues (2011), instead of\nour own data-driven modules.\n\nChanges in global network efficiency (Eglob) across the identified reasoning task modules. a, Global network efficiency levels\nFigure 5.\nwithin each module across experiment conditions. Error bars represent 95% confidence intervals. R1, Pre-task rest; B, Binary; T, Ternary; Q,\nQuaternary;R2,Post-taskrest.b,CorrelationbetweenaccuracyintheLSTandchangesinFPVmoduleefficiencyduringthetask.Changesin\nnetwork efficiency were correlated with overall reasoning performance, such that increased efficiency correlated with better task perfor-\nmance (r (cid:3) 0.33, p (cid:6) 0.01). Results are visualized at 15% network density.\n\nWithin-module global efficiency and behavior\nOur final analysis sought to investigate changes in global effi-\nciency within each major module evident during the task. Global\nefficiency has previously been taken to be an index of increased\ncapacity for information exchange (Achard and Bullmore, 2007).\nSpecifically, we were interested in whether each module showed\nchanges in efficiency, and whether any such changes were related\nto reasoning performance.\n\nNonparametric Friedman tests revealed that both the sensory\n(Fig. 5a, orange) and FPV modules (Fig. 5a, green) demonstrated\nsignificant differences in efficiency across conditions (sensory:\n(cid:8)2 (cid:3) 44.17, p (cid:6) 0.001; FPV: (cid:8)2 (cid:3) 77.78, p (cid:6) 0.001; Fig. 5a). No\nsuch effect was found for the default-mode module ( p (cid:3) 0.23).\nBonferroni-corrected follow-up tests confirmed that the effect\nwas driven by increased efficiency within all task states compared\nwith Pre-task and Post-task resting-states (sensory: z range (cid:3)\n2.4 – 4.69, p (cid:6) 0.02; FPV: z range (cid:3) 3.78 –5.22, p (cid:6) 0.001).\n\nWe also investigated the relationship between individual dif-\nferences in module efficiency and behavioral performance. To do\nso, we correlated reasoning accuracy scores with changes in mod-\nule efficiency between the Pre-task resting-state and the most\ncomplex reasoning condition (Quaternary). Only module effi-\nciency within the FPV module was significantly correlated with\nbehavior (Fig. 5b; mean statistics across thresholds: r (cid:3) 0.33, p (cid:3)\n0.026; Spearman’s r’s (cid:3) 0.27, p (cid:3) 0.084), such that larger in-\n\nParametric increases in relational complexity have previously\nbeen tied to neural activity of segregated regions of the prefrontal\ncortices (Christoff et al., 2001; Kroger et al., 2002; Bunge et al.,\n2009; Golde et al., 2010), as well as to functional connectivity\n\nFigure 6.\nConceptual model of functional networks supporting reasoning and rest states. a, At rest, functional modules are relatively independent. b, External, goal-directed task states are\naccompanied by broad module-level changes; a FPV module forms (green), among stable default-mode (red) and sensory-motor modules (orange). c, Increased task demands are accompanied by\nspecific increases (solid lines) and decreases (dashed lines) in functional connectivity, rather than further modular reconfiguration. Ultimately, in the most complex conditions, the entire network\nreaches a similar level of correlation through both integrated and segregated dynamics (Fig. 4b).\n\nwithin frontoparietal and cingulo-opercular “multiple-demand” net-\nworks (Cocchi et al., 2014; Parkin et al., 2015; Crittenden et al.,\n2016). Cingulo-opercular connectivity has been associated with\ninitiating and maintaining task sets (Dosenbach et al., 2006),\nwhereas the frontoparietal network has been associated with\nmoment-to-moment cognitive control (Cole and Schneider, 2007).\nHere we found that reasoning performance was best explained by\na module composed of brain regions within the frontoparietal,\nsalience, subcortical, and visual networks. First, functional con-\nnectivity and global efficiency of this subnetwork increased in\nline with increased reasoning demands (Figs. 4, 5). Second, larger\nincreases in global efficiency within this module were associated\nwith higher accuracy in the reasoning task. Finally, edge-wise\nconnectivity of the frontoparietal network was shown to increase\nin line with relational complexity, largely between default-mode\nand subcortical networks. These findings are broadly consistent\nwith previous work showing that enhanced global network effi-\nciency, and connectivity within the default-mode and frontopa-\nrietal networks at rest, can predict intelligence and reasoning\nperformance (Song et al., 2008, 2009; van den Heuvel et al., 2009;\nFinn et al., 2015; Hearne et al., 2016). Together, the results confirm\nthe central role of flexible frontoparietal connectivity in implement-\ning external goal-directed cognitive control (Cole et al., 2013; Cocchi\net al., 2014).\n\nIt has been proposed that the cingulo-opercular network can\nbe further divided to include a separate “salience” system associ-\nated with bottom-up attention (Seeley et al., 2007; Power et al.,\n2011). Here we found that the salience network was implicated in\nthe FPV module but did not show complexity-induced edge-wise\nconnectivity changes. On the other hand, the cingulo-opercular\nnetwork did show edge-wise connectivity changes in line with\nreasoning complexity, but was not implicated in the FPV module.\nThis set of results is consistent with the notion that the cingulo-\nopercular network is a control-related counterpart of the frontopa-\nrietal network, and suggests that the cingulo-opercular network\nmight have a distinct role from that of the salience aspect of the\nsystem (Power et al., 2011).\n\nFunctional brain module reconfigurations have previously\nbeen related to performance on a range of higher cognitive tasks,\nincluding learning (Bassett et al., 2011), working memory (Braun\net al., 2015; Vatansever et al., 2015, 2017), and cognitive control\n(Dwyer et al., 2014). Here we found that the community archi-\ntecture of the brain is flexible, but only in response to large cog-\nnitive shifts. For example, resting-state visual and frontoparietal\nmodules, each of which is composed of several known subnet-\nworks (Power et al., 2011), merged during the reasoning task\n(Fig. 3). Importantly, this reorganization was relatively isolated;\nfollow-up analyses indicated that the rest of the brain remained\nstable across changes in task complexity. In line with this\nobservation, recent network-based reconceptualizations of\nglobal workspace theory (Dehaene et al., 1998; Kitzbichler et al.,\n2011) have suggested that large, task-based module reconfigura-\ntions arise to better serve network communication underpinning\nbehavior. Our work refines this idea by showing that once\nresting-state modules reconfigure in response to external task\ndemands, most connectivity changes occur without interrupting\nthe newly established modular architecture, as illustrated sche-\nmatically in Figure 6. Moreover, it is these connectivity changes\nwithin the newly reconfigured modules that seem to be most\nrelated to behavior.\n\nOur finding that increased demands on cognitive reasoning\nare paralleled by a reduction in network modularity and in-\ncreased efficiency has now been reported in several different task\ncontexts (Kitzbichler et al., 2011; Bola and Sabel, 2015; Godwin et\nal., 2015; Vatansever et al., 2015; Cohen and D’Esposito, 2016;\n\nShine et al., 2016; Westphal et al., 2017; Yue et al., 2017). Using\nthe NBS, we found that these global changes were supported by\nincreases and decreases in functional connectivity across multiple\nlarge-scale networks. Interestingly, the default-mode network has\nbeen suggested to act as a “global integrator,” facilitating frontopa-\nrietal cognitive control networks during conscious processing of in-\nformation (Dehaene et al., 1998; Guldenmund et al., 2012; Leech et\nal., 2012; Vatansever et al., 2015). In line with this notion, we found\nthat default-mode regions, such as the medial frontal cortex, angular\ngyri, and posterior cingulate cortex, demonstrated increased func-\ntional connectivity with frontoparietal, cingulo-opercular, and vi-\nsual networks as task demands increased.\n\nModulations of visual network connectivity might be related\nto the visual nature of the LST, and specifically the requirement\nthat participants search the 4 (cid:2) 4 matrix to identify a shape at the\nprobed location. A previous behavioral study found that partici-\npants’ eye-fixation patterns differed for one-object and two-\nobject relational problems (Gordon and Moser, 2007), raising the\npossibility that changes in relational complexity might be associ-\nated with changes in search patterns (and by extension, associ-\nated network connectivity). We cannot unequivocally rule out\npotentially small differences in eye-movement patterns between\ncomplexity conditions in our study, but there are at least two\nreasons why such findings are unlikely to be directly relevant\nhere. First, Gordon and Moser (2007) actively encouraged visual\nsearch by having their participants compare two different picture\nstimuli arranged one above the other on a page. By contrast, our\nLST paradigm involved the relatively brief presentation of a single\n4 (cid:2) 4 matrix at fixation. Second, the stimuli used by Gordon and\nMoser (2007) were visually complex line drawings that included\nseveral different object types that varied in size, shape, and semantic\ncontent across trials. By contrast, our LST stimuli involved a single\nmatrix containing identical shapes across complexity conditions,\nand did not explicitly require active search to solve for the target.\nFinally, we found no correlation between performance on a standard\nvisual search task and reasoning performance or brain-based net-\nwork efficiency metrics (subset of participants, N (cid:3) 43). If increasing\nvisual search demands across task conditions was responsible for the\nobserved network differences, performance on this visual search task\nshould have correlated with the brain-derived metrics.\n\nIn conclusion, our findings suggest that reasoning demands\nrely on selective patterns of connectivity within frontoparietal,\nsalience, cingulo-opercular, subcortical, and default-mode net-\nworks, which emerge in addition to a more general, task-induced\nmodular architecture. Further work will be needed to elucidate\nthe network processes that bring about the intricate and coordi-\nnated changes in connectivity patterns at the level of edges,\nmodules, and the whole brain, in the service higher cognition.\nMeanwhile, the current results provide novel insights into the\nroles of both specific and global network changes in reasoning.\n\nde Pasquale F, Della Penna S, Sporns O, Romani GL, Corbetta M (2016) A\ndynamic core network and global efficiency in the resting human brain.\nCereb Cortex 26:4015– 4033. CrossRef Medline\n\nFortunato S (2010) Community detection in graphs. Phys Rep 486:75–174.\n\nGarrison KA, Scheinost D, Finn ES, Shen X, Constable RT (2015) The\n(in)stability of functional brain network measures across thresholds.\nNeuroimage 118:651– 661. CrossRef Medline\n\nGodwin D, Barry RL, Marois R (2015) Breakdown of the brain’s functional\nnetwork modularity with awareness. Proc Natl Acad Sci U S A 112:3799 –\n3804. CrossRef Medline\n\nGood BH, de Montjoye Y-AA, Clauset A (2010) Performance of modularity\nmaximization in practical contexts. Phys Rev E Stat Nonlin Soft Matter\nPhys 81:46106. CrossRef Medline\n\nLancichinetti A, Fortunato S (2012) Consensus clustering in complex net-\n\nPenn DC, Holyoak KJ, Povinelli DJ (2008) Darwin’s mistake: explaining the\ndiscontinuity between human and nonhuman minds. Behav Brain Sci\n31:109 –130; discussion 130 –178. CrossRef Medline\n\nRubinov M, Sporns O (2011) Weight-conserving characterization of com-\nplex functional brain networks. Neuroimage 56:2068 –2079. CrossRef\nMedline\n\ntion on intrinsic functional connectivity MRI. Neuroimage 59:431– 438.\nCrossRef Medline\n\nSong M, Zhou Y, Li J, Liu Y, Tian L, Yu C, Jiang T (2008) Brain spontaneous\nfunctional connectivity and intelligence. Neuroimage 41:1168 –1176.\nCrossRef Medline\n\nYue Q, Martin RC, Fischer-Baum S, Ramos-Nun˜ez AI, Ye F, Deem MW\n(2017) Brain modularity mediates the relation between task complexity\nand performance. J Cogn Neurosci 29:1532–1546. CrossRef Medline\nZalesky A, Fornito A, Bullmore ET (2010) Network-based statistic: identi-\nfying differences in brain networks. Neuroimage 53:1197–1207. CrossRef\nMedline\n\nThis work was supported by the Australian Research Council (ARC) Special Research Initiatives Science of Learn-\ning Research Centre (SR120300015), and the ARC Centre of Excellence for Integrative Brain Function (ARC Centre\nGrant CE140100007). J.B.M. was supported by an ARC Australian Laureate Fellowship (FL110100103). L.C. was\nsupported by a National Health and Medical Research Council (NHMRC) grant (APP1099082). A.Z. was supported by\nan NHMRC Career Development Fellowship (GNT1047648). L.J.H. was supported by an Australian Postgraduate\nAward. We thank Oscar Jacoby and Zoie Nott for data-collection assistance, Tong Wu for assistance with imaging\n\nRecent empirical work has shown that task-induced network\nreconfigurations are modest when compared with intrinsic,\n“resting-state” networks (Cole et al., 2014; Krienen et al., 2014).\nFor example, Cole and colleagues reported a matrix-level corre-\nlation between rest and task states of r (cid:3) 0.90 (on average 38% of\nconnections demonstrated change, with an average change of r (cid:3)\n0.04). Likewise, it is now apparent that task-induced activity can\nbe well predicted and modeled from resting-state data alone\n(Cole et al., 2016; Tavor et al., 2016). These results suggest that\nwhile behaviorally meaningful, selective task-induced reconfigu-\nrations occur against a backdrop of stable, large-scale networks\nthat support diverse cognitive functions (Power et al., 2011;\nCrossley et al., 2013). An important unresolved question is how\nselective, “flexible” task-driven reconfigurations emerge among\n“stable” intrinsic brain topology. Moreover, it is critical to under-\nstand how such global and selective changes are related to behav-\nior (Bolt et al., 2017; Mill et al., 2017).\n\nTo investigate this question, we measured functional brain\nnetworks at rest, as well as during several discrete levels of rea-\nsoning complexity. To systematically manipulate task complex-\nity, we exploited relational complexity theory (Halford et al.,\n1998), which posits that the number of relations between vari-\nables quantifies the complexity of a problem, regardless of the\ndomain of the original stimulus (e.g., semantic, spatial, etc.). Us-\ning this theoretical framework, it has been shown that increasing\nthe number of relations imposes a quantifiable cognitive load\n(measured via reaction time and accuracy), and eventually results\nin a breakdown of the reasoning process (Halford et al., 2005).\nWe collected 7 T fMRI data from 65 individuals while they un-\ndertook a nonverbal reasoning task known as the Latin Square\nTask (LST; Birney et al., 2006). During the task, participants\nsolved problems with three discrete levels of difficulty, defined\nformally in terms of their relational complexity (binary, ternary,\nquaternary). In addition, just before the task, and again immedi-\nately afterward, participants underwent a resting-state scan. To\nexamine network reconfigurations across rest and reasoning\nstates, we used modularity to assess segregation and integration\nand global efficiency to assess changes in network communica-\ntion. Further, to examine selective changes, we employed the\nnetwork-based statistic to identify circumscribed changes in con-"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2872,
+            "end": 2914,
+            "text": "1",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2872,
+            "end": 2914,
+            "text": "time series were extracted for 264 spheres",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2903,
+            "end": 2929,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2903,
+            "end": 2929,
+            "text": "264 spheres of 5 mm radius",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2918,
+            "end": 2929,
+            "text": "5 mm radius",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3025,
+            "end": 3145,
+            "text": "3",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 16978,
+            "end": 16997,
+            "text": "Power et al. (2011)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 22235,
+            "end": 22270,
+            "text": "Automated Anatomical Labeling atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3426,
+            "end": 3500,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3472,
+            "end": 3500,
+            "text": "temporal Pearson correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4362,
+            "end": 4494,
+            "text": "5",
+            "labels": [
+              "Combine block — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4362,
+            "end": 4432,
+            "text": "residual time series from each 5 s rea-\nsoning period was concatenated",
+            "labels": [
+              "Combine block — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4763,
+            "end": 4784,
+            "text": "6",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4763,
+            "end": 4784,
+            "text": "converted to z scores",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5276,
+            "end": 5312,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5276,
+            "end": 5312,
+            "text": "top 5% to the top 30% of connections",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5276,
+            "end": 5312,
+            "text": "top 5% to the top 30% of connections",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7011,
+            "end": 7018,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7473,
+            "end": 7504,
+            "text": "Brain Connectivity\nToolbox (BCT",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7011,
+            "end": 7018,
+            "text": "Q index",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6189,
+            "end": 6206,
+            "text": "global efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13941,
+            "end": 13957,
+            "text": "efficiency_wei.m",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10639,
+            "end": 10659,
+            "text": "partition_distance.m",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7406,
+            "end": 7430,
+            "text": "9",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7473,
+            "end": 7504,
+            "text": "Brain Connectivity\nToolbox (BCT",
+            "labels": [
+              "Network definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7406,
+            "end": 7430,
+            "text": "Louvain greedy\nalgorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8006,
+            "end": 8226,
+            "text": "consensus approach (Lancichinetti and Fortunato, 2012),\nwhereby module partitions are calculated a number of times (10 3 itera-\ntions, for each participant and condition) and used to calculate an\nagreement matrix (agreem",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7555,
+            "end": 7592,
+            "text": "resolution parameter was set to unity",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12695,
+            "end": 12707,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12695,
+            "end": 12707,
+            "text": "5000 permuta",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

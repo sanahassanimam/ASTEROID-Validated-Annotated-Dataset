@@ -1,0 +1,931 @@
+{
+  "data": {
+    "text": "Analyzing the association between functional connectivity of the brain and intellectual performance\nORIGINAL RESEARCH ARTICLE — published: 10 February 2015\ndoi: 10.3389/fnhum.2015.00061\nFrontiers in Human Neuroscience\n\nGustavo S. P. Pamplona, Gérson S. Santos Neto, Sara R. E. Rosset, Baxter P. Rogers, and Carlos E. G. Salmon\n\nMeasurements of functional connectivity support the hypothesis that the brain is composed of distinct networks with anatomically separated nodes but common functionality. In this fMRI study, we performed an exploratory analysis of the relationship between the brain’s functional connectivity and intelligence scores derived from the Portuguese language version of the Wechsler Adult Intelligence Scale (WAIS-III) in a sample of 29 people.\n\nPARTICIPANTS\nThirty one healthy people were recruited from the academic community and the local population living in the state of São Paulo, Brazil. They were right-handed, had no history of neurological or psychological illnesses, and were native speakers of Brazilian Portuguese. Thirty of these participants made up Dataset 1. Volunteers participated in this study after responding to the standard screening interview of the Hospital of Clinics in Ribeirão Preto, and providing written consent as approved by the Research Ethics Committee of University of São Paulo.\n\nMEASURES OF INDIVIDUAL INTELLIGENCE\nThe level of intellectual performance was measured using the WAIS III test (Wechsler Adult Intelligence Scale) as modified for the Portuguese-speaking population of Brazil. Measurements originating from the third version of the test are the four fundamental indices Verbal Comprehension Index, Perceptual Organization Index, Working Memory Index, and Processing Speed Index; and the overall score, Full-Scale IQ. The test took 1 h 30 min on average and was given at a separate time from the image acquisition (less than 2 months apart, except for one participant with a 3-month difference).\n\nDATA ACQUISITION\nResting-state functional magnetic resonance images (eyes open, no fixation) from each participant were acquired in a Phillips 3 Tesla scanner with a Quasar Dual gradient system (80 mT/m, 200 mT/m/ms), using an eight channel head coil and SENSE encoding. An EPI sequence was performed with the following parameters: 2000 ms repetition time, 30 ms echo time, 240 × 240 mm field of view, 3 × 3 mm in-plane voxel size, 4.0 mm slice thickness, 0.5 mm slice gap, 32 slices, 80° flip angle, 200 volumes, 25.2 Hz bandwidth per pixel. Overall functional acquisition time was 6:48, including four initial volumes that were discarded prior to analysis.\n\nPRE-PROCESSING\nFunctional MRI data were processed using the SPM8 software and the CONN functional connectivity toolbox, both implemented in MatLab (R2013a). For each individual’s functional images, rigid body movement was measured and corrected using a two-step procedure in which the first of the specified functional images was used as a reference to which all subsequent images were realigned, then the functional images were re-registered to the mean image. Participants who moved more than 2 mm in translation or 1 degree in rotation were excluded from analysis. Functional images were then spatially smoothed using a Gaussian filter of 5 mm full width at half maximum.\nAnatomical images from each volunteer were registered to the mean functional image created in the previous step. The anatomical volumes were segmented into gray matter, white matter and cerebrospinal fluid compartments and non-linearly registered to the MNI standard space. The resulting masks were eroded once at an isotropic voxel size of 2 mm to minimize partial volume effects. This step produced spatial normalization parameters that were used to apply the transformations to the functional images.\nVoxel time series were additionally processed to reduce noise. Signals from the white matter and CSF compartments (5 principal components each) and the estimated head motion time series and first differences were removed by regression. A temporal band-pass filter was applied to remove signals outside the range 0.008–0.09 Hz.\n\nFUNCTIONAL CONNECTIVITY AND GRAPH ANALYSIS\nAverage signals were extracted from a set of 116 regions defined by the Automated Anatomical Labeling (AAL) atlas. Eight of the AAL regions were excluded due to small size and cerebellar regions were excluded because they were not fully covered; therefore 82 cortical and subcortical regions were included in total.\nWeighted association matrices were created using the Pearson correlations between the time series of each pair of brain regions; values were Fisher Z transformed. The Brain Connectivity Toolbox was used to compute network measures including characteristic path length, clustering coefficient, global and local efficiency.\n\nRESULTS — SAMPLE USED FOR INTELLIGENCE ANALYSES\nThirty participants (Dataset 1) were included in the small-world analysis (ages: mean 27 years, SD 6, range: 19–38; 15 women) and 29 participants were included in the intellectual performance study (ages: mean 27 years, SD 6, range: 19–38; 14 women)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 99,
+            "text": "Analyzing the association between functional connectivity of the brain and intellectual performance",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 219,
+            "end": 241,
+            "text": "Gustavo S. P. Pamplona",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 186,
+            "end": 217,
+            "text": "Frontiers in Human Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 161,
+            "end": 185,
+            "text": "10.3389/fnhum.2015.00061",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 151,
+            "end": 155,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 186,
+            "end": 217,
+            "text": "Frontiers in Human Neuroscience",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1984,
+            "end": 1997,
+            "text": "Resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2036,
+            "end": 2058,
+            "text": "eyes open, no fixation",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2101,
+            "end": 2117,
+            "text": "Phillips 3 Tesla",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2299,
+            "end": 2306,
+            "text": "2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2324,
+            "end": 2329,
+            "text": "30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2341,
+            "end": 2353,
+            "text": "240 × 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2369,
+            "end": 2421,
+            "text": "3 × 3 mm in-plane voxel size, 4.0 mm slice thickness",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2399,
+            "end": 2405,
+            "text": "4.0 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2423,
+            "end": 2429,
+            "text": "0.5 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2441,
+            "end": 2450,
+            "text": "32 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2452,
+            "end": 2455,
+            "text": "80°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2510,
+            "end": 2554,
+            "text": "Overall functional acquisition time was 6:48",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4994,
+            "end": 5061,
+            "text": "29 participants were included in the intellectual performance study",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4994,
+            "end": 5061,
+            "text": "29 participants were included in the intellectual performance study",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4980,
+            "end": 4988,
+            "text": "15 women",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4945,
+            "end": 4978,
+            "text": "mean 27 years, SD 6, range: 19–38",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 927,
+            "end": 939,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 941,
+            "end": 998,
+            "text": "had no history of neurological or psychological illnesses",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1009,
+            "end": 1048,
+            "text": "native speakers of Brazilian Portuguese",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3089,
+            "end": 3179,
+            "text": "Participants who moved more than 2 mm in translation or 1 degree in rotation were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1239,
+            "end": 1336,
+            "text": "providing written consent as approved by the Research Ethics Committee of University of São Paulo",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2566,
+            "end": 2624,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2566,
+            "end": 2586,
+            "text": "four initial volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2825,
+            "end": 2871,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2825,
+            "end": 2835,
+            "text": "rigid body",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3166,
+            "end": 3193,
+            "text": "3",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3112,
+            "end": 3165,
+            "text": "more than 2 mm in translation or 1 degree in rotation",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3223,
+            "end": 3300,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3250,
+            "end": 3258,
+            "text": "Gaussian",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3269,
+            "end": 3300,
+            "text": "5 mm full width at half maximum",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3302,
+            "end": 3384,
+            "text": "5",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3443,
+            "end": 3520,
+            "text": "6",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3525,
+            "end": 3574,
+            "text": "7",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3556,
+            "end": 3574,
+            "text": "MNI standard space",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3746,
+            "end": 3804,
+            "text": "8",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3869,
+            "end": 3949,
+            "text": "9",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2709,
+            "end": 2745,
+            "text": "CONN functional connectivity toolbox",
+            "labels": [
+              "Extract regressors — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3921,
+            "end": 3948,
+            "text": "5 principal components each",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3996,
+            "end": 4013,
+            "text": "first differences",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4042,
+            "end": 4081,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2709,
+            "end": 2745,
+            "text": "CONN functional connectivity toolbox",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4053,
+            "end": 4062,
+            "text": "band-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4118,
+            "end": 4131,
+            "text": "0.008–0.09 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4249,
+            "end": 4290,
+            "text": "11",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4433,
+            "end": 4468,
+            "text": "82 cortical and subcortical regions",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4177,
+            "end": 4233,
+            "text": "12",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4546,
+            "end": 4620,
+            "text": "13",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4546,
+            "end": 4566,
+            "text": "Pearson correlations",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4622,
+            "end": 4654,
+            "text": "14",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4634,
+            "end": 4642,
+            "text": "Fisher Z",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4660,
+            "end": 4686,
+            "text": "15",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4660,
+            "end": 4686,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4734,
+            "end": 4813,
+            "text": "characteristic path length, clustering coefficient, global and local efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 328,
+            "end": 438,
+            "text": "Measurements of functional connectivity support the hypothesis that the brain is composed of distinct networks",
+            "labels": [
+              "Summary"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

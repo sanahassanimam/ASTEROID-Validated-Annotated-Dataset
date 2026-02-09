@@ -1,0 +1,387 @@
+{
+  "data": {
+    "text": "2.3.Definitionofbrainnodes\nLarge-scale brain networks were identified based on\nan atlas of 264 brain nodes of interest (Power et al\n2011 ) (see figure 1(a)). This atlas was derived from\nboth resting and task FC meta-analyses and has been\nwidely used in brain network analyses (Vatansever\net al 2015 , Schultz and Cole 2016 ). The 264 brain\nnodes were assigned to 14 sub-networks: sensory\nsomatomotor hand network, sensory somatomo-\ntor mouth network, cingulo-opercular Task control\nnetwork (CON), auditory network (Aud), DMN,\nmemory retrieval network (Mem), visual network\n(Vis), fronto-parietal Task control network (FPN),\nsalience network (SN), subcortical network (Sub),\nventral attention network (V AN), DAN, cerebellar\nnetwork (CBN), and a network of uncertain func-\ntion (Uncertain). We combined two sensory somat-\nomotor sub-networks as a single sensory somatomo-\ntor network (SMN) for convenience of analysis. For\nthe assignment of nodes in each network, please see\nfigure S1 (available online at stacks.iop.org/JNE/18/\n056027/mmedia ) in the supplementary information.\nFor each subject, the nodal signals were extracted by\naveraging the time series over all voxels in each of the\n264 nodes and then by normalising to a zero mean\nand unit variance. The resulting time-series was used\nto construct the ISFC network.\n2.4.Time-varyingISFC\nPrevious studies pointed that movie stimuli evoked\nhighly synchronized signals across subjects (Hasson\net al 2004 , Mantini et al 2012 ). Therefore, averaging\nBOLD time series across subjects before computing\nFC (also called ISFC) helps to suppress correlations\ndue to intrinsic activity and subject-specific movie-\nevoked activity, and could enhance the movie-related\nactivity shared across subjects. In this study, time-\nvarying ISFC was computed using the sliding window\nmethod, as shown in figures 1(b) and (c). Window\nsize is a parameter that can affect the results. In the\ncontext of video stimuli, it has been suggested that the\n30-TR window seems to be balanced (Di and Biswal\n2020 ). We repeated the time-varying ISFC analysis\nusing window sizes from 30 to 40 TRs, and the res-\nults showed that they were very similar in the brain\ngraph (see figures S2 and S3 in the supplementary\ninformation). Therefore, we selected a window width\nof 35-TRs and a step of 1-TR between windows. In\neach window, all subjects were evenly and randomly\ndivided into two groups. The group-level ROI time\nseries was obtained by averaging the corresponding\nROI time series of all subjects within that group, and\nthe ISFC matrix was constructed by calculating the\nPearson correlation between two groups of ROIs. This\nprocedure was repeated 50 times by randomly assign-\ning the subjects to each group. The r-values of these\nmatrices were converted to z-values using Fisher’s\nz-transformation and then averaged to obtain the\nmean ISFC matrix. Subsequently, this ISFC matrix\n3\nJ. Neural Eng.18(2021) 056027 G Zhang and X Liu\nFigure1. Schematic overview of the method. (a) Functional MRI BOLD signals were extracted from spherical regions of interest\n(ROIs) based on the Power’s atlas. (b) The ISFC matrix was computed by Pearson correlation of the subject-averaged ROIs time\nseries from one group with that from the other group. This procedure was repeated 50 times with different random groupings of\nsubjects, and the resulting ISFC matrices were averaged to produce the group ISFC matrix. (c) The dynamic-ISFC was\nconstructed by the sliding-window way, with a window width of 35-TR and a between-window step of 1-TR, and the ISFC matrix\nin each window were calculated according to (b). (d) The time-varying community structure of ISFC networks were obtained by a\ncommunity detection algorithm, which calculates the optimal community division and modularity in each window. (e) The\ntemporal co-occurrence matrix was constructed after community division and four dynamic spatial topological metrics were\nextracted based on this matrix. (f) The time-varying modularity was extracted to describe the temporal changes in brain\ncommunity structure, and they were grouped into high, medium, and low periods by calculating whether the modularity at each\nmoment is greater than or within or less than one standard deviation around the mean value.\nwas converted back to the r-value by inverse Fisher z-\ntransformation. We took the (ISFC +ISFCT)/2 as the\nresult to ensure symmetry (Kim et al 2018 ). Finally,\nwe obtained the time-varying ISFC network induced\nby movie stimuli.2.5.Dynamiccommunitydetectionanalysis\nThe community detection algorithm divides nodes\ninto non-overlapping communities. It generally\ndetects the community structure in a functional net-\nwork by maximising the module quality metric Q\n4\nJ. Neural Eng.18(2021) 056027 G Zhang and X Liu\n(Newman and Girvan 2004 ), which is also called\nmodularity. A higher value of modularity represents\na more evident community structure. Therefore, this\nalgorithm provides not only the community parti-\ntion but also an index to evaluate whether the net-\nwork community structure is evident. Recent studies\nhave proposed that the negative correlation in the FC\nmatrix also possesses some physiological significance,\nand the correlated and anti-correlated brain activity\nmay signify cooperative and competitive interactions\nbetween brain areas that subserve adaptive beha-\nviours (Khambhati et al 2018 ). Therefore, we used\nthe original ISFC matrix with no threshold to per-\nform community division. An optimised community\ndetection algorithm in the Brain Connectivity Tool-\nbox was used to detect the community structure of\nthe ISFC matrix in each time window. It considers\nboth positive and negative correlations in a network\n(Blondel et al 2008 ). We ran this algorithm 100 times\nand chose the maximum Qand its corresponding\ncommunity partition as the result. The default resol-\nution parameter of γ=1 was selected, yielding the\nmodularity scores Qtand time-resolved partitions Dt\nfort=1 … T, where Tis the number of windows, as\nshown in figure 1(d).\n2.6.Calculationoftemporalco-occurrencematrix\nWe first calculated the temporal co-occurrence mat-\nrix of the dynamic brain networks, which summar-\nise the profile of node-to-node ISFC stability across\ntime, as shown in figure 1(e). The community struc-\nture Dtwithin each window was used to construct an\nadjacency matrix Aijt, and Aijt=1 if nodes iandjare\nin the same community at time window t; otherwise,\nAijt=0. The temporal co-occurrence matrix was cal-\nculated as Pij=∑T\nt=1Aijt\nT(Bassett et al2015 , Braun et al\n2015 ). Each element in this matrix measures the pro-\nportion of times that the two brain nodes are part of\nthe same community. A higher value indicates that\nthe two nodes participate more frequently in the same\ncommunity.\n2.6.1. Node-level topological metrics\nBased on the temporal co-occurrence matrix, we\ncharacterised each node’s dynamic topological prop-\nerties using four metrics: integration, recruitment,\nspatio-temporal diversity, and within-community\nnormalised centrality as shown in figure 1(e).\nThe integration of node iwas computed as:\nIi=1\nN−ns∑\nj/∈SPij (1)\nwhere Pijis the probability of node iand jwithin\nthe same community, Sis the cognitive network to\nwhich node ibelongs, and nsis the number of nodes\ninS. N is the total number of brain nodes. Iicorres-\nponds to the average probability that brain node iis in\nthe same community as that of nodes from networksother than S. A node with a high integration coeffi-\ncient tends to interact with nodes within other cog-\nnitive networks (Mattar et al 2015 ).\nThe recruitment of node iwas computed as:\nRi=1\nns∑\nj∈SPij (2)\nwhere the meaning of each symbol is the same as\nabove. The recruitment of node imeasures the tend-\nency of its interaction with other nodes within the\nsame cognitive network (Mattar et al 2015 ).\nThe spatio-temporal diversity of node iwas com-\nputed as:\nHi=−1\nlog(m)∑\nu∈Mpi(u)logpi(u) (3)\nwhere pi(u) =si(u)\nsi,siis the temporal co-occurrence\nstrength of node iwith nodes in all networks, si(u)\nis the strength of node iwith nodes in network u,\nmis the total number of networks, and Mis the\nset of networks. Nodes with high spatio-temporal\ndiversity scores are those that have relatively spatially\nvaried distribution of time-varying interactions with\nall communities and are putative loci for integrat-\ning information between communities (Fornito et al\n2012 ). However, in this study, we have adapted this\nformula slightly to focus more on the interactions\nbetween nodes of different networks than on the\ninteractions between nodes of different communities.\nThe within-community normalised centrality of\nnode iwas computed as:\nZi=Si(mi)−S(mi)\nσS(mi)(4)\nwhere miis the reference community that contains\nnode i, si(mi) is the temporal co-occurrence strength\nof node iwithin the reference community mi,S(mi)\nis the mean strength of all nodes within the refer-\nence community mi, and σS(mi)is the standard devi-\nation of the node strength within the reference com-\nmunity mi. This reference community was calculated\nusing the static ISFC network, which was construc-\nted using the entire movie dataset. We ran the com-\nmunity detection algorithm on this static network 100\ntimes and chose the maximum Qand its correspond-\ning partition as the reference community. The within-\ncommunity normalised centrality quantifies the cent-\nrality of a node within its own community. Nodes\nwith high centrality tend to be local information-\nprocessing hubs (Chen et al 2016 ).\nThe integration and spatio-temporal diversity\nsimultaneously assess the tendency of a node to inter-\nact with other nodes in other networks from differ-\nent perspectives. We regarded the nodes with the top\n50% highest coefficients in both the integration and\nspatio-temporal diversity of all nodes as flexible nodes\nin brain network reconfiguration. The distributions\n5\nJ. Neural Eng.18(2021) 056027 G Zhang and X Liu\nof these nodes were studied. In addition, because the\nphysiological significance of the uncertain network is\nunknown, the nodes in this network were excluded\nwhen we calculated the flexible nodes.\n2.6.2. Network-level topological metrics\nUnderstanding the role of specific cognitive networks\ncould provide new insights into how brain interac-\ntions occur during continuous naturalistic stimuli.\nWe defined network-level graph metrics by averaging\nthe corresponding metric coefficients of nodes within\na network. The uncertain network was also excluded\nfrom our analysis for the same reason as that before.\nTo verify the significance of these dynamic met-\nrics of each cognitive network, we compared the\ndynamic metrics of each cognitive network with the\nexpectations of the null model. The null models\nwere constructed by random permutations of node-\nto-network assignments in the real data. This pro-\ncedure ensured that the number of sizes of cognit-\nive networks in the null model was identical to that\nobserved in the real data. We ran this procedure 1000\ntimes to construct corresponding null distributions,\nand permutation tests were performed to confirm\nwhether the dynamic metrics under real data signi-\nficantly deviated from the null model.\n2.6.3. The dynamic ‘role’ of each network\nThe dynamic ‘role’ of each cognitive network in the\nevolution of the brain community structure was spe-\ncified by calculating whether the network-level integ-\nration and recruitment extent of each cognitive net-\nwork were less than, similar to, or more than the\ncorresponding value range of the null model. Along\nthe dimension of dynamic network integration, we\nassigned a role title to each cognitive network as either\n(a) loner (less than null), (b) connector (similar to\nnull), or (c) integrator (greater than null); in the con-\ntext of dynamic network recruitment, networks could\nbe classified as either (a) ephemeral (less than null),\n(b) unstable (similar to null), or (c) stable (greater\nthan null) (Mattar et al 2015 ).\n2.7.Time-varyingmodularityofthebrain\nThe community detection algorithm divides func-\ntional brain networks into an assumed community\nstructure or module. Meanwhile, the time-varying\nmodularity is obtained by calculating the modular\nindex Qtwithin each time window (see figure 1(f)),\nwhich describes the functional separation or integra-\ntion of the whole brain across time. We divided the\ntime-varying modularity into high, medium, and low\nperiods by calculating whether the brain network’s\nmodularity at each moment is greater than or within\nor less than one standard deviation of the modular-\nity sequence (Hilger et al 2020 ). The average of all FC\nin each period was regarded as the centroid matrix of\neach period."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27,
+            "end": 157,
+            "text": "Large-scale brain networks were identified based on\nan atlas of 264 brain nodes of interest (Power et al\n2011 ) (see figure 1(a)).",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 326,
+            "end": 378,
+            "text": "The 264 brain\nnodes were assigned to 14 sub-networks",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1096,
+            "end": 1256,
+            "text": "the nodal signals were extracted by\naveraging the time series over all voxels in each of the\n264 nodes and then by normalising to a zero mean\nand unit variance.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2593,
+            "end": 2640,
+            "text": "Pearson correlation between two groups of ROIs.",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2730,
+            "end": 2869,
+            "text": "The r-values of these\nmatrices were converted to z-values using Fisher’s\nz-transformation and then averaged to obtain the\nmean ISFC matrix.",
+            "labels": [
+              "Connectivity normalization — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 326,
+            "end": 378,
+            "text": "The 264 brain\nnodes were assigned to 14 sub-networks",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 326,
+            "end": 378,
+            "text": "The 264 brain\nnodes were assigned to 14 sub-networks",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5100,
+            "end": 5189,
+            "text": "the negative correlation in the FC\nmatrix also possesses some physiological significance,",
+            "labels": [
+              "Negative correlation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5389,
+            "end": 5472,
+            "text": "we used\nthe original ISFC matrix with no threshold to per-\nform community division.",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5648,
+            "end": 5700,
+            "text": "both positive and negative correlations in a network",
+            "labels": [
+              "Graph characteristics — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6917,
+            "end": 7051,
+            "text": "four metrics: integration, recruitment,\nspatio-temporal diversity, and within-community\nnormalised centrality as shown in figure 1(e).",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6917,
+            "end": 7051,
+            "text": "four metrics: integration, recruitment,\nspatio-temporal diversity, and within-community\nnormalised centrality as shown in figure 1(e).",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5523,
+            "end": 5634,
+            "text": "Brain Connectivity Tool-\nbox was used to detect the community structure of\nthe ISFC matrix in each time window.",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3809,
+            "end": 3879,
+            "text": "temporal co-occurrence matrix was constructed after community division",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12561,
+            "end": 12649,
+            "text": "The average of all FC\nin each period was regarded as the centroid matrix of\neach period.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27,
+            "end": 157,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 326,
+            "end": 378,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 326,
+            "end": 378,
+            "text": "3",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1096,
+            "end": 1256,
+            "text": "4",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2593,
+            "end": 2640,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2730,
+            "end": 2869,
+            "text": "6",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3809,
+            "end": 3879,
+            "text": "7",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5100,
+            "end": 5189,
+            "text": "8",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5389,
+            "end": 5472,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5648,
+            "end": 5700,
+            "text": "10",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6917,
+            "end": 7051,
+            "text": "11",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

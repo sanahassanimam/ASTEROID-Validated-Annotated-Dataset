@@ -1,0 +1,755 @@
+{
+  "data": {
+    "text": "Modular structure of functional networks in olfactory memory\nDavid Meunier, Pierre Fonlupt, Anne-Lise Saive, Jane Plailly, Nadine Ravel, Jean-Pierre Royet\nNeuroImage 95 (2014) 264–275 — © 2014 Elsevier Inc. — doi:10.1016/j.neuroimage.2014.03.041\n\nSubjects\nA total of 16 young [7 men; age: 27.14 ± 5.27 years (mean ± SD); range: 21.90–37.30] and 22 elderly (11 men; age 68.64 ± 3.29 years; range: 65.00–74.76) right-handed subjects participated in the study. This experiment was conducted in accordance with the Declaration of Helsinki. All subjects provided written informed consent as required by the local Institutional Review Board according to French regulations on biomedical experiments with healthy volunteers [Ethical Committee of CPP-Sud Est II (n CPP A 06-024), DGS2006-0226, May 11, 2006].\n\nStimuli and experiment\nThe subjects participated in a classical olfactory memory recognition task initially proposed by Engen and Ross (1973). A total of 100 odorants were used, comprising 50 target (old) and 50 distractor (new) odorants. Stimuli were counterbalanced by quality and mean scores of intensity, hedonicity, and familiarity obtained from previous data (Royet et al., 1999). The odorants were presented using an airflow olfactometer, which allowed the stimuli to be synchronized with breathing (Vigouroux et al., 2005). Odorants were delivered through a standard oxygen mask positioned on the subject's face.\n\nTwo functional runs corresponding to encoding and retrieval sessions were performed, separated by the structural image acquisition sequence. The 50 target odorants were presented in the encoding session and then interleaved with the 50 distractor odorants in the retrieval session. Odorants were delivered according to an event-related fMRI design with a jittered interstimulus interval of ~15 s, depending on the participant's respiration. During the encoding session, participants indicated when they detected an odorant by pressing one button with their right hand. Participants were not instructed about the objective of the next session. During the retrieval session, the participants indicated whether or not they had already smelled the odorant in the first session.\n\nBehavioral data analysis\nRecognition memory performance was assessed using parameters issued from signal detection theory. Two parameters were calculated from the Hit and FA scores: a memory score (d′L) and a response bias score (CL).\n\nImage acquisition\nImages were acquired with a 1.5-Tesla MAGNETOM Sonata whole-body imager (Siemens medical®, Erlangen, Germany) equipped with a 4-channel circularly polarized head coil. For functional imaging, we obtained 26 interleaved 4-mm-thick axial slices using a T2*-weighted echo-planar sequence with the following parameters: repetition time (TR) = 2500 ms, echo time (TE) = 50 ms, flip angle = 80°, file-of-view (FOV) = 240 × 240 mm, and imaging matrix = 64 × 64 (voxel size: 3.8 × 3.8 × 4 mm). We collected 324 scans for the encoding session and 624 scans for the retrieval session. Between functional sessions, a high-resolution structural T1-weighted anatomical image (inversion-recovery 3D Gradient-Echo sequence, 1 × 1 × 1 mm) parallel to the bicommissural plane and covering the entire brain was acquired over ~10 min.\n\nfMRI data pre-processing and classical parametric statistical analyses\nFunctional images were pre-processed using statistical parametric mapping software (SPM2, Wellcome Department of Cognitive Neurology, London, UK). Images were spatially realigned, slice-time corrected, normalized, and smoothed with an 8-mm kernel. Pre-processed data were then statistically analyzed using a random-effects model. Regressors of interest, including the five experimental conditions of interest (Hit, FA, CR, Miss, and non-answer), were modeled using boxcar predictors convolved with both the canonical hemodynamic response function (hrf) and its time-derivative. Voxel-by-voxel single sample t-tests were performed and 12 t-contrast maps were calculated by comparing the Hit, FA, CR, and Miss items to each other (e.g., [Hit vs. FA], [Hit vs. CR], [Hit vs. Miss], [FA vs. CR], [FA vs. Miss], and [CR vs. Miss]) in both directions.\n\nVOIs selection and time-series extraction\nFrom the activation peaks, cubes with a length of 8 mm were defined, and raw time series averaged over the voxels within a cube were extracted using the MarsBar toolbox (http://marsbar.sourcefourge.net) for each of the 38 participants. Head movement parameters (rotation and translation) were regressed, and residuals were high-pass filtered (N0.01 Hz) to remove the scanner drift component of the signal and normalized (Z-score) for each session.\n\nCondition-based correlation matrices\nThe specific regressors for each condition (i.e., the set of trials that were identified as belonging to a given condition on the basis of the subject's response) were considered and convolved with a canonical hrf. Only the positive and null parts of the hrf were considered and used to compute weighted correlations of VOI structure time-series pairs. This resulted in a set of correlation matrices (36 × 36) for each one of the four response categories (Hit, FA, CR, and Miss).\n\nWeighted signed modularity\nModular decomposition was computed using a greedy algorithm from Clauset et al. (2004), modified to take into account weighted signed modularity. Individual modular partitions were summarized by mean co-classification matrices by averaging binary co-classification matrices across subjects.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 60,
+            "text": "Modular structure of functional networks in olfactory memory",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 61,
+            "end": 74,
+            "text": "David Meunier",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 170,
+            "end": 174,
+            "text": "2014",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 193,
+            "end": 206,
+            "text": "Elsevier Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 213,
+            "end": 245,
+            "text": "10.1016/j.neuroimage.2014.03.041",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2481,
+            "end": 2506,
+            "text": "1.5-Tesla MAGNETOM Sonata",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2657,
+            "end": 2671,
+            "text": "26",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2672,
+            "end": 2682,
+            "text": "4-mm-thick",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2838,
+            "end": 2841,
+            "text": "80°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2786,
+            "end": 2799,
+            "text": "2500 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2812,
+            "end": 2823,
+            "text": "50 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2857,
+            "end": 2876,
+            "text": "240 × 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2908,
+            "end": 2936,
+            "text": "3.8 × 3.8 × 4 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "SPM2",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1746,
+            "end": 1771,
+            "text": "event-related fMRI design",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 945,
+            "end": 968,
+            "text": "A total of 100 odorants",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 991,
+            "end": 1039,
+            "text": "50 target (old) and 50 distractor (new) odorants",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2101,
+            "end": 2196,
+            "text": "participants indicated whether or not they had already smelled the odorant in the first session",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1779,
+            "end": 1819,
+            "text": "jittered interstimulus interval of ~15 s",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 945,
+            "end": 968,
+            "text": "A total of 100 odorants",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3975,
+            "end": 4068,
+            "text": "12 t-contrast maps were calculated by comparing the Hit, FA, CR, and Miss items to each other",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 256,
+            "end": 275,
+            "text": "A total of 16 young",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 277,
+            "end": 282,
+            "text": "7 men",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 289,
+            "end": 307,
+            "text": "27.14 ± 5.27 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 357,
+            "end": 363,
+            "text": "11 men",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 369,
+            "end": 387,
+            "text": "68.64 ± 3.29 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 409,
+            "end": 421,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 698,
+            "end": 716,
+            "text": "healthy volunteers",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 718,
+            "end": 798,
+            "text": "Ethical Committee of CPP-Sud Est II (n CPP A 06-024), DGS2006-0226, May 11, 2006",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2383,
+            "end": 2401,
+            "text": "memory score (d′L)",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2408,
+            "end": 2432,
+            "text": "response bias score (CL)",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "SPM2",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "SPM2",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "SPM2",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "3",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3576,
+            "end": 3587,
+            "text": "8-mm kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3576,
+            "end": 3587,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4466,
+            "end": 4532,
+            "text": "motion parameters regressed",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4466,
+            "end": 4532,
+            "text": "5",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4492,
+            "end": 4516,
+            "text": "rotation and translation",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4492,
+            "end": 4516,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4553,
+            "end": 4571,
+            "text": "high-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4553,
+            "end": 4571,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4573,
+            "end": 4581,
+            "text": "N0.01 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4573,
+            "end": 4581,
+            "text": "8",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4639,
+            "end": 4659,
+            "text": "Z-score",
+            "labels": [
+              "Intensity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4639,
+            "end": 4659,
+            "text": "9",
+            "labels": [
+              "Intensity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4257,
+            "end": 4284,
+            "text": "cubes with a length of 8 mm",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4383,
+            "end": 4398,
+            "text": "MarsBar toolbox",
+            "labels": [
+              "Time series ROI — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4303,
+            "end": 4357,
+            "text": "raw time series averaged over the voxels within a cube",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5011,
+            "end": 5032,
+            "text": "weighted correlations",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5095,
+            "end": 5125,
+            "text": "correlation matrices (36 × 36)",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5342,
+            "end": 5368,
+            "text": "weighted signed modularity",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5267,
+            "end": 5283,
+            "text": "greedy algorithm",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5419,
+            "end": 5450,
+            "text": "mean co-classification matrices",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

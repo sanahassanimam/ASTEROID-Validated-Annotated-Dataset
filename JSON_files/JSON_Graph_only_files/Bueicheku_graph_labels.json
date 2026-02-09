@@ -1,0 +1,222 @@
+{
+  "title": "Visual search task immediate training effects on task-related functional connectivity",
+  "data": {
+    "text": "2.4.2. Post-processing analysis: individual local and distant degree maps\nPost-processing analyses were conducted with Matlab coding (v7.9, The\nMathworks, Inc, Natick, MA). At the individual level, a whole-brain matrix Pearson\nCorrelation Coefficient between each voxel pair’s time course was estimated for each\nparticipant and session. A mask of 6332 voxels was used that covered the entire brain.\nEach participant had a total of four matrices, two of them containing the r-values, and\nthe other two containing the p-values. According to previous graph-based functional\nconnectivity approaches (Sepulcre et al. 2010), the functional connectivity matrices of\npositive correlations represent the strength of the connectivity between each pair of\nvoxels across the brain (i.e., the degree), and the pattern of these connections represents\nthe functional connectivity network supporting task-performance at each time point.\nTherefore, we used the positive correlations in the following steps of the analysis, and\nwe removed the negative r-values due to their controversial interpretation in functional\nconnectivity MRI (Murphy et al. 2009; Van Dijk et al. 2010).\n\nDegree analyses were used to study the effects of training on task-related\nfunctional connectivity and its spatial distribution. Degree analyses make it possible to\nextract the spatial distance information from the connectivity patterns, differentiating\nbetween regional connections (local links) and interregional connections (distant links).\nThis method was previously used to study the connectivity patterns underlying human\ninformation processing. To achieve this aim, a recently developed whole-brain voxel-\nwise method to differentiate between spatial local and distant connectivity in resting and\ntask-evoked BOLD fMRI data was used (Sepulcre et al. 2010). This method was\napplied in the present study, as our goal was to study both local and large-scale\nfunctional connectivity changes due to cognitive training. As it is described in the\noriginal method, we used a restriction on degree centrality analysis based on physical\ndistance, thus, the whole-brain voxel pairwise functional connectivity analyses results\nwere spatially organized according to a neighborhood threshold. In Sepulcre et al.\n(2010), the authors investigated different distance thresholds until they determined that\nthe optimal neighborhood threshold for analogous dimensional data is 3 voxels\n(>14mm) around the target neighborhood. The segregation of local and distant\nconnections in physical distance allows the optimal separation between different types\nof cerebral cortex (such as primary modal vs. heteromodal cortex). Therefore, in the\npresent manuscript, because we are applying the same technique and the voxel size of\nthe functional MR images was down-sampled from 3 mm to 6 mm (to reduce the\ncomputational processing cost), the optimal neighborhood threshold was set to 21 mm\nto segregate local (<21mm radius) and distant (>21mm radius) connectivity on each\nindividual matrix [radius of a sphere = 3mm from the center of the target voxel + 18\nmm of three neighboring voxels (6mm each)]. Then group comparison analyses were\nconducted.\n\n2.4.6. Overlap analysis using network parcellation maps\nThe 7-network estimate parcellation liberal mask of the human cerebral cortex (Yeo\net al. 2011) was applied to our degree maps in order to classify and describe the results.\nIn Yeo et al. (2011), the 7-network map was obtained from fMRI data from 1000\nsubjects, and the clustering analysis yielded the convergence of brain voxels in resting-\nstate known networks. The map includes an early sensory visual network (Vis), a\nsensorimotor network (Mot), the dorsal and the ventral attention network (dATN and\nvATN), a limbic system network (LMB), the frontoparietal control network (FPN), and\nthe default mode network (DMN). Here, we used in-house developed MATLAB code to\nconduct overlap analysis, which allowed us to classify the results for the degree of\ntraining effects in different networks and estimate the percentage of change in each\nnetwork. The analysis was performed separately for the local degree map and for the\ndistant degree map in a voxel-wise manner.\nThe method consisted of finding the voxels that changed within each network.\nThus, bearing in mind that each network extends over a spatial portion of the brain (i.e.,\nvisual network), and that the entire brain surface is spatially subdivided into the 7-\nnetwork estimate parcellation mask, each voxel that changed had to fall into one\nnetwork (e.g., a voxel located in the medial occipital cortex falls into the visual\nnetwork). Therefore, we calculated the number of voxels that changed within each\nnetwork (i.e., voxels that showed a change in the number of distant links). Afterwards, a\ncorrection based on the total number of voxels in each network was applied, thus\nobtaining the proportion of change in each network. That is, the number of voxels that\nchanges within each network was multiplied by 100 and divided by the total number of\nvoxels in that network, obtaining the percentage of change."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 337,
+            "end": 358,
+            "text": "A mask of 6332 voxels",
+            "labels": [
+              "ROI definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 339,
+            "end": 351,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 200,
+            "end": 250,
+            "text": "whole-brain matrix Pearson\nCorrelation Coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 219,
+            "end": 226,
+            "text": "2",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 921,
+            "end": 1159,
+            "text": "Therefore, we used the positive correlations in the following steps of the analysis, and\nwe removed the negative r-values due to their controversial interpretation in functional\nconnectivity MRI (Murphy et al. 2009; Van Dijk et al. 2010).",
+            "labels": [
+              "Negative correlation — Type"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 659,
+            "end": 680,
+            "text": "3",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 769,
+            "end": 787,
+            "text": "(i.e., the degree)",
+            "labels": [
+              "Graph measures — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 780,
+            "end": 786,
+            "text": "4",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2875,
+            "end": 3000,
+            "text": "the optimal neighborhood threshold was set to 21 mm\nto segregate local (<21mm radius) and distant (>21mm radius) connectivity",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2921,
+            "end": 2926,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3242,
+            "end": 3290,
+            "text": "The 7-network estimate parcellation liberal mask",
+            "labels": [
+              "Network definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3246,
+            "end": 3255,
+            "text": "6",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4999,
+            "end": 5058,
+            "text": "multiplied by 100 and divided by the total number of\nvoxels",
+            "labels": [
+              "Result aggregation — Type"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4052,
+            "end": 4072,
+            "text": "7",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

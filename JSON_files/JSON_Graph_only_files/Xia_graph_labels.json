@@ -1,0 +1,488 @@
+{
+  "data": {
+    "text": "2.5 | Group independent component analysis\n\n2.6 | Dynamic FNC computation\n\n2.7 | K-means clustering\n\n2.8 | State analysis\n\n2.9 | Dynamic graph metrics curve of different age\nranges\n\n2.10 | Topological properties of discrete functional\nconnectivity states\n\n2.11 | The correlation between Wechsler adult\nintelligence scale and state\n\nBefore dynamic FNC computation, the time courses of RSNs were\ntemporally bandpass filtered (0.023–0.18 Hz) (Gonzalez-Castillo et al.,\n\nFNC was computed using a sliding-window correlation approach.\n\nlength, we selected the length (22TR) according to a former study\nwith a Gaussian of σ = 3 TR (Allen et al., 2014). The window was\n\nthe time courses of each pair of the 59 RSNs were used to calculate\nFNC (Pearson's correlation coefficient) and a 59 × 59 correlation\n\nmatrix was obtained. A Fisher's r-to-z transformation was then applied\n\nbution as r is the Pearson correlation coefficient and z is approxi-\n\nFor the dFNC patterns reoccur within subjects across time and across\n\nsubjects, we applied the k-means algorithm to divide the dFNC win-\n\ndows into separate clusters. The clustering algorithm was applied to a\n\noptimal number of clusters was estimated as five using the elbow cri-\n\nGroup ICA was performed using the GIFT toolbox (http://mialab.\n\nmrn.org/software/gift). Following the Allen et al. (2014), we used a\n\nrelatively high model order (number of components, C = 100) to\nachieve a “functional parcellation” of refined cortical and subcortical\n\nresulting centroids of subsample were used as starting points to clus-\n\nter all data into five clusters. A k of 4 and 6 was used respectively to\n\ncomponents corresponding to known anatomical and functional\n\nsegmentations. In group ICA, principal component analysis (PCA)\n\nconcatenated and further decomposed into 100 PCs using the\nexpectation–maximization algorithm (Roweis, 1998). The Infomax\n\nalgorithm was then used to find independent components. This\n\nalgorithm was repeated 20 times in ICASSO (http://www.cis.hut.\n\nfi/projects/ica/icasso) and spatial maps (SMs) were estimated as the\n\nmodes of the component clusters. Based on visual recognition and\n\ncalculating spatial Pearson correlation, 41 components were dis-\n\ncarded and a total of 59 components were identified as intrinsic\n\ntime courses of the 59 ICNs, including (a) removing linear, quadratic,\n\nparametric tests (Pearson correlation) were utilized to evaluate the\n\nglobal efficiency of a certain time window (connectivity matrixes)\n\nBefore the analysis, each connection matrix of cluster centroids was\n\nuted by using Fisher's r-to-z transform. Thresholding the dynamic\n\nwe applied a proportional network threshold of 15% (Whitfield-\n\nold (K = 0.15), and then measured local and global efficiency based\n\non weighted adjacency matrix by using Brain Connectivity Toolbox\n\nCastanon, 2012). Global efficiency is the average inverse shortest\n\nMarchiori, 2001). Local efficiency is the efficiency of the local sub-\n\nBy the dFNC computation, each subject can get 210 FC matrixes\n\nand their global efficiency. Then we averaged the global efficiency of\n\n210 connectivity matrixes of a subject as the global efficiency of this\n\nsubject. Next, we divided the subjects into six groups according to\ntheir ages, each age span of 10 years (19–30; 31–40; 41–50; 51–60;\n61–70; 71–80). Thus, we can calculated average global efficiency of\n\nAs for local efficiency, we summed the local efficiency of nodes\n\nthat within a sub-network as the local efficiency of this sub-network.\n\nSimilarly, we averaged local efficiency of a sub-network of 210 con-\n\nnectivity matrixes of a subject as the local efficiency of this sub-\n\nto the effects of aging. Therefore, we averaged local efficiency of\n\npared the differences in average local efficiency of three sub-\n\nof all subjects who belongs to an age group as the global efficiency\n\nefficiency of each age group changes dynamically over the time\n\nwindow. Similarly, we averaged the local efficiency of three sub-\n\nlocal efficiency of three sub-networks of this time window of this\n\nthe average local efficiency of\n\nsholded the state matrix at a fixed threshold (K = 0.15), calculated\n\nglobal efficiency, sub-network local efficiency, and the degree of\n\nevery node of every matrices, and then listed the hub nodes of matri-\n\nces according to their degree (The Brain Connectivity Toolbox, http://\n\nwww.brain-connectivity-toolbox.net/). With global efficiency,\n\nefficiency, and hub regions of each state, we can depict the topologi-\n\nFigure 1 displays the ICNs identified by the group ICA approach. Net-\n\nwork components are shown in Figure 1.Based on their anatomical\n\nFIGURE 1 Composite maps of the 59 identified intrinsic connectivity networks (ICNs), sorted into seven sub-networks. Each color in the\ncomposite maps corresponds to a different ICN [Color figure can be viewed at wileyonlinelibrary.com]\n\nbetween different age groups in global efficiency is reliable and stable\n\nerties, two key graph metrics were employed, global efficiency, and local\n\nefficiency, which were all calculated based on weighted networks.\n\nand that in the local efficiency of different sub-networks is unstable.\n\nWe used sliding window approach to estimate dFNC network for each\n\ngroups in the global and local efficiency (see Table 2). The difference\nis observed in the global efficiency (global efficiency: r = −0.24,\np = .000), 19–30 years old age range has significant greater global\nefficiency than 51–60, 61–70, and 71–80 years old age range. The\n\nsubject. For the dFNC patterns reoccur within subjects across time\n\nand across subjects, we then applied the K-means algorithm to divide\n\nthe dFNC windows into separate clusters. Figure 6 shows the cen-\n\ntroids of the five dFNC states. In State 1, the whole network displayed\n\ncorrelation between sub-network local efficiency and age (DMN Elo-\ncal: p = .055, r = −0.092; CC_Elocal: p = .019, r = −0.11; SN_Elocal:\np = .000, r = −0.19) behaved differently. Intriguingly, no matter which\nnetwork, its local efficiency of 19–30 age range is the highest.\n\nSecondly, we compared the global efficiency and local efficiency\n\nportional network threshold of 15% and calculated global efficiency,\n\nsub-network local efficiency and degree based on thresholded\n\nthe largest global efficiency, DMN local efficiency, CC local efficiency\n\nand SN local efficiency. The hub nodes (the node of the top three\n\ndegree) are located in visual and auditory cortex, DMN (posterior cin-\n\nVille, 2015) recommend removing frequency components below 1/w\n\nTABLE 2 Global efficiency and local efficiency of each age group\n\nGlobal efficiency\n\nDMN local efficiency\n\nCC local efficiency\n\nSN local efficiency\n\nThe varying curve of different age ranges in the time course. The global efficiency of young age range was always higher than it of the\nolder age range in whole time course. The DMN local efficiency of elderly reached its peak at the beginning, while it of young reached its peak in\nthe intermediate process. The CCN local efficiency of elderly reached its peak at the beginning, while it of young reached its peak in the second\nhalf. The SN local efficiency of elderly maintained a relative low level, while it of young had been growing up [Color figure can be viewed at\nwileyonlinelibrary.com]\n\nof 0.15 Hz by Gift software (http://mialab.mrn.org/software/). To\n\nfirst analysis and robust analysis). Firstly, we calculated the Pearson cor-\n\n4_first (See SI.F). Secondly, we applied a proportional network threshold\n\nof 15% and calculated the global efficiency, sub-network local efficiency,\n\nand degree of each state. The State 5_second, just like State 4_first, had\n\ngreatest global efficiency and sub-network local efficiency (See SI.G).\n\nLastly, SI.H showed the centroids of the intrinsic states.\n\nThe centroids of the 5 dFNC states. In State 1, the whole network displayed slight and moderate negative connectivity. State"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1370,
+            "end": 1413,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1254,
+            "end": 1266,
+            "text": "GIFT toolbox",
+            "labels": [
+              "ROI definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1872,
+            "end": 1883,
+            "text": "The Infomax",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1370,
+            "end": 1413,
+            "text": "model order (number of components, C = 100)",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2235,
+            "end": 2277,
+            "text": "59 components were identified as intrinsic",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 368,
+            "end": 388,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 405,
+            "end": 422,
+            "text": "bandpass filtered",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 424,
+            "end": 437,
+            "text": "0.023–0.18 Hz",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 735,
+            "end": 768,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 735,
+            "end": 768,
+            "text": "Pearson's correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 554,
+            "end": 567,
+            "text": "length (22TR)",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 603,
+            "end": 623,
+            "text": "Gaussian of σ = 3 TR",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 776,
+            "end": 783,
+            "text": "59 × 59",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 820,
+            "end": 850,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 820,
+            "end": 850,
+            "text": "Fisher's r-to-z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 829,
+            "end": 835,
+            "text": "r-to-z",
+            "labels": [
+              "Connectivity normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1034,
+            "end": 1051,
+            "text": "5",
+            "labels": [
+              "Network definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1034,
+            "end": 1051,
+            "text": "k-means algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1180,
+            "end": 1213,
+            "text": "estimated as five using the elbow",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1595,
+            "end": 1609,
+            "text": "A k of 4 and 6",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2639,
+            "end": 2676,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2639,
+            "end": 2676,
+            "text": "proportional network threshold of 15%",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2695,
+            "end": 2703,
+            "text": "K = 0.15",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2762,
+            "end": 2787,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2762,
+            "end": 2787,
+            "text": "weighted adjacency matrix",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2797,
+            "end": 2823,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2797,
+            "end": 2823,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2842,
+            "end": 2859,
+            "text": "Global efficiency",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2911,
+            "end": 2927,
+            "text": "Local efficiency",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4218,
+            "end": 4227,
+            "text": "degree of",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2762,
+            "end": 2787,
+            "text": "weighted adjacency matrix",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3011,
+            "end": 3026,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3065,
+            "end": 3125,
+            "text": "averaged the global efficiency of\n\n210 connectivity matrixes",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3011,
+            "end": 3026,
+            "text": "210 FC matrixes",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3529,
+            "end": 3554,
+            "text": "averaged local efficiency",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,725 @@
+{
+  "data": {
+    "text": "Medical Image Analysis 80 (2022) 102507\nDeep learning models of cognitive processes constrained by human brain connectomes\nYu Zhang a,b,c, Nicolas Farrugia d, Pierre Bellec b,c\n© 2022 The Authors. Published by Elsevier B.V.\nhttps://doi.org/10.1016/j.media.2022.102507\nThis is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).\n\nDecoding cognitive processes from recordings of brain activity has been an active topic in neuroscience research for decades. Traditional decoding studies focused on pattern classification in specific regions of interest and averaging brain activity over many trials. Recently, brain decoding with graph neural networks has been shown to scale at fine temporal resolution and on the full brain, achieving state-of-the-art performance on the human connectome project benchmark. The reason behind this success is likely the strong inductive connectome prior that enables the integration of distributed patterns of brain activity. Yet, the nature of such inductive bias is still poorly understood. In this work, we investigate the impact of the inclusion of multiple path lengths (through high-order graph convolution), the homogeneity of brain parcels (graph nodes), and the type of interactions (graph edges). We evaluate the decoding models on a large population of 1200 participants, under 21 different experimental conditions, acquired from the Human Connectome Project database. Our findings reveal that the optimal choice for large-scale cognitive decoding is to propagate neural dynamics within empirical functional connectomes and integrate brain dynamics using high-order graph convolutions. In this setting, the model exhibits high decoding accuracy and robustness against adversarial attacks on the graph architecture, including randomization in functional connectomes and lesions in targeted brain regions and networks. The trained model relies on biologically meaningful features for the prediction of cognitive states and generates task-specific graph representations resembling task-evoked activation maps. These results demonstrate that a full-brain integrative model is critical for the large-scale brain decoding. Our study establishes principles of how to effectively leverage human connectome constraints in deep graph neural networks, providing new avenues to study the neural substrates of human cognition at scale.\n\nWe used the block-design task-fMRI dataset from the Human Connectome Project S1200 release (https://db.humanconnectome.org/data/projects/HCP_1200). The minimal preprocessed fMRI data in both NIFTI and CIFTI formats were selected. The preprocessing pipelines includes two steps (Glasser et al., 2013): 1) fMRIVolume pipeline generates “minimally preprocessed” 4D time-series (i.e. “.nii.gz” file) that includes gradient unwarping, motion correction, fieldmap-based EPI distortion correction, brain-boundary-based registration of EPI to structural T1-weighted scan, non-linear (FNIRT) registration into MNI152 space, and grand-mean intensity normalization. 2) fMRISurface pipeline projects fMRI data from the cortical gray matter ribbon onto the individual brain surface and then onto template surface meshes (i.e. “dtseries.nii” file), followed by surface-based smoothing using a geodesic Gaussian algorithm. Further details on fMRI data acquisition, task design and preprocessing can be found in (Barch et al., 2013; Glasser et al., 2013). The task fMRI database includes seven cognitive domains, which are emotion, gambling, language, motor, relational, social, and working memory. In total, there are 23 different experimental conditions. Considering the short event design nature of the gambling trials (1.5s for button press, 1s for feedback and 1s for ITI) which constrain the temporal resolution of our brain decoding pipeline (i.e. using a 10s time window), in the following experiments, we excluded the two gambling conditions and only reported results on the remaining 21 cognitive states.\n\nTable 1 Scanning parameters and experimental designs of HCP task-fMRI dataset. The entire dataset includes in total 21 cognitive states and 14,895 functional runs across the six cognitive domains. By using a 10s-time window (i.e. 15 functional volumes at TR=0.72s), we cut long task trials into multiple data samples and resulted in 138,662 data samples of fMRI signals. These data samples constituted the whole dataset for model training and evaluation. Each functional run may contain multiple data samples of fMRI time-series depending on the number of task trials in the fMRI paradigm as well as the duration of each experimental condition. For instance, using a 10s-time window, we generated 10 data samples from one motor functional run (10 trials with one sample per trial) and 16 data samples from one working-memory functional run (8 trials with two samples per trial).\nTask Domains #Subjects #Runs #Volumes per run #EffectiveSample size #Cond Min duration per block (sec)\nMotor 1083 2 284 21,670 5 12\nLanguage 1051 2 316 36,164 2 10\nEmotion 1047 2 176 10,470 2 18\nSocial cognition 1051 2 274 21,020 2 23\nWorking-memory 1085 2 405 34,736 8 25\nRelational processing 1043 2 232 14,602 2 16\n\nAfter the construction of brain graph (i.e. defining brain parcels and edges), for each functional run and each subject, we mapped the preprocessed task-fMRI data (e.g. “dtseries.nii” file for cortical parcellation, and “.nii.gz” file for volume parcellation) onto the set of brain parcels, resulting in a 2-dimensional time-series matrix. We created a task label with the same length as the fMRI time-series based on the experimental designs, e.g. task onsets and durations. Then, we used these task labels to extract a short series of fMRI responses from each functional run, by first splitting the entire run into multiple task blocks and then cutting the blocks into the chosen window sizes (discarding shorter time windows). To be noted that, each functional run usually contains multiple task blocks and each block is split into multiple bins of short time windows. As a result, we generated various numbers of fMRI time-series for each cognitive task, i.e. a short time-series with duration of T for each of N brain parcels, x ∈ R^{N×T} along with a unique task label for each time-series. In total, the entire dataset includes 14,895 functional runs across the six cognitive domains and over 1000 subjects for each domain, and results in 138,662 data samples of fMRI signals x ∈ R^{N×T} when using a 10s time window (i.e. 15 functional volumes at TR=0.72s), and 3,586,670 data samples when using a single-volume prediction.\n\nThe dataset was split into training (64%), validation (16%), test (20%) sets stratified by subject, which ensures that all fMRI data from the same subject was assigned to one of the three sets. Approximately, the training set includes fMRI data from 700 unique subjects (depending on data availability for different cognitive tasks ranging from 1043 to 1085 subjects in total), with 174 subjects for validation set and 218 subjects for test set.\n\nThe implementation of the ChebNet graph convolution was based on PyTorch 1.1.0, and was made publicly available in the following repository: https://github.com/zhangyu2ustc/gcn_tutorial_test.git.\n\nThe functional-graph was calculated based on minimal preprocessed resting-state fMRI data from 1080 HCP subjects, by using the ‘tangent’ method for group-wise connectivity estimation with the ConnectivityMeasure method in nilearn (Varoquaux et al., 2010), and then averaged the connectivity matrices across all subjects. Moreover, considering that the sparsification of graph is the key to superior performance on many graph learning benchmarks, a k-nearest-neighbour (k-NN) graph was built for each brain connectome by only connecting each brain region to its neighbours with the highest connectivity strength, resulting in an edge-sparsified brain graph.\n\nThe parcellation scheme controls the scale of the graph. A variety of parcellation schemes have been proposed in the literature by using different imaging modalities and features. We then investigated different parcellation schemes that have been widely used in the literature, with variable resolutions and connectivity information (e.g. functional, anatomical or multimodal connectivity information). For functional parcellation, considering the high correspondence between resting-state functional networks and patterns of task-evoked brain responses across multiple subjects, sessions, and cognitive tasks, we evaluated functional networks, for instance Yeo’s 7 and 17 resting-state networks consisting of 50 and 112 spatially continuous parcels in the cerebral cortex, and functional parcellation at multiple resolutions, for instance Schaefer’s multiresolution brain parcellation, consisting of 100, 200, 400 and 1000 cortical parcels respectively. For anatomical parcellation, we chose the Brainnetome atlas that delineates the differences in connectivity profiles derived from diffusion tractography and consists of 246 brain regions in the cortical and subcortical areas. For parcellation with multimodal information, we chose the Glasser’s atlas that consists of 360 areas in the cerebral cortex, bounded by sharp changes in cortical architecture, function, connectivity, and topography.\n\nUsing a 10-second window, the 21 cognitive states were identified with an average test accuracy of 93% (mean=93.43%, STD=0.44% by using 10-fold cross-validation with shuffle splits stratified by subject). The temporal resolution of the decoding model can go down to a single fMRI volume (720 ms of duration), with a prediction accuracy well above chance level (60%, chance level=4.8%). The accuracy of single-volume state annotation was highly improved (reaching 76%) after taking into account the delay effect of hemodynamic response function in BOLD signals, i.e. excluding fMRI volumes within 6s after the onset of each task trial from both training and test sets.\n\nWe use the block-design task-fMRI dataset from the Human Connectome Project S1200 release, downloaded from https://db.humanconnectome.org/data/projects/HCP_1200. In total, fMRI data from 1095 unique subjects under six different task domains and resting-state are used in this study. The minimal preprocessed fMRI data are used, in both CIFTI and NIFTI formats, depending on the choice of brain parcellation schemes. The proposed ChebNet decoding pipeline, as well as the optimized decoding models and the construction of brain graphs, are made publicly available in the following repository: https://github.com/zhangyu2ustc/gcn_tutorial_test.git."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 123,
+            "end": 131,
+            "text": "Yu Zhang",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 40,
+            "end": 122,
+            "text": "Deep learning models of cognitive processes constrained by human brain connectomes",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27,
+            "end": 31,
+            "text": "2022",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 210,
+            "end": 223,
+            "text": "Elsevier B.V.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 240,
+            "end": 267,
+            "text": "10.1016/j.media.2022.102507",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 383,
+            "end": 508,
+            "text": "Decoding cognitive processes from recordings of brain activity has been an active topic in neuroscience research for decades.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 279,
+            "end": 328,
+            "text": "open access article under the CC BY-NC-ND license",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2512,
+            "end": 2565,
+            "text": "https://db.humanconnectome.org/data/projects/HCP_1200",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7239,
+            "end": 7292,
+            "text": "https://github.com/zhangyu2ustc/gcn_tutorial_test.git",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4275,
+            "end": 4283,
+            "text": "TR=0.72s",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10208,
+            "end": 10228,
+            "text": "1095 unique subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2996,
+            "end": 3001,
+            "text": "FNIRT",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3460,
+            "end": 3602,
+            "text": "The task fMRI database includes seven cognitive domains, which are emotion, gambling, language, motor, relational, social, and working memory.",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4764,
+            "end": 4773,
+            "text": "10 trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4861,
+            "end": 4869,
+            "text": "8 trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3727,
+            "end": 3780,
+            "text": "1.5s for button press, 1s for feedback and 1s for ITI",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3770,
+            "end": 3780,
+            "text": "1s for ITI",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1349,
+            "end": 1351,
+            "text": "12",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3736,
+            "end": 3748,
+            "text": "button press",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3527,
+            "end": 3601,
+            "text": "emotion, gambling, language, motor, relational, social, and working memory",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6413,
+            "end": 6447,
+            "text": "over 1000 subjects for each domain",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Age",
+            "Handedness",
+            "Male/Female",
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Gradient Distortion Correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2830,
+            "end": 2831,
+            "text": "1",
+            "labels": [
+              "Gradient Distortion Correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Gradient Distortion Correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2830,
+            "end": 2848,
+            "text": "gradient unwarping",
+            "labels": [
+              "Gradient Distortion Correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Gradient Distortion Correction — Software",
+            "Gradient Distortion Correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2850,
+            "end": 2851,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2850,
+            "end": 2867,
+            "text": "motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2869,
+            "end": 2870,
+            "text": "3",
+            "labels": [
+              "Field map correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2869,
+            "end": 2909,
+            "text": "fieldmap-based EPI distortion correction",
+            "labels": [
+              "Field map correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Field map correction — Software",
+            "Field map correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "BBR crossmodal registration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2911,
+            "end": 2912,
+            "text": "4",
+            "labels": [
+              "BBR crossmodal registration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "BBR crossmodal registration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2911,
+            "end": 2982,
+            "text": "brain-boundary-based registration of EPI to structural T1-weighted scan",
+            "labels": [
+              "BBR crossmodal registration — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "BBR crossmodal registration — Software",
+            "BBR crossmodal registration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2984,
+            "end": 2985,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2996,
+            "end": 3001,
+            "text": "FNIRT",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2984,
+            "end": 3033,
+            "text": "non-linear (FNIRT) registration into MNI152 space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3021,
+            "end": 3033,
+            "text": "MNI152 space",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Grand mean scaling",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3039,
+            "end": 3040,
+            "text": "6",
+            "labels": [
+              "Grand mean scaling — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Grand mean scaling",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3039,
+            "end": 3073,
+            "text": "grand-mean intensity normalization",
+            "labels": [
+              "Grand mean scaling — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Grand mean scaling — Software",
+            "Grand mean scaling — Parameters"
+          ]
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3078,
+            "end": 3079,
+            "text": "7",
+            "labels": [
+              "Surface — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3099,
+            "end": 3226,
+            "text": "projects fMRI data from the cortical gray matter ribbon onto the individual brain surface and then onto template surface meshes",
+            "labels": [
+              "Surface — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Surface — Software",
+            "Surface — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3267,
+            "end": 3268,
+            "text": "8",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3267,
+            "end": 3326,
+            "text": "surface-based smoothing using a geodesic Gaussian algorithm",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7957,
+            "end": 7958,
+            "text": "9",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7957,
+            "end": 8008,
+            "text": "parcellation scheme controls the scale of the graph",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5509,
+            "end": 5510,
+            "text": "10",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5524,
+            "end": 5556,
+            "text": "2-dimensional time-series matrix",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7487,
+            "end": 7488,
+            "text": "11",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7517,
+            "end": 7524,
+            "text": "nilearn",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7487,
+            "end": 7524,
+            "text": "ConnectivityMeasure method in nilearn",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7743,
+            "end": 7744,
+            "text": "12",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7743,
+            "end": 7775,
+            "text": "k-nearest-neighbour (k-NN) graph",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Sparsity control — Software",
+            "Sparsity control — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8611,
+            "end": 8725,
+            "text": "Yeo’s 7 and 17 resting-state networks consisting of 50 and 112 spatially continuous parcels in the cerebral cortex",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7422,
+            "end": 7477,
+            "text": "‘tangent’ method for group-wise connectivity estimation",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7743,
+            "end": 7775,
+            "text": "k-nearest-neighbour (k-NN) graph",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

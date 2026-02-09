@@ -1,0 +1,999 @@
+{
+  "data": {
+    "text": "Dynamic reconfiguration of functional brain networks during working memory training\n\nKarolina Finc, Kamil Bonna, Xiaosong He, David M. Lydon-Staley, Simone Kühn, Włodzisław Duch & Danielle S. Bassett\nNATURE COMMUNICATIONS (2020) 11:2435\nhttps://doi.org/10.1038/s41467-020-15631-z\n\nData availability\nThe raw behavioral data and fMRI results are available for download at https://osf.io/wf85u/ (https://doi.org/10.17605/OSF.IO/WF85U).\n\nCode availability\nAll code used for neuroimaging and behavioral data processing and statistical data analyses are publicly available at https://osf.io/wf85u/ (https://doi.org/10.17605/OSF.IO/WF85U).\n\nSubjects. Fifty-three healthy volunteers (26 female; mean age: 21.17; age range: 18–28 years) were recruited from the local community. Seven participants did not complete the study: one due to brain structure abnormalities and six due to not completing the training procedure. The final sample consisted of 46 participants. All participants were right-handed. Informed consent was obtained in writing; ethical approval for the study was obtained from the Ethics Committee of the Nicolaus Copernicus University Ludwik Rydygier Collegium Medicum in Bydgoszcz, Poland, in accordance with the Declaration of Helsinki.\n\nIn the fMRI scanning version of the task, participants performed the dual n-back task with two levels of difficulty: 1-back and 2-back. Each session of the task consisted of 20 blocks (30 s per block; 12 trials with 25% of targets). The instruction screen was displayed for 4000 ms before each block. Both visual and auditory stimuli were presented in a pseudorandom order.\n\nData acquisition. Neuroimaging data were collected using a GE Discovery MR750 3 Tesla MRI scanner with a standard 8-channel head coil. Structural images: T1-weighted (FSPGR BRAVO) (TR= 8.2 s, TE= 3.2 ms, FOV= 256 mm, flip angle= 12 degrees, matrix size 256 × 256, voxel size= 1 × 1 × 1 mm, 206 axial oblique slices). Functional scans: T2*-weighted EPI (TR= 2000 ms, TE= 30 ms, FOV= 192 mm, flip angle= 90 degrees, matrix size= 64 × 64, voxel size 3 × 3 × 3mm, 0.5-mm gap). For each functional run, 42 axial oblique slices were acquired in an interleaved acquisition scheme, and 5 dummy scans (10 s) were obtained to stabilize magnetization. Resting-state (10 min 10 s, 305 volumes) data were acquired at the beginning of each session (fixation cross). Dual n-back task data (11 min 30 s; 340 volumes) were acquired using the same settings.\n\nBehavioral performance. We measured participant performance as d′ (signal detection theory), combining response sensitivity and response bias.\n\nData processing. Functional data were slice time corrected using 3dTshift (AFNI v16.2.07) and motion corrected using MCFLIRT (FSL v5.0.9). Co-registration to T1w used boundary-based registration with 9 degrees of freedom, using bbregister (FreeSurfer v6.0.1). Motion correcting transformations, BOLD-to-T1w transformation and T1w-to-template (MNI) warp were concatenated and applied in a single step using antsApplyTransforms (ANTs v2.1.0) with Lanczos interpolation. Physiological noise regressors were extracted by applying CompCor (tCompCor and aCompCor; six components each). Frame-wise displacement (FD) was calculated; outlier frames with FD > 0.5 mm and DVARS ±3 SD were censored (scrubbing). Voxel-wise confound regression included 24 motion parameters, task effects and their temporal derivatives, and a general linear trend. Time series were filtered using a 0.008–0.25-Hz band-pass filter. Non-smoothed functional images were denoised using Nilearn/Nistats. Preprocessing employed fMRIPrep 1.1.1 (Nipype-based).\n\nFunctional connectivity estimation. We used a functional brain parcellation of 264 ROIs (Power et al.) and validated with a 300-ROI parcellation (Schaefer et al.). We created N × N correlation matrices by calculating the Pearson’s correlation coefficient between mean ROI time series; we retained only positive correlations. For task data we employed a weighted correlation (HRF-convolved block weights) and then applied Fisher’s transformation to convert Pearson’s r to z-scores.\n\nStatic modularity. We employed a Louvain-like community detection algorithm to optimize the Newman–Girvan modularity quality function. To account for strength effects, each modularity value was normalized by the mean of a null distribution from 100 randomly rewired networks.\n\nMultilayer modularity. For dynamic analyses, we used a generalized Louvain community detection on a multilayer network (one layer per block). We set γ = 1. Due to the interleaved design, ω = 1 for slices from the same task condition and ω = 0.5 for slices from different task conditions.\n\nNetwork diagnostics. We computed a module allegiance matrix P (fraction of blocks in which node pairs share a module). Recruitment of a system S was defined as the mean P within S; integration between systems Sk and Sl was defined as the mean P across Sk × Sl. Values were normalized by permutation-based nulls (Nperm = 1000)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 85,
+            "end": 98,
+            "text": "Karolina Finc",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 83,
+            "text": "Dynamic reconfiguration of functional brain networks during working memory training",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 222,
+            "end": 228,
+            "text": "(2020)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 200,
+            "end": 221,
+            "text": "NATURE COMMUNICATIONS",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 237,
+            "end": 279,
+            "text": "https://doi.org/10.1038/s41467-020-15631-z",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 83,
+            "text": "Dynamic reconfiguration of functional brain networks during working memory training",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 200,
+            "end": 236,
+            "text": "NATURE COMMUNICATIONS (2020) 11:2435",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 299,
+            "end": 391,
+            "text": "The raw behavioral data and fMRI results are available for download at https://osf.io/wf85u/",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 452,
+            "end": 591,
+            "text": "All code used for neuroimaging and behavioral data processing and statistical data analyses are publicly available at https://osf.io/wf85u/",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1683,
+            "end": 1721,
+            "text": "GE Discovery MR750 3 Tesla MRI scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2122,
+            "end": 2145,
+            "text": "42 axial oblique slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2060,
+            "end": 2082,
+            "text": "voxel size 3 × 3 × 3mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2014,
+            "end": 2036,
+            "text": "flip angle= 90 degrees",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2084,
+            "end": 2094,
+            "text": "0.5-mm gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2265,
+            "end": 2305,
+            "text": "Resting-state (10 min 10 s, 305 volumes)",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2359,
+            "end": 2373,
+            "text": "fixation cross",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2001,
+            "end": 2012,
+            "text": "FOV= 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1977,
+            "end": 1988,
+            "text": "TR= 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1990,
+            "end": 1999,
+            "text": "TE= 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2060,
+            "end": 2082,
+            "text": "voxel size 3 × 3 × 3mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 915,
+            "end": 956,
+            "text": "final sample consisted of 46 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3601,
+            "end": 3615,
+            "text": "fMRIPrep 1.1.1",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1318,
+            "end": 1334,
+            "text": "dual n-back task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1423,
+            "end": 1480,
+            "text": "20 blocks (30 s per block; 12 trials with 25% of targets)",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1434,
+            "end": 1448,
+            "text": "30 s per block",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1482,
+            "end": 1549,
+            "text": "The instruction screen was displayed for 4000 ms before each block.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1318,
+            "end": 1383,
+            "text": "dual n-back task with two levels of difficulty: 1-back and 2-back",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 915,
+            "end": 956,
+            "text": "final sample consisted of 46 participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 704,
+            "end": 726,
+            "text": "age range: 18–28 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 980,
+            "end": 992,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 676,
+            "end": 685,
+            "text": "26 female",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 769,
+            "end": 814,
+            "text": "Seven participants did not complete the study",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1036,
+            "end": 1105,
+            "text": "ethical approval for the study was obtained from the Ethics Committee",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2528,
+            "end": 2556,
+            "text": "d′ (signal detection theory)",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2647,
+            "end": 2682,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2674,
+            "end": 2682,
+            "text": "3dTshift",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2703,
+            "end": 2733,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2726,
+            "end": 2733,
+            "text": "MCFLIRT",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2837,
+            "end": 2867,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2837,
+            "end": 2867,
+            "text": "bbregister (FreeSurfer v6.0.1)",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2776,
+            "end": 2803,
+            "text": "boundary-based registration",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2809,
+            "end": 2829,
+            "text": "9 degrees of freedom",
+            "labels": [
+              "Coregistration — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3015,
+            "end": 3048,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3015,
+            "end": 3048,
+            "text": "antsApplyTransforms (ANTs v2.1.0)",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2952,
+            "end": 2955,
+            "text": "MNI",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3135,
+            "end": 3187,
+            "text": "5",
+            "labels": [
+              "CompCor — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3135,
+            "end": 3187,
+            "text": "CompCor (tCompCor and aCompCor; six components each)",
+            "labels": [
+              "CompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3167,
+            "end": 3186,
+            "text": "six components each",
+            "labels": [
+              "CompCor — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3254,
+            "end": 3281,
+            "text": "6",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3297,
+            "end": 3306,
+            "text": "scrubbing",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3254,
+            "end": 3281,
+            "text": "FD > 0.5 mm and DVARS ±3 SD",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3349,
+            "end": 3369,
+            "text": "7",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3352,
+            "end": 3369,
+            "text": "motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3349,
+            "end": 3369,
+            "text": "24 motion parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3478,
+            "end": 3508,
+            "text": "8",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3492,
+            "end": 3501,
+            "text": "band-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3478,
+            "end": 3491,
+            "text": "0.008–0.25-Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3696,
+            "end": 3735,
+            "text": "9",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3712,
+            "end": 3720,
+            "text": "264 ROIs",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3896,
+            "end": 3916,
+            "text": "10",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 687,
+            "end": 691,
+            "text": "mean",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3854,
+            "end": 3887,
+            "text": "11",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3854,
+            "end": 3887,
+            "text": "Pearson’s correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4054,
+            "end": 4077,
+            "text": "12",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4054,
+            "end": 4077,
+            "text": "Fisher’s transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3921,
+            "end": 3956,
+            "text": "13",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3921,
+            "end": 3956,
+            "text": "retained only positive correlations",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3921,
+            "end": 3956,
+            "text": "retained only positive correlations",
+            "labels": [
+              "Negative correlation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4221,
+            "end": 4248,
+            "text": "14",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4148,
+            "end": 4180,
+            "text": "Louvain-like community detection",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4207,
+            "end": 4231,
+            "text": "Newman–Girvan modularity",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4447,
+            "end": 4486,
+            "text": "15",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4492,
+            "end": 4502,
+            "text": "multilayer",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4541,
+            "end": 4546,
+            "text": "γ = 1",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4309,
+            "end": 4354,
+            "text": "16",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4360,
+            "end": 4389,
+            "text": "100 randomly rewired networks",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

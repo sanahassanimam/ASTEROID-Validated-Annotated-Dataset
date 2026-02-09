@@ -1,0 +1,906 @@
+{
+  "data": {
+    "text": "Scientific Reports (2019) 9:3704 https://doi.org/10.1038/s41598-019-39999-1\nElaboration Benefits Source Memory Encoding Through Centrality Change\nInge K. Amlien, Markus H. Sneve, Didac Vidal-Piñeiro, Kristine B. Walhovd & Anders M. Fjell\n\nThe study was approved by the Regional Ethical Committee of South Norway and all research was performed in accordance with relevant guidelines and regulations. All participants gave written informed consent. The participants reported no history of neurological or psychiatric disorders, chronic illness, premature birth, learning disabilities, or use of medicines known to affect nervous system functioning. They were further required to be right-handed, speak Norwegian fluently and have normal or corrected to normal hearing and vision.\n\n158 participants were scanned using fMRI while they were solving an item-action association task. 127 participants participated in an incidental memory test after a delay of 1.5 hours, and data from these participants were included in the fMRI analyses. Four participants were excluded due to motion during the fMRI scan exceeding 1.5 mm or due to recalling less than 10% of the stimuli with full source memory. A final sample of 113 participants (female n = 81, age range = 18.5–38.4 years, M = 27.7, SD = 5.22) was thus used in the fMRI analyses.\n\nDuring encoding, participants went through 100 trials of a task in which they performed simple evaluations of everyday objects and items. A black and white line drawing of an object was presented on the screen while a female voice asked either “Can you eat it?” or “Can you lift it?”. Participants produced yes/no-responses based on their subjective evaluations, and they did not know that they would later be tested on the material. After a response window of two seconds, the line drawing was replaced by a fixation cross which remained on screen during the interstimulus interval. Interstimulus interval length varied randomly between 1–7 seconds with an exponential distribution over 4 discrete intervals (mean duration 2.98 s, SD = 2.49 s).\n\nA 3T Siemens Skyra system (Siemens Medical Systems, Erlangen, Germany) with a 24-channel Siemens head coil was used to acquire all MR images. The two encoding fMRI runs were acquired with the same parameters: 43 transversally oriented gapless slices were recorded using a BOLD-sensitive T2*-weighted echo planar image (EPI) sequence (repetition time [TR] = 2390 ms, echo time [TE] = 30 ms, flip angle = 90°, voxel size = 3×3×3 mm, field of view [FOV] = 224×224 mm, interleaved acquisition, GRAPPA acceleration factor = 2, bottom-to-top acquisition). Three dummy volumes were collected at the start of each run to avoid T1 saturation effects in the analyzed data. Each encoding run consisted of 131 volumes. In addition, two sagittal T1-weighted MPRAGE volumes were obtained (TR = 2300 ms, TE = 2.98 ms, flip angle = 9°, voxel size = 1×1×1 mm, FOV = 256×256 mm).\n\nFreeSurfer 5.3 was used for the cortical and volumetric reconstruction of the T1-weighted structural data. The processing steps include removal of non-brain tissue, automated Talairach transformation, intensity correction, and segmentation and deformation procedures to reconstruct gray/white and gray/cerebrospinal fluid boundaries. Cortical surfaces then undergo inflation, registration to a spherical atlas, and identification of gyral and sulcal regions. The FreeSurfer Functional Analysis Stream (FSFAST) v5.3 was used for preprocessing the functional image data from the encoding task.\n\nAll functional images were first corrected for distortions caused by B0 inhomogeneities in EPI scans (FSL PRELUDE/FUGUE), before the images were motion corrected (AFNI 3dvolreg), slice timing corrected to the middle of a volume’s TR, intensity normalized, and registered to the same participant’s anatomical volume. The 4D functional data sets were then resampled to a common template (“fsaverage”) using the surface-based inter-participant registrations created during cortical reconstruction.\n\nFor each encoding run, general linear models (GLMs) were set up with regressors modeled as events with onsets and durations corresponding to the 2 s encoding period and convolved with a canonical hemodynamic response function. In addition to the task regressors and their temporal derivatives, estimated motion correction parameters and a set of polynomials (up to second degree) were included in the GLM as nuisance regressors. The model and the data were high-pass filtered with a cutoff at 0.01 Hz, and temporal autocorrelations (AR(1)) in the residuals were corrected using a pre-whitening approach.\n\nWe performed a whole-brain cortical GLM where we contrasted source memory > no source memory trials and used the resulting statistical map to define a set of cortical regions (nodes) involved in source memory encoding. Nodes were created from clusters showing significant subsequent source memory effects, and bilateral hippocampi from FreeSurfer segmentation were added, yielding a total of 42 nodes that were entered into the connectivity analyses.\n\nThe pre-processed functional data were analyzed for task-specific connectivity using the generalized psychophysiological interactions (PPI) toolbox. Observed BOLD data (first eigenvariate) for all nodes were deconvolved into estimates of neural events. Task time courses representing the stimulus categories were multiplied by the deconvolved neural estimate and convolved with a canonical hemodynamic response function to create PPI terms. For each participant and condition, Fisher-transformed temporal correlations (Pearson’s r) between all nodes’ PPI terms were calculated, creating a connectivity matrix of all pairwise combinations. Connectivity matrices were thresholded to keep only the strongest edges, binarized, and treated as undirected graphs. Centrality measures including closeness centrality, degree, betweenness centrality and eigenvector centrality were then calculated on the thresholded, binarized connectivity matrices.\n\nWe performed analyses on binarized graphs that were thresholded using density based thresholding. The most conservative threshold kept 20% of the strongest edges, and additional thresholds at 22%, 24%, 26%, 28% and 30% edge density were also used. Only nodes that were significant after FDR correction at p < 0.05 across all six graph density thresholds were considered. To test the relationship between centrality and memory performance, we correlated source memory performance with average centrality change across the set of nodes and compared the results with null distributions obtained from exhaustive permutations.\n\nA participant’s source memory score was calculated as the percentage of encoded events that were recognized with correct recollection of the associated encoding action. Events processed with high elaboration were recollected more often with full source memory (mean = 64.09%, SD = 15.00%) than events processed with low elaboration (mean = 35.52%, SD = 16.73%). High elaboration was also associated with better recognition (d′ = 2.05, SD = 0.48) than low elaboration (d′ = 1.71, SD = 0.56). A similar pattern emerged for congruity, with high congruity events showing better source memory and recognition than low congruity events.\n\nThe dataset analyzed during the current study is available from the corresponding author on reasonable request.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 146,
+            "end": 237,
+            "text": "Inge K. Amlien, Markus H. Sneve, Didac Vidal-Piñeiro, Kristine B. Walhovd & Anders M. Fjell",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 76,
+            "end": 145,
+            "text": "Elaboration Benefits Source Memory Encoding Through Centrality Change",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 19,
+            "end": 25,
+            "text": "(2019)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 18,
+            "text": "Scientific Reports",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 33,
+            "end": 75,
+            "text": "https://doi.org/10.1038/s41598-019-39999-1",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6819,
+            "end": 7011,
+            "text": "Events processed with high elaboration were recollected more often with full source memory (mean = 64.09%, SD = 15.00%) than events processed with low elaboration (mean = 35.52%, SD = 16.73%).",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7282,
+            "end": 7393,
+            "text": "The dataset analyzed during the current study is available from the corresponding author on reasonable request.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2078,
+            "end": 2146,
+            "text": "3T Siemens Skyra system (Siemens Medical Systems, Erlangen, Germany)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2285,
+            "end": 2325,
+            "text": "43 transversally oriented gapless slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2466,
+            "end": 2482,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2507,
+            "end": 2539,
+            "text": "field of view [FOV] = 224×224 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2410,
+            "end": 2440,
+            "text": "repetition time [TR] = 2390 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2442,
+            "end": 2464,
+            "text": "echo time [TE] = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2484,
+            "end": 2505,
+            "text": "voxel size = 3×3×3 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2896,
+            "end": 2917,
+            "text": "voxel size = 1×1×1 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1191,
+            "end": 1225,
+            "text": "A final sample of 113 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2939,
+            "end": 2953,
+            "text": "FreeSurfer 5.3",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 844,
+            "end": 875,
+            "text": "an item-action association task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1191,
+            "end": 1225,
+            "text": "A final sample of 113 participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1242,
+            "end": 1290,
+            "text": "age range = 18.5–38.4 years, M = 27.7, SD = 5.22",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 680,
+            "end": 692,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1226,
+            "end": 1240,
+            "text": "(female n = 81",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 473,
+            "end": 646,
+            "text": "no history of neurological or psychiatric disorders, chronic illness, premature birth, learning disabilities, or use of medicines known to affect nervous system functioning.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1033,
+            "end": 1190,
+            "text": "Four participants were excluded due to motion during the fMRI scan exceeding 1.5 mm or due to recalling less than 10% of the stimuli with full source memory.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 239,
+            "end": 311,
+            "text": "The study was approved by the Regional Ethical Committee of South Norway",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1614,
+            "end": 1762,
+            "text": "Participants produced yes/no-responses based on their subjective evaluations, and they did not know that they would later be tested on the material.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1467,
+            "end": 1614,
+            "text": "A black and white line drawing of an object was presented on the screen while a female voice asked either “Can you eat it?” or “Can you lift it?”. ",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1346,
+            "end": 1465,
+            "text": "participants went through 100 trials of a task in which they performed simple evaluations of everyday objects and items",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1346,
+            "end": 1382,
+            "text": "participants went through 100 trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1771,
+            "end": 1801,
+            "text": "response window of two seconds",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1913,
+            "end": 2074,
+            "text": "Interstimulus interval length varied randomly between 1–7 seconds with an exponential distribution over 4 discrete intervals (mean duration 2.98 s, SD = 2.49 s).",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6650,
+            "end": 6818,
+            "text": "A participant’s source memory score was calculated as the percentage of encoded events that were recognized with correct recollection of the associated encoding action.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6819,
+            "end": 7011,
+            "text": "Events processed with high elaboration were recollected more often with full source memory (mean = 64.09%, SD = 15.00%) than events processed with low elaboration (mean = 35.52%, SD = 16.73%).",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3140,
+            "end": 3160,
+            "text": "1",
+            "labels": [
+              "INU correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3075,
+            "end": 3102,
+            "text": "2",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3166,
+            "end": 3205,
+            "text": "3",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3104,
+            "end": 3138,
+            "text": "4",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Surface reconstruction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3273,
+            "end": 3313,
+            "text": "5",
+            "labels": [
+              "Surface reconstruction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3565,
+            "end": 3652,
+            "text": "6",
+            "labels": [
+              "Field map correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3634,
+            "end": 3651,
+            "text": "FSL PRELUDE/FUGUE",
+            "labels": [
+              "Field map correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3677,
+            "end": 3709,
+            "text": "7",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3695,
+            "end": 3708,
+            "text": "AFNI 3dvolreg",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3711,
+            "end": 3764,
+            "text": "8",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3766,
+            "end": 3786,
+            "text": "9",
+            "labels": [
+              "Intensity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3792,
+            "end": 3846,
+            "text": "10",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3930,
+            "text": "11",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4485,
+            "end": 4528,
+            "text": "12",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4511,
+            "end": 4528,
+            "text": "cutoff at 0.01 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4322,
+            "end": 4360,
+            "text": "13",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4365,
+            "end": 4455,
+            "text": "14",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4782,
+            "end": 4850,
+            "text": "15",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4852,
+            "end": 4937,
+            "text": "16",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5234,
+            "end": 5287,
+            "text": "17",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5562,
+            "end": 5645,
+            "text": "18",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5562,
+            "end": 5602,
+            "text": "19",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5751,
+            "end": 5806,
+            "text": "20",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6162,
+            "end": 6188,
+            "text": "20% of the strongest edges",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5812,
+            "end": 5840,
+            "text": "21",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5842,
+            "end": 5951,
+            "text": "22",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6275,
+            "end": 6397,
+            "text": "23",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

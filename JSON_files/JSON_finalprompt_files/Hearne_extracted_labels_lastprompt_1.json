@@ -1,0 +1,1061 @@
+{
+  "data": {
+    "text": "Reconfiguration of Brain Network Architectures between Resting-State and Complexity-Dependent Cognitive Reasoning.\nLuke J. Hearne, Luca Cocchi, Andrew Zalesky, and Jason B. Mattingley.\nThe Journal of Neuroscience, August 30, 2017; 37(35):8399–8411.\nDOI:10.1523/JNEUROSCI.0485-17.2017.\n\nOur capacity for higher cognitive reasoning has a measurable limit. This limit is thought to arise from the brain’s capacity to flexibly reconfigure interactions between spatially distributed networks.\nWe found that increased reasoning demands rely on selective patterns of connectivity within cortical networks that emerged in addition to a more general, task-induced modular architecture.\n\nHuman participants (21 males and 28 females) underwent an initial resting-state scan, followed by a cognitive reasoning task involving different levels of complexity, followed by a second resting-state scan.\n\nSixty-five healthy, right-handed participants undertook the current study, of whom 49 were included in the final analysis (mean, 23.35 years; SD, 3.6 years; range, 18–33 years; 28 females).\nParticipants provided informed written consent to participate in the study. The research was approved by The University of Queensland Human Research Ethics Committee.\n\nIn the imaging session, participants underwent a resting-state scan, followed by three 12 min runs of the Latin Square Task (LST), a structural scan, and finally a second resting-state scan.\nParticipants also completed the Raven’s Advanced Progressive Matrices (40 min time limit), a standard and widely used measure of fluid intelligence.\n\nThe Latin Square Task (LST) is a nonverbal relational reasoning paradigm in which reasoning complexity is parametrically varied with minimal working-memory demands.\nEach LST “puzzle” involves the presentation of a four-by-four matrix populated with a small number of geometric shapes (squares, circles, triangles, or crosses), blank spaces, and a single target, denoted by a yellow question mark.\nParticipants were asked to solve for the target according to the following rule: each shape can only occur once in every row and once in every column.\nNull trials involved presentation of an LST grid, but instead of a target question mark, an asterisk was presented to cue the participant that no reasoning was required in this puzzle.\nIn total, 144 LST items were presented in the MR session across 16 blocks, with 36 items in each relational complexity condition (Null, Binary, Ternary, and Quaternary).\nAdministration of all items was pseudorandomized such that no two items of the same complexity occurred sequentially, and each block had two problems from each level of complexity.\n\nEach trial contained a jittered fixation period, followed by an LST item, a second jittered fixation period, a response screen, and a confidence rating scale.\nFixation was presented for 4000 ms ± 586 ms, LST items were presented for 5000 ms, and the response and confidence screens were each presented for 2000 ms.\n\nAt the Centre for Advanced Imaging, The University of Queensland, imaging data were collected using a 7 T Siemens MR scanner fitted with a 32-channel head coil.\nFor both resting-state and task fMRI, whole-brain echo-planar images were acquired using a multiband sequence (acceleration factor, 5).\nIn each of the two resting scans, 1050 volumes were collected (~10 min each).\nIn each of the three runs of the task, 1250 volumes were collected (~12 min each) with the following parameters: voxel size, 2 mm3; TR = 586 ms; TE = 23 ms; flip angle, 40°; FOV, 208 mm; 55 slices.\nStructural images were acquired using an MP2RAGE sequence with voxel size, 0.75 mm3; TR, 4300 ms; TE, 3.44 ms; 256 slices.\n\nImaging data were preprocessed using an adapted version of the MATLAB toolbox Data Processing Assistant for Resting-State fMRI (DPARSF V 3.0).\nDICOM images were first converted to NIfTI format and realigned.\nT1 images were reoriented, skull-stripped [FMRIB Software Library Brain Extraction Tool (FSL BET)], and coregistered to the NIfTI functional images using Statistical Parametric Mapping (SPM8) functions.\nSegmentation and the DARTEL algorithm were used to improve the estimation of non-neural signal in subject space and the spatial normalization.\nFrom each gray matter voxel, the following signals were regressed: undesired linear trends, signals from the six head-motion parameters (three translation, three rotation), white matter, and CSF.\nThe CompCor method was used to regress out residual signal unrelated to neural activity (five principal components derived from noise regions-of-interest).\nGlobal signal regression was not performed.\nSingle-subject functional images were subsequently normalized and smoothed using DARTEL (4 mm3).\nData processing steps also involved filtering (0.01–0.15 Hz) at a low-frequency component of the BOLD signal known to be sensitive to both resting-state and task-based functional connectivity.\n\nParticipants with head displacement ≥3 mm in ≥5% of volumes in any one scan were excluded.\nBoth resting-state and task-based data with frame-to-frame displacements of ≥0.40 mm were censored.\nParticipants with ≤85% of data remaining in any condition were excluded.\n\nFor each subject, regionally averaged time series were extracted for 264 spheres of 5 mm radius sampled across cortical and subcortical gray matter.\nSpheres were positioned according to an existing brain parcellation and associated network definitions generated from a large cohort of participants (N ≈ 300).\nFor both sets of resting-state data (Pre-task and Post-task), functional connectivity was estimated using a temporal Pearson correlation between each pair of time series.\nFor the task-based functional connectivity analyses, a task regressor composed of the condition onsets modeled as boxcar functions convolved with a canonical hemodynamic response function was regressed from the time series.\nAfter accounting for the hemodynamic lag, the residual time series from each 5 s reasoning period was concatenated to form in each brain region a condition-specific time series of interest.\nA Pearson correlation was performed on the resulting regional time series for each condition separately, resulting in a 264 × 264 connectivity matrix for each subject.\nBoth resting-state and task-based matrices were converted to z scores.\nWeighted graphs of proportional densities from the top 5% to the top 30% of connections were considered for analysis.\n\nThe degree of modularity in a network was characterized by the Q index, which represents the density of within-module connections relative to an appropriate random network null model.\nModules were identified using the Louvain greedy algorithm implemented in the Brain Connectivity Toolbox.\n\nGlobal efficiency was computed as the inverse of the average characteristic path length between all nodes in a network and was used as an index of parallel information transfer.\n\nA nonparametric Friedman test revealed a significant effect of reasoning complexity on both Latin Square Task accuracy and reaction time.\nBonferroni-corrected follow-up Wilcoxon signed-rank test comparisons were used.\nA paired t test was performed between the Pre-task and Post-task resting-state data, and a one-way repeated-measures ANOVA was used to compare all four task states (Null, Binary, Ternary, Quaternary).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 115,
+            "end": 184,
+            "text": "Luke J. Hearne, Luca Cocchi, Andrew Zalesky, and Jason B. Mattingley.",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 114,
+            "text": "Reconfiguration of Brain Network Architectures between Resting-State and Complexity-Dependent Cognitive Reasoning.",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 185,
+            "end": 248,
+            "text": "The Journal of Neuroscience, August 30, 2017; 37(35):8399–8411.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 225,
+            "end": 229,
+            "text": "2017",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 249,
+            "end": 284,
+            "text": "DOI:10.1523/JNEUROSCI.0485-17.2017.",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 488,
+            "end": 676,
+            "text": "We found that increased reasoning demands rely on selective patterns of connectivity within cortical networks that emerged in addition to a more general, task-induced modular architecture.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3089,
+            "end": 3111,
+            "text": "7 T Siemens MR scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3549,
+            "end": 3559,
+            "text": "55 slices.",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3519,
+            "end": 3534,
+            "text": "flip angle, 40°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3494,
+            "end": 3505,
+            "text": "TR = 586 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3507,
+            "end": 3517,
+            "text": "TE = 23 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3475,
+            "end": 3492,
+            "text": "voxel size, 2 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3536,
+            "end": 3547,
+            "text": "FOV, 208 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3318,
+            "end": 3361,
+            "text": "1050 volumes were collected (~10 min each).",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 962,
+            "end": 1008,
+            "text": "of whom 49 were included in the final analysis",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3762,
+            "end": 3826,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF V 3.0).",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1294,
+            "end": 1374,
+            "text": "resting-state scan, followed by three 12 min runs of the Latin Square Task (LST)",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 887,
+            "end": 1076,
+            "text": "Sixty-five healthy, right-handed participants undertook the current study, of whom 49 were included in the final analysis (mean, 23.35 years; SD, 3.6 years; range, 18–33 years; 28 females).",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1009,
+            "end": 1076,
+            "text": "(mean, 23.35 years; SD, 3.6 years; range, 18–33 years; 28 females).",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 907,
+            "end": 919,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 678,
+            "end": 722,
+            "text": "Human participants (21 males and 28 females)",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 887,
+            "end": 960,
+            "text": "Sixty-five healthy, right-handed participants undertook the current study",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4925,
+            "end": 5015,
+            "text": "Participants with head displacement ≥3 mm in ≥5% of volumes in any one scan were excluded.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1153,
+            "end": 1243,
+            "text": "The research was approved by The University of Queensland Human Research Ethics Committee.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6912,
+            "end": 7049,
+            "text": "A nonparametric Friedman test revealed a significant effect of reasoning complexity on both Latin Square Task accuracy and reaction time.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2319,
+            "end": 2488,
+            "text": "In total, 144 LST items were presented in the MR session across 16 blocks, with 36 items in each relational complexity condition (Null, Binary, Ternary, and Quaternary).",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2830,
+            "end": 2985,
+            "text": "Fixation was presented for 4000 ms ± 586 ms, LST items were presented for 5000 ms, and the response and confidence screens were each presented for 2000 ms.",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2671,
+            "end": 2829,
+            "text": "Each trial contained a jittered fixation period, followed by an LST item, a second jittered fixation period, a response screen, and a confidence rating scale.",
+            "labels": [
+              "ISI distribution"
+            ]
+          },
+          "Missing_sublabels": [
+            "Length of blocks",
+            "Efficiency optimization",
+            "Block/event correlation"
+          ]
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1586,
+            "end": 1750,
+            "text": "The Latin Square Task (LST) is a nonverbal relational reasoning paradigm in which reasoning complexity is parametrically varied with minimal working-memory demands.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1751,
+            "end": 1982,
+            "text": "Each LST “puzzle” involves the presentation of a four-by-four matrix populated with a small number of geometric shapes (squares, circles, triangles, or crosses), blank spaces, and a single target, denoted by a yellow question mark.",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2489,
+            "end": 2669,
+            "text": "Administration of all items was pseudorandomized such that no two items of the same complexity occurred sequentially, and each block had two problems from each level of complexity.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7050,
+            "end": 7129,
+            "text": "Bonferroni-corrected follow-up Wilcoxon signed-rank test comparisons were used.",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7219,
+            "end": 7330,
+            "text": "a one-way repeated-measures ANOVA was used to compare all four task states (Null, Binary, Ternary, Quaternary).",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3881,
+            "end": 3882,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3881,
+            "end": 3891,
+            "text": "realigned.",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3919,
+            "end": 3920,
+            "text": "2",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3935,
+            "end": 3989,
+            "text": "FMRIB Software Library Brain Extraction Tool (FSL BET)",
+            "labels": [
+              "Skull stripping — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Skull stripping — Algorithm",
+            "Skull stripping — Parameters"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4095,
+            "end": 4096,
+            "text": "3",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4095,
+            "end": 4107,
+            "text": "Segmentation",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Software",
+            "Segmentation — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4215,
+            "end": 4216,
+            "text": "4",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4215,
+            "end": 4237,
+            "text": "spatial normalization.",
+            "labels": [
+              "Spatial normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization — Software",
+            "Spatial normalization — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4330,
+            "end": 4331,
+            "text": "5",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4330,
+            "end": 4409,
+            "text": "signals from the six head-motion parameters (three translation, three rotation)",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4411,
+            "end": 4412,
+            "text": "6",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4411,
+            "end": 4433,
+            "text": "white matter, and CSF.",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4434,
+            "end": 4435,
+            "text": "7",
+            "labels": [
+              "CompCor — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4434,
+            "end": 4589,
+            "text": "The CompCor method was used to regress out residual signal unrelated to neural activity (five principal components derived from noise regions-of-interest).",
+            "labels": [
+              "CompCor — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "CompCor — Software",
+            "CompCor — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4634,
+            "end": 4635,
+            "text": "8",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4634,
+            "end": 4730,
+            "text": "Single-subject functional images were subsequently normalized and smoothed using DARTEL (4 mm3).",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4700,
+            "end": 4701,
+            "text": "9",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4700,
+            "end": 4730,
+            "text": "smoothed using DARTEL (4 mm3).",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4767,
+            "end": 4768,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4767,
+            "end": 4791,
+            "text": "filtering (0.01–0.15 Hz)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software",
+            "Temporal filt — Type"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5060,
+            "end": 5061,
+            "text": "11",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5060,
+            "end": 5115,
+            "text": "frame-to-frame displacements of ≥0.40 mm were censored.",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Software",
+            "Scrubbing — Parameters"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4925,
+            "end": 4926,
+            "text": "12",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4925,
+            "end": 5015,
+            "text": "Participants with head displacement ≥3 mm in ≥5% of volumes in any one scan were excluded.",
+            "labels": [
+              "Exclusion — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Exclusion — Software",
+            "Exclusion — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5379,
+            "end": 5380,
+            "text": "13",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5339,
+            "end": 5498,
+            "text": "Spheres were positioned according to an existing brain parcellation and associated network definitions generated from a large cohort of participants (N ≈ 300).",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5259,
+            "end": 5260,
+            "text": "14",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5259,
+            "end": 5285,
+            "text": "264 spheres of 5 mm radius",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "ROI definition — Software",
+            "ROI definition — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5208,
+            "end": 5209,
+            "text": "15",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5208,
+            "end": 5338,
+            "text": "regionally averaged time series were extracted for 264 spheres of 5 mm radius sampled across cortical and subcortical gray matter.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5940,
+            "end": 5941,
+            "text": "16",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5894,
+            "end": 6083,
+            "text": "After accounting for the hemodynamic lag, the residual time series from each 5 s reasoning period was concatenated to form in each brain region a condition-specific time series of interest.",
+            "labels": [
+              "Combine block — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Combine block — Software",
+            "Combine block — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6084,
+            "end": 6085,
+            "text": "17",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6084,
+            "end": 6251,
+            "text": "A Pearson correlation was performed on the resulting regional time series for each condition separately, resulting in a 264 × 264 connectivity matrix for each subject.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software",
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6286,
+            "end": 6287,
+            "text": "18",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6252,
+            "end": 6322,
+            "text": "Both resting-state and task-based matrices were converted to z scores.",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Connectivity normalization — Software",
+            "Connectivity normalization — Parameters"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6323,
+            "end": 6324,
+            "text": "19",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6323,
+            "end": 6440,
+            "text": "Weighted graphs of proportional densities from the top 5% to the top 30% of connections were considered for analysis.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Sparsity control — Software",
+            "Sparsity control — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6442,
+            "end": 6443,
+            "text": "20",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6442,
+            "end": 6625,
+            "text": "The degree of modularity in a network was characterized by the Q index, which represents the density of within-module connections relative to an appropriate random network null model.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Software",
+            "Graph measures — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6733,
+            "end": 6910,
+            "text": "Global efficiency was computed as the inverse of the average characteristic path length between all nodes in a network and was used as an index of parallel information transfer.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

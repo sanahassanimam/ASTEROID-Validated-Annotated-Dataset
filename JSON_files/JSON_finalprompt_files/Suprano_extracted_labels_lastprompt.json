@@ -1,0 +1,1177 @@
+{
+  "data": {
+    "text": "Participants\nFifty-eight children (44 males and 14 females) ages 8–12 (mean age 10.1± 1.2) years were recruited from the children psychiatry department of Lyon’s Neurological Hospital, the PSYRENE Center, a psychological center for high IQ children and adults, and via advertisement in schools for controls. Children with neurological diseases, learning disabilities, and psychotropic treatments were excluded from this study. Children underwent the fourth edition of WISC (WISC-IV) test and their FSIQ was established from the results of its four subscales (VCI, PRI, WMI, and PSI). Children with a high Intelligence Quotient (FSIQ> 130 or VCI> 130) were labeled as HIQ children and two HIQ profiles were defined based on score difference between VCI and PRI (Table 1). This prospective study was approved by the local ethics committee (CPP Sud-Est IV) and the French National Agency for Medicine and Health Products Safety (ANSM). Written informed consent was obtained from the parents of all participants.\n\nTABLE 1 | Population characteristics (mean ± SD): age, full-scale IQ (FSIQ), verbal comprehension index (VCI), perceptual reasoning index (PRI), processing speed index (PSI), and working memory index (WMI) for standard intelligence quotient (SIQ), high intelligence quotient (HIQ) groups, and HIQ subgroups: homogeneous (Hom-HIQ) and heterogeneous (Het-HIQ).\nSIQ HIQ Hom-HIQ Het-HIQ\n(n = 12) (n = 37) (n = 15) (n = 22)\n\nMRI Acquisitions\nMagnetic resonance imaging (MRI) examinations were performed on a 1.5T Siemens Sonata MRI system (Erlangen, Germany) with an eight-channel head-coil at the MRI Department of CERMEP – Imagerie du Vivant. A structural 3D T1-weighted MPRAGE sequence was first acquired in the sagittal plane with a 1-mm isotropic spatial resolution (TI/TE/TR = 1100/3.93/1970 ms, FOV: 256 × 256 × 176 mm, 8 min acquisition duration). Then a full examination with task fMRI, DTI, and rs-fMRI was conducted. rs-fMRI data were recorded using an EPI BOLD sequence (250 scans, TR = 2500 ms, TE = 50 ms, voxel size = 3.4 × 3.4 × 3 mm) while subjects lay quietly at rest with eyes open and fixating on a projected cross for 10.3 min. For this study only the rs-fMRI (at the end of the exam) is reported.\n\nData Preprocessing\nThe rs-fMRI data were preprocessed using SPM12 software. For each subject, functional images were corrected for delay between slice acquisitions, motion, and co-registered to the anatomical image. Time series data were not spatially smoothed because the smoothing step introduces spurious spatial correlations between adjacent regions. Using Art toolbox that evaluates the scans affected by scan-to-scan motion, we scrubbed the data carefully. When scans with movements >3 mm or with an exceptionally high variation (signal >4 standard deviations from mean) were found, a corresponding artifact regressor was constructed. A participant’s data were excluded if >20% of the available scans were affected by head motion. Motion parameters for each group were measured and compared among the groups to verify that the correlation results were not influenced by inter-group motion differences. The anatomical MRI from each participant was segmented into six different brain and non-brain tissues according to prior tissue probability maps. This step generates gray matter (GM), white matter (WM), and cerebrospinal fluid (CSF) probability maps that will be eventually be used to extract time series to compute the graph. These maps were further normalized to the MNI152 template using DARTEL, a diffeomorphic registration method that accurately align brains within the MNI space. This registration provides a deformation field that was then applied to functional and anatomical images to be later used to extract the time series to compute the graphs. The structural images were parcellated into 84 cortical, subcortical, and cerebellar areas according to the Desikan atlas. Regional mean time series were estimated by averaging the fMRI time series over all voxels in each parcel weighted by GM probability map using the Conn Toolbox. Finally, time series were regressed by the residual contamination from WM, CSF signals, motion parameters, and outliers detected using the ART toolbox and band-pass filtering was applied using wavelets transforms.\n\nWavelets Decomposition\nFollowing the approach proposed by Achard et al. (2006), time series were decomposed using dyadic wavelet transforms that partitions the total energy of a signal over a set of compactly supported basis functions, each of which is uniquely scaled in frequency and located in time. The pairwise interregional correlations between wavelets coefficients of fMRI time series extracted from each individual data set were estimated for four wavelet scales. Because frequencies below 0.1 Hz contain relevant information in rs-fMRI, we restricted our analysis to two wavelet scales: the scale 2 from f = 1/(8 TR) to f = 1/(4 TR), that represents the frequency interval 0.05–0.1 Hz, and the scale 3 from f = 1/(16 TR) to f = 1/(8 TR), that represents the frequency interval 0.025–0.05 Hz. At this stage, we measured the percentage of significant correlations obtained from the two scales. Since the wavelet scale 2 presents a higher percentage of significant correlations, we chose to proceed with the graph computation using the correlation matrices of this scale.\n\nGraph Construction\nTo construct the binarized graph, two steps are necessary. Following Alexander-Bloch et al. (2012), we kept the graph fully connected, using the minimum spanning tree based on the absolute correlation matrix. This creates a preliminary graph that contains a number of edges equal to the number of nodes minus one. In the second step, the remaining absolute values of the correlation matrices were thresholded to create an adjacency matrix that defines, for each subject, an unweighted and undirected graph using two graph costs: 15 and 20%. The choice of these values was guided by the results of a test–retest study of graph metrics derived from graph analysis of rs-fMRI dataset, where the cost of about 20% provides a good reliability of all graph metrics. Since our results obtained with the two costs were concordant, we reported in this study those related to 15%, allowing a larger inclusion of subjects and a greater robustness of the correlations. After having verified that the small-world property was satisfied for each subject and that the topology of the three groups was the same, four topological metrics were estimated for each node using Brain Connectivity Toolbox: D, BC, LE, and CC. When the graph was computed with the 84 regions from the Desikan atlas, we referred to it as the “whole brain networks” in the manuscript. When the graph was computed with the 42 regions of the right (or left) hemisphere, we referred to it as the “right hemispheric networks” (or the “left hemispheric networks”). Finally, we considered the connectivity related to the homotopic regions: 42 nodes in each hemisphere as the “homotopic connectivity.”\n\nStatistical Analysis\nFirst, statistical differences between κ indices of each group were computed using permutation tests, by randomly reassigning subjects to three groups: 12 children played the role of the SIQ group, 15 of Hom-HIQ group, and 22 of Het-HIQ group. For each subject, κ was computed following its definition. This process was repeated for 1000 permutations of the data to sample the null distribution of κ. The p-value was computed counting how many times the κ-values were higher than the one obtained using the true SIQ and HIQ groups. As the κ definition is based on the reference group (SIQ), its homogeneity was controlled using the Grubbs’ test. One outlier was identified and excluded from the SIQ group.\n\nDATA AVAILABILITY\nThe datasets generated for this study are available on request to the corresponding author.\n\nETHICS STATEMENT\nThis study was carried out in accordance with the recommendations and approved by the local Ethics Committee (CPP Sud-Est IV) and the French National Agency for Medicine and Health Products Safety (ANSM). Written informed consent was obtained from the parents of all participants and the participants.\n\nPublication\nTopological Modification of Brain Networks Organization in Children With High Intelligence Quotient: A Resting-State fMRI Study\ndoi: 10.3389/fnhum.2019.00241\nPublished: 12 July 2019\nFrontiers in Human Neuroscience\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8213,
+            "end": 8340,
+            "text": "Topological Modification of Brain Networks Organization in Children With High Intelligence Quotient: A Resting-State fMRI Study",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8346,
+            "end": 8370,
+            "text": "10.3389/fnhum.2019.00241",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8360,
+            "end": 8364,
+            "text": "2019",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8395,
+            "end": 8426,
+            "text": "Frontiers in Human Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7788,
+            "end": 7879,
+            "text": "The datasets generated for this study are available on request to the corresponding author.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8395,
+            "end": 8426,
+            "text": "Frontiers in Human Neuroscience",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "Missing_sublabels": [
+            "Code",
+            "Preregistered",
+            "Remarks"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1513,
+            "end": 1532,
+            "text": "1.5T Siemens Sonata",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "Missing_sublabels": [
+            "Number of slices",
+            "Slice thickness",
+            "Flip angle",
+            "Inter-slice gap",
+            "Field of View (cm)"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1999,
+            "end": 2011,
+            "text": "TR = 2500 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2013,
+            "end": 2023,
+            "text": "TE = 50 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2025,
+            "end": 2054,
+            "text": "voxel size = 3.4 × 3.4 × 3 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2096,
+            "end": 2105,
+            "text": "eyes open",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2144,
+            "end": 2152,
+            "text": "10.3 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1910,
+            "end": 1917,
+            "text": "rs-fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1393,
+            "end": 1428,
+            "text": "(n = 12) (n = 37) (n = 15) (n = 22)",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2285,
+            "end": 2290,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4061,
+            "end": 4073,
+            "text": "Conn Toolbox",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4214,
+            "end": 4225,
+            "text": "ART toolbox",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3530,
+            "text": "DARTEL",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6545,
+            "end": 6571,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13,
+            "end": 33,
+            "text": "Fifty-eight children",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 35,
+            "end": 58,
+            "text": "44 males and 14 females",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "Missing_sublabels": null
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 60,
+            "end": 96,
+            "text": "ages 8–12 (mean age 10.1± 1.2) years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "Missing_sublabels": null
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 308,
+            "end": 426,
+            "text": "Children with neurological diseases, learning disabilities, and psychotropic treatments were excluded from this study.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "Missing_sublabels": null
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 771,
+            "end": 932,
+            "text": "This prospective study was approved by the local ethics committee (CPP Sud-Est IV) and the French National Agency for Medicine and Health Products Safety (ANSM).",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2096,
+            "end": 2139,
+            "text": "eyes open and fixating on a projected cross",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2124,
+            "end": 2139,
+            "text": "projected cross",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "Missing_sublabels": [
+            "Stimuli repetition"
+          ]
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7215,
+            "end": 7306,
+            "text": "12 children played the role of the SIQ group, 15 of Hom-HIQ group, and 22 of Het-HIQ group.",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "Missing_sublabels": [
+            "Omnibus ANOVA"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2342,
+            "end": 2388,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2285,
+            "end": 2290,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2342,
+            "end": 2388,
+            "text": "corrected for delay between slice acquisitions",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2390,
+            "end": 2440,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2285,
+            "end": 2290,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2390,
+            "end": 2396,
+            "text": "motion",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2402,
+            "end": 2440,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2285,
+            "end": 2290,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2402,
+            "end": 2439,
+            "text": "co-registered to the anatomical image",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2656,
+            "end": 2687,
+            "text": "4",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4214,
+            "end": 4225,
+            "text": "ART toolbox",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2830,
+            "end": 2848,
+            "text": "artifact regressor",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2704,
+            "end": 2719,
+            "text": "movements >3 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters (additional)"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2866,
+            "end": 2961,
+            "text": "5",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2892,
+            "end": 2931,
+            "text": "excluded if >20% of the available scans",
+            "labels": [
+              "Exclusion — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2904,
+            "end": 2908,
+            "text": ">20%",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3178,
+            "end": 3234,
+            "text": "6",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2285,
+            "end": 2290,
+            "text": "SPM12",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3178,
+            "end": 3234,
+            "text": "segmented into six different brain and non-brain tissues",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3484,
+            "end": 3530,
+            "text": "7",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2285,
+            "end": 2290,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3530,
+            "text": "DARTEL",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3502,
+            "end": 3517,
+            "text": "MNI152 template",
+            "labels": [
+              "Spatial normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3680,
+            "end": 3723,
+            "text": "8",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3530,
+            "text": "DARTEL",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3680,
+            "end": 3701,
+            "text": "applied to functional",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3818,
+            "end": 3912,
+            "text": "9",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3899,
+            "end": 3912,
+            "text": "Desikan atlas",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3835,
+            "end": 3881,
+            "text": "84 cortical, subcortical, and cerebellar areas",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3914,
+            "end": 4073,
+            "text": "10",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4061,
+            "end": 4073,
+            "text": "Conn Toolbox",
+            "labels": [
+              "Time series ROI — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3958,
+            "end": 4019,
+            "text": "averaging the fMRI time series over all voxels in each parcel",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4163,
+            "end": 4180,
+            "text": "11",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4163,
+            "end": 4180,
+            "text": "motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4146,
+            "end": 4161,
+            "text": "12",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4146,
+            "end": 4161,
+            "text": "WM, CSF signals",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4230,
+            "end": 4287,
+            "text": "13",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4230,
+            "end": 4239,
+            "text": "band-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4973,
+            "end": 4984,
+            "text": "0.05–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4404,
+            "end": 4429,
+            "text": "14",
+            "labels": [
+              "wavelet decomposition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4404,
+            "end": 4429,
+            "text": "dyadic wavelet transforms",
+            "labels": [
+              "wavelet decomposition — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4973,
+            "end": 4984,
+            "text": "0.05–0.1 Hz",
+            "labels": [
+              "wavelet decomposition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4597,
+            "end": 4632,
+            "text": "15",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2541,
+            "end": 2553,
+            "text": "correlations",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5569,
+            "end": 5596,
+            "text": "16",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5569,
+            "end": 5589,
+            "text": "absolute correlation",
+            "labels": [
+              "Negative correlation — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5863,
+            "end": 5894,
+            "text": "17",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6545,
+            "end": 6571,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph characteristics — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5863,
+            "end": 5888,
+            "text": "unweighted and undirected",
+            "labels": [
+              "Graph characteristics — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5905,
+            "end": 5928,
+            "text": "18",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5786,
+            "end": 5797,
+            "text": "thresholded",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6255,
+            "end": 6258,
+            "text": "15%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6485,
+            "end": 6538,
+            "text": "19",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6545,
+            "end": 6571,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6573,
+            "end": 6590,
+            "text": "D, BC, LE, and CC",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8103,
+            "end": 8199,
+            "text": "Written informed consent was obtained from the parents of all participants and the participants.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

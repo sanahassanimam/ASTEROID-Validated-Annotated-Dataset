@@ -1,0 +1,440 @@
+{
+  "data": {
+    "text": "We chose not to regress out the global signal in order to retain the interpretability of negative correlations (Murphy et al., 2009). In addition, to reduce potential influence of transient task-related effects, all visual and motor events were treated as events of no interest in a standard general linear model regression. The residuals from these regression models were used to estimate functional connectivity during the tasks. Only relevant task blocks were included in the time series (i.e., no fixation blocks), with 6 s of hemodynamic delay accounted for, and concatenated prior to correlation calculation.\n\nWe first conducted Pearson correlations between time series in all pairs of regions from the commonly used 264 cortical and subcortical regions-of-interest (ROIs) atlas from Power et al. (2011). ROIs were spheres of 5-mm radius centered at the coordinates as previously performed in similar analyses (Cohen and D’Esposito, 2016; Cole et al., 2014). Correlation coefficients were Fisher’s Z transformed and used for all subsequent computations. As there is no clear consensus on the treatment of task events, we conducted another set of analyses without the removal of task events and produced similar results, as expected from previous reports (Cohen and D’Esposito, 2016). Here, we chose to report the findings with task events removed.\n\nCommunity Detection. To determine the network architecture during resting-state, we used the Louvain community detection algorithm with two free parameters to partition the 264 ROIs into functional modules (i.e., networks of highly interconnected brain regions). The density parameter determines the threshold of connection strength. Connections with strength below this threshold were removed prior to community detection. The structural resolution parameter was used to restrict the number of communities identified in the functional connectivity matrix. To be consistent with previous work (Cole et al., 2014), we applied the same range for density threshold (40 % to 2 % in steps of 2.5) and resolution (0–3 in steps of 0.2). Each set of parameters was evaluated based on the resulting partition. The parameters were considered superior if they successfully partitioned the ROIs into functional modules as previously identified in the literature (Power et al., 2011). As such, optimal density threshold of 0.045 and resolution of 2.2 were chosen as they produced a twelve-community partition similar to Power et al. (2011). The optimal parameters obtained from resting-state community detection were subsequently applied to the task data to identify communities in the three task states. As the Louvain algorithm is stochastic, we ran this algorithm 150 times to obtain 150 partitions. These partitions were then used to create an agreement matrix which was subjected to consensus clustering (Lancichinetti et al., 2009) to yield a final partition for each subject and each task state.\n\nTo examine architectural changes within each module across the four cognitive states, community detection was applied to key neurocognitive modules including FPN, salience, DMN, visual, and SMN using data from each of the four states. These networks represent the cognitive and sensory domains likely recruited by the different cognitive demands engaged during the performance of the three distinct tasks. Changes in network architecture across states, both at the whole-brain and module levels, were quantified by adjusted Rand index (ARI) (Arabie and Hubert, 1985) which measures the similarity between two partitions while accounting for chance of similarity due to randomness. We calculated the partition similarity between the child and the CB samples to delineate potential age effects. Brain network graphs were visualized with BrainNet Viewer (Xia et al., 2013).\n\nAt the whole-brain level, we examined the degree of integration changes in network connectivity between the resting and the three task states. Brain Connectivity Toolbox (Rubinov and Sporns, 2010) (https://sites.google.com/site/bctnet/) and custom MATLAB scripts were used to calculate these measures. Connectivity matrices were thresholded with the density of 0.045 (as determined by community detection optimization) prior to obtaining the graph metrics.\n\nFor the measures of integration, we used global efficiency, local efficiency, participation coefficient, number of connector hubs, and modularity. Global efficiency is the measure of average inverse shortest path length between nodes within a network (Latora and Marchiori, 2001), with higher global efficiency indicative of stronger connections between modules or high degree of integration. Global efficiency is defined as follows: Eglobal = 1/[N(N − 1)] Σ_{i≠j∈G} (1/Li,j), where L is the minimum path length and N is the number of nodes in graph. Local efficiency is the global efficiency computed on neighboring nodes (i.e., the inverse of the average shortest path connecting all neighbors of that node), with high local efficiency indicative of low integration. Participation coefficient refers to the measure of diversity of intermodular connections of individual nodes. A network with high participation coefficient contains nodes that have dense connections with other networks and is thus more integrated. Participation coefficient is defined as follows: PCi = 1 − Σ_{s=1}^{NM} (kis/ki)^2 where kis is the degree (number of connections) of node i to other nodes in its own network (s), and ki is the degree of node i regardless of network membership. A connector hub is a node that displays a high-degree of diverse inter-modular connectivity (van den Heuvel and Sporns, 2013). Here, connector hubs were defined as nodes with high participation coefficient (>0.8) and low within-module degree (<1.5) (Guimerà and Nunes Amaral, 2005a, 2005b). An increase in the number of connector hubs reflects an increase in integration. Modularity is the degree to which the network may be subdivided into non-overlapping groups of nodes such that the number of within-group edges is maximized while the number of between-group edges is minimized.\n\nAt the module level, we assessed the flexibility of connectivity pattern for the five functional modules across the four cognitive states. Flexibility refers to the degree of change in connectivity patterns of a network across multiple states. Specifically, we used connectivity variability, nodal membership change, and module partition similarity. Connectivity variability is the variability in connectivity strength measured by standard deviation across the four cognitive states (Cole et al., 2013). High variability indicates a high degree of flexibility. Nodal membership change is the probability of a node switching its membership to a different module upon transition from one state to another, calculated by the number of times a node changes membership normalized by the total possible number of changes (Bassett et al., 2010). To avoid potential bias for/against any network(s) or state(s), nodal membership changes were averaged across the three resting-to-task switches (i.e., rest to reward, rest to perception, and rest to working memory) in the current study. Module partition similarity is the architectural similarity between resting partition and a task partition for a given module. High similarity indicates stable module architecture and thus low flexibility. The same community detection procedure used for whole-brain architecture was performed for each state and each module.\n\nNext, we examined functional integration in the 52 children with usable data from the resting and three task states. Greater whole-brain network integration was found for all task states relative to the resting state. Specifically, the task states exhibited significant increases in global efficiency, number of connector hubs, and participation coefficient compared to the resting state. There was a significant decrease in local efficiency from the resting to task states. However, modularity did not significantly differ across the four states. As reduced modularity was associated with increased cognitive processing in adults (Cohen and D’Esposito, 2016), we examined the effect of age on modularity and found that the older the participants, the lower the degree of modularity in task state (averaged across the three tasks).\n\nTo examine functional flexibility, we used the DMN, FPN, Salience, Visual, and SMN functional modules identified in the resting state and extracted connectivity variability, nodal membership change, and partition similarity across the four states for each network. Among the networks, FPN showed the higher variability in connectivity strength across states than DMN, visual network, SMN, and Salience network, whereas variability was lowest in the visual network. Similarly, FPN showed the highest nodal membership change. In addition, relative to all other modules, FPN and Salience showed lowest rest-task partition similarity, indicating a higher degree of architectural changes. In sum, FPN (and to a lesser degree, Salience) showed greatest functional flexibility whereas sensory and motor modules exhibited relatively more stable connectivity patterns across the four states."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 616,
+            "end": 810,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 616,
+            "end": 810,
+            "text": "We first conducted Pearson correlations between time series in all pairs of regions from the commonly used 264 cortical and subcortical regions-of-interest (ROIs) atlas from Power et al. (2011).",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 811,
+            "end": 964,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 811,
+            "end": 964,
+            "text": "ROIs were spheres of 5-mm radius centered at the coordinates as previously performed in similar analyses (Cohen and D’Esposito, 2016; Cole et al., 2014).",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 432,
+            "end": 614,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 432,
+            "end": 614,
+            "text": "Only relevant task blocks were included in the time series (i.e., no fixation blocks), with 6 s of hemodynamic delay accounted for, and concatenated prior to correlation calculation.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 616,
+            "end": 810,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 616,
+            "end": 810,
+            "text": "We first conducted Pearson correlations between time series in all pairs of regions from the commonly used 264 cortical and subcortical regions-of-interest (ROIs) atlas from Power et al. (2011).",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 965,
+            "end": 1059,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 965,
+            "end": 1059,
+            "text": "Correlation coefficients were Fisher’s Z transformed and used for all subsequent computations.",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1355,
+            "end": 1617,
+            "text": "6",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1355,
+            "end": 1617,
+            "text": "Community Detection. To determine the network architecture during resting-state, we used the Louvain community detection algorithm with two free parameters to partition the 264 ROIs into functional modules (i.e., networks of highly interconnected brain regions).",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1618,
+            "end": 1688,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1618,
+            "end": 1688,
+            "text": "The density parameter determines the threshold of connection strength.",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 133,
+            "text": "8",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 133,
+            "text": "We chose not to regress out the global signal in order to retain the interpretability of negative correlations (Murphy et al., 2009).",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2327,
+            "end": 2482,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2327,
+            "end": 2482,
+            "text": "As such, optimal density threshold of 0.045 and resolution of 2.2 were chosen as they produced a twelve-community partition similar to Power et al. (2011).",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4120,
+            "end": 4274,
+            "text": "Connectivity matrices were thresholded with the density of 0.045 (as determined by community detection optimization) prior to obtaining the graph metrics.",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4423,
+            "end": 4668,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4423,
+            "end": 4668,
+            "text": "Global efficiency is the measure of average inverse shortest path length between nodes within a network (Latora and Marchiori, 2001), with higher global efficiency indicative of stronger connections between modules or high degree of integration.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4827,
+            "end": 5044,
+            "text": "Local efficiency is the global efficiency computed on neighboring nodes (i.e., the inverse of the average shortest path connecting all neighbors of that node), with high local efficiency indicative of low integration.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5045,
+            "end": 5154,
+            "text": "Participation coefficient refers to the measure of diversity of intermodular connections of individual nodes.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5538,
+            "end": 5664,
+            "text": "A connector hub is a node that displays a high-degree of diverse inter-modular connectivity (van den Heuvel and Sporns, 2013).",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5910,
+            "end": 6120,
+            "text": "Modularity is the degree to which the network may be subdivided into non-overlapping groups of nodes such that the number of within-group edges is maximized while the number of between-group edges is minimized.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3961,
+            "end": 4119,
+            "text": "Brain Connectivity Toolbox; custom MATLAB scripts",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7525,
+            "end": 7641,
+            "text": "11",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7525,
+            "end": 7641,
+            "text": "Next, we examined functional integration in the 52 children with usable data from the resting and three task states.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8358,
+            "end": 8622,
+            "text": "To examine functional flexibility, we used the DMN, FPN, Salience, Visual, and SMN functional modules identified in the resting state and extracted connectivity variability, nodal membership change, and partition similarity across the four states for each network.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7525,
+            "end": 7641,
+            "text": "Next, we examined functional integration in the 52 children with usable data from the resting and three task states.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "data": {
+    "title": "Allocentric representation in the human amygdala and ventral visual stream",
+    "text": "Title: Allocentric representation in the human amygdala and ventral visual stream\n\nThe peak voxel ROIs used consisted of the peak voxel as well as neighboring voxels, resulting in seven voxels in total (to allow for some individual anatomical variation).\n\npairwise correlation analyses (Kendall’s tA) 2014) produced one correlation matrix for the environmental exploration periods and one for the post-exploration periods. A higher\nKendall’s tA wasinterpreted as indicatingstronger functional connectivity. The two-sided Wilcoxon signed rank test wasperformedon a group level, allowing for assessment of whether the connectivity (Kendall’s t ) between pairs of searchlights or nodes was sig-nificant. A significance level of alpha = 0.05 was used, corrected for multiple comparisons using a 5% false discovery rate (FDR).\n\nGraph analysis\nGraph analyses of the allocentric network were performed separately for the environmental exploration and the post-exploration\nperiod, consisting of (1) a multiresolution consensus clustering analysis to evaluate hierarchical connectivity (Jeub et al., 2018), (2)\nevaluation of the centrality ofindividual nodes within the network by using graph measures from the Brain Connectivity toolbox (Ru-\nbinovandSporns,2010)(https://sites.google.com/site/bctnet/),and(3)analysisoftherelationshipbetweenaveragebehavioralper-\nformanceandglobalgraphmeasuresfromtheBrainConnectivitytoolbox.Theaveragenetworkacrossalltheparticipantswasinves-\ntigated. In addition, the participants’ individual networks were analyzed to explore individual differences in connectivity. Negative\nedge weights were set to zero.\nFirst,amultiresolution consensus clustering analysis (Jeub etal., 2018)wasused toevaluate thelevel ofhierarchical organization\nwithintheallocentricMTLnetwork.Weappliedaneventsamplingproceduretoestimatethemodularpartitioningofthenetworkfora\nset of 10000 samples (see below) that covered all scales present in the network approximately equally. Modularity for each sample\nwas evaluated using the iterated GenLouvain algorithm, resulting in a set of multiresolution partitions. The complete set of multire-\nsolution partitions was then tested for hierarchical clustering using a divisive consensus clustering algorithm. The hierarchical\nconsensus clustering algorithm started with the partition where all nodes were part of one module, and then divided all modules\nbasedonsignificantpairwiseco-classificationofnodesuntilnomodulecouldbefurthersubdivided.Thisresultedinatreeofnested\npartitions,withasetoflevelsthateachrepresentedauniquepartition.Atestlevelofalpha<0.05wasusedforallbranchesinthetree\n(see below). The sample size and the p value threshold in the multiresolution clustering analysis were selected by evaluating which\ncombination of p value threshold (0.05, 0.01,0.001, or 0.0001) and partition size in the initial ensemble (1000, 10000, 100000, or\n1000000)thatgavethehighestaverageZ-scoreoftherand-coefficient,whencomparingthefinest-levelpartitionforeachcombina-\ntionofpvaluethresholdandpartitionsizewiththefinest-levelpartitionforallothercombinationsofpvaluethresholdsandnumberof\npartitions.Further,weextractedthenumberofmodulesinthetop-levelpartitionofthetree.Finally,tocomparethetop-levelpartition\nfor each individual with the top-level partition estimated at a group level we used the adjusted Rand similarity coefficient and the\nZ-score of the Rand coefficient if the adjusted Rand similarity coefficient was relatively small (positive Z-scores imply that the\npartitions are similar) (Traud et al., 2011).\nWealsoincluded‘‘leave-onesubjectout’’and‘‘leave-onetrialout’’clusterstabilityanalyses.The‘‘leave-onesubjectout’’analysis\ninvolved removing the data from one subject before running the multiresolution consensus clustering analysis, and then comparing\nthetop-levelpartitionfromthisanalysiswiththetop-levelpartitionfromallthesubjects(similartotheclusterstabilityanalysisimple-\nmented in the R package clValid (Brock et al., 2008) (https://cran.r-project.org/web/packages/clValid/index.html)). The measure\nused for this comparison was the adjusted Rand similarity coefficient, and the Z-score of the Rand coefficient in cases where\nthe adjusted Rand similarity coefficient was relatively small (Traud et al., 2011). The ‘‘leave-one trial out’’ was identical to the\n‘‘leave-one subject out’’ except that individual trials were left out of the analysis instead of subjects.\nSecond, a set of measures that described the centrality of the nodes in the allocentric network and the overall global efficiency of\ntheallocentricnetworkwereestimatedusingtheBrainConnectivitytoolbox(RubinovandSporns,2010)inMATLAB.Fortheindivid-\nual nodes within the network from each subject, degree centrality, betweenness centrality, eigenvector centrality, participation,\nwithin-module degree z-score, strength, and clustering were estimated. The scores for these individual node measures were then\nstandardized within the subject-specific allocentric MTL networks:\nx (cid:1)m\nz = i ; 1%i%N\ni s\nusing the mean m and the standard deviation s across all nodes. Finally, for each node in the allocentric MTL network a two-sided\nWilcoxonsignedranktestwasperformedonthegrouplevelforeachofthe centralitymeasures,toassesswhetheranyofthenodes\nshowed a higher level of centrality than the other nodes. A significance threshold of p = 0.05 was used, corrected for multiple com-\nparisonsusinga5%FalseDiscoveryRate(FDR).ThebrainnetworkswerevisualizedusingtheBrainNetViewer(Xiaetal.,2013).For\nthenetworkasawhole,globalefficiencywasestimated(see(BullmoreandSporns,2012;RubinovandSporns,2010)fordetailsand\ninterpretations of these measures).\nThird, we explored the relationships between average behavioral performance (Pattern accuracy, Environmental geometry,\nEuclideanmap,Object identity) andglobal graph measuresfrom theparticipants’ individualnetworks (global efficiency andnumber\nof top-level modules in the allocentric network). The global graph measures were used as dependent variables in separate mixed\nlinearmodelsimplementedinR,asdescribedabove.Theindependentvariableswereselectedonthebasisofwhethertheirinclusion\nimproved the second-order AIC value in each case. First, we tested for random intercepts across participants. The fixed effects\nCell Reports 34, 108658, January 19, 2021 e6\n\nindependent variables tested for inclusion wereallspatialmeasuresinseparatemodels(Patternaccuracy,Environmentalgeometry,\nEuclidean map, and Object identity), time (environmental exploration and post-exploration), interaction effects (‘‘spatial measure’’\n* time), while the global graph measure density was included as a nuisance variable (see Table S7). Once the best model was\nselected, the relationship between behavioral performance and global graph measure was tested for statistical significance. A significance threshold of p = 0.05 was used,andtheanalyseswereFDR correctedforthetotalnumberofexplanatory variables,across\nall models, (Table S7), with a 5% expected false positive rate."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 87,
+            "end": 102,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 180,
+            "end": 192,
+            "text": "seven voxels",
+            "labels": [
+              "ROI definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 287,
+            "end": 299,
+            "text": "2",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 287,
+            "end": 299,
+            "text": "Kendall’s tA",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 725,
+            "end": 737,
+            "text": "alpha = 0.05",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 791,
+            "end": 820,
+            "text": "5% false discovery rate (FDR)",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 993,
+            "end": 1038,
+            "text": "3",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 993,
+            "end": 1038,
+            "text": "multiresolution consensus clustering analysis",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2026,
+            "end": 2055,
+            "text": "iterated GenLouvain algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2208,
+            "end": 2247,
+            "text": "divisive consensus clustering algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1879,
+            "end": 1892,
+            "text": "10000 samples",
+            "labels": [
+              "Network definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2585,
+            "end": 2595,
+            "text": "alpha<0.05",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1592,
+            "end": 1630,
+            "text": "4",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1619,
+            "end": 1630,
+            "text": "set to zero",
+            "labels": [
+              "Negative correlation — Type"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4714,
+            "end": 4731,
+            "text": "5",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1202,
+            "end": 1228,
+            "text": "Brain Connectivity toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4644,
+            "end": 4650,
+            "text": "MATLAB",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4714,
+            "end": 4731,
+            "text": "degree centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4733,
+            "end": 4755,
+            "text": "betweenness centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4757,
+            "end": 4779,
+            "text": "eigenvector centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4781,
+            "end": 4809,
+            "text": "participation",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4532,
+            "end": 4549,
+            "text": "global efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1419,
+            "end": 1466,
+            "text": "6",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1419,
+            "end": 1466,
+            "text": "average network across all the participants",
+            "labels": [
+              "Result aggregation — Type"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4315,
+            "end": 4336,
+            "text": "leave-one subject out",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6602,
+            "end": 6645,
+            "text": "density",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

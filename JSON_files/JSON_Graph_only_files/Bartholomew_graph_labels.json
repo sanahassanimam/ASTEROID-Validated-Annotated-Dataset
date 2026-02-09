@@ -1,0 +1,378 @@
+{
+  "data": {
+    "text": "2.5 Connectivity Matrices\nNetwork nodes were defined using a 184-region brain atlas developed by Shen and \ncolleagues (Shen et al., 2013). Time-series data were extracted from each region of interest \n(ROI) as the mean across voxels in an ROI for each time point. Extracted time-series were \nquality-checked for irregularities (e.g. motion-related artifacts). ROIs were excluded from \ntime-series extraction if the segmentation included fewer than 5 voxels or less than 25% of \nthe voxels with the ROI. Eight ROIs, with insufficient coverage in cerebellum for a large \nsubset of participants, were excluded, resulting in extracted time-series data for 176 ROIs. \nAll 103 participants maintained complete time series data after these eight ROIs were \nremoved and were therefore retained for analysis.\n\nTime series for each ROI were deconvolved with a canonical HDR function, and then time \nseries were divided by task block. Blocks were then concatenated by condition (positive, \nneutral, or negative words), and time series between each pair of ROIs were correlated \n(within participant and task condition) using a robust Pearson correlation technique that \ndown-weights or removes marginal or bivariate outliers (Pernet, Wilcox, & Rousselet, 2013). \nThis created three 176×176 robust correlation matrices for each participant (i.e., one matrix \nper condition). As previous work has demonstrated that this analysis method ensures that \nmean differences in signal across conditions cannot drive effects (Spielberg et al, 2015), \nvariance related to task condition was not regressed out in these analyses.\n\n2.6 Identification of Network Connections Related to Emotion Inhibition\nTo identify network elements that varied as a function of emotion inhibition, connectivity \nmatrices were entered into the Network Based Statistic (NBS; www.nitrc.org/projects/nbs/) \ntoolbox using task condition as a repeated measure. In NBS, connectivity matrices are \nentered as dependent variables, and the regression model is tested for each link, following \nwhich a t-threshold is applied to each link across the network to remove weakly/\nunassociated links. As there is currently no accepted way to determine an optimal or \nappropriate threshold for these analyses, multiple thresholds were examined to ensure that \nthe results were consistent across thresholds. A threshold of t = 3.2 was chosen, as it resulted \nin stable networks across findings. Next, clusters of supra-threshold links (i.e., links sharing \na node with ≥1 other links) are identified, and the corrected significance of each cluster is \ncomputed. The cluster-extent-corrected p-value is calculated by comparing observed cluster \nsize (number of links) against a null distribution of maximal supra-threshold sizes created \nvia permutation (5000 randomizations), resulting in an overall corrected α < 0.05.\n\nTwo orthogonal contrasts were tested in the NBS model, capturing valence and arousal \nqualities of emotion (Posner, Russell, & Peterson, 2005). A within-subject linear contrast \ncompared positive and negative conditions, capturing the valence effect. A within-subject \nquadratic contrast comparing the combination of positive and negative trials against neutral \ntrials captured the arousal effect. Contrasts modeling each participant’s individual mean \nwere included in order to model each participants mean individually, as is required for a \nrepeated-measures analysis.\n\n2.7 Identification of Graph-Theory Properties Related to Emotion Inhibition\nThe GTG toolbox was used to identify topological properties that differed by emotion \ninhibition condition. GTG was used to calculate 11 graph-theory properties (Global \nEfficiency, Transitivity, Assortativity, Local Assortativity, Local Efficiency, Brokerage, \nCloseness Centrality, and Participation Coefficient).\n\nThese properties were selected based on consistency with previous work on network \nrestructuring in the color-word Stroop task (Spielberg, 2015) and their relevance to \nunderstanding how the overall structure of a network functions and how individual regions \nchange their relationship to the network in response to changing task demands, a primary \naim of the present study. Global properties such as Global Efficiency, Transitivity, and \nAssortativity were selected because they index efficiency of moving information between \nregions of a network, specialized processing within a network, and the tendency for a \nnetwork to have backup hubs in case of disturbance or disruption of a primary hub, \nrespectively (Bullmore & Sporns, 2009).\n\nThe remaining local graph properties assess the relationship that a particular node has to \nother nodes in its cluster, characterize the movement of information across the network, and \nprovide important information about how the role of a region and its relationship to \nneighboring structures change dynamically with task demands (Bullmore & Sporns, 2009). \nLike their global counterparts, Local Assortativity and Local Efficiency assess the extent to \nwhich a node is connected to other highly connected nodes and the efficiency of \ncommunication amongst the nodes neighbors, respectively. Similarly, Brokerage assesses the \nextent to which a node represents a shortcut or important bridge between clusters. Closeness \nCentrality and Participation Coefficient assess how tightly connected a region is to all other \nregions in a network and to other clusters, respectively. Detailed information on how these \nproperties are calculated can be found in the documentation for the GTG toolbox, which is \nfreely available (www.nitrc.org/projects/metalab_gtg).\n\nFirst, matrices were thresholded to include only positive weights and normalized via division \nby median weight (excluding zeros) per matrix. Unlike some studies that use higher (and \noften multiple) density thresholds and binarize the networks, only one threshold (zero) and \nretained link weights were used because this method retains important information about the \nweighted networks, unlike some other strategies (Rubinov & Sporns, 2010). The zero \nthreshold was used because positive and negative weights are typically analyzed separately \n(Rubinov & Sporns, 2010), and weight normalization was performed, in part, to account for \npotential bias introduced by thresholding.\n\nProperties were calculated separately for each task condition and then subjected to a \npermutation analysis using contrasts for task conditions, which results in a β statistic \nsubjected to an F-test. The properties listed above were chosen based on their relevance to \nthe quantification of network structure and efficiency and based on their inclusion in the \nCWS study of Spielberg et al. (2015). In order to limit the number of comparisons, \nproperties were examined only for the nodes identified in the NBS analysis as having the \nhighest number of connections in that network. Four nodes were selected for graph property \nanalysis. Relationships were tested only for predictors significant in the equivalent NBS \nanalysis.\n\n3.3.2 Arousal Effects—The global network showed greater overall network segregation \n(i.e. Transitivity, or clustering into separate groups of nodes) for high, relative to low, arousal \nstimuli (F = 213.77, p < 0.001, ηp2 = 0.68). Additionally, the global network was associated \nwith greater overall network integration (i.e. Global Efficiency, or efficiency of information \ntransfer) for high-arousal stimuli (F = 1231.81, p < 0.001, ηp2 = 0.92). High levels of both \nsegregation and integration are indicative of a small world organization, which is a \nparticularly efficient overall network structure (Bullmore & Sporns, 2009). Assortativity of \nthe global network did not change as a function of the arousal of the stimuli to be inhibited.\n\n3.4 Local Network Properties Associated with Emotion Inhibition\nBased on the emergent networks reported above (Figures 1–3), nodes demonstrating the \ngreatest number of connections across networks were included in further analysis. These \nnodes were selected for graph property assessment and their properties entered into a \nrepeated-measures general linear model, testing effects of valence and arousal on graph \nproperties. Nodes included left IFG, left thalamus, right precuneus, and left insula. Results \nare summarized in Table 3\n\n3.4.1 Valence effects—As valence of the emotional stimuli became more negative, the \nParticipation Coefficient of precuneus increased (F = 9.46, pFDR corrected = 0.038, ηp2 = \n0.08). Specifically, precuneus maintained more functional connections to other modules \n(clusters of densely connected nodes) during negative word trials than during positive word \ntrials.\n\n3.4.2 Arousal Effects—Extent of local clustering or segregation was assessed via Local \nEfficiency. IFG (F = 102.18, pFDR corrected < 0.001, ηp2 = 0.50), precuneus (F = 111.62, \npFDR corrected < 0.001, ηp2 = 0.52), insular cortex (F = 130.23, pFDR corrected < 0.001, ηp2 = \n0.56), and thalamus (F = 108.80, pFDR corrected < 0.001, ηp2 = 0.52) evidenced greater Local \nEfficiency in response to higher arousal stimuli. Thus, the neighbors of these nodes showed \ngreater clustering with each other in order to increase efficiency of information transfer \nduring emotion-challenge trials relative to neutral trials.\n\nLocal integration of information transfer was assessed via Brokerage. Nodes in IFG (F = \n16.80, pFDR corrected < 0.001, ηp2 = 0.14), thalamus (F = 17.17, pFDR corrected = 0.01, ηp2 = \n0.14), and precuneus (F = 17.17, pFDR corrected < 0.001, ηp2 = 0.14) demonstrated reduced \nBrokerage during high-arousal trials, suggesting that high-arousal trials degraded reliance on \nthese nodes as hubs of communication between networks.\n\nHigh-arousal trials also fostered increased Closeness Centrality of nodes in IFG (F = 249.60, \npFDR corrected < 0.001, ηp2 = 0.71), precuneus (F = 302.73, pFDR corrected < 0.001, ηp2 = \n0.75), insular cortex (F = 235.76, pFDR corrected < 0.001, ηp2 = 0.70), and thalamus (F = \n183.23, pFDR corrected < 0.001, ηp2 = 0.64). This indicates that emotional distractors \nprompted shorter distances between, or more direct connections linking, these nodes and all \nother nodes.\n\nEmotional distractors increased Participation Coefficient for nodes in inferior frontal gyrus \n(F = 102.18, pFDR corrected = 0.006, ηp2 = 0.50; F = 162.89, pFDR corrected < 0.001, ηp2 = \n0.61), precuneus (F = 111.62, pFDR corrected < 0.001, ηp2 = 0.52), and thalamus (F = 108.80, \npFDR corrected < 0.001, ηp2 = 0.52). Thus, these nodes increased connections to other \nmodules in the network when distractors were high in emotional arousal. Eigenvector \nCentrality did not vary for any nodes in the network as a result of arousal effects.\n\nNo measures of Local Assortativity were significant. This is not surprising, given that \nGlobal Assortativity was not significantly related to arousal rating.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 26,
+            "end": 101,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 26,
+            "end": 101,
+            "text": "Network nodes were defined using a 184-region brain atlas developed by Shen",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 360,
+            "end": 502,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 360,
+            "end": 502,
+            "text": "ROIs were excluded from \ntime-series extraction if the segmentation included fewer than 5 voxels or less than 25% of \nthe voxels with the ROI.",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 139,
+            "end": 263,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 139,
+            "end": 263,
+            "text": "Time-series data were extracted from each region of interest \n(ROI) as the mean across voxels in an ROI for each time point.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 924,
+            "end": 1065,
+            "text": "4",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 924,
+            "end": 1065,
+            "text": "Blocks were then concatenated by condition (positive, \nneutral, or negative words), and time series between each pair of ROIs were correlated",
+            "labels": [
+              "Combine block — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1012,
+            "end": 1151,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1012,
+            "end": 1151,
+            "text": "time series between each pair of ROIs were correlated \n(within participant and task condition) using a robust Pearson correlation technique",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1755,
+            "end": 1911,
+            "text": "6",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1755,
+            "end": 1911,
+            "text": "connectivity \nmatrices were entered into the Network Based Statistic (NBS; www.nitrc.org/projects/nbs/) \ntoolbox using task condition as a repeated measure.",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5625,
+            "end": 5766,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5625,
+            "end": 5766,
+            "text": "First, matrices were thresholded to include only positive weights and normalized via division \nby median weight (excluding zeros) per matrix.",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6069,
+            "end": 6195,
+            "text": "8",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6069,
+            "end": 6195,
+            "text": "The zero \nthreshold was used because positive and negative weights are typically analyzed separately \n(Rubinov & Sporns, 2010)",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5871,
+            "end": 6068,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5871,
+            "end": 6068,
+            "text": "only one threshold (zero) and \nretained link weights were used because this method retains important information about the \nweighted networks, unlike some other strategies (Rubinov & Sporns, 2010).",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3509,
+            "end": 3593,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3509,
+            "end": 3593,
+            "text": "GTG toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3617,
+            "end": 3824,
+            "text": "GTG was used to calculate 11 graph-theory properties (Global \nEfficiency, Transitivity, Assortativity, Local Assortativity, Local Efficiency, Brokerage, \nCloseness Centrality, and Participation Coefficient).",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4202,
+            "end": 4353,
+            "text": "Global properties such as Global Efficiency, Transitivity, and \nAssortativity were selected because they index efficiency of moving information between",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6306,
+            "end": 6481,
+            "text": "11",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6306,
+            "end": 6481,
+            "text": "Properties were calculated separately for each task condition and then subjected to a \npermutation analysis using contrasts for task conditions, which results in a β statistic",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7058,
+            "end": 7220,
+            "text": "The global network showed greater overall network segregation \n(i.e. Transitivity, or clustering into separate groups of nodes) for high, relative to low, arousal",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

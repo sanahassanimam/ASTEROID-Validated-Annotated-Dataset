@@ -1,0 +1,189 @@
+{ "data": { "text": "Whole-brain SC and FC matrices for each individual subject were reconstructed, consisting of 90 cortical areas, reflecting a subdivision of the Automated Anatomical Labeling (AAL) atlas (Tzourio-Mazoyer et al., 2002). For structural brain network, we reconstructed streamlines between these areas and calculated the number of fibers (with end points located in both nodes during the fiber tracking) between any pairs of nodes, resulting in a 90 × 90 fiber number (FN) matrix for each subject. Two nodes were considered structurally connected when the FN between them was at least 3. For resting-state data, regional time series were calculated as the mean across voxels within each region included in the brain parcellation. For each individual, Pearson's correlations were calculated between the time series of all regions to calculate FC. Finally, a Fisher z-transformation was applied to the FC matrices.\n\nGraph theoretical analyses were carried out on structural and functional network using GRETNA software. We calculated both global and regional topological metrics for each individual. The global network metrics included global efficiency (Eglob), local efficiency (Eloc), and five small-world property metrics (clustering coefficient Cp, characteristic path length Lp, normalized clustering coefficient Gamma, normalized characteristic path length Lambda, and small-worldness Sigma). For the regional network metrics, we evaluated nodal degree centrality (Dnodal), nodal efficiency (Enodal), and nodal betweenness (Bnodal). Binary graph methods for global and regional topological metrics were used. For FC matrix, we applied a range of sparsity thresholds (range of 0.10–0.34 with an interval of 0.01). The area under the curve (AUC) for each network metric was calculated for subsequent analysis.\n\nStructural-functional connectivity coupling was assessed by the correlation coefficient between strengths of the structural and functional networks. Non-zero SC edges were extracted and normalized using a log transformation; the resulting SC values were correlated with corresponding FC values in the level of brain regions, producing 90 Pearson's r values representing the SC-FC coupling for each individual.\n\nResting-state BOLD data were preprocessed using SPM12 and Data Processing and Analysis for Brain Imaging (DPABI)." }, "annotations": [ { "result": [ { "from_name": "Atlas definition", "to_name": "text", "type": "labels", "value": { "start": 75, "end": 104, "text": "AAL atlas", "labels": ["Atlas definition — Parameters"] } }, { "from_name": "Atlas definition", "to_name": "text", "type": "labels", "value": { "start": 44, "end": 61, "text": "90 cortical areas", "labels": ["Atlas definition — Parameters"] } }, { "from_name": "Atlas definition", "to_name": "text", "type": "labels", "value": { "start": 70, "end": 74, "text": "atlas", "labels": ["Atlas definition — Step Number"], "text": "1" } },
+    {
+      "from_name": "ROI definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 283, "end": 303, "text": "90 × 90", "labels": ["ROI definition — Parameters"] }
+    },
+    {
+      "from_name": "ROI definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 229, "end": 238, "text": "streamlines", "labels": ["ROI definition — Step Number"], "text": "2" }
+    },
+
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 332, "end": 375, "text": "FN between them was at least 3", "labels": ["Sparsity control — Parameters"] }
+    },
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 332, "end": 335, "text": "FN ", "labels": ["Sparsity control — Step Number"], "text": "3" }
+    },
+
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 417, "end": 463, "text": "mean across voxels", "labels": ["Time series ROI — Algorithm"] }
+    },
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 404, "end": 410, "text": "region", "labels": ["Time series ROI — Step Number"], "text": "4" }
+    },
+
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 537, "end": 562, "text": "Pearson's correlations", "labels": ["Compute connectivity — Algorithm"] }
+    },
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 528, "end": 536, "text": "For each", "labels": ["Compute connectivity — Step Number"], "text": "5" }
+    },
+
+    {
+      "from_name": "Connectivity normalization",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 606, "end": 629, "text": "Fisher z-transformation", "labels": ["Connectivity normalization — Algorithm"] }
+    },
+    {
+      "from_name": "Connectivity normalization",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 600, "end": 605, "text": "Finally", "labels": ["Connectivity normalization — Step Number"], "text": "6" }
+    },
+
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 693, "end": 718, "text": "GRETNA software", "labels": ["Graph measures — Software"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 795, "end": 811, "text": "global efficiency", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 815, "end": 829, "text": "local efficiency", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 915, "end": 922, "text": "Gamma", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 946, "end": 953, "text": "Sigma", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1044, "end": 1067, "text": "nodal degree centrality", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1069, "end": 1084, "text": "nodal efficiency", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1089, "end": 1104, "text": "nodal betweenness", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 690, "end": 696, "text": "Graph ", "labels": ["Graph measures — Step Number"], "text": "7" }
+    },
+
+    {
+      "from_name": "Graph characteristics",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1120, "end": 1150, "text": "Binary graph methods", "labels": ["Graph characteristics — Type"] }
+    },
+    {
+      "from_name": "Graph characteristics",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1116, "end": 1119, "text": "and", "labels": ["Graph characteristics — Step Number"], "text": "8" }
+    },
+
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1168, "end": 1210, "text": "range of 0.10–0.34 with an interval of 0.01", "labels": ["Sparsity control — Parameters"] }
+    },
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1164, "end": 1167, "text": "For", "labels": ["Sparsity control — Step Number"], "text": "9" }
+    },
+
+    {
+      "from_name": "Result aggregation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1233, "end": 1256, "text": "area under the curve (AUC)", "labels": ["Result aggregation — Algorithm/Type"] }
+    },
+    {
+      "from_name": "Result aggregation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1229, "end": 1232, "text": "The", "labels": ["Result aggregation — Step Number"], "text": "10" }
+    },
+
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1387, "end": 1401, "text": "Pearson's r", "labels": ["Compute connectivity — Algorithm"] }
+    },
+
+    {
+      "from_name": "Connectivity normalization",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1346, "end": 1363, "text": "log transformation", "labels": ["Connectivity normalization — Algorithm"] }
+    },
+
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1524, "end": 1529, "text": "SPM12", "labels": ["Time series ROI — Software"] }
+    },
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1534, "end": 1539, "text": "DPABI", "labels": ["Time series ROI — Software"] }
+    }
+  ]
+}
+] }

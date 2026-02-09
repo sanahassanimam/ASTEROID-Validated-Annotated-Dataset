@@ -1,0 +1,959 @@
+{
+  "data": {
+    "text": "Time‐varying measures of cerebral network centrality correlate with visual saliency during movie watching\nDOI: 10.1002/brb3.2334\nBrain and Behavior (Wiley), 2021\n\nAkitoshi Ogawa1,2\n1 Faculty of Medicine, Juntendo University, Bunkyo-ku, Tokyo, Japan\n2 Brain Science Institute, Tamagawa University, Machida, Tokyo, Japan\nCorrespondence: Akitoshi Ogawa, Ph.D., Faculty of Medicine, Juntendo University, 2-1-1 Hongo, Bunkyo-ku, Tokyo, 113-8421, Japan. Email: a-ogawa@juntendo.ac.jp\n\nAbstract: This study investigated whether the visual saliency in movies was associated with network centrality. Time-varying eigenvector centrality (EC) and participation coefficient (PC) were analyzed parcel-wise during movie-watching, retinotopy, and rest; time-varying EC in parietal parcels and time-varying PC in primary sensory parcels significantly correlated with visual saliency in the movies.\n\nFunctional images were downloaded from the HCP database. The movie-watching, retinotopy task, and resting-state (both 7T and 3T images) data of 168 participants (64 males and 104 females; 22–25 years: 19; 26–30 years: 82; 31–35 years: 65; ≥ 36 years: 2) were analyzed. 7T: TR, 1000 ms; TE, 22.2 ms; Flip Angle, 45 degrees; Field of View, 208 mm × 208 mm; Voxel size, 1.6 mm isotropic; 85 slices; Multiband factor, 5; Image acceleration factor, 2; Partial Fourier, 7/8; Echo spacing, 0.64 ms; Band-width, 1924 Hz/Px. 3T: TR, 720 ms; TE, 33.1 ms; Flip Angle, 52 degrees; Field of View, 208 mm × 180 mm; Voxel size, 2.0 mm isotropic; 72 slices; Multiband factor, 8; No image acceleration; Partial Fourier, 7/8; Echo spacing, 0.58 ms; Band-width, 2290 Hz/Px.\n\nMOVIE: CC and Hollywood movies were presented (1024 × 768; 24 fps) with audio via earbuds. Run durations: 15 min 21 s (CC), 15 min 18 s (HO), 15 min 15 s (CC), 15 min 01 s (HO). Rest phases (20 s) at start and end of each run.\nRET: Six fMRI runs with retinotopic stimuli (counter-clockwise/clockwise sweeps, expanding/contracting circles, two multi-direction bar sweeps) within 16° visual angle (1024 × 768; 15 fps). Each run lasted 5 min.\n\nImage preprocessing: susceptibility-induced distortion correction; spatial normalization into MNI standard space; projection/normalization to standard surface (32,492 vertices/hemisphere); temporal high-pass filter (REST: 0.0005 Hz; MOVIE/RET: 0.005 Hz); FMRIB’s ICA-based Xnoiseifier (FIX); MSMAll multimodal surface matching. Preprocessed files are available from the HCP web page (db.humanconnectome.org, RRID:SCR_004830).\n\nNetwork analyses: A proportional 7.5% threshold was applied to correlation matrices to generate binary undirected adjacency matrices, based on the peak of the mean flow coefficient across 2.5–15% proportions. Parcellation: HCP parcellation (180 parcels/hemisphere); parcel time-series averaged across vertices. Eigenvector centrality (EC) and participation coefficient (PC) were computed from these adjacency matrices.\n\nVisual saliency: Saliency Toolbox v2.3 computed visual saliency maps (64×45) per movie frame using intensity, color, and orientation features with center–surround normalization. Mean visual saliency signal per scan was obtained by spatially and temporally averaging and then low-pass filtered at 0.1 Hz.\n\nParcel-wise relations: Temporal correlations were computed between the mean visual saliency signal and time-varying EC (tEC) and tPC (sliding window 50 s, computed every 1 s; excluding first/last 25 s). Correlation coefficients were Fisher-z transformed and Bonferroni-corrected; statistical threshold Z > 4.3 (P-FWE < 0.01).\n\nAvailability: Open access under Creative Commons Attribution License. The centrality maps and statistical results on the standard surface will be made available on reasonable request.\n\nFigure 1A shows the procedure to calculate a centrality map on\nthe standard brain surface. The time-series of the preprocessed data\nwere averaged across vertices in each parcel. For this purpose, the HCP\nparcellation, including 180 parcels in each hemisphere (Glasser et al.,\n2016), was employed. The averaged time-series in each parcel for each\nfMRI run was normalized to mean and standard deviation values of 0\nand 1, respectively. The time-series were subsequently concatenated\nacross the fMRI runs of each participant for centrality analysis. A cor-\nrelation matrix was calculated for the concatenated time-series across\nall parcels.\n\nFigure 1A shows the procedure to calculate a centrality map on\nthe standard brain surface. The time-series of the preprocessed data\nwere averaged across vertices in each parcel. For this purpose, the HCP\nparcellation, including 180 parcels in each hemisphere (Glasser et al.,\n2016), was employed. The averaged time-series in each parcel for each\nfMRI run was normalized to mean and standard deviation values of 0\nand 1, respectively. The time-series were subsequently concatenated\nacross the fMRI runs of each participant for centrality analysis. A cor-\nrelation matrix was calculated for the concatenated time-series across\nall parcels. Midnight Scan Club scripts (github.com/MidnightScanClub,\nGordon et al., 2017) were used to read and write CIFTI files. The HCP\nConnectomeWorkbench (Marcus et al., 2011, RRID:SCR_008750) was\nused to calculate the correlation matrix and visualize the results.\n\nA proportional 7.5% threshold was applied to the correlation matrix to\ngenerate an adjacency matrix, which represented a binary undirected\nnetwork (van den Heuvel et al., 2017; Figure 1). The adjacency matrix\nwas used for calculating EC and PC. The threshold was determined\nbased on the flow coefficient (Honey et al., 2007). As opposed to EC\nand PC, the flow coefficient is a local centrality metric. With respect to\nthe network construction, the network nodes are expected to influence\nor communicate with each other more intensively. The mean flow coef-\nficients across participants were calculated at 2.5%, 5.0%, 7.5%, 10.0%,\n12.5%, and 15% proportions. The peak was found at 7.5%.\n\nEC evaluates the importance of each network node—parcel—\n(Lohmann et al., 2010; Zuo et al., 2012). All connections in the adja-\ncency matrix were used to calculate EC. Therefore, EC integrates the\nconnectivity information about all functionally connected parcels. EC\nof parcel i was calculated as below:\nECi = 1 / λ1 A μ1 = 1 / λ1 Σ_j aij μ1(j).\n\nPC of parcel i was also calculated for the brain network (Guimerà &\nNunes Amaral, 2005; Power et al., 2013):\nPCi = 1 − Σ_m∈M (Ki(m) / Ki)^2.\nM is the total set of network communities estimated using Louvain\ncommunity detection (Rubinov & Sporns, 2010), Ki is the number of\nconnections associated with parcel i, and Ki(m) is the number of con-\nnections between parcel i and all parcels in community m. PC can be\nused to define a parcel acting as a connector hub between modules\n(i.e. local sub-networks) (Guimerà & Nunes Amaral, 2005; Rubinov &\nSporns, 2010; Bertolero et al., 2015; Cohen & D’Esposito, 2016).\n\nBoth time-varying eigenvector centrality (tEC) and participation\ncoefficient (tPC) were calculated using the sliding window technique\n(Shakil et al., 2016). The window was set to 50 s (from before 25 s to\nafter 25 s). The tEC and the tPC were calculated every second in time\nwith the scan TR in MOVIE, except the first and the last 25 s. At time t,\nthe adjacency matrix A(t) was calculated. Then, the tEC of parcel i at\ntime t was calculated as below:\ntECi(t) = 1 / λ1(t) A(t) μ1(t) = 1 / λ1(t) Σ_j aij(t) μ1(j,t).\nThe total set of network communities of time t, M(t), was estimated\nfrom the adjacency matrix A(t). The tPC of parcel i was also calculated\nas below:\ntPCi(t) = 1 − Σ_m∈M(t) (Ki(m,t) / Ki(t))^2.\n\nThe brain connectivity toolbox (Rubinov & Sporns, 2010,\nRRID:SCR_004841) was used to calculate flow coefficient, EC,\nPC, tEC, and tPC.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 105,
+            "text": "Time‐varying measures of cerebral network centrality correlate with visual saliency during movie watching",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 111,
+            "end": 128,
+            "text": "10.1002/brb3.2334",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 129,
+            "end": 161,
+            "text": "Brain and Behavior (Wiley), 2021",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 157,
+            "end": 161,
+            "text": "2021",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 163,
+            "end": 180,
+            "text": "Akitoshi Ogawa1,2",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 489,
+            "end": 590,
+            "text": "This study investigated whether the visual saliency in movies was associated with network centrality.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3573,
+            "end": 3627,
+            "text": "Open access under Creative Commons Attribution License",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2408,
+            "end": 2462,
+            "text": "Preprocessed files are available from the HCP web page",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3633,
+            "end": 3741,
+            "text": "centrality maps and statistical results on the standard surface will be made available on reasonable request",
+            "labels": [
+              "Remarks"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1156,
+            "end": 1167,
+            "text": "TR, 1000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)",
+            "Brand",
+            "Inter-slice gap",
+            "Duration (s)",
+            "Eyes open/closed",
+            "Most-used software for preprocessing"
+          ],
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1169,
+            "end": 1180,
+            "text": "TE, 22.2 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1182,
+            "end": 1204,
+            "text": "Flip Angle, 45 degrees",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1206,
+            "end": 1236,
+            "text": "Field of View, 208 mm × 208 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1238,
+            "end": 1266,
+            "text": "Voxel size, 1.6 mm isotropic",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1268,
+            "end": 1277,
+            "text": "85 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 944,
+            "end": 994,
+            "text": "movie-watching, retinotopy task, and resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1403,
+            "end": 1413,
+            "text": "TR, 720 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1415,
+            "end": 1426,
+            "text": "TE, 33.1 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1428,
+            "end": 1450,
+            "text": "Flip Angle, 52 degrees",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1452,
+            "end": 1482,
+            "text": "Field of View, 208 mm × 180 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1484,
+            "end": 1512,
+            "text": "Voxel size, 2.0 mm isotropic",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1514,
+            "end": 1523,
+            "text": "72 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1027,
+            "end": 1043,
+            "text": "168 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1646,
+            "end": 1684,
+            "text": "CC and Hollywood movies were presented",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1871,
+            "end": 1909,
+            "text": "Six fMRI runs with retinotopic stimuli",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1817,
+            "end": 1864,
+            "text": "Rest phases (20 s) at start and end of each run",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2056,
+            "end": 2077,
+            "text": "Each run lasted 5 min",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1027,
+            "end": 1136,
+            "text": "168 participants (64 males and 104 females; 22–25 years: 19; 26–30 years: 82; 31–35 years: 65; ≥ 36 years: 2)",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ],
+          "id": "m0028"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1045,
+            "end": 1069,
+            "text": "64 males and 104 females",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1071,
+            "end": 1135,
+            "text": "22–25 years: 19; 26–30 years: 82; 31–35 years: 65; ≥ 36 years: 2",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2101,
+            "end": 2102,
+            "text": "1",
+            "labels": [
+              "Field map correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0031"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2147,
+            "end": 2148,
+            "text": "2",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0032"
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2194,
+            "end": 2195,
+            "text": "3",
+            "labels": [
+              "Surface — Step Number"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2240,
+            "end": 2266,
+            "text": "32,492 vertices/hemisphere",
+            "labels": [
+              "Surface — Parameters"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2372,
+            "end": 2406,
+            "text": "MSMAll multimodal surface matching",
+            "labels": [
+              "Surface — Algorithm"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2372,
+            "end": 2378,
+            "text": "MSMAll",
+            "labels": [
+              "Surface — Software"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2269,
+            "end": 2270,
+            "text": "4",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0037"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2278,
+            "end": 2287,
+            "text": "high-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2296,
+            "end": 2332,
+            "text": "REST: 0.0005 Hz; MOVIE/RET: 0.005 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2335,
+            "end": 2336,
+            "text": "5",
+            "labels": [
+              "ICA FIX — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0040"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2366,
+            "end": 2369,
+            "text": "FIX",
+            "labels": [
+              "ICA FIX — Software"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2343,
+            "end": 2352,
+            "text": "ICA-based",
+            "labels": [
+              "ICA FIX — Algorithm"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3465,
+            "end": 3466,
+            "text": "9",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0043"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3940,
+            "end": 4040,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0044"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3940,
+            "end": 4040,
+            "text": "the HCP\nparcellation, including 180 parcels in each hemisphere (Glasser et al.,\n2016), was employed.",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3940,
+            "end": 4040,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ],
+          "id": "m0046"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3876,
+            "end": 3921,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0047"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3876,
+            "end": 3921,
+            "text": "were averaged across vertices in each parcel.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4178,
+            "end": 4290,
+            "text": "4",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0049"
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4178,
+            "end": 4290,
+            "text": "The time-series were subsequently concatenated\nacross the fMRI runs of each participant for centrality analysis.",
+            "labels": [
+              "Combine block — Type"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4291,
+            "end": 4381,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4291,
+            "end": 4381,
+            "text": "A cor-\nrelation matrix was calculated for the concatenated time-series across\nall parcels.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5140,
+            "end": 5278,
+            "text": "The HCP\nConnectomeWorkbench (Marcus et al., 2011, RRID:SCR_008750) was\nused to calculate the correlation matrix and visualize the results.",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6455,
+            "end": 6714,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0054"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6455,
+            "end": 6714,
+            "text": "M is the total set of network communities estimated using Louvain\ncommunity detection (Rubinov & Sporns, 2010), Ki is the number of\nconnections associated with parcel i, and Ki(m) is the number of con-\nnections between parcel i and all parcels in community m.",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6455,
+            "end": 6714,
+            "text": "M is the total set of network communities estimated using Louvain\ncommunity detection (Rubinov & Sporns, 2010), Ki is the number of\nconnections associated with parcel i, and Ki(m) is the number of con-\nnections between parcel i and all parcels in community m.",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5381,
+            "end": 5467,
+            "text": "8",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ],
+          "id": "m0057"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5280,
+            "end": 5467,
+            "text": "10",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0058"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5280,
+            "end": 5467,
+            "text": "A proportional 7.5% threshold was applied to the correlation matrix to\ngenerate an adjacency matrix, which represented a binary undirected\nnetwork (van den Heuvel et al., 2017; Figure 1).",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5280,
+            "end": 5467,
+            "text": "A proportional 7.5% threshold was applied to the correlation matrix to\ngenerate an adjacency matrix, which represented a binary undirected\nnetwork (van den Heuvel et al., 2017; Figure 1).",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5967,
+            "end": 6065,
+            "text": "11",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5967,
+            "end": 6065,
+            "text": "EC evaluates the importance of each network node—parcel—\n(Lohmann et al., 2010; Zuo et al., 2012).",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7634,
+            "end": 7768,
+            "text": "The brain connectivity toolbox (Rubinov & Sporns, 2010,\nRRID:SCR_004841) was used to calculate flow coefficient, EC,\nPC, tEC, and tPC.",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0063"
+        }
+      ]
+    }
+  ]
+}

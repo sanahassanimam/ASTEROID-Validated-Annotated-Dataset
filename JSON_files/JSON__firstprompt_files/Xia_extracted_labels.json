@@ -1,0 +1,908 @@
+{
+  "data": {
+    "text": "Tracking the dynamic functional connectivity structure of the human brain across the adult lifespan\nHum Brain Mapp. 2019;40:717–728. https://doi.org/10.1002/hbm.24385\n© 2018 Wiley Periodicals, Inc.\n\nAbstract\nThe transition from early adulthood to the elder is marked by functional and structural brain transformations.\n... the resting scan data of 434 subjects ... dynamic functional network connectivity measures were correlated to the certain cognitive ability.\n\n2 | MATERIALS AND METHODS\n2.1 | Subjects\n... A total of 494 healthy volunteers were recruited ... but 60 participants were excluded due to large head motion (FD > 0.2 mm). Thus, the final sample was composed of 434 subjects (165 males; mean age = 44.44, SD = 17.28; age range = 19–80). All participants were required to be healthy and none had a history of psychiatric disorder or substance abuse (including illicit drugs and alcohol), and MRI contraindications. The project was approved by the SWU Brain Imaging Center Institutional Review Board, and written informed consent was obtained from each subject prior to the study.\n\n2.2 | Image acquisition\nAll functional images were obtained from a 3-T Siemens Magnetom Trio scanner (Siemens Medical, Erlangen, Germany) at the Brain Imaging Research Central in Southwest University, Chongqing, China. The whole-brain resting-state functional images were acquired using T2-weighted gradient echo planar imaging (EPI) sequence: slices = 32, repetition time (TR)/echo time (TE) = 2000/30 ms, flip angle = 90°, field of view (FOV) = 220 mm × 220 mm, thickness = 3 mm, slice gap = 1 mm, matrix = 64 × 64, resulting in a voxel with 3.4 × 3.4 × 4 mm³. Participants were asked to close eyes, keep still, and not to fall asleep. The scan lasted for 484 s and acquired 242 volumes in total for each subject. Additionally, high-resolution T1-weighted anatomical images were acquired (TR = 1900 ms; TE = 2.52 ms; inversion time = 900 ms; flip angle = 9°; resolution matrix = 256 × 256; slices = 176; thickness = 1.0 mm; voxel size = 1 × 1 × 1 mm³).\n\n2.3 | Data preprocessing\nThe resting-state fMRI data were preprocessed using DPARSF implemented in MATLAB 2012a. Preprocessing steps included: eliminate first 10 time points of each subject; slice timing correction; realignment; registration functional images (MNI space); normalization (3 × 3 × 4 mm³); smoothing (FWHM = 6 mm); band pass filtering (0.023–0.18 Hz); nuisance regressors included white matter and cerebrospinal fluid signals in addition to 24 movement regressors derived by expansion; frames with framewise displacement (FD) > 0.2 mm were censored. The residual effects of motion were regressed out in group statistical analysis by including mean FD as a regressor of no interest.\n\n2.4 | Head motion correction\nArtifacts were reduced using excluding subjects with high head-motion, nuisance regression (excluding censored frames), interpolation, and band pass-filtering (0.023 < f < 0.18 Hz). Nuisance regressors included the cerebrospinal fluid signals, white matter, and their derivatives, in addition to 24 movement regressors derived by expansion. Subjects with max head motion >2 mm and 2.0° were censored.\n\n2.5 | Group independent component analysis\nGroup ICA was performed using the GIFT toolbox (model order C = 100). ... 59 components were identified as intrinsic connectivity networks (ICNs) for future analysis. Post processing steps on time courses included (a) removing linear, quadratic, and cubic trends, (b) regressing out six realignment parameters and their temporal derivatives, (c) low-pass filtering (0.15 Hz), and (d) removing spikes to ensure that artifactual spikes do not negatively impact the signal analysis.\n\n2.6 | Dynamic FNC computation\nTime courses were temporally bandpass filtered (0.023–0.18 Hz). The dynamic FNC was computed using a sliding-window correlation approach with length 22 TR (Gaussian σ = 3 TR) and step 1 TR, resulting in 210 windows per subject.\n\n2.11 | The correlation between Wechsler adult intelligence scale and state\nThe Wechsler Adult Intelligence Scale (WAIS-RC) similarity subtest was analyzed. The total score of WAIS and similarity were both negatively correlated with age; similarity was negatively correlated with transition of State 3–1."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 99,
+            "text": "Tracking the dynamic functional connectivity structure of the human brain across the adult lifespan",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 116,
+            "end": 120,
+            "text": "2019",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 174,
+            "end": 197,
+            "text": "Wiley Periodicals, Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 149,
+            "end": 166,
+            "text": "10.1002/hbm.24385",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1165,
+            "end": 1186,
+            "text": "Siemens Magnetom Trio",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1438,
+            "end": 1449,
+            "text": "slices = 32",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1501,
+            "end": 1517,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1534,
+            "end": 1556,
+            "text": "FOV) = 220 mm × 220 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1468,
+            "end": 1499,
+            "text": "TR)/echo time (TE) = 2000/30 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1468,
+            "end": 1499,
+            "text": "TR)/echo time (TE) = 2000/30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1638,
+            "end": 1655,
+            "text": "3.4 × 3.4 × 4 mm³",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1558,
+            "end": 1574,
+            "text": "thickness = 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1576,
+            "end": 1592,
+            "text": "slice gap = 1 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2127,
+            "end": 2133,
+            "text": "DPARSF",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1329,
+            "end": 1342,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1732,
+            "end": 1757,
+            "text": "The scan lasted for 484 s",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1684,
+            "end": 1694,
+            "text": "close eyes",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1541,
+            "end": 1556,
+            "text": "220 mm × 220 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 647,
+            "end": 688,
+            "text": "final sample was composed of 434 subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 647,
+            "end": 688,
+            "text": "final sample was composed of 434 subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 690,
+            "end": 699,
+            "text": "165 males",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 701,
+            "end": 748,
+            "text": "mean age = 44.44, SD = 17.28; age range = 19–80",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 788,
+            "end": 861,
+            "text": "healthy and none had a history of psychiatric disorder or substance abuse",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 567,
+            "end": 635,
+            "text": "60 participants were excluded due to large head motion (FD > 0.2 mm)",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 944,
+            "end": 1011,
+            "text": "approved by the SWU Brain Imaging Center Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4145,
+            "end": 4196,
+            "text": "similarity were both negatively correlated with age",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2193,
+            "end": 2223,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2127,
+            "end": 2133,
+            "text": "DPARSF",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2203,
+            "end": 2211,
+            "text": "first 10",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2241,
+            "end": 2264,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2127,
+            "end": 2133,
+            "text": "DPARSF",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2266,
+            "end": 2277,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2127,
+            "end": 2133,
+            "text": "DPARSF",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2266,
+            "end": 2277,
+            "text": "Rigid-body (6 DOF)",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2279,
+            "end": 2321,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2127,
+            "end": 2133,
+            "text": "DPARSF",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2279,
+            "end": 2321,
+            "text": "Mutual information (implied)",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2323,
+            "end": 2352,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2127,
+            "end": 2133,
+            "text": "DPARSF",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2338,
+            "end": 2351,
+            "text": "3 × 3 × 4 mm³",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2354,
+            "end": 2377,
+            "text": "6",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2127,
+            "end": 2133,
+            "text": "DPARSF",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2365,
+            "end": 2376,
+            "text": "FWHM = 6 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2379,
+            "end": 2414,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2127,
+            "end": 2133,
+            "text": "DPARSF",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2379,
+            "end": 2414,
+            "text": "bandpass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2400,
+            "end": 2413,
+            "text": "0.023–0.18 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2445,
+            "end": 2489,
+            "text": "8",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2505,
+            "end": 2527,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2505,
+            "end": 2527,
+            "text": "24 parameters",
+            "labels": [
+              "motion regression — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2505,
+            "end": 2527,
+            "text": "24 movement regressors",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2550,
+            "end": 2612,
+            "text": "10",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 623,
+            "end": 634,
+            "text": "FD > 0.2 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Interpolate",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2896,
+            "end": 2909,
+            "text": "11",
+            "labels": [
+              "Interpolate — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Interpolate",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2896,
+            "end": 2909,
+            "text": "interpolation",
+            "labels": [
+              "Interpolate — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2915,
+            "end": 2956,
+            "text": "12",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2915,
+            "end": 2956,
+            "text": "bandpass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2936,
+            "end": 2955,
+            "text": "0.023 < f < 0.18 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3439,
+            "end": 3483,
+            "text": "13",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3448,
+            "end": 3483,
+            "text": "linear, quadratic, and cubic trends",
+            "labels": [
+              "Temporal detrending — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3489,
+            "end": 3530,
+            "text": "14",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3489,
+            "end": 3530,
+            "text": "6 + derivatives",
+            "labels": [
+              "motion regression — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3504,
+            "end": 3530,
+            "text": "six realignment parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3567,
+            "end": 3595,
+            "text": "15",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3567,
+            "end": 3595,
+            "text": "low-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3587,
+            "end": 3594,
+            "text": "0.15 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3605,
+            "end": 3620,
+            "text": "16",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3614,
+            "end": 3620,
+            "text": "spikes",
+            "labels": [
+              "Despiking — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1684,
+            "end": 1694,
+            "text": "close eyes",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

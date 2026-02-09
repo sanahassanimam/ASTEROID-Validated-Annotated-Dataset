@@ -1,0 +1,1073 @@
+{
+  "data": {
+    "text": "Graph-theory based analyses of human motor \nlearning: A resting-state fMRI study\n1st Shahryar Ebrahimi\n2nd Fariba Bahrami\n3rd Gholam-Ali Hossein-Zadeh\n2019 26th National and 4th International Iranian Conference on Biomedical Engineering (ICBME),\nIran University of Science and Technology (IUST), Tehran, Iran, 27-28 November 2019\nAbstract—Resting-state functional magnetic resonance imaging\n(rs-fMRI) is a promising method to investigate brain functional\nconnectivity (FC) changes resulted from interventional studies.\nGraph-theory based analyses quantify multiple aspects of the\nbrain network by computing different metrics. We used a graph￾theory approach to investigate neural plasticity of the human\nbrain due to a novel motor learning protocol that has not been\naddressed before using rs-fMRI. Thirteen young and healthy\nparticipants practiced seven sessions of motor learning exercises.\nrs-fMRI data were collected before the first and after the 7th\nsession of exercises. We performed ROI-to-ROI analyses along\nwith the computation of different graph metrics on rs-fMRI data\nafter preprocessing steps. The graph networks were constructed\nusing correlation signals originating from 164 parcellated regions\n(Harvard-Oxford atlas) of the brain. In further analyses, different\nmetrics of the constructed graph were computed and compared\nbetween pre- and post-training sessions using proper statistical\ntests. Thirteen significant regions of interest (Left Dorsal At￾tention.IPS, Left Angular Gyrus, and Right Postcentral Gyrus,\nto name a few) were obtained with p-FDR < 0.05, which had\nessential roles in the motor learning procedure.\n\nThirteen young, healthy subjects (six female and seven \nmale, mean aged = 23 ± 3.37 years, two left-footed and 11 \nright-footed) without any neurological or psychiatric disorder \nparticipated in our study. All of the subjects confirmed their \nconsent by filling special forms in the Iranian National Brain \nMapping Laboratory (NBML), Tehran, Iran. Also, the Re￾search Ethics Committee of Iran University of Medical Science \n(IUMS) approved the experimental protocol.\n\nThe dataset was acquired in NBML. Each subject \nunderwent two 10-minutes rs-fMRI data acquisition and \nseven motor training sessions every other day, according to \nthe block diagram of Fig. 1. Subjects were told to keep their\neyes open and try to stay in a relaxed position under the MRI \nscanner. One of the data acquisition sessions was held before \nthe training sessions (Pre-training) and the other after them \n(Post-training). Before the training sessions, subjects were \ncompletely informed of what they were going to do in the \nexperiments. All training sessions were the same except for \nthe first (Day 1) and last (Day 7) sessions, which included \none more item. During the training sessions, subjects were \nsitting on a seat, and a digital pen was attached to the \ninner side of their dominant foot. The exact \nplace of pen attachment was the junction of metatarsal and \nphalanges in the human foot bones. The pen was firmly fixed \nin place with the help of special belts and adhesive tapes. \nThere was a large digital tablet under the foot of subjects, \nand they were able to draw whatever they desired. \nBesides, a 15-inch Lenovo laptop was placed in \nfront of them, and they needed to follow the motor learning \nprocedure according to the guides displayed on the screen.\nGenerally, subjects had to draw some specific \nshapes with the digital pen by controlling their foot.\nEach training session lasted approximately 30 minutes. It \nconsisted of five trials, each with a 100-second rest period. \nThe protocol of each session was as follows, and the subjects \nwere asked to have a trade-off between accuracy and speed \nof drawing. They couldn't see the location of the digital pen, \nbut their drawings were displayed on the screen in a real-time \nmanner.\nDisplaying a sequence of repetitive spiral shapes on the \nscreen (only at the beginning of Day 1 and at the end of \nDay 7). Subjects had to draw their spirals between the \nlines of the displayed one.\nDisplaying a set of dots on the perimeter and center of \na circle (reach-out shape). Subjects had to draw lines \nfrom the center dot, reaching out to the dots on the circle \nperimeter in the beginning of each trial of\nDay 1 to Day 7.\nDisplaying a specific set of boundary shapes in a random \norder (one trial). Each shape of the set repeated only \nonce during a trial. The space between the sides of each \nboundary shape was set to 2cm. Subjects had to draw \ninside the boundary of each shape, starting from the \nlower-left corner, and only had 15 seconds to rest between \ntrials.\n\nSiemens Prisma 3.0T MRI scanner was used to acquire \nstructural and rs-fMRI images. A magnetization prepared rapid \nacquisition gradient echo (MP-RAGE) pulse sequence (TR = \n1800, TE = 3.62, TI = 1100, flip angle = 7) was implemented \nto acquire a High-resolution structural volume of the subjects \nwith 160 sagittal slices, each 1mm thick with 0.85 x 0.85 mm2 \nin-plane resolution. In addition, echo-planar imaging (EPI) \npulse sequence was used (TR = 2000, TE = 30, flip angle = 90) \nto acquire 34 transverse slices covering the whole brain, each \n3mm thick with a 64 x 64 matrix and an in-plane resolution \nof 3 x 3 mm2.\n\nAll preprocessing steps were carried out using CONN \nv.18b (http://www.nitrc.org/projects/conn) and SPM12 \n(https://www.fil.ion.ucl.ac.uk/spm/software/spm12) functional \nconnectivity toolboxes as follows: After initial removal of \nfirst five volumes for stabilization of hemodynamic response \nfunction (HRF) signal, voxel displacement maps (VDMs) were \ncreated to undistort EPI images. Then, resting-state data were \nrealigned to their initial volume, corrected for slice timing, \nand scrubbed with an intermediate criteria in which, if the \nglobal signal difference of two subsequent volumes exceeded \nthe z-value of 9 or relative motion of them exceeded 3mm, \nthe corresponding volumes were labeled, and their effects \nwere regressed out of the voxels'signal. Also, resting-state\ndata were co-registered to the corresponding structural images, \nresampled to 3 x 3 x 3 mm3, normalized to the standard MNI \natlas, and smoothed with a 5mm FWHM Gaussian kernel. \nFurther preprocessing steps consisted of nuisance covariates \nregression and band-pass filtering (0.01-0.08 Hz) to eliminate \nthe effects of physiological artifacts on graph-based analyses. \nSix motion parameters plus their first derivatives, five \nprincipal components from white matter and SCF (obtained \nusing CompCor algorithm) along with a linear de-trending \nterm integrated a total of 23 regressors for nuisance covariates \nregression step.\n\nData of subject 4 from pre-training and subject 1 from \npost-training rs-fMRI sessions were discarded due to the high \namount of absolute motions. We employed the Harvard-Oxford \n(HO) atlas to percellate the brain into 164 independent regions \nof interest (ROIs). Time-series of the voxels within each of the \nROIs were averaged to gain a representative signal for each. To \nconstruct a dense, complex network of the brain, the FC matrix \nwas calculated among each pair of the ROIs using correlation. \nThe functional connectivity matrix has 13,366 undirected \nweighted edges. We thresholded the functional connectivity \nmatrix using a proportional thresholding procedure rather than \nsetting a typical threshold on the correlation (r) itself. \nThis analysis maximizes the global cost-efficiency (GCE), which is defined as the \nglobal efficiency at a given cost minus the cost, (i.e., GCE \n= GE - C). The cost in which GCE has its maximum value \n(Cmax) is chosen to threshold the connectivity matrix. In this \nway, Cmax percent of the whole edges that have the most \nreliable correlation values remain, and the others are set to \nzero for each subject. All self-connections (diagonal weights \nof functional connectivity matrix) are also set to zero. \nTwo measures of functional segregation (clustering \ncoefficient and local efficiency), three functional \nintegration measures (average path length, cost, and \nglobal efficiency), and two local nodal measures (degree \nand betweenness centrality) were computed based on \nthe thresholded and weighted functional connectivity matrix \nusing CONN v.18b. \nWe performed two kinds of analysis based on the brain’s \nnetwork graph. All graph metrics were compared to each other \nacross the pre- and post-training sessions in all of the 164 \nROIs by performing proper statistical tests and defining post \n> pre contrast. The computed graph metrics for both pre- and \npost-training sessions were 12-element sets of numbers (one \nsubject removed from each session) in all of the ROIs. To \ncheck the mean differences of the sets, a two-tale paired t-test \nwas performed. Significant changes of metrics in ROIs were \ndetected, and the resulting ROIs were addressed in \nfurther analyses, which compared the connection strength of \nthe selected ROIs between the pre- and post-training sessions \nand themselves (obtained ROIs x pre-post training interactions) \nby implementing an F-test.\n\nComparing the drawings of Day 1 to Day 7 revealed a \nsignificant visual alteration in motor control of the subjects. As \nit is obvious in the drawings the drawings have been converged into \na more regular pattern across the subjects.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 80,
+            "text": "Graph-theory based analyses of human motor \nlearning: A resting-state fMRI study",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 81,
+            "end": 102,
+            "text": "1st Shahryar Ebrahimi",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 151,
+            "end": 155,
+            "text": "2019",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 339,
+            "end": 518,
+            "text": "Resting-state functional magnetic resonance imaging\n(rs-fMRI) is a promising method to investigate brain functional\nconnectivity (FC) changes resulted from interventional studies.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1638,
+            "end": 1670,
+            "text": "Thirteen young, healthy subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1672,
+            "end": 1698,
+            "text": "six female and seven \nmale",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1700,
+            "end": 1727,
+            "text": "mean aged = 23 ± 3.37 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1767,
+            "end": 1815,
+            "text": "without any neurological or psychiatric disorder",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6689,
+            "end": 6835,
+            "text": "Data of subject 4 from pre-training and subject 1 from \npost-training rs-fMRI sessions were discarded due to the high \namount of absolute motions.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1992,
+            "end": 2104,
+            "text": "the Re￾search Ethics Committee of Iran University of Medical Science \n(IUMS) approved the experimental protocol.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2164,
+            "end": 2203,
+            "text": "two 10-minutes rs-fMRI data acquisition",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2299,
+            "end": 2341,
+            "text": "Subjects were told to keep their\neyes open",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4654,
+            "end": 4685,
+            "text": "Siemens Prisma 3.0T MRI scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5102,
+            "end": 5111,
+            "text": "TR = 2000",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5113,
+            "end": 5120,
+            "text": "TE = 30",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5122,
+            "end": 5137,
+            "text": "flip angle = 90",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5151,
+            "end": 5171,
+            "text": "34 transverse slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5243,
+            "end": 5277,
+            "text": "in-plane resolution \nof 3 x 3 mm2.",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2164,
+            "end": 2203,
+            "text": "two 10-minutes rs-fMRI data acquisition",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3872,
+            "end": 3929,
+            "text": "Displaying a sequence of repetitive spiral shapes on the ",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4072,
+            "end": 4156,
+            "text": "Displaying a set of dots on the perimeter and center of \na circle (reach-out shape).",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4306,
+            "end": 4382,
+            "text": "Displaying a specific set of boundary shapes in a random \norder (one trial).",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4383,
+            "end": 4440,
+            "text": "Each shape of the set repeated only \nonce during a trial.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4509,
+            "end": 4652,
+            "text": "Subjects had to draw \ninside the boundary of each shape, starting from the \nlower-left corner, and only had 15 seconds to rest between \ntrials.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3551,
+            "end": 3575,
+            "text": "consisted of five trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3589,
+            "end": 3612,
+            "text": "100-second rest period.",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8517,
+            "end": 8547,
+            "text": "defining post \n> pre contrast.",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9081,
+            "end": 9107,
+            "text": "by implementing an F-test.",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9109,
+            "end": 9225,
+            "text": "Comparing the drawings of Day 1 to Day 7 revealed a \nsignificant visual alteration in motor control of the subjects.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5490,
+            "end": 5491,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5510,
+            "end": 5528,
+            "text": "first five volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5595,
+            "end": 5596,
+            "text": "2",
+            "labels": [
+              "Field map correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Field map correction — Software",
+            "Field map correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5595,
+            "end": 5625,
+            "text": "voxel displacement maps (VDMs)",
+            "labels": [
+              "Field map correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5696,
+            "end": 5697,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5696,
+            "end": 5729,
+            "text": "realigned to their initial volume",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5731,
+            "end": 5732,
+            "text": "4",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5731,
+            "end": 5757,
+            "text": "corrected for slice timing",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5764,
+            "end": 5765,
+            "text": "5",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Software"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5764,
+            "end": 5802,
+            "text": "scrubbed with an intermediate criteria",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5821,
+            "end": 5938,
+            "text": "global signal difference of two subsequent volumes exceeded \nthe z-value of 9 or relative motion of them exceeded 3mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6071,
+            "end": 6072,
+            "text": "6",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6071,
+            "end": 6123,
+            "text": "co-registered to the corresponding structural images",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6154,
+            "end": 6155,
+            "text": "7",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6154,
+            "end": 6191,
+            "text": "normalized to the standard MNI \natlas",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6126,
+            "end": 6152,
+            "text": "resampled to 3 x 3 x 3 mm3",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6197,
+            "end": 6198,
+            "text": "8",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6197,
+            "end": 6237,
+            "text": "smoothed with a 5mm FWHM Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6213,
+            "end": 6237,
+            "text": "5mm FWHM Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6281,
+            "end": 6282,
+            "text": "9",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6281,
+            "end": 6312,
+            "text": "nuisance covariates \nregression",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6317,
+            "end": 6319,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6317,
+            "end": 6351,
+            "text": "band-pass filtering (0.01-0.08 Hz)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6338,
+            "end": 6350,
+            "text": "0.01-0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6431,
+            "end": 6433,
+            "text": "11",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6431,
+            "end": 6481,
+            "text": "Six motion parameters plus their first derivatives",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6547,
+            "end": 6549,
+            "text": "12",
+            "labels": [
+              "CompCor — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "CompCor — Software",
+            "CompCor — Parameters"
+          ]
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6553,
+            "end": 6570,
+            "text": "CompCor algorithm",
+            "labels": [
+              "CompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6585,
+            "end": 6587,
+            "text": "13",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Software",
+            "Temporal detrending — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6585,
+            "end": 6609,
+            "text": "linear de-trending \nterm",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6689,
+            "end": 6691,
+            "text": "14",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Exclusion — Software",
+            "Exclusion — Algorithm",
+            "Exclusion — Parameters"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6781,
+            "end": 6835,
+            "text": "discarded due to the high \namount of absolute motions.",
+            "labels": [
+              "Exclusion — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6852,
+            "end": 6854,
+            "text": "15",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6852,
+            "end": 6878,
+            "text": "Harvard-Oxford \n(HO) atlas",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6908,
+            "end": 6951,
+            "text": "164 independent regions \nof interest (ROIs)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6953,
+            "end": 6955,
+            "text": "16",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6953,
+            "end": 7059,
+            "text": "Time-series of the voxels within each of the \nROIs were averaged to gain a representative signal for each.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7113,
+            "end": 7115,
+            "text": "17",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7113,
+            "end": 7189,
+            "text": "the FC matrix \nwas calculated among each pair of the ROIs using correlation.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7230,
+            "end": 7263,
+            "text": "13,366 undirected \nweighted edges",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7265,
+            "end": 7267,
+            "text": "18",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Sparsity control — Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7324,
+            "end": 7359,
+            "text": "proportional thresholding procedure",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7589,
+            "end": 7688,
+            "text": "The cost in which GCE has its maximum value \n(Cmax) is chosen to threshold the connectivity matrix.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7939,
+            "end": 7941,
+            "text": "19",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Software",
+            "Graph measures — Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7979,
+            "end": 8183,
+            "text": "clustering \ncoefficient and local efficiency), three functional \nintegration measures (average path length, cost, and \nglobal efficiency), and two local nodal measures (degree \nand betweenness centrality)",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8288,
+            "end": 8290,
+            "text": "20",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Result aggregation — Software",
+            "Result aggregation — Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8756,
+            "end": 9107,
+            "text": "two-tale paired t-test \nwas performed. Significant changes of metrics in ROIs were \ndetected, and the resulting ROIs were addressed in \nfurther analyses, which compared the connection strength of \nthe selected ROIs between the pre- and post-training sessions \nand themselves (obtained ROIs x pre-post training interactions) \nby implementing an F-test.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

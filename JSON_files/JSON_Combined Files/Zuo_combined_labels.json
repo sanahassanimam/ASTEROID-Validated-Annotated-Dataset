@@ -1,0 +1,1238 @@
+{
+  "data": {
+    "text": "Both activated and less- activated regions identified by functional MRI reconfigure to support task executions\n\nBrain and Behavior. 2018;8:e00893. https://doi.org/10.1002/brb3.893\n\nNianming Zuo; Zhengyi Yang; Yong Liu; Jin Li; Tianzi Jiang\n\nThe dataset was collected on a 3T MRI Skyra scanner (Siemens, Germany) using a standard 32 channel head coil. The magnetic field produced by the coil was modeled to provide a customized distortion correction. The primary scanning parameters were as follows: repetition time (TR), 720 ms; echo time (TE), 33.1 ms; flip angle, 52°; field of view, 208 × 180 mm; slice thickness, 2.0 mm; and voxel size, 2.0- mm isotropic cube (Van Essen et al., 2013). The HCP data were already preprocessed, well aligned, and registered to the Montreal Neurological Institute (MNI) 2- mm standard space when we received it. The main preprocessing steps taken included (Glasser et al., 2013): (1) gradient nonlinearity distortion; (2) 6 degrees of freedom (DOF) FSL/FLIRT- based motion correction; (3) FSL/top- up- based distortion correction; (4) registration to a T1 space image; and (5) FSL/FNIRT- based registration to MNI 2- mm space. After receiving the above preprocessed data from HCP, we further band- pass- filtered the data at 0.009–0.08 Hz to reduce low- frequency drift and high- frequency noise (Vatansever, Menon, Manktelow, Sahakian, & Stamatakis, 2015). The mean signal of the white matter and cerebrospinal fluid (CSF) and the movement parameters and its derivatives (in the Movement_parameters.txt file in HCP S500 release) were regressed out as confounding factors. Since we used a series of ROIs in this study to sample the gray matter of the entire brain (described below), a smoothing step was not applied here. In addition, global signal regression was not conducted because its use is controversial and there is no consensus about its physiological interpretation (Bassett, Yang, Wymbs, & Grafton, 2015; Mayhew et al., 2016).\n\nSome data were excluded using the following criteria: (1) the data reported on the Known-Issues page of the HCP website, htttps://wiki.humanconnectome.org/display/PublicData/HCP+Data+Release+Updates%3A+Known+Issues+and+Planned+fixes; (2) data that did not have complete time points as indicated by the correct number of frames for each mental state (see Table 1); (3) data that did not have a full EV record to accompany the fMRI data; and (4) data acquired without left–right (LR) or right–left (RL) phase encoding. In the end, 453 subjects (age 29.1 ± 3.5 years, 188 male) were used in the subsequent analyses. The task datasets contained seven conventional tasks, including working memory (WM), gambling, motor, language, social cognition, relational processing, and emotion processing, each of which had been designed to activate specific functional regions (Barch et al., 2013).\n\nTABLE 1 The number of scanning frames and the run duration for each task fMRI data collection in HCP data.\nWorking memory — Frames per run: 405; Run duration: 5:01.\nGambling — Frames per run: 253; Run duration: 3:12.\nMotor — Frames per run: 284; Run duration: 3:34.\nLanguage — Frames per run: 316; Run duration: 3:57.\nSocial cognition — Frames per run: 274; Run duration: 3:27.\nRelational processing — Frames per run: 232; Run duration: 2:56.\nEmotion processing — Frames per run: 176; Run duration: 2:16.\n\nThe detection of the activation regions for the seven tasks was implemented using FSL (version 5.0.9)/FEAT (version 6.00). At the subject level, a within-subjects fixed-effects analysis in FSL/FEAT was used to estimate the average effects across the runs, with a cluster-based threshold Z = 1.96 as the activation threshold and p = .05 as the Monte Carlo-based cluster-level correction. Then, at the group level, a mixed-effects analysis implemented in FSL/FLAME (FMRIB’s local analysis of mixed effects) was used to estimate the average effects, with a cluster-based threshold Z = 2.32 and p = .05.\n\nAll the source code in this study (in MATLAB) and the activation maps are available in https://github.com/nmzuo/Act-L-Act-network. This is an open access article under the terms of the Creative Commons Attribution License.\n\nDATA STATEMENT: Data were provided by the HCP, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657) funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research, and by the McDonnell Center for Systems Neuroscience at Washington University.\n\nWe tested the different contributions from the two regions using a two-way ANOVA with [Subjects * States] × [Classes of Regions].\n\n2.4 Definition of network nodes\nIn this study, a group of regions of interest (ROIs) across the entire brain was used as brain network nodes to analyze the whole brain function (Poldrack, 2007). Specifically, we used the 264 ROIs identified by combining meta-analyses with functional connectivity mapping, spanning the cerebral cortex, subcortical structures, and the cerebellum (Power et al., 2011). For each of the seven task states, the 264 ROIs were assigned to either Act or L-Act regions depending on the activation map.\n\n2.5 Definitions of functional connectivity network\nFunctional networks were then defined by assessing the functional connection strength between node pairs. Two steps were adopted to construct the connectivity matrix. First, the averaged time series for each ROI was regressed out of the mean task activity (Cole et al., 2013); then, the connection strength for each node pair was calculated using the corrcoef function in MATLAB (version 2012a, Mathworks Inc.), which was shown to yield a similar result to the psycho-physiological interaction method (Cole, Yang, Murray, Repovs, & Anticevic, 2016); finally, a Fisher’s z-transform was performed. For the averaged dataset, the connection strength was obtained by averaging the Fisher z-transform of the correlation coefficients for the LR and RL data from each subject (Smith et al., 2013). Because the interpretation of negative connections remains controversial (Murphy, Birn, Handwerker, Jones, & Bandettini, 2009), in this study the negative connections were set to 0 (Liu et al., 2016; Sheffield et al., 2015). Second, the connection matrix for each subject was thresholded and binarized to have different densities (5%, 10% and 15%) (Bullmore & Sporns, 2009; Rubinov & Sporns, 2010; van Wijk, Stam, & Daffertshofer, 2010) to address the effects of different connectivity densities. In this manuscript, we only present the results from using a density of 15%, with the other results presented in the Supporting information.\n\n2.6 Definitions of network interaction, fractional modularity, and efficiency\nThree measurements were used to evaluate the segregations and integrations of the two classes of regions, the activated regions (Act) and less-activated regions (L-Act), where the whole brain = Act ∪ L-Act. First, the interaction strength was defined to assess the integration and segregation between the Act and L-Act regions (Liu et al., 2016; Zuo et al., 2012), as in the following Equation 1.\nSecond, a modularity index, Q, was used to characterize the tendency of a network to approach modularity (Blondel, Guillaume, Lambiotte, & Lefebvre, 2008; Newman & Girvan, 2004). The modularity index is defined as in Equation 2. In this study, the default resolution parameter γ = 1 was adopted when applying the generalized Louvain method (http://netwiki.amath.unc.edu/GenLouvain/GenLouvain) (Mucha, Richardson, Macon, Porter, & Onnela, 2010). Moreover, to reduce the bias of random walking while optimizing the modularity, we repeated the solution 100 times, and the partition associated with the largest modularity index was selected as the final partition scheme (Vatansever et al., 2015).\nThird, the global efficiency of network A is defined as follows (Achard & Bullmore, 2007; Latora & Marchiori, 2003). The network efficiency was computed using open-access software developed by our group (https://www.nitrc.org/projects/brat).\n\n2.7 Measurements of the network flexibility from resting to task states\nFor a closer look at which nodes or subnetworks make the most contributions to the network dynamics, the participation coefficient (PC) (Guimera & Nunes Amaral, 2005) was utilized to measure the participant intensity of each functional node or subnetwork during mental state changes. The flexibility was defined as Fk = PCik − PCjk, where i and j indicate two mental states, that is, a task and the resting state, for a specific node k. The subnetworks defined by Power et al. (2011) were used, and the individual subnetwork flexibility was examined by averaging the flexibility of the nodes composing the subnetwork. Ten of 13 subnetworks were included in our study, because the other three subnetworks do not have specific and determined functional roles (Cole et al., 2013; Vatansever et al., 2015).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 110,
+            "text": "Both activated and less- activated regions identified by functional MRI reconfigure to support task executions",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 181,
+            "end": 193,
+            "text": "Nianming Zuo",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 195,
+            "end": 207,
+            "text": "Zhengyi Yang",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 209,
+            "end": 217,
+            "text": "Yong Liu",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 219,
+            "end": 225,
+            "text": "Jin Li",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 227,
+            "end": 239,
+            "text": "Tianzi Jiang",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 112,
+            "end": 130,
+            "text": "Brain and Behavior",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 132,
+            "end": 136,
+            "text": "2018",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 147,
+            "end": 179,
+            "text": "https://doi.org/10.1002/brb3.893",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4107,
+            "end": 4126,
+            "text": "open access article",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4052,
+            "end": 4094,
+            "text": "https://github.com/nmzuo/Act-L-Act-network",
+            "labels": [
+              "Code"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4205,
+            "end": 4234,
+            "text": "Data were provided by the HCP",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 272,
+            "end": 311,
+            "text": "3T MRI Skyra scanner (Siemens, Germany)",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 521,
+            "end": 527,
+            "text": "720 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 545,
+            "end": 552,
+            "text": "33.1 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 566,
+            "end": 569,
+            "text": "52°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 586,
+            "end": 598,
+            "text": "208 × 180 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 617,
+            "end": 623,
+            "text": "2.0 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 641,
+            "end": 663,
+            "text": "2.0- mm isotropic cube",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2502,
+            "end": 2514,
+            "text": "453 subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2650,
+            "end": 2761,
+            "text": "working memory (WM), gambling, motor, language, social cognition, relational processing, and emotion processing",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3446,
+            "end": 3485,
+            "text": "FSL (version 5.0.9)/FEAT (version 6.00)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2965,
+            "end": 3022,
+            "text": "Working memory — Frames per run: 405; Run duration: 5:01.",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3023,
+            "end": 3074,
+            "text": "Gambling — Frames per run: 253; Run duration: 3:12.",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3075,
+            "end": 3123,
+            "text": "Motor — Frames per run: 284; Run duration: 3:34.",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3124,
+            "end": 3175,
+            "text": "Language — Frames per run: 316; Run duration: 3:57.",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3176,
+            "end": 3235,
+            "text": "Social cognition — Frames per run: 274; Run duration: 3:27.",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3236,
+            "end": 3300,
+            "text": "Relational processing — Frames per run: 232; Run duration: 2:56.",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3301,
+            "end": 3362,
+            "text": "Emotion processing — Frames per run: 176; Run duration: 2:16.",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2502,
+            "end": 2514,
+            "text": "453 subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2516,
+            "end": 2536,
+            "text": "age 29.1 ± 3.5 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2538,
+            "end": 2546,
+            "text": "188 male",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1988,
+            "end": 2025,
+            "text": "excluded using the following criteria",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Gradient Distortion Correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 918,
+            "end": 950,
+            "text": "gradient nonlinearity distortion",
+            "labels": [
+              "Gradient Distortion Correction — Algorithm"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Gradient Distortion Correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 918,
+            "end": 919,
+            "text": "1",
+            "labels": [
+              "Gradient Distortion Correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Gradient Distortion Correction — Software",
+            "Gradient Distortion Correction — Parameters"
+          ],
+          "id": "m0035"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 983,
+            "end": 1017,
+            "text": "FSL/FLIRT- based motion correction",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 956,
+            "end": 982,
+            "text": "6 degrees of freedom (DOF)",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1000,
+            "end": 1017,
+            "text": "motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 983,
+            "end": 984,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1023,
+            "end": 1063,
+            "text": "FSL/top- up- based distortion correction",
+            "labels": [
+              "Unwarp — Algorithm"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1023,
+            "end": 1035,
+            "text": "FSL/top- up-",
+            "labels": [
+              "Unwarp — Software"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1023,
+            "end": 1024,
+            "text": "3",
+            "labels": [
+              "Unwarp — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Unwarp — Parameters"
+          ],
+          "id": "m0042"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1069,
+            "end": 1101,
+            "text": "registration to a T1 space image",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1069,
+            "end": 1070,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Parameters"
+          ],
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1111,
+            "end": 1159,
+            "text": "FSL/FNIRT- based registration to MNI 2- mm space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1111,
+            "end": 1120,
+            "text": "FSL/FNIRT",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1144,
+            "end": 1153,
+            "text": "MNI 2- mm",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1111,
+            "end": 1112,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1226,
+            "end": 1246,
+            "text": "band- pass- filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1259,
+            "end": 1272,
+            "text": "0.009–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1226,
+            "end": 1227,
+            "text": "6",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1466,
+            "end": 1505,
+            "text": "movement parameters and its derivatives",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1466,
+            "end": 1467,
+            "text": "7",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Type"
+          ],
+          "id": "m0053"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1415,
+            "end": 1457,
+            "text": "white matter and cerebrospinal fluid (CSF)",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1415,
+            "end": 1416,
+            "text": "8",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Type"
+          ],
+          "id": "m0055"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4579,
+            "end": 4592,
+            "text": "two-way ANOVA",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4860,
+            "end": 4947,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0057"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4860,
+            "end": 4947,
+            "text": "the 264 ROIs identified by combining meta-analyses with functional connectivity mapping",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4860,
+            "end": 4947,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0059"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4860,
+            "end": 4947,
+            "text": "the 264 ROIs identified by combining meta-analyses with functional connectivity mapping",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5396,
+            "end": 5477,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5396,
+            "end": 5477,
+            "text": "the averaged time series for each ROI was regressed out of the mean task activity",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5573,
+            "end": 5632,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5573,
+            "end": 5632,
+            "text": "corrcoef function in MATLAB (version 2012a, Mathworks Inc.)",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5573,
+            "end": 5632,
+            "text": "corrcoef function in MATLAB (version 2012a, Mathworks Inc.)",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5783,
+            "end": 5817,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0066"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5783,
+            "end": 5817,
+            "text": "Fisher’s z-transform was performed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6155,
+            "end": 6193,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0068"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6155,
+            "end": 6193,
+            "text": "the negative connections were set to 0",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6289,
+            "end": 6360,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0070"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6289,
+            "end": 6360,
+            "text": "thresholded and binarized to have different densities (5%, 10% and 15%)",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6323,
+            "end": 6360,
+            "text": "different densities (5%, 10% and 15%)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6944,
+            "end": 7056,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0073"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6944,
+            "end": 7056,
+            "text": "the interaction strength was defined to assess the integration and segregation between the Act and L-Act regions",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7135,
+            "end": 7231,
+            "text": "a modularity index, Q, was used to characterize the tendency of a network to approach modularity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7440,
+            "end": 7519,
+            "text": "generalized Louvain method (http://netwiki.amath.unc.edu/GenLouvain/GenLouvain)",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7828,
+            "end": 7884,
+            "text": "the global efficiency of network A is defined as follows",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7980,
+            "end": 8061,
+            "text": "open-access software developed by our group (https://www.nitrc.org/projects/brat)",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8573,
+            "end": 8629,
+            "text": "9",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0079"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8573,
+            "end": 8629,
+            "text": "The subnetworks defined by Power et al. (2011) were used",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8573,
+            "end": 8629,
+            "text": "The subnetworks defined by Power et al. (2011) were used",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5845,
+            "end": 5990,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0082"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5845,
+            "end": 5990,
+            "text": "the connection strength was obtained by averaging the Fisher z-transform of the correlation coefficients for the LR and RL data from each subject",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5845,
+            "end": 5990,
+            "text": "the connection strength was obtained by averaging the Fisher z-transform of the correlation coefficients for the LR and RL data from each subject",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0084"
+        }
+      ]
+    }
+  ]
+}

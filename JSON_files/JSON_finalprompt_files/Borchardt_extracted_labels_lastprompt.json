@@ -1,0 +1,798 @@
+{
+  "data": {
+    "text": "Dynamic disconnection of the supplementary motor area after processing of dismissive biographic narratives\nBrain and Behavior, 2015; 5(10), e00377, doi: 10.1002/brb3.377\nThis is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.\n\nSubjects\nTwenty-three healthy, male, right-handed, native German speakers (mean age: 29.8, SD: 3.5), who were screened for psychiatric, neurological, or medical illnesses, were included. One subject was excluded due to excessive movement.\nThe institutional review board of the University of Magdeburg, Germany, approved the study and all subjects provided written informed consent.\n\nData acquisition\nResting-state BOLD data were acquired in a 7T whole body MR system (Siemens, Erlangen, Germany) with a 32-channel receiver coil, using an EPI sequence (TR 2.61 s, TE 22 ms, 240 time points, 50 slices, voxel size 1.6 mm isotropic). T1-weighted anatomical reference data were imaged using 3D-MPRAGE (1 mm isotropic resolution, TE 2.01 s, TI 1050 ms, TR 1700 ms, flip angle 5°). The subjects were instructed to simply lie still inside the scanner with their eyes closed, to think of nothing in particular and to stay awake.\n\nExperimental design\nWe conducted a repeated rest-task-rest design with a baseline resting-state scan at the beginning followed by the three blocks. Each block consisted of four parts: 90 sec distractor calculations; one narrative (~4–5 min); a 10 min post-task resting-state scan; ratings. This procedure was iterated thrice.\n\nData processing\nResting-state functional connectivity data underwent standard preprocessing steps as implemented in SPM12, namely slice time acquisition correction, realignment, coregistration, segmentation, and normalization. Using the DPARSF toolbox V2.3, the first 10 timepoints were removed, temporal filtering was performed in the range 0.01–0.08 Hz, and nuisance covariate regression included a first-order polynomial trend (detrending), a six parameters rigid body head motion model, white matter, and CSF signals. Global mean regression and smoothing were not performed. Head motion exclusion criteria were 1.0 mm translation and 1.0 degree rotation.\n\nTime series and atlas\nUsing DPARSFA, time courses of 104 predefined ROIs (AAL atlas; additional cingulate and insular parcellation) were extracted and connectivity matrices filled with pair-wise Pearson correlation coefficients were created.\n\nNetwork construction and graph metrics\nWeighted, undirected graph networks with 104 nodes were constructed at the individual subject level. Graphs were rendered sparse using proportional thresholding; nine sparsity thresholds were tested, starting from 12% in steps of 2% to 28%. Metrics included degree, strength, clustering coefficient, local efficiency, LEGE, betweenness centrality, and participation index (BCT toolbox). Statistical tests were performed in R with FDR correction.\n\nNetwork-based statistics\nNBS identified a core subnetwork in the contrast baseline > dismissing (FWE P<0.0125) across thresholds 3.4–4.0. No network was found for the reversed contrast dismissing > baseline."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 106,
+            "text": "Dynamic disconnection of the supplementary motor area after processing of dismissive biographic narratives",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 127,
+            "end": 131,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 107,
+            "end": 125,
+            "text": "Brain and Behavior",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 153,
+            "end": 169,
+            "text": "10.1002/brb3.377",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 170,
+            "end": 200,
+            "text": "This is an open access article",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 382,
+            "end": 394,
+            "text": "Twenty-three",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 404,
+            "end": 408,
+            "text": "male",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 410,
+            "end": 422,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 395,
+            "end": 446,
+            "text": "healthy, male, right-handed, native German speakers",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 560,
+            "end": 610,
+            "text": "One subject was excluded due to excessive movement",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 448,
+            "end": 471,
+            "text": "mean age: 29.8, SD: 3.5",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 612,
+            "end": 702,
+            "text": "The institutional review board of the University of Magdeburg, Germany, approved the study",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 841,
+            "end": 848,
+            "text": "Siemens",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 925,
+            "end": 934,
+            "text": "TR 2.61 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 936,
+            "end": 944,
+            "text": "TE 22 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 963,
+            "end": 972,
+            "text": "50 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 985,
+            "end": 1001,
+            "text": "1.6 mm isotropic",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 946,
+            "end": 961,
+            "text": "240 time points",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1228,
+            "end": 1239,
+            "text": "eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1738,
+            "end": 1743,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1859,
+            "end": 1865,
+            "text": "DPARSF",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 773,
+            "end": 786,
+            "text": "Resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1133,
+            "end": 1146,
+            "text": "flip angle 5°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 560,
+            "end": 610,
+            "text": "One subject was excluded due to excessive movement",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1429,
+            "end": 1441,
+            "text": "three blocks",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1539,
+            "end": 1574,
+            "text": "10 min post-task resting-state scan",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1241,
+            "end": 1292,
+            "text": "to think of nothing in particular and to stay awake",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1515,
+            "end": 1535,
+            "text": "narrative (~4–5 min)",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1752,
+            "end": 1785,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1738,
+            "end": 1743,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1787,
+            "end": 1798,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1738,
+            "end": 1743,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1800,
+            "end": 1814,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1738,
+            "end": 1743,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1816,
+            "end": 1828,
+            "text": "4",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1738,
+            "end": 1743,
+            "text": "SPM12",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1834,
+            "end": 1847,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1738,
+            "end": 1743,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1884,
+            "end": 1916,
+            "text": "6",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1890,
+            "end": 1903,
+            "text": "10 timepoints",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software/Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1918,
+            "end": 1976,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1964,
+            "end": 1976,
+            "text": "0.01–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software/Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2023,
+            "end": 2064,
+            "text": "8",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2023,
+            "end": 2045,
+            "text": "first-order polynomial",
+            "labels": [
+              "Temporal detrending — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software/Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2068,
+            "end": 2111,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2068,
+            "end": 2111,
+            "text": "six parameters rigid body head motion model",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software/Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2113,
+            "end": 2142,
+            "text": "10",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2113,
+            "end": 2142,
+            "text": "white matter, and CSF signals",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software/Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2201,
+            "end": 2279,
+            "text": "11",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2237,
+            "end": 2279,
+            "text": "1.0 mm translation and 1.0 degree rotation",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software/Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2356,
+            "end": 2365,
+            "text": "AAL atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2335,
+            "end": 2354,
+            "text": "104 predefined ROIs",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2310,
+            "end": 2317,
+            "text": "DPARSFA",
+            "labels": [
+              "Time series ROI — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2477,
+            "end": 2509,
+            "text": "Pearson correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2564,
+            "end": 2599,
+            "text": "Weighted, undirected graph networks",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2726,
+            "end": 2803,
+            "text": "nine sparsity thresholds were tested, starting from 12% in steps of 2% to 28%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2805,
+            "end": 2935,
+            "text": "Metrics included degree, strength, clustering coefficient, local efficiency, LEGE, betweenness centrality, and participation index",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2987,
+            "end": 3008,
+            "text": "R with FDR correction",
+            "labels": [
+              "Result aggregation — Software"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

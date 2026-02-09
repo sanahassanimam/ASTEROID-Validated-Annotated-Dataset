@@ -1,0 +1,379 @@
+{
+  "title": "Age-Related Reorganizational Changes in Modularity and Functional Connectivity of Human Brain Networks",
+  "data": {
+    "text": "Resting-state functional connectivity\nThe RSFC was computed from 187 different brain regions\ndefined within the sensorimotor, cingulo-opercular task control,\nfronto-parietal task control, dorsal/ventral attention, default\nmode network (DMN), salience network and subcortical/\ncerebellar network (Power et al., 2011). In each of these brain\nregions, signals resulting from the processed functional data\nwere extracted and averaged over a spherical region of interest\n(ROI) with a radius of 4 mm. Pearson correlation coefficient (rij)\nwas calculated for the ith and jth ROI. This generated a\n187 · 187 adjacency matrix, M, for each subject, which served\nas the RSFC matrix for each subject within each group.\n\nThresholding brain networks\nThresholding an RSFC matrix is critical for obtaining a\nsparse adjacency matrix in that it should be optimal and\ncontain not too little functional connections for detecting\ngroup differences but not too many functional connections\nthat it may dilute group differences. The most commonly\nused approach for thresholding is to globally threshold the\nRSFC matrix at a fixed threshold, q, for any rij between\n1 and 1. If rij ‡ q, the corresponding element of the adja-\ncency matrix, Mij, is kept for the actual value of rij for a\nweighted adjacency matrix or is set to be 1 for a binary ad-\njacency matrix. If rij < q, then Mij is set to be 0 for both\nweighted and binary matrices.\nNote: except for strength,\nmeasures of modularity, local and global efficiency were\ncomputed using the binary adjacency matrix.\nIn this study, we anticipated that this might be a factor af-\nfecting our observations in age-related differences in RSFC,\nand used a minimum spanning tree (MST) method in order to\npreserve fully connected brain graphs (Achard et al., 2012;\nAlexander-Bloch et al., 2010).\nTo obtain a sparse, fully connected,\nand biologically meaningful graph, we added extra links to\nthe MST from the remaining adjacency matrix. To do so,\nfor each final sparse adjacency matrix, we added top 2–\n40% of the remaining links to the MST, respectively, to in-\nclude the highest proportion of the remaining functional\nconnectivity.\nCurrent findings are based on thresholds from 2% to 8%\nat 2% intervals; results obtained from thresholds of 10% to\n40% at 10% intervals can be found in the Supplementary\nMaterials.\n\nMeasures of graph metrics\nGraph metrics, including modularity, local and global effi-\nciency, and strength, were estimated using the Brain Connec-\ntivity Toolbox (Rubinov and Sporns, 2010) with adaptation\nmade for nodal or regional-level calculation.\nGlobal-level\ngraph metrics were estimated by averaging each measure\nacross all nodal regions and across all subjects in each\ngroup; regional level measures, except for modularity, were\nestimated for each node averaging across all subjects within\neach group.\nModularity is a global measure of how well a network can\nbe decomposed into a set of sparsely interconnected but\ndensely intraconnected modules (Newman, 2004) and can\nbe a valuable tool in identifying the functional blocks within\nthe brain network.\nModular-\nity was first estimated using the Newman–Girvan algorithm\n(Newman, 2006a, 2006b).\nSince the optimal\ncommunity structure and maximized modularity may vary\nfrom run to run due to heuristics in the algorithm (Rubinov\nand Sporns, 2010), this step was repeated 500 times.\nIn the\nsecond step, all previously detected community structures\nwere refined using a fine-tuning algorithm (Rubinov and\nSporns, 2010; Sun et al., 2009) with a maximum 500\ntimes’ iteration.\nTherefore,\nintramodular connectivity of each node was measured by\nthe normalized intramodular degree, that is, the within-module\ndegree z-score (Rubinov and Sporns, 2010).\nLocal efficiency is a measure of information transfer in the\nimmediate neighborhood of each node, while global efficiency is a measure\nof information propagating in the whole network.\nThe strength of functional connectivity of each node is mea-\nsured as the mean value of weights (i.e., cross-correlation\ncoefficients) of all functional connections linking to the\nnode."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 296,
+            "end": 314,
+            "text": "Power et al., 2011",
+            "labels": [
+              "Atlas definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 79,
+            "end": 92,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 479,
+            "end": 493,
+            "text": "radius of 4 mm",
+            "labels": [
+              "ROI definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 437,
+            "end": 465,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 407,
+            "end": 429,
+            "text": "extracted and averaged",
+            "labels": [
+              "Time series ROI — Type"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 349,
+            "end": 366,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 495,
+            "end": 526,
+            "text": "Pearson correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 495,
+            "end": 502,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1261,
+            "end": 1336,
+            "text": "weighted adjacency matrix or is set to be 1 for a binary ad-\njacency matrix",
+            "labels": [
+              "Graph characteristics — Type"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1261,
+            "end": 1286,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1675,
+            "end": 1709,
+            "text": "minimum spanning tree (MST) method",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2013,
+            "end": 2046,
+            "text": "top 2–\n40% of the remaining links",
+            "labels": [
+              "Sparsity control — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2181,
+            "end": 2205,
+            "text": "thresholds from 2% to 8%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 708,
+            "end": 720,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2359,
+            "end": 2439,
+            "text": "Graph metrics, including modularity, local and global effi-\nciency, and strength",
+            "labels": [
+              "Graph measures — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2466,
+            "end": 2494,
+            "text": "Brain Connec-\ntivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2333,
+            "end": 2341,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3134,
+            "end": 3157,
+            "text": "Newman–Girvan algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3453,
+            "end": 3474,
+            "text": "fine-tuning algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3347,
+            "end": 3365,
+            "text": "repeated 500 times",
+            "labels": [
+              "Network definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3527,
+            "end": 3555,
+            "text": "maximum 500\ntimes’ iteration",
+            "labels": [
+              "Network definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2842,
+            "end": 2852,
+            "text": "8",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2629,
+            "end": 2700,
+            "text": "averaging each measure\nacross all nodal regions and across all subjects",
+            "labels": [
+              "Result aggregation — Type"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2584,
+            "end": 2596,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

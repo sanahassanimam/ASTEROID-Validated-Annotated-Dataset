@@ -1,0 +1,994 @@
+{
+  "data": {
+    "text": "Information Transfer Efficiency during Rest and Task\nA Functional Connectome Approach\nFumihiko Taya, Yu Sun, Nitish Thakor, Anastasios Bezerianos\nSingapore Institute for Neurotechnology, Centre for Life Sciences, National University of Singapore, Singapore\nEmail: {fumihiko.taya,lsisu,tassos.bezerianos}@nus.edu.sg, sinapsedirector@gmail.com\n\nAbstract— The brain consists of a number of sub-networks dedicated to several perceptual/cognitive functions, and allocates neural resources depending on cognitive demands. Recent studies on resting-state functional connectivity have shown competitive patterns of the functional sub-networks: 'task-negative' default mode networks and 'task-positive' networks. In this study, we employed the functional connectome approach to study the brain functional networks derived from fMRI data. Several graph theoretical measurements were employed to quantitatively investigate differences in global and local information transfer efficiency calculated between rest and task experimental conditions. Our results have suggested that normalized clustering coefficient was larger during rest compared to task, indicating more local efficiency of information transfer during rest, while small-worldness was preserved. In addition, the betweenness centrality of nodes was larger for task than rest at the orbital part of right superior frontal gyrus, the orbital part of right middle frontal gyrus and right olfactory cortex. In contrast, this parameter was larger for rest at left fusiform gyrus. As a consequence of this analysis, we show that graph theoretical measurements can be powerful biomarkers for quantifying cognitive states considering efficiency of information transfer, which can differ based on cognitive needs.\n\nTwo healthy human subjects (33 and 38 years old, male) participated in the study. The study was approved by the NUS institutional ethical review board. All participants gave written consents.\n\nGradient-echo echoplanar imaging (EPI) data was acquired using Siemens 3T Prisma scanner (Siemens, Erlangen, Germany) with the following parameters: number of slices=36 (interleaved); slice thickness=3.0mm; inter-slice gap=0.75mm; matrix size=74×74; flip angle=90º; repetition time (TR)=2000 ms; echo time=30ms; and in-plane resolution=3.0mm. The high resolution (0.9×0.9×1.0mm3) sagittal T1-weighted MP-RAGE was acquired as well.\n\nEach subject underwent three resting-state runs and four task runs. In the resting-state runs, a white fixation cross was presented in the center of the screen while the subject was lying calmly at rest with eyes open. In the task runs, subjects performed a visual oddball task in which they had to press a button when a target character (selected from a group of four alphabet letters ‘b’,’d’,’p’ and ’q’) was presented at the centre of the screen while a successively changing display of letters among these four characters was occurring in the centre of the screen in random order. A different character was assigned as the target on each run. For each trial, the character was presented for 0.2 seconds, followed by a presentation of the fixation cross for 1.8 seconds. Each run consisted of 150 trials including 30 null trials, and lasted for a period of 5 minutes and 20 seconds, including the fixation cross presentation for 6 seconds preceding the task and an extra fixation cross presentation for 4 seconds following the task. Therefore the total number of scans was 160 for each run. The duration of the resting-state runs were the same as the task runs.\n\nThe acquired fMRI data were preprocessed using SPM8 (http://www.fil.ion.ucl.ac.uk/spm/software/spm8/). The fMRI preprocessing steps included slice timing correction, head motion correction, exclusion of outliers due to excessive head movements, normalization to the standard template (MNI), resampling to 3×3×3mm3, spatial smoothing with Gaussian kernel (FWHM=4mm), and temporal band-pass filtering allowing frequencies of 0.01Hz-0.08Hz.\n\nTo compare topological properties of the brain network during rest and task, we constructed functional connectivity maps based on correlation matrices, and calculated graph theoretical measures for each condition. Firstly, time series (160 time-points) of BOLD signal were extracted from the functional data normalized to the standard brain for 90 regions of interest (ROIs) based on the automated anatomical labeling atlas (AAL-90) and averaged over voxels within each ROI, resulting in 90 time-series data. Then, Pearson correlation coefficients, which represented functional connectivity strength, were calculated between all possible pairs of ROIs. A Fisher’s-Z transformation was applied to the obtained correlation matrices M (90×90) to improve the normality of the correlation coefficients. We assessed the matrices at 11 different sparsity levels from 10% to 25%, at intervals of 1.5%. By choosing a threshold that preserved a specified percentage of the strongest edges in the network, it was possible to compare the topological organization among different states.\n\nIn this study, graph theoretical analysis was conducted with Brain Connectivity Toolbox. To investigate topological properties of global architecture of the functional network during rest and task, five graph theoretical measurements, i.e., the clustering coefficient, C; the shortest path length, L; the normalized clustering coefficient, γ; the normalized shortest path length, λ; and the small-worldness, σ, were examined. The clustering coefficient C quantifies the degree of mutual connections between the nearest neighbors of a node, providing information about local connectedness of the network, while the shortest path length L is the average of the minimum number of edges necessary for a node to reach to another, providing information about the efficiency of global communication. The shortest path length L of a weighted graph was defined as the mean of the shortest path length of all pairs of nodes.\n\nIn order to inspect small-worldness of the functional brain network, the indices of the small-worldness σ were subjected to t-test examining whether σ>1. From two subjects, the data of six runs for rest and those of eight runs for task were used. For the comparison between global network characteristics during rest and task, the integrated network metrics corresponded to the area of curves (AUCs) within the sparsity range of 10%-25%, and was subjected to two-sample t-test for comparing the network architecture during rest and task. For each metric, the AUCs of six runs for rest and those of eight runs for task from two subjects were used. For the regional nodes characteristics, the normalized node betweenness was averaged across the sparsity range (10%≤S≤25%) to obtain the salient regional node characteristics. Subsequently, two-sample t-tests were performed on the averaged betweenness of each node.\n\n978-1-4799-2346-5/14/$31.00 ©2014 IEEE"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 86,
+            "end": 145,
+            "text": "Fumihiko Taya, Yu Sun, Nitish Thakor, Anastasios Bezerianos",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 52,
+            "text": "Information Transfer Efficiency during Rest and Task",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6923,
+            "end": 6927,
+            "text": "2014",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6928,
+            "end": 6932,
+            "text": "IEEE",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 343,
+            "end": 451,
+            "text": "Abstract— The brain consists of a number of sub-networks dedicated to several perceptual/cognitive functions",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1758,
+            "end": 1784,
+            "text": "Two healthy human subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1786,
+            "end": 1805,
+            "text": "33 and 38 years old",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1807,
+            "end": 1811,
+            "text": "male",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1762,
+            "end": 1769,
+            "text": "healthy",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1870,
+            "end": 1908,
+            "text": "NUS institutional ethical review board",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2014,
+            "end": 2068,
+            "text": "Siemens 3T Prisma scanner (Siemens, Erlangen, Germany)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2100,
+            "end": 2133,
+            "text": "number of slices=36 (interleaved)",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2135,
+            "end": 2156,
+            "text": "slice thickness=3.0mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2158,
+            "end": 2180,
+            "text": "inter-slice gap=0.75mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2201,
+            "end": 2215,
+            "text": "flip angle=90º",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2217,
+            "end": 2245,
+            "text": "repetition time (TR)=2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2247,
+            "end": 2261,
+            "text": "echo time=30ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3840,
+            "end": 3862,
+            "text": "resampling to 3×3×3mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2591,
+            "end": 2600,
+            "text": "eyes open",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3243,
+            "end": 3267,
+            "text": "5 minutes and 20 seconds",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1758,
+            "end": 1784,
+            "text": "Two healthy human subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3596,
+            "end": 3600,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2641,
+            "end": 2660,
+            "text": "visual oddball task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3179,
+            "end": 3214,
+            "text": "150 trials including 30 null trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3078,
+            "end": 3089,
+            "text": "0.2 seconds",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3144,
+            "end": 3155,
+            "text": "1.8 seconds",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3243,
+            "end": 3267,
+            "text": "5 minutes and 20 seconds",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2620,
+            "end": 2831,
+            "text": "subjects performed a visual oddball task in which they had to press a button when a target character (selected from a group of four alphabet letters ‘b’,’d’,’p’ and ’q’) was presented at the centre of the screen",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2747,
+            "end": 2788,
+            "text": "four alphabet letters ‘b’,’d’,’p’ and ’q’",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2838,
+            "end": 2966,
+            "text": "a successively changing display of letters among these four characters was occurring in the centre of the screen in random order",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6049,
+            "end": 6132,
+            "text": "the indices of the small-worldness σ were subjected to t-test examining whether σ>1",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3690,
+            "end": 3713,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3596,
+            "end": 3600,
+            "text": "SPM8",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3690,
+            "end": 3713,
+            "text": "slice timing correction",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3715,
+            "end": 3737,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3596,
+            "end": 3600,
+            "text": "SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3715,
+            "end": 3737,
+            "text": "head motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3739,
+            "end": 3792,
+            "text": "3",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3596,
+            "end": 3600,
+            "text": "SPM8",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3739,
+            "end": 3792,
+            "text": "exclusion of outliers due to excessive head movements",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3794,
+            "end": 3838,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3596,
+            "end": 3600,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3794,
+            "end": 3838,
+            "text": "normalization to the standard template (MNI)",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3840,
+            "end": 3862,
+            "text": "resampling to 3×3×3mm3",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "Missing_sublabels": []
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3864,
+            "end": 3913,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3596,
+            "end": 3600,
+            "text": "SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3864,
+            "end": 3913,
+            "text": "spatial smoothing with Gaussian kernel (FWHM=4mm)",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3904,
+            "end": 3912,
+            "text": "FWHM=4mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": []
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3919,
+            "end": 3985,
+            "text": "6",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3928,
+            "end": 3947,
+            "text": "band-pass filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3972,
+            "end": 3985,
+            "text": "0.01Hz-0.08Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3919,
+            "end": 3985,
+            "text": "temporal band-pass filtering allowing frequencies of 0.01Hz-0.08Hz",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4376,
+            "end": 4420,
+            "text": "7",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4376,
+            "end": 4420,
+            "text": "automated anatomical labeling atlas (AAL-90)",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4333,
+            "end": 4362,
+            "text": "90 regions of interest (ROIs)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4333,
+            "end": 4362,
+            "text": "8",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4336,
+            "end": 4362,
+            "text": "regions of interest (ROIs)",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4333,
+            "end": 4362,
+            "text": "90 regions of interest (ROIs)",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4211,
+            "end": 4496,
+            "text": "9",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4244,
+            "end": 4461,
+            "text": "BOLD signal were extracted from the functional data normalized to the standard brain for 90 regions of interest (ROIs) based on the automated anatomical labeling atlas (AAL-90) and averaged over voxels within each ROI",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4503,
+            "end": 4535,
+            "text": "10",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4503,
+            "end": 4535,
+            "text": "Pearson correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4643,
+            "end": 4668,
+            "text": "11",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4643,
+            "end": 4668,
+            "text": "Fisher’s-Z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4814,
+            "end": 4880,
+            "text": "12",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4814,
+            "end": 4880,
+            "text": "11 different sparsity levels from 10% to 25%, at intervals of 1.5%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4894,
+            "end": 4981,
+            "text": "a threshold that preserved a specified percentage of the strongest edges in the network",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5079,
+            "end": 5151,
+            "text": "13",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5125,
+            "end": 5151,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5262,
+            "end": 5473,
+            "text": "five graph theoretical measurements, i.e., the clustering coefficient, C; the shortest path length, L; the normalized clustering coefficient, γ; the normalized shortest path length, λ; and the small-worldness, σ",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6307,
+            "end": 6416,
+            "text": "14",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6307,
+            "end": 6416,
+            "text": "the integrated network metrics corresponded to the area of curves (AUCs) within the sparsity range of 10%-25%",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

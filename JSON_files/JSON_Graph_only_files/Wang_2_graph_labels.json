@@ -1,0 +1,342 @@
+{
+  "data": {
+    "text": "ROI-Based Functional Connectivity Analyses\nFunctional connectivity analyses were first performed on region of interest (ROI) atlases that cover the whole brain. Two previous established atlases were used: the 200 ROI atlas based on Craddock 2012 parcellation [Craddock et al., 2012] and the 17 ROI atlas proposed by Yeo et al. [Yeo et al., 2011]. As the two atlases yielded similar results, results based on the Craddock 200 ROI atlas are presented in the main text, and the results based on the Yeo 17 template are presented in Supporting Information. ROIs’ time series were extracted from preprocessed fMRI data, by taking the mean across all voxels within each ROI. Pearson correlation was computed between each pair of ROIs’ time series separately for each condition in each session, resulting in four 200 3 200 connectivity matrices for each subject (two for resting state and two for natural viewing). For each matrix, the correlation coefficients were transformed to z-scores using Fisher’s transformation, averaged across all subjects for each condition, and then reverted to Pearson’s r values to derive group-level connectivity matrices, following previous method [Vanderwal et al., 2015]. To quantitatively evaluate the differences between connectivity matrices under different conditions, we performed paired t-test on the connectivity matrices between the two conditions within the same session. The results were thresholded using an FDR-corrected P < 0.05.\n\nGraph Theoretical Analysis on ROI Matrices\nWe further derived graph theoretical measures from the ROI connectivity matrices. The fully connected ROI matrices were thresholded to determine the presence or absence of connections (edges) between ROIs (nodes). Weighted adjacency matrices were hence generated where each suprathreshold edge retained its correlation coefficient denoting edge weights, whereas subthreshold edges were assigned values of 0. To ensure robustness of the threshold chosen, we repeated our analyses using a serial of thresholds (Tr 5 0.1, 0.3, and 0.5). Additional analyses using sparsity thresholding method are presented in Supporting Information. Using Brain Connectivity Toolbox [Rubinov et al., 2009] and GRETNA Toolbox [Wang et al., 2015], graph metrics were derived from the weighted adjacency matrices, including degree centrality, clustering coefficient, efficiency, betweenness centrality, and an alternative centrality metric, eigenvector centrality [Zuo et al., 2012]. Degree centrality measures the connectedness of each node, computed as the weighted sum of all the edges connected to the node. Clustering coefficient measures the likelihood of the nodes tending to cluster together, calculated as the fraction that the number of edges actually exist to the number of all edges possibly exist. Efficiency represents the efficiency of information transfer, which is reciprocal to path length (the minimal number of edges necessary to traverse from one node to another). Betweenness centrality signifies the centrality of a node in the network, defined as the ratio of shortest paths in the whole graph that threads a certain node [Bullmore and Sporns, 2009]. Eigenvector centrality denotes the importance of a node (if the neighbors of a node are central within the network itself, the node is of high eigenvector centrality, namely of high importance), defined as the first eigenvector of the adjacent matrix [Lohmann et al., 2010; Zuo et al., 2012]."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 161,
+            "end": 346,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 161,
+            "end": 346,
+            "text": "Two previous established atlases were used: the 200 ROI atlas based on Craddock 2012 parcellation [Craddock et al., 2012] and the 17 ROI atlas proposed by Yeo et al. [Yeo et al., 2011].",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 553,
+            "end": 668,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 553,
+            "end": 668,
+            "text": "ROIs’ time series were extracted from preprocessed fMRI data, by taking the mean across all voxels within each ROI.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 669,
+            "end": 907,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 669,
+            "end": 907,
+            "text": "Pearson correlation was computed between each pair of ROIs’ time series separately for each condition in each session, resulting in four 200 3 200 connectivity matrices for each subject (two for resting state and two for natural viewing).",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 908,
+            "end": 1199,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 908,
+            "end": 1199,
+            "text": "For each matrix, the correlation coefficients were transformed to z-scores using Fisher’s transformation, averaged across all subjects for each condition, and then reverted to Pearson’s r values to derive group-level connectivity matrices, following previous method [Vanderwal et al., 2015].",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1200,
+            "end": 1408,
+            "text": "5",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1200,
+            "end": 1408,
+            "text": "To quantitatively evaluate the differences between connectivity matrices under different conditions, we performed paired t-test on the connectivity matrices between the two conditions within the same session.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1923,
+            "end": 2048,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1923,
+            "end": 2048,
+            "text": "To ensure robustness of the threshold chosen, we repeated our analyses using a serial of thresholds (Tr 5 0.1, 0.3, and 0.5).",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1597,
+            "end": 1728,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1597,
+            "end": 1728,
+            "text": "The fully connected ROI matrices were thresholded to determine the presence or absence of connections (edges) between ROIs (nodes).",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1729,
+            "end": 1922,
+            "text": "Weighted adjacency matrices were hence generated where each suprathreshold edge retained its correlation coefficient denoting edge weights, whereas subthreshold edges were assigned values of 0.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2145,
+            "end": 2475,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2145,
+            "end": 2475,
+            "text": "Brain Connectivity Toolbox; GRETNA Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2476,
+            "end": 2603,
+            "text": "Degree centrality measures the connectedness of each node, computed as the weighted sum of all the edges connected to the node.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2604,
+            "end": 2802,
+            "text": "Clustering coefficient measures the likelihood of the nodes tending to cluster together, calculated as the fraction that the number of edges actually exist to the number of all edges possibly exist.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2803,
+            "end": 2977,
+            "text": "Efficiency represents the efficiency of information transfer, which is reciprocal to path length (the minimal number of edges necessary to traverse from one node to another).",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2978,
+            "end": 3166,
+            "text": "Betweenness centrality signifies the centrality of a node in the network, defined as the ratio of shortest paths in the whole graph that threads a certain node [Bullmore and Sporns, 2009].",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3167,
+            "end": 3459,
+            "text": "Eigenvector centrality denotes the importance of a node (if the neighbors of a node are central within the network itself, the node is of high eigenvector centrality, namely of high importance), defined as the first eigenvector of the adjacent matrix [Lohmann et al., 2010; Zuo et al., 2012].",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1409,
+            "end": 1470,
+            "text": "The results were thresholded using an FDR-corrected P < 0.05.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

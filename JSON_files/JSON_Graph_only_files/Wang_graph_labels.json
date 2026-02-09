@@ -1,0 +1,270 @@
+{
+  "data": {
+    "text": "For R-fMRI, a functional network was constructed for each CTP and RTP (Figure 1IIA–C). The nodes were defined by using voxel cubes (a cube consisting of 3 × 3 × 3 voxels), which parceled the whole brain based on the Anatomical Automatic Labeling 90 (AAL90). The edges of the network represented the similarity of BOLD values between every two nodes. By using a cube similarity approach (Tijms et al., 2012), the correlation coefficient of the cubes on the BOLD values in the voxels of defined nodes was measured. Because the cubes with zero variance in BOLD values were excluded (average across all participants, 0.01%), only positive similarity values survived this threshold. After constructing a brain network on each CTP or RTP, we, respectively, averaged all network matrices under CTP or RTP. Finally, we got a mean CTP functional network (CTP-network) and mean RTP functional network (RTP-network) for each participant.\n\nWe analyzed topological properties of four types of brain networks (CTP-, RTP-, creative-, and control-network) based on a graph theory and used the global efficiency (Eglob) and local efficiency (Eloc) to depict the global network attributes in detail. Eglob reflects the efficiency of a parallel information transfer among nodes in the whole network, and Eloc is the average value of the local efficiency of all nodes in the brain and indicates the efficiency of information transfer in the local network and the ability of the network to defend against random attacks. Two parameters were used to describe the local network topological organization: nodal global efficiency (Eglob−nodal) and nodal local efficiency (Eloc−nodal), which together indicated the efficiency of information transfer of a node.\n\nIn addition, two normalized global parameters were used to quantify small-world topography. The parameters are normalized clustering coefficient, g = Cp real/Cp rand, and normalized shortest path length, λ = Lp real/Lp rand. Cp real and Lp real, which indicated the clustering coefficient and shortest path length of the real brain network in a separate manner. Moreover, Cp rand and Lp rand represented the mean value of the corresponding parameter derived from 100 random networks that have the same number of edges, nodes, and the distribution of degrees as a real brain network. If a network met the following criteria: g >> 1 and λ ≈ 1 or σ = g / λ > 1, we defined it as a small-world network (Watts and Strogatz, 1998).\n\nIn the present study, five sparsities (ranging from 0.05 to 0.25 with an interval of 0.05) were used to threshold all elements of each similarity matrix repeatedly, and each sparsity was computed by dividing the maximum possible number of edges in a network by a total number of edges. In the present study, we not only calculated each network parameter that corresponded to respective sparsity but also computed the integrated parameters over the whole range of sparsity values. We defined the integrated global parameters as:\nIntegrated X =\nX 5 K=1 X(K1S)1S (1)\n1S means the sparsity interval of 0.05, and X (K1S) represents one of the global network parameters (Eglob or Eloc) at a sparsity of K1S. In addition, the integrated nodal network parameters are defined as:\nIntegrated Y =\nX 5 K=1 Y(i, K1S)1S (2)\nY (i, K1S) indicates one of two nodal parameters (Eglob−nodal or Eloc−nodal) at a sparsity of K1S."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 216,
+            "end": 256,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 216,
+            "end": 256,
+            "text": "Anatomical Automatic Labeling 90 (AAL90)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 119,
+            "end": 170,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 119,
+            "end": 170,
+            "text": "voxel cubes (a cube consisting of 3 × 3 × 3 voxels)",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 361,
+            "end": 406,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 361,
+            "end": 406,
+            "text": "cube similarity approach (Tijms et al., 2012)",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 408,
+            "end": 511,
+            "text": "the correlation coefficient of the cubes on the BOLD values in the voxels of defined nodes was measured",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1077,
+            "end": 1130,
+            "text": "4",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1077,
+            "end": 1130,
+            "text": "global efficiency (Eglob) and local efficiency (Eloc)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1581,
+            "end": 1658,
+            "text": "nodal global efficiency (Eglob−nodal) and nodal local efficiency (Eloc−nodal)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2319,
+            "end": 2433,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2319,
+            "end": 2433,
+            "text": "If a network met the following criteria: g >> 1 and λ ≈ 1 or σ = g / λ > 1, we defined it as a small-world network",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2485,
+            "end": 2626,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2485,
+            "end": 2626,
+            "text": "five sparsities (ranging from 0.05 to 0.25 with an interval of 0.05) were used to threshold all elements of each similarity matrix repeatedly",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2991,
+            "end": 3005,
+            "text": "7",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2991,
+            "end": 3005,
+            "text": "Integrated X =",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2991,
+            "end": 3005,
+            "text": "Integrated X =",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3234,
+            "end": 3248,
+            "text": "Integrated Y =",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

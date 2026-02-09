@@ -1,0 +1,1224 @@
+{
+  "data": {
+    "text": "Statistical parametric network analysis of functional connectivity dynamics during a working memory task\nNeuroImage 55 (2011) 688–704\nCedric E. Ginestet, Andrew Simmons\ndoi:10.1016/j.neuroimage.2010.11.030\nNetwork analysis has become a tool of choice for the study of functional and structural Magnetic Resonance Imaging (MRI) data.\n\nSubjects\n\nThe participants were adult healthy controls. Functional MRI data was acquired from n=43 (incl. 21 females) volunteers with no previous history of mental disorders. The subjects had a mean age of 68.23 years (sd=13.17 and range={30,89}). Full ethical approval for this project was gained from the South London and Maudsley (SLaM) ethics committee. The 43 subjects selected for this study were all screened on their ability to respond correctly to the demands of the N-back task. In order to verify the subjects' attendance to the task at hand, we selected participants on the basis of their performance on the most challenging experimental condition: 3-back. Only subjects who had responded correctly to more than 75% of the items in the 3-back condition were included in the study. Therefore, the 43 subjects here discussed constitute a subsample of high-performers among an original population of 84 healthy controls.\n\nWorking memory task\n\nIn the specific variant of the N-back paradigm used in the present study, the stimuli were letters and the input modality was visual. Subjects were shown one letter every 2 s, and were asked to monitor the stimuli, in order to indicate by the push of a button whether the current letter was identical to the one presented N trials previously, where N={1,2,3}. A control or null condition was also included – the 0-back task – which consisted of simply indicating whether the current letter was an X. The full experiment consisted of 12 randomized blocks organized in three full experimental cycles including each of the four conditions. Each block lasted 31 s and contained three test stimuli requiring a positive answer from the subjects, and 12 other letters, which did not necessitate an answer. Written instructions on the screen between each block lasted for 3 s, and the entire experiment therefore took 372 s per subject to complete. Response times were recorded for all trials in milliseconds. All subjects were provided with as many training blocks as they requested to ensure that they were confident with the task at hand.\n\nData acquisition and preprocessing\n\nFunctional MRI data were acquired on a GE Signa 1.5T MRI scanner (General Electric, Milwaukee, WI, USA). 186 T2⁎-weighted EPI volumes depicting BOLD contrast were acquired in each of 16 non-contiguous near-axial planes (5.0 mm thick with 0.5 mm interval, in-plane resolution 3 mm) parallel to the AC–PC line (TE=40 ms, TR=2000 ms, flip angle 90°, and number of signal averages was 1). The entire preprocessing of the images was conducted within the FMRIB Software Library (FSL) environment. The McFLIRT package was used for affine registration of the time series to the first image with 6 degrees of freedom (df), including correction for movement artifacts. Images were normalized to the Montreal Neurological Institute (MNI-152) template based on 2 mm3 voxels. Normalization (6df) was based on the minimization of the correlation ratio and used trilinear interpolation. Finally, the 4D volumes were regressed on the movement correction parameters, including the square, first derivatives and square of the first derivatives of these movement correction parameters, with a total of 24 regression parameters. Images were not smoothed during preprocessing prior to parcellation.\n\nParcellation and wavelet decomposition\n\nThe FSL residual time series for the 43 subjects were parcellated using the Anatomical Automatic Labelling (AAL) templates. This parcellation scheme produced a set of 45 cortical and subcortical regions for each hemisphere. Each volume was thus parcellated into 90 regions of interest and the BOLD signal was averaged over the voxels in each of these regions at every time point. These regional mean time series were further decomposed into six different frequency bands using maximal overlap discrete wavelet transform (MODWT), as described in Percival and Walden (2000). For each wavelet scale, we computed the frequency interval as follows… we obtained 0.031–0.062 Hz and 0.015–0.031 Hz for wavelet scales 3 and 4, respectively. The decomposed mean time series were separated according to the four conditions of the N-back paradigm. The first three volumes of each block were discarded, to allow for the lag in hemodynamic response between blocks. The remaining volumes were concatenated to form four distinct time series representing the four different conditions.\n\nStatistical Parametric Networks (SPNs)\n\nEvery correlation coefficient was Fisher z-transformed in order to allow the application of the normal theory to the distribution of these quantities. Networks constructed on the basis of the correlation matrices were treated as unweighted, undirected graphs. Throughout the rest of this paper, we infer the significance of edges and nodes in both SPNj and SPNF by using the false discovery rate (FDR) with a base rate of α0 := 0.05.\n\nMeasures of network topology\n\nHere, we favored the use of global and local efficiencies (Latora and Marchiori, 2001), over the classical measures of small-worldness — i.e. characteristic path length and clustering coefficients. Global efficiency should therefore be interpreted as inversely related to characteristic path length, whereas local efficiency can be regarded as related to the clustering coefficient.\n\nMean correlation predicts individual N-back performance\n\nOur measure of N-back performance combined a measure of speed (reaction time (RT) for correct answers) with a measure of accuracy (penalty for failing to answer, when an answer was expected). We termed this measure penalized RT, denoted pRT. Each RT is the reaction time in ms for the expected answer; an absence of answer was scored as 2000 ms."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 134,
+            "end": 168,
+            "text": "Cedric E. Ginestet, Andrew Simmons",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 104,
+            "text": "Statistical parametric network analysis of functional connectivity dynamics during a working memory task",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 120,
+            "end": 124,
+            "text": "2011",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 105,
+            "end": 115,
+            "text": "NeuroImage",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 169,
+            "end": 205,
+            "text": "doi:10.1016/j.neuroimage.2010.11.030",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 206,
+            "end": 332,
+            "text": "Network analysis has become a tool of choice for the study of functional and structural Magnetic Resonance Imaging (MRI) data.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2496,
+            "end": 2521,
+            "text": "GE Signa 1.5T MRI scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2640,
+            "end": 2675,
+            "text": "16 non-contiguous near-axial planes",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2677,
+            "end": 2710,
+            "text": "5.0 mm thick with 0.5 mm interval",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2788,
+            "end": 2802,
+            "text": "flip angle 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2776,
+            "end": 2786,
+            "text": "TR=2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2766,
+            "end": 2774,
+            "text": "TE=40 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2712,
+            "end": 2736,
+            "text": "in-plane resolution 3 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2196,
+            "end": 2225,
+            "text": "372 s per subject to complete",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 428,
+            "end": 432,
+            "text": "n=43",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2906,
+            "end": 2934,
+            "text": "FMRIB Software Library (FSL)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 810,
+            "end": 816,
+            "text": "N-back",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1819,
+            "end": 1839,
+            "text": "12 randomized blocks",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1923,
+            "end": 1945,
+            "text": "Each block lasted 31 s",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1440,
+            "end": 1460,
+            "text": "one letter every 2 s",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1960,
+            "end": 1978,
+            "text": "three test stimuli",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2085,
+            "end": 2153,
+            "text": "Written instructions on the screen between each block lasted for 3 s",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1364,
+            "end": 1384,
+            "text": "stimuli were letters",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4512,
+            "end": 4564,
+            "text": "The first three volumes of each block were discarded",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 428,
+            "end": 451,
+            "text": "n=43 (incl. 21 females)",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 528,
+            "end": 580,
+            "text": "mean age of 68.23 years (sd=13.17 and range={30,89})",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 440,
+            "end": 450,
+            "text": "21 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 463,
+            "end": 507,
+            "text": "with no previous history of mental disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1243,
+            "end": 1262,
+            "text": "84 healthy controls",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 641,
+            "end": 690,
+            "text": "South London and Maudsley (SLaM) ethics committee",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5884,
+            "end": 5933,
+            "text": "We termed this measure penalized RT, denoted pRT.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2948,
+            "end": 3115,
+            "text": "The McFLIRT package was used for affine registration of the time series to the first image with 6 degrees of freedom (df), including correction for movement artifacts.",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2948,
+            "end": 2949,
+            "text": "T",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2952,
+            "end": 2959,
+            "text": "McFLIRT",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2981,
+            "end": 3069,
+            "text": "affine registration of the time series to the first image with 6 degrees of freedom (df)",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3044,
+            "end": 3069,
+            "text": "6 degrees of freedom (df)",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3116,
+            "end": 3219,
+            "text": "Images were normalized to the Montreal Neurological Institute (MNI-152) template based on 2 mm3 voxels.",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3116,
+            "end": 3117,
+            "text": "I",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2930,
+            "end": 2933,
+            "text": "FSL",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3220,
+            "end": 3328,
+            "text": "Normalization (6df) was based on the minimization of the correlation ratio and used trilinear interpolation.",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3116,
+            "end": 3219,
+            "text": "Images were normalized to the Montreal Neurological Institute (MNI-152) template based on 2 mm3 voxels.",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3329,
+            "end": 3565,
+            "text": "Finally, the 4D volumes were regressed on the movement correction parameters, including the square, first derivatives and square of the first derivatives of these movement correction parameters, with a total of 24 regression parameters.",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3329,
+            "end": 3330,
+            "text": "F",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2930,
+            "end": 2933,
+            "text": "FSL",
+            "labels": [
+              "motion regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3329,
+            "end": 3565,
+            "text": "Finally, the 4D volumes were regressed on the movement correction parameters, including the square, first derivatives and square of the first derivatives of these movement correction parameters, with a total of 24 regression parameters.",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3329,
+            "end": 3565,
+            "text": "Finally, the 4D volumes were regressed on the movement correction parameters, including the square, first derivatives and square of the first derivatives of these movement correction parameters, with a total of 24 regression parameters.",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3725,
+            "end": 3799,
+            "text": "were parcellated using the Anatomical Automatic Labelling (AAL) templates.",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3725,
+            "end": 3726,
+            "text": "w",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3752,
+            "end": 3798,
+            "text": "Anatomical Automatic Labelling (AAL) templates",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3938,
+            "end": 3960,
+            "text": "90 regions of interest",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3900,
+            "end": 3960,
+            "text": "Each volume was thus parcellated into 90 regions of interest",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3900,
+            "end": 3901,
+            "text": "E",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3900,
+            "end": 3960,
+            "text": "Each volume was thus parcellated into 90 regions of interest",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3938,
+            "end": 3948,
+            "text": "90 regions",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3965,
+            "end": 4055,
+            "text": "the BOLD signal was averaged over the voxels in each of these regions at every time point.",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3965,
+            "end": 3966,
+            "text": "t",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3965,
+            "end": 4055,
+            "text": "the BOLD signal was averaged over the voxels in each of these regions at every time point.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4062,
+            "end": 4087,
+            "text": "regional mean time series",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4088,
+            "end": 4203,
+            "text": "were further decomposed into six different frequency bands using maximal overlap discrete wavelet transform (MODWT)",
+            "labels": [
+              "wavelet decomposition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4088,
+            "end": 4089,
+            "text": "w",
+            "labels": [
+              "wavelet decomposition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4088,
+            "end": 4203,
+            "text": "were further decomposed into six different frequency bands using maximal overlap discrete wavelet transform (MODWT)",
+            "labels": [
+              "wavelet decomposition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3653,
+            "end": 3674,
+            "text": "wavelet decomposition",
+            "labels": [
+              "wavelet decomposition — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4088,
+            "end": 4203,
+            "text": "were further decomposed into six different frequency bands using maximal overlap discrete wavelet transform (MODWT)",
+            "labels": [
+              "wavelet decomposition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4512,
+            "end": 4564,
+            "text": "The first three volumes of each block were discarded",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4512,
+            "end": 4513,
+            "text": "T",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4512,
+            "end": 4564,
+            "text": "The first three volumes of each block were discarded",
+            "labels": [
+              "Removal Init Vol — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4512,
+            "end": 4564,
+            "text": "The first three volumes of each block were discarded",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4627,
+            "end": 4700,
+            "text": "The remaining volumes were concatenated to form four distinct time series",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4627,
+            "end": 4628,
+            "text": "T",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4627,
+            "end": 4700,
+            "text": "The remaining volumes were concatenated to form four distinct time series",
+            "labels": [
+              "Combine block — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4627,
+            "end": 4700,
+            "text": "The remaining volumes were concatenated to form four distinct time series",
+            "labels": [
+              "Combine block — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4786,
+            "end": 4840,
+            "text": "Every correlation coefficient was Fisher z-transformed",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4786,
+            "end": 4787,
+            "text": "E",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4786,
+            "end": 4840,
+            "text": "Every correlation coefficient was Fisher z-transformed",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4786,
+            "end": 4840,
+            "text": "Every correlation coefficient was Fisher z-transformed",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4820,
+            "end": 4840,
+            "text": "Fisher z-transformed",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4820,
+            "end": 4821,
+            "text": "F",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4820,
+            "end": 4840,
+            "text": "Fisher z-transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4820,
+            "end": 4840,
+            "text": "Fisher z-transformed",
+            "labels": [
+              "Connectivity normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5015,
+            "end": 5044,
+            "text": "unweighted, undirected graphs",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5015,
+            "end": 5016,
+            "text": "u",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5015,
+            "end": 5044,
+            "text": "unweighted, undirected graphs",
+            "labels": [
+              "Graph characteristics — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5015,
+            "end": 5044,
+            "text": "unweighted, undirected graphs",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5161,
+            "end": 5218,
+            "text": "false discovery rate (FDR) with a base rate of α0 := 0.05",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5161,
+            "end": 5162,
+            "text": "f",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5161,
+            "end": 5218,
+            "text": "false discovery rate (FDR) with a base rate of α0 := 0.05",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5161,
+            "end": 5218,
+            "text": "false discovery rate (FDR) with a base rate of α0 := 0.05",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5279,
+            "end": 5308,
+            "text": "global and local efficiencies",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5279,
+            "end": 5280,
+            "text": "g",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5279,
+            "end": 5308,
+            "text": "global and local efficiencies",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5279,
+            "end": 5308,
+            "text": "global and local efficiencies",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

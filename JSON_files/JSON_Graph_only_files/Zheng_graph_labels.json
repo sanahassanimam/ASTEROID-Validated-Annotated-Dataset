@@ -1,0 +1,349 @@
+{
+ "data": {
+  "text": "After the fMRI data preprocessing, we extracted the brain signals from 90 brain regions according to the Automatic Anatomical Labeling (AAL) brain atlas. The signals from the same brain regions were averaged, and we calculated the Pearson correlation across the signals of 90 brain regions pairwise and obtained the weighted adjacency matrix.\n\nThus, in order to obtain robust results, we constructed the binary adjacency matrix by setting different edge density levels. For example, a 10% edge density level means the top 10% weighted edges were set as one while other edges were ignored as zero. Binary and weighted adjacency matrices were both used in calculations. At present, the meaning of a negative correlation is not clear in fMRI-based network construction. We set negative matrix elements as zero.\n\nTo test our hypotheses, we used multiple graph theoretical measures including community detection (CD), clustering coefficient (CC), average path length (ASP), eigenvector centrality (EC) and the degree of distribution over the whole brain network model. We applied the brain connectivity toolbox (BCT) in Matlab for the graph theoretical analysis (Rubinov and Sporns 2010).\n\nThe group-level network for CD is constructed using the virtual-typical-subject (VTS) approach (Taya et al. 2016), which used group averaged data to extract patterns in the network. Then we applied the Louvain heuristics algorithm, with the structural resolution parametery γ = 1.2.\n\nWe calculated ASP over the weighted undirected adjacency matrix. Typically, ASP is defined by the following formula... Therefore, we adjusted the traditional ASP with the following procedures in this study: 1. The length between any node is len_i,j = 1/w_i,j ... 3. For node i ∈ frontal areas... We define l_i as the mean of d_ik.\n\nThe maximum Q value of detected modules, which quantified the modularity of corresponding networks, is 0.259 for OT and 0.262 for the PL group. The maximum Q value is obtained from applying the community detection method in binary networks with an edge density level of 4%.\n\nTo avoid the influence of spurious correlation in fMRI data, we calculated the average CC of 6 frontal nodes for each group in different edge-density levels"
+ },
+ "annotations": [
+  {
+   "result": [
+    {
+     "from_name": "Time series ROI",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 35,
+      "end": 44,
+      "text": "extracted",
+      "labels": [
+       "Time series ROI — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Atlas definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 101,
+      "end": 151,
+      "text": "Automatic Anatomical Labeling (AAL) brain atlas",
+      "labels": [
+       "Atlas definition — Parameters"
+      ]
+     }
+    },
+    {
+     "from_name": "Atlas definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 88,
+      "end": 100,
+      "text": "according to",
+      "labels": [
+       "Atlas definition — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Time series ROI",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 195,
+      "end": 203,
+      "text": "averaged",
+      "labels": [
+       "Time series ROI — Algorithm"
+      ]
+     }
+    },
+    {
+     "from_name": "Compute connectivity",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 223,
+      "end": 242,
+      "text": "Pearson correlation",
+      "labels": [
+       "Compute connectivity — Algorithm"
+      ]
+     }
+    },
+    {
+     "from_name": "Compute connectivity",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 213,
+      "end": 223,
+      "text": "calculated",
+      "labels": [
+       "Compute connectivity — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph characteristics",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 305,
+      "end": 330,
+      "text": "weighted adjacency matrix",
+      "labels": [
+       "Graph characteristics — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph characteristics",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 296,
+      "end": 304,
+      "text": "obtained",
+      "labels": [
+       "Graph characteristics — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Sparsity control",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 427,
+      "end": 460,
+      "text": "setting different edge density levels",
+      "labels": [
+       "Sparsity control — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Sparsity control",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 412,
+      "end": 423,
+      "text": "constructed",
+      "labels": [
+       "Sparsity control — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph characteristics",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 387,
+      "end": 410,
+      "text": "binary adjacency matrix",
+      "labels": [
+       "Graph characteristics — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Sparsity control",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 477,
+      "end": 480,
+      "text": "10%",
+      "labels": [
+       "Sparsity control — Parameters"
+      ]
+     }
+    },
+    {
+     "from_name": "Negative correlation",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 691,
+      "end": 725,
+      "text": "set negative matrix elements as zero",
+      "labels": [
+       "Negative correlation — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Negative correlation",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 687,
+      "end": 690,
+      "text": "set",
+      "labels": [
+       "Negative correlation — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Network definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 801,
+      "end": 825,
+      "text": "community detection (CD)",
+      "labels": [
+       "Network definition — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph measures",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 827,
+      "end": 949,
+      "text": "clustering coefficient (CC), average path length (ASP), eigenvector centrality (EC) and the degree of distribution",
+      "labels": [
+       "Graph measures — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph measures",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 756,
+      "end": 760,
+      "text": "used",
+      "labels": [
+       "Graph measures — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph measures",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1007,
+      "end": 1037,
+      "text": "brain connectivity toolbox (BCT)",
+      "labels": [
+       "Graph measures — Software"
+      ]
+     }
+    },
+    {
+     "from_name": "Network definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1159,
+      "end": 1195,
+      "text": "virtual-typical-subject (VTS) approach",
+      "labels": [
+       "Network definition — Algorithm"
+      ]
+     }
+    },
+    {
+     "from_name": "Network definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1285,
+      "end": 1313,
+      "text": "Louvain heuristics algorithm",
+      "labels": [
+       "Network definition — Algorithm"
+      ]
+     }
+    },
+    {
+     "from_name": "Network definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1345,
+      "end": 1352,
+      "text": "γ = 1.2",
+      "labels": [
+       "Network definition — Parameters"
+      ]
+     }
+    },
+    {
+     "from_name": "Network definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1133,
+      "end": 1144,
+      "text": "constructed",
+      "labels": [
+       "Network definition — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph measures",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1500,
+      "end": 1515,
+      "text": "len_i,j = 1/w_i,j",
+      "labels": [
+       "Graph measures — Parameters"
+      ]
+     }
+    },
+    {
+     "from_name": "Sparsity control",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1789,
+      "end": 1791,
+      "text": "4%",
+      "labels": [
+       "Sparsity control — Parameters"
+      ]
+     }
+    },
+    {
+     "from_name": "Result aggregation",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1883,
+      "end": 1944,
+      "text": "average CC of 6 frontal nodes for each group in different edge-density levels",
+      "labels": [
+       "Result aggregation — Algorithm"
+      ]
+     }
+    },
+    {
+     "from_name": "Result aggregation",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1868,
+      "end": 1878,
+      "text": "calculated",
+      "labels": [
+       "Result aggregation — Step Number"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

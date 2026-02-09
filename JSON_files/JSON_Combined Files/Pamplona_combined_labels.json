@@ -1,0 +1,1169 @@
+{
+  "data": {
+    "text": "Analyzing the association between functional connectivity of the brain and intellectual performance\nORIGINAL RESEARCH ARTICLE — published: 10 February 2015\ndoi: 10.3389/fnhum.2015.00061\nFrontiers in Human Neuroscience\n\nGustavo S. P. Pamplona, Gérson S. Santos Neto, Sara R. E. Rosset, Baxter P. Rogers, and Carlos E. G. Salmon\n\nMeasurements of functional connectivity support the hypothesis that the brain is composed of distinct networks with anatomically separated nodes but common functionality. In this fMRI study, we performed an exploratory analysis of the relationship between the brain’s functional connectivity and intelligence scores derived from the Portuguese language version of the Wechsler Adult Intelligence Scale (WAIS-III) in a sample of 29 people.\n\nPARTICIPANTS\nThirty one healthy people were recruited from the academic community and the local population living in the state of São Paulo, Brazil. They were right-handed, had no history of neurological or psychological illnesses, and were native speakers of Brazilian Portuguese. Thirty of these participants made up Dataset 1. Volunteers participated in this study after responding to the standard screening interview of the Hospital of Clinics in Ribeirão Preto, and providing written consent as approved by the Research Ethics Committee of University of São Paulo.\n\nMEASURES OF INDIVIDUAL INTELLIGENCE\nThe level of intellectual performance was measured using the WAIS III test (Wechsler Adult Intelligence Scale) as modified for the Portuguese-speaking population of Brazil. Measurements originating from the third version of the test are the four fundamental indices Verbal Comprehension Index, Perceptual Organization Index, Working Memory Index, and Processing Speed Index; and the overall score, Full-Scale IQ. The test took 1 h 30 min on average and was given at a separate time from the image acquisition (less than 2 months apart, except for one participant with a 3-month difference).\n\nDATA ACQUISITION\nResting-state functional magnetic resonance images (eyes open, no fixation) from each participant were acquired in a Phillips 3 Tesla scanner with a Quasar Dual gradient system (80 mT/m, 200 mT/m/ms), using an eight channel head coil and SENSE encoding. An EPI sequence was performed with the following parameters: 2000 ms repetition time, 30 ms echo time, 240 × 240 mm field of view, 3 × 3 mm in-plane voxel size, 4.0 mm slice thickness, 0.5 mm slice gap, 32 slices, 80° flip angle, 200 volumes, 25.2 Hz bandwidth per pixel. Overall functional acquisition time was 6:48, including four initial volumes that were discarded prior to analysis.\n\nPRE-PROCESSING\nFunctional MRI data were processed using the SPM8 software and the CONN functional connectivity toolbox, both implemented in MatLab (R2013a). For each individual’s functional images, rigid body movement was measured and corrected using a two-step procedure in which the first of the specified functional images was used as a reference to which all subsequent images were realigned, then the functional images were re-registered to the mean image. Participants who moved more than 2 mm in translation or 1 degree in rotation were excluded from analysis. Functional images were then spatially smoothed using a Gaussian filter of 5 mm full width at half maximum.\nAnatomical images from each volunteer were registered to the mean functional image created in the previous step. The anatomical volumes were segmented into gray matter, white matter and cerebrospinal fluid compartments and non-linearly registered to the MNI standard space. The resulting masks were eroded once at an isotropic voxel size of 2 mm to minimize partial volume effects. This step produced spatial normalization parameters that were used to apply the transformations to the functional images.\nVoxel time series were additionally processed to reduce noise. Signals from the white matter and CSF compartments (5 principal components each) and the estimated head motion time series and first differences were removed by regression. A temporal band-pass filter was applied to remove signals outside the range 0.008–0.09 Hz.\n\nFUNCTIONAL CONNECTIVITY AND GRAPH ANALYSIS\nAverage signals were extracted from a set of 116 regions defined by the Automated Anatomical Labeling (AAL) atlas. Eight of the AAL regions were excluded due to small size and cerebellar regions were excluded because they were not fully covered; therefore 82 cortical and subcortical regions were included in total.\nWeighted association matrices were created using the Pearson correlations between the time series of each pair of brain regions; values were Fisher Z transformed. The Brain Connectivity Toolbox was used to compute network measures including characteristic path length, clustering coefficient, global and local efficiency.\n\nRESULTS — SAMPLE USED FOR INTELLIGENCE ANALYSES\nThirty participants (Dataset 1) were included in the small-world analysis (ages: mean 27 years, SD 6, range: 19–38; 15 women) and 29 participants were included in the intellectual performance study (ages: mean 27 years, SD 6, range: 19–38; 14 women).\n\nthe analysis to provide a baseline for the small-worldness mea-\nsurement, and classiﬁed as Dataset 2. These images were from\nthe 1000 Functional Connectomes Project (Biswal et al., 2010),\nspeciﬁcally the data acquired in Leipzig, Germany, in a 3 Tesla\nscanner with the following parameters: 2300 ms repetition time,\n34 slices, 195 volumes.\n\nAnatomical images from each volunteer were registered to the\nmean functional image created in the previous step. The anatom-\nical volumes were segmented into gray matter, white matter and\ncerebrospinal ﬂuid compartments and non-linearly registered to\nthe MNI standard space. The resulting masks were eroded once\nat an isotropic voxel size of 2 mm to minimize partial volume\neffects. This step produced spatial normalization parameters that\nwere used to apply the transformations to the functional images.\nVoxel time series were additionally processed to reduce noise.\nSignals from the white matter and CSF compartments (5 princi-\npal components each) and the estimated head motion time series\nand ﬁrst differences were removed by regression. A temporal\nband-pass ﬁlter was applied to remove signals outside the range\n0.008–0.09 Hz (Whitﬁeld-Gabrieli and Nieto-Castanon, 2012).\n\nAverage signals were extracted from a set of 116 regions\ndeﬁned by the Automated Anatomical Labeling (AAL) atlas,\nwhich is a macroanatomical parcellation of the single subject\nMNI-space template brain (Tzourio-Mazoyer et al., 2002). Eight\nof the AAL regions were excluded from the analysis due to\ntheir small size (less than 300 voxels), which increased the likeli-\nhood that partial volume effects would contaminate signals from\nthose regions. Cerebellum and cerebellar vermis regions were\nalso excluded because they were not fully covered by the fMRI.\nTherefore, 82 cortical and subcortical regions were included in\ntotal, all of them shown in the Supplemental Material (Table S1)\nwith their AAL abbreviations and the locations of their centers, in\nx, y, and z.\n\nANALYSIS OF FUNCTIONAL CONNECTIVITY AND INTELLIGENCE\nWeighted association matrices were created (Figure 1) using the\nPearson correlations between the time series of each pair of\nbrain regions. Functional connectivity of each path was compared\nwith the four fundamental intelligence indices and the Full-Scale\nIQ using the Pearson correlation coefﬁcient (Table 3, Figure 2).\nNegative values of the matrices were included to consider also the\nfunctional anticorrelations. Functional connectivity values were\n\nFIGURE 1 | Construction of weighted and binary correlation matrices of the brain.\n\nthe Fisher Z scores computed between the time series of each pair\nof regions. Each list of 3321 p-values (all pairs of 82 regions) was\nadjusted to maintain a false discovery rate of 0.05, separately for\neach IQ index.\n\nGRAPH ANALYSIS\nWe examined small-worldness, characteristic path length, clus-\ntering coefﬁcient, and global and local efﬁciency. Characteristic\npath length is the shortest path length between all pairs of nodes.\n\nClustering coefﬁcient is the number of connections in the neigh-\nborhood of a certain node divided by the maximum number of\npossible connections between the neighbors of this node. Global\nefﬁciency is inversely related to the characteristic path length and\nmeasures how efﬁciently information is communicated between\nnodes. Local efﬁciency of a given node is the inverse of the average\nshortest path connecting all neighbors of that node and evaluates\nthe inﬂuence of different paths based on the connection weights\nof the node’s neighbors, i.e., a path made of strong connections\ncontributes to the local efﬁciency more than a path made of weak\nconnections. Therefore, local efﬁciency of a node is related to its\nclustering coefﬁcient, since more connections or stronger ones\nbetween neighbors directly affect both measures.\n\nAll the network parameters were computed using the Brain\nConnectivity Toolbox (BCT) (Rubinov and Sporns, 2010).\nNegative correlations in association matrices were not included in\nany analysis of network measures, since they need to be removed\nprior to BCT computations (Rubinov and Sporns, 2010, 2011).\nDifferent network measures require different pre-processing of\nthe association matrix.\n\nSmall-worldness analysis\nCharacteristic path length (L) and clustering coefﬁcient (C) were\ncomputed to study the small-worldness of our data (Dataset\n1, Figure 3) and of an independent set of resting-state fMRI\n(Dataset 2, Figure 4) to verify the small-worldness of the network\nin our sample and to provide a baseline for our measurements.\n\nThese calculations used binary matrices obtained by threshold-\ning the correlation matrices (Figure 1) at a range of values. The\nsame analysis was applied to 20 random matrices with the same\nnumber of connections and similar distribution of connections\n(Sporns and Zwi, 2004), to obtain a random-matrix characteris-\ntic path length (Lrandom) and clustering coefﬁcient (Crandom). The\nnetworks are said to have small-world organization for correla-\ntion thresholds in which L = Lrandom and C > Crandom; this was\ncalculated using a 2-sample t-test for p ≤ 0.01.\n\nAnalysis of global network properties and intelligence\nGlobal network parameters (characteristic path length, clustering\ncoefﬁcient, and efﬁciency), obtained using weighted networks,\nwere related to the intelligence indices using the Pearson correla-\ntion coefﬁcient (Table 4). The Z-transformed correlation matrix\nwas used for the association matrix, except for global efﬁciency,\nwhich used the Pearson correlations due to the need to restrict\nthe range to [0,1]. Negative values were set to zero. Some form\nof normalization is necessary to obtain measures that are inde-\npendent of the network size, dividing parameters obtained from\nbrain networks by those obtained from random networks. For\nnormalization of weighted networks, a recently approach pur-\nposes to compute the average value from an ensemble of surrogate\ngraphs (Stam et al., 2009). In our study, 100 surrogate random\nweighted networks were constructed, derived from the origi-\nnal networks by randomly permuting the edge weights. The\nparameters of these random weighted networks were averaged\n\nFIGURE 3 | Our data (Dataset 1): Mean characteristic path length for brain (red) and random (blue) networks are shown on the left as a function of\nthreshold. Mean clustering coefﬁcient for brain (red) and random (blue) networks are shown on the right. Conﬁdence bands represent ±1 standard deviation.\n\nFIGURE 4 | Independent test data (Dataset 2): Mean characteristic path length for brain (red) and random (blue) networks are shown on the left.\nMean clustering coefﬁcient for brain (red) and random (blue) networks are shown on the right. Conﬁdence bands represent ±1 standard deviation.\n\nAn additional analysis of global characteristic path length and\nglobal clustering coefﬁcient associated to intelligence indices was\nperformed using a binarized association matrix (thresholded at\nr = 0.45) to facilitate comparisons with Van den Heuvel et al.\n(2009) (Figure 5). Both metrics were normalized using the same\n20 equivalent random binary matrices, speciﬁed in Section Small-\nWorldness Analysis, averaged for each brain network. Pearson\ncorrelations were also transformed using the Fisher Z in this\nanalysis.\n\nAnalysis of local network properties and intelligence\nFinally, local efﬁciency, which is related to clustering coefﬁcient,\nwas related to the intelligence indices using the Pearson correla-\ntion coefﬁcient (Table 5, Figure 6). Local efﬁciency calculations\nused the untransformed Pearson correlation matrix for the asso-\nciation matrix, except that negative weights were replaced with 0.\nFor this analysis, false discovery rates were computed per node\n(over the list of the 81 other regions).\n\nRESULTS\nOf the 31 volunteers, one did not perform the intelligence test\nand exhibited excessive movement during imaging acquisition;\nthus 30 participants (Dataset 1) were included in the small-world\norganization study (ages: mean 27 years, standard deviation 6,\nrange: 19–38; 15 women) and 29 participants were included in\nthe intellectual performance study (ages: mean 27 years, stan-\ndard deviation 6, range: 19–38; 14 women). Demographic data\nfor the intellectual performance study (29 participants) are in\nTable 1.\n\nSMALL-WORLDNESS ANALYSIS\nTo establish the baseline validity of the network analysis, we com-\nputed small-worldness for our data and compared the results to\nan independent data set. Brain networks showed a clear small-\nworld organization over a range of thresholds. Figure 3 (left) and\nFigure 4 (left) show normalized characteristic path length from\nbinary networks as a function of threshold for participants for\nDataset 1 and Dataset 2, respectively. Mean values for 20 matched\nrandom networks are also shown for comparison. Figure 3 (right)\nand Figure 4 (right) shows the same for the normalized clustering\ncoefﬁcient. In both datasets, networks showed a clear small-world\norganization for correlation thresholds between 0.05 and 0.20,\ncharacterized by L ≈ Lrandom for thresholds lower than 0.20 and\nC (cid:5) Crandom for thresholds higher than 0.05 (2-sample t-test, all\np < α = 0.01, Bonferroni corrected for multiple thresholds).\n\nASSOCIATIONS BETWEEN GLOBAL NETWORK PROPERTIES AND\nINTELLIGENCE\nWe observed a negative, though statistically weak (p = 0.14), cor-\nrelation between FSIQ and normalized characteristic path length\n(lambda) (Figure 5, left). This was computed using correlation\nmatrices binarized at a threshold of 0.45, the same threshold\napplied by Van den Heuvel et al. (2009), for the purpose of direct\ncomparison.\n\nFIGURE 5 | Normalized characteristic path length (lambda) (left) and\nnormalized clustering coefﬁcient (gamma) (right) had slight negative\nrelationships with Full Scale IQ, though these were not statistically\n\nrobust. The network path strengths were based on binarized correlation\nmatrices thresholded at 0.45 for this analysis. ((cid:2)) corresponds to\nmeasurements for an individual participant.\n\nDISCUSSION\nWe have extended a number of previous observations concerning\nbrain functional connectivity and intelligence to the Portuguese-\nspeaking population. These include the presence of small-world\norganization and correlations of intelligence with global and local\ncharacteristics of the brain’s functional networks. Additionally,\n\nThe global functional brain network exhibited small-world\norganization at correlation thresholds between 0.05 and 0.20, α =\n0.01, Bonferroni corrected for multiple comparisons of thresh-\nolds, and this closely matched the small-world organization that\nwas apparent in the conﬁrmation data set (Figures 3, 4). This sug-\ngests a high level of local clustering combined with a relatively\n\nsmall number of long-distance connections (Watts and Strogatz,\n1998). This threshold range is smaller than the thresholds of\n0.3–0.5 reported in previous observations of small-worldness\nin whole-brain networks (Van den Heuvel et al., 2008, 2009).\nHowever, node deﬁnitions differed substantially between the\nstudies as well. Small-world networks are an attractive model for\nthe connected human brain, because of their ability to trans-\nfer information with high efﬁciency for low wiring cost (Watts\nand Strogatz, 1998), and seem ubiquitous in the organization of\nanatomical connectivity, affected in a variety of diseases (Bassett\nand Bullmore, 2009). Moreover, Sporns and Zwi, in 2004, stated\nthat information integration and even mental awareness depend\non the small-world structure. Our replication of this effect sup-\nports the validity and the reliability of the network measures in\nthis sample.\n\nGlobally, FSIQ showed a weak negative correlation with char-\nacteristic path length (Figure 5, left; r = −0.28, 95% CI = −0.59,\n0.10), although with no statistical signiﬁcance. Additionally,\nglobal efﬁciency (inversely correlated with path length) showed\na weak positive correlation with FSIQ (Table 4; r = 0.24 95%\nCI = −0.14, 0.56), not statistically signiﬁcant also. These same\ncorrelations were weaker when the full (weighted) associa-\ntion matrix was used (Table 4) instead of a binarized matrix\n(Figure 5). It\nis not known whether the thresholding step\nincreases or decreases the reliability of the resulting measure-\nments; however, possibly of note, correlations were observed to\nbe the same sign in our results and in previous literature regard-\nless of method or statistical signiﬁcance. The consistent ﬁnding\nof a negative correlation between characteristic path length and\nFSIQ could be an extension to Portuguese speakers of the pre-\nvious ﬁnding in Dutch speakers (Van den Heuvel et al., 2009):\nfor characteristic path length, r = −0.54, 95% CI −0.80,−0.11.\nThe negative correlation is consistent with the previously pro-\nposed idea that human intelligence is related to how efﬁciently\ndifferent brain regions are organized and integrated (Van den\nHeuvel et al., 2009). It also suggests that functional brain networks\nare optimized in computational efﬁciency to promote higher\n\nFunctional connectivity between (AAL label)\n\nFunctional connectivity was measured as the Fisher transformed correlation between the two regions’ time series. Only region pairs whose connectivity was\ncorrelated with IQ index at FDR < 0.05 are shown. Tables S2–S6 in the Supplemental Material show further results.\n\nThe network parameters studied here were measurements of\nfunctional segregation (clustering coefﬁcient and local efﬁciency),\nthat describe the processing occurring within densely intercon-\nnected networks of brain regions; and functional integration\n(characteristic path length, and its inverse, global efﬁciency), that\nis related to how information from distributed brain regions is\ncombined (Rubinov and Sporns, 2010). Global efﬁciency was\nassociated with verbal comprehension (r = 0.43; 95% CI = 0.08,\n0.69) (Table 4), a novel suggestive ﬁnding worthy of further study.\nThis ﬁnding, combined with associations between VCI and local\nefﬁciency found in several brain regions (Table 5, Figure 6B and\nfurther discussed below) suggests that linguistic and verbal abil-\nities are linked with a higher brain efﬁciency, at both global and\nlocal levels.\n\nAAL atlas\n\nTable 4 | Pearson correlations between normalized weighted-network global parameters (characteristic path length, global efﬁciency, and\n\nNormalized characteristic path length\n\nOur selection of 82 pre-deﬁned atlas regions as network nodes\noffers reduced complexity of the networks and higher data pro-\ncessing speed compared to a voxel-wise approach, and possibly\neasier interpretability of the ﬁndings in terms of known properties\nof the relatively large regions. The ﬁnding of small-world organi-\nzation bolsters the comparability of our results to those of other\nstudies that used different node deﬁnitions. However, it is also\ntrue that results of this study are partially dependent on the node\ndeﬁnitions, and the node deﬁnitions used here may not coincide\nwith others. Example of correspondences include an association\nbetween local efﬁciency in the left pre-central gyrus and the Full-\nScale IQ for a weighted anatomical network made of 90 AAL\natlas regions (Li et al., 2009) (r = 0.25; 0.03, 0.45), endorsing our\nresult in Table 5 (r = 0.37; 0.010, 0.65). In addition, we observed\na weak correlation (r = 0.24; p = 0.22) between global efﬁciency\nand Full-Scale IQ (Table 4), just as Song et al. (2009) did for the\ndefault mode network (r = 0.24; p = 0.072). Findings we did not\nobserve include those involving local efﬁciency of a number of\ncortical and subcortical regions (Li et al., 2009) and the associ-\nations between intelligence and functional connectivity reported\nby Song et al. (2008, 2009). Direct comparisons are reported in\nthe Supplement Material (Tables S7, S8).\n\nFurther study of the relationships between brain network orga-\nnization and intelligence would be necessary to complement\nand extend the ﬁndings shown here. This study considered a\nPortuguese-speaking population, but further data from different\npopulations should be analyzed to allow the results to be gen-\neralized, in particular the relationship between global efﬁciency\nand verbal intelligence that was strongly apparent in our work.\nMore detailed templates could be used in the deﬁnition of the\nnetwork nodes for a ﬁner-grained investigation of the brain’s con-\nnectivity. It is also noteworthy that we considered only positive\ncorrelations between nodes; anticorrelations may provide com-\nplementary data once methods to quantify them arise (Rubinov\nand Sporns, 2010).\n\nThe ﬁndings shown here replicate and extend the negative\nassociation between characteristic path length of the functional\nbrain network and cognitive general intelligence for a Portuguese-\nspeaking population. The small-world organization model was\nveriﬁed as a feature of brain networks, suggesting an ability to\ntransfer information with high efﬁciency and low wiring cost.\nGlobal efﬁciency was weakly associated with general intelligence\nbut strongly associated with VCI, a novel ﬁnding. Combined\nwith the observed relationship between verbal comprehension\nand local efﬁciency in several regions, this suggests that a\npossible link between language ability and organizational and\nintegrational properties of the brain network warrants further\nstudy. Additionally, an exploratory analysis suggested associations\nbetween intelligence and network properties of frontal, parietal,\nand occipital cortices; and fusiform, supramarginal, pre-central\ngyrus, and caudate nuclei.\n\nINTRODUCTION\nFunctional connectivity is expressed as correlations between the\nblood oxygenation level dependent signals in different regions of\nthe brain (Friston et al., 1993; Biswal et al., 1995; Van den Heuvel\nand Hulshoff Pol, 2010). Consistent spatial patterns of functional\nconnectivity are found for individuals at rest and are presumed\nto reﬂect information processing networks (Lowe et al., 1998;\nRaichle et al., 2001; Beckmann et al., 2005; Damoiseaux et al.,\n2006). Recent advances in neuroimaging have provided new tools\nto measure and analyze interactions between brain regions, cat-\nalyzing the study of functional connectivity of the brain (Van den\nHeuvel and Hulshoff Pol, 2010). An important recent expansion\nof functional connectivity studies was the use of the principles\nof graph theory (Watts and Strogatz, 1998) to depict the brain\nas an efﬁcient complex network, with brain regions as the nodes\nand functional connectivity as the edge weights (Sporns and Zwi,\n2004; Bullmore and Sporns, 2009). The functional brain network\nshows a highly efﬁcient small-world organization, with a high\nlevel of local clustering and short effective lengths between brain\nregions. This leads to high global efﬁciency of information ﬂow in\nthe network (Sporns and Zwi, 2004; Van den Heuvel et al., 2008).\nAn important tool to measure the intelligence in adults is the\nWechsler Adult Intelligence Scale (WAIS), based on the “global\ncapacity of the individual to act purposefully, to think rationally\nand to deal effectively with his environment” (Wechsler, 1939).\nSome studies have applied intelligence indices to anatomical and\nfunctional brain measurements (Gray et al., 2003; Haier et al.,\n\nHowever, the relationships between brain functional connec-\ntivity and psychological measures such as intelligence are not\nfully deﬁned. In the present exploratory study, we pursued this\nline of research further by considering how the several indices\nof intelligence measured by the Wechsler Adult Intelligence Scale\n(WAIS-III) related to connection strengths and network proper-\nties in a brain network deﬁned by a set of 82 a priori cortical\nand subcortical regions derived from an atlas (Tzourio-Mazoyer\net al., 2002). The use of a smaller set of regions of interest pre-\nserves structural and physiological similarities, while simplifying\nthe analysis and easing the interpretation of the ﬁndings relative\nto the commonly used voxel-wise approach. In contrast to some\nstudies that considered a priori regions known to be related to\nintelligence (Song et al., 2008; Cole et al., 2012), the present study"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 99,
+            "text": "Analyzing the association between functional connectivity of the brain and intellectual performance",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 219,
+            "end": 241,
+            "text": "Gustavo S. P. Pamplona",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 186,
+            "end": 217,
+            "text": "Frontiers in Human Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 161,
+            "end": 185,
+            "text": "10.3389/fnhum.2015.00061",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 151,
+            "end": 155,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 186,
+            "end": 217,
+            "text": "Frontiers in Human Neuroscience",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1984,
+            "end": 1997,
+            "text": "Resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2036,
+            "end": 2058,
+            "text": "eyes open, no fixation",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2101,
+            "end": 2117,
+            "text": "Phillips 3 Tesla",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2299,
+            "end": 2306,
+            "text": "2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2324,
+            "end": 2329,
+            "text": "30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2341,
+            "end": 2353,
+            "text": "240 × 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2369,
+            "end": 2421,
+            "text": "3 × 3 mm in-plane voxel size, 4.0 mm slice thickness",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2399,
+            "end": 2405,
+            "text": "4.0 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2423,
+            "end": 2429,
+            "text": "0.5 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2441,
+            "end": 2450,
+            "text": "32 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2452,
+            "end": 2455,
+            "text": "80°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2510,
+            "end": 2554,
+            "text": "Overall functional acquisition time was 6:48",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4994,
+            "end": 5061,
+            "text": "29 participants were included in the intellectual performance study",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4994,
+            "end": 5061,
+            "text": "29 participants were included in the intellectual performance study",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4980,
+            "end": 4988,
+            "text": "15 women",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4945,
+            "end": 4978,
+            "text": "mean 27 years, SD 6, range: 19–38",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 927,
+            "end": 939,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 941,
+            "end": 998,
+            "text": "had no history of neurological or psychological illnesses",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1009,
+            "end": 1048,
+            "text": "native speakers of Brazilian Portuguese",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3089,
+            "end": 3179,
+            "text": "Participants who moved more than 2 mm in translation or 1 degree in rotation were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1239,
+            "end": 1336,
+            "text": "providing written consent as approved by the Research Ethics Committee of University of São Paulo",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2566,
+            "end": 2624,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2566,
+            "end": 2586,
+            "text": "four initial volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ],
+          "id": "m0030"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2825,
+            "end": 2871,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2825,
+            "end": 2835,
+            "text": "rigid body",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0033"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3166,
+            "end": 3193,
+            "text": "3",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3112,
+            "end": 3165,
+            "text": "more than 2 mm in translation or 1 degree in rotation",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ],
+          "id": "m0035"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3223,
+            "end": 3300,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3250,
+            "end": 3258,
+            "text": "Gaussian",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3269,
+            "end": 3300,
+            "text": "5 mm full width at half maximum",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3302,
+            "end": 3384,
+            "text": "5",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0041"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3443,
+            "end": 3520,
+            "text": "6",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0043"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3525,
+            "end": 3574,
+            "text": "7",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3556,
+            "end": 3574,
+            "text": "MNI standard space",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ],
+          "id": "m0046"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3746,
+            "end": 3804,
+            "text": "8",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2691,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0048"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3869,
+            "end": 3949,
+            "text": "9",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2709,
+            "end": 2745,
+            "text": "CONN functional connectivity toolbox",
+            "labels": [
+              "Extract regressors — Software"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3921,
+            "end": 3948,
+            "text": "5 principal components each",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ],
+          "id": "m0051"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3996,
+            "end": 4013,
+            "text": "first differences",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4042,
+            "end": 4081,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2709,
+            "end": 2745,
+            "text": "CONN functional connectivity toolbox",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4053,
+            "end": 4062,
+            "text": "band-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4118,
+            "end": 4131,
+            "text": "0.008–0.09 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4660,
+            "end": 4686,
+            "text": "15",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4660,
+            "end": 4686,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4734,
+            "end": 4813,
+            "text": "characteristic path length, clustering coefficient, global and local efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ],
+          "id": "m0059"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 328,
+            "end": 438,
+            "text": "Measurements of functional connectivity support the hypothesis that the brain is composed of distinct networks",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6406,
+            "end": 6565,
+            "text": "2",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6406,
+            "end": 6565,
+            "text": "Automated Anatomical Labeling (AAL) atlas,\nwhich is a macroanatomical parcellation of the single subject\nMNI-space template brain (Tzourio-Mazoyer et al., 2002",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6889,
+            "end": 6958,
+            "text": "3",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6889,
+            "end": 6958,
+            "text": "Therefore, 82 cortical and subcortical regions were included in\ntotal",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6335,
+            "end": 6441,
+            "text": "1",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6335,
+            "end": 6441,
+            "text": "Average signals were extracted from a set of 116 regions\ndeﬁned by the Automated Anatomical Labeling (AAL)",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7153,
+            "end": 7261,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7153,
+            "end": 7261,
+            "text": "Weighted association matrices were created (Figure 1) using the\nPearson correlations between the time series",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7694,
+            "end": 7766,
+            "text": "6",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7694,
+            "end": 7766,
+            "text": "Fisher Z scores computed between the time series of each pair\nof regions",
+            "labels": [
+              "Connectivity normalization — Type"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7153,
+            "end": 7237,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7153,
+            "end": 7237,
+            "text": "Weighted association matrices were created (Figure 1) using the\nPearson correlations",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10706,
+            "end": 10738,
+            "text": "8",
+            "labels": [
+              "Negative correlation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10706,
+            "end": 10738,
+            "text": "Negative values were set to zero",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14129,
+            "end": 14161,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14129,
+            "end": 14161,
+            "text": "thresholds between 0.05 and 0.20",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9839,
+            "end": 10057,
+            "text": "7",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9839,
+            "end": 10057,
+            "text": "20 random matrices with the same\nnumber of connections and similar distribution of connections\n(Sporns and Zwi, 2004), to obtain a random-matrix characteris-\ntic path length (Lrandom) and clustering coefﬁcient (Crandom",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0078"
+        }
+      ]
+    }
+  ]
+}

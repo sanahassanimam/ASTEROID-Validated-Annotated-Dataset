@@ -1,0 +1,514 @@
+{
+  "data": {
+    "text": "The Musical Structure of Time in the Brain: Repetition, Rhythm, and Harmony in fMRI During Rest and Passive Movie Viewing\nDan Lloyd*\nORIGINAL RESEARCH\npublished: 21 January 2020\ndoi: 10.3389/fncom.2019.00098\nFrontiers in Computational Neuroscience 13:98\n\nSpace generally overshadows time in the construction of theories in cognitive neuroscience. In this paper, we pivot from the spatial axes to the temporal, analyzing fMRI image series to reveal structures in time rather than space. To determine affinities among global brain patterns at different times, core concepts in network analysis (derived from graph theory) were applied temporally, as relations among brain images at every time point during an fMRI scanning epoch.\n\nFor this analysis, data from 180 adult subjects (ages 20–35, 108 Female) in two scanning conditions were downloaded from the Human Connectome Project 1200 Subjects Data Release, May 2018 (HCP1; data repository2; Marcus et al., 2011; Van Essen et al., 2013; Hodge et al., 2016). Subjects were scanned on a Siemens MAGNETOM 7T MR scanner housed at the Center for Magnetic Resonance (CMRR) at the University of Minnesota in Minneapolis, MN, using a Nova32 32-channel Siemens receiver head coil. Whole-brain sequence gradient-echo EPI images were acquired with the following parameters: TR 1000 ms; TE 22.2 ms; flip angle 45 degrees; FOV 208 × 208 mm (RO × PE); Matrix 130 × 130 (RO × PE); Slice thickness 1.6 mm; 85 slices; 1.6 mm isotropic voxels; Multiband factor 5; Image Acceleration factor(iPAT) 2; Partial Fourier (pF)sampling 7/8; Echo spacing 0.64 ms; BW 1924 Hz/Px3.\n\nThe two conditions studied here are: (1) resting with eyes open, 900 images (15 min), using the first of four imaging sessions with each subject, and (2) passive movie viewing, 900 images, using the first of four imaging sessions in that condition (Smith et al., 2013). The audio/visual movie was a compilation of short excerpts from Vimeo videos available under Creative Commons licensing.\n\nImages were preprocessed using HCP minimal preprocessing pipelines (Glasser et al., 2013; Marcus et al., 2013). This includes three structural pipelines: PreFreeSurfer, to create an aligned and undistorted structural volume space for each subject and register subjects’ spaces to MNI space; FreeSurfer, to parcel volumes into predefined structures, reconstruct white and pial cortical surfaces, and register surfaces to FreeSurfer’s surface atlas, fsaverage; PostFreeSurfer, performing individual surface registration using multimodal surface matching (MSM), based on areal features including sulcal depth, myelin, and functional connectivity maps.\n\nThen, the fMRI Surface pipeline mapped the cortical gray matter voxels onto cortical surface vertices, and subcortical volume voxels, to standardize the surface and subcortical “grayordinate” space for all subjects. [Among other advantages, mapping via surface vertices greatly reduces the number of datapoints needed to express 7T images, making further computational analysis feasible (Glasser et al., 2013).] These data were smoothed with a surface algorithm to 2 mm FWHM (Glasser et al., 2013). Finally, 7T rfMRI 4D volume and grayordinate (surface vertices + subcortical voxels) Data, and 7T movie data, were further preprocessed to remove structured artifacts using FSL’s FIX (FMRIB’s ICA-based Xnoiseifier, Salimi-Khorshidi et al., 2014).\n\nCopyright © 2020 Lloyd. This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 122,
+            "end": 132,
+            "text": "Dan Lloyd*",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 121,
+            "text": "The Musical Structure of Time in the Brain: Repetition, Rhythm, and Harmony in fMRI During Rest and Passive Movie Viewing",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 151,
+            "end": 177,
+            "text": "published: 21 January 2020",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 178,
+            "end": 207,
+            "text": "doi: 10.3389/fncom.2019.00098",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 208,
+            "end": 247,
+            "text": "Frontiers in Computational Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 255,
+            "end": 346,
+            "text": "Space generally overshadows time in the construction of theories in cognitive neuroscience.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3427,
+            "end": 3446,
+            "text": "open-access article",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "Missing_sublabels": [
+            "Code",
+            "Preregistered",
+            "Remarks"
+          ]
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 923,
+            "end": 939,
+            "text": "data repository2",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1034,
+            "end": 1053,
+            "text": "Siemens MAGNETOM 7T",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1439,
+            "end": 1448,
+            "text": "85 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1415,
+            "end": 1437,
+            "text": "Slice thickness 1.6 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1336,
+            "end": 1357,
+            "text": "flip angle 45 degrees",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1359,
+            "end": 1375,
+            "text": "FOV 208 × 208 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1312,
+            "end": 1322,
+            "text": "TR 1000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "type": "labels"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1324,
+            "end": 1334,
+            "text": "TE 22.2 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "type": "labels"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1450,
+            "end": 1473,
+            "text": "1.6 mm isotropic voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "type": "labels"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1644,
+            "end": 1666,
+            "text": "resting with eyes open",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "type": "labels"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1668,
+            "end": 1687,
+            "text": "900 images (15 min)",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "type": "labels"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 2026,
+            "end": 2061,
+            "text": "HCP minimal preprocessing pipelines",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "type": "labels"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 1757,
+            "end": 1778,
+            "text": "passive movie viewing",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "type": "labels"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "value": {
+            "start": 748,
+            "end": 776,
+            "text": "data from 180 adult subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "type": "labels"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 748,
+            "end": 776,
+            "text": "data from 180 adult subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 778,
+            "end": 788,
+            "text": "ages 20–35",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 790,
+            "end": 800,
+            "text": "108 Female",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2246,
+            "end": 2247,
+            "text": "1",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2149,
+            "end": 2162,
+            "text": "PreFreeSurfer",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization — Parameters",
+            "Spatial normalization — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Surface reconstruction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2344,
+            "end": 2345,
+            "text": "2",
+            "labels": [
+              "Surface reconstruction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Surface reconstruction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2152,
+            "end": 2162,
+            "text": "FreeSurfer",
+            "labels": [
+              "Surface reconstruction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Surface reconstruction — Algorithm",
+            "Surface reconstruction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2301,
+            "end": 2302,
+            "text": "3",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2152,
+            "end": 2162,
+            "text": "FreeSurfer",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Algorithm",
+            "Segmentation — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3073,
+            "end": 3074,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3110,
+            "end": 3119,
+            "text": "2 mm FWHM",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm"
+          ]
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3317,
+            "end": 3318,
+            "text": "5",
+            "labels": [
+              "ICA FIX — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3317,
+            "end": 3326,
+            "text": "ICA-based",
+            "labels": [
+              "ICA FIX — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3317,
+            "end": 3326,
+            "text": "FSL’s FIX",
+            "labels": [
+              "ICA FIX — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "ICA FIX — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2782,
+            "end": 2783,
+            "text": "6",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Algorithm",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

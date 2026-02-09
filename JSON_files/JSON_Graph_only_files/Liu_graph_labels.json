@@ -1,0 +1,323 @@
+{
+  "data": {
+    "text": "Constructing the Language Network\nTwo regions-of-interest (ROIs), Broca’s and Wernicke’s areas,\nwere selected in the MNI space and were used to deﬁne\nthe language network with a standard seed-voxel approach.\nParticularly, we deﬁned two ROIs with 3-mm-radius spheres\nas seeds based on automated anatomical labeling (AAL) atlas\n(Tzourio-Mazoyer et al., 2002). A previous study (Tomasi and\nVolkow, 2012) used these two seeds and applied a seed-voxel\napproach to identify the language network. One ROI was close to\nthe left pars triangularis (MNI coordinate: x=\u000053,y= 20, z= 15)\nrepresenting the Broca’s area, and the other ROI was close to the\nleft supramarginal gyrus (MNI coordinate: x=\u000051,y=\u000051,\n1http://www.ﬁl.ion.ucl.ac.uk/spm\n2http://rfmri.org/dpabiz= 30) representing the Wernicke’s area. The averaged time series\nof these two ROIs during the whole scanning was extracted from\neach subject. For a given ROI, we considered it as a seed and then\nestimated the static functional connectivity (sFC) and Pearson’s\ncorrelation coeﬃcient r, between the selected ROI and each voxel\nin the whole brain. Hence, we obtained the sFC maps based on\nBroca’s and Wernicke’s areas. Next, the Fisher’s r-to-ztransform\nwas adopted to convert these sFC correlation maps into z-value\nmaps for the following statistical analysis.\nOne sample t-test was used to detect the group-level sFC\namong 21 subjects examined in this study. We deﬁned the clusters\nwith the following criteria: signiﬁcant threshold p<0.01 (family-\nwise error, FWE-corrected), and the number of voxels in each\ncluster exceeds 50 voxels based on a gray matter template of more\nthan 90% probability in SPM 12. In this way, we determined the\nclusters that strongly connected to the Broca’s and Wernicke’s\nareas. For a given cluster in the sFC map, we selected the voxels\nthat had statistical peak values from one sample t-test and drew\nspheres with radius = 3 mm. By considering these spheres as\nnodes and the sFC as the weighted edge, we built the language\nnetwork in this study.\nSliding-Windows Approach\nWe calculated the dynamic functional connectivity (dFC) of\nthe language network for each subject by using a sliding-\nwindows approach (Chang and Glover, 2010; Allen et al., 2012)\nin DynamicBC (Liao et al., 2014), a MATLAB toolbox for\ndynamic brain connectome analysis. We segmented the entire\ntime series of each node into multiple subseries related to\nthe sliding windows (the window length of 35 TRs or 105 s\nwith step = 1 TR), from each of which the FC networks were\nconstructed. The reason for selecting a window length of 35\nTRs is because the sliding-windows correlation analysis with\na short window length could induce artiﬁcial ﬂuctuations in\nestimating dFC (Lindquist et al., 2014; Hindriks et al., 2016;\nLiegeois et al., 2017). Hence, we selected the window length\nof about 100 s, which was suggested by previous studies (Liu\net al., 2018; Pang et al., 2018; Li et al., 2019; Chen et al., 2020).\nAccording to the above analysis, we obtained 136 subseries in\nthe sliding windows for each subject. In each sliding window,\nwe calculated the Pearson’s correlation coeﬃcient rbetween the\nsubseries of any two nodes to identify the dFC of the language\nnetwork in this study.\nIdentifying dFC States\nWe used a k-means clustering algorithm to cluster all sliding\nwindows into several separate clusters (i.e., connectivity states,\ndFC states) based on the Euclidean distance metric. Earlier\nstudies (Allen et al., 2012; Y ang et al., 2014) suggest that\nbrain spontaneous activity is changing over time. These changes\nin blood oxygenation level dependent (BOLD) signal showing\nseveral similar connectivity patterns in the brain are considered\nas dFC states. In the calculations, we extracted the dFC of the\nlanguage network in a given sliding window and then arranged\nall sliding windows in sequence to constitute the dynamic\nconnectivity matrix for each subject. Since there were Nnodes\nin each sliding window and 136 sliding windows in each subject,\nFrontiers in Psychology | www.frontiersin.org 4 June 2020 | Volume 11 | Article 1189\nfpsyg-11-01189 June 16, 2020 Time: 19:59 # 5\nLiu et al. Dynamic Language Network in Bilinguals\nthe dynamic connectivity matrix included 136 rows (136 sliding\nwindows) and 21 \u0002(N\u0002N–N)/2 columns (all dFC of 21\nsubjects in 1 sliding window). Finally, the k-means algorithm\n(kfrom 2 to 12) was applied to divide all sliding windows into\nseveral dFC states based on the dynamic connectivity matrix.\nCriteria for k-Means Solution\nThe silhouette score (Rousseeuw, 1987) was used to check the\nbetter solution of the k-means algorithm. It is applied to calculate\nthe separation distance between any two resulting clusters. The\nsilhouette score near 1 corresponds to the fact that the sample is\ndistant from its neighboring clusters, while the silhouette score\nnear 0 means the decision boundary is very close between these\ntwo neighboring clusters, and negative means that the sample\nmight have been assigned to the wrong cluster. We selected an\noptimal ksolution based on the silhouette score that in this\nsolution was signiﬁcantly higher than it was in the last ksolution.\ndFC of the Language Network\nAfter identifying several optimal dFC states, we studied the\ndiﬀerence in dFC between the EBG and the LBG. Particularly,\nwe ﬁrst extracted all dFCs in 136 sliding windows for each\nsubject. Then, we averaged those dFCs that are in the same\ndFC state for each subject. At last, the diﬀerence in dFC of the\nlanguage network between the EBG and the LBG can be studied\nin each dFC state.\nDynamic Topological Properties of the\nLanguage Network\nWe studied the diﬀerence in the dynamic topological properties\nof the language network between the EBG and the LBG. The\ndynamic topological properties were estimated using GRETNA3.\nWe calculated the dFC and generated 136 symmetric matrices for\neach subject. In this study, each dFC should satisfy a threshold\nof signiﬁcance level of p<0.05 (FWE-corrected) compared\nto others (Cruse et al., 2011). Based on the dFC in each\nsliding window, we estimated the dynamic topological properties,\nincluding the clustering coeﬃcient ( Cw), the characteristic\npath length ( Lw), the global eﬃciency ( Eglob), and the local\neﬃciency ( Eloc) by using the graph theory for all subjects. The\ndescription of these four parameters is listed in Supplementary\nTable S3 . Afterward, we determined the diﬀerence in the dynamic\ntopological properties of the language network between the\nEBG and the LBG in each dFC state. The deﬁnitions and\ndescriptions of the above parameters can be also found in\nRubinov and Sporns (2010)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 266,
+            "end": 325,
+            "text": "as seeds based on automated anatomical labeling (AAL) atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1796,
+            "end": 1911,
+            "text": "we selected the voxels\nthat had statistical peak values from one sample t-test and drew\nspheres with radius = 3 mm.",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 793,
+            "end": 894,
+            "text": "The averaged time series\nof these two ROIs during the whole scanning was extracted from\neach subject.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3084,
+            "end": 3200,
+            "text": "we calculated the Pearson’s correlation coeﬃcient rbetween the\nsubseries of any two nodes to identify the dFC of the",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1169,
+            "end": 1200,
+            "text": "Next, the Fisher’s r-to-ztransf",
+            "labels": [
+              "Connectivity normalization — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1954,
+            "end": 2028,
+            "text": "the sFC as the weighted edge, we built the language\nnetwork in this study.",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1954,
+            "end": 2028,
+            "text": "the sFC as the weighted edge, we built the language\nnetwork in this study.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5895,
+            "end": 5977,
+            "text": "each dFC should satisfy a threshold\nof signiﬁcance level of p<0.05 (FWE-corrected)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6109,
+            "end": 6293,
+            "text": "including the clustering coeﬃcient ( Cw), the characteristic\npath length ( Lw), the global eﬃciency ( Eglob), and the local\neﬃciency ( Eloc) by using the graph theory for all subjects.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5742,
+            "end": 5800,
+            "text": "dynamic topological properties were estimated using GRETNA",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5373,
+            "end": 5450,
+            "text": "Then, we averaged those dFCs that are in the same\ndFC state for each subject.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 266,
+            "end": 325,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 793,
+            "end": 894,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1169,
+            "end": 1200,
+            "text": "3",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1796,
+            "end": 1911,
+            "text": "4",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1954,
+            "end": 2028,
+            "text": "5",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1954,
+            "end": 2028,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3084,
+            "end": 3200,
+            "text": "7",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5373,
+            "end": 5450,
+            "text": "8",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5895,
+            "end": 5977,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6109,
+            "end": 6293,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        }
+      ]
+    }
+  ]
+}

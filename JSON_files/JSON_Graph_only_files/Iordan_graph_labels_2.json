@@ -1,0 +1,199 @@
+{ "data": { "text": "Graph Construction — Functional Connectivity Analysis\nBrain-wide functional connectivity analyses were performed using the Connectivity Toolbox (CONN; Whitfield-Gabrieli and Nieto-Castanon, 2012). To construct a brain-wide graph, we employed a commonly used functional atlas (Power et al., 2011), which comprises 264 meta-analytically defined coordinates; a 5 mm-radius sphere was centered at each of these coordinates. … Regions with fewer than 8 voxels overlap with the sample-level mask were excluded, leaving 234 regions of interest (ROIs).\n\nTo remove physiological and other sources of noise from the fMRI time series we used linear regression and the anatomical CompCor method, as implemented in CONN. … The residual fMRI time series were band-pass filtered (0.01 Hz < f < 0.1 Hz). Pearson correlation coefficients were computed between the time courses of all pairs of functional ROIs, followed by Fisher-z transformation, and the diagonal of the connectivity matrix was set to zero.\n\nGraph Construction — Community detection and thresholding\nTo achieve a community structure representative of each group, we used the Louvain community detection algorithm (Blondel et al., 2008), in conjunction with consensus clustering. … The group-level consensus partitions were employed … The resolution parameter of the Louvain community detection algorithm (γ) and the thresholding parameter for the agreement matrix (τ) were determined … The maximum average modularity was Q = 0.71, achieved for γ = 1.25 and τ = 0.5, and these parameters were used for subsequent analyses. … the Louvain algorithm was applied on weighted graph edges (positive only).\n\nConnection Density Thresholding\nWe used density-based thresholding … calculations were performed for a range comprising 2–10% of the strongest connections, in 1% increments. … To calculate network measures, connectivity values were binarized for each threshold (i.e., 1 if above, 0 if below threshold).\n\nNetwork Measures\nTo assess the strength of module segregation, we calculated the modularity index (Q). … To assess the integration of information, we calculated global and local efficiency. … Another node-specific measure is the participation coefficient (Guimerà and Amaral, 2005). … reported graph metrics are values averaged across all thresholds, unless specified otherwise." }, "annotations": [ { "result": [ { "from_name": "Atlas definition", "to_name": "text", "type": "labels", "value": { "start": 152, "end": 168, "text": "Power et al., 2011", "labels": ["Atlas definition — Parameters"] } }, { "from_name": "Atlas definition", "to_name": "text", "type": "labels", "value": { "start": 206, "end": 219, "text": "264 meta-", "labels": ["Atlas definition — Parameters"] } }, { "from_name": "Atlas definition", "to_name": "text", "type": "labels", "value": { "start": 234, "end": 249, "text": "5 mm-radius", "labels": ["Atlas definition — Parameters"] } }, { "from_name": "Atlas definition", "to_name": "text", "type": "labels", "value": { "start": 118, "end": 123, "text": "atlas", "labels": ["Atlas definition — Step Number"] , "text": "1" } },
+    {
+      "from_name": "ROI definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 358, "end": 392, "text": "234 regions of interest (ROIs)", "labels": ["ROI definition — Parameters"] }
+    },
+    {
+      "from_name": "ROI definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 335, "end": 342, "text": "Regions", "labels": ["ROI definition — Step Number"] , "text": "2" }
+    },
+
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 449, "end": 483, "text": "anatomical CompCor method", "labels": ["Time series ROI — Algorithm/Type"] }
+    },
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 416, "end": 420, "text": "CONN", "labels": ["Time series ROI — Software"] }
+    },
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 526, "end": 553, "text": "band-pass filtered (0.01 Hz < f < 0.1 Hz)", "labels": ["Time series ROI — Parameters"] }
+    },
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 442, "end": 448, "text": "method", "labels": ["Time series ROI — Step Number"] , "text": "3" }
+    },
+
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 555, "end": 584, "text": "Pearson correlation coefficients", "labels": ["Compute connectivity — Algorithm"] }
+    },
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 531, "end": 536, "text": "pairs", "labels": ["Compute connectivity — Step Number"] , "text": "4" }
+    },
+
+    {
+      "from_name": "Connectivity normalization",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 606, "end": 629, "text": "Fisher-z transformation", "labels": ["Connectivity normalization — Algorithm"] }
+    },
+    {
+      "from_name": "Connectivity normalization",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 602, "end": 605, "text": "and", "labels": ["Connectivity normalization — Step Number"] , "text": "5" }
+    },
+
+    {
+      "from_name": "Network definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 693, "end": 726, "text": "Louvain community detection algorithm", "labels": ["Network definition — Algorithm"] }
+    },
+    {
+      "from_name": "Network definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 731, "end": 749, "text": "consensus clustering", "labels": ["Network definition — Algorithm"] }
+    },
+    {
+      "from_name": "Network definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 885, "end": 905, "text": "γ = 1.25 and τ = 0.5", "labels": ["Network definition — Parameters"] }
+    },
+    {
+      "from_name": "Network definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 928, "end": 941, "text": "positive only", "labels": ["Network definition — Type"] }
+    },
+    {
+      "from_name": "Network definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 693, "end": 699, "text": "Louvain", "labels": ["Network definition — Step Number"] , "text": "6" }
+    },
+
+    {
+      "from_name": "Graph characteristics",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1140, "end": 1169, "text": "connectivity values were binarized", "labels": ["Graph characteristics — Parameters"] }
+    },
+    {
+      "from_name": "Graph characteristics",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1128, "end": 1131, "text": "We ", "labels": ["Graph characteristics — Step Number"] , "text": "7" }
+    },
+
+    {
+      "from_name": "Negative correlation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 928, "end": 941, "text": "positive only", "labels": ["Negative correlation — Type"] }
+    },
+    {
+      "from_name": "Negative correlation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 924, "end": 927, "text": "on ", "labels": ["Negative correlation — Step Number"] , "text": "8" }
+    },
+
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1097, "end": 1139, "text": "2–10% … in 1% increments", "labels": ["Sparsity control — Parameters"] }
+    },
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1071, "end": 1096, "text": "density-based thresholding", "labels": ["Sparsity control — Algorithm/Type"] }
+    },
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1071, "end": 1075, "text": "We u", "labels": ["Sparsity control — Step Number"] , "text": "9" }
+    },
+
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1187, "end": 1206, "text": "modularity index (Q)", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1236, "end": 1253, "text": "global efficiency", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1258, "end": 1273, "text": "local efficiency", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1309, "end": 1331, "text": "participation coefficient", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1181, "end": 1186, "text": "we ca", "labels": ["Graph measures — Step Number"] , "text": "10" }
+    },
+
+    {
+      "from_name": "Result aggregation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1445, "end": 1489, "text": "values averaged across all thresholds", "labels": ["Result aggregation — Algorithm/Type"] }
+    },
+    {
+      "from_name": "Result aggregation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 906, "end": 917, "text": "Q = 0.71", "labels": ["Result aggregation — Parameters"] }
+    },
+    {
+      "from_name": "Result aggregation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1394, "end": 1427, "text": "average over 500 runs of the Louvain algorithm", "labels": ["Result aggregation — Algorithm/Type"] }
+    },
+    {
+      "from_name": "Result aggregation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1394, "end": 1399, "text": "aver", "labels": ["Result aggregation — Step Number"] , "text": "11" }
+    }
+  ]
+}
+] }

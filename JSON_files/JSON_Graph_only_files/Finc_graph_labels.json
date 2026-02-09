@@ -1,0 +1,350 @@
+{
+  "data": {
+    "title": "Transition of the Functional Brain Network Related to Increasing Cognitive Demands",
+    "text": "Node Definition\nTo define nodes we used a functional brain parcellation consisting of 264 functionally relevant ROIs defined on the basis of a meta-analysis (Power et al., 2011). The functional ROIs were modeled using the MarsBaR toolbox as 10 mm diameter spheres. We cross-validated our findings using the Automated Anatomical Labeling (AAL) atlas dividing the brain into 90 regions.\n\nFor each condition, time course was extracted from each region of Power ROIs; then, Pearson’s correlation coefficients were computed for each pair of ROIs. Fisher’s transformation was then used to convert correlation coefficients to normally distributed z-scores. This resulted in one correlation matrix (264 × 264) for each condition and each subject.\n\nFunctional Brain Networks\nWe focused on fully connected, weighted graphs with positive and negative weights. Binary networks in hub detection analysis were constructed by applying proportional thresholding retaining 5–15% of the strongest connections (step 1%).\n\nGraph Measures\nNetwork modularity was computed using the Louvain algorithm for both weighted and binary networks. The algorithm was run 1,000 times and the partition with the highest modularity Q was selected. Provincial and connector hubs were identified using within-module degree z-score and participation coefficient."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 86,
+            "end": 116,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 86,
+            "end": 116,
+            "text": "264 functionally relevant ROIs",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 307,
+            "end": 348,
+            "text": "Automated Anatomical Labeling (AAL) atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 373,
+            "end": 383,
+            "text": "90 regions",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 241,
+            "end": 263,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 222,
+            "end": 237,
+            "text": "MarsBaR toolbox",
+            "labels": [
+              "ROI definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 241,
+            "end": 263,
+            "text": "10 mm diameter spheres",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 406,
+            "end": 431,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 406,
+            "end": 431,
+            "text": "time course was extracted",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 470,
+            "end": 504,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 470,
+            "end": 504,
+            "text": "Pearson’s correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 542,
+            "end": 565,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 542,
+            "end": 565,
+            "text": "Fisher’s transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 797,
+            "end": 812,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 797,
+            "end": 812,
+            "text": "weighted graphs",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 920,
+            "end": 945,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 920,
+            "end": 945,
+            "text": "proportional thresholding",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 956,
+            "end": 961,
+            "text": "5–15%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1060,
+            "end": 1077,
+            "text": "8",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1060,
+            "end": 1077,
+            "text": "Louvain algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1139,
+            "end": 1150,
+            "text": "1,000 times",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1018,
+            "end": 1036,
+            "text": "9",
+            "labels": [
+              "Graph measures — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1018,
+            "end": 1036,
+            "text": "Network modularity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1213,
+            "end": 1242,
+            "text": "Provincial and connector hubs",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,468 @@
+{
+  "data": {
+    "text": "Brain network construction and threshold selection\nUsing graph theory, the human brain network is abstracted and modeled as a graph, which is composed of a set of nodes linked by edges. In the graph-theory analysis of fMRI data, nodes represent a set of regions or voxels, and edges represent the functional connectivity between those nodes (Bullmore and Bassett, 2011; Bullmore and Sporns, 2009). In this study, to define the nodes of the brain network, we divided the preprocessed images into a set of regions using two gray-matter templates. Given that different parcellation templates and nodal scales may result in considerable variation of network metrics (Fornito et al., 2010; Wang et al., 2009), we used two templates to cross-validate our results. Both templates are defined by the atlas of Automated Anatomical Labeling (Tzourio-Mazoyer et al., 2002), but in different nodal resolutions. One template, AAL-90, is composed of 90 regions (45 regions in each hemisphere, see Table 2 for details), and the other, AAL-1024, is composed of 1024 regions (512 regions in each hemisphere). Subsequently, representative mean time series for each node were extracted from the preprocessed data for each run by averaging all voxel time series within that region. Next, to define network edges, functional connectivity between all possible pairs of nodes was measured by calculating Pearson's correlation coefficients. As a result, a 90 × 90 correlation matrix (AAL-90 template) and a 1024 × 1024 correlation matrix (AAL-1024 template) were obtained for each participant. Finally, a specified threshold was applied to each correlation matrix to convert it into an unweighted binary adjacency matrix: if the absolute value of the correlation between any pair of nodes was greater than the given threshold, then an edge (represented by a 1 in the adjacency matrix) was constructed between that pair, otherwise no edge was constructed (represented by a 0). We used the sparsity threshold approach, a wide range of network densities, to threshold all of the correlation matrices and generate the binary matrices. Connection sparsity (i.e., connection cost) is defined as the ratio of the number of existing edges divided by the number of all possible edges in the graph. For example, if we set cost = 0.1, the strongest 10% of connections would be preserved. This unbiased approach enabled us to directly compare network metrics between conditions while minimizing possible confounds that would result from the use of a single fixed threshold (Bullmore and Bassett, 2011). As previous findings have shown that networks with high connection cost (N0.5) tend to be less meaningful biologically, and low connection cost tend to result in a fragmented network organization (Achard and Bullmore, 2007; Bullmore and Bassett, 2011; Bullmore and Sporns, 2012), we selected costs within the range of 0.06–0.5, increasing with a regular increment of 0.02, to threshold each correlation matrix. All network metrics were calculated separately for each binary network in this pre-defined cost range.\n\nNetwork metrics\nThree network metrics, global efficiency (Eglob), local efficiency (Eloc), and maximal cost-efficiency (CEmax), were the main focus of the graph-theory analysis. The conventional “small-world” organization measures (Watts and Strogatz, 1998), including characteristic path length (Lp), normalized Lp (λ), clustering coefficient (Cp), normalized Cp (γ) and small-worldness index Sigma (σ = γ/λ) were also calculated as references for determining if the network fell within the “small-world” regime (σ > 1) (Bullmore and Bassett, 2011).\nGlobal efficiency is a network topological metric that can measure the efficiency of parallel information transfer within a given graph G. Eglob(i) represents the global efficiency of an individual node i and is defined as follows:\nEglob(i) = 1/(N−1) * Σ_{i≠j∈G} 1/Lij\nwhere N denotes the total number of nodes within G, and Lij denotes the shortest path length between nodes i and j. Thus, Eglob(i) is the average of the inverse shortest path lengths from node i to all other nodes. This measure is superior to the conventional characteristic path length Lp (averaged Lij across all network nodes, Watts and Strogatz, 1998) because it allows the computation of a finite value for graphs with disconnected nodes, as well as accounting for how efficiently the network transfers information in parallel between network nodes (Latora and Marchiori, 2001). Larger Eglob indicates higher efficiency of signal communication, i.e., fewer processing steps between global brain network nodes.\nThe local efficiency measures the communication efficiency of a subgraph with locally connected nodes. Eloc(i) is the global efficiency calculated for Gi, the sub-graph composed of the directly connected neighbors of node i, and is defined as follows:\nEloc(i) = 1/(N_Gi * (N_Gi − 1)) * Σ_{j,k∈Gi} 1/Ljk\nwhere N_Gi is the number of nodes within the Gi, excluding node i itself (Achard and Bullmore, 2007; Latora and Marchiori, 2001). This metric is similar to the conventional clustering coefficient that measures how clustered the nodes of the network are, but Eloc also shows how efficient local communication is between the neighbors of node i (Achard and Bullmore, 2007).\nWe also investigated the economical properties of the generated networks by calculating maximal cost-efficiency (CEmax), where cost-efficiency (CE) is defined as follows:\nCE = Eglob − cost\nIn the pre-defined range of connection costs, there will typically be a maximal value of CE, which is denoted as CEmax. CEmax is a metric independent of any specific threshold choice and has been observed to be a useful measure of network economy (Achard and Bullmore, 2007; Sheppard et al., 2012). All the above-mentioned nodal metrics were calculated at a whole-brain level by averaging them across all network nodes.\nFinally, we used modular partition analysis to identify the RN and DMN based on the connectivity pattern, and further investigated whether L1 and L2 reading exhibit similar or different functional network community topologies (Bullmore and Sporns, 2009; He et al., 2009). A module is defined theoretically as a set of densely interconnected nodes with sparse connections to nodes in other modules (Fortunato, 2010). Previous studies have estimated this modular organization by calculating a quantitative parameter known as modularity, Q (Newman, 2006). Here, we used the heuristic modularity maximizing algorithm known as the Louvain algorithm, proposed by Blondel et al. (2008), to calculate the optimized Q and partition network nodes into sets of modules.\n\nStatistical comparison and result aggregation\nFor statistical analyses of those network metrics, we chose a range of connection costs according to two criteria: (1) at least 95% of the nodes were connected; (2) all constructed networks needed to be within the “small-world” regime (σ > 1) for each participant. These criteria ensured the resulting brain graphs had maximally connected nodes while simultaneously exhibiting “small-world” properties. As a result, we selected the cost range from 0.1 to 0.5 in both template schemas. In addition, we calculated the areas under the curve (AUC) of all network metrics over the selected cost range. This procedure provides a summarized measure for each network metric independent of any specific threshold choice (Achard and Bullmore, 2007), and has been demonstrated to be sensitive to differences between networks (Wang et al., 2009; Zhang et al., 2011).\nTo determine whether narrative reading in L1 exhibits different network properties from that of L2, both at whole-brain and nodal levels, we first compared the AUC of Eglob, Eloc, Lp, Cp, and modularity Q of L1 and L2, as well as CEmax at the whole-brain level by using nonparametric permutation tests (Nichols and Holmes, 2002).\n\nGroup-level partition and regions of interest analysis\nIn this study, we observed reading-related network (RN) and default-mode network (DMN) were activated and deactivated during narrative reading, respectively (see Fig. 2). To identify the RN and DMN modules based on the functional connectivity patterns for further regions of interest (ROI) analysis, we applied a group-level network partition analysis. A group-level correlation matrix was obtained by averaging Fisher's r-to-z transformed correlation matrices across languages and participants (He et al., 2009). Then, we constructed a group-level binary graph using a connection cost threshold of 0.247 for AAL-90 and of 0.153 for AAL-1024. We chose these two connection costs because participants' functional brain networks reached their maximal cost-efficiency at these two values. That is, the function networks were close to the optimal cost-efficiency organization at these costs. Afterwards, the graphs were partitioned into modules by applying the Louvain algorithm, as mentioned above (Blondel et al., 2008).\nTo further investigate the differences in network topology and local brain activity between L1 and L2 reading, we performed ROI analyses on RN and DMN ROIs that were identified by the previously-mentioned modular partition analysis. RN ROI was constructed by combining all the regions within RN module into one large ROI. Similarly, the DMN ROI was constructed by combining all regions within DMN module. Then, we extracted and averaged the Eglob, Eloc, and activation amplitude (Reading condition minus Rest condition) for each ROI, and further performed nonparametric permutation tests to compare these measures between L1 and L2 at group level.\n\nCorrelation between network efficiency and local BOLD signal changes\nWe further employed cross-region and cross-subject correlation analyses to directly investigate the relationship between local BOLD signal changes and network topological efficiency. Firstly, the mean effect size of reading-related activity (Reading–Rest) was extracted for each voxel. We then averaged the values of all voxels within each parcellated region on the AAL-90 template. Secondly, the values of Eglob, Eloc and local BOLD signal changes were transformed into z-scores. Finally, both cross-region and cross-subject partial correlation analyses were used to calculate the correlation value between local BOLD signal changes and Eglob (BOLD-Eglob correlation), and between local BOLD signal changes and Eloc (BOLD-Eloc correlation)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 455,
+            "end": 543,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 758,
+            "end": 898,
+            "text": "Both templates are defined by the atlas of Automated Anatomical Labeling (Tzourio-Mazoyer et al., 2002), but in different nodal resolutions.",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 899,
+            "end": 1091,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 899,
+            "end": 1091,
+            "text": "One template, AAL-90, is composed of 90 regions (45 regions in each hemisphere, see Table 2 for details), and the other, AAL-1024, is composed of 1024 regions (512 regions in each hemisphere).",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1106,
+            "end": 1261,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1106,
+            "end": 1261,
+            "text": "representative mean time series for each node were extracted from the preprocessed data for each run by averaging all voxel time series within that region.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1293,
+            "end": 1416,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1293,
+            "end": 1416,
+            "text": "functional connectivity between all possible pairs of nodes was measured by calculating Pearson's correlation coefficients.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8301,
+            "end": 8461,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8301,
+            "end": 8461,
+            "text": "A group-level correlation matrix was obtained by averaging Fisher's r-to-z transformed correlation matrices across languages and participants (He et al., 2009).",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1643,
+            "end": 1696,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1643,
+            "end": 1696,
+            "text": "convert it into an unweighted binary adjacency matrix",
+            "labels": [
+              "Graph characteristics — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1698,
+            "end": 1951,
+            "text": "8",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1698,
+            "end": 1951,
+            "text": "if the absolute value of the correlation between any pair of nodes was greater than the given threshold, then an edge (represented by a 1 in the adjacency matrix) was constructed between that pair, otherwise no edge was constructed (represented by a 0).",
+            "labels": [
+              "Negative correlation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1952,
+            "end": 2106,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1952,
+            "end": 2106,
+            "text": "We used the sparsity threshold approach, a wide range of network densities, to threshold all of the correlation matrices and generate the binary matrices.",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2107,
+            "end": 2264,
+            "text": "Connection sparsity (i.e., connection cost) is defined as the ratio of the number of existing edges divided by the number of all possible edges in the graph.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2265,
+            "end": 2352,
+            "text": "For example, if we set cost = 0.1, the strongest 10% of connections would be preserved.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2847,
+            "end": 2977,
+            "text": "we selected costs within the range of 0.06–0.5, increasing with a regular increment of 0.02, to threshold each correlation matrix.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3098,
+            "end": 3259,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3098,
+            "end": 3259,
+            "text": "Three network metrics, global efficiency (Eglob), local efficiency (Eloc), and maximal cost-efficiency (CEmax), were the main focus of the graph-theory analysis.",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3633,
+            "end": 3771,
+            "text": "Global efficiency is a network topological metric that can measure the efficiency of parallel information transfer within a given graph G.",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4617,
+            "end": 4719,
+            "text": "The local efficiency measures the communication efficiency of a subgraph with locally connected nodes.",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5292,
+            "end": 5462,
+            "text": "We also investigated the economical properties of the generated networks by calculating maximal cost-efficiency (CEmax), where cost-efficiency (CE) is defined as follows:",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3260,
+            "end": 3632,
+            "text": "The conventional “small-world” organization measures (Watts and Strogatz, 1998), including characteristic path length (Lp), normalized Lp (λ), clustering coefficient (Cp), normalized Cp (γ) and small-worldness index Sigma (σ = γ/λ) were also calculated as references for determining if the network fell within the “small-world” regime (σ > 1) (Bullmore and Bassett, 2011).",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5463,
+            "end": 5480,
+            "text": "CE = Eglob − cost",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5901,
+            "end": 6126,
+            "text": "6",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5901,
+            "end": 6126,
+            "text": "Finally, we used modular partition analysis to identify the RN and DMN based on the connectivity pattern, and further investigated whether L1 and L2 reading exhibit similar or different functional network community topologies",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6454,
+            "end": 6659,
+            "text": "Here, we used the heuristic modularity maximizing algorithm known as the Louvain algorithm, proposed by Blondel et al. (2008), to calculate the optimized Q and partition network nodes into sets of modules.",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7205,
+            "end": 7303,
+            "text": "11",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7205,
+            "end": 7303,
+            "text": "we calculated the areas under the curve (AUC) of all network metrics over the selected cost range.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7110,
+            "end": 7191,
+            "text": "As a result, we selected the cost range from 0.1 to 0.5 in both template schemas.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

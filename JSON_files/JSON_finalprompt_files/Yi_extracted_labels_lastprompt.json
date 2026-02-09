@@ -1,0 +1,712 @@
+{
+  "data": {
+    "text": "Cross-module switching diversity of brain network nodes in resting and cognitive states\nChao Yi • Yongchen Fan • Ying Wu\nCognitive Neurodynamics (2023) 17:1485–1499\nhttps://doi.org/10.1007/s11571-022-09894-z\n\nLarge-scale brain network dynamics reflect state change in brain activities and have potential effects on cognition. Such dynamics can be described by node temporal switching between modules; however, there are only a few studies on the influence of brain network node switching on brain cognition. Based on the functional magnetic resonance imaging (fMRI) data of resting and task states, we constructed dynamic functional networks using overlap sliding-time windows and applied multilayer network analysis to study the behaviours of nodes across brain modules. We found that (i) nodes with a high level switching rate in the resting-state mainly come from the default network, while nodes with a low level of switching rate mainly come from the visual network, (ii) nodes with a high switching rate have lower clustering coefficients and shorter characteristic path lengths, which are mainly affected by the somatomotor network and dorsal attention network; and (iii) in task states, there is still a negative correlation between switching rate, clustering coefficient and characteristic path length. However, the main subsystems that affect brain functions are regulated by the tasks. Our findings not only reveal the relevant characteristics of network node switching behaviours but also provide new insights for further understanding the complex functions of the brain.\n\nWe used fMRI data from the OpenfMRI database accessible via https://www.openfmri.org/dataset/ds000030/ (Accession number: ds000030). These data were obtained from 109 healthy subjects on a 3 T Siemens Trio scanner. The age range of the subjects was 21–50, with an average age of 31.6, including 47 female subjects. The experimental parameters included a scanning duration of 304 s, 4 mm slice thickness, number of slices equal to 34, flip angle of 90° and subjects keeping their eyes open during the experiment.\n\nBoth rest and task fMRI data were preprocessed using AFNI (http://afni.nimh.nih.gov/afni/) and FSL (http://www.fmrib.ox.ac.uk/fsl/) according to standard preprocessing protocols. To ensure the initial stabilization of the fMRI signal, we removed the first four volumes from the analysis. Then motion correction was then performed for each subject, using 3D image realignment with the AFNI program 3dvolreg function. Images acquired from echo-planar imaging (EPI) were motion and slice-timing corrected and spatially smoothed using a Gaussian kernel of 6 mm full width at half maximum (FWHM). Temporal bandpass filtering (0.01 Hz < f < 0.08 Hz) was carried out to reduce the effects of low-frequency drift and high-frequency physiological noise. The whole-brain global signal was used in fMRI analysis.\n\nThe brain can be divided into 90 regions of interest (ROIs) with the AAL (automated anatomical labelling) atlas. To study the nodal dynamics of different functional subsystems, we used seven large-scale brain subsystems divided by Yeo et al., namely, the control network (CON), default mode network (DMN), dorsal and ventral attention networks (DAN and VAN), somatomotor network (SMN), limbic network (LIM), and visual network (VIS). The fMRI time series of each ROI can be obtained by averaging all voxel time series in each ROI.\n\nWe used Pearson’s correlation-based overlapping sliding-time window analysis to construct the dynamic brain functional networks. In this method, a time series of a certain length is truncated from the first time point to construct the first network. Time series of a certain length are called windows, and the window width in this study is 30 time points. Then, the window slides forward along the time series by a certain step length (in this study, the step length is one time point) to construct the second network, and so on until the last time point. The set of networks obtained by this method contains dynamic connectivity information. The functional connections between regions of interest were constructed by calculating the Pearson correlation coefficient between pairs of regional time series.\n\nThe following fMRI of four cognitive states was used. In the balloon analogue risk task (BART), the task asks participants to pump a series of virtual balloons. During the experiment, participants could choose to pump the balloon or start with a new balloon after cashing out. For green balloons, they either explode or inflate successfully (5 points). For the white balloon, there was no explosion and no score.\n\nDuring the spatial working memory task (SCAP), participants are shown a set of pseudo-randomly arranged 1, 3, 5 or 7 circles around the central fixed cross, and a green circle is shown to the participants after a certain period of time. Participants are asked to answer whether the green circle is in the same position as the previous circle.\n\nIn the stop signal task, the computer will give a stimulus: one is a “go” stimulus (a pointing arrow), and the other is a 500 Hz stop signal to the participant through a headset. If a “go” signal appears, participants need to react quickly unless the “go” signal is paired with a stop signal.\n\nIn the task-switching task, stimuli of different colours and shapes appear, and participants need to respond to the stimuli according to the requirements of the task.\n\nWe used the GenLouvain community detection algorithm to identify modules in the network. This algorithm was initially applied to a single-layer network and later extended to a multilayer network. Modularity is quantified by a quality function Q that depends on a topological resolution parameter γ and a temporal coupling parameter ω.\n\nThe clustering coefficient measures the degree of network collectivization and is a typical measure of network functional segregation. It is the fraction of a node’s neighbours that are also neighbours to each other.\n\nThe characteristic path length is the average of the shortest path length between any two nodes in the network and is a commonly used index to measure the integration of network functions.\n\nThe fMRI data that support the findings of this study are available from OpenfMRI, https://www.openfmri.org/dataset/ds000030/ (Accession number: ds000030)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 88,
+            "end": 120,
+            "text": "Chao Yi • Yongchen Fan • Ying Wu",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 87,
+            "text": "Cross-module switching diversity of brain network nodes in resting and cognitive states",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 146,
+            "end": 150,
+            "text": "2023",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 181,
+            "end": 207,
+            "text": "10.1007/s11571-022-09894-z",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 209,
+            "end": 325,
+            "text": "Large-scale brain network dynamics reflect state change in brain activities and have potential effects on cognition.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1585,
+            "end": 1717,
+            "text": "We used fMRI data from the OpenfMRI database accessible via https://www.openfmri.org/dataset/ds000030/ (Accession number: ds000030).",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6203,
+            "end": 6358,
+            "text": "The fMRI data that support the findings of this study are available from OpenfMRI, https://www.openfmri.org/dataset/ds000030/ (Accession number: ds000030).",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1774,
+            "end": 1798,
+            "text": "3 T Siemens Trio scanner",
+            "labels": [
+              "Functional_scan_Information — Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1748,
+            "end": 1768,
+            "text": "109 healthy subjects",
+            "labels": [
+              "Functional_scan_Information — Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1804,
+            "end": 1868,
+            "text": "age range of the subjects was 21–50, with an average age of 31.6",
+            "labels": [
+              "Functional_scan_Information — Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1960,
+            "end": 1965,
+            "text": "304 s",
+            "labels": [
+              "Functional_scan_Information — Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1967,
+            "end": 1987,
+            "text": "4 mm slice thickness",
+            "labels": [
+              "Functional_scan_Information — Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1989,
+            "end": 2017,
+            "text": "number of slices equal to 34",
+            "labels": [
+              "Functional_scan_Information — Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2019,
+            "end": 2036,
+            "text": "flip angle of 90°",
+            "labels": [
+              "Functional_scan_Information — Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2064,
+            "end": 2095,
+            "text": "eyes open during the experiment",
+            "labels": [
+              "Functional_scan_Information — Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2132,
+            "end": 2229,
+            "text": "preprocessed using AFNI (http://afni.nimh.nih.gov/afni/) and FSL (http://www.fmrib.ox.ac.uk/fsl/)",
+            "labels": [
+              "Functional_scan_Information — Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 574,
+            "end": 597,
+            "text": "resting and task states",
+            "labels": [
+              "Functional_scan_Information — Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1748,
+            "end": 1768,
+            "text": "109 healthy subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1870,
+            "end": 1898,
+            "text": "including 47 female subjects",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1752,
+            "end": 1768,
+            "text": "healthy subjects",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1804,
+            "end": 1868,
+            "text": "age range of the subjects was 21–50, with an average age of 31.6",
+            "labels": [
+              "Age"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4423,
+            "end": 4514,
+            "text": "participants could choose to pump the balloon or start with a new balloon after cashing out",
+            "labels": [
+              "Task_specification — Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4382,
+            "end": 4398,
+            "text": "virtual balloons",
+            "labels": [
+              "Task_specification — Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4732,
+            "end": 4808,
+            "text": "pseudo-randomly arranged 1, 3, 5 or 7 circles around the central fixed cross",
+            "labels": [
+              "Task_specification — Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4890,
+            "end": 4995,
+            "text": "Participants are asked to answer whether the green circle is in the same position as the previous circle.",
+            "labels": [
+              "Task_specification — Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5064,
+            "end": 5137,
+            "text": "a “go” stimulus (a pointing arrow), and the other is a 500 Hz stop signal",
+            "labels": [
+              "Task_specification — Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5202,
+            "end": 5288,
+            "text": "participants need to react quickly unless the “go” signal is paired with a stop signal",
+            "labels": [
+              "Task_specification — Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5319,
+            "end": 5365,
+            "text": "stimuli of different colours and shapes appear",
+            "labels": [
+              "Task_specification — Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5371,
+            "end": 5457,
+            "text": "participants need to respond to the stimuli according to the requirements of the task.",
+            "labels": [
+              "Task_specification — Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2931,
+            "end": 3012,
+            "text": "90 regions of interest (ROIs) with the AAL (automated anatomical labelling) atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3387,
+            "end": 3430,
+            "text": "averaging all voxel time series in each ROI",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3441,
+            "end": 3509,
+            "text": "Pearson’s correlation-based overlapping sliding-time window analysis",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4167,
+            "end": 4198,
+            "text": "Pearson correlation coefficient",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1021,
+            "end": 1043,
+            "text": "clustering coefficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1057,
+            "end": 1083,
+            "text": "characteristic path length",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5471,
+            "end": 5511,
+            "text": "GenLouvain community detection algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2277,
+            "end": 2278,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2333,
+            "end": 2384,
+            "text": "we removed the first four volumes from the analysis",
+            "labels": [
+              "Removal Init Vol — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2348,
+            "end": 2366,
+            "text": "first four volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2386,
+            "end": 2387,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2482,
+            "end": 2494,
+            "text": "AFNI program",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2495,
+            "end": 2512,
+            "text": "3dvolreg function",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2514,
+            "end": 2515,
+            "text": "3",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2577,
+            "end": 2599,
+            "text": "slice-timing corrected",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2604,
+            "end": 2605,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2604,
+            "end": 2622,
+            "text": "spatially smoothed",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2650,
+            "end": 2688,
+            "text": "6 mm full width at half maximum (FWHM)",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2690,
+            "end": 2691,
+            "text": "5",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2690,
+            "end": 2717,
+            "text": "Temporal bandpass filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2719,
+            "end": 2740,
+            "text": "0.01 Hz < f < 0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2843,
+            "end": 2844,
+            "text": "6",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2847,
+            "end": 2872,
+            "text": "whole-brain global signal",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

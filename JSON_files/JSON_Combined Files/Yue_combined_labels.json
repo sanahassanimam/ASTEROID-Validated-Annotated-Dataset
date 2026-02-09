@@ -1,0 +1,1239 @@
+{
+  "data": {
+    "text": "Brain Modularity Mediates the Relation between\nTask Complexity and Performance\n\nQiuhai Yue, Randi C. Martin, Simon Fischer-Baum, Aurora I. Ramos-Nuñez,\nFengdan Ye, and Michael W. Deem\nJournal of Cognitive Neuroscience 29:9, pp. 1532–1546\ndoi:10.1162/jocn_a_01142\n\nParticipants\n\nFifty-two (18–26 years old, mean = 19.8 years old;\n16 men and 36 women) students from Rice University\nparticipated in this study. Participants reported no neuro-\nlogical or psychiatric disorders. Informed consent was\nobtained according to procedures approved by the Rice\nUniversity institutional review board. Participants were\ncompensated $50 for their participation.\n\nResting-state fMRI\n\nImaging Data Acquisition\n\nResting-state fMRI scans were conducted at the Core for\nAdvanced Magnetic Resonance Imaging at Baylor College\nof Medicine. Images were obtained on a 3-T Siemens\n(Erlangen, Germany) Magnetom Tim Trio scanner\nequipped with a 12-channel head coil. Foam pads were\nused to keep participants’ heads stable during the scan-\nning. A high-resolution T1-weighted structural image was\nacquired by using magnetization prepared rapid gradient-\necho sequence in the sagittal direction (repetition time =\n2500 msec, echo time = 4.71 msec, field of view =\n256 mm, voxel size = 1 × 1 × 1 mm3). Three 7-min\nresting-state functional runs were obtained by using an\nEPI sequence as follows: repetition time = 2000 msec,\necho time= 40msec, field of view= 220mm, voxel size=\n3× 3mm2, and slice thickness = 4mm. Each resting-state\nrun had 210 volumes, and each volume had 34 slices in\nthe axial plane to cover the whole brain. All 52 participants\ncompleted the imaging session.\n\nPreprocessing\n\nImage preprocessing was conducted using the AFNI soft-\nware (AFNI version: AFNI_2011_12_21_1014; Cox, 1996).\nThe first six volumes of each functional run were dis-\ncarded to allow stabilization of the BOLD signal. Prepro-\ncessing procedures basically followed the pipelines\nrecommended by Jo et al.’s (2013) article and AFNI’s\nscript afni_proc.py. Each functional run was prepro-\ncessed separately, including de-spiking of large fluctua-\ntions for some time points, slice timing, and head\nmotion correction. Then, each participant’s functional\nimages were aligned to that individual’s structural image,\nwarped to the Talairach standard space, and resampled\nto 3-mm isotropic voxels. Next, the functional images\nwere spatially smoothed with a 4-mm FWHM Gaussian\nkernel. A whole-brain mask was then generated and ap-\nplied for all subsequent analyses. A multiple regression\nmodel was then applied to each voxel’s time series to re-\ngress out several nuisance signals, including third-order\npolynomial baseline trends, six head motion correction\nparameters, and six derivatives of head motion. Band-\npass (0.005–0.1 Hz) filtering and outlier censoring were\nconducted in the same regression model. The outlier\ncensoring removed the time points in which head mo-\ntion exceeded a distance (Euclidean norm) of 0.2 mm\nwith respect to the previous time point or in which\n>10% of whole-brain voxels were considered as outliers\nby AFNI’s 3dToutcount. The residual time series after\napplication of the regression model were used for the\nfollowing network analyses.\n\nTask-shifting Task\n\nFor each condition, to take into account\nboth RT and accuracy in a single measure, we calculated\nan inverse efficiency (IE) score (Townsend & Ashby,\n1983) defined as mean RT/proportion correct.\n\nAttention Network Test\n\nThe ANT (Fan et al., 2002) was used to measure three\ndifferent attentional components: alerting, orienting,\nand conflict resolution. RTs and accuracy were recorded with mean RT based\non correct trials only. IE was calculated for each condi-\ntion. The alerting effect was computed by subtracting\nthe IE for the no-cue condition from the IE for the\ndouble-cue condition. The orienting effect was com-\nputed by subtracting the IE for the center cue condition\nfrom the IE for the spatial cue condition. The conflict\neffect was computed by subtracting the IE for the congru-\nent condition from the IE for the incongruent condition.\n\nTraffic Light Task\n\nIn this task, participants saw a red square in the center of\nscreen, which was replaced after an unpredictable time\ndelay (from 2 to 3 sec) by a green circle. Participants\npressed a button as quickly as possible when they saw\nthe green circle. There were 25 trials in total.\n\nAvailability\n\nSupplementary figures and tables are available at the Open Science Framework: osf.io/9tmhc/\n\nNetwork Re-construction and modularity calculation.  The whole brain network was re-\n\nconstructed based on several prominent parcellations of the brain: Brodmann areas, Eickhoff-\n\nZilles atlas (Eickhoff et al., 2005), functional areas identified in Powers et al. (2011), spatially \n\ncoherent areas identified in Craddock et al. (2012) and a recent published parcellation based on \n\nstructural and function data from the Human Connectome Project (Glasser et al., 2016). We \n\nillustrate the network re-construction methods for the 84 Brodmann areas (42 Brodmann areas \n\nfor left and right hemispheres respectively). These 84 Brodmann areas were derived from the \n\nBrodmann atlas in AFNI Talairach-Daemon (AFNI version=AFNI_2011_12_21_1014) \n\n(Lancaster et al., 1997; 2000). This Brodmann atlas mainly covered the cerebral cortex of the \n\nbrain. Each Brodmann area served as a node of the network, and the mean time series was \n\nextracted by averaging the preprocessed time series across all voxels in that Brodmann area. The \n\nedge between any two nodes in the network was defined by functional connectivity – that is, the \n\nPearson correlation of the time series for those two nodes. Edges for all pairs of nodes in the \n\nnetwork were estimated, resulting in an 84×84 correlation matrix. The correlation matrix was \n\ncalculated for each run and each subject separately, and an averaged correlation matrix across \n\nthree runs was obtained for each subject (Figure 1A). We did not concatenate the 3 runs for each \n\nsubject, because this would introduce a large discontinuity in the fMRI signal at the point of \n\nreport the results without regressing out tissue-based signals, but the results with this additional \npreprocessing step are reported in a table available on open science framework. \n\n \n                                                                                                                                                                                   \n\fMODULARITY AND TASK COMPLEXITY  9 \n\nconcatenation, leading to spurious correlation. We applied Newman’s algorithm (Newman, 2006) \n\nto each individual’s averaged correlation matrix to calculate the modularity value for that subject. \n\nTo do this, we first took the absolute values of each correlation and set all the diagonal elements \n\nof the correlation matrix to zero.  Fewer than .05% of the elements in the matrix were negative. \n\nThe resulting matrix was binarized by setting the largest 400 edges (i.e., 5.67% graph density) in \n\nthe network to 1 and all others to 0 (Figure 1B). We also considered the top 300 (4.25%) and 500 \n\nedges (7.09%), respectively, to assess the consistency of correlation with modularity across \n\ndifferent numbers of edges. This binarization process has been argued to improve detection of \n\nmodularity, by increasing the signal-to-noise ratio (Chen & Deem, 2015). Modularity was \n\ndefined as in Equation 1 below, where Aij is 1 if there is an edge between Brodmann areas i and j \n\nand zero otherwise, the value of ai = Σj Aij is the degree of Brodmann area i, and e = ½ Σi ai is the \n\ntotal number of edges, here set to 300, 400, and 500 respectively. Newman’s algorthim was \n\napplied to the binarized matrix to obtain the (maximal) modularity value and the corresponding \n\npartitioning of Brodmann areas into different modules for each subject. 2 \n\nA group-average correlation matrix (Figure 1A) was obtained by averaging the mean \n\ncorrelation matrices across all subjects. The partitioning into modules was also conducted at the \n\ngroup level. To assess individual variability in the modular structure of the brain, we maximally \n\naligned each subject’s partitioning of Brodmann areas with the partitioning identified from the \n\n2 Due to the resolution limitation issue with the current community detection algorithm (Fortunato & \nBarthélemy, 2007), we also estimated modularity values by using the lowest hierarchy level in the \nLouvain algorithm (Blondel, Guillaume, Lambiotte, & Lefebvre, 2008), which could avoid resolution \nlimit issue (Lancichinetti & Fortunato, 2009; 2014). Results in term of modularity-behavior correlations \nbased on Louvain method are similar to those with modularity calculated by the method described above \nand are reported in a table that is available at the open science framework. \n\n \n \n                                                        \n\fMODULARITY AND TASK COMPLEXITY  10 \n\ngroup-average correlation matrix.  When comparing the distance between two assignments of \n\nBrodmann areas to modules, we take into account that the labeling of the modules can be \n\npermuted and that the number of modules of the two assignments need not be identical. Thus the \n\nmaximal alignment is the one that minimizes the distance over all permutations of the \n\nassignment with the greater (or equal) number of modules. The value d is the number of nodes \n\nwhose modular assignment differed between the subject and the group average, defined by \n\nEquation 2. \n\nBrodmann areas are indexed by i, m1i denote the module to which Brodmann area i belongs in \n\nassignment 1, m2i denote the module to which Brodmann area i belongs in assignment 2, P is a \n\npermutation of module labeling, and we have assumed the number of modules in assignment 1 is \n\nnot greater than that in assignment 2. To assess which cortical regions drove this individual \n\nvariation in modular structure, we also calculated, for each of the 84 Brodmann areas, the \n\nnumber of subjects for whom that Brodmann area was assigned to a different module than the \n\nassignment for group-average data.   \n\nWhile Brodmann areas have the virtue of covering most of the gray matter, many of the \n\nareas are quite large, meaning that each Brodmann area likely contains multiple functionally \n\nselective regions. Given that each Brodmann area can only be assigned to one module, that \n\nmodular assignment may only be appropriate for a subregion, thereby potentially reducing the \n\nrelation between modularity and behavioral performance.  Thus, we also calculated modularity \n\nfor each subject based on another anatomical parcellation which is available in AFNI (Eickhoff-\n\nZilles macro labels atlas from N27 template in Talairach space) (Eickhoff et al., 2005), and some \n\nfunctional parcellations, including Power et al.’s (2011), Craddock et al.’s (2012) and Glasser et \n\n \n \n\fMODULARITY AND TASK COMPLEXITY  11 \n\nal.’s (2016) networks. We used 90 of the 115 masks from the Eickhoff-Zilles atlas, excluding \n\nthose in the cerebellum. Power et al. defined many small spheric nodes that are associated with \n\nspecific cognitive functions identified by meta-analyses of task-based fMRI 3. Craddock et al. \n\nparceled the gray matter into many spatially coherent clusters, identifying clusters based on \n\nhomogeneity of local functional connectivity. We chose the 100-node version of Craddock et \n\nal.’s parcellation, which has a similar number of nodes with the Brodmann network. Glasser et al. \n\nused multiple properties (e.g., cortical myelin content, cortical response to task functional MRI, \n\nresting-state functional connectivity pattern) of MRI data from Human Connectome Project and \n\ngenerated feature gradient maps to identify the boundaries of structurally and functionally \n\nhomogenous areas on the cortical surface model, and then created 180 areas in each hemisphere 4. \n\nThe correlation matrices for functional parcellations were binarized with a threshold of percent \n\ncost (5.67%), which equates the proportion of top edges to that for the Brodmann network of 400 \n\nedges."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 46,
+            "text": "Brain Modularity Mediates the Relation between",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 80,
+            "end": 183,
+            "text": "Qiuhai Yue, Randi C. Martin, Simon Fischer-Baum, Aurora I. Ramos-Nuñez,\nFengdan Ye, and Michael W. Deem",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 184,
+            "end": 217,
+            "text": "Journal of Cognitive Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 238,
+            "end": 262,
+            "text": "doi:10.1162/jocn_a_01142",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 184,
+            "end": 222,
+            "text": "Journal of Cognitive Neuroscience 29:9",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4449,
+            "end": 4471,
+            "text": "Open Science Framework",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4395,
+            "end": 4427,
+            "text": "Supplementary figures and tables",
+            "labels": [
+              "Remarks"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 843,
+            "end": 892,
+            "text": "3-T Siemens\n(Erlangen, Germany) Magnetom Tim Trio",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)",
+            "Flip angle",
+            "Inter-slice gap",
+            "Eyes open/closed"
+          ],
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1364,
+            "end": 1391,
+            "text": "repetition time = 2000 msec",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1393,
+            "end": 1410,
+            "text": "echo time= 40msec",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1542,
+            "end": 1551,
+            "text": "34 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1459,
+            "end": 1480,
+            "text": "slice thickness = 4mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1412,
+            "end": 1432,
+            "text": "field of view= 220mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1446,
+            "end": 1453,
+            "text": "3× 3mm2",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1271,
+            "end": 1312,
+            "text": "Three 7-min\nresting-state functional runs",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 694,
+            "end": 718,
+            "text": "Resting-state fMRI scans",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1597,
+            "end": 1647,
+            "text": "All 52 participants\ncompleted the imaging session.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1759,
+            "text": "AFNI soft-\nware (AFNI version: AFNI_2011_12_21_1014",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 278,
+            "end": 287,
+            "text": "Fifty-two",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Group matching",
+            "Rejected subjects"
+          ],
+          "id": "m0019"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 288,
+            "end": 328,
+            "text": "(18–26 years old, mean = 19.8 years old;",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 329,
+            "end": 348,
+            "text": "16 men and 36 women",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 408,
+            "end": 473,
+            "text": "Participants reported no neuro-\nlogical or psychiatric disorders.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 517,
+            "end": 587,
+            "text": "procedures approved by the Rice\nUniversity institutional review board.",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3338,
+            "end": 3367,
+            "text": "inverse efficiency (IE) score",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3664,
+            "end": 3703,
+            "text": "IE was calculated for each condi-\ntion.",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4277,
+            "end": 4348,
+            "text": "pressed a button as quickly as possible when they saw\nthe green circle.",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4136,
+            "end": 4263,
+            "text": "a red square in the center of\nscreen, which was replaced after an unpredictable time\ndelay (from 2 to 3 sec) by a green circle.",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1777,
+            "end": 1778,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1998,
+            "end": 2010,
+            "text": "afni_proc.py",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1777,
+            "end": 1794,
+            "text": "first six volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2073,
+            "end": 2074,
+            "text": "2",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Despiking — Software"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2130,
+            "end": 2131,
+            "text": "3",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2148,
+            "end": 2149,
+            "text": "4",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2220,
+            "end": 2221,
+            "text": "5",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2267,
+            "end": 2268,
+            "text": "6",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2311,
+            "end": 2345,
+            "text": "resampled\nto 3-mm isotropic voxels",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2380,
+            "end": 2381,
+            "text": "7",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2406,
+            "end": 2431,
+            "text": "4-mm FWHM Gaussian\nkernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2652,
+            "end": 2653,
+            "text": "8",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Temporal detrending — Software"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2652,
+            "end": 2662,
+            "text": "polynomial",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2640,
+            "end": 2651,
+            "text": "third-order",
+            "labels": [
+              "Temporal detrending — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2680,
+            "end": 2681,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "motion regression — Software"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2680,
+            "end": 2753,
+            "text": "six head motion correction\nparameters, and six derivatives of head motion",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2755,
+            "end": 2756,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2755,
+            "end": 2765,
+            "text": "Band-\npass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2767,
+            "end": 2779,
+            "text": "0.005–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2795,
+            "end": 2796,
+            "text": "11",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3084,
+            "end": 3102,
+            "text": "AFNI’s 3dToutcount",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2803,
+            "end": 2812,
+            "text": "censoring",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2967,
+            "end": 3052,
+            "text": "0.2 mm\nwith respect to the previous time point or in which\n>10% of whole-brain voxels",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4613,
+            "end": 4666,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0060"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4613,
+            "end": 4666,
+            "text": "parcellations of the brain: Brodmann areas, Eickhoff-",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4977,
+            "end": 5034,
+            "text": "network re-construction methods for the 84 Brodmann areas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5150,
+            "end": 5225,
+            "text": "Brodmann atlas in AFNI Talairach-Daemon (AFNI version=AFNI_2011_12_21_1014)",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4977,
+            "end": 5034,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0064"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4977,
+            "end": 5034,
+            "text": "network re-construction methods for the 84 Brodmann areas",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5387,
+            "end": 5505,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0066"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5387,
+            "end": 5505,
+            "text": "the mean time series was \n\nextracted by averaging the preprocessed time series across all voxels in that Brodmann area",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5611,
+            "end": 5670,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0068"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5611,
+            "end": 5670,
+            "text": "Pearson correlation of the time series for those two nodes.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6548,
+            "end": 6592,
+            "text": "5",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0070"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6548,
+            "end": 6592,
+            "text": "We applied Newman’s algorithm (Newman, 2006)",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7773,
+            "end": 7843,
+            "text": "partitioning of Brodmann areas into different modules for each subject",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7363,
+            "end": 7410,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0073"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7363,
+            "end": 7410,
+            "text": "Modularity was \n\ndefined as in Equation 1 below",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6728,
+            "end": 6797,
+            "text": "7",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0075"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6728,
+            "end": 6797,
+            "text": "absolute values of each correlation and set all the diagonal elements",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6899,
+            "end": 6997,
+            "text": "8",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0077"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6899,
+            "end": 6997,
+            "text": "The resulting matrix was binarized by setting the largest 400 edges (i.e., 5.67% graph density) in",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7050,
+            "end": 7191,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0079"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6899,
+            "end": 6997,
+            "text": "The resulting matrix was binarized by setting the largest 400 edges (i.e., 5.67% graph density) in",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7050,
+            "end": 7191,
+            "text": "We also considered the top 300 (4.25%) and 500 \n\nedges (7.09%), respectively, to assess the consistency of correlation with modularity across",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7849,
+            "end": 7930,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0082"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7849,
+            "end": 7930,
+            "text": "A group-average correlation matrix (Figure 1A) was obtained by averaging the mean",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11861,
+            "end": 11957,
+            "text": "The correlation matrices for functional parcellations were binarized with a threshold of percent",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0084"
+        }
+      ]
+    }
+  ]
+}

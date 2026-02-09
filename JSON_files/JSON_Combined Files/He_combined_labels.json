@@ -1,0 +1,1082 @@
+{
+  "data": {
+    "text": "Brain flexibility associated with need for cognition contributes to creative achievement\n\nPsychophysiology. 2019;56:e13464. https://doi.org/10.1111/psyp.13464\n\nAll functional imaging data are freely available for re-\nsearch from the International Neuroimaging Data‐Sharing \nInitiative (http://dx.doi.org/10.15387/ fcp_indi.retro.slim). \nSpecifically, 164 participants (70 male) with both imaging \ndata and NFC scores were included in this study, and some \nof them (N = 100) also completed the Creative Achievement \nQuestionnaire (CAQ). All participants were Han, aged from \n17 to 26 years old, the mean was 19.99 ± 1.12. We used two \nexclusion criteria to ensure imaging data quality: (a) three \nparticipants were excluded whose maximal head motion \nbetween volumes in any direction was > 3 mm or rotation \nin any axis > 3° during scanning, (b) all participants exhib-\nited relatively few bad volumes (defined as any volume with \nframewise displacement (FD) value > 0.5 mm) that ranged \nfrom 0 to 9.91%; thus, no one was excluded according to the \nwidely used criterion based on > 10% bad volumes. Through \nself‐report questionnaires and structured and semistructured \ninterviews, none had a history of psychiatric illness, cogni-\ntive disorders, substance abuse, or MRI contraindications. \nThe study was approved by the Research Ethics Committee \nof the Brain Imaging Center of Southwest University, and \nwritten informed consent was obtained from each participant.\n\nAll imaging data were collected on a Siemens 3T Trio scanner \n(Siemens Medical Systems, Erlangen, Germany). Resting-\nstate fMRI data were obtained with gradient echo‐planar \nimaging (EPI) sequences: repetition time (TR) = 2,000 ms, \necho time (TE) = 30 ms, field of view (FOV) = 220 × 220, \nflip angle = 90°, slices = 32, thickness = 3.0 mm, slice \ngap = 1.0 mm, voxel size = 3.4 × 3.4 × 4 mm3. This scanning \nlasted 8 min and contained 242 volumes; all participants were \ninstructed to close their eyes and rest but not to fall asleep.\n\nThe fMRI data were preprocessed using the advanced \nData Processing Assistant for Resting‐State fMRI (DPARSF, \nhttp://www.rfmri.org/DPARSF; Yan, Wang, Zuo, & Zang, \n2016; Yan & Zang, 2010), which is based on Statistical \nParametric Mapping (SPM, http://www.fil.ion.ucl.ac.uk/\nspm). The first 10 volumes were discarded to suppress the \nequilibration effects and consider subjects’ adaptation to \nthe environment. The remaining volumes were slice‐timing \ncorrected, realigned, and spatially normalized to the MNI \n(Montreal Neurological Institute) template and resampled to \n3 × 3 × 3 mm3. Then, we conducted a series of noise clean-\nup strategies, including wavelet de‐spiking, nuisance signal \nregression, and data scrubbing. Specifically, the performance \nof wavelet de‐spiking has been shown to be superior to the \nstandard de‐spiking algorithms, and the default parameters \nwere used, which were equivalent to prior studies (Patel et al., \n2014). Nuisance signals including white matter, cerebrospi-\nnal fluid, and head motion parameters and their derivatives \nusing the Friston 24‐parameter model were regressed out \nto control the potential influence of physiological artifacts \n(Friston, Williams, Howard, Frackowiak, & Turner, 1996). \nWe further implemented data scrubbing to better address \nhead motion concerns. The bad time points were regarded as \nregressors that defined as volumes with FD Power > 0.5 mm \nas well as the two succeeding volumes and one preceding \nvolume to reduce the spillover effect of head motion (Power, \nBarnes, Snyder, Schlaggar, & Petersen, 2012). In addition, \nlinear and quadratic trends were also included as regressors \nsince the BOLD signal exhibits low‐frequency drifts. We \nnext conducted spatial smoothing with 4‐mm full‐width at \nhalf‐maximum Gaussian kernel and band‐pass temporal fil-\ntering (0.01–0.1 Hz). Finally, given that no consensus has \nbeen reached on global signal regression (GSR) in fMRI \nstudies (Caballero‐Gaudes & Reynolds, 2017; Liu, Nalci, & \nFalahpour, 2017), we performed preprocessing with and \nwithout GSR, and the results of GSR are represented in the \nonline supporting information, Appendix S1.\n\nA graph is made up of nodes and edges in graph theory \nanalysis. For node definition, we employed a 264‐node \nfunctional atlas that is widely distributed across the whole \nbrain and includes 13 large‐scale brain networks (Power \net al., 2011), as shown in Figure 1a. ... The time series of each node was acquired by \naveraging the BOLD signals from all voxels in this region, \nand the Pearson correlation of the time series between pairs \nof nodes was calculated to represent the edges (i.e., FC). \nA sliding window approach was used to construct a dy-\nnamic FC matrix for each participant. ... the \nwindow length was therefore set to 50 TRs and the time \ngap of each window was set to 1 TR, yielding 183 overlap-\nping time windows ... and then Fisher's z transformation \nwas conducted to improve normality.\n\nTo explore the spatiotemporal segregation of nodes in dy-\nnamic FC, we connected the adjacent time windows by \nadding interlayer connections (temporal link) between each \nnode and itself in the adjacent window (Bassett et al., 2011; \nMucha et al., 2010), as shown in Figure 1b. Then, a gen-\neralized Louvain algorithm was used to find the putative \nfunctional modules based on the optimization of the mod-\nularity quality function (Mucha et al., 2010). ... We therefore performed the multilayer community detection \nalgorithm 100 times to yield optimized partitions of the mul-\ntilayer modularity for each time (Bassett et al., 2011, 2013).\n\n\n2.5 | Dynamic network construction\nA graph is made up of nodes and edges in graph theory \nanalysis. For node definition, we employed a 264‐node \nfunctional atlas that is widely distributed across the whole \nbrain and includes 13 large‐scale brain networks (Power \net al., 2011), as shown in Figure 1a. We chose Power 264 \nregions of interest (ROIs) for several reasons. First, the \ncreation of 264 putative functional areas was based on \nresting‐state FC in healthy young adults, which is consist￾ent with the data type and sample population in this study. \nSecond, our main focus was to examine the relationship \nbetween the flexibility of a large‐scale brain network and \nbehavior. The putative 264 ROIs contain many subgraphs \n(13 well defined) in good agreement with known func￾tional brain systems and are significantly more similar to \nthe functional systems than those in other templates (e.g., \nthe 90‐parcel AAL atlas; Power et al., 2011). In addition, \nwe hoped to be consistent with existing research on brain \nflexibility in the selection of templates (Chen et al., 2016; \nMattar et al., 2015). Considering that signal intensity may \nbe poorer in certain locations of the brain, 11 nodes with \nlower BOLD signal strength were identified and discarded \n(Wig, Laumann, & Petersen, 2014); thus, 253 nodes were \nreserved. The time series of each node was acquired by \naveraging the BOLD signals from all voxels in this region, \nand the Pearson correlation of the time series between pairs \nof nodes was calculated to represent the edges (i.e., FC). \nA sliding window approach was used to construct a dy￾namic FC matrix for each participant. We considered that \nsmall and large windows have been associated with a nar￾row range of network flexibility values across the brain, \nwhile medium time windows (e.g., 75 s and 100 s) have \nuncovered a wide range of network flexibility (Telesford \net al., 2016). Meanwhile, given one TR is 2 s in this study \nand needs more windows to track dynamic trajectories, the \nwindow length was therefore set to 50 TRs and the time \ngap of each window was set to 1 TR, yielding 183 overlap￾ping time windows to capture the temporal fluctuations in \nFC during a short period, and then Fisher's z transformation \nwas conducted to improve normality.\n\n2.6 | Multilayer community detection\nTo explore the spatiotemporal segregation of nodes in dy￾namic FC, we connected the adjacent time windows by \nadding interlayer connections (temporal link) between each \nnode and itself in the adjacent window (Bassett et al., 2011; \nMucha et al., 2010), as shown in Figure 1b. Then, a gen￾eralized Louvain algorithm was used to find the putative \nfunctional modules based on the optimization of the mod￾ularity quality function (Mucha et al., 2010). Intuitively, \nnodes have dense connections within modules but sparse \nconnections between modules. The optimal multilayer \nmodularity quality was based on the relative densities of \nintramodule connections versus intermodule connections \nto identify the modular partition, which can be defined as \nfollows (Mucha et al. 2010):\nIn this function, Q is the multilayer modularity index; Aijl\nis the connection strength of region i and j in layer l; Nijl is \nthe corresponding elements in a null model matrix; Gil rep￾resents the community assignment of node i in layer l; Gjr\nrepresents the community assignment of node j in layer r; \n(Gil, Gjr)\n=1 if Gil =Gjr, and it equals 0 otherwise; l\n is the \nstructural resolution parameter of layer l; the temporal reso￾lution parameter jlr is the connection strength between node \nj in layer l and node j in layer r; µ is the total edge weight in \nthe network; 2=∑\njrjr; the strength of node j in layer l is \njl =kjl+cjl; the intralayer strength of node j in layer l is kjl; \nand the interlayer strength of node j in layer l is cjl =∑\nrjlr. \nWe used the Newman‐Girvan null model (Newman, 2006; \nNewman & Girvan, 2004) in each layer: Nijl =iljl∕2ml\n, \nwhere 2ml =∑\nijAijl is the total edge weight in layer l. \nThe structural resolution parameter determines the number of \nmodules within a given layer, and the temporal resolution pa￾rameter controls the consistency of modules detected across \nlayers (Bassett et al., 2013). To avoid the deviation from the \nresults of multilayer community detection (Bassett et al., \n2013; Telesford et al., 2016), while considering the simplifi￾cation of calculations and the consistency with previous re￾search, we used the common default values that set = =1\n(Bassett et al., 2011, 2013; Bassett, Yang, Wymbs, & Grafton, \n2015; Telesford et al., 2016). In addition, because the com￾munity detection algorithm is vulnerable to near‐degenera￾cies (Good, de Montjoye, & Clauset, 2010) and stochastic \nelements in this algorithm (Blondel, Guillaume, Lambiotte, & \nLefebvre, 2008), the output usually varies from run to run. \nWe therefore performed the multilayer community detection \nalgorithm 100 times to yield optimized partitions of the mul￾tilayer modularity for each time (Bassett et al., 2011, 2013).\n\n2.7 | Node, network, and global flexibility\nThe results of the generalized Louvain algorithm are shown \nin a partition matrix (nodes × layers), in which elements \nrepresent the community assignment of node i in layer l, as \nshown in Figure 1c. The multilayer modularity quality func￾tion simultaneously and optimally assigned brain regions to \ncommunities in all layers so that community labels are con￾sistent across layers, thus avoiding the community matching \nproblem (Bassett et al., 2011, 2013). Based on the optimal \ncommunity partition, node flexibility can be defined as the \nrate at which each node changes the assigned community be￾tween two consecutive time layers (Bassett et al., 2011), that \nis, the actual changing times divided by possible changing \ntimes. A value close to 1 indicates that a node's community \nassignment is highly variable. Network flexibility and global \nflexibility can also be defined as the mean flexibility of the \nnodes within the network or across the whole brain (Bassett \net al., 2011). We calculated the flexibility values separately \nfor each community detection and averaged across 100 \noptimizations."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 88,
+            "text": "Brain flexibility associated with need for cognition contributes to creative achievement",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 124,
+            "end": 158,
+            "text": "https://doi.org/10.1111/psyp.13464",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 90,
+            "end": 107,
+            "text": "Psychophysiology.",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 108,
+            "end": 112,
+            "text": "2019",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 286,
+            "end": 333,
+            "text": "http://dx.doi.org/10.15387/ fcp_indi.retro.slim",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 351,
+            "end": 377,
+            "text": "164 participants (70 male)",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 574,
+            "end": 592,
+            "text": "17 to 26 years old",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 351,
+            "end": 377,
+            "text": "164 participants (70 male)",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1181,
+            "end": 1222,
+            "text": "none had a history of psychiatric illness",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 729,
+            "end": 823,
+            "text": "maximal head motion \nbetween volumes in any direction was > 3 mm or rotation \nin any axis > 3°",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1305,
+            "end": 1346,
+            "text": "approved by the Research Ethics Committee",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1505,
+            "end": 1528,
+            "text": "Siemens 3T Trio scanner",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1777,
+            "end": 1788,
+            "text": "slices = 32",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1790,
+            "end": 1808,
+            "text": "thickness = 3.0 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1759,
+            "end": 1775,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1810,
+            "end": 1829,
+            "text": "slice \ngap = 1.0 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1740,
+            "end": 1756,
+            "text": "FOV) = 220 × 220",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1684,
+            "end": 1698,
+            "text": "TR) = 2,000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1712,
+            "end": 1723,
+            "text": "TE) = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1831,
+            "end": 1861,
+            "text": "voxel size = 3.4 × 3.4 × 4 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1878,
+            "end": 1916,
+            "text": "lasted 8 min and contained 242 volumes",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1941,
+            "end": 2003,
+            "text": "instructed to close their eyes and rest but not to fall asleep",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1576,
+            "end": 1595,
+            "text": "Resting-\nstate fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2058,
+            "end": 2114,
+            "text": "Data Processing Assistant for Resting‐State fMRI (DPARSF",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2214,
+            "end": 2250,
+            "text": "Statistical \nParametric Mapping (SPM",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1941,
+            "end": 2003,
+            "text": "instructed to close their eyes and rest but not to fall asleep",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2288,
+            "end": 2323,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2288,
+            "end": 2323,
+            "text": "The first 10 volumes were discarded",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ],
+          "id": "m0028"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2445,
+            "end": 2468,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2214,
+            "end": 2250,
+            "text": "Statistical \nParametric Mapping (SPM",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0030"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2470,
+            "end": 2479,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2214,
+            "end": 2250,
+            "text": "Statistical \nParametric Mapping (SPM",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0032"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2485,
+            "end": 2516,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2214,
+            "end": 2250,
+            "text": "Statistical \nParametric Mapping (SPM",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2565,
+            "end": 2592,
+            "text": "resampled to \n3 × 3 × 3 mm3",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ],
+          "id": "m0035"
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2663,
+            "end": 2681,
+            "text": "5",
+            "labels": [
+              "wavelet decomposition — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2663,
+            "end": 2681,
+            "text": "wavelet de‐spiking",
+            "labels": [
+              "wavelet decomposition — Type"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2863,
+            "end": 2881,
+            "text": "default parameters",
+            "labels": [
+              "wavelet decomposition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0038"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3080,
+            "end": 3106,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3080,
+            "end": 3106,
+            "text": "Friston 24‐parameter model",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Type"
+          ],
+          "id": "m0040"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2716,
+            "end": 2730,
+            "text": "7",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2983,
+            "end": 3018,
+            "text": "white matter, cerebrospi-\nnal fluid",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Type"
+          ],
+          "id": "m0042"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2716,
+            "end": 2730,
+            "text": "8",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3405,
+            "end": 3422,
+            "text": "FD Power > 0.5 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Type"
+          ],
+          "id": "m0044"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3603,
+            "end": 3630,
+            "text": "9",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3603,
+            "end": 3630,
+            "text": "linear and quadratic trends",
+            "labels": [
+              "Temporal detrending — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ],
+          "id": "m0046"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3737,
+            "end": 3808,
+            "text": "10",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3737,
+            "end": 3808,
+            "text": "spatial smoothing with 4‐mm full‐width at \nhalf‐maximum Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ],
+          "id": "m0048"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3813,
+            "end": 3857,
+            "text": "11",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3813,
+            "end": 3857,
+            "text": "band‐pass temporal fil-\ntering (0.01–0.1 Hz)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Type"
+          ],
+          "id": "m0050"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3913,
+            "end": 3943,
+            "text": "12",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3913,
+            "end": 3943,
+            "text": "global signal regression (GSR)",
+            "labels": [
+              "Global signal — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0052"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5769,
+            "end": 5785,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0053"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5759,
+            "end": 5785,
+            "text": "264‐node \nfunctional atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5946,
+            "end": 5972,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0055"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6815,
+            "end": 6953,
+            "text": "11 nodes with \nlower BOLD signal strength were identified and discarded \n(Wig, Laumann, & Petersen, 2014); thus, 253 nodes were \nreserved.",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6954,
+            "end": 6995,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0057"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7000,
+            "end": 7057,
+            "text": "averaging the BOLD signals from all voxels in this region",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7068,
+            "end": 7087,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0059"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7068,
+            "end": 7087,
+            "text": "Pearson correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7848,
+            "end": 7873,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7848,
+            "end": 7873,
+            "text": "Fisher's z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8066,
+            "end": 8104,
+            "text": "6",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0063"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8234,
+            "end": 8264,
+            "text": "gen￾eralized Louvain algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8066,
+            "end": 8104,
+            "text": "interlayer connections (temporal link)",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9492,
+            "end": 9516,
+            "text": "Newman‐Girvan null model",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10508,
+            "end": 10573,
+            "text": "performed the multilayer community detection \nalgorithm 100 times",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11224,
+            "end": 11255,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0068"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11224,
+            "end": 11355,
+            "text": "node flexibility can be defined as the \nrate at which each node changes the assigned community be￾tween two consecutive time layers",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11792,
+            "end": 11826,
+            "text": "8",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0070"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11792,
+            "end": 11826,
+            "text": "averaged across 100 \noptimizations",
+            "labels": [
+              "Result aggregation — Type"
+            ]
+          },
+          "id": "m0071"
+        }
+      ]
+    }
+  ]
+}

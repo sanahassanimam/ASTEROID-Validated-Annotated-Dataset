@@ -1,0 +1,997 @@
+{
+  "data": {
+    "text": "Thirty healthy students from Zhejiang University participated in this study (14 females; age: 23.73 ± 2.38 [M, SD]). All participants were adults and had a history of using TikTok. They reported no major diseases or mental health problems. As none of the subjects showed excessive head motion during scanning (maximum head displacement >3 mm and mean framewise head displacement >0.5 mm), no participant was excluded from our final fMRI analyses due to head motion. We obtained their written informed consent before the experiment. This study was approved by the Ethic Committee of Zhejiang University.\n\nAll the participants viewed two types of video clips in the scanner, namely personalized videos (PV) and generalized videos (GV). The PV were referred to as videos recommended by the App (TikTok in this study) for each user, whereas the GV were referred to as videos recommended by the App for a new user with no use history. Both PV and GV were short video clips recorded from TikTok with a total six-minute length. The difference was that the GV were lack of user-specific attributes, whereas the PV were customized for each participant by an AI-based recommender algorithm in the App. The AI-based recommender algorithm “learns” a user's preference from his/her watching feedback, including repeated watching, comment, share, and “liked” tag in TikTok, and then posts a streaming of videos to the user accordingly. It has been shown that the video viewing completion rate is an important indicator, which means that if a user had watched a video to the end rather than scrolled it down quickly, the algorithm will be more likely to recommend videos of the same type/tag later.\n\nA block design including three conditions (PV, GV, and Rest) was used in this experiment. Both PV and GV conditions contained six blocks. Each block lasted for 1 min and consisted of 1 to 6 short videos, followed by a 30-s rest period during which only a white fixation cross was presented on the screen. All the stimuli were presented by E-prime 3.0 (psychology software tools, https://www.pstnet.com), and participants could watch them in an angled mirror and hear the soundtrack of videos by headphones. To counterbalance the effect of video order, fourteen participants watched PV followed by GV and the rest watched GV preceding PV. None of the videos was shown to participants before the experiment. In the scanner, participants were merely instructed to watch the presentation of videos as usual. After scanning, each participant was interviewed to evaluate their preference for each video clip, with a rank from 1 (dislike extremely) to 3 (like extremely). They also reported their overall preference for PV and GV at the end of the fMRI experiment.\n\nParticipants were scanned in a Siemens 3.0-T scanner (MAGNETOM Prisma, Siemens Healthcare Erlangen, Germany) using a 20-channel coil. Structural images were acquired during a 5 min and 18 s scan with a T1-weighted magnetization prepared rapid gradient echo sequence: TR = 2,300 ms, TE = 2.32 ms, slice thickness = 0.9 mm, voxel size = 0.90 × 0.90 × 0.90 mm3, voxel matrix = 256 × 256, flip angle = 8, field of view = 240 mm. During each task session of task-based scan, a total of 1,095 whole-brain volumes were collected using a T2*-weighted gradient echo planar imaging sequence with multi-bands acceleration (TR = 1,000 ms, TE = 34 ms, slice thickness = 2.50 mm, voxel size = 2.50 × 2.50 × 2.50 mm3, voxel matrix = 92 × 92, flip angle = 50, field of view = 230 mm2, slices number = 52, MB-factor = 4).\n\nPreprocessing of fMRI data included the following steps. First, slice time correction and head motion correction were performed using AFNI (Cox, 1996). Then, tissue segmentation was conducted to extract brains using SPM12 (https://www.fil.ion.ucl.ac.uk/spm/). Structural and functional images were normalized to the MNI space (2.5 mm isotropic spatial resolution) using ANTs (http://stnava.github.io/ANTs/). Finally, spatial smoothing was conducted with a 5 mm full-width-at-half-maximum Gaussian kernel.\n\nBefore calculating correlation coefficients between networks, a voxel-wise multiple regression approach was used to remove the effects of confounding variables as below. The block wise hemodynamic response to each task condition (PV, GV, Rest) and their first-derivative terms were used to remove the task-evoked block-wise changes in fMRI signals (Whitfield-Gabrieli & Nieto-Castanon, 2012). The first five principal components of white-matter and cerebrospinal fluid signals, six motion parameters, and their temporal first-order derivatives were used as covariates to remove physiology- and motion-related confounds. A high pass filtering (>0.001 Hz) and linear detrending were also performed.\n\nGraph theory analysis was employed to characterize interactions between multiple networks during the task. The Conn functional connectivity toolbox 19.b (Whitfield-Gabrieli & Nieto-Castanon, 2012) was applied to construct condition-specific functional connectivity matrices for each participant using a template of 81 regions of interest (ROIs) detailed below. We defined the large-scale networks with 81 ROIs primarily based on Power and colleagues' work (Power et al., 2011). Nevertheless, to better characterize the functional heterogeneity of default mode network (DMN), we replaced the DMN coordinates in Power's template with coordinates used by Andrews-Hanna, Reidler, Huang, and Buckner (2010) and Andrews-Hanna, Reidler, Sepulcre, et al. (2010), in which the DMN Core subsystem was defined by four nodes (2 for each hemisphere), the dMPFC subsystem was defined by 7 nodes (3 for each hemisphere, and the dMPFC was at the medial plane), and the MTL subsystem was defined by 9 nodes (4 for each hemisphere, and the vMPFC was at midline). Since this atlas (Power et al., 2011) includes several networks that we are not interested in, we only used the coordinates of these four networks, namely FPN, VAN, DAN, and SN. The set of ROIs (5 mm radius spheres) was generated using 3dcalc with AFNI (Cox, 1996) with the center coordinates defined above. These networks were visualized with the BrainNet Viewer program (https://www.nitrc.org/projects/bnv/).\n\nEach ROI's average time course was extracted and pair-wise Pearson correlations between these time courses were calculated after preprocessing procedures described above. Following previous routines of graph theory analysis, we set a sparsity of 15% to remove the weak links and maintain the strong positive correlations. Since there is still no consensus on which threshold is the best to choose, we also verified the results with the proportional threshold of 10% and 20%. The overall results were consistent, therefore we only reported the results of 15% in the main text. Brain Connectivity Toolbox (Rubinov & Sporns, 2010) was used to calculate the graph theory measures, including seven intra-network connections and twenty-one inter-network connections in two task conditions and rest, separately.\n\nStatistical analysis was conducted using SPSS 21.0 software (SPSS Inc, Chicago, IL). A one-way repeated measures analysis of variance (ANOVA) was used to test whether there were any differences among the three conditions. The Bonferroni correction was used to control false positive for multiple comparisons.\n\nThe rating scores of twenty-eight participants were obtained in our study, and two participants were excluded due to their incomplete evaluation data. Paired T-test showed that the mean rating score for video preference was significantly higher for PV than that for GV (t = 3.647, p = .0011). In addition, 26 out of 28 participants reported a higher overall preference to PV. These results confirmed that participants did prefer PV to GV.\n\nThe data are available from the corresponding author upon reasonable request.\n\nThis is an open access article under the terms of the Creative Commons Attribution-NonCommercial-NoDerivs License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non-commercial and no modifications or adaptations are made.\n\nWith the emergence of AI-powered recommender systems and their extensive use in the video streaming service, questions and concerns also arise. To address these questions, we designed an fMRI experiment presenting participants with personally recommended videos and generally recommended ones. Our results showed that viewing nonpersonalized video content mainly enhanced the connectivity in the DAN-FPN-Core pathway, whereas viewing personalized ones increased not only the connectivity in this pathway but also the DAN-VAN-dMPFC pathway. Collectively, these findings uncovered distinct patterns of network interactions in response to short videos and provided insights into potential neural mechanisms by which human behaviors are biased by personally recommended content.\n\nIndividualized video recommendation modulates functional connectivity between large scale networks. Conghui Su, Hui Zhou, Chunjie Wang, Fengji Geng, and Yuzheng Hu. Human Brain Mapping, 42(16), 5288–5299 (2021). DOI: 10.1002/hbm.25616."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8906,
+            "end": 9004,
+            "text": "Individualized video recommendation modulates functional connectivity between large scale networks",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9006,
+            "end": 9069,
+            "text": "Conghui Su, Hui Zhou, Chunjie Wang, Fengji Geng, and Yuzheng Hu",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9110,
+            "end": 9116,
+            "text": "(2021)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9071,
+            "end": 9090,
+            "text": "Human Brain Mapping",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9123,
+            "end": 9140,
+            "text": "10.1002/hbm.25616",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8130,
+            "end": 8273,
+            "text": "With the emergence of AI-powered recommender systems and their extensive use in the video streaming service, questions and concerns also arise.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7846,
+            "end": 7959,
+            "text": "This is an open access article under the terms of the Creative Commons Attribution-NonCommercial-NoDerivs License",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7767,
+            "end": 7844,
+            "text": "The data are available from the corresponding author upon reasonable request.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7975,
+            "end": 8128,
+            "text": "use and distribution in any medium, provided the original work is properly cited, the use is non-commercial and no modifications or adaptations are made.",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2775,
+            "end": 2852,
+            "text": "Siemens 3.0-T scanner (MAGNETOM Prisma, Siemens Healthcare Erlangen, Germany)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3383,
+            "end": 3408,
+            "text": "slice thickness = 2.50 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3040,
+            "end": 3064,
+            "text": "slice thickness = 0.9 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3471,
+            "end": 3486,
+            "text": "flip angle = 50",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3129,
+            "end": 3143,
+            "text": "flip angle = 8",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3145,
+            "end": 3167,
+            "text": "field of view = 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3488,
+            "end": 3511,
+            "text": "field of view = 230 mm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3011,
+            "end": 3024,
+            "text": "TR = 2,300 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3356,
+            "end": 3369,
+            "text": "TR = 1,000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3026,
+            "end": 3038,
+            "text": "TE = 2.32 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3371,
+            "end": 3381,
+            "text": "TE = 34 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3066,
+            "end": 3101,
+            "text": "voxel size = 0.90 × 0.90 × 0.90 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3410,
+            "end": 3445,
+            "text": "voxel size = 2.50 × 2.50 × 2.50 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3513,
+            "end": 3531,
+            "text": "slices number = 52",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 75,
+            "text": "Thirty healthy students from Zhejiang University participated in this study",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3614,
+            "end": 3688,
+            "text": "slice time correction and head motion correction were performed using AFNI",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1685,
+            "end": 1774,
+            "text": "A block design including three conditions (PV, GV, and Rest) was used in this experiment.",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1775,
+            "end": 1822,
+            "text": "Both PV and GV conditions contained six blocks.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1823,
+            "end": 1850,
+            "text": "Each block lasted for 1 min",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1855,
+            "end": 1887,
+            "text": "consisted of 1 to 6 short videos",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2407,
+            "end": 2488,
+            "text": "participants were merely instructed to watch the presentation of videos as usual.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 930,
+            "end": 1020,
+            "text": "Both PV and GV were short video clips recorded from TikTok with a total six-minute length.",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7102,
+            "end": 7238,
+            "text": "A one-way repeated measures analysis of variance (ANOVA) was used to test whether there were any differences among the three conditions.",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7102,
+            "end": 7158,
+            "text": "A one-way repeated measures analysis of variance (ANOVA)",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 75,
+            "text": "Thirty healthy students from Zhejiang University participated in this study",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 89,
+            "end": 114,
+            "text": "age: 23.73 ± 2.38 [M, SD]",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 77,
+            "end": 87,
+            "text": "14 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 181,
+            "end": 239,
+            "text": "They reported no major diseases or mental health problems.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 117,
+            "end": 180,
+            "text": "All participants were adults and had a history of using TikTok.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 389,
+            "end": 465,
+            "text": "no participant was excluded from our final fMRI analyses due to head motion.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 532,
+            "end": 602,
+            "text": "This study was approved by the Ethic Committee of Zhejiang University.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7478,
+            "end": 7619,
+            "text": "Paired T-test showed that the mean rating score for video preference was significantly higher for PV than that for GV (t = 3.647, p = .0011).",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3614,
+            "end": 3688,
+            "text": "slice time correction and head motion correction were performed using AFNI",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3614,
+            "end": 3615,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3640,
+            "end": 3688,
+            "text": "head motion correction were performed using AFNI",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3640,
+            "end": 3641,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3708,
+            "end": 3771,
+            "text": "tissue segmentation was conducted to extract brains using SPM12",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3708,
+            "end": 3709,
+            "text": "3",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Algorithm",
+            "Segmentation — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3914,
+            "end": 3956,
+            "text": "using ANTs (http://stnava.github.io/ANTs/)",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3877,
+            "end": 3912,
+            "text": "2.5 mm isotropic spatial resolution",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3810,
+            "end": 3811,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4006,
+            "end": 4053,
+            "text": "5 mm full-width-at-half-maximum Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3967,
+            "end": 3968,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4226,
+            "end": 4403,
+            "text": "The block wise hemodynamic response to each task condition (PV, GV, Rest) and their first-derivative terms were used to remove the task-evoked block-wise changes in fMRI signals",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4226,
+            "end": 4227,
+            "text": "6",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4449,
+            "end": 4532,
+            "text": "The first five principal components of white-matter and cerebrospinal fluid signals",
+            "labels": [
+              "CompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4449,
+            "end": 4532,
+            "text": "The first five principal components of white-matter and cerebrospinal fluid signals",
+            "labels": [
+              "CompCor — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4449,
+            "end": 4450,
+            "text": "7",
+            "labels": [
+              "CompCor — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "CompCor — Software"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4534,
+            "end": 4675,
+            "text": "six motion parameters, and their temporal first-order derivatives were used as covariates to remove physiology- and motion-related confounds.",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4534,
+            "end": 4535,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4676,
+            "end": 4709,
+            "text": "A high pass filtering (>0.001 Hz)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4699,
+            "end": 4708,
+            "text": ">0.001 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4676,
+            "end": 4677,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4714,
+            "end": 4751,
+            "text": "linear detrending were also performed",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4714,
+            "end": 4715,
+            "text": "10",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Software",
+            "Temporal detrending — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5115,
+            "end": 5231,
+            "text": "We defined the large-scale networks with 81 ROIs primarily based on Power and colleagues' work (Power et al., 2011).",
+            "labels": [
+              "Atlas definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5069,
+            "end": 5098,
+            "text": "81 regions of interest (ROIs)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5977,
+            "end": 6106,
+            "text": "The set of ROIs (5 mm radius spheres) was generated using 3dcalc with AFNI (Cox, 1996) with the center coordinates defined above.",
+            "labels": [
+              "ROI definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6211,
+            "end": 6255,
+            "text": "Each ROI's average time course was extracted",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6260,
+            "end": 6333,
+            "text": "pair-wise Pearson correlations between these time courses were calculated",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6436,
+            "end": 6532,
+            "text": "we set a sparsity of 15% to remove the weak links and maintain the strong positive correlations.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6647,
+            "end": 6684,
+            "text": "proportional threshold of 10% and 20%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6865,
+            "end": 6970,
+            "text": "graph theory measures, including seven intra-network connections and twenty-one inter-network connections",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7102,
+            "end": 7238,
+            "text": "A one-way repeated measures analysis of variance (ANOVA) was used to test whether there were any differences among the three conditions.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

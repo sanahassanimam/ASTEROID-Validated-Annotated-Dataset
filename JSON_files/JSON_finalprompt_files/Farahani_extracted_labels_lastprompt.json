@@ -1,0 +1,933 @@
+{
+  "data": {
+    "text": "Diurnal variations of resting-state fMRI data: A graph-based analysis\nFarzad V. Farahani, Waldemar Karwowski, Mark D’Esposito, Richard F. Betzel, Pamela K. Douglas, Anna Maria Sobczak, Bartosz Bohaterewicz, Tadeusz Marek, Magdalena Fafrowicz.\nNeuroimage. 2022 August 01; 256: 119246. doi:10.1016/j.neuroimage.2022.119246.\nThis is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).\n\nData and code availability statement\nFunctional MRI data are available from Magdalena Fafrowicz (email: magda.fafrowicz@uj.edu.pl). The DPABI toolbox used for data preprocessing is freely available online (http://rfmri.org/dpabi). Graph theory measures were calculated using the Brain Connectivity Toolbox (https://sites.google.com/site/bctnet/) and GRETNA toolkit (https://www.nitrc.org/projects/gretna). Python code for network and statistical analyzes discussed in the paper, as well as visualizations, can be found via the following link: https://github.com/fvfarahani/time-of-day, in which we used different packages such as NumPy, Pandas, SciPy, Statsmodels, Nilearn, Teneto, Matplotlib, and Seaborn. The GenLouvain MATLAB package (Jutla et al., 2011) used for multi-layer community detection is freely available online (https://github.com/GenLouvain/GenLouvain). Code for the statistical analysis (permutation test for two-way ANOVA) is freely available online (https://www.mathworks.com/matlabcentral/fileexchange/44308-randanova2).\n\nSixty-two individuals (31 MT and 31 ET) underwent two fMRI sessions, approximately 1 hour (morning) and 10 h (evening) after their wake-up time, according to their declared habitual sleep-wake pattern on a regular working day.\n\nParticipants were recruited through online advertisements on the laboratory’s website and Facebook page. A total of 5354 volunteers participated in the first stage of selection; they were asked to complete three questionnaires: the Chronotype Questionnaire (Oginska et al., 2017) for assessing diurnal preferences, the Epworth Sleepiness Scale (ESS; Johns, 1991) for measuring daytime sleepiness, and the sleep-wake assessment (real versus ideal wake-up and bedtimes). Individuals reporting excessive daytime sleepiness were excluded from the study, as determined by a cutoff ESS score of 10 or fewer points. Four hundred fifty-one participants were divided into morning or evening chronotypes. All participants underwent genotyping to identify PER3 VNTR polymorphisms in DNA isolated from buccal swabs using a DNA Gen-eMATRIX Swab-Extract DNA Purification Kit (EURx, Gdańsk, Poland) according to the manufacturer’s protocol. Other selection criteria included an age between 20 and 35 years, right-handedness—as indicated by the Edinburgh Handedness Inventory (Oldfield, 1971)—a regular TOD schedule with no sleep debt, no neurological or psychiatric disorders, no addiction, normal or corrected-to-normal vision, and no contraindications to magnetic resonance imaging (MRI). We identified 73 young, healthy participants (39 women; age: 23.97 ± 3.26 years) who met these criteria and selected them for the study. Demographic information and the results of the questionnaires are provided in Table 1.\n\nResting-state fMRI was performed twice, in a morning and evening session, about 1 and 10 h, respectively, after awakening from nighttime sleep. The order of the sessions was counterbalanced across the study sample. The participants were asked to maintain a regular sleep-wake schedule for one week before the study, which was monitored using Motion Watch 8 actigraphs. These actigraphs were also worn to supervise participants’ sleep length and quality during the study days. The night before the morning sessions, the participants slept in the same building as the MRI scanner. All participants abstained from alcohol (48 h) and caffeine (24 h) before the MRI scanning sessions and were only allowed to engage in non-strenuous activities during study days. The study was approved by the Institute of Applied Psychology Ethics Committee of the Jagiellonian University (Krakow, Poland). Written informed consent was provided by all participants in accordance with the Declaration of Helsinki.\n\nMRI studies were conducted using a 3T Siemens Skyra MR system equipped with a 64-channel head coil. Anatomical data were acquired through a sagittal 3-dimensional T1-weighted MPRAGE sequence. Ten minutes of resting-state blood oxygenation level-dependent (BOLD) images were scanned using a gradient-echo single-shot echo-planar imaging sequence with the following parameters: repetition time (TR) = 1800 ms; echo time (TE) = 27 ms; field of view (FOV) = 256 × 256 mm2; slice thickness = 4 mm; and voxel size = 4 × 4 × 4 mm3 with no gap. A total of 34 interleaved transverse slices and 335 vol were collected for each participant. The subjects were instructed to remain awake with their eyes open and to avoid thinking of anything deliberately throughout the scanning session. The participants were monitored using an eye-tracking system to ensure that they remained awake throughout the scan (Eyelink 1000, SR Research, Mississauga, ON, Canada).\n\nData preprocessing was performed using DPABI software (http://rfmri.org/dpabi) based on Statistical Parametric Mapping 12 (SPM12, http://www.fil.ion.ucl.ac.uk/spm/) on the MATLAB platform (MathWorks, Inc., Natick, MA). Due to signal equilibration, the first ten volumes were discarded. This was followed by slice timing and realignment with an appraisal of voxel-specific head motion. The head motion parameters were determined for each participant; those with movements above 3 mm translation and 3° rotation were excluded from further examination. A total of four participants were excluded due to excessive head movements. Next, functional scans were registered using T1 images and normalized to the Montreal Neurological Institute (MNI) template using DARTEL (Ashburner, 2007) at a resolution of 3 × 3 × 3 mm3. In total, seven participants were excluded due to low-quality image registration. Functional data were spatially smoothed using a 4-mm fullwidth half maximum (FWHM) Gaussian kernel to increase the signal-to-noise ratio. The signal was band-pass filtered (0.01–0.1 Hz). Finally, the nuisance signals (24 motion parameters, cerebrospinal fluid, and white matter signals) were removed from the time course of each voxel (Behzadi et al., 2007). We did not regress out the global signal to keep any additional information (Liu et al., 2017).\n\nOur analysis pipeline is shown in Fig. 1. A large-scale brain network consists of a finite set of nodes (e.g., single neurons or anatomical brain regions) that are connected by edges (e.g., structural or functional connections between nodes). We specified the nodes by parceling the brain into seven systems/networks consisting of 200 cortical regions of interest (ROIs) from the Schaefer-Yeo atlas (Schaefer et al., 2018; Fig. 1C). In this atlas, each node is preassigned to one of the following systems/networks: visual, somatomotor, dorsal attention, salience/ventral attention, limbic, frontoparietal, or default mode. Then, the average BOLD time series across all voxels within each ROI were extracted separately (Fig. 1D). The connectivity between each pair of ROIs was then computed using Pearson’s correlation coefficient. The correlation values were converted into z-values using Fisher’s r-to-z transformation to improve the normality. At this stage, a symmetrical weighted connectivity matrix (adjacency matrix) with a size of 200 × 200 was constructed for each participant (Fig. 1E). To reduce the number of spurious connections in the fully weighted matrices (Power et al., 2011), we adopted a thresholding procedure based on network density to preserve the ratios of the strongest connections and remove the weaker links (van den Heuvel et al., 2017). The sparsity threshold used in this study ranged from 0.05 to 0.5 with an interval of 0.05 to prevent the creation of either disconnected or densely connected networks (Wang et al., 2020). This step was followed by binarizing the thresholded matrices to render the computational complexity more tractable (Fig. 1F). We used the absolute value of all correlations in weighted matrices for binarization. In this study, we used both the weighted and binary matrices depending on the type of analysis (i.e., global, mesoscale, local, or hub analysis) described in the following sections.\n\nUsing binary undirected matrices, we examined the topological features of functional brain networks for each subject across a range of cost thresholds at the global and local levels with the brain connectivity toolbox (BCT; Rubinov and Sporns, 2010) and the GRETNA toolkit (Wang et al., 2015). Global metrics principally measure the functional segregation and integration of brain networks. Thus, we calculated global efficiency, mean clustering coefficient, characteristic path length, small-worldness, assortativity, and synchronization. Local network measures were calculated separately for each node (region) by examining the nodal centrality and density of network hubs (i.e., nodes with more than the average number of links). We calculated the most common local properties, including degree centrality, betweenness centrality, nodal clustering coefficient, nodal efficiency, and participation coefficient (Rubinov and Sporns, 2010).\n\nTable 1. Summary statistics for demographics and questionnaires. Variables (mean ± SD) MT (n = 31) ET (n = 31). Sex (M/F) 11/20 12/19. Age (years) 24.45 ± 3.83 23.48 ± 2.55. ME 15.71 ± 2.41 28.45 ± 3.83. AM 21.47 ± 3.58 22.26 ± 3.51. ESS 5.52 ± 2.48 5.87 ± 3.01. EHI 86.83 ± 12.92 89.19 ± 13.93."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 69,
+            "text": "Diurnal variations of resting-state fMRI data: A graph-based analysis",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 70,
+            "end": 88,
+            "text": "Farzad V. Farahani",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 243,
+            "end": 254,
+            "text": "Neuroimage.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 255,
+            "end": 259,
+            "text": "2022",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 288,
+            "end": 320,
+            "text": "10.1016/j.neuroimage.2022.119246",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 462,
+            "end": 520,
+            "text": "Functional MRI data are available from Magdalena Fafrowicz",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 968,
+            "end": 1009,
+            "text": "https://github.com/fvfarahani/time-of-day",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 322,
+            "end": 376,
+            "text": "This is an open access article under the CC BY license",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4224,
+            "end": 4250,
+            "text": "3T Siemens Skyra MR system",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4726,
+            "end": 4769,
+            "text": "A total of 34 interleaved transverse slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4658,
+            "end": 4680,
+            "text": "slice thickness = 4 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4713,
+            "end": 4724,
+            "text": "with no gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4582,
+            "end": 4595,
+            "text": "TR) = 1800 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4608,
+            "end": 4619,
+            "text": "TE) = 27 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4621,
+            "end": 4656,
+            "text": "field of view (FOV) = 256 × 256 mm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4686,
+            "end": 4712,
+            "text": "voxel size = 4 × 4 × 4 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4864,
+            "end": 4884,
+            "text": "with their eyes open",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5175,
+            "end": 5264,
+            "text": "DPABI software (http://rfmri.org/dpabi) based on Statistical Parametric Mapping 12 (SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4381,
+            "end": 4457,
+            "text": "Ten minutes of resting-state blood oxygenation level-dependent (BOLD) images",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1467,
+            "end": 1506,
+            "text": "Sixty-two individuals (31 MT and 31 ET)",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1467,
+            "end": 1506,
+            "text": "Sixty-two individuals (31 MT and 31 ET)",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3027,
+            "end": 3050,
+            "text": "age: 23.97 ± 3.26 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2754,
+            "text": "right-handedness—as indicated by the Edinburgh Handedness Inventory",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2621,
+            "end": 2970,
+            "text": "Other selection criteria included an age between 20 and 35 years, right-handedness—as indicated by the Edinburgh Handedness Inventory (Oldfield, 1971)—a regular TOD schedule with no sleep debt, no neurological or psychiatric disorders, no addiction, normal or corrected-to-normal vision, and no contraindications to magnetic resonance imaging (MRI).",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5686,
+            "end": 5761,
+            "text": "A total of four participants were excluded due to excessive head movements.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5951,
+            "end": 6032,
+            "text": "In total, seven participants were excluded due to low-quality image registration.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9493,
+            "end": 9515,
+            "text": "Sex (M/F) 11/20 12/19.",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9468,
+            "end": 9491,
+            "text": "MT (n = 31) ET (n = 31)",
+            "labels": [
+              "Group matching"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3954,
+            "end": 4081,
+            "text": "The study was approved by the Institute of Applied Psychology Ethics Committee of the Jagiellonian University (Krakow, Poland).",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4819,
+            "end": 4964,
+            "text": "The subjects were instructed to remain awake with their eyes open and to avoid thinking of anything deliberately throughout the scanning session.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1330,
+            "end": 1364,
+            "text": "permutation test for two-way ANOVA",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5355,
+            "end": 5421,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm",
+            "Removal Init Vol — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5422,
+            "end": 5471,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5175,
+            "end": 5214,
+            "text": "DPABI software (http://rfmri.org/dpabi)",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5443,
+            "end": 5520,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5460,
+            "end": 5519,
+            "text": "realignment with an appraisal of voxel-specific head motion",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5586,
+            "end": 5685,
+            "text": "4",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5597,
+            "end": 5685,
+            "text": "movements above 3 mm translation and 3° rotation were excluded from further examination.",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Exclusion — Software",
+            "Exclusion — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5762,
+            "end": 5816,
+            "text": "5",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5768,
+            "end": 5816,
+            "text": "functional scans were registered using T1 images",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5821,
+            "end": 5950,
+            "text": "6",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5892,
+            "end": 5916,
+            "text": "DARTEL (Ashburner, 2007)",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5922,
+            "end": 5949,
+            "text": "resolution of 3 × 3 × 3 mm3",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5951,
+            "end": 6032,
+            "text": "7",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5961,
+            "end": 6032,
+            "text": "seven participants were excluded due to low-quality image registration.",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6033,
+            "end": 6131,
+            "text": "8",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6116,
+            "end": 6131,
+            "text": "Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6081,
+            "end": 6115,
+            "text": "4-mm fullwidth half maximum (FWHM)",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6171,
+            "end": 6219,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6186,
+            "end": 6204,
+            "text": "band-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6206,
+            "end": 6217,
+            "text": "0.01–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6220,
+            "end": 6391,
+            "text": "10",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6251,
+            "end": 6271,
+            "text": "24 motion parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Type"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6273,
+            "end": 6367,
+            "text": "11",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6273,
+            "end": 6318,
+            "text": "cerebrospinal fluid, and white matter signals",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6820,
+            "end": 6921,
+            "text": "200 cortical regions of interest (ROIs) from the Schaefer-Yeo atlas (Schaefer et al., 2018; Fig. 1C).",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6820,
+            "end": 6859,
+            "text": "200 cortical regions of interest (ROIs)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6783,
+            "end": 6887,
+            "text": "seven systems/networks consisting of 200 cortical regions of interest (ROIs) from the Schaefer-Yeo atlas",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7118,
+            "end": 7206,
+            "text": "the average BOLD time series across all voxels within each ROI were extracted separately",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7285,
+            "end": 7318,
+            "text": "Pearson’s correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7452,
+            "end": 7536,
+            "text": "symmetrical weighted connectivity matrix (adjacency matrix) with a size of 200 × 200",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7378,
+            "end": 7408,
+            "text": "Fisher’s r-to-z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7696,
+            "end": 7743,
+            "text": "thresholding procedure based on network density",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7859,
+            "end": 7945,
+            "text": "sparsity threshold used in this study ranged from 0.05 to 0.5 with an interval of 0.05",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8446,
+            "end": 8472,
+            "text": "binary undirected matrices",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8631,
+            "end": 8732,
+            "text": "brain connectivity toolbox (BCT; Rubinov and Sporns, 2010) and the GRETNA toolkit (Wang et al., 2015)",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8851,
+            "end": 8978,
+            "text": "global efficiency, mean clustering coefficient, characteristic path length, small-worldness, assortativity, and synchronization",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9231,
+            "end": 9351,
+            "text": "degree centrality, betweenness centrality, nodal clustering coefficient, nodal efficiency, and participation coefficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

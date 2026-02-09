@@ -1,0 +1,652 @@
+{
+  "data": {
+    "text": "Working memory capacity and the functional connectome - insights from resting-state fMRI and voxelwise centrality mapping\nSebastian Markett, Martin Reuter, Behrend Heeren, Bernd Lachmann, Bernd Weber, Christian Montag\nBrain Imaging and Behavior (2018) 12:238–246\nDOI 10.1007/s11682-017-9688-9\n\nThe study protocol was approved by the ethics committee of the University Clinics Bonn and was in accordance with the Declaration of Helsinki. A total of N = 78 healthy, right-handed volunteers (n = 39 males, n = 39 females, mean age M = 23.32 years, SD = 3.71) participated in the study after providing informed written consent. All participants were free of past or present psychiatric disorders, neurological disorders or past head injuries as assessed by a screening questionnaire.\n\nWorking memory capacity was assessed outside the MRI scanner immediately after image acquisition by a change detection task (Luck and Vogel 1997). A total of 128 trials were administered in 4 blocks (hence 32 trials in each block). Each trial started with a centrally presented fixation cross (500 ms). Subsequently, a variable number of colored squares (.08°) lit up on randomly chosen positions around central fixation (about 3.3° away). Squares were either black, blue, green, purple, red, white or yellow, and no squares of the same color were presented on a given trial. The brief presentation of 100 ms ensured that participants were not able to rely on eye-movements or meta-mnemonic strategies to memorize the squares’ colors. The number of squares was increased block wise from three to six (block 1 = three squares, block 2 = four squares, block 3 = five squares and block 4 = six squares). After stimulus presentation and a stimulation free retention interval of 1000 ms a probe array appeared. This array was either identical to the memory array (catch trial) or different with respect to the color of one square (change trial). Both trial types occurred equally often (16 catch and 16 change trials) and participants were instructed to indicate by button press on a keyboard whether a change had occurred or not. Trials were spaced by an intertrial interval of 1000 ms. Participants were allowed to take breaks between blocks.\nIndividuals’ working memory capacity was quantified by a formula originally proposed by Pashler (1988) for whole-display change detection paradigms: For each block, the maximal capacity was estimated by K = ((HR - FR) / (1 - FR)) * N, where K is the individuals working memory capacity on this block, HR and FR the hit and false alarm rates and N the number of squares in the array. As the main dependent measure, the highest individual capacity estimate across blocks was selected and set as individuals’ overall working memory capacity (Markett et al. 2010).\n\nFrom each participant, 245 T2*-weighted volumes were obtained on a Siemens Avanto 1.5 T scanner at the Life & Brain Center in a single 12-min session. Each volume consisted of 38 slices (thickness: 3 mm, interslice gap: 1 mm, in plane resolution: 3 mm × 3 mm) scanned in interleaved order (TR: 3.04 s, TE: 45 ms, Flip Angle: 90°, Field of View: 192 mm). Participants were instructed to lie as still as possible with their eyes closed and without thinking about anything in particular and without falling asleep. After the functional scan, a high resolution structural T1-weighted image with 160 sagittal slices with 1 mm thickness was acquired from each participant using a Magnetization Prepared Rapid Gradient Echo (MP-RAGE) sequence (Field of View: 256mm, in plane resolution: 1 mm x 1 mm). Foam padding was used to constrain head movements during image acquisition.\n\nPreprocessing of the functional MRI data was carried out using SPM8 (www.fil.ion.ucl.ac.uk/spm) and the data processing assistant for resting state fMRI (DPARSF, Yan and Zang 2010). Preprocessing contained the following steps: (1) removal of the first ten volumes (2) slice timing (3) realignment (4) controlling for twelve voxel-specific movement parameters and the head motion scrubbing regressors, as well as whole brain, white matter and cerebrospinal fluid signals by means of linear regression (5) bandpass filtering (.01 –.08 hz) (6) coregistration with the high resolution structural scan (7) spatial normalization using the T1-unified segmentations of the structural image and (8) spatial smoothing with a Gaussian kernel with a full width of 6 mm at half maximum. Identification of bad time points for head motion scrubbing (motion censoring) was based on the DPARSF default setting: Time points with a framewise displacement >0.5 as well as time points immediately preceding (one time point) and succeeding (two time points) these time points were flagged as bad. Scrubbing was performed by means of linear regression to avoid individual differences in the amount of time points for connectivity analyses. Three participants were excluded from further analyses because of excessive head movement (> 3° rotation or >3 mm translation)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 121,
+            "text": "Working memory capacity and the functional connectome - insights from resting-state fMRI and voxelwise centrality mapping",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 122,
+            "end": 217,
+            "text": "Sebastian Markett, Martin Reuter, Behrend Heeren, Bernd Lachmann, Bernd Weber, Christian Montag",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 246,
+            "end": 250,
+            "text": "2018",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 263,
+            "end": 292,
+            "text": "DOI 10.1007/s11682-017-9688-9",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2850,
+            "end": 2878,
+            "text": "Siemens Avanto 1.5 T scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2959,
+            "end": 2968,
+            "text": "38 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2970,
+            "end": 2985,
+            "text": "thickness: 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2987,
+            "end": 3007,
+            "text": "interslice gap: 1 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3096,
+            "end": 3111,
+            "text": "Flip Angle: 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2918,
+            "end": 2932,
+            "text": "12-min session",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3205,
+            "end": 3216,
+            "text": "eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3113,
+            "end": 3134,
+            "text": "Field of View: 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3073,
+            "end": 3083,
+            "text": "TR: 3.04 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3085,
+            "end": 3094,
+            "text": "TE: 45 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3009,
+            "end": 3041,
+            "text": "in plane resolution: 3 mm × 3 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3788,
+            "end": 3806,
+            "text": "resting state fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 437,
+            "end": 487,
+            "text": "A total of N = 78 healthy, right-handed volunteers",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "Missing_sublabels": [
+            "Most-used software for preprocessing"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3717,
+            "end": 3749,
+            "text": "SPM8 (www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 437,
+            "end": 487,
+            "text": "A total of N = 78 healthy, right-handed volunteers",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 488,
+            "end": 517,
+            "text": "(n = 39 males, n = 39 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 519,
+            "end": 554,
+            "text": "mean age M = 23.32 years, SD = 3.71",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 464,
+            "end": 476,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 646,
+            "end": 737,
+            "text": "free of past or present psychiatric disorders, neurological disorders or past head injuries",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4871,
+            "end": 4925,
+            "text": "Three participants were excluded from further analyses",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 317,
+            "end": 380,
+            "text": "approved by the ethics committee of the University Clinics Bonn",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2424,
+            "end": 2454,
+            "text": "K = ((HR - FR) / (1 - FR)) * N",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3885,
+            "end": 3917,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3885,
+            "end": 3917,
+            "text": "SPM8",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Parameters",
+            "Removal Init Vol — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3922,
+            "end": 3934,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3922,
+            "end": 3934,
+            "text": "SPM8",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Parameters",
+            "Slice timing correction — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3939,
+            "end": 3950,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3939,
+            "end": 3950,
+            "text": "SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Parameters",
+            "Alignment Head motion est — Algorithm"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3971,
+            "end": 4012,
+            "text": "4",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3971,
+            "end": 4012,
+            "text": "linear regression",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4066,
+            "end": 4123,
+            "text": "5",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4066,
+            "end": 4123,
+            "text": "linear regression",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4021,
+            "end": 4053,
+            "text": "6",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4567,
+            "end": 4594,
+            "text": "framewise displacement >0.5",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Software",
+            "Scrubbing — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4158,
+            "end": 4190,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4158,
+            "end": 4190,
+            "text": ".01 –.08 hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Type",
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4195,
+            "end": 4250,
+            "text": "8",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4195,
+            "end": 4250,
+            "text": "SPM8",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Algorithm",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4255,
+            "end": 4335,
+            "text": "9",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4255,
+            "end": 4335,
+            "text": "SPM8 unified segmentation",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4344,
+            "end": 4426,
+            "text": "10",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4344,
+            "end": 4426,
+            "text": "6 mm at half maximum",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm"
+          ]
+        }
+      ]
+    }
+  ]
+}

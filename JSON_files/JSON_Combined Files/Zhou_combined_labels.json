@@ -1,0 +1,1403 @@
+{
+  "data": {
+    "text": "The development of brain functional connectome during text reading\nDevelopmental Cognitive Neuroscience 48 (2021) 100927\nAvailable online 27 January 2021\nThe development of brain functional connectome during text reading\nWei Zhou a, Xiaohui Cui a, Baoguo Shi a, Mengmeng Su b,*, Miao Cao c,d,* \na Beijing Key Laboratory of Learning and Cognition, School of Psychology, Capital Normal University, Beijing, 100037, China \nb College of Elementary Education, Capital Normal University, Beijing, 100037, China \nc Institute of Science and Technology for Brain-Inspired Intelligence, Fudan University, Shanghai, 200433, China \nd Key Laboratory of Computational Neuroscience and Brain-Inspired Intelligence (Fudan University), Ministry of Education, China\nhttps://doi.org/10.1016/j.dcn.2021.100927\nThis is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).\n\n2.1. Subjects \nForty-two children (age: 10.3 years ± 0.08 years; 22 females) and thirty-two adults (age: 23.8 ± 4.6 years; 18 females) participated in the experiment (See Table 1 for more details on demographics and behavioral performances). Children were fourth to sixth graders students recruited from primary schools in Beijing and Shandong. Adults were recruited from universities in Beijing. All participants were native speakers of Mandarin Chinese with normal or corrected-to-normal vision and right-handed. This study was approved by the Research Ethics Committee at Capital Normal University. All subjects signed an informed written consent form before the experiment. None of them had a history of either neurological diseases or psychiatric disorders according to their self-reports.\n\n2.2. Experimental procedure \nFour brief introductions of Hans Christian Andersen’s fairytale stories in a Chinese extracurricular book were edited as the materials for the reading task (Zhou et al., 2020). Each story was presented in one block with 10 sentence trials. Each sentence had an average of 13.6 (SD = 1.5) characters (see Fig. 1). All the characters in the stories have been listed as learning materials in textbooks from Grades 1–4. Each sentence was presented for 3500 ms, followed by a blank screen for 500 ms. Each character was presented in Song font and occupied a 48 × 48 pixel grid with one character equal to approximately one degree of visual angle. Subjects were told to silently read the story and then judge the correctness of two comprehension questions by pressing a button with their right hand as accurately and fast as possible after each story. Each question was presented for 5000 ms, followed by a blank screen for 1000 ms. The task started with 14 s of rest, and each block was followed by 14 s of rest. During the rest periods, there was a fixation presented at the center of the screen, and the participants were asked to look at it.\n\n2.3. Image acquisition \nAll MRI data were obtained on a SIEMENS PRISMA 3-Tesla scanner in the Imaging Center for Brain Research at Peking University. A total of 139 whole brain EPI volumes were acquired with the following parameters: TR =2000 ms, TE =30 ms, flip angle = 90◦, in-plane imaging resolution = 3.5 × 3.5 mm2, FOV = 224 × 224 mm2, slice thickness = 3.5 mm with no gap, slice number = 33. A co-registered T1-weighted images were acquired with MP-RAGE sequence with the following parameters: TR =2530 ms, TE =2.98 ms, in-plane imaging resolution = 0.5 × 0.5 mm2, FOV = 256 × 224 mm2, slice thickness = 1 mm with no gap, sagittal slice number = 192. The acquired T1-weighted image was zero-filled to 256 × 224 image matrix.\n\n2.4. Preprocessing \nAs the current study focused on the functional connectivity of task-based fMRI, we concatenated the timecourses of task blocks to construct the FC matrix for network analysis (Richiardi et al., 2011). Image preprocessing was performed with DPABI (Yan and Zang, 2010) with the following steps: slice timing, realigning, normalizing to MNI space by using DARTEL segmentation (resampling to 3 × 3 × 3 mm3), spatial smoothing by DARTEL with a 6-mm FWHM Gaussian kernel, removing linear trends, high-pass temporal filtering with a cutoff of 0.01 Hz, and regressing out potential nuisance variables including 6 head motion parameters and the averaged signal from white matter, cerebrospinal fluid tissue and the whole brain. The data of 3 children other than that of 42 participants were excluded from analysis due to either head motion displacements > 3 mm or rotation > 3◦.\n\n2.5. Network analysis \nThe automated anatomical labeling (AAL) parcellation was used for whole-brain partitioning to define the nodes in the brain networks (Tzourio-Mazoyer et al., 2002). For each subject, the time series of each node during the text reading task were calculated by averaging the time series of all voxels within the region. Edges were calculated using the Pearson correlation coefficient between the time courses for each pair of nodes. Due to the ambiguous biological explanation of negative correlations (Fox et al., 2009; Murphy et al., 2009), only positive correlations were retained for further network analyses.\n\nFirst, we explored the developmental effects on functional connectivity strength. Before the group comparisons, a one-sample t-test was conducted in each group on the Fisher-z-transformed Pearson correlation coefficients for the connectivity between all pairs of brain regions. Connections that showed significant results in at least one group (p < 0.05 with FDR correction) were used for subsequent group comparison.\n\nTo further explore the development of brain network topological properties, we constructed the binarized functional brain network for each subject through thresholding the correlation matrices with a set of sparsity thresholds (ranging from 0.05 to 0.5 with a step of 0.05). The mean values of all explored network properties across the sparsity range were used for group comparisons. We explored the developmental effects on nodal and modular properties of the whole-brain network during text reading. The graph theoretical analysis was conducted with GRETNA (http://www.nitrc.org/projects/gretna/) (Wang et al., 2015). For modular analysis, we employed a predefined cognitive components template adapted from Yeo et al. (2015).\n\n2.6. Statistical analysis \nWe explored the developmental effects on connectional, nodal, and modular metrics using two-sample t-tests with sex and head motion as covariates. FDR corrections were conducted for multiple comparisons.\n\n3.1. Behavioral performances \nThe average accuracies on the comprehension questions for adults and children were 95% (SD = 7%) and 88% (SD = 14%) respectively. The average reaction times for the comprehension questions for adults and children were 1947 ms (SD = 449 ms) and 2229 ms (SD = 450 ms) respectively. There were significant group differences in accuracy, reaction time, and the reading score through dividing the accuracy by reaction time (ps < 0.05).\n\nData availability statement \nThe data supporting the current study have not been deposited in a public repository due to the restrictions on public sharing of the participants’ data but are available on request.\n\nAs the current study focused on the functional connectivity of task-based fMRI, we concatenated the timecourses of task blocks to construct the FC matrix for network analysis (Richiardi et al., 2011).\n\nThe automated anatomical labeling (AAL) parcellation was used for whole-brain partitioning to define the nodes in the brain networks (Tzourio-Mazoyer et al., 2002). For each subject, the time series of each node during the text reading task were calculated by averaging the time series of all voxels within the region. Edges were calculated using the Pearson correlation coefficient between the time courses for each pair of nodes. Due to the ambiguous biological explanation of negative correlations (Fox et al., 2009; Murphy et al., 2009), only positive correlations were retained for further network analyses.\n\nFirst, we explored the developmental effects on functional connectivity strength. Before the group comparisons, a one-sample t-test was conducted in each group on the Fisher-z-transformed Pearson correlation coefficients for the connectivity between all pairs of brain regions. Connections that showed significant results in at least one group (p < 0.05 with FDR correction) were used for subsequent group comparison.\n\nTo further explore the development of brain network topological properties, we constructed the binarized functional brain network for each subject through thresholding the correlation matrices with a set of sparsity thresholds (ranging from 0.05 to 0.5 with a step of 0.05). The mean values of all explored network properties across the sparsity range were used for group comparisons. We explored the developmental effects on nodal and modular properties of the whole-brain network during text reading. The graph theoretical analysis was conducted with GRETNA (http://www.nitrc.org/projects/gretna/) (Wang et al., 2015). Nodal degree is defined as the summed number of edges that connect a given node to the remaining regions, which reveals the importance of the node in the network. For modular analysis, we employed a predefined cognitive components template for the modular analysis which was adapted from Yeo et al. (2015) and generated based on a meta-analysis of task data with 12 cognitive components. M1 to M12 were labelled according to the top tasks for each cognitive component (see Table 2). Brain nodes were grouped to modules according to the template. The intra- and inter-module connectivity were calculated as the summed number of connections within and between-modules and then compared between groups."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 66,
+            "text": "The development of brain functional connectome during text reading",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 108,
+            "end": 112,
+            "text": "2021",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 67,
+            "end": 103,
+            "text": "Developmental Cognitive Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 748,
+            "end": 789,
+            "text": "https://doi.org/10.1016/j.dcn.2021.100927",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 221,
+            "end": 229,
+            "text": "Wei Zhou",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 790,
+            "end": 850,
+            "text": "This is an open access article under the CC BY-NC-ND license",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7166,
+            "end": 7186,
+            "text": "available on request",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 831,
+            "end": 842,
+            "text": "CC BY-NC-ND",
+            "labels": [
+              "Remarks"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2927,
+            "end": 2949,
+            "text": "SIEMENS PRISMA 3-Tesla",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3105,
+            "end": 3116,
+            "text": "TR =2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3118,
+            "end": 3127,
+            "text": "TE =30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3129,
+            "end": 3145,
+            "text": "flip angle = 90◦",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3192,
+            "end": 3211,
+            "text": "FOV = 224 × 224 mm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3213,
+            "end": 3237,
+            "text": "slice thickness = 3.5 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3243,
+            "end": 3249,
+            "text": "no gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3251,
+            "end": 3268,
+            "text": "slice number = 33",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3998,
+            "end": 4025,
+            "text": "resampling to 3 × 3 × 3 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3864,
+            "end": 3869,
+            "text": "DPABI",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4741,
+            "end": 4758,
+            "text": "text reading task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2965,
+            "end": 3019,
+            "text": "Imaging Center for Brain Research at Peking University",
+            "labels": [
+              "Multicenter study? (Y/N)"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1907,
+            "end": 1969,
+            "text": "Each story was presented in one block with 10 sentence trials.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2146,
+            "end": 2185,
+            "text": "Each sentence was presented for 3500 ms",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2187,
+            "end": 2224,
+            "text": "followed by a blank screen for 500 ms",
+            "labels": [
+              "ISI distribution"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2657,
+            "end": 2737,
+            "text": "The task started with 14 s of rest, and each block was followed by 14 s of rest.",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2372,
+            "end": 2479,
+            "text": "Subjects were told to silently read the story and then judge the correctness of two comprehension questions",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1758,
+            "end": 1801,
+            "text": "Hans Christian Andersen’s fairytale stories",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2226,
+            "end": 2301,
+            "text": "Each character was presented in Song font and occupied a 48 × 48 pixel grid",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1907,
+            "end": 1969,
+            "text": "Each story was presented in one block with 10 sentence trials.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6397,
+            "end": 6415,
+            "text": "two-sample t-tests",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6456,
+            "end": 6471,
+            "text": "FDR corrections",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 920,
+            "end": 938,
+            "text": "Forty-two children",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Age",
+            "Male/Female"
+          ],
+          "id": "m0031"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 986,
+            "end": 1003,
+            "text": "thirty-two adults",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Age",
+            "Male/Female"
+          ],
+          "id": "m0032"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 940,
+            "end": 968,
+            "text": "age: 10.3 years ± 0.08 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1010,
+            "end": 1026,
+            "text": "23.8 ± 4.6 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 970,
+            "end": 980,
+            "text": "22 females",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1028,
+            "end": 1038,
+            "text": "18 females",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1406,
+            "end": 1418,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1324,
+            "end": 1359,
+            "text": "native speakers of Mandarin Chinese",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1365,
+            "end": 1401,
+            "text": "normal or corrected-to-normal vision",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4406,
+            "end": 4492,
+            "text": "excluded from analysis due to either head motion displacements > 3 mm or rotation > 3◦",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1420,
+            "end": 1506,
+            "text": "This study was approved by the Research Ethics Committee at Capital Normal University.",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6901,
+            "end": 6961,
+            "text": "reading score through dividing the accuracy by reaction time",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Concatenate Runs",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3707,
+            "end": 3708,
+            "text": "1",
+            "labels": [
+              "Concatenate Runs — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Concatenate Runs",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3707,
+            "end": 3750,
+            "text": "concatenated the timecourses of task blocks",
+            "labels": [
+              "Concatenate Runs — Algorithm"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3917,
+            "end": 3918,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3917,
+            "end": 3929,
+            "text": "slice timing",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3931,
+            "end": 3932,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3931,
+            "end": 3941,
+            "text": "realigning",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3943,
+            "end": 3944,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3943,
+            "end": 3996,
+            "text": "normalizing to MNI space by using DARTEL segmentation",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3977,
+            "end": 3983,
+            "text": "DARTEL",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3998,
+            "end": 4025,
+            "text": "resampling to 3 × 3 × 3 mm3",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4028,
+            "end": 4029,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4028,
+            "end": 4045,
+            "text": "spatial smoothing",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4028,
+            "end": 4034,
+            "text": "DARTEL",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4063,
+            "end": 4088,
+            "text": "6-mm FWHM Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4090,
+            "end": 4091,
+            "text": "6",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4090,
+            "end": 4112,
+            "text": "removing linear trends",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4114,
+            "end": 4115,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4114,
+            "end": 4142,
+            "text": "high-pass temporal filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4150,
+            "end": 4167,
+            "text": "cutoff of 0.01 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4227,
+            "end": 4228,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4227,
+            "end": 4251,
+            "text": "6 head motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4256,
+            "end": 4257,
+            "text": "9",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4256,
+            "end": 4341,
+            "text": "the averaged signal from white matter, cerebrospinal fluid tissue and the whole brain",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4406,
+            "end": 4407,
+            "text": "10",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4406,
+            "end": 4492,
+            "text": "excluded from analysis due to either head motion displacements > 3 mm or rotation > 3◦",
+            "labels": [
+              "Exclusion — Algorithm"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7272,
+            "end": 7363,
+            "text": "1",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0068"
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7272,
+            "end": 7363,
+            "text": "concatenated the timecourses of task blocks to construct the FC matrix for network analysis",
+            "labels": [
+              "Combine block — Type"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7395,
+            "end": 7443,
+            "text": "2",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0070"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7395,
+            "end": 7443,
+            "text": "automated anatomical labeling (AAL) parcellation",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7457,
+            "end": 7523,
+            "text": "3",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0072"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7457,
+            "end": 7523,
+            "text": "whole-brain partitioning to define the nodes in the brain networks",
+            "labels": [
+              "ROI definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7651,
+            "end": 7708,
+            "text": "4",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0074"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7651,
+            "end": 7708,
+            "text": "averaging the time series of all voxels within the region",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7742,
+            "end": 7821,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0076"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7742,
+            "end": 7821,
+            "text": "Pearson correlation coefficient between the time courses for each pair of nodes",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7933,
+            "end": 8002,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0078"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7933,
+            "end": 8002,
+            "text": "only positive correlations were retained for further network analyses",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8172,
+            "end": 8225,
+            "text": "7",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0080"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8172,
+            "end": 8225,
+            "text": "Fisher-z-transformed Pearson correlation coefficients",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8283,
+            "end": 8422,
+            "text": "8",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0082"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8283,
+            "end": 8422,
+            "text": "Connections that showed significant results in at least one group (p < 0.05 with FDR correction) were used for subsequent group comparison.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8283,
+            "end": 8422,
+            "text": "Connections that showed significant results in at least one group (p < 0.05 with FDR correction) were used for subsequent group comparison.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8699,
+            "end": 8808,
+            "text": "The mean values of all explored network properties across the sparsity range were used for group comparisons.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8579,
+            "end": 8697,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0086"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8579,
+            "end": 8697,
+            "text": "thresholding the correlation matrices with a set of sparsity thresholds (ranging from 0.05 to 0.5 with a step of 0.05)",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          },
+          "id": "m0087"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8652,
+            "end": 8696,
+            "text": "ranging from 0.05 to 0.5 with a step of 0.05",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0088"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8931,
+            "end": 9044,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ],
+          "id": "m0089"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8931,
+            "end": 9044,
+            "text": "graph theoretical analysis was conducted with GRETNA (http://www.nitrc.org/projects/gretna/) (Wang et al., 2015).",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0090"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9045,
+            "end": 9149,
+            "text": "Nodal degree is defined as the summed number of edges that connect a given node to the remaining regions",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0091"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9591,
+            "end": 9744,
+            "text": "The intra- and inter-module connectivity were calculated as the summed number of connections within and between-modules and then compared between groups.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0092"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9244,
+            "end": 9350,
+            "text": "11",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0093"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9244,
+            "end": 9350,
+            "text": "predefined cognitive components template for the modular analysis which was adapted from Yeo et al. (2015)",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0094"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9433,
+            "end": 9527,
+            "text": "M1 to M12 were labelled according to the top tasks for each cognitive component (see Table 2).",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0095"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9528,
+            "end": 9590,
+            "text": "Brain nodes were grouped to modules according to the template.",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0096"
+        }
+      ]
+    }
+  ]
+}

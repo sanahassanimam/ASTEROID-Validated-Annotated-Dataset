@@ -1,0 +1,1008 @@
+{
+  "data": {
+    "text": "Effects of Visceral Interoception on Topological Properties of the Brain\n– A Graph Theory Analysis of Resting state fMRI\n\nBehnaz Jarrahi, Member, IEEE and Spyros Kollias\n\nAbstract— Recent neuroimaging studies have employed\ngraph theory as a data-driven approach to describe topological\norganization of the brain under different neurological disorders\nor task conditions and across life span. In this exploratory\nstudy, we tested whether subtle differences in interoception\nrelated to intravesical fullness can alter brain topological\narchitecture in healthy participants. 17 right-handed women\nunderwent a series of resting state fMRI scans that included\ncatheterization and partial bladder filling. Using a whole brain\nregions of interest (ROIs), we computed several graph theory\nmetrics to assess the efficiency of brain-wide information\nexchange. Results showed that brain network’s topological\nproperties significantly changed in many brain regions when we\nbinary compared different interoceptive resting state conditions.\nNotably, we observed changes in global efficiency in the\nsalience network, the central executive network, anterior dorsal\nattention network and the posterior default-mode network\n(DMN) as bladder became full and interoceptive signals\nintensified. Moreover, degree (the number of connections for\neach node), and betweenness centrality (how connected a\nparticular region is to other regions) differed between the empty\nbladder, the catheterized empty bladder, and the catheterized\nand partially filled bladder. Comparing resting state data before\nand after an interoceptive task (repeated intravesical infusion\nand drainage) further showed increased average path length\nfor the salience networks and decreased clustering coefficient of\nthe DMN. These results suggest visceral interoception influences\nbrain topological properties of resting state networks.\n\nSeventeen healthy women (mean age 31.12 ± 8.7 years)\nparticipated in this study. Only women were recruited\nbecause of the known gender difference in brain response\nto viscerosensory stimulation. Written informed consent\nwas obtained before the MRI scan and the study protocol\nwas approved by the Institutional Review Board of the local\nethics committee and conformed to the ethical guidelines\nof the Declaration of Helsinki. As shown in Fig. 1, a high-\nresolution T1-weighted image was obtained to yield an\nanatomical underlay for the fMRI results. The first resting\nstate fMRI scan (REST1) was then collected during rest with\neyes open (i.e., subjects were asked not to think of anything\nin particular, and to passively look at the fixation point). This\ninitial acquisition was performed with an empty bladder. The\nsecond (REST2) and third (REST3) resting state fMRI scans\nwere also collected during eyes open rest conditions but after\ntransurethral catheterization, and after intravesical infusion\nof 100 ml body-temperature (i.e., 37oC) saline solution,\nrespectively. Next fMRI scan was collected during a visceral\nstimulation task involving repetitive intravesical infusion and\ndrainage of saline solution using an MR-compatible visceral\nstimulation device. Task data were analyzed separately. The\nfourth and final resting state fMRI data (REST4) were\ncollected under similar condition to REST3 except that they\nwere acquired after the task.\n\nMagnetic resonance imaging was performed with a 3T\nIngenia scanner with a 15-channel head coil. Structural\nimages were acquired with 3D T1-TFE sequence (TR/TE\n= 6.9/3.1 ms, matrix size = 256× 256, 180 slices, 1 mm\nisotropic resolution, scan duration = 304.6 s). T2*-weighted\nfunctional images were acquired with GE-EPI sequence:\nTR/TE/flip angle = 2 s/40 ms/80o, image matrix size in plane\n= 96 × 96, FoV = 240 mm, slice thickness = 3 mm, inter-\nslice gap = 1 mm, 34 axial slices in ascending order.\n\nImages were preprocessed using SPM12 (Wellcome\nTrust Centre, London, UK). Following MRI quality\ncheck, raw functional images were slice-time corrected,\nrealigned (motion corrected), unwarped (correcting in part\nfor distortions attributable to head motion), coregistered\nto subjects corresponding T1-weighted structural scan,\nnormalized to a standard template (i.e., Montreal\nNeurological Institute [MNI] reference space), and spatially\nsmoothed (FWHM = 6 mm). Artifact Detection Tool (ART)\nwas used for outlier detection of global signal and motion\nand CompCor method was applied to identify principal\ncomponents associated with each subject’s segmented white\nmatter and cerebrospinal fluid. These components were\nentered as confounds along with realignment parameters\nand other nuisance covariates mentioned above in a first-\nlevel analysis and were regressed out. Residual BOLD\ntimeseries was detrended linearly and band-pass filtered\n(0.008-0.09Hz). A connectivity matrix was generated for\neach subject and each REST condition by calculating\nthe correlation coefficient between 32 ROIs included in\nthe CONN toolbox. These 32 ROIs span across the following\neight networks: the default-mode network (DMN), the sensorimotor\nnetwork (SMN), the visual network (VN), the salience network (SN),\nthe dorsal attention network (DAN), the frontoparietal network\notherwise known as central executive network (CEN), the\nlanguage networks (LN), and the cerebellar network (CN).\nThree types of graph theoretical measures were computed\nfor each subject and for each REST condition: (i) functional\nintegration (global efficiency and average path length),\n(ii) functional segregation (clustering coefficient and local\nefficiency), and (iii) centrality (degree and betweenness\ncentrality). Following recommendations, for every ROI,\nthese six measures were calculated adopting a conventional\n2-sided p−value corrected using the Bonferroni correction\nfor multiple comparisons to identify statistically significant\ncorrelations between ROIs and a two-sided cost value of\n0.15 as adjacency matrix threshold for network edges.\n\n978-1-7281-1990-8/20/$31.00 ©2020 IEEE\n\ncorrected), unwarped (correcting in part for distortions attributable to head motion),\ncoregistered to subjects corresponding T1-weighted structural scan, normalized to a standard\ntemplate (i.e., Montreal Neurological Institute [MNI] reference space), and spatially\nsmoothed (FWHM = 6 mm). Artifact Detection Tool (ART) was used for outlier detection of\nglobal signal and motion and CompCor method [ 9] was applied to identify principal\ncomponents associated with each subject’s segmented white matter and cerebrospinal fluid.\nThese components were entered as confounds along with realignment parameters and other\nnuisance covariates mentioned above in a first-level analysis and were regressed out.\nResidual BOLD timeseries was detrended linearly and band-pass filtered (0.008–0.09Hz). A\nconnectivity matrix was generated for each subject and each REST condition by calculating\nthe correlation coefficient between 32 ROIs included in the CONN toolbox [ 10]. These 32\nROIs (Table 1) span across the following eight networks: the default-mode network (DMN),\nthe sensorimotor network (SMN), the visual network (VN), the salience network (SN), the\ndorsal attention network (DAN), the frontoparietal network otherwise known as central\nexecutive network (CEN), the language networks (LN), and the cerebellar network (CN).\nThree types of graph theoretical measures were computed for each subject and for each\nREST condition: ( i) functional integration (global efficiency and average path length),( ii)\nfunctional segregation (clustering coefficient and local efficiency), and ( iii) centrality\n(degree and betweenness centrality). Following recommendations, for every ROI, these six\nmeasures were calculated adopting a conventional 2-sided p−value corrected using the\nBonferroni correction for multiple comparisons to identify statistically significant\ncorrelations between ROIs and a two-sided cost value of 0.15 as adjacency matrix threshold\nfor network edges [ 10]. Uncorrected p < 0.05 was used for exploratory purposes.\nIII. RESULTS\nAlterations of 32 nodes on eight brain networks by graph topological metrics measurement\nare shown in Fig. 3. Red and blue nodes correspond to positive and negative T-values,\nrespectively. The corresponding values of different graph metrics are listed in Table 2. The\nbold values in Table 2 are statistically significant at Bonferroni adjusted p < 0.05.\nIV. DISCUSSION AND CONCLUSION\nHere we examined brain network topology in healthy women and explored the effect of\nvisceral interoception (bladder fullness and catheterization) on resting state fMRI data. At\nthe whole-brain level, we measured the functional integration, segregation, and centrality.\nComparing REST3 (catheterized and partially-filled bladder) > REST 2 (catheterized and\nempty bladder), we observed decreased global efficiency in the right supramarginal gyrus of\nthe SN ( p = 0.0077), dorsolateral prefrontal cortex of the CEN ( p = 0.0206), right posterior\nparietal cortex of the CEN ( p = 0.0273), anterior DAN (left frontal eye field, p = 0.0386),\nand posterior DMN (right lateral parietal node, p = 0.0436). We also detected a decrease in\nthe local efficiency of the anterior cingulate cortex of the SN ( p = 0.0356) and right lateral\nSMN ( p = 0.0389) (Fig. 3). Global efficiency measures the exchange of information across\nthe whole network and the corresponding local efficiency is the inverse of the average\nshortest path connecting neighbors of nodes. The difference in the global and local\nefficiency can be interpreted as a change in the rate of information transfer across specific \nAnnu Int Conf IEEE Eng Med Biol Soc . Author manuscript; available in PMC 2021 March 09.\nAuthor Manuscript Author Manuscript Author Manuscript Author Manuscript\n\nGraph theoretical approaches model the human brain connectome as a collection of nodes\nlinked by edges. In fMRI data, the nodes can represent functionally-defined brain regions of\ninterest (ROIs) while the edges can be estimated by thresholded temporal correlations\nbetween ROI timeseries[ 4]. Previous studies have shown that local and global measures of\nbrain networks undergo topological changes under different neurological disorders or task\nconditions and across life span [ 3], [5]. Little research, however, has investigated the effect\nof visceral interoception on topological properties of the human brain. Interoception is the\nprocessing and integration of body afferent signals[ 6]. Visceral interoception can be defined\nas the sensations and corresponding bodily feelings that arise from the viscera including\norgan pressure and distention (fullness) [ 6]. Rather than ascertaining whether individual\nbrain regions are impacted by interoception, here we analyzed resting state fMRI data of\nhealthy women with graph theory and asked whether the architecture of communication\npatterns across the brain was altered under different interoceptive conditions.\nII. MATERIALS AND METHODS\nA. Subjects and Imaging Protocol\nSeventeen healthy women (mean age 31.12 ± 8.7 years) participated in this study. Only\nwomen were recruited because of the known gender difference in brain response to\nviscerosensory stimulation [ 7]. Written informed consent was obtained before the MRI scan\nand the study protocol was approved by the Institutional Review Board of the local ethics\ncommittee and conformed to the ethical guidelines of the Declaration of Helsinki. As shown\nin Fig. 1, a high-resolution T1-weighted image was obtained to yield an anatomical underlay\nfor the fMRI results. The first resting state fMRI scan (REST1) was then collected during\nrest with eyes open (i.e., subjects were asked not to think of anything in particular, and to\npassively look at the fixation point). This initial acquisition was performed with an empty\nbladder. The second (REST2) and third (REST3) resting state fMRI scans were also\ncollected during eyes open rest conditions but after transurethral catheterization, and after\nintravesical infusion of 100 ml body-temperature (i.e., 37°C) saline solution, respectively.\nNext fMRI scan was collected during a visceral stimulation task involving repetitive\nintravesical infusion and drainage of saline solution using an MR-compatible visceral\nstimulation device. Task data were analyzed separately [ 8]. The fourth and final resting state\nfMRI data (REST4) were collected under similar condition to REST3 except that they were\nacquired after the task.\nB. Imaging Data Acquisition and Analysis\nMagnetic resonance imaging was performed with a 3T Ingenia scanner with a 15-channel\nhead coil. Structural images were acquired with 3D T1-TFE sequence (TR/TE = 6.9/3.1 ms,\nmatrix size = 256 × 256, 180 slices, 1 mm isotropic resolution, scan duration = 304.6 s).\nT2*-weighted functional images were acquired with GE-EPI sequence: TR/TE/flip angle = 2\ns/40 ms/80°, image matrix size in plane = 96 × 96, FoV = 240 mm, slice thickness = 3 mm,\ninter-slice gap = 1 mm, 34 axial slices in ascending order.\nImages were preprocessed using SPM12 (Wellcome Trust Centre, London, UK). Following\nMRI quality check, raw functional images were slice-time corrected, realigned (motion \nAnnu Int Conf IEEE Eng Med Biol Soc . Author manuscript; available in PMC 2021 March 09.\nAuthor Manuscript Author Manuscript Author Manuscript Author Manuscript"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 72,
+            "text": "Effects of Visceral Interoception on Topological Properties of the Brain",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 122,
+            "end": 136,
+            "text": "Behnaz Jarrahi",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 155,
+            "end": 169,
+            "text": "Spyros Kollias",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5966,
+            "end": 5971,
+            "text": "©2020",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 146,
+            "end": 150,
+            "text": "IEEE",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1770,
+            "end": 1881,
+            "text": "These results suggest visceral interoception influences\nbrain topological properties of resting state networks.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3378,
+            "end": 3388,
+            "text": "3T\nIngenia",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3794,
+            "end": 3809,
+            "text": "34 axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3745,
+            "end": 3767,
+            "text": "slice thickness = 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3688,
+            "end": 3691,
+            "text": "80o",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3776,
+            "end": 3792,
+            "text": "slice gap = 1 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3731,
+            "end": 3743,
+            "text": "FoV = 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3678,
+            "end": 3681,
+            "text": "2 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3682,
+            "end": 3687,
+            "text": "40 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2510,
+            "end": 2519,
+            "text": "eyes open",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 572,
+            "end": 593,
+            "text": "17 right-handed women",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3862,
+            "end": 3867,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 616,
+            "end": 634,
+            "text": "resting state fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2527,
+            "end": 2571,
+            "text": "subjects were asked not to think of anything",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2616,
+            "end": 2630,
+            "text": "fixation point",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1883,
+            "end": 1906,
+            "text": "Seventeen healthy women",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1908,
+            "end": 1934,
+            "text": "mean age 31.12 ± 8.7 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 575,
+            "end": 587,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1964,
+            "end": 1989,
+            "text": "Only women were recruited",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2163,
+            "end": 2205,
+            "text": "approved by the Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3961,
+            "end": 3981,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3862,
+            "end": 3867,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0027"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3983,
+            "end": 4011,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3862,
+            "end": 3867,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0029"
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4013,
+            "end": 4041,
+            "text": "3",
+            "labels": [
+              "Unwarp — Step Number"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3862,
+            "end": 3867,
+            "text": "SPM12",
+            "labels": [
+              "Unwarp — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0031"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4088,
+            "end": 4100,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3862,
+            "end": 3867,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0033"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4156,
+            "end": 4189,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3862,
+            "end": 3867,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4197,
+            "end": 4234,
+            "text": "Montreal\nNeurological Institute [MNI]",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0036"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4267,
+            "end": 4289,
+            "text": "6",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3862,
+            "end": 3867,
+            "text": "SPM12",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4277,
+            "end": 4288,
+            "text": "FWHM = 6 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ],
+          "id": "m0039"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4291,
+            "end": 4320,
+            "text": "7",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4291,
+            "end": 4320,
+            "text": "Artifact Detection Tool (ART)",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Type",
+            "Parameters"
+          ],
+          "id": "m0041"
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4384,
+            "end": 4398,
+            "text": "8",
+            "labels": [
+              "CompCor — Step Number"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4384,
+            "end": 4391,
+            "text": "CompCor",
+            "labels": [
+              "CompCor — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0043"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4682,
+            "end": 4695,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4577,
+            "end": 4599,
+            "text": "realignment parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0045"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4726,
+            "end": 4744,
+            "text": "10",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4726,
+            "end": 4744,
+            "text": "detrended linearly",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0047"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4749,
+            "end": 4767,
+            "text": "11",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4749,
+            "end": 4767,
+            "text": "band-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4768,
+            "end": 4782,
+            "text": "(0.008-0.09Hz)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0050"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4912,
+            "end": 4948,
+            "text": "32 ROIs included in\nthe CONN toolbox",
+            "labels": [
+              "Atlas definition"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4990,
+            "end": 5036,
+            "text": "eight networks: the default-mode network (DMN)",
+            "labels": [
+              "Network definition"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6893,
+            "end": 6929,
+            "text": "3",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ],
+          "id": "m0053"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6917,
+            "end": 6929,
+            "text": "CONN toolbox",
+            "labels": [
+              "ROI definition — Software"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6893,
+            "end": 6900,
+            "text": "32 ROIs",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6678,
+            "end": 6763,
+            "text": "1",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0056"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6678,
+            "end": 6763,
+            "text": "Residual BOLD timeseries was detrended linearly and band-pass filtered (0.008–0.09Hz)",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6750,
+            "end": 6762,
+            "text": "0.008–0.09Hz",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6857,
+            "end": 6929,
+            "text": "2",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0059"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6861,
+            "end": 6884,
+            "text": "correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7856,
+            "end": 7916,
+            "text": "5",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7890,
+            "end": 7916,
+            "text": "adjacency matrix threshold",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7882,
+            "end": 7886,
+            "text": "0.15",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7426,
+            "end": 7467,
+            "text": "4",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0064"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7426,
+            "end": 7467,
+            "text": "global efficiency and average path length",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7499,
+            "end": 7542,
+            "text": "clustering coefficient and local efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7568,
+            "end": 7601,
+            "text": "degree and betweenness centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0067"
+        }
+      ]
+    }
+  ]
+}

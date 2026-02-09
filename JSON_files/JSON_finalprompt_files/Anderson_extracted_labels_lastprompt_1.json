@@ -1,0 +1,785 @@
+{
+  "data": {
+    "text": "Task-linked Diurnal Brain Network Reorganization in\nOlder Adults: A Graph Theoretical Approach\nJohn A. E. Anderson1,2, Saman Sarraf2, Tarek Amer1,2, Buddhika Bellana1,2,\nVincent Man1, Karen L. Campbell3, Lynn Hasher1,2, and Cheryl L. Grady1,2\n\nJournal of Cognitive Neuroscience 29:3, pp. 560–572\n© 2017 Massachusetts Institute of Technology\ndoi:10.1162/jocn_a_01060\n\nTesting older adults in the morning generally improves behavioral performance relative to afternoon testing. Morning\ntesting is also associated with brain activity similar to that of young adults. Here, we used graph theory to explore how time\nof day (TOD) affects the organization of brain networks in older adults across rest and task states. We used nodes from\nthe automated anatomical labeling atlas to construct participant-specific correlation matrices of fMRI data obtained during 1-back\ntasks with interference and rest. We computed pairwise group differences for key graph metrics, including small-worldness\nand modularity. We found that older adults tested in the morning and young adults did not differ on any graph metric. Both\nof these groups differed from older adults tested in the afternoon during the tasks—but not rest. Specifically, the latter\ngroup had lower modularity and small-worldness (indices of more efficient network organization). Across all groups, higher\nmodularity and small-worldness strongly correlated with reduced distractibility on an implicit priming task. Increasingly, TOD\nis seen as important for interpreting and reproducing neuroimaging results. Our study emphasizes how TOD affects\nbrain network organization and executive control in older adults.\n\nMETHODS\nParticipants\nSixteen older and 16 younger adults were tested in the\nafternoon (3:00 p.m.; AO group), and 18 older adults\nwere tested in the morning (8:00 a.m.; MO group; task-related activation from these participants was previously\nreported in Anderson et al., 2014). As demographic data\ndid not differ across the older groups, (all t values were\n<0.4, ps > .5), we present averaged descriptive statistics.\nOlder adults’ average age was 70.35 (SD = 7.68) years,\nand they had an average of 15.94 (SD = 2.36) years of\neducation. Younger adults, the AY group, were, on average,\n23.94 (SD = 4.17) years old. All older participants\nhad normal Mini-Mental State Examination (M = 28.20,\nSD = 1.67) and Shipley vocabulary scores (M = 35.77,\nSD = 2.81; Folstein, Folstein, & McHugh, 1975; Shipley,\n1946) and were predominantly “morning types” as measured with the Morningness–Eveningness Questionnaire\n(MEQ; Horne & Ostberg, 1975). Consistent with previous\nresearch, younger participants had slightly lower Shipley\nscores (M = 33.42, SD = 3.46), t(48) = 2.56, p = .01, and\nwere significantly more “evening-oriented” on the MEQ\n(M = 46.6, SD = 11.3) than their older peers (M = 61.7,\nSD = 8.0), t(24.8) = 4.72, p ≤ .001. Note that, according\nto the MEQ, a score of 59–69 indicates a “moderate morning” type, whereas a score of 31–41 indicates a “moderate\nevening type.” Most of our older adults scored in the neutral-to-moderate morning range, whereas most of our young\nadults scored in the neutral-to-moderate evening range.\n\nProcedure\nDuring scanning, the participants did a 1-back task pressing a button for repeated picture stimuli of familiar objects.\nStimuli contained irrelevant distractor text (word and nonwords) superimposed over the pictures, which\nparticipants were asked to ignore.\nAfter an arrow flanker task (Eriksen & Eriksen, 1974), the participants were given a word fragment completion\ntask containing some of the words that had previously been shown as distraction during the 1-back task to test\nfor implicit access to those distracting items (the word fragment completion task was unscanned and is referred to as\nthe “priming for distraction task” from this point forward).\nAfter the task described above, participants had a 7-min (eyes-closed) resting state scan in which they were instructed\nto relax, not think about anything in particular, and not fall asleep.\n\nfMRI Data Acquisition and Preprocessing\nParticipants were scanned using a Siemens (Erlangen,\nGermany) Trio 3-T scanner 12-channel head coil. Anatomical scans were acquired with a 3-D magnetization prepared\nrapid gradient-echo sequence (repetition time = 2 sec,\necho time = 2.63 msec, field of view = 25.6 cm2, 256 ×\n256 matrix, 160 slices of 1 mm thickness). Functional runs\nwere acquired with an EPI sequence, with 157 volumes\nfor each of the 1-back runs (repetition time = 2 sec, echo\ntime = 30 msec, flip angle = 70°, field of view = 20 cm2,\n64 × 64 matrix, 30 slices of 5 mm thickness, no gap).\nMeasures of pulse and respiration were obtained during\nthe scan.\nPreprocessing of the image data was performed with\nthe Analysis of Functional NeuroImages software (Cox,\n1996). This included physiological motion correction\nusing RETROICOR, rigid motion correction, spatial normalization to the Montreal Neurological Institute space,\nand smoothing with an 8-mm Gaussian filter (the final\nvoxel size was 4 × 4 × 4 mm). We also used a mask-based\napproach to regress out the mean signals from the\nwhite matter, cerebral spinal fluid, vasculature, and motion\ntime series from each voxel time series (Campbell, Grigg,\nSaverino, Churchill, & Grady, 2013; Grady et al., 2010).\nAs motion has been demonstrated to affect functional\nconnectivity measures, even after standard correction\nprocedures (e.g., Power, Barnes, Snyder, Schlaggar, &\nPetersen, 2012), we followed a motion scrubbing procedure described in Campbell et al. (2013). Briefly, this\nprocedure uses a multivariate technique to identify outliers in both the motion parameter estimates and fMRI\nsignal itself. Where such outliers co-occurred (never\nmore than 4% of the total volumes), we removed the\nfMRI volumes and replaced them with values interpolated with cubic splines. As reported by Campbell\net al. (2013), this method has the advantage of suppressing spikes, yet keeping the length of the time course\nintact across participants. We found no differences between groups in the number of volumes removed for\nany scan type (smallest p = .14). Finally, the task effects\n(i.e., stimulus onsets) were regressed from the task run\nusing the CONN toolbox (Whitfield-Gabrieli & Nieto-Castanon, 2012).\n\nGraph Theory Analysis Using the GAT Toolbox\nROIs were defined using the ROIs from the automated\nanatomical labeling (AAL) atlas, which parcellates the\nbrain into 90 regions (Whitfield-Gabrieli & Nieto-Castanon,\n2012; Maldjian, Laurienti, Kraft, & Burdette, 2003). We\nextracted the average fMRI time series per condition\nwithin ROIs for each individual using the CONN toolbox.\nIndividual participant correlation matrices were\nthen input into the GAT Toolbox (Hosseini, Hoeft, &\nKesler, 2012) and used to calculate graph metrics. Thresholding the association matrices of different groups at an\nabsolute threshold results in networks with a different\nnumber of nodes (and degrees) that might influence\nthe network measures and reduce interpretation of\nbetween-group results. Two approaches were implemented for thresholding the constructed association\nmatrices based on previous studies: (1) thresholding\nthe constructed association matrices at a minimum network density (Dmin) in which all nodes become fully\nconnected in the brain networks of both groups (none\nof the networks are fragmented) and (2) thresholding\nthe constructed association matrices at a range of network densities for comparing the network topologies\nacross that range. The GAT toolbox allows the user to\nspecify the range and the interval between densities.\nFor the initial step of calculating and displaying graph\nmetrics, we set a wide density range (between 0.1 and\n0.7) to form a binary adjacency matrix of 0s and 1s.\nThe individual’s graph is then constructed to have N nodes\nand degree equal to the number of edges (connections\nbetween regions). One of the advantages of using the\nGAT toolbox is that it avoids thresholding the adjacency\nmatrices of individuals (which might arbitrarily remove\nnodes and degrees) and instead presents results across a\nrange of correlation thresholds (densities).\nThen, a smaller density range was obtained by a disconnection test and a small-worldness value of 1.5\n(0.22–0.44; Hosseini et al., 2012)—these thresholds were\nused in subsequent calculations of group comparisons.\nValues smaller than 0.22 or larger than 0.44 should be\ninterpreted with caution as they may be influenced by\ndisconnected graphs or outlying values. We therefore\nonly analyzed values falling within this range. To determine group level differences, individual graph metrics\nat each density were extracted per condition. We then\nran separate mixed measures ANOVAs for each graph\nmetric. Thus, each analysis consisted of a 3 (Group) ×\n3 (Condition) × 23 (Density) design, where group was the\nbetween-subject measure and density was the repeated\nwithin-subject measure. Post hoc two-way comparisons\nwere run using Bonferroni corrections. Note that the\nnumber of edges is matched per density across individuals.\nWe focused our analyses on two primary measures:\n(a) small-worldness, a measure of overall network efficiency (Hosseini et al., 2012; Rubinov & Sporns, 2010),\nand (b) modularity, or how nodes hierarchically cluster\ninto communities that are more highly connected with\neach other than nodes outside the community (module).\nIn the GAT toolbox, modularity is calculated with the\nLouvain algorithm (Blondel, Guillaume, Lambiotte, &\nLefebvre, 2008). Modules are often regarded as signs of\nspecialized processing within the network (e.g., Bullmore\n& Sporns, 2009, 2012; Stevens, Tappon, Garg, & Fair,\n2012, but see Kitzbichler et al., 2011).\n\nRESULTS\nAccuracy of n-Back Performance\nn-back data for four participants was missing. Values for\nthese participants (one morning older adult, one afternoon older adult, and two younger adults) were imputed\nin SPSS using age, Shipley scores, Mini-Mental State\nExamination, priming, and Flanker effect scores (i.e.,\nincongruent–congruent RTs). Averages obtained with\nand without imputation were similar and did not change\nthe results described below.\nAccuracy on the n-back task was tested separately for\neach condition (word and nonword) using a simple\nbetween-group ANOVA. Accuracy did not differ between\ngroups in the ignore-nonwords condition, F(2, 47) =\n0.92, p = .405, but did differ on the ignore-words condition, F(2, 47) = 6.549, p = .003, ηp2 = 0.219. Post hoc\nBonferroni tests revealed that both the morning old (M =\n0.88, SD = 0.14), t(32) = 2.5, p = .047, and afternoon old\n(M = 0.82, SD = 0.17), t(30) = 3.54, p = .003, groups\ndiffered significantly from the afternoon young group\n(M = 0.99, SD = 0.03), although they themselves did not\ndiffer, t(32) = 1.14, p = .78. Paralleling our previously reported findings of linearly increasing priming for distraction from afternoon old to morning old to young, we\nsimilarly found a significant linear trend describing accuracy on the ignore-words condition, F(2, 47) = 6.549,\np = .003, ηp2 = 0.219. In line with our previous findings,\nthese results suggest that older adults tested in the afternoon were most distracted on the ignore-words condition.\n\nCorrelations of Graph Metrics with Priming for Distraction\nWe extracted individual graph metrics (small-worldness\nand modularity), averaged them across densities, and\ncorrelated them with priming for distraction (i.e., how\nlikely participants were to generate previously seen distracting words relative to never before seen words in the\nfragment completion task). Across groups, higher values\nof modularity and small-worldness (sigma) predicted less\npriming for distraction—particularly at rest. In contrast,\nthe Flanker effect was best predicted by modularity and\nsigma during the ignore-words condition, as might be\nexpected given that the latter was the most difficult condition. As expected, there was no relationship between\nthe graph theory metrics and vocabulary. These correlations, as well as the graph metric data, indicate that adding\na cognitive load not only appears to drive down levels of\nglobal modularity and small-worldness, particularly at nonoptimal times of day in the older adults, but\nalso decreases the strength of correlations between these graph metrics and interference control.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 94,
+            "text": "Task-linked Diurnal Brain Network Reorganization in\nOlder Adults: A Graph Theoretical Approach",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 95,
+            "end": 242,
+            "text": "John A. E. Anderson1,2, Saman Sarraf2, Tarek Amer1,2, Buddhika Bellana1,2,\nVincent Man1, Karen L. Campbell3, Lynn Hasher1,2, and Cheryl L. Grady1,2",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 298,
+            "end": 302,
+            "text": "2017",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 303,
+            "end": 340,
+            "text": "Massachusetts Institute of Technology",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 341,
+            "end": 365,
+            "text": "doi:10.1162/jocn_a_01060",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 367,
+            "end": 475,
+            "text": "Testing older adults in the morning generally improves behavioral performance relative to afternoon testing.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1681,
+            "end": 1900,
+            "text": "Sixteen older and 16 younger adults were tested in the\nafternoon (3:00 p.m.; AO group), and 18 older adults\nwere tested in the morning (8:00 a.m.; MO group; task-related activation from these participants was previously",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2076,
+            "end": 2272,
+            "text": "Older adults’ average age was 70.35 (SD = 7.68) years,\nand they had an average of 15.94 (SD = 2.36) years of\neducation. Younger adults, the AY group, were, on average,\n23.94 (SD = 4.17) years old.",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2273,
+            "end": 2412,
+            "text": "All older participants\nhad normal Mini-Mental State Examination (M = 28.20,\nSD = 1.67) and Shipley vocabulary scores (M = 35.77,\nSD = 2.81;",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Male/Female",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1937,
+            "end": 2075,
+            "text": "As demographic data\ndid not differ across the older groups, (all t values were\n<0.4, ps > .5), we present averaged descriptive statistics.",
+            "labels": [
+              "Group matching"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4120,
+            "end": 4186,
+            "text": "Siemens (Erlangen,\nGermany) Trio 3-T scanner 12-channel head coil.",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4607,
+            "end": 4642,
+            "text": "30 slices of 5 mm thickness, no gap",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4607,
+            "end": 4642,
+            "text": "30 slices of 5 mm thickness, no gap",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4549,
+            "end": 4565,
+            "text": "flip angle = 70°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4636,
+            "end": 4642,
+            "text": "no gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4567,
+            "end": 4589,
+            "text": "field of view = 20 cm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4503,
+            "end": 4547,
+            "text": "repetition time = 2 sec, echo\ntime = 30 msec",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "Missing_sublabels": [
+            "TE (ms)"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4533,
+            "end": 4547,
+            "text": "time = 30 msec",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5022,
+            "end": 5059,
+            "text": "the final\nvoxel size was 4 × 4 × 4 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3905,
+            "end": 3943,
+            "text": "7-min (eyes-closed) resting state scan",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3213,
+            "end": 3315,
+            "text": "the participants did a 1-back task pressing a button for repeated picture stimuli of familiar objects.",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "Missing_sublabels": [
+            "Number of slices",
+            "Slice thickness",
+            "Duration (s)",
+            "Number of individuals for final analyses",
+            "Most-used software for preprocessing"
+          ]
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3196,
+            "end": 3453,
+            "text": "During scanning, the participants did a 1-back task pressing a button for repeated picture stimuli of familiar objects.\nStimuli contained irrelevant distractor text (word and nonwords) superimposed over the pictures, which\nparticipants were asked to ignore.",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "Missing_sublabels": [
+            "Stimuli repetition"
+          ]
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3279,
+            "end": 3380,
+            "text": "picture stimuli of familiar objects.\nStimuli contained irrelevant distractor text (word and nonwords)",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3270,
+            "end": 3315,
+            "text": "repeated picture stimuli of familiar objects.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10175,
+            "end": 10298,
+            "text": "Accuracy on the n-back task was tested separately for\neach condition (word and nonword) using a simple\nbetween-group ANOVA.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8767,
+            "end": 8947,
+            "text": "Thus, each analysis consisted of a 3 (Group) ×\n3 (Condition) × 23 (Density) design, where group was the\nbetween-subject measure and density was the repeated\nwithin-subject measure.",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          },
+          "Missing_sublabels": [
+            "Comparisons"
+          ]
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8948,
+            "end": 9015,
+            "text": "Post hoc two-way comparisons\nwere run using Bonferroni corrections.",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "RETROICOR",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4765,
+            "end": 4821,
+            "text": "Analysis of Functional NeuroImages software (Cox,\n1996).",
+            "labels": [
+              "RETROICOR — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "RETROICOR — Parameters"
+          ]
+        },
+        {
+          "from_name": "RETROICOR",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4836,
+            "end": 4883,
+            "text": "physiological motion correction\nusing RETROICOR",
+            "labels": [
+              "RETROICOR — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "RETROICOR",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4836,
+            "end": 4883,
+            "text": "physiological motion correction\nusing RETROICOR",
+            "labels": [
+              "RETROICOR — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4885,
+            "end": 4908,
+            "text": "rigid motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4885,
+            "end": 4908,
+            "text": "rigid motion correction",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4910,
+            "end": 4976,
+            "text": "spatial normalization to the Montreal Neurological Institute space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4910,
+            "end": 4976,
+            "text": "spatial normalization to the Montreal Neurological Institute space",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4982,
+            "end": 5060,
+            "text": "smoothing with an 8-mm Gaussian filter (the final\nvoxel size was 4 × 4 × 4 mm)",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4982,
+            "end": 5020,
+            "text": "smoothing with an 8-mm Gaussian filter",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5077,
+            "end": 5238,
+            "text": "mask-based\napproach to regress out the mean signals from the\nwhite matter, cerebral spinal fluid, vasculature, and motion\ntime series from each voxel time series",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5077,
+            "end": 5137,
+            "text": "mask-based\napproach to regress out the mean signals from the",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5506,
+            "end": 5569,
+            "text": "motion scrubbing procedure described in Campbell et al. (2013).",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Software",
+            "Scrubbing — Parameters"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5506,
+            "end": 5569,
+            "text": "motion scrubbing procedure described in Campbell et al. (2013).",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Interpolate",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5815,
+            "end": 5873,
+            "text": "replaced them with values interpolated with cubic splines.",
+            "labels": [
+              "Interpolate — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Interpolate — Software",
+            "Interpolate — Parameters"
+          ]
+        },
+        {
+          "from_name": "Interpolate",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5841,
+            "end": 5873,
+            "text": "interpolated with cubic splines.",
+            "labels": [
+              "Interpolate — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6229,
+            "end": 6296,
+            "text": "using the CONN toolbox (Whitfield-Gabrieli & Nieto-Castanon, 2012).",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Type",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6384,
+            "end": 6470,
+            "text": "automated\nanatomical labeling (AAL) atlas, which parcellates the\nbrain into 90 regions",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6449,
+            "end": 6470,
+            "text": "brain into 90 regions",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "ROI definition — Software",
+            "ROI definition — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6565,
+            "end": 6673,
+            "text": "extracted the average fMRI time series per condition\nwithin ROIs for each individual using the CONN toolbox.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6674,
+            "end": 6825,
+            "text": "Individual participant correlation matrices were\nthen input into the GAT Toolbox (Hosseini, Hoeft, &\nKesler, 2012) and used to calculate graph metrics.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software",
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7691,
+            "end": 7740,
+            "text": "we set a wide density range (between 0.1 and\n0.7)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Sparsity control — Software",
+            "Sparsity control — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8175,
+            "end": 8305,
+            "text": "a smaller density range was obtained by a disconnection test and a small-worldness value of 1.5\n(0.22–0.44; Hosseini et al., 2012)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7741,
+            "end": 7788,
+            "text": "to form a binary adjacency matrix of 0s and 1s.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph characteristics — Software",
+            "Graph characteristics — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9116,
+            "end": 9198,
+            "text": "two primary measures:\n(a) small-worldness, a measure of overall network efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Software",
+            "Graph measures — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9248,
+            "end": 9320,
+            "text": "and (b) modularity, or how nodes hierarchically cluster\ninto communities",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8592,
+            "end": 8766,
+            "text": "To determine group level differences, individual graph metrics\nat each density were extracted per condition. We then\nran separate mixed measures ANOVAs for each graph\nmetric.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Result aggregation — Software",
+            "Result aggregation — Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

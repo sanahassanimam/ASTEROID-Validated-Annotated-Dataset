@@ -1,0 +1,929 @@
+{
+  "data": {
+    "text": "Topologically Reorganized Connectivity Architecture of Default-Mode, Executive-Control, and Salience Networks across Working Memory Task Loads\nXia Liang1,2, Qihong Zou4, Yong He2,3, and Yihong Yang1\nCerebral Cortex, April 2016;26:1501–1511\nPublished by Oxford University Press 2015.\ndoi: 10.1093/cercor/bhu316\n\nThe human brain is topologically organized into a set of spatially distributed, functionally specific networks. Of these networks, the default-mode network (DMN), executive-control network (ECN), and salience network (SN) have received the most attention recently for their vital roles in cognitive functions. However, very little is known about whether and how the interactions within and between these 3 networks would be modulated by cognitive demands. Here, we employed graph-based modularity analysis to identify the DMN, ECN, and SN during an N-back working memory (WM) task and further investigated the modulation of intra- and inter-network interactions at different cognitive loads. As the task load elevated, functional connectivity decreased within the DMN while increased within the ECN, and the SN connected more with both the DMN and ECN. Within-network connectivity of the ventral and dorsal posterior cingulate cortex was differentially modulated by cognitive load. Further, the superior parietal regions in the ECN showed increased internetwork connections at higher WM loads, and these increases correlated positively with WM task performance. Together, these findings advance our understanding of dynamic integrations of specialized brain systems in response to cognitive demands and may serve as a baseline for assessing potential disruptions of these interactions in pathological conditions.\n\nParticipants\nForty healthy adults participated in the study. All participants were screened to ensure no history of neurological/psychiatric conditions or drug abuse. Informed consent was obtained from all subjects in accordance with the guidelines of the Institutional Review Board of the Intramural Research Program of the National Institute on Drug Abuse. See Table 1 for population demographics. Age (years) 27.4 ± 7.1; Gender (male/female) 15/25; Education (years) 14.4 ± 1.52; WAIS vocabulary score 59.95 ± 7.25.\n\nImaging Data Acquisition and N-back Working Memory Task\nMRI scans were performed on a 3 Tesla Siemens Allegra MR Scanner (Siemens) equipped with a quadrature volume head coil. High-resolution anatomical images were acquired using a 3-D MPRAGE T1-weighted sequence with 160 slices, 1.0-mm isotropic voxels, repetition time (TR) = 2500 ms, echo time (TE) = 4.38 ms, and flip angle (FA) = 8°. Functional BOLD images were acquired using an echo-planar imaging sequence with TR = 2000 ms, TE = 27 ms, FA = 77°, thirty-nine 4-mm slices without interslice gap, field of view (FOV) = 220 × 220 mm2, and an in-plane resolution of 3.44 × 3.44 mm2. Head movement was minimized using individually custom-made foam padding, and earplugs were used to attenuate scanner noise.\nN-back WM task data were acquired for each participant. The task was presented as a block paradigm with 4 conditions: 3 active WM tasks (1-back, 2-back, and 3-back) and a low-level vigilance task (0-back). In the vigilance task, following the instruction “press for D,” participants pressed one button each time the letter D (or d) appeared on the screen. In the 3 active WM task conditions, following the instruction “N back” (where N = [1, 2, 3]), participants pressed a button when the current letter shown on the screen matched the one presented “N” items back. The task included 6 runs, with one 0-back, 1-back, 2-back, and 3-back block in each run and took a total of about 27 min to complete. Each block lasted 62 s and included a 2-s indication of the task difficulty level followed by 30 consecutive trials of single-letter stimuli (500-ms duration and 1500-ms interstimulus interval). Each run therefore lasted 4 min, 24 s and began with an 8-s fixation followed by the 0-back block and then the randomized 1-, 2-, and 3-back blocks. An additional 8-s fixation occurred at the end of each run.\n\nImage Preprocessing\nThe fMRI data were preprocessed using the Analysis of Functional Neuroimaging software package. Preprocessing steps included slice-timing correction, head motion correction, linear trend removal, high-pass filtering with 0.01 Hz, and spatial smoothing (FWHM = 6 mm). The task-state time series of each run were divided into separate conditions (0-back, 1-back, 2-back, and 3-back) as follows: For each 60-s block in each run, the first 4 volumes (8 s) were discarded and 2 volumes (4 s) of the next block were included to minimize the effects of hemodynamic delay from previous conditions. Then, all task fMRI data were aligned to their corresponding T1-weighted images, and normalized fMRI images were created by applying the transformation of T1-weighted images to the ICBM452 template. Finally, several nuisance variables, including 6 head motion parameters, the averaged signal from white matter, and the averaged signal from ventricles were removed by multiple linear regression analysis.\n\nNetwork Construction\nTo confine the network node definition within brain regions that are related to the WM task, we created a task mask as an “or” combination of the significant activation maps for the 1-back, 2-back, and 3-back conditions compared with the 0-back condition. Briefly, task activation maps for the 1-back, 2-back, and 3-back conditions compared with the 0-back condition were generated using general linear models of box-car regressors convolved with a hemodynamic response function for the 3 WM task conditions. Quadratic trends and the 6 motion parameters were included as covariates of no interest. For each task condition, a one-sample t-test was performed across subjects against the null hypothesis. The significance threshold was set to P < 0.01 corrected for whole brain multiple comparisons based on Monte Carlo simulations; this threshold corresponded to an uncorrected single voxel significance level of P < 0.01 and a minimum cluster size of 297 mm3.\nFor each individual, we extracted time courses from the task mask and computed the voxel-wise Pearson correlation matrix within each block. We then averaged across the 6 runs for each task load condition and thresholded the resultant correlation matrices to generate binary brain graphs. We used a set of thresholds ranging from 1% to 5% connection density with a step of 1%. The lowest threshold (1%) was determined to ensure that the resulting graphs are not severely fragmented (the largest component size >90%), whereas the highest threshold (5%) was set to remove weak correlations so that only the correlations whose corresponding P-values passed a statistical threshold (P < 0.05) were retained. Note that the negative correlations took only a very small portion in the voxel-wise correlation matrices after the thresholding process; here we only focused on the positive connections in our analysis by setting the negative correlations to zero.\n\nModularity Analyses\nThe resulting brain graphs were then subjected to a graph-based modularity analysis to identify brain modules and to estimate module-based graph properties. To identify modules (i.e., groups of nodes that are highly connected with each other but less connected with other nodes), a module identification algorithm optimizes the total number of modules and the associated module membership of nodes by maximizing modularity, Q. In this study, we used the Louvain algorithm, a fast and relatively accurate algorithm suitable for detecting modules in large networks. For each task condition, the modularity analysis was first performed on every individual brain graph. Given that module number and membership vary between subjects, we also performed the modularity analysis on group-level brain graphs to determine the modular structure at each task load. After the group-level modular analysis, the similarity between the modularity partition obtained at 0-back and that obtained at the 1-back, 2-back, and 3-back conditions was estimated using normalized mutual information (NMI). DMN, SN, and ECN modules, which were of particular interest in the present study, were selected from the module partitions at each task load by visual inspection.\nAt the module level, the intramodule connectivity was calculated as the sum of connections within a module, whereas the intermodule connectivity was calculated as the sum of connections between any pair of 2 modules.\nAt the nodal level, we measured the within-module degree (WD) z-score and participation coefficient (PC) across the modules of DMN, SN, and ECN. WD measures the normalized degree of connections of a node within its corresponding module, whereas the participation coefficient of a node measures the extent to which a node connects to different modules other than its own.\n\nStatistical Analysis and Behavioral Performance\nWe used a repeated-measures analysis of variance (ANOVA), with WM load as a within-subject fixed effect, to determine the effect of memory load on each module-based graph metric. For module-wise measures, the significant threshold was set using a Bonferroni correction method for multiple comparisons. For those network metrics showing significant effects of WM load, statistical differences between all pairs of memory load levels were estimated using paired t-tests.\nTo test whether WM task-related network measures might correlate with behavioral performance, Pearson correlation analyses were carried out with dprime. Dprime is defined as the difference between the normalized values of the hit rates and false alarm rates. The better the participant maximizes hits and minimizes false alarms, the better the participant performs to discriminate targets during the task, and then the higher dprime scores.\n\nBehavior Analysis\nThere was a significant WM load-effect in task performance as measured by dprime. Post hoc t-tests using Bonferroni correction for multiple comparisons revealed that dprime was significantly different between each pair of the conditions. WM load had significant effects in both hit rate and false alarm rate. Post hoc t-tests using Bonferroni correction for multiple comparisons found that both these measures were significantly different between each pair of the conditions."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 142,
+            "text": "Topologically Reorganized Connectivity Architecture of Default-Mode, Executive-Control, and Salience Networks across Working Memory Task Loads",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 143,
+            "end": 198,
+            "text": "Xia Liang1,2, Qihong Zou4, Yong He2,3, and Yihong Yang1",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 222,
+            "end": 226,
+            "text": "2016",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 253,
+            "end": 281,
+            "text": "Oxford University Press",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 288,
+            "end": 309,
+            "text": "10.1093/cercor/bhu316",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 311,
+            "end": 422,
+            "text": "The human brain is topologically organized into a set of spatially distributed, functionally specific networks.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1738,
+            "end": 1785,
+            "text": "Forty healthy adults participated in the study.",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1827,
+            "end": 1891,
+            "text": "no history of neurological/psychiatric conditions or drug abuse.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2149,
+            "end": 2175,
+            "text": "Gender (male/female) 15/25",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2125,
+            "end": 2147,
+            "text": "Age (years) 27.4 ± 7.1",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1981,
+            "end": 2082,
+            "text": "Institutional Review Board of the Intramural Research Program of the National Institute on Drug Abuse",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2331,
+            "end": 2375,
+            "text": "3 Tesla Siemens Allegra MR Scanner (Siemens)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2715,
+            "end": 2727,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2729,
+            "end": 2739,
+            "text": "TE = 27 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2741,
+            "end": 2749,
+            "text": "FA = 77°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2751,
+            "end": 2774,
+            "text": "thirty-nine 4-mm slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2763,
+            "end": 2774,
+            "text": "4-mm slices",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2775,
+            "end": 2797,
+            "text": "without interslice gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2799,
+            "end": 2834,
+            "text": "field of view (FOV) = 220 × 220 mm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2840,
+            "end": 2881,
+            "text": "an in-plane resolution of 3.44 × 3.44 mm2",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1738,
+            "end": 1785,
+            "text": "Forty healthy adults participated in the study.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4174,
+            "end": 4226,
+            "text": "Analysis of Functional Neuroimaging software package",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 860,
+            "end": 891,
+            "text": "N-back working memory (WM) task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3928,
+            "end": 3939,
+            "text": "4 min, 24 s",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3573,
+            "end": 3660,
+            "text": "The task included 6 runs, with one 0-back, 1-back, 2-back, and 3-back block in each run",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3849,
+            "end": 3864,
+            "text": "500-ms duration",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3869,
+            "end": 3899,
+            "text": "1500-ms interstimulus interval",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3707,
+            "end": 3729,
+            "text": "Each block lasted 62 s",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3236,
+            "end": 3362,
+            "text": "following the instruction “press for D,” participants pressed one button each time the letter D (or d) appeared on the screen.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3399,
+            "end": 3572,
+            "text": "following the instruction “N back” (where N = [1, 2, 3]), participants pressed a button when the current letter shown on the screen matched the one presented “N” items back.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3826,
+            "end": 3847,
+            "text": "single-letter stimuli",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3801,
+            "end": 3847,
+            "text": "30 consecutive trials of single-letter stimuli",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5413,
+            "end": 5514,
+            "text": "task activation maps for the 1-back, 2-back, and 3-back conditions compared with the 0-back condition",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8970,
+            "end": 9016,
+            "text": "repeated-measures analysis of variance (ANOVA)",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9582,
+            "end": 9687,
+            "text": "Dprime is defined as the difference between the normalized values of the hit rates and false alarm rates.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4257,
+            "end": 4280,
+            "text": "slice-timing correction",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4257,
+            "end": 4280,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4282,
+            "end": 4304,
+            "text": "head motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4282,
+            "end": 4304,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4306,
+            "end": 4326,
+            "text": "linear trend removal",
+            "labels": [
+              "Temporal detrending — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4306,
+            "end": 4326,
+            "text": "3",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Software",
+            "Temporal detrending — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4328,
+            "end": 4347,
+            "text": "high-pass filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4328,
+            "end": 4347,
+            "text": "4",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4353,
+            "end": 4360,
+            "text": "0.01 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4366,
+            "end": 4383,
+            "text": "spatial smoothing",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4366,
+            "end": 4383,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4385,
+            "end": 4396,
+            "text": "FWHM = 6 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4752,
+            "end": 4801,
+            "text": "aligned to their corresponding T1-weighted images",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4752,
+            "end": 4801,
+            "text": "6",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4807,
+            "end": 4919,
+            "text": "normalized fMRI images were created by applying the transformation of T1-weighted images to the ICBM452 template",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4807,
+            "end": 4919,
+            "text": "7",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4903,
+            "end": 4919,
+            "text": "ICBM452 template",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5078,
+            "end": 5124,
+            "text": "removed by multiple linear regression analysis",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5078,
+            "end": 5124,
+            "text": "8",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4968,
+            "end": 5072,
+            "text": "6 head motion parameters, the averaged signal from white matter, and the averaged signal from ventricles",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5241,
+            "end": 5402,
+            "text": "we created a task mask as an “or” combination of the significant activation maps for the 1-back, 2-back, and 3-back conditions compared with the 0-back condition",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5241,
+            "end": 5402,
+            "text": "9",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6128,
+            "end": 6172,
+            "text": "we extracted time courses from the task mask",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6128,
+            "end": 6172,
+            "text": "10",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6177,
+            "end": 6245,
+            "text": "computed the voxel-wise Pearson correlation matrix within each block",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6177,
+            "end": 6245,
+            "text": "11",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software",
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6395,
+            "end": 6481,
+            "text": "We used a set of thresholds ranging from 1% to 5% connection density with a step of 1%",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6395,
+            "end": 6481,
+            "text": "12",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Sparsity control — Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6412,
+            "end": 6481,
+            "text": "thresholds ranging from 1% to 5% connection density with a step of 1%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7522,
+            "end": 7642,
+            "text": "we used the Louvain algorithm, a fast and relatively accurate algorithm suitable for detecting modules in large networks",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7522,
+            "end": 7642,
+            "text": "13",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Software",
+            "Graph measures — Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8576,
+            "end": 8644,
+            "text": "within-module degree (WD) z-score and participation coefficient (PC)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

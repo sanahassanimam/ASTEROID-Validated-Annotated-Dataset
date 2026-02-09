@@ -1,0 +1,317 @@
+{
+  "data": {
+    "text": "Functional brain networks construction\nA major consideration in graph theory approaches to functional brain\nimaging data is how to define the nodes of the network. Many previousstudies have used anatomical atlases as nodes (Merhar et al., 2016; Wu\net al., 2013). However, anatomical atlases often have poor functional\nhomogeneity and do not present functional connectivity patterns accu-rately (Craddock, James, Holtzheimer, Hu, & Mayberg, 2012). A wholebrain parcellation method was recently introduced based on a data-driven approach to generate functionally homogeneous regions of inter-est (ROIs) by spatially parcellating whole-brain resting state fMRI datainto regions of maximal coherence in the time course of voxels withineach ROI (Craddock et al., 2012). This method can be used to create a\nparcellation atlas of any desired number of ROIs, though it has been\nshown that 150 –200 ROIs provides a good compromise between func-\ntional homogeneity of the regions, interpretability of connectivityresults and computational data reduction. We implemented this methodfor parcellation of normalized whole brain data. The pyClusterROI soft-ware (http://ccraddock.github.io/cluster_roi/) was used to parcellatewhole brain functional data of each group into 200 regions.\n2.3.3 |ROI-to-ROI functional connectivity\nWith 200 ROIs defined in the normalized and pre-processed resting\nstate brain imaging data from all subjects, we computed functional con-nectivity using the Conn functional connectivity toolbox (Whitfield-\nGabrieli & Nieto-Castanon, 2012). The residual BOLD time-series was\nextracted from gray matter voxels within the 200 defined ROIs in thepreprocessed resting state fMRI data. The resting state fMRI time serieswas corrected on a voxel-by-voxel basis using the anatomical compo-nent correction (aCompCor) method, which removes the principal com-ponents attributed to white matter and cerebrospinal fluid signals(Behzadi, Restom, Liau, & Liu, 2007) and eliminates the need for a globalsignal regression (Chai, Castañón, Öngür, & Whitfield-Gabrieli, 2012;Murphy, Birn, Handwerker, Jones, & Bandettini, 2009). Additional post-processing of time series data was performed using the Artifact Detec-tion Tool (ART) (Mazaika, Hoeft, Glover, & Reiss, 2009) to identify image\nframes at the subject level with extreme motion (>1 mm relative to time\nseries average) as outliers. These frames as well as six subject-specificmotion parameters and their first derivatives, were also calculated aspotential confounds in subsequent analysis stages. The residual BOLDtime-series in each voxel was band-pass filtered at 0.008 –0.08 Hz to\nfocus on low frequency fluctuations (Fox et al., 2005).\nFollowing the temporal preprocessing of fMRI data, an ROI-to-ROI\nfunctional connectivity analysis was performed by grouping voxels intothe 200 ROIs defined from the age specific atlases, and estimating the200×200 correlation matrix for each subject by computing Pearson ’s\ncorrelation coefficients between each ROI time-series and the time-series of all other ROIs. These correlation coefficients for each subjectwere converted to z-values using Fisher's transform to improve thenormality. False discovery rate (FDR; p< .05) was used to correct for\nmultiple comparisons in calculating the significance of each ROI –ROI\nconnection (Benjamini & Hochberg, 1995).\n2.3.4 |Functional network analysis\nUsing a threshold of p< .05 (FDR corrected), significant correlation\nvalues in the covariance matrix between all 200 ROIs were assigned abinary value of 1 when the connection between region iand region j\nwas present and 0 otherwise, to construct an unweighted connectivitymatrix from each of the 200 ROIs for each participant. Graphtheory analysis was computed using the Brain Connectivity Toolbox(http://www.brain-connectivity-toolbox.net/) which operates onthe unweighted covariance matrix. To explore global topologicalproperties of the whole brain functional networks, we computed\nGlobal Efficiency, Local Efficiency, Small-Worldness, Modularity, and\nRich-Club coefficient. Here, the global network parameters are brieflydefined as follows.1436 GOZDAS ET AL.\nGlobal efficiency is defined as the average inverse shortest charac-\nteristic path length between all pairs of nodes (Latora & Marchiori,\n2001). Global efficiency for a network Gwith Nnodes is given as:\nEglobGðÞ ¼1\nNN−1ðÞX\n1≤i,j≤N,i6¼j1\nLij\nwhere, Lijis the characteristic path length between nodes iandjin the\nnetwork.\nLocal efficiency is computed as the average of the global efficiency\nof each node's neighborhood sub-graph:\nElocGðÞ ¼1\nNX\n1≤i≤NEglobGiðÞ\nwhere, Giis the sub-graph of the nearest neighbors of node i. In con-\ntrast to global efficiency, local efficiency represents the capacity to\ntransfer information within the neighbors of a given node, and a highLocal Efficiency reflects efficient information transfer in the immedi-ate neighborhood of each node (Latora & Marchiori, 2001).\nBetweenness centrality of a node is the fraction of shortest paths\nbetween all other pairs of nodes in the network that actually pass\nthrough the node of interest (Freeman, 1978). This measure has beenused to identify the most central nodes in a network, which reflectsthe importance of the specific node in transferring information to\nother nodes. A node with high betweenness centrality is crucial to\nefficient communication.\nNode degree (k) is computed as the number of links to other nodes\nin the network.\nModularity (Q) quantifies the degree to which the network may be\npartitioned into a subdivision that has higher connections with eachother than with the rest of the network (Newman, 2006).\nSmall-worldness is an important model that quantifies the balance\nbetween network segregation and integration. To examine small-world properties of a network the normalized clustering coefficient γ\n=C/C\nrandand normalized characteristic path length λ=L/Lrandare\ncomputed (Watts & Strogatz, 1998). C and L are the clustering coeffi-cient and the characteristic path length of a network and C\nrandand\nLrandare the mean clustering coefficient and the characteristic path\nlength of the matched random networks. Clustering coefficient ( C)i s\ndescribed as the fraction of the node's neighbors that are also neigh-bors of each other. Characteristic path length ( L) is defined as the\naverage of the shortest path length between all pairs of nodes. Typi-\ncally, a network is considered a small-world when it meets the follow-\ning conditions: γ>1 , σ>1, and λ≈1; where, σ=(C/C\nrand)/(L/Lrand).\nThe Rich-Club coefficient of a network is calculated over a range\nof degree kafter removing all nodes with degree ≤k. The Rich-Club\ncoefficient ;(k) for any kis computed as the ratio of connections\nbetween the remaining nodes Ek>with a degree of at least kand the\ntotal number of possible connections between them. The Rich-Club\ncoefficient ;(k) is given formally by the following:\n;kðÞ ¼2Ek>.\nNk>Nk>−1 ðÞ\nWe computed the normalized Rich-Club coefficient ;norm(k) for\nthe unweighted connectivity matrices as follows:\n;norm kðÞ¼;kðÞ.\n;randkðÞwhere, ;rand(k) is the average Rich-Club coefficient over 1,000 random\nnetworks.\nA normalized Rich-Club clustering coefficient ;norm(k) > 1 over a\nrange of kindicates Rich-Club organization in the network (Van den\nHeuvel & Sporns, 2011).\n2.4 |Correlation of network topology with age, sex,\nand behavioral measures\nTo assess whether the observed changes in network properties relate\nto age, sex, or neurocognitive abilities in the children, we evaluated theeffects of association of these measures with global and regional net-\nwork properties. For each child, the age in months at the time of the\nresting state fMRI scan and the sex were extracted from the C-MINDdatabase. All children in the C-MIND study participated in an extensiveneurocognitive assessment battery within a few weeks of the functionalMR imaging session. Neurocognitive testing included tests of generalintellectual function [Wechsler Intelligence Scales: Wechsler Pre-schooland Primary Scale of Intelligence, Third Edition (WPPSI-III, ages 2:6 –5);\nWechsler Intelligence Scale for Children, Fourth Edition (WISC-IV, ages\n6–16) Wechsler Adult Intelligence Scale, Fourth Edition (WAIS-IV, ages\n17 and 18, Wechsler, 1981) and vocabulary (the Expressive VocabularyTest-2 (EVT-2) (Williams, 2007).\nWe found no significant correlation between age and neurocogni-\ntive measures ( p> .5) and no significant difference between boys and\ngirls ( p> .6). Scores from these tests are included in statistical analysis\nmodels with brain network measures to pin point brain regions and\nconnections that facilitate greater cognitive ability during develop-ment. Younger participants were excluded from the analysis becauseneurocognitive data were not available.\n2.5 |Statistical analysis\nTo determine the changes in the functional networks across develop-\nment, a general linear model (GLM) was applied to analyze the effects\nof age, sex and neurocognitive measures and their interactions on thenetwork parameters. We performed multiple linear regressions whichincluded age and age\n2as predictors with sex and mean frame-wise\ndisplacement (mFD) derived from the head motion parameters(Power, Barnes, Snyder, Schlaggar, & Petersen, 2012) as other covari-ates to detect the linear and quadratic developmental trajectories. TheGLM models were determined as follows:\nY\n1¼β0+β1xage + β2xsex + β3xmFD\nY2¼β0+β1xage + β2xage2+β3xsex + β4xmFD\nTo examine the sex-related differences and their development we\nused another GLM model including age, sex, and sex-by-age interac-tions to examine both positive (boys > girls) and negative (girls > boys)contrasts as well as positive and negative age-by-sex interactions.\nY\n3¼β0+β1xage + β2xsex + β3xsexxage + β4xmFD\nFor the analysis of the IQ-related differences, we first applied a\nmultiple linear regression Y3on both IQ and each network parameter\nto model the effects of age, sex, and their interactions.GOZDAS ET AL. 1437\nAll statistical analysis was performed in RStudio (https://www.\nrstudio.com)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 801,
+            "end": 921,
+            "text": "parcellation atlas of any desired number of ROIs, though it has been\nshown that 150 –200 ROIs provides a good compromise",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1124,
+            "end": 1141,
+            "text": "pyClusterROI soft",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1253,
+            "end": 1273,
+            "text": "into 200 regions.\n2.",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1557,
+            "end": 1648,
+            "text": "residual BOLD time-series was\nextracted from gray matter voxels within the 200 defined ROIs",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2944,
+            "end": 3018,
+            "text": "computing Pearson ’s\ncorrelation coefficients between each ROI time-series",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1430,
+            "end": 1510,
+            "text": "uted functional con-nectivity using the Conn functional connectivity toolbox (Wh",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3105,
+            "end": 3156,
+            "text": "were converted to z-values using Fisher's transform",
+            "labels": [
+              "Connectivity normalization — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3182,
+            "end": 3321,
+            "text": "False discovery rate (FDR; p< .05) was used to correct for\nmultiple comparisons in calculating the significance of each ROI –ROI\nconnection",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3623,
+            "end": 3655,
+            "text": "construct an unweighted connecti",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3960,
+            "end": 4064,
+            "text": "we computed\nGlobal Efficiency, Local Efficiency, Small-Worldness, Modularity, and\nRich-Club coefficient.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3758,
+            "end": 3784,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8814,
+            "end": 8991,
+            "text": "To determine the changes in the functional networks across develop-\nment, a general linear model (GLM) was applied to analyze the effects\nof age, sex and neurocognitive measures",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 801,
+            "end": 921,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1124,
+            "end": 1141,
+            "text": "2",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1557,
+            "end": 1648,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2944,
+            "end": 3018,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3105,
+            "end": 3156,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3182,
+            "end": 3321,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3623,
+            "end": 3655,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3960,
+            "end": 4064,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8814,
+            "end": 8991,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        }
+      ]
+    }
+  ]
+}

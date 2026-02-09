@@ -1,0 +1,679 @@
+{
+  "data": {
+    "text": "Applying a network framework to the neurobiology of reading and dyslexia\nStephen K. Bailey, Katherine S. Aboud, Tin Q. Nguyen and Laurie E. Cutting*\nJournal of Neurodevelopmental Disorders (2018) 10:37\nhttps://doi.org/10.1186/s11689-018-9251-z\n\nParticipants Participants were scanned in the summer\nand fall following completion of third or fourth grade (ages\n8–11). All participants met the following criteria: native\nEnglish speakers; normal hearing; normal or corrected-\nto-normal vision; no history of major psychiatric illness\nor traumatic brain injury/epilepsy; and no contraindica-\ntion to MRI. Participants and their parents gave written\nconsent to participate at the beginning of the study, with\nprocedures carried out in accordance with Vanderbilt\nUniversity’s Institutional Review Board (IRB).\n\nTable 1 Demographics for study participants\n\nGrade 3 Grade 4\n\nParticipants 50 45 (15 new)\n\nScan runs 152 162\n\nGender 24 F, 26 M 23 F, 22 M\n\nAge at scan (SD) 9.45 (0.3) 10.5 (0.3)\n\nWASI Full-Scale IQ (SD) 113.0 (15.5) 111.0 (15.9)\n\nTOWRE - Total Word Efficiency (SD) 109.9 (14.8) 104.6 (17.4)\n\nFunctional MRI data In the MRI scanner, participants\nperformed up to four runs of a language comprehension\ntask, which was crossed on two conditions: the modal-\nity of presentation (listening or reading) and the passage\ngenre (expository or narrative). Each fMRI run had two\nbaseline conditions: a modality-specific baseline task and\na resting-state block with a fixation cross. The order and\nduration for each block varied slightly across runs but was\napproximately: paragraph 1 (70 s), baseline 1 (70 s), para-\ngraph 2 (70 s), baseline 2 (70 s), and resting-state (270 s).\nTotal scan time was 550 s for all runs, and the average\namount of resting-state baseline was 272 s (4 m, 32 s)\nper run.\n\nIn total, resting-state data from 50 children\nin the third wave (152 scans) and 45 children in the fourth\nwave (162 scans) met inclusion criteria.\n\nImaging acquisition and preprocessing All fMRI\nscans were acquired at Vanderbilt University Institute\nof Imaging Sciences on one of two Philips Achieva 3T\nMR scanners with a 32-channel head coil. Functional\nimages were acquired using a gradient echo planar imag-\ning sequence with 40 slices acquired parallel to the\nanterior-posterior commissure plane. Additional imag-\ning parameters for functional images were 250 dynamics;\nTR = 2200 ms; TE = 30 ms; FOV = 240× 240× 120 mm;\nflip angle = 75◦ ; voxel size = 3 × 3 × 3.2 mm3.\nAll scans were first preprocessed using a standard\npipeline in FSL (version 5.0.9), and connectivity anal-\nysis was performed in the CONN toolbox. fMRI data\nwere high-pass filtered at 0.008 Hz, motion-corrected, co-\nregistered to a structural image, normalized to MNI space\nand smoothed by a 5-mm FWHM spherical kernel. Out-\nlier volumes were identified as individual fMRI volumes\nin which the RMS framewise-displacement exceeded 0.7.\nfMRI timeseries were corrected using anatCompCorr\nmethods, which uses signal from white matter tissue and\ncerebrospinal fluid areas to reduce noise not related to\nbrain activity. Other covariates of no interest included\nsix rigid motion parameters, six derivative motion param-\neters, and outlier volumes. Finally, we used a weighted\ngeneral linear model (GLM) to model the resting block\nand averaged within-subject across scan sessions to get a\nde-noised resting-state timeseries.\n\nAvailability of data andmaterials\nData used in the present analyses, as well as links to original sources, is available\non Github at https://github.com/EBRL/JNDD_ReadingNetworkFramework.\n\nEthics approval and consent to participate\nParticipants and their parents gave written consent to participate at the\nbeginning of the study, with procedures carried out in accordance with\nVanderbilt University’s Institutional Review Board (IRB)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 73,
+            "end": 148,
+            "text": "Stephen K. Bailey, Katherine S. Aboud, Tin Q. Nguyen and Laurie E. Cutting*",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 72,
+            "text": "Applying a network framework to the neurobiology of reading and dyslexia",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 190,
+            "end": 194,
+            "text": "2018",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 149,
+            "end": 201,
+            "text": "Journal of Neurodevelopmental Disorders (2018) 10:37",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 202,
+            "end": 243,
+            "text": "https://doi.org/10.1186/s11689-018-9251-z",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3518,
+            "end": 3570,
+            "text": "https://github.com/EBRL/JNDD_ReadingNetworkFramework",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3518,
+            "end": 3570,
+            "text": "https://github.com/EBRL/JNDD_ReadingNetworkFramework",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3761,
+            "end": 3817,
+            "text": "Vanderbilt University’s Institutional Review Board (IRB)",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 353,
+            "end": 364,
+            "text": "(ages\n8–11)",
+            "labels": [
+              "Age"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 915,
+            "end": 943,
+            "text": "Gender 24 F, 26 M 23 F, 22 M",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 411,
+            "end": 600,
+            "text": "native\nEnglish speakers; normal hearing; normal or corrected-\nto-normal vision; no history of major psychiatric illness\nor traumatic brain injury/epilepsy; and no contraindica-\ntion to MRI.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 880,
+            "end": 882,
+            "text": "50",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 883,
+            "end": 885,
+            "text": "45",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2078,
+            "end": 2096,
+            "text": "Philips Achieva 3T",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2223,
+            "end": 2232,
+            "text": "40 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2368,
+            "end": 2380,
+            "text": "TR = 2200 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2382,
+            "end": 2392,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2394,
+            "end": 2416,
+            "text": "FOV = 240× 240× 120 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2418,
+            "end": 2434,
+            "text": "flip angle = 75◦",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2437,
+            "end": 2465,
+            "text": "voxel size = 3 × 3 × 3.2 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1650,
+            "end": 1671,
+            "text": "resting-state (270 s)",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1693,
+            "end": 1698,
+            "text": "550 s",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1766,
+            "end": 1771,
+            "text": "272 s",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1432,
+            "end": 1475,
+            "text": "a resting-state block with a fixation cross",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2530,
+            "end": 2549,
+            "text": "FSL (version 5.0.9)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2600,
+            "end": 2612,
+            "text": "CONN toolbox",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1828,
+            "end": 1830,
+            "text": "50",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1874,
+            "end": 1876,
+            "text": "45",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1579,
+            "end": 1583,
+            "text": "70 s",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2629,
+            "end": 2659,
+            "text": "1",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2629,
+            "end": 2659,
+            "text": "high-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2651,
+            "end": 2659,
+            "text": "0.008 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2661,
+            "end": 2677,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2661,
+            "end": 2677,
+            "text": "motion-corrected",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2679,
+            "end": 2715,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2679,
+            "end": 2715,
+            "text": "co-registered to a structural image",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2717,
+            "end": 2740,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2717,
+            "end": 2740,
+            "text": "normalized to MNI space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2745,
+            "end": 2785,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2745,
+            "end": 2785,
+            "text": "Gaussian spatial smoothing",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2759,
+            "end": 2768,
+            "text": "5-mm FWHM",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2861,
+            "end": 2900,
+            "text": "6",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2861,
+            "end": 2900,
+            "text": "outlier volumes",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2897,
+            "end": 2900,
+            "text": "0.7",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Software"
+          ]
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2939,
+            "end": 2951,
+            "text": "7",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2939,
+            "end": 2951,
+            "text": "anatCompCorr",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2600,
+            "end": 2612,
+            "text": "CONN toolbox",
+            "labels": [
+              "aCompCor — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "aCompCor — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3122,
+            "end": 3206,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3122,
+            "end": 3206,
+            "text": "six rigid motion parameters, six derivative motion parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Algorithm"
+          ]
+        }
+      ]
+    }
+  ]
+}

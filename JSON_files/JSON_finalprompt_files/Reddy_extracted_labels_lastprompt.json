@@ -1,0 +1,917 @@
+{
+  "data": {
+    "text": "Brain state flexibility accompanies motor-skill acquisition\nPranav G. Reddy, Marcelo G. Mattar, Andrew C. Murphy, Nicholas F. Wymbs, Scott T. Grafton, Theodore D. Satterthwaite, and Danielle S. Bassett\nNeuroimage. 2018 May 01; 171: 135–147. doi:10.1016/j.neuroimage.2017.12.093.\nThis is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).\n\nLearning requires the traversal of inherently distinct cognitive states to produce behavioral adaptation. We observe the presence of two primary states characterized by either high activation in sensorimotor cortex or high activation in a frontal-subcortical system. Flexible switching among these primary states and other less common states becomes more frequent as learning progresses, and is inversely correlated with individual differences in learning rate.\n\nEthics statement—In accordance with the guidelines set out by the Institutional Review Board of the University of California, Santa Barbara, twenty-two right-handed participants (13 females and 9 males) volunteered to participate and provided informed consent in writing. Two participants were excluded from the following analyses: one failed to complete the entirety of the experiment and the other had persistent head motion greater than 5 mm during MRI scanning. The 20 remaining participants all had normal or corrected vision and none had any history of neurological disease or psychiatric disorders.\n\nExperimental Setup and Procedure—In total, each participant completed at least 30 behavioral training sessions over the course of 6 weeks, a pre-training fMRI session, and three test fMRI sessions. Training began immediately after the pre-training fMRI session and test scans were conducted approximately fourteen days after each previous scan (during which training also took place). Thus a total of 4 scans were acquired over the approximately 6 weeks of training.\n\nTraining and trial procedure—Participants practiced a set of ten-element sequences in a discrete sequence-production (DSP) task, which required participants to generate these responses to visual stimuli by pressing a button on a laptop keyboard with their right hand. Sequences were represented by a horizontal array of five square stimuli, where the thumb corresponded to the leftmost stimuli and the pinky corresponded to the rightmost stimuli. The imperative stimulus was highlighted in red and the next square to be pressed in the sequence was highlighted immediately after a correct key press. The sequence only continued once the appropriate key was pressed. Participants had an unlimited amount of time to complete each trial, and were encouraged to remain accurate rather than swift. Sequences included neither repetitions (\"11\", for example) nor patterns such as trills (\"121\", for example) or runs (\"123\", for example).\n\nEach set of ten trials (referred to hereafter as trial blocks) belonged to a single exposure type (EXT, MOD, or MIN) and had five trials for each sequence, which were separated by an inter-trial interval that lasted between 0 s and 6 s. Each epoch was composed of six blocks (60 trials) with 20 trials for each exposure and each test session contained five epochs and thus 300 trials.\n\nBehavioral estimates of learning—We defined movement time (MT) as the time between the first button press and the last button press for any single sequence. For the sequences of a single type, we fit a double exponential function to the MT data in order to estimate learning rate.\n\nImaging procedures—Signals were acquired using a 3.0 T Siemens Trio with a 12-channel phased-array head coil. Each whole-brain scan epoch was created using a single-shot echo planar imaging sequence that was sensitive to BOLD contrast to acquire 37 slices per repetition time (repetition time (TR) of 2000 ms, 3 mm thickness, 0.5 mm gap) with an echo time of 30 ms, a flip angle of 90°, a field of view of 192 mm, and a 64×64 acquisition matrix. Before the first round of data collection, we acquired a high-resolution T1-weighted sagittal sequence image of the whole brain (TR of 15.0 ms, echo time of 4.2 ms, flip angle of 90°, 3D acquisition, field of view of 256 mm, slice thickness of 0.89 mm, and 256×256 acquisition matrix).\n\nfMRI data preprocessing—Imaging data was processed and analyzed using Statistic Parametric Mapping (SPM8, Wellcome Trust Center for Neuroimaging and University College London, UK). We first realigned raw functional data, then coregistered it to the native T1 (normalized to the MNI-152 template with a resliced resolution of 3×3×3 mm), and then smoothed it with an isotropic Gaussian kernel of 8-mm full width at half-maximum. To control for fluctuations in signal intensity, we normalized the global intensity across all functional volumes. The global signal was not regressed out of the voxel time series.\n\nBehavioral apparatus—The modules on participants’ laptop computers were used to control stimulus presentation. Test sessions were controlled using a laptop running MATLAB version 7.1 (Mathworks, Natick, MA). Key-press responses and response times were measured using a custom fiber optic button box and transducer connected via a serial port.\n\nGeneral linear model—For each subject, the BOLD response was modeled using a single design matrix with parameters estimated using the GLM. We used an event-related design to model the expression of sequence-specific representations, with trial onset corresponding to the presentation of the sequence identity cue, 2 s before the presentation of the initial DSP target stimulus.\n\nPartitioning into regions of interest—We divided the brain into 112 cortical and subcortical regions using the Harvard-Oxford (HO) atlas of the FMRIB Software Library. For each participant and for each of the 112 regions, the regional mean BOLD was computed by separately averaging across all voxels in that area.\n\nWavelet decomposition—We use the maximum-overlap discrete wavelet transform to decompose regional time series into wavelet scales corresponding to specific frequency bands. Because our sampling frequency was 2 s (1 TR), wavelet scale 1 corresponded to 0.125–0.25 Hz, and scale 2 to 0.06–0.125 Hz. To enhance sensitivity to task-related changes in BOLD magnitudes, we examined wavelet scale 2.\n\nConstructing Time-by-Time Networks—We defined a brain state as a pattern of BOLD activity across brain regions at a single instant in time. Using the wavelet decomposition as the input signal, we measured the similarities between these states in each trial block. We calculated the Spearman correlation of regional BOLD magnitudes between all possible pairs of time points (TRs). This procedure creates an undirected, weighted graph or network in which nodes represent time points and edges between nodes represent the correlation between brain states at different time points.\n\nIsolating Brain States Using Community Detection—To uncover common brain states in the time-by-time network, we used a network-based clustering technique known as community detection. In particular, we chose a community detection approach known as modularity maximization, where we optimize a modularity quality function using a Louvain-like locally greedy heuristic algorithm with a Newman-Girvan null model.\n\nState Flexibility Calculation—To examine how the pattern of traversals through brain states changed, we define a state flexibility metric. We specified state flexibility (F) to be the number of state transitions (T) observed relative to the number of states (S), or F = T/S.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 60,
+            "end": 75,
+            "text": "Pranav G. Reddy",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 59,
+            "text": "Brain state flexibility accompanies motor-skill acquisition",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 214,
+            "end": 218,
+            "text": "2018",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 202,
+            "end": 212,
+            "text": "Neuroimage",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 245,
+            "end": 277,
+            "text": "10.1016/j.neuroimage.2017.12.093",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 394,
+            "end": 499,
+            "text": "Learning requires the traversal of inherently distinct cognitive states to produce behavioral adaptation.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 290,
+            "end": 339,
+            "text": "open access article under the CC BY-NC-ND license",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "Missing_sublabels": [
+            "Data",
+            "Code",
+            "Preregistered",
+            "Remarks"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3580,
+            "end": 3598,
+            "text": "3.0 T Siemens Trio",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3777,
+            "end": 3806,
+            "text": "37 slices per repetition time",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3841,
+            "end": 3855,
+            "text": "3 mm thickness",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3857,
+            "end": 3867,
+            "text": "0.5 mm gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3825,
+            "end": 3839,
+            "text": "TR) of 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3877,
+            "end": 3895,
+            "text": "echo time of 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3899,
+            "end": 3916,
+            "text": "flip angle of 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3920,
+            "end": 3943,
+            "text": "field of view of 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4566,
+            "end": 4597,
+            "text": "resliced resolution of 3×3×3 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1323,
+            "end": 1352,
+            "text": "The 20 remaining participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)",
+            "Duration (s)",
+            "Eyes open/closed",
+            "Most-used software for preprocessing",
+            "Resting or Task/If Task, what task?"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4334,
+            "end": 4368,
+            "text": "Statistic Parametric Mapping (SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2020,
+            "end": 2059,
+            "text": "discrete sequence-production (DSP) task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3215,
+            "end": 3246,
+            "text": "five epochs and thus 300 trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3046,
+            "end": 3098,
+            "text": "inter-trial interval that lasted between 0 s and 6 s",
+            "labels": [
+              "ISI distribution"
+            ]
+          },
+          "Missing_sublabels": [
+            "Length of each trial",
+            "Length of blocks",
+            "Efficiency optimization",
+            "Block/event correlation"
+          ]
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2597,
+            "end": 2723,
+            "text": "Participants had an unlimited amount of time to complete each trial, and were encouraged to remain accurate rather than swift.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2232,
+            "end": 2271,
+            "text": "horizontal array of five square stimuli",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2724,
+            "end": 2762,
+            "text": "Sequences included neither repetitions",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 998,
+            "end": 1034,
+            "text": "twenty-two right-handed participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1009,
+            "end": 1034,
+            "text": "right-handed participants",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1036,
+            "end": 1058,
+            "text": "13 females and 9 males",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1361,
+            "end": 1461,
+            "text": "normal or corrected vision and none had any history of neurological disease or psychiatric disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1129,
+            "end": 1159,
+            "text": "Two participants were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Age",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 923,
+            "end": 996,
+            "text": "Institutional Review Board of the University of California, Santa Barbara",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3293,
+            "end": 3405,
+            "text": "movement time (MT) as the time between the first button press and the last button press for any single sequence.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4454,
+            "end": 4483,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4334,
+            "end": 4368,
+            "text": "Statistic Parametric Mapping (SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4454,
+            "end": 4483,
+            "text": "realigned raw functional data",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4490,
+            "end": 4522,
+            "text": "2",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4334,
+            "end": 4368,
+            "text": "Statistic Parametric Mapping (SPM8",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4490,
+            "end": 4522,
+            "text": "coregistered it to the native T1",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4524,
+            "end": 4558,
+            "text": "3",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4334,
+            "end": 4368,
+            "text": "Statistic Parametric Mapping (SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4524,
+            "end": 4558,
+            "text": "normalized to the MNI-152 template",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4566,
+            "end": 4597,
+            "text": "resliced resolution of 3×3×3 mm",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4609,
+            "end": 4654,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4334,
+            "end": 4368,
+            "text": "Statistic Parametric Mapping (SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4609,
+            "end": 4689,
+            "text": "smoothed it with an isotropic Gaussian kernel of 8-mm full width at half-maximum",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4658,
+            "end": 4689,
+            "text": "8-mm full width at half-maximum",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4743,
+            "end": 4804,
+            "text": "5",
+            "labels": [
+              "Intensity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4334,
+            "end": 4368,
+            "text": "Statistic Parametric Mapping (SPM8",
+            "labels": [
+              "Intensity normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4743,
+            "end": 4804,
+            "text": "normalized the global intensity across all functional volumes",
+            "labels": [
+              "Intensity normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5634,
+            "end": 5696,
+            "text": "6",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5740,
+            "end": 5762,
+            "text": "FMRIB Software Library",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5707,
+            "end": 5732,
+            "text": "Harvard-Oxford (HO) atlas",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5660,
+            "end": 5696,
+            "text": "112 cortical and subcortical regions",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5818,
+            "end": 5908,
+            "text": "7",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5822,
+            "end": 5908,
+            "text": "regional mean BOLD was computed by separately averaging across all voxels in that area",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5933,
+            "end": 5986,
+            "text": "8",
+            "labels": [
+              "wavelet decomposition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5944,
+            "end": 5986,
+            "text": "maximum-overlap discrete wavelet transform",
+            "labels": [
+              "wavelet decomposition — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "wavelet decomposition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6287,
+            "end": 6302,
+            "text": "wavelet scale 2",
+            "labels": [
+              "wavelet decomposition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6569,
+            "end": 6684,
+            "text": "9",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6587,
+            "end": 6607,
+            "text": "Spearman correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6636,
+            "end": 6683,
+            "text": "between all possible pairs of time points (TRs)",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6993,
+            "end": 7066,
+            "text": "10",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7132,
+            "end": 7155,
+            "text": "modularity maximization",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7213,
+            "end": 7260,
+            "text": "Louvain-like locally greedy heuristic algorithm",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7434,
+            "end": 7569,
+            "text": "11",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7447,
+            "end": 7568,
+            "text": "state flexibility (F) to be the number of state transitions (T) observed relative to the number of states (S), or F = T/S",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7561,
+            "end": 7568,
+            "text": "F = T/S",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        }
+      ]
+    }
+  ]
+}

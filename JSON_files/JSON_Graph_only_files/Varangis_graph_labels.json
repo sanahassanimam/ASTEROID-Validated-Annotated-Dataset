@@ -1,0 +1,355 @@
+{
+  "data": {
+    "text": "In order to perform the functional connectivity analyses described below, the coordinates of the 264 ROIs identified by Power and colleagues (2011) were transferred to native space via nonlinear registration of the subject's structural scan to the MNI template using the ANTS software package. Next, a 10 mm radius spherical mask was generated for each coordinate and intersected with the FreeSurfer gray matter mask in order to derive the gray matter-registered ROI masks for each of the 264 ROIs. An intermodal, intrasubject, rigid-body registration of the fMRI reference image and T1 scan was then performed using FLIRT with 6 degrees of freedom, normalized mutual information as the cost function, in order to transfer ROI masks from T1 space to fMRI space. These transferred ROI masks were used to average all voxels within each mask to obtain a single fMRI time series for each of the 264 ROIs.\n\nTime series data were then concatenated by domain, yielding 4 sets of time series data that were modeled separately as blocked designs: VOCAB (concatenated synonyms and antonyms data; 388 volumes), SPEED (concatenated digit symbol, letter comparison, and pattern comparison data; 595 volumes), FLUID (concatenated paper folding, matrix reasoning, and letter sets data; 1,290 volumes), and MEM (concatenated logical memory, word order, and paired associates data; 517 volumes). In order to remove any unique task-specific variance from the domain time series, task was regressed out of each ROI’s time series. These residualized time series were then used to generate correlation matrices among all ROIs (264 ROIs by 264 ROIs). The diagonal of each correlation matrix was set to zero for all graph theory analyses, and “NA” for all average correlation analyses, in order to remove correlations between an area and itself from analyses. Further, as per the utilization recommendations for this parcellation scheme, all ROIs with centers within 20 mm of one another in standard space were excluded from all analyses. ROIs were then labeled based on the Power (2011) network assignments, with the following networks being selected for analysis based on their inclusion in similar past studies: visual (Vis), somatomotor mouth (Mouth), somatomotor hand (Hand), auditory (Aud), default mode (DMN), salience (Sal), cingulo-opercular (CO), frontoparietal (FP), dorsal attention (DAN), and ventral attention (VAN).\n\nIndividual correlation matrices were used to compute several measures of functional connectivity. Average positive and negative correlation were computed within and between all networks of interest. Within-network correlations were characterized as those reflecting correlations between ROIs within a specific network; between-network correlations were characterized as those reflecting correlations between ROIs from one network and those of all other networks. Average positive correlation was computed by setting all negative correlation values to “NA,” then taking the average within- and between-network positive correlation for each network. Average negative correlation was computed by setting all positive correlation values to “NA,” then taking the average within- and between-network negative correlation for each network. Due to few negative within-network correlations (and concern as to how to interpret these values), only between-network negative correlations were included in the analysis of negative correlations.\n\nThese data were also used to derive the metric of system segregation introduced by Wig and colleagues. This metric reflects the degree to which the brain segments into networks (or systems) that function independently of one another—high values reflect greater functional separation between networks, while lower values reflect less functional separation between networks. In order to compute this metric, only positive correlations among the ten networks identified above were considered, and all negative correlations were set to zero. As in previous uses of this metric, system segregation was computed separately across all somatomotor networks and across all association networks. Then, the average within- and between-network correlations were calculated for each type of network separately, and the system segregation was defined accordingly.\n\nTwo graph theory metrics of functional connectivity were also computed using the Brain Connectivity Toolbox in order to measure additional aspects of global and nodal connectivity. Global connectivity was assessed using the graph theory metrics of modularity (the extent to which the correlation matrix can be partitioned into networks that maximize within-group connections and minimize between-group connections) and global efficiency (average inverse shortest path length). In order to ensure that results were not biased by the connectivity weight threshold applied to the correlation matrices, a range of thresholds between 2% and 10% (in increments of 1%) were applied to matrices during computation of each metric. Based on this thresholding, all graph theory metrics were only computed on positive correlation weights, with all correlations not meeting this threshold being set to zero. As such, all graph theory analyses evaluate the effects of both age group and threshold on the metric of interest."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 97,
+            "end": 147,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 97,
+            "end": 147,
+            "text": "264 ROIs identified by Power and colleagues (2011)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 302,
+            "end": 416,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 302,
+            "end": 416,
+            "text": "10 mm radius spherical mask was generated for each coordinate and intersected with the FreeSurfer gray matter mask",
+            "labels": [
+              "ROI definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 302,
+            "end": 416,
+            "text": "10 mm radius spherical mask was generated for each coordinate and intersected with the FreeSurfer gray matter mask",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 803,
+            "end": 899,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 803,
+            "end": 899,
+            "text": "average all voxels within each mask to obtain a single fMRI time series for each of the 264 ROIs",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 902,
+            "end": 988,
+            "text": "4",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 902,
+            "end": 988,
+            "text": "Time series data were then concatenated by domain, yielding 4 sets of time series data",
+            "labels": [
+              "Combine block — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1511,
+            "end": 1627,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1511,
+            "end": 1627,
+            "text": "These residualized time series were then used to generate correlation matrices among all ROIs (264 ROIs by 264 ROIs)",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2016,
+            "end": 2084,
+            "text": "6",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2016,
+            "end": 2084,
+            "text": "ROIs were then labeled based on the Power (2011) network assignments",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2016,
+            "end": 2084,
+            "text": "ROIs were then labeled based on the Power (2011) network assignments",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3847,
+            "end": 3977,
+            "text": "7",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3847,
+            "end": 3977,
+            "text": "only positive correlations among the ten networks identified above were considered, and all negative correlations were set to zero",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4891,
+            "end": 4953,
+            "text": "8",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4891,
+            "end": 4953,
+            "text": "a range of thresholds between 2% and 10% (in increments of 1%)",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4891,
+            "end": 4953,
+            "text": "a range of thresholds between 2% and 10% (in increments of 1%)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4292,
+            "end": 4399,
+            "text": "9",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4292,
+            "end": 4399,
+            "text": "Two graph theory metrics of functional connectivity were also computed using the Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4540,
+            "end": 4706,
+            "text": "modularity (the extent to which the correlation matrix can be partitioned into networks that maximize within-group connections and minimize between-group connections)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4711,
+            "end": 4767,
+            "text": "global efficiency (average inverse shortest path length)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5042,
+            "end": 5185,
+            "text": "all graph theory metrics were only computed on positive correlation weights, with all correlations not meeting this threshold being set to zero",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

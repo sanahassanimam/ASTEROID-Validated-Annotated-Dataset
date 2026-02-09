@@ -1,0 +1,629 @@
+{
+  "data": {
+    "text": "TYPE Original Research\nPUBLISHED 06 February 2023\nDOI 10.3389/fnins.2023.1098441\nOPEN ACCESS\nTopological network properties of resting-state functional connectivity patterns are associated with metal mixture exposure in adolescents\nInvernizzi A, Rechtman E, Oluyemi K, Renzetti S, Curtin P, Colicino E, Ambrosi C, Mascaro L, Patrono A, Corbo D, Cagna G, Gasparotti R, Reichenberg A, Tang CY, Smith DR, Placidi D, Lucchini RG, Wright RO and Horton MK (2023) Topological network properties of resting-state functional connectivity patterns are associated with metal mixture exposure in adolescents. Front. Neurosci. 17:1098441. doi: 10.3389/fnins.2023.1098441\n\nIntroduction: Adolescent exposure to neurotoxic metals adversely impacts cognitive, motor, and behavioral development. Few studies have addressed the underlying brain mechanisms of these metal–associated developmental outcomes. Furthermore, metal exposure occurs as a mixture, yet previous studies most often consider impacts of each metal individually. In this cross–sectional study, we investigated the relationship between exposure to neurotoxic metals and topological brain metrics in adolescents.\n\nMethods: In 193 participants (53% females, ages: 15–25 years) enrolled in the Public Health Impact of Metals Exposure (PHIME) study, we measured concentrations of four metals (manganese, lead, copper, and chromium) in multiple biological media (blood, urine, hair, and saliva) and acquired resting–state functional magnetic resonance imaging scans. Using graph theory metrics, we computed global and local efficiency (global:GE; local:LE) in 111 brain areas (Harvard Oxford Atlas). We used weighted quantile sum (WQS) regression models to examine association between metal mixtures and each graph metric (GE or LE), adjusted for sex and age.\n\nResults: We observed significant negative associations between the metal mixture and GE and LE [βGE = −0.076, 95% CI (−0.122, −0.031); βLE= −0.051, 95% CI (−0.095, −0.006)]. Lead and chromium measured in blood contributed most to this association for GE, while chromium measured in hair contributed the most for LE.\n\nDiscussion: Our results suggest that exposure to this metal mixture during adolescence reduces the efficiency of integrating information in brain networks at both local and global levels, informing potential neural mechanisms underlying the developmental toxicity of metals. Results further suggest these associations are due to combined joint effects to different metals, rather than to a single metal.\n\nThe Public Health Impact of Metal Exposure (PHIME) cohort investigates associations between metal exposure from anthropogenic emissions and developmental health outcomes in adolescents and young adults living nearby the ferro-manganese industry in northern Italy. Details of the study have been described elsewhere (Lucchini et al., 2012a; Lucas et al., 2015). Inclusion criteria were: birth in the areas of interest; family residence in Brescia for at least two generations; residence in the study areas since birth. The exclusion criteria were: having a neurological, hepatic, metabolic, endocrine, or psychiatric disorder; using medications (in particular with neuro-psychological side effects); having clinically diagnosed motor deficits or cognitive impairment and having visual deficits that are not adequately corrected. Detailed description of this recruitment process and study design can be found in previous publications (Lucchini et al., 2012a,b). A convenience based sample of 202 participants (53% female, ages 15–25 years) were selected to participate in a multi-modal magnetic resonance imaging (MRI) study, PHIME-MRI. They completed multimodal MRI scans, neuropsychological tests, including measures of IQ [Kaufman Brief Intelligence Test, Second Edition (KBIT-2)] (Kaufman and Kaufman, 2014; Reynolds et al., 2014), memory and motor functions. All participants satisfied eligibility criteria for MRI scanning [i.e., metal implants or shrapnel, claustrophobia, no prior history of traumatic brain injury, body mass index (BMI) ≤40]. Mn, Pb, Cr, and Cu were measured in saliva, hair, blood and urine, for each PHIME-MRI participant. Complete exposure data (i.e., all metals in all media for a total of 16 components), MRI and covariates data were available for 193 participants included in this analysis. A total of 193 participants were included in this analysis, 9 were missing at least one biological marker (Supplementary Figure 1).\n\nMagnetic resonance imaging (MRI) and functional MRI (fMRI) data acquisition was performed on a high-resolution 3-Tesla SIEMENS Skyra scanner using a 64-channel phased array head and neck coil, at the Neuroimaging Division of ASST Spetali Civili Hospital of Brescia. For each participant, a high-resolution 3D T1-weighted structural scan was acquired using a MPRAGE sequence (TR = 2.4 ms, TE = 2.06 ms, TI = 230 ms, acquisition matrix = 256 × 256 and 224 sagittal slices with final voxel size = 0.9 mm3). Fifty contiguous oblique-axial sections were used to cover the whole brain where the first four images were discarded to allow the magnetization to reach equilibrium. For each subject, a single 10-min continuous functional sequence using a T2∗ weighted echo-planar imaging (EPI) sequence (TR = 1.0 ms, TE = 27 ms, 70 axial slices, 2.1 mm thickness, matrix size 108 × 108, covering the brain from vertex to cerebellum) was acquired. During resting-state scans, lights of the MRI room were off and participants were instructed to stay awake, relax and daydream (not think about anything) with their eyes open. They were presented with an image of a night skyline figure projected on a MRI compatible monitor. Padding was used for comfort and reduction of head motion. Earplugs were used to reduce noise. Data were read by a board-certified radiologist to determine quality and possible incidental findings–no findings were reported.\n\nImage pre-processing, global and local efficiency calculations, and statistical analyses were performed using SPM12 (Wellcome Department of Imaging Neuroscience, London, UK), Brain Connectivity toolbox (Rubinov et al., 2009; Rubinov and Sporns, 2010) and customized scripts, implemented in MatLab 2016b (The Mathworks Inc., Natick, MA, USA) and R (v3.4).\n\nFor each subject, the structural magnetic resonance image was co-registered and normalized against the Montreal Neurological Institute (MNI) template and segmented to obtain white matter (WM), gray matter (GM) and cerebrospinal fluid (CSF) probability maps in the MNI space. FMRI data were spatially realigned, co-registered to the MNI-152 EPI template and subsequently normalized utilizing the segmentation option for EPI images in SPM12. All normalized data were denoised using ICA-AROMA (Pruim et al., 2015). Additionally, spatial smoothing was applied (8 millimeters) to the fMRI data. As further quality check of fMRI data, large head motion in any direction or rotation (>3 mm or 3◦) was used as exclusion criteria in our study–no participants were excluded in this study. No global signal regression was applied.\n\nBased on the Harvard-Oxford (Desikan et al., 2006) atlas, 111 regions of interest (ROI; 48 left and 48 right cortical areas; 7 left and 7 right subcortical regions and 1 brainstem) were defined. In this atlas, the brain areas were defined using T1-weighted images of 21 healthy male and 16 healthy female subjects (ages 18–50). The T1-weighted images were segmented and affine-registered to MNI152 space using FLIRT (FSL), and the transforms then applied to the individual brain areas’ label. Finally, these were combined across subjects to form population probability maps for each ROI (Desikan et al., 2006). For each ROI, a time-series was extracted by averaging across voxels per time point. To facilitate statistical inference, data were “pre-whitened” by removing the estimated autocorrelation structure in a two-step generalized linear model (GLM) procedure (Monti, 2011; Bright and Murphy, 2015). In the first step, the raw data were filtered against the 6 motion parameters (three translations and three rotations). Using the resulting residuals, the autocorrelation structures present in the data were estimated using an Auto-Regressive model of order 1 [AR (1)] and then removed from the raw data. Next, the realignment parameters, white matter (WM) and cerebrospinal fluid (CSF) signals were removed as confounders on the whitened data.\n\nGlobal and Local Efficiency (GE and LE) were computed using the Brain Connectivity toolbox (Rubinov et al., 2009; Rubinov and Sporns, 2010) on the defined ROI time course data per subject. GE and LE build on the concept of efficient integration of communication in a network at local (LE) and whole (GE) level. Based on the average inverse shortest path length in the brain or network, GE is defined as the inverse of the average characteristic path length between all nodes in the networks (Latora and Marchiori, 2001; Bullmore and Sporns, 2012). For each individual node defined as ROI, the shortest number of steps required to go from one node to another was computed. Then, the average number of shortest steps to all defined nodes was computed separately for each node. To correct for the total number of connections between nodes, the inverse of the average number of shortest steps for each node was summed across all network nodes and normalized. LE is computed on the neighborhood of each single ROI/node (Rubinov et al., 2009; Rubinov and Sporns, 2010) and defined as the inverse of the shortest average path length of all neighbors of nodes among themselves (Latora and Marchiori, 2001). First we identified a set of nodes which are directly connected with a given node, then we removed that node from the identified subgraph and calculated the averaged shortest path between all remaining nodes. GE and LE are scaled measures ranging from 0 to 1, with a value of 1 indicating maximum GE/LE in the brain.\n\nThe raw data supporting the conclusions of this article will be made available by the authors, without undue reservation.\n\nThe studies involving human participants were reviewed and approved by the Institutional Review Board of the University of California, Santa Cruz and the Ethical Committees of the University of Brescia, and the Icahn School of Medicine at Mount Sinai. Written informed consent to participate in this study was provided by the participants or their legal guardian/next of kin."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 93,
+            "end": 231,
+            "text": "Topological network properties of resting-state functional connectivity patterns are associated with metal mixture exposure in adolescents",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 232,
+            "end": 449,
+            "text": "Invernizzi A, Rechtman E, Oluyemi K, Renzetti S, Curtin P, Colicino E, Ambrosi C, Mascaro L, Patrono A, Corbo D, Cagna G, Gasparotti R, Reichenberg A, Tang CY, Smith DR, Placidi D, Lucchini RG, Wright RO and Horton MK",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 450,
+            "end": 456,
+            "text": "(2023)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54,
+            "end": 80,
+            "text": "10.3389/fnins.2023.1098441",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 597,
+            "end": 625,
+            "text": "Front. Neurosci. 17:1098441.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1171,
+            "end": 1510,
+            "text": "In 193 participants (53% females, ages: 15–25 years) enrolled in the Public Health Impact of Metals Exposure (PHIME) study, we measured concentrations of four metals (manganese, lead, copper, and chromium) in multiple biological media (blood, urine, hair, and saliva) and acquired resting–state functional magnetic resonance imaging scans.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 81,
+            "end": 92,
+            "text": "OPEN ACCESS",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "Missing_sublabels": [
+            "Data",
+            "Code",
+            "Preregistered",
+            "Remarks"
+          ]
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9961,
+            "end": 10082,
+            "text": "The raw data supporting the conclusions of this article will be made available by the authors, without undue reservation.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4592,
+            "end": 4621,
+            "text": "3-Tesla SIEMENS Skyra scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5299,
+            "end": 5314,
+            "text": "70 axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5316,
+            "end": 5332,
+            "text": "2.1 mm thickness",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5179,
+            "end": 5216,
+            "text": "10-min continuous functional sequence",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5571,
+            "end": 5591,
+            "text": "with their eyes open",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5274,
+            "end": 5285,
+            "text": "TR = 1.0 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5287,
+            "end": 5297,
+            "text": "TE = 27 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4956,
+            "end": 4982,
+            "text": "final voxel size = 0.9 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4176,
+            "end": 4347,
+            "text": "Complete exposure data (i.e., all metals in all media for a total of 16 components), MRI and covariates data were available for 193 participants included in this analysis.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6027,
+            "end": 6090,
+            "text": "SPM12 (Wellcome Department of Imaging Neuroscience, London, UK)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1452,
+            "end": 1509,
+            "text": "resting–state functional magnetic resonance imaging scans",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4348,
+            "end": 4479,
+            "text": "A total of 193 participants were included in this analysis, 9 were missing at least one biological marker (Supplementary Figure 1).",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3547,
+            "end": 3563,
+            "text": "ages 15–25 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1192,
+            "end": 1202,
+            "text": "53% female",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2888,
+            "end": 3044,
+            "text": "Inclusion criteria were: birth in the areas of interest; family residence in Brescia for at least two generations; residence in the study areas since birth.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3045,
+            "end": 3354,
+            "text": "The exclusion criteria were: having a neurological, hepatic, metabolic, endocrine, or psychiatric disorder; using medications (in particular with neuro-psychological side effects); having clinically diagnosed motor deficits or cognitive impairment and having visual deficits that are not adequately corrected.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10084,
+            "end": 10335,
+            "text": "The studies involving human participants were reviewed and approved by the Institutional Review Board of the University of California, Santa Cruz and the Ethical Committees of the University of Brescia, and the Icahn School of Medicine at Mount Sinai.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3662,
+            "end": 3888,
+            "text": "They completed multimodal MRI scans, neuropsychological tests, including measures of IQ [Kaufman Brief Intelligence Test, Second Edition (KBIT-2)] (Kaufman and Kaufman, 2014; Reynolds et al., 2014), memory and motor functions.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6353,
+            "end": 6354,
+            "text": "1",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization — Software",
+            "Spatial normalization — Algorithm",
+            "Spatial normalization — Parameters"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6427,
+            "end": 6428,
+            "text": "2",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Software",
+            "Segmentation — Algorithm",
+            "Segmentation — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6563,
+            "end": 6564,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6584,
+            "end": 6585,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6027,
+            "end": 6032,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6668,
+            "end": 6711,
+            "text": "segmentation option for EPI images in SPM12",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA AROMA",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6753,
+            "end": 6754,
+            "text": "5",
+            "labels": [
+              "ICA AROMA — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "ICA AROMA — Software",
+            "ICA AROMA — Type",
+            "ICA AROMA — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6799,
+            "end": 6800,
+            "text": "6",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6830,
+            "end": 6843,
+            "text": "8 millimeters",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8036,
+            "end": 8037,
+            "text": "7",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Type",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8337,
+            "end": 8338,
+            "text": "8",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Type",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7107,
+            "end": 7108,
+            "text": "9",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7504,
+            "end": 7515,
+            "text": "FLIRT (FSL)",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7152,
+            "end": 7274,
+            "text": "111 regions of interest (ROI; 48 left and 48 right cortical areas; 7 left and 7 right subcortical regions and 1 brainstem)",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7705,
+            "end": 7706,
+            "text": "10",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Algorithm",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8444,
+            "end": 8445,
+            "text": "11",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Algorithm",
+            "Graph measures — Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6092,
+            "end": 6118,
+            "text": "Brain Connectivity toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "data": {
+    "title": "Brain flexibility associated with need for cognition contributes to creative achievement",
+    "text": "2.5 | Dynamic network construction\nA graph is made up of nodes and edges in graph theory \nanalysis. For node definition, we employed a 264‐node \nfunctional atlas that is widely distributed across the whole \nbrain and includes 13 large‐scale brain networks (Power \net al., 2011), as shown in Figure 1a. We chose Power 264 \nregions of interest (ROIs) for several reasons. First, the \ncreation of 264 putative functional areas was based on \nresting‐state FC in healthy young adults, which is consist￾ent with the data type and sample population in this study. \nSecond, our main focus was to examine the relationship \nbetween the flexibility of a large‐scale brain network and \nbehavior. The putative 264 ROIs contain many subgraphs \n(13 well defined) in good agreement with known func￾tional brain systems and are significantly more similar to \nthe functional systems than those in other templates (e.g., \nthe 90‐parcel AAL atlas; Power et al., 2011). In addition, \nwe hoped to be consistent with existing research on brain \nflexibility in the selection of templates (Chen et al., 2016; \nMattar et al., 2015). Considering that signal intensity may \nbe poorer in certain locations of the brain, 11 nodes with \nlower BOLD signal strength were identified and discarded \n(Wig, Laumann, & Petersen, 2014); thus, 253 nodes were \nreserved. The time series of each node was acquired by \naveraging the BOLD signals from all voxels in this region, \nand the Pearson correlation of the time series between pairs \nof nodes was calculated to represent the edges (i.e., FC). \nA sliding window approach was used to construct a dy￾namic FC matrix for each participant. We considered that \nsmall and large windows have been associated with a nar￾row range of network flexibility values across the brain, \nwhile medium time windows (e.g., 75 s and 100 s) have \nuncovered a wide range of network flexibility (Telesford \net al., 2016). Meanwhile, given one TR is 2 s in this study \nand needs more windows to track dynamic trajectories, the \nwindow length was therefore set to 50 TRs and the time \ngap of each window was set to 1 TR, yielding 183 overlap￾ping time windows to capture the temporal fluctuations in \nFC during a short period, and then Fisher's z transformation \nwas conducted to improve normality.\n\n2.6 | Multilayer community detection\nTo explore the spatiotemporal segregation of nodes in dy￾namic FC, we connected the adjacent time windows by \nadding interlayer connections (temporal link) between each \nnode and itself in the adjacent window (Bassett et al., 2011; \nMucha et al., 2010), as shown in Figure 1b. Then, a gen￾eralized Louvain algorithm was used to find the putative \nfunctional modules based on the optimization of the mod￾ularity quality function (Mucha et al., 2010). Intuitively, \nnodes have dense connections within modules but sparse \nconnections between modules. The optimal multilayer \nmodularity quality was based on the relative densities of \nintramodule connections versus intermodule connections \nto identify the modular partition, which can be defined as \nfollows (Mucha et al. 2010):\nIn this function, Q is the multilayer modularity index; Aijl\nis the connection strength of region i and j in layer l; Nijl is \nthe corresponding elements in a null model matrix; Gil rep￾resents the community assignment of node i in layer l; Gjr\nrepresents the community assignment of node j in layer r; \n(Gil, Gjr)\n=1 if Gil =Gjr, and it equals 0 otherwise; l\n is the \nstructural resolution parameter of layer l; the temporal reso￾lution parameter jlr is the connection strength between node \nj in layer l and node j in layer r; µ is the total edge weight in \nthe network; 2=∑\njrjr; the strength of node j in layer l is \njl =kjl+cjl; the intralayer strength of node j in layer l is kjl; \nand the interlayer strength of node j in layer l is cjl =∑\nrjlr. \nWe used the Newman‐Girvan null model (Newman, 2006; \nNewman & Girvan, 2004) in each layer: Nijl =iljl∕2ml\n, \nwhere 2ml =∑\nijAijl is the total edge weight in layer l. \nThe structural resolution parameter determines the number of \nmodules within a given layer, and the temporal resolution pa￾rameter controls the consistency of modules detected across \nlayers (Bassett et al., 2013). To avoid the deviation from the \nresults of multilayer community detection (Bassett et al., \n2013; Telesford et al., 2016), while considering the simplifi￾cation of calculations and the consistency with previous re￾search, we used the common default values that set = =1\n(Bassett et al., 2011, 2013; Bassett, Yang, Wymbs, & Grafton, \n2015; Telesford et al., 2016). In addition, because the com￾munity detection algorithm is vulnerable to near‐degenera￾cies (Good, de Montjoye, & Clauset, 2010) and stochastic \nelements in this algorithm (Blondel, Guillaume, Lambiotte, & \nLefebvre, 2008), the output usually varies from run to run. \nWe therefore performed the multilayer community detection \nalgorithm 100 times to yield optimized partitions of the mul￾tilayer modularity for each time (Bassett et al., 2011, 2013).\n\n2.7 | Node, network, and global flexibility\nThe results of the generalized Louvain algorithm are shown \nin a partition matrix (nodes × layers), in which elements \nrepresent the community assignment of node i in layer l, as \nshown in Figure 1c. The multilayer modularity quality func￾tion simultaneously and optimally assigned brain regions to \ncommunities in all layers so that community labels are con￾sistent across layers, thus avoiding the community matching \nproblem (Bassett et al., 2011, 2013). Based on the optimal \ncommunity partition, node flexibility can be defined as the \nrate at which each node changes the assigned community be￾tween two consecutive time layers (Bassett et al., 2011), that \nis, the actual changing times divided by possible changing \ntimes. A value close to 1 indicates that a node's community \nassignment is highly variable. Network flexibility and global \nflexibility can also be defined as the mean flexibility of the \nnodes within the network or across the whole brain (Bassett \net al., 2011). We calculated the flexibility values separately \nfor each community detection and averaged across 100 \noptimizations."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 145,
+            "end": 161,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 135,
+            "end": 161,
+            "text": "264‐node \nfunctional atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 322,
+            "end": 348,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1191,
+            "end": 1329,
+            "text": "11 nodes with \nlower BOLD signal strength were identified and discarded \n(Wig, Laumann, & Petersen, 2014); thus, 253 nodes were \nreserved.",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1330,
+            "end": 1371,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1376,
+            "end": 1433,
+            "text": "averaging the BOLD signals from all voxels in this region",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1444,
+            "end": 1463,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1444,
+            "end": 1463,
+            "text": "Pearson correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2224,
+            "end": 2249,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2224,
+            "end": 2249,
+            "text": "Fisher's z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2442,
+            "end": 2480,
+            "text": "6",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2610,
+            "end": 2640,
+            "text": "gen￾eralized Louvain algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2442,
+            "end": 2480,
+            "text": "interlayer connections (temporal link)",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3868,
+            "end": 3892,
+            "text": "Newman‐Girvan null model",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4884,
+            "end": 4949,
+            "text": "performed the multilayer community detection \nalgorithm 100 times",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5600,
+            "end": 5631,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5600,
+            "end": 5731,
+            "text": "node flexibility can be defined as the \nrate at which each node changes the assigned community be￾tween two consecutive time layers",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6168,
+            "end": 6202,
+            "text": "8",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6168,
+            "end": 6202,
+            "text": "averaged across 100 \noptimizations",
+            "labels": [
+              "Result aggregation — Type"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

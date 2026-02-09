@@ -1,0 +1,947 @@
+{
+  "data": {
+    "text": "Dynamic brain architectures in local brain activity and functional network efficiency associate with efficient reading in bilinguals\nGangyi Feng, Hsuan-Chih Chen, Zude Zhu, Yong He, Suiping Wang\nNeuroImage 119 (2015) 103–118\nhttp://dx.doi.org/10.1016/j.neuroimage.2015.05.100\n© 2015 Elsevier Inc. All rights reserved.\n\nParticipants\nForty healthy Chinese–English bilinguals participated in the fMRI experiment (10 males; age = 23.2 ± 1.5 [mean ± SD] years). They were all right-handed, with normal or corrected-to-normal vision, and without neurological impairment, as confirmed by questionnaires and short interviews. All participants were native speakers of Chinese who started to learn English as their second language after 10 years of age (mean age of acquisition, AOA = 12.2 years old). With the exception of two participants, all of them had previously passed the CET-4 (level 4 of College English Test).\n\nBefore the experiment, all participants signed written consent forms approved by the institutional review boards of South China Normal University and Southwest University.\n\nStimuli and procedure\nA blocked design was employed in the fMRI experiment. We presented one story in each run, which lasted a total of 12.2 min, including a 30-s resting period before and after each story presentation. Each run was composed of 13 reading blocks (35.5 s on average for each block) and 12 resting blocks that were inserted between every two reading blocks. The duration of each resting block is dependent on the duration of the preceding reading block (mean duration of resting block: 17.5 s, range from 14 to 22 s). Using the rapid serial visual presentation procedure (RSVP), narrative stimuli were presented word-by-word or constituent-by-constituent. Each word/constituent lasted 300 ms. Different inter-stimulus intervals were used between different constituents: the duration was 100 ms for constituents in the middle of a sentence, 500 ms for constituents ending with a comma, and 1500 ms for constituents ending with a period.\n\nMRI data acquisition\nImaging data were acquired using a Siemens Trio 3T MRI system with a standard head coil. During the functional runs, the whole-brain blood oxygen level-dependent (BOLD) signals were recorded by a T2*-weighted gradient echo-planar imaging (EPI) pulse sequence using an interleaved scanning method (TR = 2000 ms, TE = 30 ms, flip angle = 90°, 32 slices, slice thickness = 4 mm, voxel size 3 × 3 × 4 mm3). In the structural imaging run, T1-weighted high resolution structural images were acquired using an MP-RAGE sequence (192 slices, TE = 3.03 ms; slice thickness = 1 mm; voxel size 1 × 1 × 1 mm3).\n\nUnivariate activation analysis\nAll imaging data were preprocessed using SPM8. The initial five images of the functional data were discarded to improve the equilibrium state of magnetization. Next, brain scans were corrected for head movement by spatially realigning them with the first brain volume, and mean functional images were computed. To normalize functional images, the mean functional image was coregistered with the structural image and segmented for each participant. The parameters obtained in the segmentation step were used to normalize the functional images onto the Montreal Neurological Institute space. Finally, normalized images were resampled into a spatial resolution of 2 × 2 × 2 mm3 and smoothed with a Gaussian kernel of 6-mm full width at half maximum. Whole-brain statistical analysis was performed using general linear modeling (GLM). Six head movement parameters were included as nuisance regressors.\n\nData preprocessing for graph-theory analysis\nIn order to exclude effects due to stimulus presentation, we only analyzed the residuals ε of the general linear model. Then we applied temporal band-pass filtering (0.008 < f < 0.1 Hz) to the residuals to reduce low-frequency drift and high-frequency physiological noises. Finally, nuisance signals, including averaged whole-brain signals, cerebral white matter, and cerebrospinal fluid, as well as six direction head movement parameters, were linearly regressed out of the functional time series.\n\nBrain network construction and threshold selection\nNodes were defined by two gray-matter templates based on Automated Anatomical Labeling (AAL): AAL-90 and AAL-1024. Representative mean time series for each node were extracted by averaging all voxel time series within that region. Functional connectivity between all possible pairs of nodes was measured by calculating Pearson's correlation coefficients, yielding a 90 × 90 or 1024 × 1024 correlation matrix per participant. Thresholding used a sparsity (connection cost) range of 0.06–0.5 to generate unweighted binary adjacency matrices.\n\nNetwork metrics and community detection\nGlobal efficiency (Eglob), local efficiency (Eloc), characteristic path length (Lp), clustering coefficient (Cp), small-worldness (σ), and maximal cost-efficiency (CEmax) were computed across thresholds and summarized as area under the curve (AUC). Modularity (Q) and network modules were identified using the Louvain algorithm. Group-level correlation matrices were averaged after Fisher's r-to-z transformation.\n\nReading comprehension performance\nThe accuracy in the narrative reading comprehension task were 90% (SD = 7) for L1 (Chinese) and 79% (SD = 18) for L2 (English)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 132,
+            "text": "Dynamic brain architectures in local brain activity and functional network efficiency associate with efficient reading in bilinguals",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 133,
+            "end": 194,
+            "text": "Gangyi Feng, Hsuan-Chih Chen, Zude Zhu, Yong He, Suiping Wang",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 211,
+            "end": 215,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 283,
+            "end": 296,
+            "text": "Elsevier Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 225,
+            "end": 275,
+            "text": "http://dx.doi.org/10.1016/j.neuroimage.2015.05.100",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 225,
+            "end": 275,
+            "text": "http://dx.doi.org/10.1016/j.neuroimage.2015.05.100",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2093,
+            "end": 2119,
+            "text": "Siemens Trio 3T MRI system",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2355,
+            "end": 2367,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2369,
+            "end": 2379,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2381,
+            "end": 2397,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2399,
+            "end": 2408,
+            "text": "32 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2410,
+            "end": 2432,
+            "text": "slice thickness = 4 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2434,
+            "end": 2458,
+            "text": "voxel size 3 × 3 × 4 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2326,
+            "end": 2353,
+            "text": "interleaved scanning method",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1221,
+            "end": 1229,
+            "text": "12.2 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2729,
+            "end": 2733,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 332,
+            "end": 372,
+            "text": "Forty healthy Chinese–English bilinguals",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1107,
+            "end": 1160,
+            "text": "A blocked design was employed in the fMRI experiment.",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1330,
+            "end": 1347,
+            "text": "13 reading blocks",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1387,
+            "end": 1404,
+            "text": "12 resting blocks",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1349,
+            "end": 1381,
+            "text": "35.5 s on average for each block",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1554,
+            "end": 1592,
+            "text": "mean duration of resting block: 17.5 s",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1887,
+            "end": 2034,
+            "text": "100 ms for constituents in the middle of a sentence, 500 ms for constituents ending with a comma, and 1500 ms for constituents ending with a period",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5233,
+            "end": 5264,
+            "text": "narrative reading comprehension",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1628,
+            "end": 1677,
+            "text": "rapid serial visual presentation procedure (RSVP)",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1712,
+            "end": 1754,
+            "text": "word-by-word or constituent-by-constituent",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3488,
+            "end": 3517,
+            "text": "general linear modeling (GLM)",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 332,
+            "end": 372,
+            "text": "Forty healthy Chinese–English bilinguals",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 409,
+            "end": 418,
+            "text": "(10 males",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 420,
+            "end": 436,
+            "text": "age = 23.2 ± 1.5",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 467,
+            "end": 483,
+            "text": "all right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 490,
+            "end": 526,
+            "text": "normal or corrected-to-normal vision",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 532,
+            "end": 563,
+            "text": "without neurological impairment",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 640,
+            "end": 666,
+            "text": "native speakers of Chinese",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 981,
+            "end": 1082,
+            "text": "approved by the institutional review boards of South China Normal University and Southwest University",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5275,
+            "end": 5339,
+            "text": "90% (SD = 7) for L1 (Chinese) and 79% (SD = 18) for L2 (English)",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2735,
+            "end": 2796,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2747,
+            "end": 2758,
+            "text": "five images",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2871,
+            "end": 2922,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2902,
+            "end": 2922,
+            "text": "spatially realigning",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3061,
+            "end": 3099,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3061,
+            "end": 3073,
+            "text": "coregistered",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3104,
+            "end": 3134,
+            "text": "4",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3104,
+            "end": 3113,
+            "text": "segmented",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3198,
+            "end": 3276,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3239,
+            "end": 3270,
+            "text": "Montreal Neurological Institute",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3367,
+            "end": 3433,
+            "text": "6",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3402,
+            "end": 3433,
+            "text": "6-mm full width at half maximum",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3768,
+            "end": 3817,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3798,
+            "end": 3816,
+            "text": "0.008 < f < 0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3943,
+            "end": 3971,
+            "text": "8",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3943,
+            "end": 3971,
+            "text": "averaged whole-brain signals",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4032,
+            "end": 4099,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3523,
+            "end": 3547,
+            "text": "head movement parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3519,
+            "end": 3584,
+            "text": "10",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3519,
+            "end": 3547,
+            "text": "Six head movement parameters",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4240,
+            "end": 4296,
+            "text": "11",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4277,
+            "end": 4296,
+            "text": "AAL-90 and AAL-1024",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4298,
+            "end": 4371,
+            "text": "12",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4362,
+            "end": 4393,
+            "text": "averaging all voxel time series",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4502,
+            "end": 4536,
+            "text": "13",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4502,
+            "end": 4536,
+            "text": "Pearson's correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4628,
+            "end": 4672,
+            "text": "14",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4664,
+            "end": 4672,
+            "text": "0.06–0.5",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4764,
+            "end": 4934,
+            "text": "15",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4764,
+            "end": 4789,
+            "text": "Global efficiency (Eglob)",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5032,
+            "end": 5091,
+            "text": "16",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5074,
+            "end": 5091,
+            "text": "Louvain algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5146,
+            "end": 5176,
+            "text": "17",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5146,
+            "end": 5176,
+            "text": "Fisher's r-to-z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4971,
+            "end": 5011,
+            "text": "18",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4985,
+            "end": 5011,
+            "text": "area under the curve (AUC)",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

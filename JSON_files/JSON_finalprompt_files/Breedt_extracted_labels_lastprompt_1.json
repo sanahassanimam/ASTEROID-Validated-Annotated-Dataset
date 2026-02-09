@@ -1,0 +1,584 @@
+{
+  "data": {
+    "text": "Multimodal multilayer network centrality relates to executive functioning. Network Neuroscience, 7(1), 299–321. https://doi.org/10.1162/netn_a_00284\n\nBreedt, L. C., Santos, F. A. N., Hillebrand, A., Reneman, L., van Rootselaar, A.-F., Schoonheim, M. M., Stam, C. J., Ticheler, A., Tijms, B. M., Veltman, D. J., Vriend, C., Wagenmakers, M. J., van Wingen, G. A., Geurts, J. J. G., Schrantee, A., & Douw, L. (2023).\n\nExecutive functioning (EF) is a higher order cognitive process that is thought to depend on a network organization facilitating integration across subnetworks, in the context of which the central role of the fronto-parietal network (FPN) has been described across imaging and neurophysiological modalities.\n\nCitation: Breedt, L. C., Santos, F. A. N., Hillebrand, A., Reneman, L., van Rootselaar, A.-F., Schoonheim, M. M., Stam, C. J., Ticheler, A., Tijms, B. M., Veltman, D. J., Vriend, C., Wagenmakers, M. J., van Wingen, G. A., Geurts, J. J. G., Schrantee, A., & Douw, L. (2023). Multimodal multilayer network centrality relates to executive functioning. Network Neuroscience, 7(1), 299–321. https://doi.org/10.1162/netn_a_00284\n\nSupporting Information: https://doi.org/10.1162/netn_a_00284; https://github.com/nkoub/multinetx; https://github.com/networkx; https://github.com/multinetlab-amsterdam/projects/tree/master/mumo_paper_2021. An open access journal published under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.\n\nThis study was preregistered in the International Clinical Trials Registry Platform under trial ID NTR7510. Thirty-nine (39) healthy participants were prospectively recruited for this specific study through an online platform, Hersenonderzoek.nl (www.hersenonderzoek.nl), where volunteers can register for participation in neuroscience studies. Participants were selected based on the following inclusion criteria: (a) age between 20 and 70 years old, (b) native Dutch speaker, and (c) able to provide written informed consent. The following exclusion criteria were used: (a) history of neurological or psychiatric disease, (b) current and regular use of centrally acting drugs, and (c) presence of contra-indications for MRI or MEG. Participants were asked not to ingest any caffeine or alcohol on the testing days. Approval was obtained from the VU University Medical Center Medical Ethical Committee, and all subjects provided written informed consent prior to participation.\n\nOf the 39 included participants, two participants dropped out before completion of the study, two were excluded during the study because of contra-indications for MRI, and another two were excluded after visual inspection of their MRI data revealed artifacts. This resulted in a total of 33 included participants with complete structural MRI, dMRI, rsfMRI, MEG, and neuropsychological data that were used in the analyses. Of these participants, 18 were female and 15 were male. They were well spread out in terms of age, ranging between 22 and 70 years old, with a mean age of 46 ± 17 years. Participants were mainly higher educated.\n\nParticipants underwent an extensive customized neuropsychological test battery, consisting of the Dutch version of Rey’s Auditory Verbal Learning Test, the Concept Shifting Test (CST), the Memory Comparison Test, the Stroop Color-Word Test (SCWT), the Location Learning Test, the Categorical Word Fluency Test, and the Letter-Digit Modalities Test. We used (subscores on) three of these tests to assess EF. The first test we used was the CST, where the participant was shown 16 small circles, grouped in a large circle, containing either digits (CST part A), letters (CST part B), or both digits and letters (CST part C). These circles needed to be crossed out in ascending order in part A, in alphabetical order in part B, and in alternating order (digit-letter) in part C. The participant was asked to perform the test as quickly as possible without making mistakes. The second test we used was the SCWT, where the participant was asked to read four different cards. On the first card, names of colors—red, green, yellow, and blue—were printed in black ink. On the second card, rectangles were printed in these same colors. On the third card, the names of the colors were printed in an incongruent color ink; for example, the word “red” was printed in yellow ink, and the participant was asked to read the color of the ink and ignore the word. The fourth card was identical to the third card, but several words were circled. For these circled words, the participant was asked to read the word itself instead of the color of the ink. The third test we used was the Word Fluency Test, where the participant was asked to name as many words in the category “animals” as possible within 60 seconds.\n\nWe used validated norms of the CST, SCWT, and Word Fluency Test to transform raw scores into z-scores relative to a comparable healthy population. EF was defined as the average of z-scores for Word Fluency, Stroop-interference (time to complete card 3 corrected for the time to complete card 2), and CST-shift (time to complete card C minus the average time to complete cards A and B, adjusted for time to complete CST zero).\n\nMRI data were obtained using a 3T MRI system (Philips Ingenia CX) with a 32-channel receive-only head coil at the Spinoza Centre for Neuroimaging in Amsterdam, The Netherlands. A high-resolution 3D T1-weighted image was collected with a magnetization-prepared rapid acquisition with gradient echo (MPRAGE; TR = 8.1 ms, TE = 3.7 ms, flip angle = 8°, voxel dimensions = 1 mm3 isotropic). This anatomical scan was registered to MNI space through linear registration with nearest-neighbor interpolation, and was used for co-registration and normalization of all other modalities (dMRI, fMRI, and MEG) to the same space.\n\nDiffusion MRI was collected with diffusion weightings of b = 1,000 and 2,000 s/mm2 applied in 29 and 59 directions, respectively, along with 9 nondiffusion weighted (b = 0 s/mm2) volumes using a multiband sequence (MultiBand SENSE factor = 2, TR = 4.7 s, TE = 95 ms, flip angle = 90°, voxel dimensions = 2 mm3 isotropic, no interslice gap). In addition, two scans with opposite phase encoding directions were collected for blip-up blip-down distortion correction using FSL topup. Structural connectomes were constructed by performing probabilistic anatomically-constrained tractography (ACT) in MRtrix3. A tissue response function was estimated from the preprocessed and bias field corrected dMRI data using the multishell multitissue five-tissue-type algorithm (msmt_5tt). Subsequently, the fiber orientation distribution for each voxel was determined by performing multishell multitissue constrained spherical deconvolution (MSMT-CSD). ACT was performed by randomly seeding 100 million fibers within the white matter to construct a tractogram, and spherical-deconvolution informed filtering of tractograms (SIFT, SIFT2 method in MRtrix3) was then performed to improve the accuracy of the reconstructed streamlines and reduce false positives.\n\nResting-state fMRI was collected using a multiband sequence (MultiBand SENSE factor = 2, TR = 1.52 s, TE = 30 ms, flip angle = 70°, voxel size = 2.5 × 2.5 × 2.75 mm3, interslice gap = 0.25 mm, 310 volumes, 12-min acquisition). Participants were instructed to remain awake with their eyes open. Preprocessing was done using FSL 5 and included brain extraction, removal of the first four volumes, motion correction by regressing out six motion parameters, and spatial smoothing at 5-mm full width half maximum. An independent component analysis was performed for automatic removal of motion artifacts (ICA-AROMA), followed by regressing out white matter and cerebrospinal fluid signals and high-pass filtering (100 s cutoff). Mean absolute motion did not exceed 0.6 mm for any participant; the median was 0.27 mm (0.08–0.59 mm).\n\nMEG data were recorded in a magnetically shielded room using a 306-channel whole-head MEG system with a sampling frequency of 1250 Hz during a no-task, eyes-closed condition for 5 minutes, an eyes-open condition for 2 minutes, and a final eyes-closed condition for another 5 minutes, with the participant in supine position. An anti-aliasing filter of 410 Hz and a high-pass filter of 0.1 Hz were applied online. The cross-validation signal space separation (xSSS) was applied to aid visual inspection of the data. Further noise removal was performed offline using the temporal extension of signal space separation (tSSS) in MaxFilter. The head position relative to the MEG sensors was recorded continuously using the signals from five head-localization coils. Coil positions and the scalp outline were digitized using a 3D digitizer. Broadband data were then projected through the normalized beamformer weights to obtain time series for each atlas region. For all participants, we included the first 88 epochs of 4,096 samples (3.28 s) of the obtained time series (total length 4 min and approximately 48 s). Fast Fourier transforms were applied to filter the time series into six frequency bands: delta (0.5–4 Hz), theta (4–8 Hz), lower alpha (8–10 Hz), upper alpha (10–13 Hz), beta (13–30 Hz), and gamma (30–48 Hz). We then computed the phase lag index (PLI) between the frequency-filtered time series of all pairs of regions using custom-made scripts in MATLAB (R2018b, Mathworks, Natick, MA) to obtain weighted functional connectivity matrices.\n\nResting-state fMRI data were registered to native 3D T1 space using boundary-based registration. The Brainnetome atlas was reverse-registered to each participant’s functional data using nearest-neighbor interpolation. Time series were extracted from all atlas regions by averaging time series across all voxels within each region. Finally, for every participant, Pearson correlation coefficients between all pairs of time series were calculated to obtain a functional connectivity matrix. Correlation coefficients were absolutized.\n\nSupra-adjacency matrices were then exported to Python (version 3.6), and multilayer nodal eigenvector centrality was computed using custom-made scripts that integrate the Python libraries multiNetX and NetworkX. The custom-made scripts, as well as the data that we used in this study, can be found on this project’s GitHub page (https://github.com/multinetlab-amsterdam/projects/tree/master/mumo_paper_2021).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 74,
+            "text": "Multimodal multilayer network centrality relates to executive functioning.",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 112,
+            "end": 148,
+            "text": "https://doi.org/10.1162/netn_a_00284",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 150,
+            "end": 413,
+            "text": "Breedt, L. C., Santos, F. A. N., Hillebrand, A., Reneman, L., van Rootselaar, A.-F., Schoonheim, M. M., Stam, C. J., Ticheler, A., Tijms, B. M., Veltman, D. J., Vriend, C., Wagenmakers, M. J., van Wingen, G. A., Geurts, J. J. G., Schrantee, A., & Douw, L. (2023).",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 406,
+            "end": 413,
+            "text": "(2023).",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 75,
+            "end": 111,
+            "text": "Network Neuroscience, 7(1), 299–321.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 415,
+            "end": 721,
+            "text": "Executive functioning (EF) is a higher order cognitive process that is thought to depend on a network organization facilitating integration across subnetworks, in the context of which the central role of the fronto-parietal network (FPN) has been described across imaging and neurophysiological modalities.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1353,
+            "end": 1461,
+            "text": "An open access journal published under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1274,
+            "end": 1351,
+            "text": "https://github.com/multinetlab-amsterdam/projects/tree/master/mumo_paper_2021",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1209,
+            "end": 1243,
+            "text": "https://github.com/nkoub/multinetx",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1463,
+            "end": 1570,
+            "text": "This study was preregistered in the International Clinical Trials Registry Platform under trial ID NTR7510.",
+            "labels": [
+              "Preregistered"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2703,
+            "end": 2864,
+            "text": "This resulted in a total of 33 included participants with complete structural MRI, dMRI, rsfMRI, MEG, and neuropsychological data that were used in the analyses.",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2921,
+            "end": 3034,
+            "text": "They were well spread out in terms of age, ranging between 22 and 70 years old, with a mean age of 46 ± 17 years.",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2865,
+            "end": 2920,
+            "text": "Of these participants, 18 were female and 15 were male.",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1808,
+            "end": 1990,
+            "text": "Participants were selected based on the following inclusion criteria: (a) age between 20 and 70 years old, (b) native Dutch speaker, and (c) able to provide written informed consent.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2443,
+            "end": 2702,
+            "text": "Of the 39 included participants, two participants dropped out before completion of the study, two were excluded during the study because of contra-indications for MRI, and another two were excluded after visual inspection of their MRI data revealed artifacts.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2280,
+            "end": 2441,
+            "text": "Approval was obtained from the VU University Medical Center Medical Ethical Committee, and all subjects provided written informed consent prior to participation.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4922,
+            "end": 5200,
+            "text": "EF was defined as the average of z-scores for Word Fluency, Stroop-interference (time to complete card 3 corrected for the time to complete card 2), and CST-shift (time to complete card C minus the average time to complete cards A and B, adjusted for time to complete CST zero).",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7153,
+            "end": 7164,
+            "text": "TR = 1.52 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7166,
+            "end": 7176,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7178,
+            "end": 7194,
+            "text": "flip angle = 70°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7196,
+            "end": 7229,
+            "text": "voxel size = 2.5 × 2.5 × 2.75 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7231,
+            "end": 7255,
+            "text": "interslice gap = 0.25 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7270,
+            "end": 7288,
+            "text": "12-min acquisition",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7291,
+            "end": 7357,
+            "text": "Participants were instructed to remain awake with their eyes open.",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2703,
+            "end": 2864,
+            "text": "This resulted in a total of 33 included participants with complete structural MRI, dMRI, rsfMRI, MEG, and neuropsychological data that were used in the analyses.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7358,
+            "end": 7392,
+            "text": "Preprocessing was done using FSL 5",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7064,
+            "end": 7290,
+            "text": "Resting-state fMRI was collected using a multiband sequence (MultiBand SENSE factor = 2, TR = 1.52 s, TE = 30 ms, flip angle = 70°, voxel size = 2.5 × 2.5 × 2.75 mm3, interslice gap = 0.25 mm, 310 volumes, 12-min acquisition).",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7406,
+            "end": 7457,
+            "text": "1",
+            "labels": [
+              "Skull extraction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Skull extraction — Algorithm",
+            "Skull extraction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7358,
+            "end": 7392,
+            "text": "Preprocessing was done using FSL 5",
+            "labels": [
+              "Skull extraction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7424,
+            "end": 7516,
+            "text": "2",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm",
+            "Removal Init Vol — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7459,
+            "end": 7516,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7459,
+            "end": 7516,
+            "text": "motion correction by regressing out six motion parameters",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7522,
+            "end": 7571,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7522,
+            "end": 7539,
+            "text": "spatial smoothing",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7543,
+            "end": 7571,
+            "text": "5-mm full width half maximum",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA AROMA",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7625,
+            "end": 7674,
+            "text": "5",
+            "labels": [
+              "ICA AROMA — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "ICA AROMA — Software",
+            "ICA AROMA — Parameters"
+          ]
+        },
+        {
+          "from_name": "ICA AROMA",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7625,
+            "end": 7674,
+            "text": "automatic removal of motion artifacts (ICA-AROMA)",
+            "labels": [
+              "ICA AROMA — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7688,
+            "end": 7747,
+            "text": "6",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7688,
+            "end": 7747,
+            "text": "regressing out white matter and cerebrospinal fluid signals",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7752,
+            "end": 7786,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7752,
+            "end": 7771,
+            "text": "high-pass filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7773,
+            "end": 7785,
+            "text": "100 s cutoff",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

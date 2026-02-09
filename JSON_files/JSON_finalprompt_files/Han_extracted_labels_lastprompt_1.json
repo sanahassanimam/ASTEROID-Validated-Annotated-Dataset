@@ -1,0 +1,1040 @@
+{
+  "data": {
+    "text": "Eyes-Open and Eyes-Closed Resting State Network Connectivity Differences\nJunrong Han, Liwei Zhou, Hang Wu, Yujuan Huang, Mincong Qiu, Likai Huang, Chia Lee, Timothy Joseph Lane and Pengmin Qin\nBrain Sci. 2023, 13, 122. https://doi.org/10.3390/brainsci13010122\nCopyright: © 2023 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).\n\nAbstract: Resting state networks comprise several brain regions that exhibit complex patterns of interaction. Switching from eyes closed (EC) to eyes open (EO) during the resting state modifies these patterns of connectivity, but precisely how these change remains unclear. Here we use functional magnetic resonance imaging to scan healthy participants in two resting conditions (viz., EC and EO). Seven resting state networks were chosen for this study: salience network (SN), default mode network (DMN), central executive network (CEN), dorsal attention network (DAN), visual network (VN), motor network (MN) and auditory network (AN). We performed functional connectivity (FC) analysis for each network, comparing the FC maps for both EC and EO.\n\n2.1.1. Participants\nThis dataset served as the basis for an investigation that has already been published. Eighteen healthy volunteers participated in this study (15 female; mean age = 27.1; age range = 20–34 years). These subjects did not suffer from any medical, neurological, or psychiatric disorders. Informed written consent was obtained from each. The study was approved by the ethics committee of the Free University of Berlin. Two subjects exhibited head movement of greater than 3 mm and another one did not complete the experiment. Therefore, 15 subjects were included in the analysis.\n\n2.1.2. MRI Data Acquisition\nImages were acquired on a Siemens 3.0T MAGNETOM TrioTim syngo MRI scanner at the Free University of Berlin. A 3D anatomical image was first acquired using a fast SPGR sequence (TR = 1.9 ms, TE = 2.25 ms, FOV = 256 mm × 256 mm, matrix = 256 × 256, slice thickness = 1 mm) for functional image registration and localization. After that, EC/EO sequences were obtained from each participant; the order of EC/EO runs was counterbalanced across participants. During both scans, participants were instructed to avoid head movement and to avoid thinking about specific events or concerns, or at least avoid dwelling on any particular thing. In other words, let their minds wander. Participants were also instructed to remain awake; subsequently, they were asked as to whether they had fallen asleep. During the EO run, participants were asked to keep their eyes open and fixate on a white cross displayed on a black background on the in-scanner screen. During the EC run, participants were instructed to close their eyes. All participants reported that they had remained awake throughout the scanning session. Blood oxygen-level dependent (BOLD) images were acquired using an EPI sequence (TR = 2 s, TE = 30 ms, flip angle = 90°, FOV = 192 mm × 192 mm, matrix = 64 × 64, slice thickness = 3 mm, gap = 0 mm, 37 slices) and 205 volumes were acquired in each run (7 min).\n\n2.2.1. Participants\nThis dataset also served as the basis for an investigation that has already been published. Seventeen healthy volunteers took part in this study (9 female; mean age = 31.9; age range = 23–58 years). None of the participants had a history of neurological or psychiatric disorders. All participants gave their written, informed consent and were compensated financially for their time. The study was approved by the Taipei Medical University Institutional Review Board (TMU-JIRB 201411043).\n\n2.2.2. MRI Data Acquisition\nMR images were acquired on a GE MR750 3 Tesla scanner using a standard 8-channel head coil. A high-resolution T1-weighted anatomical image was acquired first. Following this, BOLD imaging was carried out, with the order of these scans counterbalanced across participants. The EO/EC sequence was also counterbalanced across participants and the light in the scanner room was turned off while scanning. As was the case with the Berlin dataset, during both types of scans, participants were instructed to lie still, remain awake and not focus their attention on anything in particular. For EC runs, participants kept their eyes closed throughout and a black screen was presented to ensure that their exposure to light was minimal. During EO runs, a gray screen was presented. For EO runs, participants were instructed to keep their eyes open and gaze at the screen. After scanning, participants were asked whether they had remained awake; all reported that they had done so. BOLD-sensitive images were acquired using a T2-weighted EPI sequence (TR = 2000 ms; TE = 30 ms; flip angle = 90°; FOV = 220 mm; matrix = 64 × 64; slice thickness = 3.4 mm; slice gap = 0 mm; 33 slices). 200 volumes were acquired in each run (6.67 min).\n\n2.2.3. Data Preprocessing\nAll MRI images were processed using the AFNI software package. First, the initial three volumes were excluded; this was followed by spike removal and slice time correction. All functional images were registered to the base volume, which has minimal outliers. Then the anatomical images were skull stripped and aligned to functional images. Next, the anatomical and functional images were converted to MNI space via non-linear transformation and the spatial resolution of functional images were resampled to 3 mm³. Subsequently, the functional images were smoothed using 6 mm at the full-width half-maximum (FWHM) Gaussian kernel. Each voxel of data was passed through a band-pass filter (0.01–0.1 Hz), regressed out the mean time course within white matter and head motion parameters (i.e., six demeaned motion parameters and first differences of six motion parameter) to reduce nuisance effect. Furthermore, motion was quantified as the Euclidean norm calculated from the six motion parameters for two consecutive TRs. A motion displacement of >0.2 mm was considered excessive. The volume, as well as the one preceding, that corresponded to excessive motion were removed. Volumes for which 10% of voxels exceeded the base volume were also excluded.\n\nInstitutional Review Board Statement: This study was approved by ethics committee of the Free University of Berlin and the Taipei Medical University Institutional Review Board.\n\nInformed Consent Statement: Informed consent was obtained from all subjects involved in the study.\n\nData Availability Statement: The data that support the findings of this study are available on request from the corresponding author. The data are not publicly available due to privacy restrictions.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 73,
+            "end": 192,
+            "text": "Junrong Han, Liwei Zhou, Hang Wu, Yujuan Huang, Mincong Qiu, Likai Huang, Chia Lee, Timothy Joseph Lane and Pengmin Qin",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 72,
+            "text": "Eyes-Open and Eyes-Closed Resting State Network Connectivity Differences",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 204,
+            "end": 208,
+            "text": "2023",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 303,
+            "end": 327,
+            "text": "MDPI, Basel, Switzerland",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 219,
+            "end": 259,
+            "text": "https://doi.org/10.3390/brainsci13010122",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 522,
+            "end": 621,
+            "text": "Resting state networks comprise several brain regions that exhibit complex patterns of interaction.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 329,
+            "end": 462,
+            "text": "This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6566,
+            "end": 6699,
+            "text": "Data Availability Statement: The data that support the findings of this study are available on request from the corresponding author.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6700,
+            "end": 6764,
+            "text": "The data are not publicly available due to privacy restrictions.",
+            "labels": [
+              "Remarks"
+            ]
+          },
+          "Missing_sublabels": [
+            "Code",
+            "Preregistered"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1913,
+            "end": 1960,
+            "text": "Siemens 3.0T MAGNETOM TrioTim syngo MRI scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3815,
+            "end": 3839,
+            "text": "GE MR750 3 Tesla scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2091,
+            "end": 2112,
+            "text": "FOV = 256 mm × 256 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2064,
+            "end": 2075,
+            "text": "TR = 1.9 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2077,
+            "end": 2089,
+            "text": "TE = 2.25 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2134,
+            "end": 2156,
+            "text": "slice thickness = 1 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3069,
+            "end": 3077,
+            "text": "TR = 2 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3079,
+            "end": 3089,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3091,
+            "end": 3107,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3109,
+            "end": 3130,
+            "text": "FOV = 192 mm × 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3150,
+            "end": 3172,
+            "text": "slice thickness = 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3174,
+            "end": 3184,
+            "text": "gap = 0 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3186,
+            "end": 3195,
+            "text": "37 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3201,
+            "end": 3246,
+            "text": "205 volumes were acquired in each run (7 min)",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4828,
+            "end": 4840,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4842,
+            "end": 4853,
+            "text": "TE = 30 ms;",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4854,
+            "end": 4871,
+            "text": "flip angle = 90°;",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4872,
+            "end": 4884,
+            "text": "FOV = 220 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4904,
+            "end": 4928,
+            "text": "slice thickness = 3.4 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4930,
+            "end": 4946,
+            "text": "slice gap = 0 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4948,
+            "end": 4957,
+            "text": "33 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4960,
+            "end": 5009,
+            "text": "200 volumes were acquired in each run (6.67 min).",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2679,
+            "end": 2831,
+            "text": "During the EO run, participants were asked to keep their eyes open and fixate on a white cross displayed on a black background on the in-scanner screen.",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2832,
+            "end": 2900,
+            "text": "During the EC run, participants were instructed to close their eyes.",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4369,
+            "end": 4513,
+            "text": "For EC runs, participants kept their eyes closed throughout and a black screen was presented to ensure that their exposure to light was minimal.",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4514,
+            "end": 4648,
+            "text": "During EO runs, a gray screen was presented. For EO runs, participants were instructed to keep their eyes open and gaze at the screen.",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 868,
+            "end": 908,
+            "text": "two resting conditions (viz., EC and EO)",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1369,
+            "end": 1423,
+            "text": "Eighteen healthy volunteers participated in this study",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1424,
+            "end": 1478,
+            "text": "(15 female; mean age = 27.1; age range = 20–34 years).",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1436,
+            "end": 1476,
+            "text": "mean age = 27.1; age range = 20–34 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1479,
+            "end": 1566,
+            "text": "These subjects did not suffer from any medical, neurological, or psychiatric disorders.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1697,
+            "end": 1857,
+            "text": "Two subjects exhibited head movement of greater than 3 mm and another one did not complete the experiment. Therefore, 15 subjects were included in the analysis.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3361,
+            "end": 3413,
+            "text": "Seventeen healthy volunteers took part in this study",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3414,
+            "end": 3467,
+            "text": "(9 female; mean age = 31.9; age range = 23–58 years).",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3465,
+            "text": "mean age = 31.9; age range = 23–58 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3468,
+            "end": 3548,
+            "text": "None of the participants had a history of neurological or psychiatric disorders.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1616,
+            "end": 1696,
+            "text": "The study was approved by the ethics committee of the Free University of Berlin.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3652,
+            "end": 3756,
+            "text": "The study was approved by the Taipei Medical University Institutional Review Board (TMU-JIRB 201411043).",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6288,
+            "end": 6464,
+            "text": "Institutional Review Board Statement: This study was approved by ethics committee of the Free University of Berlin and the Taipei Medical University Institutional Review Board.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1567,
+            "end": 1615,
+            "text": "Informed written consent was obtained from each.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3549,
+            "end": 3651,
+            "text": "All participants gave their written, informed consent and were compensated financially for their time.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2359,
+            "end": 2519,
+            "text": "participants were instructed to avoid head movement and to avoid thinking about specific events or concerns, or at least avoid dwelling on any particular thing.",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "Missing_sublabels": []
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5111,
+            "end": 5146,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5111,
+            "end": 5146,
+            "text": "initial three volumes were excluded",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5169,
+            "end": 5182,
+            "text": "2",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Despiking — Software",
+            "Despiking — Algorithm",
+            "Despiking — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5187,
+            "end": 5208,
+            "text": "3",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5237,
+            "end": 5294,
+            "text": "4",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5077,
+            "end": 5098,
+            "text": "AFNI software package",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5328,
+            "end": 5342,
+            "text": "5",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Skull stripping — Software",
+            "Skull stripping — Algorithm",
+            "Skull stripping — Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5347,
+            "end": 5375,
+            "text": "6",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Algorithm",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5425,
+            "end": 5477,
+            "text": "7",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization — Software",
+            "Spatial normalization — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5531,
+            "end": 5549,
+            "text": "resampled to 3 mm³",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5592,
+            "end": 5665,
+            "text": "8",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5607,
+            "end": 5665,
+            "text": "6 mm at the full-width half-maximum (FWHM) Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5707,
+            "end": 5737,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5707,
+            "end": 5737,
+            "text": "band-pass filter (0.01–0.1 Hz)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5725,
+            "end": 5736,
+            "text": "0.01–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5798,
+            "end": 5905,
+            "text": "10",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5798,
+            "end": 5905,
+            "text": "head motion parameters (i.e., six demeaned motion parameters and first differences of six motion parameter)",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5757,
+            "end": 5793,
+            "text": "11",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5757,
+            "end": 5793,
+            "text": "mean time course within white matter",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6057,
+            "end": 6115,
+            "text": "12",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Software",
+            "Scrubbing — Type"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6057,
+            "end": 6115,
+            "text": "A motion displacement of >0.2 mm was considered excessive.",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6210,
+            "end": 6286,
+            "text": "13",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Exclusion — Software",
+            "Exclusion — Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6228,
+            "end": 6266,
+            "text": "10% of voxels exceeded the base volume",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,492 @@
+{
+  "data": {
+    "text": "Functional Brain Network Modularity Captures Inter- and Intra-Individual Variation in Working Memory Capacity\nAlexander A. Stevens, Sarah C. Tappon, Arun Garg, Damien A. Fair\nPLoS ONE 7(1): e30468. doi:10.1371/journal.pone.0030468\n\nThis is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.\n\nMethodology/Principal Findings: Twenty-two participants performed a test of working memory capacity and then underwent resting-state fMRI. Seventeen subjects repeated the protocol three weeks later.\n\nEthics Statement: This research protocol was reviewed and approved by the OHSU Research Integrity Office’s Internal Review Board\n\nParticipants. In the initial experimental session, 22 individuals (15 females, 7 males; mean age = 27.5 yrs; SD = 4.8 yrs) participated in the first session after providing written informed consent. Seventeen of the original participants returned for an identical session three weeks after their first visit. All participants were right-handed, had normal or corrected-to-normal vision, and had no history of brain damage, learning disability, psychiatric diagnosis, or neurological problems. Informed written consent was obtained from all participants.\n\nVisual Short-Term Memory task. The visual working memory procedure was based on the task described by Vogel and colleagues. It required participants to remember two or six colored squares presented briefly (100 ms) on a computer monitor. Following a 2500 ms delay, a probe stimulus was displayed and participants indicated whether it was the same color and location as one of the squares from the original stimulus set. In a third of the trials, the two colored squares were presented with four distracters in the form of colored rectangles. Participants were told to ignore the distracters and only remember the squares. Working memory capacity estimates were computed for the six-stimulus condition, as capacity K = s*(H - F), where s is the number of stimuli in the memory array, H is the number of hits and F is the number of false alarms. At each session, participants completed 192 trials, 64 of each condition inter-mixed in four blocks of 48 trials.\n\nMRI data acquisition. All MRI scans were performed on a Siemens 3 Tesla TIM-TRIO system. Structural images were obtained using a sagittal magnetization-prepared rapid gradient echo (MP-RAGE) three-dimensional T1-weighted sequence (TR = 9.7 ms, TE = 4 ms, flip angle = 12u, TI = 300 ms, voxel size = 1.256161 mm, slices = 128). Functional images were obtained using a gradient-echo, echo-planar sequence sensitive to blood oxygen level-dependent (BOLD) contrast (TR = 2000 ms; TE = 30 ms; FOV = 240 mm3; flip angle = 90u). Participants completed two scans consisting of 150 acquisitions of 33 contiguous interleaved 3.8 mm axial slices, which were acquired parallel to the plane transecting the anterior and posterior commissure. This covered the entire cerebrum and all but the most inferior portion of the cerebellum. Steady state magnetization was assumed after four frames (~8 seconds). Functional MRI was conducted while subject maintained relaxed fixation on a crosshair.\n\nFunctional MRI Data preprocessing. The resting state fMRI preprocessing included (i) removal of a central spike caused by MR signal offset, (ii) correction of odd vs. even slice intensity differences attributable to interleaved acquisition without gaps, (iii) correction for head movement within and across runs, and (iv) within-run intensity normalization to a whole brain mode value gradient of 1000. Atlas transformation of the functional data was computed for each individual via the MP-RAGE. Each rs-fMRI run was then resampled in atlas space on an isotropic 3.0 mm3 grid combining the six parameters for movement correction and atlas transformation in one interpolation. All subsequent operations were performed on the atlas-transformed volumetric time series. As previously described, several additional preprocessing steps were used to reduce spurious variance unlikely to reflect neuronal activity. These steps included: (a) a temporal band-pass filter (0.009 Hz<f<0.08 Hz) and spatial smoothing (6 mm full width at half maximum), (b) regression of six parameters obtained by rigid body head motion correction, (c) regression of the whole brain signal averaged over the whole brain, (d) regression of ventricular signal averaged from ventricular ROI, and (e) regression of white matter signal averaged from white matter ROI. Regression of first order derivative terms for the whole brain, ventricular, and white matter signals were also included in the correlation preprocessing.\n\nRegions of interest. The ROIs ( Table 1 ) were selected\nbased on earlier studies of cortical regions that were detectedacross multiple studies using a variety of cognitive tasks. The ROIsincluded nodes identified as part of the default-mode network[27,28]. Each ROI (node) consisted of a 10 mm\n3sphere centered\non the peak loci of activation reported in those studies. Mean timecourses were extracted from the 34 ROIs in previous work. Eachparticipant’s ROI timecourses were inter-correlated to form a\n34634 connectivity matrix representing the strength of connection\nbetween every pair of ROIs. Subsequent network analyses wereperformed on these matrices.\nGraph Construction\nAll network measures were calculated using functions written in\nthe Brain Connectivity Toolbox created by Sporns and colleagues(https://sites.google.com/a/brai n-connectivity-toolbox.net/bct/\nHome) The formulae for the network measures are provided intheir recent paper [8]. For each individual dataset, theconnectivity graph was co nstructed by creating a 34 634\ncorrelation matrix M. We then created a binarized matrix (B)\nformed by thresholding each M by a threshold T. All values of\ncells of the correlation matrix ,T were then set to equal 0. All\nother cells were set equal to 1. Binarizing a graph requireschoosing a threshold value of r above which a connectionbetween two nodes is considered to exist. Setting a threshold toolow carries a risk of over-estimating the influence of noisy,physiologically insignificant weak correlations, thereby losingsensitivity to the underlying ne twork organization. Conversely,\nvery high thresholds can cause excessive fragmentation and may\nmisrepresent the graph structur e by disregarding correlations of\npotential functional importance. As no definitive method ofselecting an optimal threshold is currently available, weperformed our analyses at a range of plausible thresholds, butreported results using a threshold for visualizations (r = 0.25)based on the characteristics described below. This threshold wasdetermined by satisfying the following criteria (also see Figure\nS1). First, the network must differ from a random graph on\nmeasures of modularity and small-world properties. Random\ngraphs were constructed using randomly placed connectionsconstrained to have the same degree distribution as the realgraphs [9]. This comparison ac ross different binarization\nthresholds indicates at what threshold values, the apparentstructure of the graph is unlikely to have resulted by chance.Additionally, the average reachability of the network, theprobability that a direct or indirect path exists between anyNetwork Modularity and Working Memory Variability\nPLoS ONE | www.plosone.org 8 January 2012 | Volume 7 | Issue 1 | e30468\ntwo nodes in the graph, must not differ significantly from 1.0.\nSetting T to correlations of 0.25 to 0.30 satisfied these conditionsfor all individual subject connectivity maps. We note that thisapproach allows the number of connections included in thenetwork to vary across participants.\nWe also performed the network thresholding using the\nconnection density thresholds to binarize the individual partici-pants correlation matrices ( Text S1 ). Unlike correlation based\nthresholds which allow the number of connections in the networkto vary between subjects, connection density holds the number ofconnections in the network constant by retaining the specifiedproportion of connections determined by correlation strength.While this approach produced similar results at session 1, in termsof the relationship between small-worldness and VSTM capacity,it failed to reveal the same relationship at Session 2 ( see Figure\nS2).\nReachability. A measure of the proportion of nodes that are\nconnected by any path, regardless of the path length (i.e. thenumber of intervening nodes that must be traversed in order to\nreach one node from the other). A low reachability score implies a\nfragmented graph where some nodes are completely disconnectedfrom all others in the network, which is biologically implausible asa model of the brain [8].\nSmall-worldness. A measure of global network\norganization, reflects high local inter-connectivity coupled with ashorter than expected distances between any two nodes due to thepresence of ‘‘hubs’’ - nodes that are densely connected to othernodes. It is defined in terms of clustering coefficient andcharacteristic path length [10,11]. Characteristic path length ( l)\nis a measure of the mean number of links that must be traversed inorder to travel between any two nodes in the network. Clusteringcoefficient (C) is a measure of the average proportion of a node’snearest neighbors that are also connected to each other. Small-world networks possess a clustering coefficient that is much largerthan a random graph, and a characteristic path length that is equalor only slightly larger than in a random graph. The ‘small-worldness’ of a network (S) can thus be quantified as (C\nreal/\nCrandom )/(lreal/lrandom ) [11,12].\nModularity estimation. Modularity, or community\nstructure, is a technique for subdividing the network intoseparate modules (communities), which maximize theconnections within each module and minimize the connectionsbetween modules [8,9,13]. Modularity is estimated usingoptimization algorithms. Network modularity values in thecurrent study were estimated using the method of Newman [9]and then confirmed using the algorithm developed by Blondel[13]. As the Blondel modularity algorithm is non-deterministic andcan yield slightly different values of modularity for a given networkacross multiple runs, we calculated modularity using both thesetechniques for each subject by averaging across 100 iterations ofthe algorithm. The two different modularity estimates convergedto near unity at both sessions (Session 1: r(15) = 0.98, p ,0.001;\nSession 2: r(15) = 0.98, p ,0.001). We further tested the reliability\nof the modularity values using the Variation of Information, ameasure of the stability of the network’s organization [42] ( Text\nS1, Figure S3 )."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 109,
+            "text": "Functional Brain Network Modularity Captures Inter- and Intra-Individual Variation in Working Memory Capacity",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 110,
+            "end": 130,
+            "text": "Alexander A. Stevens",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 198,
+            "end": 230,
+            "text": "doi:10.1371/journal.pone.0030468",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 175,
+            "end": 183,
+            "text": "PLoS ONE",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 469,
+            "end": 607,
+            "text": "Methodology/Principal Findings: Twenty-two participants performed a test of working memory capacity and then underwent resting-state fMRI.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 232,
+            "end": 334,
+            "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2369,
+            "end": 2393,
+            "text": "Siemens 3 Tesla TIM-TRIO",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2902,
+            "end": 2947,
+            "text": "33 contiguous interleaved 3.8 mm axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2928,
+            "end": 2934,
+            "text": "3.8 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2816,
+            "end": 2832,
+            "text": "flip angle = 90u",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3257,
+            "end": 3288,
+            "text": "relaxed fixation on a crosshair",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2801,
+            "end": 2814,
+            "text": "FOV = 240 mm3",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2775,
+            "end": 2787,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2789,
+            "end": 2799,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 588,
+            "end": 606,
+            "text": "resting-state fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 501,
+            "end": 524,
+            "text": "Twenty-two participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 850,
+            "end": 864,
+            "text": "22 individuals",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 865,
+            "end": 886,
+            "text": "(15 females, 7 males;",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4781,
+            "end": 4836,
+            "text": "Regions of interest. The ROIs ( Table 1 ) were selected",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5150,
+            "end": 5198,
+            "text": "Mean timecourses were extracted from the 34 ROIs",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5256,
+            "end": 5308,
+            "text": "inter-correlated to form a\n34634 connectivity matrix",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5843,
+            "end": 5929,
+            "text": "We then created a binarized matrix (B)\nformed by thresholding each M by a threshold T.",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7598,
+            "end": 7666,
+            "text": "Setting T to correlations of 0.25 to 0.30 satisfied these conditions",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8675,
+            "end": 8771,
+            "text": "A low reachability score implies a\nfragmented graph where some nodes are completely disconnected",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5457,
+            "end": 5551,
+            "text": "All network measures were calculated using functions written in\nthe Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8865,
+            "end": 8909,
+            "text": "Small-worldness. A measure of global network",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9783,
+            "end": 9856,
+            "text": "Modularity estimation. Modularity, or community\nstructure, is a technique",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4781,
+            "end": 4836,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0028"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5150,
+            "end": 5198,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0029"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5256,
+            "end": 5308,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0030"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7598,
+            "end": 7666,
+            "text": "4",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0031"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8675,
+            "end": 8771,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0032"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9783,
+            "end": 9856,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0033"
+        }
+      ]
+    }
+  ]
+}

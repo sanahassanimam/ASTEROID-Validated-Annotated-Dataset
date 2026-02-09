@@ -1,0 +1,775 @@
+{
+  "data": {
+    "text": "ORIGINAL RESEARCH\npublished: 04 September 2019\ndoi: 10.3389/fnagi.2019.00234\n\nThe Effect of Aging on Resting State Connectivity of Predefined Networks in the Brain\nEleanna Varangis, Christian G. Habeck, Qolamreza R. Razlighi and Yaakov Stern\nFrontiers in Aging Neuroscience\n\nRecent studies have found a deleterious effect of age on a wide variety of measures of functional connectivity, and some hints at a relationship between connectivity at rest and cognitive functioning.\n\nAll participants were native English speakers, right-handed, free of MRI contraindications, and read at a fourth grade reading level or above. For inclusion in the present study, participants had to meet the following additional inclusion criteria: completion of a resting state scan, and less than 30% motion artifact data removal (scrubbing) from that resting state scan (Power et al., 2012; Parkes et al., 2018). Based on these additional criteria, the final sample was comprised of 427 (YA n = 101, yMA n = 61, oMA n = 126, OA n = 139) healthy adults between the ages of 20 and 80 who met all inclusion criteria.\n\nThe present study collected fMRI scans during a 5- (n = 142) or 9.5-(n = 286) minute resting state protocol. All participants completed these scans on a 3.0T Philips Achieva Magnet. T1-weighted images of the whole brain were acquired for each subject with a Magnetization Prepared Rapid Gradient Echo (MPRAGE) sequence with the following parameters: TE/TR: 3/6.5 ms; Field of view: 256 mm; Flip angle: 8°; In-plane resolution: 256 × 256 voxels; Slice thickness/gap: 1/0 mm; Slices: 180. fMRI blood oxygen level-dependent (BOLD) resting state scans were collected with the following parameters: TE/TR: 20/2000 ms; Flip angle: 72°; In-plane resolution: 112 × 112 voxels; Slice thickness/gap: 3/0 mm; Slices: 37.\n\nImages were preprocessed using an in-house developed native space method (Razlighi et al., 2014). The preprocessing pipeline included slice-timing correction and motion correction performed in FSL (Jenkinson et al., 2002, 2012), calculation of frame-wise displacement (FWD; as described in Power et al., 2011), volume replacement for contaminated volumes (Carp, 2013), band-pass filtering using flsmaths–bptf (Jenkinson et al., 2012), and residualization of the processed data with respect to FWD, root mean square difference of the BOLD signal, left and right hemisphere white matter, and lateral ventricular signals (Birn et al., 2006). T1 image segmentation was performed using FreeSurfer (Dale et al., 1999; Fischl et al., 2002, 2004), and inspected visually for any possible inaccuracies. In order to perform the functional connectivity analyses described below, the coordinates of the 264 ROIs identified by Power et al. (2011) were transferred to native space via non-linear registration of the subject’s structural scan to the MNI template using the ANTS software package. Next, a 10 mm radius spherical mask was generated for each coordinate and intersected with the FreeSurfer gray matter mask in order to derive the gray matter-registered ROI masks for each of the 264 ROIs. An intermodal, intra-subject, rigid-body registration of the fMRI reference image and T1 scan was then performed using FLIRT with 6 degrees of freedom, normalized mutual information as the cost function (Jenkinson and Smith, 2001), in order to transfer ROI masks from T1 space to fMRI space. These transferred ROI masks were used to average all voxels within each mask to obtain a single fMRI time-series for each of the 264 ROIs. Time-series data from each ROI were used to generate correlation matrices among all ROIs (264 ROIs by 264 ROIs), and were then z-transformed to generate normalized correlation matrices for each participant.\n\nParticipants completed a battery of neuropsychological tasks as part of their baseline study visit. Following collection of all baseline participant data, performance on each task was z-scored relative to the mean and standard deviation for each task within the whole sample of participants enrolled in the RANN and CR studies who completed these assessments. The z-scores for all tasks within each cognitive domain were then averaged in order to generate domain-based z-scores.\n\nDATA AVAILABILITY\nThe datasets generated for this study are available on request to the corresponding author.\n\nETHICS STATEMENT\nThe Columbia University Institutional Review Board approved all study procedures, and all participants provided written informed consent prior to the participation.\n\nCOPYRIGHT © 2019 Varangis, Habeck, Razlighi and Stern. This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 52,
+            "end": 76,
+            "text": "10.3389/fnagi.2019.00234",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 78,
+            "end": 163,
+            "text": "The Effect of Aging on Resting State Connectivity of Predefined Networks in the Brain",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 164,
+            "end": 241,
+            "text": "Eleanna Varangis, Christian G. Habeck, Qolamreza R. Razlighi and Yaakov Stern",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 242,
+            "end": 273,
+            "text": "Frontiers in Aging Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 42,
+            "end": 46,
+            "text": "2019",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 275,
+            "end": 475,
+            "text": "Recent studies have found a deleterious effect of age on a wide variety of measures of functional connectivity, and some hints at a relationship between connectivity at rest and cognitive functioning.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4229,
+            "end": 4320,
+            "text": "The datasets generated for this study are available on request to the corresponding author.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4560,
+            "end": 4671,
+            "text": "This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY).",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1248,
+            "end": 1275,
+            "text": "3.0T Philips Achieva Magnet",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1143,
+            "end": 1202,
+            "text": "5- (n = 142) or 9.5-(n = 286) minute resting state protocol",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1689,
+            "end": 1706,
+            "text": "TE/TR: 20/2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1689,
+            "end": 1706,
+            "text": "TE/TR: 20/2000 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1723,
+            "text": "Flip angle: 72°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1764,
+            "end": 1791,
+            "text": "Slice thickness/gap: 3/0 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1764,
+            "end": 1791,
+            "text": "Slice thickness/gap: 3/0 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1793,
+            "end": 1803,
+            "text": "Slices: 37",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1143,
+            "end": 1202,
+            "text": "5- (n = 142) or 9.5-(n = 286) minute resting state protocol",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1999,
+            "end": 2002,
+            "text": "FSL",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 933,
+            "end": 966,
+            "text": "final sample was comprised of 427",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 933,
+            "end": 966,
+            "text": "final sample was comprised of 427",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1032,
+            "end": 1061,
+            "text": "between the ages of 20 and 80",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 524,
+            "end": 536,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 766,
+            "end": 820,
+            "text": "less than 30% motion artifact data removal (scrubbing)",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4339,
+            "end": 4419,
+            "text": "The Columbia University Institutional Review Board approved all study procedures",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3923,
+            "text": "performance on each task was z-scored",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1940,
+            "end": 1963,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1999,
+            "end": 2002,
+            "text": "FSL",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1968,
+            "end": 2002,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1999,
+            "end": 2002,
+            "text": "FSL",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Interpolate",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2117,
+            "end": 2160,
+            "text": "3",
+            "labels": [
+              "Interpolate — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Interpolate",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2117,
+            "end": 2160,
+            "text": "volume replacement for contaminated volumes",
+            "labels": [
+              "Interpolate — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Interpolate — Software",
+            "Interpolate — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2175,
+            "end": 2194,
+            "text": "4",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2201,
+            "end": 2214,
+            "text": "flsmaths–bptf",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2175,
+            "end": 2194,
+            "text": "band-pass filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2245,
+            "end": 2423,
+            "text": "5",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2245,
+            "end": 2423,
+            "text": "residualization of the processed data with respect to FWD, root mean square difference of the BOLD signal, left and right hemisphere white matter, and lateral ventricular signals",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2487,
+            "end": 2497,
+            "text": "6",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2487,
+            "end": 2497,
+            "text": "FreeSurfer",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Algorithm",
+            "Segmentation — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2841,
+            "end": 2853,
+            "text": "7",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2864,
+            "end": 2868,
+            "text": "ANTS",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2841,
+            "end": 2853,
+            "text": "MNI template",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3211,
+            "end": 3216,
+            "text": "8",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3211,
+            "end": 3216,
+            "text": "FLIRT",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3222,
+            "end": 3242,
+            "text": "6 degrees of freedom",
+            "labels": [
+              "Coregistration — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3244,
+            "end": 3273,
+            "text": "normalized mutual information",
+            "labels": [
+              "Coregistration — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2674,
+            "end": 2739,
+            "text": "9",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2674,
+            "end": 2739,
+            "text": "the coordinates of the 264 ROIs identified by Power et al. (2011)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Algorithm"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2893,
+            "end": 2922,
+            "text": "10",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2893,
+            "end": 2922,
+            "text": "a 10 mm radius spherical mask",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "ROI definition — Software",
+            "ROI definition — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3496,
+            "text": "11",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3496,
+            "text": "average all voxels within each mask to obtain a single fMRI time-series",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3576,
+            "end": 3611,
+            "text": "12",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3576,
+            "end": 3611,
+            "text": "correlation matrices among all ROIs",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software",
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3650,
+            "end": 3663,
+            "text": "13",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3650,
+            "end": 3663,
+            "text": "z-transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Connectivity normalization — Software",
+            "Connectivity normalization — Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

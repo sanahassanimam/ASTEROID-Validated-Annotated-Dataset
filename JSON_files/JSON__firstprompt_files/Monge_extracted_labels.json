@@ -1,0 +1,1077 @@
+{
+  "data": {
+    "text": "Functional Modular Architecture Underlying Attentional Control in Aging\n\nPublished in final edited form as:\nNeuroimage. 2017 July 15; 155: 257–270. doi:10.1016/j.neuroimage.2017.05.002.\n\nHHS Public Access\nAuthor manuscript; available in PMC 2018 July 15.\n\n2.1 Study Participants\n\nOur study sample included 68 community-dwelling adults between the ages of 19 and 78 years (Table 1), in which 23 participants were between 19 and 39 years of age, 24 were between 40 and 59 years of age, and 21 were between 60 and 78 years of age. Participants met the following inclusion criteria: corrected visual acuity greater than or equal to 20/40 (Bach, 1996); Mini-Mental State Examination (Folstein et al., 1975) score 27 or greater; a Beck Depression Inventory (Beck, 1978) score less than or equal to 10; a Vocabulary subtest of the Wechsler Adult Intelligence Scale III (Wechsler, 1997) scaled score greater than or equal to the 50th percentile; a Dvorine color vision test (Dvorine, 1963) score greater than or equal to 12; and at least 75% accuracy on the practice version of the visual search task administered during screening. Also, all participants were right-handed and completed at least 12 years of education (M = 16.5, SD = 2.1 years), and 55.9% were female. Participants self-reported to be free of significant health problems (including atherosclerosis, neurological and psychiatric disorders), and not taking medications known to affect cognitive function or cerebral blood flow (except antihypertensive agents). The Duke University Institutional Review Board approved all experimental procedures, and participants provided informed consent prior to testing.\n\n2.2 Visual Search Task\n\nIn the scanner, participants performed a conjunction visual search task, modified from Proulx (2007). Participants decided whether a target bar was present or not present among nontarget (distractor) bars (Figure 1). The target was defined as a conjunction of color (blue or green) and orientation (45° left- or 45° right-titled). Each distractor shared only one feature with the target; for example, a blue, right-titled target would be accompanied by two blue, left-tilted bars and two green, right-titled bars. The display always contained five items that were distributed within an approximately 15° diameter circular area.\n\nEach participant completed 350 trials, in which half the trials contained one target and four distractors (target-present, 175 trials) and the other half five distractors (target-absent, 175 trials). For each participant, the search target (e.g., blue, right-tilted bar) was constant, and the values of color and orientation defining the target were counterbalanced across participants. Each display contained four bars of equal size (0.8° × 3.2°), and one bar that was 50% larger (i.e., a size singleton; 1.2° × 4.8°). On 1/5 of the trials (i.e., 35 trials) the size singleton corresponded to the target and on the rest of the trials the size singleton corresponded to a distractor.\n\nParticipants completed five event-related, functional imaging runs of 70 trials each – a total of 350 trials. For each trial, participants indicated whether the target was present or absent via a button-press response, using their right index and middle fingers and two buttons on a hand-held, fiber optic response box; the assignment of the button corresponding to a target-present trial was balanced across participants. Participants were instructed to respond as quickly as possible without sacrificing accuracy.\n\nEach trial started with a white fixation cross displayed for a variable duration (jitter), followed by the five-item display for a duration of 350 ms, then a 2650 ms response period, during which the display was black. We measured RT from display onset. The jitter duration was varied among the values of 1500, 3000, 4500, and 6000 ms (multiples of the TR = 1500 ms).\n\n2.3 MRI Data Acquisition\n\nA General Electric 3T MR750 whole-body 60 cm bore MRI scanner and 8-chanel head coil were used to collect functional and anatomical images. For the task event-related, functional imaging runs, 29 contiguous slices were acquired at an axial oblique orientation, parallel to the AC-PC plane, in an interleaved order (TR = 1500 ms, TE = 27 ms, FOV = 240 mm, flip angle = 77°, voxel size = 3.75 mm × 3.75 mm × 4 mm, 64 × 64 matrix, SENSE factor = 1); for each run, a total of 252 brain volumes were acquired.\n\nAfter functional imaging acquisition, a high-resolution, anatomical image was collected. For this image, 166 straight axial slices T1-weighted images were acquired with a 3D fast inverse-recovery-prepared spoiled gradient recalled (SPGR) sequence (TR = 8.10 ms, TE = 3.18 ms, TI = 450 ms, FOV = 256 mm, flip angle = 12°, voxel size = 1 × 1 × 1 mm, 256 × 256 matrix, SENSE factor = 2).\n\n2.4 fMRI Analysis\n\n2.4.1 Preprocessing—All preprocessing and first-level analyses of the functional data were conducted within FSL 5.0.5 and FEAT 6.0. The T1-weighted images were skull-striped using the FSL Brain Extraction Tool (BET). For the functional images, the first four volumes of each run were discarded to allow for scanner equilibrium. All images were slice-time corrected and corrected for head motion using FSL MCFLIRT; the motion parameters (6 rigid-body transformations) were included as nuisance covariates in the first-level GLMs. To further correct for motion, events that overlapped with trials in which the participant moved more than 2.5 mm in any direction were later excluded from functional network construction. Following, functional images were co-registered to the participants’ 3D-FSPGR and subsequently normalized to MNI space using a combination of affine and non-linear registrations. Lastly, images were spatially smoothed with a 5 mm Gaussian kernel and temporally smoothed with a high-pass filter (cut off = 90.0 s) to correct for scanner drift.\n\n2.4.2 Functional Network Construction—The input data for the modularity analyses are functional networks, representing all pairwise correlations of regional task-related activation. We used a beta time series approach. For functional network construction, we used a total of 397 ROIs, comprising a subparcellated version of the Harvard-Oxford Atlas, excluding the cerebral white matter, lateral ventricles and brain-stem ROIs. For each ROI, for each trial type of interest, we extracted the beta time series, and correlated the beta time series of each ROI with every other ROI. This resulted in three undirected, weighted connectivity matrices (397 × 397). Negative connections were removed from the connectivity matrices and values within the diagonal of each connectivity matrix were set to zero.\n\n2.4.3 Modularity—We ran a Louvain algorithm on the averaged nonsingleton target connectivity matrix (applied ten times) and used the Brain Connectivity Toolbox. The run that produced the highest Q value was considered the best partition and the accompanying community assignments were used for subsequent analyses.\n\n2.5 Centrality Measures\n\nAfter running the modularity analysis, we calculated degree centrality and PageRank centrality for each of the nodes in all three networks. Degree centrality was calculated by summing the total weights maintained by a node. PageRank centrality was calculated using a damping value of 0.85. For each module, we averaged the centrality measures across the ROIs to create composite degree and PageRank centrality scores.\n\n3.1 Behavioral Components Underlying Visual Search\n\nOn the visual search task, participants achieved an average accuracy of 97.4% (SD = 2.3%)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 71,
+            "text": "Functional Modular Architecture Underlying Attentional Control in Aging",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 120,
+            "end": 124,
+            "text": "2017",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 152,
+            "end": 184,
+            "text": "10.1016/j.neuroimage.2017.05.002",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 108,
+            "end": 118,
+            "text": "Neuroimage",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 205,
+            "end": 254,
+            "text": "Author manuscript; available in PMC 2018 July 15.",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 306,
+            "end": 334,
+            "text": "68 community-dwelling adults",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 335,
+            "end": 370,
+            "text": "between the ages of 19 and 78 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1130,
+            "end": 1164,
+            "text": "all participants were right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1242,
+            "end": 1259,
+            "text": "55.9% were female",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 528,
+            "end": 578,
+            "text": "Participants met the following inclusion criteria:",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1518,
+            "end": 1601,
+            "text": "The Duke University Institutional Review Board approved all experimental procedures",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3917,
+            "end": 3942,
+            "text": "General Electric 3T MR750",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4108,
+            "end": 4128,
+            "text": "29 contiguous slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3873,
+            "end": 3885,
+            "text": "TR = 1500 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4244,
+            "end": 4254,
+            "text": "TE = 27 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4270,
+            "end": 4286,
+            "text": "flip angle = 77°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4256,
+            "end": 4268,
+            "text": "FOV = 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4301,
+            "end": 4325,
+            "text": "3.75 mm × 3.75 mm × 4 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4934,
+            "end": 4943,
+            "text": "FSL 5.0.5",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1730,
+            "end": 1760,
+            "text": "conjunction visual search task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4111,
+            "end": 4121,
+            "text": "contiguous",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 306,
+            "end": 334,
+            "text": "68 community-dwelling adults",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2318,
+            "end": 2355,
+            "text": "Each participant completed 350 trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3623,
+            "end": 3669,
+            "text": "the five-item display for a duration of 350 ms",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3774,
+            "end": 3854,
+            "text": "The jitter duration was varied among the values of 1500, 3000, 4500, and 6000 ms",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3426,
+            "end": 3518,
+            "text": "Participants were instructed to respond as quickly as possible without sacrificing accuracy.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1906,
+            "end": 2019,
+            "text": "The target was defined as a conjunction of color (blue or green) and orientation (45° left- or 45° right-titled).",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2838,
+            "end": 2922,
+            "text": "On 1/5 of the trials (i.e., 35 trials) the size singleton corresponded to the target",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2808,
+            "end": 2822,
+            "text": "size singleton",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7553,
+            "end": 7591,
+            "text": "average accuracy of 97.4% (SD = 2.3%).",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5014,
+            "end": 5041,
+            "text": "Brain Extraction Tool (BET)",
+            "labels": [
+              "Skull stripping — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4986,
+            "end": 4999,
+            "text": "skull-striped",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5074,
+            "end": 5092,
+            "text": "first four volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5070,
+            "end": 5119,
+            "text": "the first four volumes of each run were discarded",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5170,
+            "end": 5190,
+            "text": "slice-time corrected",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5227,
+            "end": 5238,
+            "text": "FSL MCFLIRT",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5263,
+            "end": 5291,
+            "text": "6 rigid-body transformations",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5386,
+            "end": 5468,
+            "text": "events that overlapped with trials in which the participant moved more than 2.5 mm",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5462,
+            "end": 5468,
+            "text": "2.5 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5446,
+            "end": 5468,
+            "text": "moved more than 2.5 mm",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5686,
+            "end": 5692,
+            "text": "affine",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5578,
+            "end": 5621,
+            "text": "co-registered to the participants’ 3D-FSPGR",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5697,
+            "end": 5721,
+            "text": "non-linear registrations",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5639,
+            "end": 5662,
+            "text": "normalized to MNI space",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5769,
+            "end": 5782,
+            "text": "5 mm Gaussian",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5743,
+            "end": 5789,
+            "text": "spatially smoothed with a 5 mm Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5821,
+            "end": 5837,
+            "text": "high-pass filter",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5839,
+            "end": 5855,
+            "text": "cut off = 90.0 s",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5794,
+            "end": 5856,
+            "text": "temporally smoothed with a high-pass filter (cut off = 90.0 s)",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5244,
+            "end": 5329,
+            "text": "motion parameters (6 rigid-body transformations) were included as nuisance covariates",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6216,
+            "end": 6236,
+            "text": "Harvard-Oxford Atlas",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6163,
+            "end": 6171,
+            "text": "397 ROIs",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6080,
+            "end": 6096,
+            "text": "beta time series",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6534,
+            "end": 6543,
+            "text": "397 × 397",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6011,
+            "end": 6032,
+            "text": "pairwise correlations",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6546,
+            "end": 6579,
+            "text": "Negative connections were removed",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6822,
+            "end": 6848,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Network definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6715,
+            "end": 6722,
+            "text": "Louvain",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6876,
+            "end": 6891,
+            "text": "highest Q value",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7105,
+            "end": 7113,
+            "text": "PageRank",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7297,
+            "end": 7318,
+            "text": "damping value of 0.85",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7083,
+            "end": 7124,
+            "text": "degree centrality and PageRank centrality",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4986,
+            "end": 4999,
+            "text": "1",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5070,
+            "end": 5119,
+            "text": "2",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5170,
+            "end": 5190,
+            "text": "3",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5195,
+            "end": 5220,
+            "text": "4",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5446,
+            "end": 5468,
+            "text": "5",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5578,
+            "end": 5621,
+            "text": "6",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5639,
+            "end": 5662,
+            "text": "7",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5743,
+            "end": 5789,
+            "text": "8",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5794,
+            "end": 5856,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5244,
+            "end": 5329,
+            "text": "10",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6163,
+            "end": 6236,
+            "text": "11",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6080,
+            "end": 6096,
+            "text": "12",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6011,
+            "end": 6032,
+            "text": "13",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6546,
+            "end": 6579,
+            "text": "14",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6715,
+            "end": 6732,
+            "text": "15",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7083,
+            "end": 7124,
+            "text": "16",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

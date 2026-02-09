@@ -1,0 +1,929 @@
+{
+  "data": {
+    "text": "NeuroImage 229 (2021) 117769. Development of the brain functional connectome follows puberty-dependent nonlinear trajectories. Zeus Gracia-Tabuenca, Martha Beatriz Moreno, Fernando A. Barrios, Sarael Alcauter. NeuroImage, Elsevier Inc. https://doi.org/10.1016/j.neuroimage.2021.117769. © 2021 The Authors. Published by Elsevier Inc. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).\n\nAdolescence is a developmental period that dramatically impacts body and behavior, with pubertal hormones playing an important role not only in the morphological changes in the body but also in brain structure and function.\n\nThe total sample consisted of 98 typically developing subjects (45 male, ages from 6.71 to 18.06 years old), of whom 41 and 16 returned to a second and a third session, respectively. Inclusion criteria included full-term gestation (at least 37 weeks) and enrollment in its corresponding academic year. Exclusion criteria consisted of any neurological or psychiatric disorder identified with a semi-structured interview. For every session, written informed consent was required, and in the case of minors, parents were required to sign the consent and children to verbally assent. Study protocols followed the Declaration of Helsinki and were approved by the Institutional Review Board. Eighteen datasets from seventeen subjects (9/8 females/males; age: 6.97–13.16 years old) with less than four minutes of “spikes”-clean time series were discarded for further analyses, resulting in a final sample of 89 typically developing subjects (39 male, age: 6.71–18.06 years old), of which 37 and 11 returned for a second and third session, respectively.\n\nMRI sessions consisted of a resting-state fMRI sequence followed with a high-resolution T1-weighted scan. 150 whole-brain fMRI volumes were acquired using a gradient recalled T2* echo-planar imaging sequence (TR/TE = 2000/40 ms, voxel size 4 × 4 × 4 mm3). Participants were instructed to keep their eyes closed and not to fall asleep. Structural T1 sequence was obtained using a 3D spoiled gradient recalled (SPGR) acquisition (TR/TE = 8.1/3.2 ms, flip angle = 12.0, voxel size 1 × 1 × 1 mm3). MR images were acquired with a 3T MR GE750 Discovery scanner (General Electric, Waukesha, WI), using an 8-channel-array head coil; 20 sessions were acquired with a 32-channel coil.\n\nAnatomical T1 images were denoised with non-local means (Manjón et al., 2010) and N4 bias field correction (Tustison et al., 2010). fMRI preprocessing was implemented using FMRIB’s Software Libraries (FSL v.5.0.6; Jenkinson et al., 2012; RRID: SCR_002823) including slice timing, head motion correction, brain extraction, intensity normalization, regression of confounding variables, spatial normalization, and band-pass temporal filtering (0.01–0.08 Hz). Each fMRI dataset was registered to its corresponding structural image with a rigid-body transformation, followed by a two-step diffeomorphic SyN registration (Avants et al., 2008; RRID: SCR_004757) to a pediatric brain atlas (NIHPD 4.5–18.5; Fonov et al., 2011), and then to the MNI-152 standard template.\n\nFramewise displacement was estimated and summarized by the means of FD-RMS computed with FSL’s MCFLIRT (Jenkinson et al., 2002), and those volumes with more than 0.25 mm were considered “spikes”, and they were regressed out from the fMRI time series. Given that pediatric samples tend to move more inside the scanner than adult populations, we implemented two rigorous confounding regression strategies, one including the global signal regression (GSR) and the other one without GSR. In the GSR approach, 36 parameters were regressed out (Satterthwaite et al., 2013a), including the time series, derivatives, and their corresponding quadratic terms of the six estimated motion parameters, and the average signal from global and the eroded white matter (WM) and cerebrospinal fluid (CSF). In the no-GSR approach, 37 parameters were regressed out (Gracia-Tabuenca et al., 2020), including the time series, derivatives, and their corresponding quadratic terms of the six estimated motion parameters, and the average signal from the eroded WM and CSF, plus five principal components of the WM+CSF, this last procedure is termed aCompCor (Chai et al., 2012; Muschelli et al., 2014).\n\nBrain network construction was based on the 264 regions of interest (ROIs) described by Power et al. (2011), which consist of 5-mm radius spheres encompassed in 13 different functional networks. Edges were calculated as the functional connectivity between every pair of ROIs via the Pearson’s cross-correlation from their average time series. Based on these matrices, weighted graph theory metrics were computed to characterize network organization features. The sum of edges or weighted degree (d), clustering coefficient (C), efficiency (E), and characteristic path length (L) were estimated to account for centrality, segregation, and integration in terms of functional network organization (Rubinov and Sporns, 2010).\n\nA cross-sectional subset of the sample (N = 59; 24 males; age range: 9.67–17.98 years old) fulfilled a neuropsychological assessment that included a Card Sorting Task (CST; Berg, 1948; Lázaro et al., 2012). The CST measures executive control, reasoning, and learning, but is particularly sensitive to task shifting or cognitive flexibility.\n\nThe relationship between the task scores and the functional connectomes was assessed with the Network-Based Statistics approach (NBS; Zalesky et al., 2010) using the R-package Network-Based R-statistics (NBR; Gracia-Tabuenca and Alcauter, 2020; RRID: SCR_019114). In this case, the three standardized cognitive scores were fit for each intra- and inter-connection of a connectome of 13 × 13 functional networks (Power et al., 2011).\n\nThe preprocessed data and the code/software described in the paper is freely available online at https://github.com/BrainMapINB/Pubertal_Connectome."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 30,
+            "end": 125,
+            "text": "Development of the brain functional connectome follows puberty-dependent nonlinear trajectories",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 127,
+            "end": 208,
+            "text": "Zeus Gracia-Tabuenca, Martha Beatriz Moreno, Fernando A. Barrios, Sarael Alcauter",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 28,
+            "text": "2021",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 210,
+            "end": 235,
+            "text": "NeuroImage, Elsevier Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 236,
+            "end": 284,
+            "text": "https://doi.org/10.1016/j.neuroimage.2021.117769",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 436,
+            "end": 659,
+            "text": "Adolescence is a developmental period that dramatically impacts body and behavior, with pubertal hormones playing an important role not only in the morphological changes in the body but also in brain structure and function.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 333,
+            "end": 434,
+            "text": "This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5826,
+            "end": 5974,
+            "text": "The preprocessed data and the code/software described in the paper is freely available online at https://github.com/BrainMapINB/Pubertal_Connectome.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5826,
+            "end": 5974,
+            "text": "The preprocessed data and the code/software described in the paper is freely available online at https://github.com/BrainMapINB/Pubertal_Connectome.",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 661,
+            "end": 843,
+            "text": "The total sample consisted of 98 typically developing subjects (45 male, ages from 6.71 to 18.06 years old), of whom 41 and 16 returned to a second and a third session, respectively.",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 661,
+            "end": 843,
+            "text": "The total sample consisted of 98 typically developing subjects (45 male, ages from 6.71 to 18.06 years old), of whom 41 and 16 returned to a second and a third session, respectively.",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 661,
+            "end": 843,
+            "text": "The total sample consisted of 98 typically developing subjects (45 male, ages from 6.71 to 18.06 years old), of whom 41 and 16 returned to a second and a third session, respectively.",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 844,
+            "end": 962,
+            "text": "Inclusion criteria included full-term gestation (at least 37 weeks) and enrollment in its corresponding academic year.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1347,
+            "end": 1706,
+            "text": "Eighteen datasets from seventeen subjects (9/8 females/males; age: 6.97–13.16 years old) with less than four minutes of “spikes”-clean time series were discarded for further analyses, resulting in a final sample of 89 typically developing subjects (39 male, age: 6.71–18.06 years old), of which 37 and 11 returned for a second and third session, respectively.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1241,
+            "end": 1346,
+            "text": "Study protocols followed the Declaration of Helsinki and were approved by the Institutional Review Board.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1813,
+            "text": "MRI sessions consisted of a resting-state fMRI sequence followed with a high-resolution T1-weighted scan.",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1917,
+            "end": 1935,
+            "text": "TR/TE = 2000/40 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1917,
+            "end": 1935,
+            "text": "TR/TE = 2000/40 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1937,
+            "end": 1961,
+            "text": "voxel size 4 × 4 × 4 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1964,
+            "end": 2042,
+            "text": "Participants were instructed to keep their eyes closed and not to fall asleep.",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2233,
+            "end": 2295,
+            "text": "3T MR GE750 Discovery scanner (General Electric, Waukesha, WI)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1347,
+            "end": 1706,
+            "text": "Eighteen datasets from seventeen subjects (9/8 females/males; age: 6.97–13.16 years old) with less than four minutes of “spikes”-clean time series were discarded for further analyses, resulting in a final sample of 89 typically developing subjects (39 male, age: 6.71–18.06 years old), of which 37 and 11 returned for a second and third session, respectively.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2557,
+            "end": 2639,
+            "text": "FMRIB’s Software Libraries (FSL v.5.0.6; Jenkinson et al., 2012; RRID: SCR_002823)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5257,
+            "end": 5390,
+            "text": "The CST measures executive control, reasoning, and learning, but is particularly sensitive to task shifting or cognitive flexibility.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2410,
+            "end": 2439,
+            "text": "denoised with non-local means",
+            "labels": [
+              "Denoised — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2410,
+            "end": 2411,
+            "text": "1",
+            "labels": [
+              "Denoised — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2466,
+            "end": 2490,
+            "text": "N4 bias field correction",
+            "labels": [
+              "INU correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2466,
+            "end": 2467,
+            "text": "2",
+            "labels": [
+              "INU correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2557,
+            "end": 2639,
+            "text": "FMRIB’s Software Libraries (FSL v.5.0.6; Jenkinson et al., 2012; RRID: SCR_002823)",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2650,
+            "end": 2662,
+            "text": "slice timing",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2650,
+            "end": 2651,
+            "text": "3",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2557,
+            "end": 2639,
+            "text": "FMRIB’s Software Libraries (FSL v.5.0.6; Jenkinson et al., 2012; RRID: SCR_002823)",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2664,
+            "end": 2686,
+            "text": "head motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2664,
+            "end": 2665,
+            "text": "4",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2557,
+            "end": 2639,
+            "text": "FMRIB’s Software Libraries (FSL v.5.0.6; Jenkinson et al., 2012; RRID: SCR_002823)",
+            "labels": [
+              "Skull extraction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2688,
+            "end": 2704,
+            "text": "brain extraction",
+            "labels": [
+              "Skull extraction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2688,
+            "end": 2689,
+            "text": "5",
+            "labels": [
+              "Skull extraction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2557,
+            "end": 2639,
+            "text": "FMRIB’s Software Libraries (FSL v.5.0.6; Jenkinson et al., 2012; RRID: SCR_002823)",
+            "labels": [
+              "Intensity normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2706,
+            "end": 2729,
+            "text": "intensity normalization",
+            "labels": [
+              "Intensity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2706,
+            "end": 2707,
+            "text": "6",
+            "labels": [
+              "Intensity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2959,
+            "end": 3146,
+            "text": "two-step diffeomorphic SyN registration (Avants et al., 2008; RRID: SCR_004757) to a pediatric brain atlas (NIHPD 4.5–18.5; Fonov et al., 2011), and then to the MNI-152 standard template.",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2768,
+            "end": 2789,
+            "text": "spatial normalization",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2959,
+            "end": 3146,
+            "text": "two-step diffeomorphic SyN registration (Avants et al., 2008; RRID: SCR_004757) to a pediatric brain atlas (NIHPD 4.5–18.5; Fonov et al., 2011), and then to the MNI-152 standard template.",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2768,
+            "end": 2769,
+            "text": "7",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2557,
+            "end": 2639,
+            "text": "FMRIB’s Software Libraries (FSL v.5.0.6; Jenkinson et al., 2012; RRID: SCR_002823)",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2795,
+            "end": 2838,
+            "text": "band-pass temporal filtering (0.01–0.08 Hz)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2825,
+            "end": 2837,
+            "text": "0.01–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2795,
+            "end": 2796,
+            "text": "8",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3216,
+            "end": 3275,
+            "text": "FD-RMS computed with FSL’s MCFLIRT (Jenkinson et al., 2002)",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3281,
+            "end": 3398,
+            "text": "those volumes with more than 0.25 mm were considered “spikes”, and they were regressed out from the fMRI time series.",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3281,
+            "end": 3398,
+            "text": "those volumes with more than 0.25 mm were considered “spikes”, and they were regressed out from the fMRI time series.",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3281,
+            "end": 3282,
+            "text": "9",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3570,
+            "end": 3600,
+            "text": "global signal regression (GSR)",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3845,
+            "end": 3934,
+            "text": "average signal from global and the eroded white matter (WM) and cerebrospinal fluid (CSF)",
+            "labels": [
+              "Global signal — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3570,
+            "end": 3571,
+            "text": "10",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3731,
+            "end": 3835,
+            "text": "time series, derivatives, and their corresponding quadratic terms of the six estimated motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3731,
+            "end": 3732,
+            "text": "11",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4196,
+            "end": 4325,
+            "text": "plus five principal components of the WM+CSF, this last procedure is termed aCompCor (Chai et al., 2012; Muschelli et al., 2014).",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4196,
+            "end": 4325,
+            "text": "plus five principal components of the WM+CSF, this last procedure is termed aCompCor (Chai et al., 2012; Muschelli et al., 2014).",
+            "labels": [
+              "aCompCor — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4196,
+            "end": 4197,
+            "text": "12",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1347,
+            "end": 1706,
+            "text": "Eighteen datasets from seventeen subjects (9/8 females/males; age: 6.97–13.16 years old) with less than four minutes of “spikes”-clean time series were discarded for further analyses, resulting in a final sample of 89 typically developing subjects (39 male, age: 6.71–18.06 years old), of which 37 and 11 returned for a second and third session, respectively.",
+            "labels": [
+              "Exclusion — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1347,
+            "end": 1348,
+            "text": "13",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4371,
+            "end": 4434,
+            "text": "264 regions of interest (ROIs) described by Power et al. (2011)",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4453,
+            "end": 4520,
+            "text": "5-mm radius spheres encompassed in 13 different functional networks",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4453,
+            "end": 4520,
+            "text": "5-mm radius spheres encompassed in 13 different functional networks",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4638,
+            "end": 4668,
+            "text": "from their average time series",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4610,
+            "end": 4637,
+            "text": "Pearson’s cross-correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4695,
+            "end": 5048,
+            "text": "weighted graph theory metrics were computed to characterize network organization features. The sum of edges or weighted degree (d), clustering coefficient (C), efficiency (E), and characteristic path length (L) were estimated to account for centrality, segregation, and integration in terms of functional network organization (Rubinov and Sporns, 2010).",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

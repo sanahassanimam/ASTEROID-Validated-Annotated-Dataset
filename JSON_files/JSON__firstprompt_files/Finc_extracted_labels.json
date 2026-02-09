@@ -1,0 +1,857 @@
+{
+  "data": {
+    "text": "Transition of the Functional Brain Network Related to Increasing Cognitive Demands\n\nKarolina Finc ,1* Kamil Bonna,1,2 Monika Lewandowska,1 Tomasz Wolak,3 Jan Nikadon,1,2,4 Joanna Dreszer,1,4 Włodzisław Duch,1,2 and Simone Kühn5,6\n\nDOI: 10.1002/hbm.23621\nHuman Brain Mapping 38:3659–3674 (2017).\n\nMETHOD\n\nSubjects\n\nThirty-five healthy volunteers (17 females; mean age 22.6 ± 3.1; range 19–31 years) with normal or corrected-to-normal vision participated in this study. All were right-handed as defined by the Edinburgh Handedness Inventory [Oldfield, 1971], and without a history of neurological or psychiatric disorders. Participants were recruited from the local community through word-of-mouth and social networks. Written informed consent was collected from each participant, and ethical approval for the study was obtained from the Ethics Committee of the Nicolaus Copernicus University Ludwik Rydygier Collegium Medicum in Bydgoszcz, Poland, in accordance with the Declaration of Helsinki.\n\nfMRI Paradigm\n\nTo assess working memory, we used a visual n-back task based on letters [Gevins and Cutillo, 1993]... Stimulus consisted of the first five letters of the Roman alphabet (A–E), presented in a pseudorandom order in two working memory load conditions, 1- and 2-back. The presentation of each letter (500 ms) was preceded by a fixation cross (1,500 ms) presented in the centre of the screen. Each session of the task consisted of 10 blocks (30 s per block; 12 trials with 25% of targets) of alternating 1- and 2-back conditions. A short instruction screen (2,000 ms) was displayed before each block... The participants had 2,000 ms for each response. The experimental protocol execution and control (stimulus delivery and response registration) were controlled by the Presentation software (version 17.2).\n\nData Acquisition\n\nNeuroimaging data were collected using a GE Discovery MR750 3 Tesla MRI scanner (General Electric Healthcare) with a standard 8-channel head coil. Functional scans were obtained using a T2*-weighted gradient-echo, echo-planar imaging (EPI) sequence sensitive to BOLD contrast (TR = 2,000 ms, TE = 30 ms, FOV = 192 mm, flip angle = 90 degrees, matrix size = 64 × 64, voxel size = 3 × 3 × 3 mm, no gap). For each of the three sessions, 5 dummy scans (10 s) and 160 volumes (5 min 20 s) of 42 axial oblique slices were acquired in an interleaved acquisition scheme. Structural images were collected using three-dimensional high resolution T1-weighted gradient-echo sequence (TR = 8.2 s, TE = 3.2 ms, FOV = 256 mm, flip angle = 12 degrees, matrix size = 256 × 256, voxel size = 1 × 1 × 1 mm, 206 axial oblique slices).\n\nData Processing\n\nThe data pre-processing pipeline can be divided into two major steps: (1) standard pre-processing of the functional time series; and (2) denoising of the data to perform functional connectivity analysis. We used the SPM12 toolbox (running on MATLAB 8.3 R2014a) to perform functional data pre-processing. Functional images were corrected for acquisition time and spatially realigned to the mean image to correct for interscan head motions. The structural T1-weighted image was co-registered to the mean functional image. Functional, gray matter, white matter and cerebrospinal fluid (CSF) images were spatially normalized to the MNI template using new unified normalization-segmentation. Additionally, we identified outlier scans with a frame-wise displacement above 0.5 mm using Artifact Detection Toolbox (ART). Two participants were excluded from further analysis due to excessive head motion (more than 10 outlier scans); thus, the final sample consisted of 33 subjects (17 females; mean age 22.7 ± 3.2; range 19–31 years).\n\nWe used CONN Functional Connectivity Toolbox v.15.f to perform the denoising of the functional time series and to create pairwise correlation matrices. This toolbox implements the anatomical component correction (aCompCor) strategy to estimate and remove physiological noise. Principal components of subject-specific white matter, CSF, six rigid-body movement parameters and outlier scans were removed by means of covariate regression analysis. Separate block regressors for each task condition convolved with canonical hemodynamic response function and their first-derivative terms were included. The resulting time series were filtered using a 0.008 Hz high-pass filter to remove low-frequency drift. To preserve potentially valuable task-relevant information from higher frequency bands, we did not apply low-pass filter.\n\nMeasure of n-Back Performance\n\nIn this study, we used a measure of performance introduced by Ginestet and Simmons (2011) called penalized reaction time (pRT). For every subject and task condition, pRT was defined such that the penalty for an incorrect answer or no answer is equal to the maximum possible time to respond (2,000 ms).\n\nBehavioral Performance\n\nParticipants showed a higher pRT in the 2-back (mean 833.2 ms, SD 202.9 ms) than in the 1-back condition (mean 681.7 ms, SD 157.5 ms), confirming that the 2-back task condition was more cognitively demanding. We observed no significant difference between the 1-back and 2-back conditions in the number of outlier scans."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 84,
+            "end": 97,
+            "text": "Karolina Finc",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 82,
+            "text": "Transition of the Functional Brain Network Related to Increasing Cognitive Demands",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 288,
+            "end": 292,
+            "text": "2017",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 254,
+            "end": 273,
+            "text": "Human Brain Mapping",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 236,
+            "end": 253,
+            "text": "10.1002/hbm.23621",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1873,
+            "end": 1899,
+            "text": "GE Discovery MR750 3 Tesla",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2319,
+            "end": 2342,
+            "text": "42 axial oblique slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2211,
+            "end": 2223,
+            "text": "3 × 3 × 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2163,
+            "end": 2173,
+            "text": "90 degrees",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2225,
+            "end": 2231,
+            "text": "no gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2304,
+            "end": 2314,
+            "text": "5 min 20 s",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2136,
+            "end": 2148,
+            "text": "FOV = 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2109,
+            "end": 2122,
+            "text": "TR = 2,000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2124,
+            "end": 2134,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2211,
+            "end": 2223,
+            "text": "3 × 3 × 3 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3600,
+            "end": 3637,
+            "text": "final sample consisted of 33 subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2881,
+            "end": 2886,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1047,
+            "end": 1065,
+            "text": "visual n-back task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1437,
+            "end": 1494,
+            "text": "10 blocks (30 s per block; 12 trials with 25% of targets)",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1275,
+            "end": 1315,
+            "text": "The presentation of each letter (500 ms)",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1334,
+            "end": 1359,
+            "text": "fixation cross (1,500 ms)",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1448,
+            "end": 1462,
+            "text": "30 s per block",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1609,
+            "end": 1657,
+            "text": "The participants had 2,000 ms for each response.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1139,
+            "end": 1185,
+            "text": "first five letters of the Roman alphabet (A–E)",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1479,
+            "end": 1493,
+            "text": "25% of targets",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1260,
+            "end": 1273,
+            "text": "1- and 2-back",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 314,
+            "end": 344,
+            "text": "Thirty-five healthy volunteers",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 346,
+            "end": 356,
+            "text": "17 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 358,
+            "end": 396,
+            "text": "mean age 22.6 ± 3.1; range 19–31 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 477,
+            "end": 489,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 561,
+            "end": 619,
+            "text": "without a history of neurological or psychiatric disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3478,
+            "end": 3508,
+            "text": "Two participants were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3600,
+            "end": 3637,
+            "text": "final sample consisted of 33 subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 783,
+            "end": 945,
+            "text": "ethical approval for the study was obtained from the Ethics Committee of the Nicolaus Copernicus University Ludwik Rydygier Collegium Medicum in Bydgoszcz, Poland",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4647,
+            "end": 4676,
+            "text": "penalized reaction time (pRT)",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2992,
+            "end": 3022,
+            "text": "corrected for acquisition time",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2881,
+            "end": 2886,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2992,
+            "end": 3022,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3027,
+            "end": 3064,
+            "text": "spatially realigned to the mean image",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2881,
+            "end": 2886,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3027,
+            "end": 3064,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3141,
+            "end": 3183,
+            "text": "co-registered to the mean functional image",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2881,
+            "end": 2886,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3141,
+            "end": 3183,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3265,
+            "end": 3350,
+            "text": "MNI template",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2881,
+            "end": 2886,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3265,
+            "end": 3299,
+            "text": "unified normalization-segmentation",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3265,
+            "end": 3350,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3401,
+            "end": 3437,
+            "text": "frame-wise displacement above 0.5 mm",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3444,
+            "end": 3476,
+            "text": "Artifact Detection Toolbox (ART)",
+            "labels": [
+              "Exclusion — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3444,
+            "end": 3476,
+            "text": "5",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Exclusion — Algorithm"
+          ]
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3873,
+            "end": 3915,
+            "text": "aCompCor",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3701,
+            "end": 3744,
+            "text": "CONN Functional Connectivity Toolbox v.15.f",
+            "labels": [
+              "aCompCor — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3873,
+            "end": 3915,
+            "text": "6",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "aCompCor — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4029,
+            "end": 4063,
+            "text": "six rigid-body movement parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3701,
+            "end": 3744,
+            "text": "CONN Functional Connectivity Toolbox v.15.f",
+            "labels": [
+              "motion regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4029,
+            "end": 4063,
+            "text": "7",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Type",
+            "motion regression — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4068,
+            "end": 4081,
+            "text": "outlier scans",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3444,
+            "end": 3476,
+            "text": "Artifact Detection Toolbox (ART)",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4068,
+            "end": 4081,
+            "text": "8",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4339,
+            "end": 4348,
+            "text": "high-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4339,
+            "end": 4364,
+            "text": "0.008 Hz high-pass filter",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4339,
+            "end": 4364,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software",
+            "Temporal filt — Algorithm"
+          ]
+        }
+      ]
+    }
+  ]
+}

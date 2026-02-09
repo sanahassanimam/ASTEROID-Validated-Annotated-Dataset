@@ -1,0 +1,407 @@
+{
+  "data": {
+    "text": "2.4 Definition of network nodes\nIn this study, a group of regions of interest (ROIs) across the entire brain was used as brain network nodes to analyze the whole brain function (Poldrack, 2007). Specifically, we used the 264 ROIs identified by combining meta-analyses with functional connectivity mapping, spanning the cerebral cortex, subcortical structures, and the cerebellum (Power et al., 2011). For each of the seven task states, the 264 ROIs were assigned to either Act or L-Act regions depending on the activation map.\n\n2.5 Definitions of functional connectivity network\nFunctional networks were then defined by assessing the functional connection strength between node pairs. Two steps were adopted to construct the connectivity matrix. First, the averaged time series for each ROI was regressed out of the mean task activity (Cole et al., 2013); then, the connection strength for each node pair was calculated using the corrcoef function in MATLAB (version 2012a, Mathworks Inc.), which was shown to yield a similar result to the psycho-physiological interaction method (Cole, Yang, Murray, Repovs, & Anticevic, 2016); finally, a Fisher’s z-transform was performed. For the averaged dataset, the connection strength was obtained by averaging the Fisher z-transform of the correlation coefficients for the LR and RL data from each subject (Smith et al., 2013). Because the interpretation of negative connections remains controversial (Murphy, Birn, Handwerker, Jones, & Bandettini, 2009), in this study the negative connections were set to 0 (Liu et al., 2016; Sheffield et al., 2015). Second, the connection matrix for each subject was thresholded and binarized to have different densities (5%, 10% and 15%) (Bullmore & Sporns, 2009; Rubinov & Sporns, 2010; van Wijk, Stam, & Daffertshofer, 2010) to address the effects of different connectivity densities. In this manuscript, we only present the results from using a density of 15%, with the other results presented in the Supporting information.\n\n2.6 Definitions of network interaction, fractional modularity, and efficiency\nThree measurements were used to evaluate the segregations and integrations of the two classes of regions, the activated regions (Act) and less-activated regions (L-Act), where the whole brain = Act ∪ L-Act. First, the interaction strength was defined to assess the integration and segregation between the Act and L-Act regions (Liu et al., 2016; Zuo et al., 2012), as in the following Equation 1.\nSecond, a modularity index, Q, was used to characterize the tendency of a network to approach modularity (Blondel, Guillaume, Lambiotte, & Lefebvre, 2008; Newman & Girvan, 2004). The modularity index is defined as in Equation 2. In this study, the default resolution parameter γ = 1 was adopted when applying the generalized Louvain method (http://netwiki.amath.unc.edu/GenLouvain/GenLouvain) (Mucha, Richardson, Macon, Porter, & Onnela, 2010). Moreover, to reduce the bias of random walking while optimizing the modularity, we repeated the solution 100 times, and the partition associated with the largest modularity index was selected as the final partition scheme (Vatansever et al., 2015).\nThird, the global efficiency of network A is defined as follows (Achard & Bullmore, 2007; Latora & Marchiori, 2003). The network efficiency was computed using open-access software developed by our group (https://www.nitrc.org/projects/brat).\n\n2.7 Measurements of the network flexibility from resting to task states\nFor a closer look at which nodes or subnetworks make the most contributions to the network dynamics, the participation coefficient (PC) (Guimera & Nunes Amaral, 2005) was utilized to measure the participant intensity of each functional node or subnetwork during mental state changes. The flexibility was defined as Fk = PCik − PCjk, where i and j indicate two mental states, that is, a task and the resting state, for a specific node k. The subnetworks defined by Power et al. (2011) were used, and the individual subnetwork flexibility was examined by averaging the flexibility of the nodes composing the subnetwork. Ten of 13 subnetworks were included in our study, because the other three subnetworks do not have specific and determined functional roles (Cole et al., 2013; Vatansever et al., 2015).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 217,
+            "end": 304,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 217,
+            "end": 304,
+            "text": "the 264 ROIs identified by combining meta-analyses with functional connectivity mapping",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 217,
+            "end": 304,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 217,
+            "end": 304,
+            "text": "the 264 ROIs identified by combining meta-analyses with functional connectivity mapping",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 753,
+            "end": 834,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 753,
+            "end": 834,
+            "text": "the averaged time series for each ROI was regressed out of the mean task activity",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 930,
+            "end": 989,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 930,
+            "end": 989,
+            "text": "corrcoef function in MATLAB (version 2012a, Mathworks Inc.)",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 930,
+            "end": 989,
+            "text": "corrcoef function in MATLAB (version 2012a, Mathworks Inc.)",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1140,
+            "end": 1174,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1140,
+            "end": 1174,
+            "text": "Fisher’s z-transform was performed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1512,
+            "end": 1550,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1512,
+            "end": 1550,
+            "text": "the negative connections were set to 0",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1646,
+            "end": 1717,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1646,
+            "end": 1717,
+            "text": "thresholded and binarized to have different densities (5%, 10% and 15%)",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1680,
+            "end": 1717,
+            "text": "different densities (5%, 10% and 15%)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2301,
+            "end": 2413,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2301,
+            "end": 2413,
+            "text": "the interaction strength was defined to assess the integration and segregation between the Act and L-Act regions",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2492,
+            "end": 2588,
+            "text": "a modularity index, Q, was used to characterize the tendency of a network to approach modularity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2797,
+            "end": 2876,
+            "text": "generalized Louvain method (http://netwiki.amath.unc.edu/GenLouvain/GenLouvain)",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3185,
+            "end": 3241,
+            "text": "the global efficiency of network A is defined as follows",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3337,
+            "end": 3418,
+            "text": "open-access software developed by our group (https://www.nitrc.org/projects/brat)",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3930,
+            "end": 3986,
+            "text": "9",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3930,
+            "end": 3986,
+            "text": "The subnetworks defined by Power et al. (2011) were used",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3930,
+            "end": 3986,
+            "text": "The subnetworks defined by Power et al. (2011) were used",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1202,
+            "end": 1347,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1202,
+            "end": 1347,
+            "text": "the connection strength was obtained by averaging the Fisher z-transform of the correlation coefficients for the LR and RL data from each subject",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1202,
+            "end": 1347,
+            "text": "the connection strength was obtained by averaging the Fisher z-transform of the correlation coefficients for the LR and RL data from each subject",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

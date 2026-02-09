@@ -1,0 +1,390 @@
+{
+  "data": {
+    "text": "2.4. Brain network construction\nOur analysis pipeline is shown in Fig. 1. A large-scale brain network consists of a finite set of nodes (e.g., single neurons or anatomical brain regions) that are connected by edges (e.g., structural or functional connections between nodes). We specified the nodes by parceling the brain into seven systems/networks consisting of 200 cortical regions of interest (ROIs) from the Schaefer-Yeo atlas (Schaefer et al., 2018). In this atlas, each node is preassigned to one of the following systems/networks: visual, somatomotor, dorsal attention, salience/ventral attention, limbic, frontoparietal, or default mode. Then, the average BOLD time series across all voxels within each ROI were extracted separately. The connectivity between each pair of ROIs was then computed using Pearson’s correlation coefficient. The correlation values were converted into z-values using Fisher’s r-to-z transformation to improve normality. At this stage, a symmetrical weighted connectivity matrix (adjacency matrix) with a size of 200 × 200 was constructed for each participant.\n\nTo reduce the number of spurious connections in the fully weighted matrices, we adopted a thresholding procedure based on network density to preserve the ratios of the strongest connections and remove the weaker links. This procedure leads to equal network density across all participants (i.e., an equal number of edges), which is crucial for comparing network topology within or between participants. The sparsity threshold used in this study ranged from 0.05 to 0.5 with an interval of 0.05 to prevent the creation of either disconnected or densely connected networks. This step was followed by binarizing the thresholded matrices to render the computational complexity more tractable. We used the absolute value of all correlations in weighted matrices for binarization. In this study, we used both the weighted and binary matrices depending on the type of analysis (i.e., global, mesoscale, local, or hub analysis).\n\n2.5. Computation of graph measures\n2.5.1. Global and local metrics\nUsing binary undirected matrices, we examined the topological features of functional brain networks for each subject across a range of cost thresholds at the global and local levels with the brain connectivity toolbox (BCT; Rubinov and Sporns, 2010) and the GRETNA toolkit (Wang et al., 2015). Global metrics principally measure the functional segregation and integration of brain networks. Thus, we calculated global efficiency, mean clustering coefficient, characteristic path length, small-worldness, assortativity, and synchronization. Local network measures were calculated separately for each node (region) by examining the nodal centrality and density of network hubs (i.e., nodes with more than the average number of links). Hubs can be classified as either provincial or connector, which contain mostly local connections within a module or both local and long-range links that connect nodes in different modules, respectively. We calculated the most common local properties, including degree centrality, betweenness centrality, nodal clustering coefficient, nodal efficiency, and participation coefficient.\n\n2.5.2. Mesoscale metrics\nWe utilized a multi-layer (or multi-slice) community detection algorithm (Mucha et al., 2010) to explore the modular structure of the resting-state brain networks across individuals. Each layer corresponds to an individual’s functional connectivity matrix (weighted matrix). The multi-layer modularity function Q is initialized with two crucial parameters, structural resolution γ and interlayer coupling ω, which tune the size of modules within each layer and the number of modules across layers, respectively. In this study, we formed a 2D discrete parameter space (γ ∈ [0.5, 1.5] with a step size of 0.05; ω ∈ [0, 1] with a step size of 0.05), performed the modularity maximization procedure for all (γ, ω) combinations, and selected the parameter values with the highest Q, which resulted in γ = 1.2 and ω = 0.1. In each run, the multi-layer modularity function outputs the community labels in addition to Q, which are used to create the module allegiance matrix. Based on the module allegiance matrix, we computed two network coefficients at the mesoscale, called recruitment and integration (Bassett et al., 2015), to compare community structure between the target populations.\n\n2.6. Statistical tests\nFor global and local analyses, we applied a non-parametric permutation test (p-values were estimated from 30,000 permutations of group labels) in a mixed-design ANOVA to compare mean differences between groups in which the within-subjects factor represented time of day and the between-subjects factor represented chronotype. For mesoscale and correlation analyses, we used one-way permutation tests to examine the difference between sessions and to detect correlations’ significance, respectively. A false discovery rate (FDR) correction was applied to all statistical tests (Benjamini and Hochberg, 1995).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 326,
+            "end": 430,
+            "text": "seven systems/networks consisting of 200 cortical regions of interest (ROIs) from the Schaefer-Yeo atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 326,
+            "end": 430,
+            "text": "seven systems/networks consisting of 200 cortical regions of interest (ROIs) from the Schaefer-Yeo atlas",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 652,
+            "end": 740,
+            "text": "the average BOLD time series across all voxels within each ROI were extracted separately",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 742,
+            "end": 843,
+            "text": "The connectivity between each pair of ROIs was then computed using Pearson’s correlation coefficient.",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 844,
+            "end": 932,
+            "text": "The correlation values were converted into z-values using Fisher’s r-to-z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1173,
+            "end": 1314,
+            "text": "we adopted a thresholding procedure based on network density to preserve the ratios of the strongest connections and remove the weaker links.",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1499,
+            "end": 1589,
+            "text": "The sparsity threshold used in this study ranged from 0.05 to 0.5 with an interval of 0.05",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1668,
+            "end": 1784,
+            "text": "This step was followed by binarizing the thresholded matrices to render the computational complexity more tractable.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1785,
+            "end": 1870,
+            "text": "We used the absolute value of all correlations in weighted matrices for binarization.",
+            "labels": [
+              "Negative correlation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2267,
+            "end": 2378,
+            "text": "with the brain connectivity toolbox (BCT; Rubinov and Sporns, 2010) and the GRETNA toolkit (Wang et al., 2015).",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2476,
+            "end": 2624,
+            "text": "Thus, we calculated global efficiency, mean clustering coefficient, characteristic path length, small-worldness, assortativity, and synchronization.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3021,
+            "end": 3200,
+            "text": "We calculated the most common local properties, including degree centrality, betweenness centrality, nodal clustering coefficient, nodal efficiency, and participation coefficient.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3227,
+            "end": 3409,
+            "text": "We utilized a multi-layer (or multi-slice) community detection algorithm (Mucha et al., 2010) to explore the modular structure of the resting-state brain networks across individuals.",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4005,
+            "end": 4043,
+            "text": "which resulted in γ = 1.2 and ω = 0.1.",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4466,
+            "end": 4601,
+            "text": "we applied a non-parametric permutation test (p-values were estimated from 30,000 permutations of group labels) in a mixed-design ANOVA",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 326,
+            "end": 430,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 326,
+            "end": 430,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 652,
+            "end": 740,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 742,
+            "end": 843,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 844,
+            "end": 932,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1173,
+            "end": 1314,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1668,
+            "end": 1784,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1785,
+            "end": 1870,
+            "text": "8",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2476,
+            "end": 2624,
+            "text": "9",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3227,
+            "end": 3409,
+            "text": "10",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4466,
+            "end": 4601,
+            "text": "11",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        }
+      ]
+    }
+  ]
+}

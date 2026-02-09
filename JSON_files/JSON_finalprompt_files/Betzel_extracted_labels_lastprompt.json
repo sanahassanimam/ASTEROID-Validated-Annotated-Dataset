@@ -1,0 +1,882 @@
+{
+  "data": {
+    "text": "Temporal fluctuations in the brain’s modular architecture during \nmovie-watching\nRichard F. Betzel1,2,3,4,*\n, Lisa Byrge1, Farnaz Zamani Esfahlani1, Daniel P. Kennedy1,2,3\n\nNeuroimage. 2020 June ; 213: 116687. doi:10.1016/j.neuroimage.2020.116687.\n\nCODE AVAILABILITY\nAll data and code are available from the authors upon reasonable request.\n\nDemographics\nWe analyzed MRI data collected from Ns = 29 subjects (5 female, 24 male; 25 were right-handed). This cohort was male-dominant, as subjects were intended to serve as controls for a study in autism spectrum disorder, which is more common in men than women. At the time of their first scan, the average subject age was 24.9±4.7 years.\n\nMRI acquisition and processing\nMRI images were acquired using a 3T whole-body MRI system (Magnetom Tim Trio, Siemens Medical Solutions, Natick, MA) with a 32-channel head receive array. Both raw and prescan-normalized images were acquired; raw images were used at all preprocessing stages and in all analyses unless specifically noted. During functional scans, T2*-weighted multiband echo planar imaging (EPI) data were acquired using the following parameters: TR/TE = 813/28 ms; 1200 vol; flip angle = 60°; 3.4 mm isotropic voxels; 42 slices acquired with interleaved order covering the whole brain; multi-band acceleration factor of 3. Preceding the first functional scan, gradient-echo EPI images were acquired in opposite phase-encoding directions (10 images each with P-A and A-P phase encoding) with identical geometry to the EPI data (TR/TE = 1175/39.2 ms, flip angle = 60°) to be used to generate a fieldmap to correct EPI distortions, similar to the approach used by the Human Connectome Project [99]. High-resolution T1-weighted images of the whole brain (MPRAGE, 0.7 mm isotropic voxel size; TR/TE/TI = 2499/2.3/1000 ms) were acquired as anatomical references.\n\nAll functional data were processed according to an in-house pipeline using FEAT (v6.00) and MELODIC (v3.14) within FSL (v. 5.0.9; FMRIB’s Software Library, www.fmrib.ox.ac.uk/fsl), Advanced Normalization Tools (ANTs; v2.1.0) [100], and Matlab R2014b. This pipeline was identical to the GLM + MGTR procedure described in [88].\n\nIn more detail, individual anatomical images were bias-corrected and skull-stripped using ANTs, and segmented into gray matter, white matter, and CSF partial volume estimates using FSL FAST. A midspace template was constructed using ANTs’ buildtemplateparallel and subsequently skull-stripped. Composite (affine and diffeomorphic) transforms warping each individual anatomical image to this midspace template, and warping the midspace template to the Montreal Neurological Institute MNI152 1mm reference template, were obtained using ANTs.\n\nFor each functional run, the first five volumes (≈4 seconds) were discarded to minimize magnetization equilibration effects. Framewise displacement traces for this raw (trimmed) data were computed using fsl_motion_outliers. Following [88, 101], we performed FIX followed by mean cortical signal regression. This procedure included rigid-body motion correction, fieldmap-based geometric distortion correction, and non-brain removal (but not slice-timing correction due to fast TR [99]). Preprocessing included weak highpass temporal filtering (>2000 s FWHM) to remove slow drifts [99] and no spatial smoothing. Off-resonance geometric distortions in EPI data were corrected using a fieldmap derived from two gradient-echo EPI images collected in opposite phase-encoding directions (posterior-anterior and anterior-posterior) using FSL topup.\n\nWe then used FSL-FIX to regress out independent components classified as noise using a classifier trained on independent but similar data and validated on hand-classified functional runs. The residuals were regarded as “cleaned” data. Finally, we regressed out the mean cortical signal (mean BOLD signal across gray matter partial volume estimate obtained from FSL FAST). All analyses were carried out on these data, which were registered to subjects’ skull-stripped T1-weighted anatomical imaging using Boundary-Based Registration (BBR) with epi_reg within FSL. Subjects’ functional images were then transformed to the MNI152 reference in a single step, using ANTS to apply a concatenation of the affine transformation matrix with the composite (affine + diffeomorphic) transforms between a subject’s anatomical image, the midspace template, and the MNI152 reference. Prior to network analysis, we extracted mean regional time series from regions of interest defined as sub-divisions of the 17-system parcellation reported in [11] and used previously [83, 103, 104].\n\nNaturalistic stimuli\nAll movies were obtained from Vimeo (https://vimeo.com). They were selected based on multiple criteria. First, to ensure that movies represented novel stimuli, we excluded any movie that had a wide theatrical release. Secondly, we excluded movies with potentially objectionable content including nudity, swearing, drug use, etc. Lastly, we excluded movies with intentionally startling events that could lead to excessive in-scanner movement.\nEach movie lasted between 45 and 285 seconds (approximately 1 to 5 minutes). Each movie scan comprised between four and six movies with genres that included documentaries, dramas, comedies, sports, mystery, and adventure. See Table. S1 for more details.\n\nConnectivity measures\nTime-averaged FC—Let xi = [xi(1), …, xi(T)] be the vector of activity for region i. We calculated time-averaged FC as the Pearson correlation of activity recorded in region i and j. All correlation coefficients were subsequently Fisher transformed.\nIn addition to time-averaged FC, we also calculated time-varying FC using a sliding window approach. This involves defining a window length of L (in units of TRs) and computing FC using samples within that window only."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 80,
+            "text": "Temporal fluctuations in the brain’s modular architecture during \nmovie-watching",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 81,
+            "end": 98,
+            "text": "Richard F. Betzel",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 185,
+            "end": 194,
+            "text": "2020 June",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 173,
+            "end": 184,
+            "text": "Neuroimage.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 214,
+            "end": 246,
+            "text": "10.1016/j.neuroimage.2020.116687",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "Missing_sublabels": [
+            "Summary"
+          ]
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 267,
+            "end": 340,
+            "text": "All data and code are available from the authors upon reasonable request.",
+            "labels": [
+              "Data"
+            ]
+          },
+          "Missing_sublabels": [
+            "Full-text",
+            "Code",
+            "Preregistered",
+            "Remarks"
+          ]
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 267,
+            "end": 340,
+            "text": "All data and code are available from the authors upon reasonable request.",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 391,
+            "end": 407,
+            "text": "Ns = 29 subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 409,
+            "end": 426,
+            "text": "5 female, 24 male",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 428,
+            "end": 448,
+            "text": "25 were right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 647,
+            "end": 685,
+            "text": "average subject age was 24.9±4.7 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "Missing_sublabels": [
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 778,
+            "end": 834,
+            "text": "Magnetom Tim Trio, Siemens Medical Solutions, Natick, MA",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1157,
+            "end": 1160,
+            "text": "813",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1161,
+            "end": 1163,
+            "text": "28",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1221,
+            "end": 1230,
+            "text": "42 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1178,
+            "end": 1194,
+            "text": "flip angle = 60°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1196,
+            "end": 1219,
+            "text": "3.4 mm isotropic voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)",
+            "Slice thickness",
+            "Inter-slice gap",
+            "Duration (s)",
+            "Eyes open/closed",
+            "Field of View (cm)"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 391,
+            "end": 407,
+            "text": "Ns = 29 subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1936,
+            "end": 2015,
+            "text": "FEAT (v6.00) and MELODIC (v3.14) within FSL (v. 5.0.9; FMRIB’s Software Library",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 66,
+            "end": 80,
+            "text": "movie-watching",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5214,
+            "end": 5233,
+            "text": "four and six movies",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5121,
+            "end": 5147,
+            "text": "between 45 and 285 seconds",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "Missing_sublabels": [
+            "ISI distribution",
+            "Length of blocks",
+            "Efficiency optimization",
+            "Block/event correlation"
+          ]
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4661,
+            "end": 4717,
+            "text": "All movies were obtained from Vimeo (https://vimeo.com).",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "Missing_sublabels": [
+            "Instructions",
+            "Stimuli repetition"
+          ]
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2238,
+            "end": 2239,
+            "text": "1",
+            "labels": [
+              "INU correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "INU correction — Algorithm",
+            "INU correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2238,
+            "end": 2282,
+            "text": "bias-corrected and skull-stripped using ANTs",
+            "labels": [
+              "INU correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2238,
+            "end": 2239,
+            "text": "2",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Skull stripping — Algorithm",
+            "Skull stripping — Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2238,
+            "end": 2282,
+            "text": "bias-corrected and skull-stripped using ANTs",
+            "labels": [
+              "Skull stripping — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2363,
+            "end": 2364,
+            "text": "3",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Algorithm",
+            "Segmentation — Parameters"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2363,
+            "end": 2377,
+            "text": "using FSL FAST",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2639,
+            "end": 2640,
+            "text": "4",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization — Algorithm",
+            "Spatial normalization — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2639,
+            "end": 2700,
+            "text": "Montreal Neurological Institute MNI152 1mm reference template",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2754,
+            "end": 2755,
+            "text": "5",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2754,
+            "end": 2804,
+            "text": "the first five volumes (≈4 seconds) were discarded",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2758,
+            "end": 2789,
+            "text": "first five volumes (≈4 seconds)",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3584,
+            "end": 3585,
+            "text": "6",
+            "labels": [
+              "ICA FIX — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "ICA FIX — Parameters"
+          ]
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3584,
+            "end": 3591,
+            "text": "FSL-FIX",
+            "labels": [
+              "ICA FIX — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3595,
+            "end": 3649,
+            "text": "regress out independent components classified as noise",
+            "labels": [
+              "ICA FIX — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3836,
+            "end": 3837,
+            "text": "7",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Global signal — Parameters"
+          ]
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3836,
+            "end": 3941,
+            "text": "mean cortical signal (mean BOLD signal across gray matter partial volume estimate obtained from FSL FAST)",
+            "labels": [
+              "Global signal — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3818,
+            "end": 3856,
+            "text": "regressed out the mean cortical signal",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3060,
+            "end": 3061,
+            "text": "8",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3060,
+            "end": 3088,
+            "text": "rigid-body motion correction",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3090,
+            "end": 3091,
+            "text": "9",
+            "labels": [
+              "Field map correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Field map correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3090,
+            "end": 3136,
+            "text": "fieldmap-based geometric distortion correction",
+            "labels": [
+              "Field map correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3559,
+            "end": 3568,
+            "text": "FSL topup",
+            "labels": [
+              "Field map correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3142,
+            "end": 3144,
+            "text": "10",
+            "labels": [
+              "Skull extraction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Skull extraction — Algorithm",
+            "Skull extraction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3142,
+            "end": 3159,
+            "text": "non-brain removal",
+            "labels": [
+              "Skull extraction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3243,
+            "end": 3245,
+            "text": "11",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": []
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3243,
+            "end": 3270,
+            "text": "highpass temporal filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3272,
+            "end": 3284,
+            "text": ">2000 s FWHM",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "BBR crossmodal registration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4075,
+            "end": 4077,
+            "text": "12",
+            "labels": [
+              "BBR crossmodal registration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "BBR crossmodal registration — Algorithm",
+            "BBR crossmodal registration — Parameters"
+          ]
+        },
+        {
+          "from_name": "BBR crossmodal registration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4075,
+            "end": 4132,
+            "text": "Boundary-Based Registration (BBR) with epi_reg within FSL",
+            "labels": [
+              "BBR crossmodal registration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4172,
+            "end": 4174,
+            "text": "13",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Algorithm",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4172,
+            "end": 4236,
+            "text": "transformed to the MNI152 reference in a single step, using ANTS",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4470,
+            "end": 4472,
+            "text": "14",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": []
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4470,
+            "end": 4505,
+            "text": "extracted mean regional time series",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4542,
+            "end": 4585,
+            "text": "sub-divisions of the 17-system parcellation",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4563,
+            "end": 4602,
+            "text": "17-system parcellation reported in [11]",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5464,
+            "end": 5561,
+            "text": "We calculated time-averaged FC as the Pearson correlation of activity recorded in region i and j.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5562,
+            "end": 5628,
+            "text": "All correlation coefficients were subsequently Fisher transformed.",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Algorithm",
+            "ROI definition",
+            "Time series ROI",
+            "Combine block",
+            "Connectivity normalization — Parameters",
+            "Network definition",
+            "Graph characteristics",
+            "Negative correlation",
+            "Sparsity control",
+            "Graph measures",
+            "Result aggregation"
+          ]
+        }
+      ]
+    }
+  ]
+}

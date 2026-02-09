@@ -1,0 +1,953 @@
+{
+  "data": {
+    "text": "Smooth graph learning for functional connectivity estimation\n\nSiyuan Gaoa,*, Xinyue Xiab,*, Dustin Scheinosta,c,d,e, Gal Mishneb,f,g\n\nNeuroimage. 2021 October 01; 239: 118289. doi:10.1016/j.neuroimage.2021.118289.\n\nNeuroimage. Author manuscript; available in PMC 2021 November 23.\n\nFunctional connectivity (FC) estimated from functional magnetic resonance imaging (fMRI) signals is important in understanding neural representation and information processing in cortical networks. However, due to a lack of “ground truth” FC pattern, the reliability and robustness of FC estimates are usually examined in downstream FC analysis tasks, such as performing participant’s identification (also known as “fingerprinting”). In this paper, we propose to learn FC via a smooth graph learning framework. In particular, we treat each time frame of the fMRI time series as a graph signal on an underlying functional brain graph, and estimate the smooth graph functional connectivity (SGFC) by learning the weighted graph adjacency matrix based on graph signal smoothness assumption.\n\nDataset—We applied all algorithms (see Competing methods below) to the Human Connectome Project (HCP) 900 Subject Release (Van Essen et al., 2013). These data releases were the only releases available at the time that this work began. From this dataset, we restricted our analyses to those individuals who participated in all nine fMRI conditions (7 task, 2 rest), whose mean frame-to-frame displacement was less than 0.1mm and whose maximum frame-to-frame displacement was less than 0.15mm, and for whom fluid intelligence measures were available (n = 506; 237 males; ages 22–37).\n\nfMRI processing—The HCP minimal preprocessing pipeline was used (Glasser et al., 2013), which included artifact removal, motion correction, and registration to standard space. All subsequent preprocessing was performed using image analysis tools available in BioImage Suite and included standard preprocessing procedures (Finn et al., 2015). Several covariates of no interest were regressed from the data including linear and quadratic drifts, mean cerebral-spinal-fluid (CSF) signal, mean white-matter signal, and mean gray matter signal. For additional control of possible motion-related confounds, a 24-parameter motion model (including six rigid-body motion parameters, six temporal derivatives, and these terms squared) was regressed from the data. The data were temporally smoothed with a Gaussian filter (approximate cutoff frequency=0.12Hz). Mean frame-to-frame displacement yielded seven motion values per subject, which were used for subject exclusion and motion analyses. fMRI data were parcellated into 268 nodes using a whole-brain functional atlas defined in a separate sample (Shen et al., 2013). These ‘raw’ time series were then used to generate functional connectivity based on different methods, and no regression of task-evoked activity was performed. The global mean was not regressed from the data. However, we also discuss the influence of global signal regression in the supplementary materials (Figure S4)\n\nPearson correlation-based functional connectivity—Pearson correlation matrices were generated for both the LR and RL phase encoding runs in the HCP data, resulting in two 268×268 connectivity matrices per individual per task condition.\n\nPhenotypic measure—In the HCP dataset, a 24-item version of the Penn Progressive Matrices test—a measure of fluid intelligence—was used as the phenotypic measure for prediction.\n\nData availability—The HCP data used in this study are publicly available from the ConnectomeDB database (https://db.humanconnectome.org). MATLAB scripts to run the SGFC analyses can be found at (https://github.com/carricky/graph_learning_FC).\n\nfMRI data were parcellated into 268 nodes using a whole-brain functional atlas defined in a separate sample (Shen et al., 2013). These 'raw' time series were then used to generate functional connectivity based on different methods, and no regression of task-evoked activity was performed.\n\nPearson correlation matrices were generated for both the LR and RL phase encoding runs in the HCP data, resulting in two 268 × 268 connectivity matrices per individual per task condition. Nine nodes (node index: {249, 239, 243, 129, 266, 109, 115, 118, 250}) which had missing coverage during any individual's scan were excluded from all individuals. These matrices were used to perform fingerprinting or generate cross-validated predictive models of fluid intelligence.\n\nMoreover, as the CFC, by nature, is fully connected, signed, and weighted, the graph often needs to be thresholded or binarized before one can use graph-theoretic analysis. The thresholding is normally done by setting absolute (correlation-based) or proportional (sparsity-based) thresholds (Garrison et al., 2015).\n\nAdditionally, how to interpret the negative correlations when global signal regression (GSR) is performed remains a topic of debate (Fox et al., 2009; Murphy et al., 2009; Murphy and Fox, 2017; Saad et al., 2012). The negative edge weights can be converted to the absolute values or simply ignored, and different choices might lead to different graph properties.\n\nCommon measures of network organizations including average clustering coefficient, characteristic path length, global efficiency, assortativity and modularity were computed using the Brain Connectivity Toolbox (see Rubinov and Sporns (2010) for detailed description), and are presented in the main text and supplementary. In addition to these common measures, we also computed the small world propensity (SWP; Muldoon et al. (2016)), which quantifies the extent to which a network displays the structure of small-worldness, an important property that is ubiquitous across many real-world networks.\n\nCFCs were also sparsified to match the sparsity level of the subject's corresponding log-penalized graph. The sparsification was done by retaining the edges with the top absolute value of edge weights."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 62,
+            "end": 132,
+            "text": "Siyuan Gaoa,*, Xinyue Xiab,*, Dustin Scheinosta,c,d,e, Gal Mishneb,f,g",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 60,
+            "text": "Smooth graph learning for functional connectivity estimation",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 146,
+            "end": 150,
+            "text": "2021",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 134,
+            "end": 144,
+            "text": "Neuroimage",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 180,
+            "end": 212,
+            "text": "10.1016/j.neuroimage.2021.118289",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 731,
+            "end": 792,
+            "text": "we propose to learn FC via a smooth graph learning framework.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 246,
+            "end": 280,
+            "text": "available in PMC 2021 November 23.",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3556,
+            "end": 3605,
+            "text": "publicly available from the ConnectomeDB database",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3640,
+            "end": 3692,
+            "text": "MATLAB scripts to run the SGFC analyses can be found",
+            "labels": [
+              "Code"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1620,
+            "end": 1627,
+            "text": "n = 506",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1418,
+            "end": 1434,
+            "text": "(7 task, 2 rest)",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1913,
+            "end": 1927,
+            "text": "BioImage Suite",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1620,
+            "end": 1627,
+            "text": "n = 506",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1640,
+            "end": 1650,
+            "text": "ages 22–37",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1629,
+            "end": 1638,
+            "text": "237 males",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1442,
+            "end": 1561,
+            "text": "mean frame-to-frame displacement was less than 0.1mm and whose maximum frame-to-frame displacement was less than 0.15mm",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3418,
+            "end": 3449,
+            "text": "a measure of fluid intelligence",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1442,
+            "end": 1443,
+            "text": "1",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Type"
+          ],
+          "id": "m0018"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1442,
+            "end": 1561,
+            "text": "mean frame-to-frame displacement was less than 0.1mm and whose maximum frame-to-frame displacement was less than 0.15mm",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1674,
+            "end": 1675,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Type",
+            "Parameters"
+          ],
+          "id": "m0020"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1674,
+            "end": 1708,
+            "text": "HCP minimal preprocessing pipeline",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1775,
+            "end": 1792,
+            "text": "motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1674,
+            "end": 1675,
+            "text": "3",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Type",
+            "Parameters"
+          ],
+          "id": "m0023"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1674,
+            "end": 1708,
+            "text": "HCP minimal preprocessing pipeline",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1798,
+            "end": 1828,
+            "text": "registration to standard space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1913,
+            "end": 1914,
+            "text": "4",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0026"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1913,
+            "end": 1927,
+            "text": "BioImage Suite",
+            "labels": [
+              "Temporal detrending — Software"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2069,
+            "end": 2096,
+            "text": "linear and quadratic drifts",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1913,
+            "end": 1914,
+            "text": "5",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0029"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1913,
+            "end": 1927,
+            "text": "BioImage Suite",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2098,
+            "end": 2192,
+            "text": "mean cerebral-spinal-fluid (CSF) signal, mean white-matter signal, and mean gray matter signal",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1913,
+            "end": 1914,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ],
+          "id": "m0032"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1913,
+            "end": 1927,
+            "text": "BioImage Suite",
+            "labels": [
+              "motion regression — Software"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2257,
+            "end": 2282,
+            "text": "24-parameter motion model",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2294,
+            "end": 2377,
+            "text": "six rigid-body motion parameters, six temporal derivatives, and these terms squared",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1913,
+            "end": 1914,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ],
+          "id": "m0036"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1913,
+            "end": 1927,
+            "text": "BioImage Suite",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2422,
+            "end": 2464,
+            "text": "temporally smoothed with a Gaussian filter",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2466,
+            "end": 2501,
+            "text": "approximate cutoff frequency=0.12Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2926,
+            "end": 2927,
+            "text": "8",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0040"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2926,
+            "end": 2973,
+            "text": "The global mean was not regressed from the data",
+            "labels": [
+              "Global signal — Type"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3761,
+            "end": 3772,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0042"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3796,
+            "end": 3824,
+            "text": "whole-brain functional atlas",
+            "labels": [
+              "Atlas definition — Type"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3778,
+            "end": 3787,
+            "text": "268 nodes",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3778,
+            "end": 3787,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0045"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3778,
+            "end": 3787,
+            "text": "268 nodes",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3881,
+            "end": 3898,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0047"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3881,
+            "end": 3898,
+            "text": "'raw' time series",
+            "labels": [
+              "Time series ROI — Type"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4036,
+            "end": 4064,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0049"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4036,
+            "end": 4064,
+            "text": "Pearson correlation matrices",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4157,
+            "end": 4188,
+            "text": "268 × 268 connectivity matrices",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4860,
+            "end": 4881,
+            "text": "5",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0052"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5072,
+            "end": 5122,
+            "text": "converted to the absolute values or simply ignored",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4611,
+            "end": 4635,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0054"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4611,
+            "end": 4635,
+            "text": "thresholded or binarized",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4726,
+            "end": 4798,
+            "text": "absolute (correlation-based) or proportional (sparsity-based) thresholds",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5925,
+            "end": 5988,
+            "text": "retaining the edges with the top absolute value of edge weights",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5372,
+            "end": 5398,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ],
+          "id": "m0058"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5372,
+            "end": 5398,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5240,
+            "end": 5347,
+            "text": "average clustering coefficient, characteristic path length, global efficiency, assortativity and modularity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5570,
+            "end": 5621,
+            "text": "small world propensity (SWP; Muldoon et al. (2016))",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4544,
+            "end": 4581,
+            "text": "8",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0062"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4544,
+            "end": 4581,
+            "text": "fully connected, signed, and weighted",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0063"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,464 @@
+{
+  "data": {
+    "title": "Episodic Memory Retrieval Benefits from a Less Modular Brain Network Organization",
+    "text": "Figure 1.\nSchematic representation of cognitive task paradigm, procedure for creating task-specific timecourses and mean task-specific correlation matrices. a, Task blocks begin with the\npresentation of a task-set cue (M, R, or P) specifying which task (Memory, Reasoning, or Perception) should be performed during the following four trials. Each trial consists of a four-word array, and\nparticipants have 8 s to respond with a button press. Trials were separated by brief periods of resting fixation. After the end of each four-trial task block, a new task-set cue appears, followed by four\ntrials of the new task. b, Task-specific timecourses were created by concatenating task blocks (twenty-four 38 s blocks per task) for each node, excluding cue-period activity. In this schematic\nexample, three Reasoning task blocks were concatenated. c, Mean correlation matrices illustrate the pairwise correlations among all 264 nodes for each task, averaged across participants. The\ncolored bands along the top of each plot indicate the network membership of the 264 nodes, as specified by Power et al. (2011).\n\nTask-specific functional connectivity estimation. After the functional\ndata were preprocessed, task-specific timecourses were extracted for each\ntask and each subject from a set of 264 nodes identified in a meta-analysis\nand resting-state parcellation study by Power and colleagues (2011). To\ncreate task-specific timecourses, we excised 38 s (19 TRs) of data from\neach task block (beginning 10 s after cue onset and ending 2 s after the\noffset of the fourth trial) and concatenated these segments across the 24\nblocks of each task condition, resulting in 456 TRs of data for each task\n(Fig. 1b). We then averaged the timecourses within all voxels of each\nnode, and then correlated these mean timecourses across all pairs of\nnodes to yield a 264 (cid:3) 264 correlation matrix for each task and each\nsubject (Fig. 1c). Note that because all three tasks had identical stimulus\n\ncharacteristics and event timing parameters, functional connectivity\ndifferences between tasks are unlikely to be due to differences in\nbottom-up perceptual stimulation. However, to further protect against\nthe possibility of our graph theoretic metrics for each task being system-\natically influenced by the properties of the generic task model, we re-\ngressed out the timecourse of all task events and performed the\nfunctional connectivity analysis on the residuals. This procedure for ob-\ntaining estimates of task-dependent connectivity independent of signal\nfluctuations driven by the onset/offset of stimulus events is sometimes\nreferred to as “background connectivity” analysis (Al-Aidroos et al.,\n2012; Co´ rdova et al., 2016). The task timecourse model was specified by\nconvolving a boxcar model for all task events (with durations of 6 s for\ncues and 8 s for word arrays) with SPM8’s canonical hemodynamic\nresponse function. Although we report the findings after the task-\nrelated timecourse was regressed from the data, we note that all results\nbelow are replicated without this analysis step. To improve normality\nand facilitate statistical testing, each subject’s matrix of Pearson’s r\nvalues was Fisher-transformed before further analysis.\n\nGraph theoretic analysis. We used the Brain Connectivity Toolbox\n(RRID:SCR_004841; https://sites.google.com/site/bctnet/; Rubinov and\nSporns, 2010) to estimate several graph theoretic metrics of interest from\neach correlation matrix. The graph theory metrics were measured at a\nrange of sparsity levels for each task, ranging from a lower bound of the\ntop 4% of correlation strengths to an upper bound of the top 20% of\ncorrelation strengths, in 2% intervals (including 6, 8, 10, 12, 14, 16, and\n18%). The upper bound of 20% was selected as this was the densest graph\nwhere each task had small-worldness levels significantly (cid:4)1 for each task,\nwith small-worldness defined as normalized clustering divided by nor-\nmalized path length. The lower bound of 4% was chosen due to this being\nthe sparsest graph where small-worldness was computable for each sub-\nject and task. Clustering and path length were normalized by dividing the\nobtained metric with the average metric obtained in 10 randomly initial-\nized networks. All graph theory metrics were aggregated across the dif-\nferent sparsity thresholds by calculating the area under the curve (AUC)\nfor each metric (Bassett and Lynall, 2014).\n\nModularity (Q), which reflects how effectively community detection\nalgorithms (Fortunato, 2010) can partition the correlation matrices into\ncommunities of nodes that demonstrate primarily within-module con-\nnectivity, was calculated for all three tasks and all subjects using the\nLouvain algorithm (Blondel et al., 2008). In addition to comparing mod-\nularity across tasks, we tested our hypothesis that individual differences\nin modularity scores might be related to Memory task performance. To\nthis end, we correlated modularity with three behavioral performance\nmetrics [mnemonic discriminability (d’), hit rate, and false alarm rate].\nThe d’ measure is calculated by subtracting the false alarm rate from the\nhit rate, with both measures normalized using the inverse of the cumu-\nlative standardized normal distribution. The hit rate was defined as the\nproportion of trials containing a studied word for which the participant\ncorrectly indicated that a studied word was present (regardless of source\naccuracy). The false alarm rate was defined as the proportion of trials not\ncontaining a studied word for which the participant falsely reported rec-\nognition (with or without source details).\n\nWe directly calculated the mean correlation strength between the\nnodes of the FPCN and DMN to assess the degree to which the interac-\ntion between these two large-scale networks can be linked to global mod-\nularity levels. The average transformed correlation among all 25 FPCN\nnodes and 58 DMN nodes was computed for each task. Given the critical\nrole of the hippocampus in memory, we also examined the mean strength\nof FPCN and DMN coupling with the hippocampus, which was treated as\na network consisting of two nodes [because the 264-node parcellation\nused in our analyses did not include hippocampal nodes, we defined\nnodes in the left and right hippocampus using the Harvard–Oxford atlas\n(RRID:SCR_001476) with a probability threshold of 50%]."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 918,
+            "end": 927,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 918,
+            "end": 927,
+            "text": "264 nodes",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1367,
+            "end": 1394,
+            "text": "Power and colleagues (2011)",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1436,
+            "end": 1457,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1711,
+            "end": 1753,
+            "text": "averaged the timecourses within all voxels",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1436,
+            "end": 1457,
+            "text": "excised 38 s (19 TRs)",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1662,
+            "end": 1669,
+            "text": "456 TRs",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1576,
+            "end": 1603,
+            "text": "3",
+            "labels": [
+              "Combine block — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1576,
+            "end": 1603,
+            "text": "concatenated these segments",
+            "labels": [
+              "Combine block — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1777,
+            "end": 1810,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1777,
+            "end": 1810,
+            "text": "correlated these mean timecourses",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1848,
+            "end": 1882,
+            "text": "264 (cid:3) 264 correlation matrix",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3192,
+            "end": 3210,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3192,
+            "end": 3210,
+            "text": "Fisher-transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3555,
+            "end": 3678,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3555,
+            "end": 3678,
+            "text": "ranging from a lower bound of the\ntop 4% of correlation strengths to an upper bound of the top 20% of\ncorrelation strengths",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3680,
+            "end": 3695,
+            "text": "in 2% intervals",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3275,
+            "end": 3301,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3275,
+            "end": 3301,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3891,
+            "end": 3975,
+            "text": "small-worldness defined as normalized clustering divided by nor-\nmalized path length",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4224,
+            "end": 4258,
+            "text": "10 randomly initial-\nized networks",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3918,
+            "end": 3939,
+            "text": "normalized clustering",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4363,
+            "end": 4389,
+            "text": "8",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4363,
+            "end": 4389,
+            "text": "area under the curve (AUC)",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4435,
+            "end": 4449,
+            "text": "9",
+            "labels": [
+              "Network definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4715,
+            "end": 4732,
+            "text": "Louvain algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4435,
+            "end": 4449,
+            "text": "Modularity (Q)",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6304,
+            "end": 6324,
+            "text": "10",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6304,
+            "end": 6324,
+            "text": "Harvard–Oxford atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6350,
+            "end": 6378,
+            "text": "probability threshold of 50%",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6267,
+            "end": 6293,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6267,
+            "end": 6293,
+            "text": "left and right hippocampus",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

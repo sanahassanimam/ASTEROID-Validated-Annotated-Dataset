@@ -1,0 +1,307 @@
+{
+  "data": {
+    "title": "Key Brain Network Nodes Show Differential Cognitive Relevance and Developmental Trajectories during Childhood and Adolescence",
+    "text": "EC mapping (ECM)\n\nFollowing previous studies (Alnæs et al., 2015b; Skåtun\net al., 2016), we first created a group mask containing\ncommon voxels across all participants and sessions (n-\nback and rest). To accommodate images to EC estima-\ntion, the pre-processed and normalized n-back, resting\nstate runs and analysis mask were resampled to an iso-\ntropic voxel resolution of 3 mm, converted to the Vista\nimage format (Pope and Lowe, 1994) using LIPSIA (Lo-\nhmann et al., 2001) and submitted to estimation of voxel-\nwise EC (Lohmann et al., 2010) using the absolute of the\nfull correlation coefficients (equal weight to positive and\nnegative correlations), yielding one EC map per run for\neach participant. Individual EC maps and brain masks\nwere converted to nifti format, resampled to 2-mm isotro-\npic resolution, and submitted to further analysis (ICA and\nvoxel-wise statistics).\n\nICA on EC maps\n\nThe 1508 EC maps were decomposed into a fixed set of\n40 components, for optimal trade-off between spatial\nresolution of components and not over-fitting the model,\nICA in MELODIC (Beckmann and Smith,\nusing spatial\n2004). To assess effects of condition on EC for each IC,\nthe associated subject-weights from the ICA was used to\ncalculate the difference in subject weights between rest\nand n-back runs for each IC. For visualization of the\nnetwork structure, we used subject weights for both\nn-back and rest to form a component by component\ncorrelation matrix, which was submitted to hierarchical\nclustering using FSLNets (Smith et al., 2011). ICs covering\nwhite matter and CSF were excluded before clustering.\n\nDual regression\n\nTo assess the relationships between the centrality and\ntask-related activation of the ECM-based ICs, we ex-\ntracted individual time series from each of the component\nspatial maps from the n-back data using dual regression\n(Nickerson et al., 2017). GLMs were estimated for each\nparticipant and each component’s time series, modeling\n0-back, 1-back, and 2-back as well as responses and\ninstructions. As a measure of BOLD task effect,\n(cid:2)-estimates for 0-back was subtracted from the average\nof 1-back and 2-back (cid:2)-estimates.\n\nFor transparency, we compared our main results ob-\ntained using ICA-based decomposition of EC maps with\nvoxel-wise effects of task and age and their interactions\non EC using FSL randomize (Winkler et al., 2014). First, we\ncomputed difference maps by subtracting the individual\nresting-state EC maps from the n-back EC maps. We\ntested for main effect of condition by performing a one-\nsample t test on the difference maps (n-back minus rest).\nWe further tested for associations with age by performing\nlinear regression on rest, n-back, and the difference\nmaps, including sex as covariate. Statistical inference was\ndone by permutation testing with 5000 iterations and\nthreshold-free cluster enhancement (Smith and Nichols,\n2009).\n\nIn the same manner, using the (cid:2)-estimates derived from\ndual regression on the n-back data, we tested for effect of\ntask by performing one-sample t tests. To test for effect of\nage, we performed linear regression with task effect as\nthe dependent variable and age and sex as independent\nvariables.\n\nTo test for associations between task-related effects on\ncentrality and activation for each IC, we correlated the\ndifference EC-score (n-back minus rest) with (cid:2)-estimates\nfor task engagement. To account for multiple compari-\nsons, we adjusted the false discovery rate (FDR, q (cid:2) 0.05)\nacross all tests and components (Genovese et al., 2002).\nFor visualization of the association between centrality and\nactivation, component-wise EC-difference-weights and\n(cid:2)-estimates for the n-back task was imported to R (http://\nwww.r-project.org) and plotted with the ggplot2-package\n(Wickham, 2009).\n\nICA and hierarchical clustering\n\nICA of EC maps yielded 31 spatial maps corresponding\nto cortical gray-matter components, including frontopari-\netal, default mode, visual networks, and nine maps cor-\nresponding to white matter and CSF (for an anatomic\ndescription of the 31 maps included in the hierarchical\nclustering, see Table 1). Figure 1,1-1 shows the hierarchi-\ncal clustering based on the correlation between IC-\nweights across n-back and rest, and Figure 1,1-2 shows\nthe associated spatial maps. Clustering revealed a struc-\nture coherent with known large-scale functional networks,\nlargely reflecting visual, sensorimotor, frontoparietal, sub-\ncortical, cingulo-opercular, and DMN.\n\nTask engagement (n-back (cid:4) rest) was associated with\ndistributed differences in EC across most nodes. Figure\n1,1-4 displays significant (FDR corrected, q (cid:2) 0.05) as-\nsociations between EC,\ntask engagement and task\nperformance, and Table 2 summarizes corresponding sta-\ntistics. All frontoparietal components displayed a signifi-\ncant increase in EC with task engagement, and for one of\nthe components (IC 2) higher centrality was significantly\n\nassociated with better performance. Three of the four\ncingulo-opercular nodes displayed significant increase of\ncentrality with task engagement, and higher EC was as-\nsociated with better performance (two of four ICs). The\nsubcortical components displayed a mixed pattern of cen-\ntrality changes, thalamus decreased, but cerebellum in-\ncreased with task engagement. Higher EC for both\ncerebellum and thalamus was associated with better perfor-\nmance. DMN components displayed both increase (two of\nfive ICs) and decrease (two of five ICs) in centrality with task\nengagement, but no significant associations with task per-\nformance. Sensorimotor components displayed reduced\ncentrality (five of six ICs) with task engagement, and for two\nof the components, the degree of reduction was associated\nwith task performance. Visual components displayed a\nmixed pattern with both increased (three of seven ICs) and\ndecreased (three of seven ICs) centrality with task engage-\nment, and centrality in two components showed negative\ncorrelations with task performance.\n\nSignificant effects (FDR corrected, q (cid:2) 0.05) of task en-\ngagement are displayed in Figure 1,1-5, lower panel. Table 2\nsummarizes the corresponding statistics. The component-\nwise activation pattern revealed several similarities with the\npattern for EC. Task engagement was associated with sig-\nnificantly increased activation in the frontoparietal (six of\nseven ICs) and cingulo-opercular (four of four ICs) compo-\nnents. Among the subcortical components, we found in-\ncreased activation in cerebellum and decreased activation in\nputamen. The visual, sensorimotor, and DMN components\ndisplayed reduced activation during task.\n\nOverall, we found a positive correlation between activa-\ntion and EC (r (cid:2) 0.64, p (cid:2) 1.11e(cid:5)4): components showing\nincreased activity with task generally also showed task-\nrelated increases in EC. Figure 2 displays the component-\nwise association between task-related activation and\ndifferences in EC between n-back and rest. However, the\nresults revealed some notable exceptions. For example,\nwhereas components in the frontoparietal cluster showed\nboth strong task-related activation and increased centrality,\nand visual and sensorimotor cluster components showed\ndeactivation and decreased centrality, DMN components\nshowed overall task related deactivations, but a mixed pat-\ntern of increased and decreased centrality.\n\nnificant age-related increases in EC in two of\nfour\ncomponents, anterior cingulate and insula respectively.\nThe increase in EC was paralleled by significant increase\nin activation in all cingulo-opercular components. Among\nthe subcortical components, thalamus and cerebellum\nshowed significant age-related decreased centrality, and\nthe latter also showed age-related increased activation.\nWithin the DMN cluster, one component showed signifi-\ncant age-related decrease in EC during n-back. In con-\ntrast, all DMN-components showed significant decrease\nin activation with increasing age, indicating stronger de-\nactivation with higher age. Visual and sensorimotor com-\nponents displayed a highly similar pattern: age-related\nincreases in EC during both task and rest, but decreased\nactivation with higher age. The exception was one com-\nponent, showing age-related increases both in centrality\nand activation."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 555,
+            "end": 600,
+            "text": "1",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 555,
+            "end": 600,
+            "text": "absolute of the\nfull correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 571,
+            "end": 600,
+            "text": "full correlation coefficients",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 602,
+            "end": 652,
+            "text": "2",
+            "labels": [
+              "Negative correlation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 602,
+            "end": 652,
+            "text": "equal weight to positive and\nnegative correlations",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 507,
+            "end": 521,
+            "text": "3",
+            "labels": [
+              "Graph measures — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 444,
+            "end": 450,
+            "text": "LIPSIA",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 507,
+            "end": 521,
+            "text": "voxel-\nwise EC",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 951,
+            "end": 964,
+            "text": "4",
+            "labels": [
+              "Network definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1068,
+            "end": 1075,
+            "text": "MELODIC",
+            "labels": [
+              "Network definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1509,
+            "end": 1516,
+            "text": "FSLNets",
+            "labels": [
+              "Network definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1479,
+            "end": 1502,
+            "text": "hierarchical\nclustering",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 951,
+            "end": 964,
+            "text": "40 components",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1413,
+            "end": 1454,
+            "text": "component by component\ncorrelation matrix",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1728,
+            "end": 1762,
+            "text": "5",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1607,
+            "end": 1622,
+            "text": "Dual regression",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1728,
+            "end": 1762,
+            "text": "ex-\ntracted individual time series",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1413,
+            "end": 1454,
+            "text": "6",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1224,
+            "end": 1267,
+            "text": "calculate the difference in subject weights",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1413,
+            "end": 1454,
+            "text": "component by component\ncorrelation matrix",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1413,
+            "end": 1454,
+            "text": "component by component\ncorrelation matrix",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

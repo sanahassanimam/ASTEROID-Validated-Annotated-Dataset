@@ -1,0 +1,952 @@
+{
+  "data": {
+    "text": "Modular structure of functional networks in olfactory memory\nDavid Meunier, Pierre Fonlupt, Anne-Lise Saive, Jane Plailly, Nadine Ravel, Jean-Pierre Royet\nNeuroImage 95 (2014) 264–275 — © 2014 Elsevier Inc. — doi:10.1016/j.neuroimage.2014.03.041\n\nSubjects\nA total of 16 young [7 men; age: 27.14 ± 5.27 years (mean ± SD); range: 21.90–37.30] and 22 elderly (11 men; age 68.64 ± 3.29 years; range: 65.00–74.76) right-handed subjects participated in the study. This experiment was conducted in accordance with the Declaration of Helsinki. All subjects provided written informed consent as required by the local Institutional Review Board according to French regulations on biomedical experiments with healthy volunteers [Ethical Committee of CPP-Sud Est II (n CPP A 06-024), DGS2006-0226, May 11, 2006].\n\nStimuli and experiment\nThe subjects participated in a classical olfactory memory recognition task initially proposed by Engen and Ross (1973). A total of 100 odorants were used, comprising 50 target (old) and 50 distractor (new) odorants. Stimuli were counterbalanced by quality and mean scores of intensity, hedonicity, and familiarity obtained from previous data (Royet et al., 1999). The odorants were presented using an airflow olfactometer, which allowed the stimuli to be synchronized with breathing (Vigouroux et al., 2005). Odorants were delivered through a standard oxygen mask positioned on the subject's face.\n\nTwo functional runs corresponding to encoding and retrieval sessions were performed, separated by the structural image acquisition sequence. The 50 target odorants were presented in the encoding session and then interleaved with the 50 distractor odorants in the retrieval session. Odorants were delivered according to an event-related fMRI design with a jittered interstimulus interval of ~15 s, depending on the participant's respiration. During the encoding session, participants indicated when they detected an odorant by pressing one button with their right hand. Participants were not instructed about the objective of the next session. During the retrieval session, the participants indicated whether or not they had already smelled the odorant in the first session.\n\nBehavioral data analysis\nRecognition memory performance was assessed using parameters issued from signal detection theory. Two parameters were calculated from the Hit and FA scores: a memory score (d′L) and a response bias score (CL).\n\nImage acquisition\nImages were acquired with a 1.5-Tesla MAGNETOM Sonata whole-body imager (Siemens medical®, Erlangen, Germany) equipped with a 4-channel circularly polarized head coil. For functional imaging, we obtained 26 interleaved 4-mm-thick axial slices using a T2*-weighted echo-planar sequence with the following parameters: repetition time (TR) = 2500 ms, echo time (TE) = 50 ms, flip angle = 80°, file-of-view (FOV) = 240 × 240 mm, and imaging matrix = 64 × 64 (voxel size: 3.8 × 3.8 × 4 mm). We collected 324 scans for the encoding session and 624 scans for the retrieval session. Between functional sessions, a high-resolution structural T1-weighted anatomical image (inversion-recovery 3D Gradient-Echo sequence, 1 × 1 × 1 mm) parallel to the bicommissural plane and covering the entire brain was acquired over ~10 min.\n\nfMRI data pre-processing and classical parametric statistical analyses\nFunctional images were pre-processed using statistical parametric mapping software (SPM2, Wellcome Department of Cognitive Neurology, London, UK). Images were spatially realigned, slice-time corrected, normalized, and smoothed with an 8-mm kernel. Pre-processed data were then statistically analyzed using a random-effects model. Regressors of interest, including the five experimental conditions of interest (Hit, FA, CR, Miss, and non-answer), were modeled using boxcar predictors convolved with both the canonical hemodynamic response function (hrf) and its time-derivative. Voxel-by-voxel single sample t-tests were performed and 12 t-contrast maps were calculated by comparing the Hit, FA, CR, and Miss items to each other (e.g., [Hit vs. FA], [Hit vs. CR], [Hit vs. Miss], [FA vs. CR], [FA vs. Miss], and [CR vs. Miss]) in both directions.\n\nVOIs selection and time-series extraction\nFrom the activation peaks, cubes with a length of 8 mm were defined, and raw time series averaged over the voxels within a cube were extracted using the MarsBar toolbox (http://marsbar.sourcefourge.net) for each of the 38 participants. Head movement parameters (rotation and translation) were regressed, and residuals were high-pass filtered (N0.01 Hz) to remove the scanner drift component of the signal and normalized (Z-score) for each session.\n\nCondition-based correlation matrices\nThe specific regressors for each condition (i.e., the set of trials that were identified as belonging to a given condition on the basis of the subject's response) were considered and convolved with a canonical hrf. Only the positive and null parts of the hrf were considered and used to compute weighted correlations of VOI structure time-series pairs. This resulted in a set of correlation matrices (36 × 36) for each one of the four response categories (Hit, FA, CR, and Miss).\n\nWeighted signed modularity\nModular decomposition was computed using a greedy algorithm from Clauset et al. (2004), modified to take into account weighted signed modularity. Individual modular partitions were summarized by mean co-classification matrices by averaging binary co-classification matrices across subjects.\n\n\nCondition-based correlation matrices\n\nTo compute condition-based correlation matrices, we used the procedure described by Dodel et al. (2005). The speci /uniFB01 c regressors for each condition (i.e., the set of trials that were identi /uniFB01 ed as belonging to a given condition on the basis of the subject's response) were considered and convolved with a canonical hrf. Only the positive and null parts of the hrf were considered and used to compute weighted correlations of VOI structure time-series pairs. This resulted in a set of correlation matrices (36 ∗ 36) for each one of the four response categories (Hit, FA, CR, and Miss).\n\nWeighted signed modularity\n\nIn studies of modular structures in complex networks, modular decomposition is achieved by identifying the graph partitioning that optimizes a quality function known as modularity (Fortunato, 2010). Initially, the quality function of modularity was de /uniFB01 ned for binary graphs (Newman and Girvan, 2004). However, applying such a method\n\nFirst, the choice of a threshold over positive correlation coef /uniFB01 cients to obtain binary links is often arbitrary. One solution to this problem is to study network properties over a range of thresholds, but the problem of independency then arises for statistical validation (Langer et al., 2013). Another solution is to use modular decomposition while retaining the information of the value of each correlation coef /uniFB01 cient by using modular decomposition of weighted graphs (Newman, 2004). For a weighted graph G composed of N nodes and a weighted matrix W , with wij de /uniFB01 ning the strength of the edge between nodes i and j , the optimization process aims to maximize the quality value Q , which re /uniFB02 ects the goodness of a given partition { Ci } i ∈ {1, … , N }:\n\nQ ¼ 1 2 w X i X j w i j w i w j 2 w /C18 /C19 /C2 δ C i ; C j /C16 /C17 ð 3 Þ\n\nwhere w is the total weight over all edges in the graph; wi is the sum of weights of edges that include node i ; Ci is the module index whose node i belongs to; and δ is the Kronecker function δ ( a , a )=1and δ ( a , b )=0,if a ≠ b . This measure of the modularity is based on the difference between weights joining nodes within the same module and the expected value of these same weights when they are distributed randomly between nodes.\n\nSecond, negative values of a correlation coef /uniFB01 cient are sometimes considered as positive values because some computations consider absolute values (Achard et al., 2006; Meunier et al., 2009a). However, in resting-state fMRI, subsystems may be anti-correlated with each other (Fox et al., 2005), and considering the sign of correlations in graph analysis permits the segregation of anti-correlated subsystems (Rubinov and Sporns, 2011). In addition, negative correlations between activities also play a strong role in explaining cognitive processes (Caclin and Fonlupt, 2006; Chaminade and Fonlupt, 2003; Kelly et al., 2008). Therefore, it is crucial to consider the sign of correlation coef /uniFB01 cients. Recently, Gómezetal. (2009) and Traag and Bruggeman (2009) proposed a reformulation of modularity that enabled the analysis of modular structure in complex networks with weighted and signed links. The idea behind this extension is that a partition in a set of modules is relevant when modules gather nodes between which there are mostly positive correlations and when nodes belonging to different modules are negatively correlated. Two different quality functions are computed by considering the networks of positive and negative values separately:\n\nQ þ ¼ 1 2 w þ X i X j w þ ij -w þ i w þ j 2 w þ ! /C2 δ C i ; C j /C16 /C17 ð 4 Þ\n\nQ -¼ 1 2 w -X i X j w -ij -w -i w -j 2 w -/C18 /C19 /C2 δ C i ; C j /C16 /C17 ð 5 Þ\n\nwhere wij + is max(0, wij )(resp. wij -is max(0, -wij )); wi +is the sum over all wij + , including node i (resp. wi -is the sum over all wij -including node i ); and w + if the total of all wij + in the graph (resp. w -if the total of all wij -in the graph). The quantity to maximize according to this principle is then obtained by weighting the difference of modularity for the positive and negative parts of the network:\n\nQ ¼ 2 w þ 2 w þ þ 2 w -Q þ -2 w -2 w þ þ 2 w -Q -: ð 6 Þ\n\nModular decomposition is applied on each subject × conditionbased correlation matrix. Modular decomposition was computed using a greedy algorithm from Clauset et al. (2004), modi /uniFB01 ed to take into account weighted signed modularity. Greedy algorithm has been shown to provide a good trade-off between time of computation and quality of the optimal partition (Blondel et al., 2008). Because even random networks may have a non-zero value for modularity (Guimerà\n\net al., 2004), the values of the original networks must be compared with those of equivalent random networks obtained by randomly permuting values in the original matrices. Symmetry is conserved in the permutation process, and we ensured that each link was permuted with another link exactly once for every equivalent random network. We computed modularity on 100 randomized networks for each of the 16 + 22 (subjects) × 4 (response categories) correlation matrices. Weprovided p -values, as assessed as the number of times a randomized networks achieved a higher modularity value than the original network, divided by the total number of randomized networks (most signi /uniFB01 cant p -value is 0.01).\n\nIndividual modular partitions can be represented as binary coclassi /uniFB01 cation matrices that have a value of one when two nodes belong to the same module. To assess a representative structure of a given condition for a group of subjects, a mean co-classi /uniFB01 cation matrix can be computed by averaging binary co-classi /uniFB01 cation matrices (Sales-Pardo et al., 2007). The statistical reliability of a given subset of nodes of interest can be tested a posteriori by computing a normalized co-classi /uniFB01 cation density for each subject. This is achieved by /uniFB01 rst considering, for a given subject, the number of times two nodes belonging to a subset are co-classi /uniFB01 ed out of all the pairs involving the nodes in the subset. This quantity is then normalized by the total number of coclassi /uniFB01 ed pairs for the subject.\n\nNormalized mutual information\n\nSimilarity measures were used to assess differences between partitions obtained for different individuals and experimental conditions. For graph G (containing N nodes), we considered two partitions A and B , each of which contain cA and cB modules, respectively. Each module in A is denoted Ai , i ∈ 1, … , cA .\n\nNormalized mutual information (NMI), a similarity measure based on information theory (Danon et al., 2005), requires the de /uniFB01 nition of a confusion matrix M . The term mij =| Ai ∩ Bj | represents the number of nodes in common between the communities Ai and Bj . The sum over the row i of matrix M is denoted mi and the sum over the column j is denoted mj .NMIisde /uniFB01 ned as follows:\n\nNMI A ; B ð Þ ¼ P C A i ¼ l X C B i ¼ l m ij log m ij N m i m j ! X C A i ¼ l m i log m i N /C16 /C17 þ X C B i ¼ l m j log m j N /C18 /C19 : ð 7 Þ\n\nIf the two partitions are identical, the NMI value is maximum and equal to 1. If the partitions are totally independent, the NMI value is null."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 60,
+            "text": "Modular structure of functional networks in olfactory memory",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 61,
+            "end": 74,
+            "text": "David Meunier",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 170,
+            "end": 174,
+            "text": "2014",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 193,
+            "end": 206,
+            "text": "Elsevier Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 213,
+            "end": 245,
+            "text": "10.1016/j.neuroimage.2014.03.041",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2481,
+            "end": 2506,
+            "text": "1.5-Tesla MAGNETOM Sonata",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2657,
+            "end": 2671,
+            "text": "26",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2672,
+            "end": 2682,
+            "text": "4-mm-thick",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2838,
+            "end": 2841,
+            "text": "80°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2786,
+            "end": 2799,
+            "text": "2500 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2812,
+            "end": 2823,
+            "text": "50 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2857,
+            "end": 2876,
+            "text": "240 × 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2908,
+            "end": 2936,
+            "text": "3.8 × 3.8 × 4 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "SPM2",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1746,
+            "end": 1771,
+            "text": "event-related fMRI design",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 945,
+            "end": 968,
+            "text": "A total of 100 odorants",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 991,
+            "end": 1039,
+            "text": "50 target (old) and 50 distractor (new) odorants",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2101,
+            "end": 2196,
+            "text": "participants indicated whether or not they had already smelled the odorant in the first session",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1779,
+            "end": 1819,
+            "text": "jittered interstimulus interval of ~15 s",
+            "labels": [
+              "ISI distribution"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 945,
+            "end": 968,
+            "text": "A total of 100 odorants",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3975,
+            "end": 4068,
+            "text": "12 t-contrast maps were calculated by comparing the Hit, FA, CR, and Miss items to each other",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 256,
+            "end": 275,
+            "text": "A total of 16 young",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 277,
+            "end": 282,
+            "text": "7 men",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 289,
+            "end": 307,
+            "text": "27.14 ± 5.27 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 357,
+            "end": 363,
+            "text": "11 men",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 369,
+            "end": 387,
+            "text": "68.64 ± 3.29 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 409,
+            "end": 421,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 698,
+            "end": 716,
+            "text": "healthy volunteers",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 718,
+            "end": 798,
+            "text": "Ethical Committee of CPP-Sud Est II (n CPP A 06-024), DGS2006-0226, May 11, 2006",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2383,
+            "end": 2401,
+            "text": "memory score (d′L)",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2408,
+            "end": 2432,
+            "text": "response bias score (CL)",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "SPM2",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "SPM2",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Parameters"
+          ],
+          "id": "m0034"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "SPM2",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3425,
+            "end": 3429,
+            "text": "3",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3576,
+            "end": 3587,
+            "text": "8-mm kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3576,
+            "end": 3587,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4466,
+            "end": 4532,
+            "text": "motion parameters regressed",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4466,
+            "end": 4532,
+            "text": "5",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4492,
+            "end": 4516,
+            "text": "rotation and translation",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4492,
+            "end": 4516,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4553,
+            "end": 4571,
+            "text": "high-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4553,
+            "end": 4571,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4573,
+            "end": 4581,
+            "text": "N0.01 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4573,
+            "end": 4581,
+            "text": "8",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4639,
+            "end": 4659,
+            "text": "Z-score",
+            "labels": [
+              "Intensity normalization — Algorithm"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4639,
+            "end": 4659,
+            "text": "9",
+            "labels": [
+              "Intensity normalization — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4257,
+            "end": 4284,
+            "text": "cubes with a length of 8 mm",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4383,
+            "end": 4398,
+            "text": "MarsBar toolbox",
+            "labels": [
+              "Time series ROI — Software"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4303,
+            "end": 4357,
+            "text": "raw time series averaged over the voxels within a cube",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5517,
+            "end": 5553,
+            "text": "Condition-based correlation matrices",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5764,
+            "end": 5784,
+            "text": "weighted correlations",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5836,
+            "end": 5845,
+            "text": "(36 ∗ 36)",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6067,
+            "end": 6088,
+            "text": "Weighted signed modularity",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6381,
+            "end": 6564,
+            "text": "the choice of a threshold over positive correlation coef /uniFB01 cients to obtain binary links is often arbitrary. One solution to this problem is to study network properties over a range of thresholds, but the problem of independency then arises for statistical validation (Langer et al., 2013). Another solution is to use modular decomposition while retaining the information of the value of each correlation coef /uniFB01 cient by using modular decomposition of weighted graphs",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6855,
+            "end": 6870,
+            "text": "weighted graphs",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7229,
+            "end": 7277,
+            "text": "weighted and signed links",
+            "labels": [
+              "Negative correlation — Algorithm/Type"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7895,
+            "end": 7928,
+            "text": "greedy algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7753,
+            "end": 7789,
+            "text": "Modular decomposition",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8446,
+            "end": 8477,
+            "text": "100 randomized networks",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8311,
+            "end": 8321,
+            "text": "modularity",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8189,
+            "end": 8225,
+            "text": "Weighted signed modularity",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8787,
+            "end": 8812,
+            "text": "co-classi /uniFB01 cation matrices",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8957,
+            "end": 8987,
+            "text": "mean co-classi /uniFB01 cation matrix",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9362,
+            "end": 9387,
+            "text": "Normalized mutual information",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          },
+          "id": "m0067"
+        }
+      ]
+    }
+  ]
+}

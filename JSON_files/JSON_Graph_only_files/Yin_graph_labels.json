@@ -1,0 +1,411 @@
+{
+  "data": {
+    "text": "2.5  Construction of functional brain networks\nWe constructed functional brain networks based on preprocessed resting‐state fMRI images. For node definition, we used a parcellation scheme composed of 264 putative functional areas (Power‐264, spherical regions of interest (ROIs) with the same size; Power et al., 2011), as well as 90 ROIs according to the commonly used Automated Anatomical Labeling template (AAL‐90, ROIs with different size; Tzourio‐Mazoyer et al., 2002). The time series of each ROI was obtained by averaging the residual time courses of all voxels within the ROI. A symmetric N × N (N = 264 for the Power‐264 parcellation; N = 90 for the AAL‐90 template) functional connectivity matrix was generated, and elements of the matrix Aij represent the Pearson's correlation coefficient between the time courses of two ROIs, i and j. Functional connectivity matrices were thus obtained for each participant. The next step is selection of cost threshold (reflecting network density). The cost of the network G was defined as the total number of edges in a graph, divided by the maximum possible number of edges:\ncos t= 1\nN(N−1)\n∑\ni∈G\nKi.\nHowever, there is currently no definitive criterion for threshold selection (Fornito, Zalesky, & Breakspear, 2013). Low cost may lead to a fragmented network with long shortest pathway, while high cost may reduce the economy of network. Considering that the network organization of the human brain is economic with features of small‐worldness and connectedness (Bassett & Bullmore, 2006; Bullmore & Sporns, 2009, 2012), we first calculated these topological properties of the functional brain networks across a wide range of cost (0.05 ≤ cost ≤ 0.5, with an incremental interval of 0.05) using graph theoretical analysis (see Methods S1 for the details of calculation of small‐worldness). We then selected the cost threshold that enables the brain network to be small‐world. In addition, we considered that the minimum mean degree of nodes across subjects should be >1, to minimize the disconnected nodes. We finally validated our main findings across cost thresholds within small‐world regime.\n\n2.6  Neighbor dispersion index of each node in a network\nHere, we assume that the functional diversity of a brain region is embodied by topological differentiation of its immediate neighbors in the large‐scale functional brain network. To characterize the functional diversity of each node in a network, we propose a new graph metric NDI, quantified by the ratio of topological distance between immediate neighbors of a given node i and the maximum possible distance:\nNDI(i)=\n∑\ns,t∈Gi\ndst\n(\nKi−1\n)×∑\nj∈Gi\nKj,\nwhere Gi denotes the set of nodes that are the immediate neighbors of the node i, Ki is the degree of i, dst indicates topological distance between two nodes, s and t, defined as:\ndst =\n∑N\nm=1\n|Asm−Atm|,\nwhere A is the adjacency matrix, here the distance is evaluated using Manhattan distance. The NDI of a node is close to 1 if the neighbors of its neighbors are largely nonoverlapped and 0 if the neighbors of its neighbors are completely overlapped or its degree is <2. The NDI measures the degree of dispersion of information from a node in the network. To illustrate the concept of NDI, a toy graph is shown in Figure 1a.\n\n2.7  Existing graph metrics commonly used for identifying network hubs\nFor comparison purposes, we calculated three existing graph metrics, commonly used for identifying network hubs, including degree, betweenness centrality, and participation coefficient. Degree Ki is defined as the number of immediate neighbors of a node i. Betweenness centrality Bi is defined as the number of shortest paths between any two nodes that run through node i (Freeman, 1977):\nBi =∑\nj,k∈N,j≠k\nnj,k(i)\nnj,k\n,\nwhere nj,k (i) is the number of shortest paths between nodes j and k that run through node i and nj,k is all shortest paths between nodes j and k. Bi captures the influence of a node over information flow between other nodes in the network, which tends to be high for brain regions with extensive across‐network connectivity. The participation coefficient Pi of node i is defined as follows (Guimera & Nunes Amaral, 2005):\nPi =1−\n∑NM\ns=1\n(Kis\nKi\n)2\n,\nwhere NM is number of modules, identified by a spectral optimization algorithm (Newman, 2006), Kis is the number of links of node i to nodes in module s, and Ki is the degree of node i. The participation coefficient of a node is close to 1 if its links are uniformly distributed among all the modules and 0 if all its links are within its own module.\nTo consider that the contribution of a node to each community also depends on the size of the community, Klimm and colleagues have introduced refined versions of the participation coefficient, called the participation index (pi) and the dispersion index (di; Klimm et al., 2014). We also calculated these two indices as a comparison.\n\nIn order to quantify whether and how values of each metric varied across brain regions and potential functional roles, we divided the brain into 10 different functional networks according to a previous study (Power et al., 2011). Then, a one‐way analysis of variance (ANOVA) was performed on the mean values of each metric within these functional networks. Finally, post hoc two‐sample t‐tests were conducted to assess the significant differences in the mean values of each metric between any two functional networks. A threshold of p < .05 with Bonferroni correction was considered statistically significant.\n\nIn the above analyses, the values of NDI were calculated for binary networks. To test the applicability of NDI in networks with connectivity weights, we applied it to weighted functional brain networks with a wide range of network densities (i.e., cost = 0.15, 0.30, and 0.60), without setting a density threshold (however, all negative correlations were set to zero as NDI is not applicable for negative weights). We found the regional profile of NDI to be highly consistent between the binary and weighted networks (r = .998, p < .0001 for cost = 0.15; r = .994, p < .0001 for cost = 0.30; and r = .983, p < .0001 for cost = 0.60). However, the quantitative differences in NDI between binary and weighted networks are dramatic at a higher network density (cost = 0.60)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 231,
+            "end": 240,
+            "text": "Power‐264",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 410,
+            "end": 416,
+            "text": "AAL‐90",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 200,
+            "end": 229,
+            "text": "264 putative functional areas",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 331,
+            "end": 338,
+            "text": "90 ROIs",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 507,
+            "end": 583,
+            "text": "obtained by averaging the residual time courses of all voxels within the ROI",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 767,
+            "end": 800,
+            "text": "Pearson's correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 939,
+            "end": 995,
+            "text": "selection of cost threshold (reflecting network density)",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1682,
+            "end": 1737,
+            "text": "0.05 ≤ cost ≤ 0.5, with an incremental interval of 0.05",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1478,
+            "end": 1511,
+            "text": "small‐worldness and connectedness",
+            "labels": [
+              "Graph characteristics — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2468,
+            "end": 2484,
+            "text": "graph metric NDI",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3478,
+            "end": 3539,
+            "text": "degree, betweenness centrality, and participation coefficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4781,
+            "end": 4855,
+            "text": "participation index (pi) and the dispersion index (di; Klimm et al., 2014)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5034,
+            "end": 5140,
+            "text": "divided the brain into 10 different functional networks according to a previous study (Power et al., 2011)",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5057,
+            "end": 5089,
+            "text": "10 different functional networks",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5150,
+            "end": 5186,
+            "text": "one‐way analysis of variance (ANOVA)",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5278,
+            "end": 5305,
+            "text": "post hoc two‐sample t‐tests",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5445,
+            "end": 5479,
+            "text": "p < .05 with Bonferroni correction",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5851,
+            "end": 5889,
+            "text": "negative correlations were set to zero",
+            "labels": [
+              "Negative correlation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 168,
+            "end": 187,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type",
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 242,
+            "end": 278,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type",
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 475,
+            "end": 502,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 676,
+            "end": 706,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 952,
+            "end": 995,
+            "text": "5",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1478,
+            "end": 1511,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2464,
+            "end": 2484,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5034,
+            "end": 5140,
+            "text": "8",
+            "labels": [
+              "Network definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5150,
+            "end": 5186,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5851,
+            "end": 5889,
+            "text": "10",
+            "labels": [
+              "Negative correlation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

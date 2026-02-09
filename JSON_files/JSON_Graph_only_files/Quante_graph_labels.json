@@ -1,0 +1,278 @@
+{
+  "data": {
+    "text": "Network construction. Nodes represented contrast peak voxels, and edges were defined as correlations between confound-corrected BOLD time series (BOLD series hereafter). Sixteen peak voxels were chosen from contrast VA>XX \\ VX>XX \\ AX>XX, and six peak voxels each from contrasts VX>AX and AX>VX, resulting in a total of 28 nodes. Every node was created by surrounding the corresponding peak voxel with a 6-mm-radius sphere using AFNI’s 3dUndump and used to average, for every participant, BOLD series of voxels within a sphere (nvoxels = 33; see [23]). This approach aims to get reliable time series averages while simultaneously retaining a certain degree of functional node specificity.\n\nAveraged BOLD series were used to calculate Pearson correlations between all pairs of nodes. Correlation coefficients were Fisher’s Z transformed. To generate condition-specific correlation matrices, BOLD series were restricted to relevant volumes from the audio-visual sequences (six TRs per trial) of correctly answered trials, shifted by six seconds to account for the hemodynamic lag. In case of conditions VA and XX, 24 correctly answered trials were randomly chosen to balance the number of trials between conditions (minimum number of trials per subject and condition was 22). Accordingly, every correlation coefficient was based on at least 132 data points. Matrix construction was done by using customised Python code (Python Software Foundation), utilizing the packages NumPy and NiBabel, and resulted in one 28 x 28 matrix per participant and condition (112 matrices in total). Connection strength was represented by positive and negative correlation coefficients, whereas negative correlations were set to zero for graph measure calculation (average percentage of negative correlations = 26.6%, range = 6.9–49.7%). MATLAB and the Brain Connectivity Toolbox [24] were used to compute connection strength and weighted graph measures. Nodes were grouped into three modules based on contrasts (task module: VA>XX \\ VX>XX \\ AX>XX, visual module: VX>AX, and auditory module: AX>VX). The joint task network represented the core of all brain areas involved in task performance.\n\nIn addition to connection strength, we calculated the following seven weighted graph measures for every node to quantify topological features of the network: betweenness centrality, characteristic path length, clustering coefficient, core closeness, nodal efficiency, participation coefficient, and strength (see S1 Table for detailed information)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 404,
+            "end": 422,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 429,
+            "end": 444,
+            "text": "AFNI’s 3dUndump",
+            "labels": [
+              "ROI definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 404,
+            "end": 422,
+            "text": "6-mm-radius sphere",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 449,
+            "end": 526,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 449,
+            "end": 526,
+            "text": "used to average, for every participant, BOLD series of voxels within a sphere",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 724,
+            "end": 781,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 724,
+            "end": 781,
+            "text": "calculate Pearson correlations between all pairs of nodes",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1394,
+            "end": 1487,
+            "text": "customised Python code (Python Software Foundation), utilizing the packages NumPy and NiBabel",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1394,
+            "end": 1487,
+            "text": "customised Python code (Python Software Foundation), utilizing the packages NumPy and NiBabel",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 783,
+            "end": 835,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 783,
+            "end": 835,
+            "text": "Correlation coefficients were Fisher’s Z transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1674,
+            "end": 1742,
+            "text": "5",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1674,
+            "end": 1742,
+            "text": "negative correlations were set to zero for graph measure calculation",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2223,
+            "end": 2480,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1832,
+            "end": 1863,
+            "text": "Brain Connectivity Toolbox [24]",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2223,
+            "end": 2480,
+            "text": "the following seven weighted graph measures for every node to quantify topological features of the network: betweenness centrality, characteristic path length, clustering coefficient, core closeness, nodal efficiency, participation coefficient, and strength",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1934,
+            "end": 2077,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1934,
+            "end": 2077,
+            "text": "Nodes were grouped into three modules based on contrasts (task module: VA>XX \\ VX>XX \\ AX>XX, visual module: VX>AX, and auditory module: AX>VX)",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1934,
+            "end": 2077,
+            "text": "Nodes were grouped into three modules based on contrasts (task module: VA>XX \\ VX>XX \\ AX>XX, visual module: VX>AX, and auditory module: AX>VX)",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

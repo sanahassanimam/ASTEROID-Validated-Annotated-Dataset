@@ -1,0 +1,377 @@
+{
+  "data": {
+    "text": "Network Re-construction and modularity calculation.  The whole brain network was re-\n\nconstructed based on several prominent parcellations of the brain: Brodmann areas, Eickhoff-\n\nZilles atlas (Eickhoff et al., 2005), functional areas identified in Powers et al. (2011), spatially \n\ncoherent areas identified in Craddock et al. (2012) and a recent published parcellation based on \n\nstructural and function data from the Human Connectome Project (Glasser et al., 2016). We \n\nillustrate the network re-construction methods for the 84 Brodmann areas (42 Brodmann areas \n\nfor left and right hemispheres respectively). These 84 Brodmann areas were derived from the \n\nBrodmann atlas in AFNI Talairach-Daemon (AFNI version=AFNI_2011_12_21_1014) \n\n(Lancaster et al., 1997; 2000). This Brodmann atlas mainly covered the cerebral cortex of the \n\nbrain. Each Brodmann area served as a node of the network, and the mean time series was \n\nextracted by averaging the preprocessed time series across all voxels in that Brodmann area. The \n\nedge between any two nodes in the network was defined by functional connectivity – that is, the \n\nPearson correlation of the time series for those two nodes. Edges for all pairs of nodes in the \n\nnetwork were estimated, resulting in an 84×84 correlation matrix. The correlation matrix was \n\ncalculated for each run and each subject separately, and an averaged correlation matrix across \n\nthree runs was obtained for each subject (Figure 1A). We did not concatenate the 3 runs for each \n\nsubject, because this would introduce a large discontinuity in the fMRI signal at the point of \n\nreport the results without regressing out tissue-based signals, but the results with this additional \npreprocessing step are reported in a table available on open science framework. \n\n \n                                                                                                                                                                                   \n\fMODULARITY AND TASK COMPLEXITY  9 \n\nconcatenation, leading to spurious correlation. We applied Newman’s algorithm (Newman, 2006) \n\nto each individual’s averaged correlation matrix to calculate the modularity value for that subject. \n\nTo do this, we first took the absolute values of each correlation and set all the diagonal elements \n\nof the correlation matrix to zero.  Fewer than .05% of the elements in the matrix were negative. \n\nThe resulting matrix was binarized by setting the largest 400 edges (i.e., 5.67% graph density) in \n\nthe network to 1 and all others to 0 (Figure 1B). We also considered the top 300 (4.25%) and 500 \n\nedges (7.09%), respectively, to assess the consistency of correlation with modularity across \n\ndifferent numbers of edges. This binarization process has been argued to improve detection of \n\nmodularity, by increasing the signal-to-noise ratio (Chen & Deem, 2015). Modularity was \n\ndefined as in Equation 1 below, where Aij is 1 if there is an edge between Brodmann areas i and j \n\nand zero otherwise, the value of ai = Σj Aij is the degree of Brodmann area i, and e = ½ Σi ai is the \n\ntotal number of edges, here set to 300, 400, and 500 respectively. Newman’s algorthim was \n\napplied to the binarized matrix to obtain the (maximal) modularity value and the corresponding \n\npartitioning of Brodmann areas into different modules for each subject. 2 \n\nA group-average correlation matrix (Figure 1A) was obtained by averaging the mean \n\ncorrelation matrices across all subjects. The partitioning into modules was also conducted at the \n\ngroup level. To assess individual variability in the modular structure of the brain, we maximally \n\naligned each subject’s partitioning of Brodmann areas with the partitioning identified from the \n\n2 Due to the resolution limitation issue with the current community detection algorithm (Fortunato & \nBarthélemy, 2007), we also estimated modularity values by using the lowest hierarchy level in the \nLouvain algorithm (Blondel, Guillaume, Lambiotte, & Lefebvre, 2008), which could avoid resolution \nlimit issue (Lancichinetti & Fortunato, 2009; 2014). Results in term of modularity-behavior correlations \nbased on Louvain method are similar to those with modularity calculated by the method described above \nand are reported in a table that is available at the open science framework. \n\n \n \n                                                        \n\fMODULARITY AND TASK COMPLEXITY  10 \n\ngroup-average correlation matrix.  When comparing the distance between two assignments of \n\nBrodmann areas to modules, we take into account that the labeling of the modules can be \n\npermuted and that the number of modules of the two assignments need not be identical. Thus the \n\nmaximal alignment is the one that minimizes the distance over all permutations of the \n\nassignment with the greater (or equal) number of modules. The value d is the number of nodes \n\nwhose modular assignment differed between the subject and the group average, defined by \n\nEquation 2. \n\nBrodmann areas are indexed by i, m1i denote the module to which Brodmann area i belongs in \n\nassignment 1, m2i denote the module to which Brodmann area i belongs in assignment 2, P is a \n\npermutation of module labeling, and we have assumed the number of modules in assignment 1 is \n\nnot greater than that in assignment 2. To assess which cortical regions drove this individual \n\nvariation in modular structure, we also calculated, for each of the 84 Brodmann areas, the \n\nnumber of subjects for whom that Brodmann area was assigned to a different module than the \n\nassignment for group-average data.   \n\nWhile Brodmann areas have the virtue of covering most of the gray matter, many of the \n\nareas are quite large, meaning that each Brodmann area likely contains multiple functionally \n\nselective regions. Given that each Brodmann area can only be assigned to one module, that \n\nmodular assignment may only be appropriate for a subregion, thereby potentially reducing the \n\nrelation between modularity and behavioral performance.  Thus, we also calculated modularity \n\nfor each subject based on another anatomical parcellation which is available in AFNI (Eickhoff-\n\nZilles macro labels atlas from N27 template in Talairach space) (Eickhoff et al., 2005), and some \n\nfunctional parcellations, including Power et al.’s (2011), Craddock et al.’s (2012) and Glasser et \n\n \n \n\fMODULARITY AND TASK COMPLEXITY  11 \n\nal.’s (2016) networks. We used 90 of the 115 masks from the Eickhoff-Zilles atlas, excluding \n\nthose in the cerebellum. Power et al. defined many small spheric nodes that are associated with \n\nspecific cognitive functions identified by meta-analyses of task-based fMRI 3. Craddock et al. \n\nparceled the gray matter into many spatially coherent clusters, identifying clusters based on \n\nhomogeneity of local functional connectivity. We chose the 100-node version of Craddock et \n\nal.’s parcellation, which has a similar number of nodes with the Brodmann network. Glasser et al. \n\nused multiple properties (e.g., cortical myelin content, cortical response to task functional MRI, \n\nresting-state functional connectivity pattern) of MRI data from Human Connectome Project and \n\ngenerated feature gradient maps to identify the boundaries of structurally and functionally \n\nhomogenous areas on the cortical surface model, and then created 180 areas in each hemisphere 4. \n\nThe correlation matrices for functional parcellations were binarized with a threshold of percent \n\ncost (5.67%), which equates the proportion of top edges to that for the Brodmann network of 400 \n\nedges."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 125,
+            "end": 178,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 125,
+            "end": 178,
+            "text": "parcellations of the brain: Brodmann areas, Eickhoff-",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 489,
+            "end": 546,
+            "text": "network re-construction methods for the 84 Brodmann areas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 662,
+            "end": 737,
+            "text": "Brodmann atlas in AFNI Talairach-Daemon (AFNI version=AFNI_2011_12_21_1014)",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 489,
+            "end": 546,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 489,
+            "end": 546,
+            "text": "network re-construction methods for the 84 Brodmann areas",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 899,
+            "end": 1017,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 899,
+            "end": 1017,
+            "text": "the mean time series was \n\nextracted by averaging the preprocessed time series across all voxels in that Brodmann area",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1123,
+            "end": 1182,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1123,
+            "end": 1182,
+            "text": "Pearson correlation of the time series for those two nodes.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2060,
+            "end": 2104,
+            "text": "5",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2060,
+            "end": 2104,
+            "text": "We applied Newman’s algorithm (Newman, 2006)",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3285,
+            "end": 3355,
+            "text": "partitioning of Brodmann areas into different modules for each subject",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2875,
+            "end": 2922,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2875,
+            "end": 2922,
+            "text": "Modularity was \n\ndefined as in Equation 1 below",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2240,
+            "end": 2309,
+            "text": "7",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2240,
+            "end": 2309,
+            "text": "absolute values of each correlation and set all the diagonal elements",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2411,
+            "end": 2509,
+            "text": "8",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2411,
+            "end": 2509,
+            "text": "The resulting matrix was binarized by setting the largest 400 edges (i.e., 5.67% graph density) in",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2562,
+            "end": 2703,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2411,
+            "end": 2509,
+            "text": "The resulting matrix was binarized by setting the largest 400 edges (i.e., 5.67% graph density) in",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2562,
+            "end": 2703,
+            "text": "We also considered the top 300 (4.25%) and 500 \n\nedges (7.09%), respectively, to assess the consistency of correlation with modularity across",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3361,
+            "end": 3442,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3361,
+            "end": 3442,
+            "text": "A group-average correlation matrix (Figure 1A) was obtained by averaging the mean",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7373,
+            "end": 7469,
+            "text": "The correlation matrices for functional parcellations were binarized with a threshold of percent",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

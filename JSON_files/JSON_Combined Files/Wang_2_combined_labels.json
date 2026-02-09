@@ -1,0 +1,1149 @@
+{
+  "data": {
+    "text": "Test–Retest Reliability of Functional Connectivity\nNetworks During Naturalistic fMRI Paradigms\n\nJiahui Wang,1 Yudan Ren,1 Xintao Hu,1 Vinh Thai Nguyen,2 Lei Guo,1\nJunwei Han,1* and Christine Cong Guo2*\n\n1School of Automation, Northwestern Polytechnical University, Xi’an, China\n2QIMR Berghofer Medical Research Institute, Herston, Queensland, Australia\n\nAbstract: Functional connectivity analysis has become a powerful tool for probing the human brain\nfunction and its breakdown in neuropsychiatry disorders. So far, most studies adopted resting-state\nparadigm to examine functional connectivity networks in the brain, thanks to its low demand and\nhigh tolerance that are essential for clinical studies. However, the test–retest reliability of resting-state\nconnectivity measures is moderate, potentially due to its low behavioral constraint. On the other hand,\nnaturalistic neuroimaging paradigms, an emerging approach for cognitive neuroscience with high eco-\nlogical validity, could potentially improve the reliability of functional connectivity measures. To test\nthis hypothesis, we characterized the test–retest reliability of functional connectivity measures during a\nnatural viewing condition, and benchmarked it against resting-state connectivity measures acquired\nwithin the same functional magnetic resonance imaging (fMRI) session. We found that the reliability of\nconnectivity and graph theoretical measures of brain networks is significantly improved during natural\nviewing conditions over resting-state conditions, with an average increase of almost 50% across various\nconnectivity measures.\n\nParticipants\n\nTwenty right-handed participants (11 females, 9 males;\naged between 21 and 31 years; mean age 27 6 2.7 years)\nparticipated in the study. The participants were recruited\nfrom the University of Queensland and provided written\ninformed consent. Participants received a small monetary\ncompensation ($50) for their participation in the study.\nThe study was approved by the human ethics research\ncommittee of the University of Queensland and was con-\nducted according to National Health and Medical Research\nCouncil guidelines.\n\nExperimental Paradigm\n\nThe experiment comprised two scanning sessions. For\neach session, participants underwent an 8-min resting-state\nfMRI exam with eyes closed, and then freely viewed a 20-\nmin short movie “The Butterfly Circus.” Resting state condi-\ntion was always acquired first to avoid potential effect of\nmovie viewing experience on resting-state brain activity,\nand also to reduce the likelihood of fatigue and sleep dur-\ning resting state. The Butterfly Circus is a short film that\ndepicts an intense, emotionally evocative story of a man\nborn without limbs who is encouraged by the showman of\na renowned circus to reach his own potential.\n\nFunctional Image Acquisition and Preprocessing\n\nFunctional and structural images were acquired from a\nwhole-body 3-T Siemens Trio MRI scanner equipped with a\n12-channel head coil (Siemens Medical System, Germany).\nFunctional images were acquired using a single-shot gradi-\nent-echo echo planar-imaging (EPI) sequence with the fol-\nlowing parameters: repetition time (TR) 2200 ms, echo time\n(TE) 30 ms, flip angle (FA) 798, field of view (FOV)\n192 3 192 mm, pixel bandwidth 2003 Hz, a 64 3 64 acquisi-\ntion matrix, 44 axial slices, and 3 3 3 3 3 mm3 voxel resolu-\ntion. A high-resolution T1-weighted MPRAGE structural\nimage covering the entire brain was also collected for each\nparticipant with the following parameters: TE 5 2.89 ms,\nTR 5 4000 ms, FA 5 98, FOV 5 240 3 256 mm, and voxel size\n1 3 1 3 1 mm3.\n\nFunctional images were preprocessed using Statistical\nParametric Mapping toolbox (SPM12, Welcome Depart-\nment of Imaging Neuroscience, Institute of Neurology,\nLondon) and the Data Processing Assistant for resting-\nstate fMRI software (DPARSF) implemented in Matlab\n(Mathworks, USA). The first five volumes of each EPI\nsequence were discarded to allow scanner equilibrium to\nbe achieved. The remaining functional images were slice-\ntime corrected and realigned to the first image using a\nsix-parameter linear transformation, and subsequently co-\nregistered to the T1 structural image of each individual\nsubject. The structural images were segmented into gray\nmatter (GM), white matter (WM), and cerebrospinal fluid\n(CSF) using the Segment algorithm implemented in the\nvoxel-based morphometry toolbox. The functional images\nwere subsequently normalized to the Montreal Neurological\nInstitute (MNI) space using Diffeomorphic Anatomical\nRegistration Through Exponentiated Lie algebra (DARTEL)\nwithout additional smoothing. The images were further re-\ngressed out of nuisance signals, bandpass filtered\n(0.0083–0.15 Hz) and detrended. Nuisance signals include\nprinciple components of WM and CSF signals (first five\nprinciple components were selected; WM and CSF signals\nwere derived from common WM and CSF masks provided\nby DPARSF) using the CompCor method and Friston-24\nmotion parameters (6 movement parameters of the current\nvolume, 6 parameters of the preceding volumes, and the\nsquare of each parameter). To examine the robustness of\nour results to preprocessing methods, we repeated our\nanalyses with two additional noise regression strategies:\n(1) the mean signals of WM and CSF voxels and (2) regression\nof global signals in addition to the WM and CSF signals.\n\nROI-Based Functional Connectivity Analyses\n\nFunctional connectivity analyses were first performed on\nregion of interest (ROI) atlases that cover the whole brain.\nTwo previous established atlases were used: the 200 ROI\natlas based on Craddock 2012 parcellation and the 17 ROI\natlas proposed by Yeo et al. ROIs’ time series were extracted\nfrom preprocessed fMRI data, by taking the mean across all\nvoxels within each ROI. Pearson correlation was computed\nbetween each pair of ROIs’ time series separately for each\ncondition in each session, resulting in four 200 3 200 connectivity\nmatrices for each subject. For each matrix, the correlation coeffi-\ncients were transformed to z-scores using Fisher’s transformation,\naveraged across all subjects for each condition, and then reverted\nto Pearson’s r values to derive group-level connectivity matrices.\n\nGraph Theoretical Analysis on ROI Matrices\n\nUsing Brain Connectivity Toolbox and GRETNA Toolbox,\ngraph metrics were derived from the weighted adjacency matrices,\nincluding degree centrality, clustering coefficient, efficiency,\nbetweenness centrality, and eigenvector centrality. The fully \nconnected ROI matrices were thresholded to determine the presence \nor absence of connections; we repeated analyses using thresholds \nTr = 0.1, 0.3, and 0.5.\n\nHuman Brain Mapping 38:2226–2241 (2017). DOI: 10.1002/hbm.23517.\nPublished online 17 January 2017 in Wiley Online Library. \n© 2017 Wiley Periodicals, Inc.\n\nROI-Based Functional Connectivity Analyses\nFunctional connectivity analyses were first performed on region of interest (ROI) atlases that cover the whole brain. Two previous established atlases were used: the 200 ROI atlas based on Craddock 2012 parcellation [Craddock et al., 2012] and the 17 ROI atlas proposed by Yeo et al. [Yeo et al., 2011]. As the two atlases yielded similar results, results based on the Craddock 200 ROI atlas are presented in the main text, and the results based on the Yeo 17 template are presented in Supporting Information. ROIs’ time series were extracted from preprocessed fMRI data, by taking the mean across all voxels within each ROI. Pearson correlation was computed between each pair of ROIs’ time series separately for each condition in each session, resulting in four 200 3 200 connectivity matrices for each subject (two for resting state and two for natural viewing). For each matrix, the correlation coefficients were transformed to z-scores using Fisher’s transformation, averaged across all subjects for each condition, and then reverted to Pearson’s r values to derive group-level connectivity matrices, following previous method [Vanderwal et al., 2015]. To quantitatively evaluate the differences between connectivity matrices under different conditions, we performed paired t-test on the connectivity matrices between the two conditions within the same session. The results were thresholded using an FDR-corrected P < 0.05.\n\nGraph Theoretical Analysis on ROI Matrices\nWe further derived graph theoretical measures from the ROI connectivity matrices. The fully connected ROI matrices were thresholded to determine the presence or absence of connections (edges) between ROIs (nodes). Weighted adjacency matrices were hence generated where each suprathreshold edge retained its correlation coefficient denoting edge weights, whereas subthreshold edges were assigned values of 0. To ensure robustness of the threshold chosen, we repeated our analyses using a serial of thresholds (Tr 5 0.1, 0.3, and 0.5). Additional analyses using sparsity thresholding method are presented in Supporting Information. Using Brain Connectivity Toolbox [Rubinov et al., 2009] and GRETNA Toolbox [Wang et al., 2015], graph metrics were derived from the weighted adjacency matrices, including degree centrality, clustering coefficient, efficiency, betweenness centrality, and an alternative centrality metric, eigenvector centrality [Zuo et al., 2012]. Degree centrality measures the connectedness of each node, computed as the weighted sum of all the edges connected to the node. Clustering coefficient measures the likelihood of the nodes tending to cluster together, calculated as the fraction that the number of edges actually exist to the number of all edges possibly exist. Efficiency represents the efficiency of information transfer, which is reciprocal to path length (the minimal number of edges necessary to traverse from one node to another). Betweenness centrality signifies the centrality of a node in the network, defined as the ratio of shortest paths in the whole graph that threads a certain node [Bullmore and Sporns, 2009]. Eigenvector centrality denotes the importance of a node (if the neighbors of a node are central within the network itself, the node is of high eigenvector centrality, namely of high importance), defined as the first eigenvector of the adjacent matrix [Lohmann et al., 2010; Zuo et al., 2012]."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 94,
+            "text": "Test–Retest Reliability of Functional Connectivity\nNetworks During Naturalistic fMRI Paradigms",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 96,
+            "end": 201,
+            "text": "Jiahui Wang,1 Yudan Ren,1 Xintao Hu,1 Vinh Thai Nguyen,2 Lei Guo,1\nJunwei Han,1* and Christine Cong Guo2*",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6700,
+            "end": 6704,
+            "text": "2017",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6712,
+            "end": 6729,
+            "text": "10.1002/hbm.23517",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6797,
+            "end": 6819,
+            "text": "Wiley Periodicals, Inc",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 354,
+            "end": 451,
+            "text": "Abstract: Functional connectivity analysis has become a powerful tool for probing the human brain",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1621,
+            "end": 1653,
+            "text": "Twenty right-handed participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1655,
+            "end": 1674,
+            "text": "11 females, 9 males",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1676,
+            "end": 1729,
+            "text": "aged between 21 and 31 years; mean age 27 6 2.7 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1628,
+            "end": 1640,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1973,
+            "end": 2052,
+            "text": "approved by the human ethics research\ncommittee of the University of Queensland",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2908,
+            "end": 2924,
+            "text": "3-T Siemens Trio",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3145,
+            "end": 3173,
+            "text": "repetition time (TR) 2200 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3175,
+            "end": 3195,
+            "text": "echo time\n(TE) 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3197,
+            "end": 3216,
+            "text": "flip angle (FA) 798",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3218,
+            "end": 3250,
+            "text": "field of view (FOV)\n192 3 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3309,
+            "end": 3324,
+            "text": "44 axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3330,
+            "end": 3343,
+            "text": "3 3 3 3 3 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2259,
+            "end": 2278,
+            "text": "8-min resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2332,
+            "end": 2351,
+            "text": "20-\nmin short movie",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2294,
+            "end": 2305,
+            "text": "eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3685,
+            "end": 3690,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3838,
+            "end": 3844,
+            "text": "DPARSF",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2340,
+            "end": 2375,
+            "text": "short movie “The Butterfly Circus.”",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3886,
+            "end": 3944,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3890,
+            "end": 3908,
+            "text": "first five volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4027,
+            "end": 4048,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3685,
+            "end": 3690,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4053,
+            "end": 4125,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3685,
+            "end": 3690,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4090,
+            "end": 4125,
+            "text": "six-parameter linear transformation",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4144,
+            "end": 4185,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3685,
+            "end": 3690,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4241,
+            "end": 4322,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4333,
+            "end": 4350,
+            "text": "Segment algorithm",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4333,
+            "end": 4350,
+            "text": "Segment algorithm",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4443,
+            "end": 4591,
+            "text": "6",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4584,
+            "end": 4590,
+            "text": "DARTEL",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4584,
+            "end": 4590,
+            "text": "DARTEL",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4940,
+            "end": 4954,
+            "text": "7",
+            "labels": [
+              "CompCor — Step Number"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4940,
+            "end": 4947,
+            "text": "CompCor",
+            "labels": [
+              "CompCor — Type"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4802,
+            "end": 4833,
+            "text": "first five\nprinciple components",
+            "labels": [
+              "CompCor — Parameters"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4959,
+            "end": 4987,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4959,
+            "end": 4969,
+            "text": "Friston-24",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4683,
+            "end": 4717,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4683,
+            "end": 4691,
+            "text": "bandpass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4702,
+            "end": 4716,
+            "text": "0.0083–0.15 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4722,
+            "end": 4731,
+            "text": "10",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5299,
+            "end": 5365,
+            "text": "11",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "FC / Graph analysis",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5578,
+            "end": 5614,
+            "text": "200 ROI\natlas based on Craddock 2012",
+            "labels": [
+              "Atlas definition"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "FC / Graph analysis",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5636,
+            "end": 5664,
+            "text": "17 ROI\natlas proposed by Yeo",
+            "labels": [
+              "Atlas definition"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "FC / Graph analysis",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5672,
+            "end": 5704,
+            "text": "ROIs’ time series were extracted",
+            "labels": [
+              "Time series ROI"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "FC / Graph analysis",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5788,
+            "end": 5859,
+            "text": "Pearson correlation was computed\nbetween each pair of ROIs’ time series",
+            "labels": [
+              "Compute connectivity"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "FC / Graph analysis",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6028,
+            "end": 6081,
+            "text": "transformed to z-scores using Fisher’s transformation",
+            "labels": [
+              "Connectivity normalization"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "FC / Graph analysis",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6390,
+            "end": 6495,
+            "text": "degree centrality, clustering coefficient, efficiency,\nbetweenness centrality, and eigenvector centrality",
+            "labels": [
+              "Graph measures"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "FC / Graph analysis",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6629,
+            "end": 6663,
+            "text": "thresholds \nTr = 0.1, 0.3, and 0.5",
+            "labels": [
+              "Sparsity control"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6983,
+            "end": 7168,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ],
+          "id": "m0057"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6983,
+            "end": 7168,
+            "text": "Two previous established atlases were used: the 200 ROI atlas based on Craddock 2012 parcellation [Craddock et al., 2012] and the 17 ROI atlas proposed by Yeo et al. [Yeo et al., 2011].",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7375,
+            "end": 7490,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ],
+          "id": "m0059"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7375,
+            "end": 7490,
+            "text": "ROIs’ time series were extracted from preprocessed fMRI data, by taking the mean across all voxels within each ROI.",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7491,
+            "end": 7729,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7491,
+            "end": 7729,
+            "text": "Pearson correlation was computed between each pair of ROIs’ time series separately for each condition in each session, resulting in four 200 3 200 connectivity matrices for each subject (two for resting state and two for natural viewing).",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7730,
+            "end": 8021,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0063"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7730,
+            "end": 8021,
+            "text": "For each matrix, the correlation coefficients were transformed to z-scores using Fisher’s transformation, averaged across all subjects for each condition, and then reverted to Pearson’s r values to derive group-level connectivity matrices, following previous method [Vanderwal et al., 2015].",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8022,
+            "end": 8230,
+            "text": "5",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0065"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8022,
+            "end": 8230,
+            "text": "To quantitatively evaluate the differences between connectivity matrices under different conditions, we performed paired t-test on the connectivity matrices between the two conditions within the same session.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8745,
+            "end": 8870,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0067"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8745,
+            "end": 8870,
+            "text": "To ensure robustness of the threshold chosen, we repeated our analyses using a serial of thresholds (Tr 5 0.1, 0.3, and 0.5).",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8419,
+            "end": 8550,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0069"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8419,
+            "end": 8550,
+            "text": "The fully connected ROI matrices were thresholded to determine the presence or absence of connections (edges) between ROIs (nodes).",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8551,
+            "end": 8744,
+            "text": "Weighted adjacency matrices were hence generated where each suprathreshold edge retained its correlation coefficient denoting edge weights, whereas subthreshold edges were assigned values of 0.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8967,
+            "end": 9297,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0072"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8967,
+            "end": 9297,
+            "text": "Brain Connectivity Toolbox; GRETNA Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9298,
+            "end": 9425,
+            "text": "Degree centrality measures the connectedness of each node, computed as the weighted sum of all the edges connected to the node.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9426,
+            "end": 9624,
+            "text": "Clustering coefficient measures the likelihood of the nodes tending to cluster together, calculated as the fraction that the number of edges actually exist to the number of all edges possibly exist.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9625,
+            "end": 9799,
+            "text": "Efficiency represents the efficiency of information transfer, which is reciprocal to path length (the minimal number of edges necessary to traverse from one node to another).",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9800,
+            "end": 9988,
+            "text": "Betweenness centrality signifies the centrality of a node in the network, defined as the ratio of shortest paths in the whole graph that threads a certain node [Bullmore and Sporns, 2009].",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9989,
+            "end": 10281,
+            "text": "Eigenvector centrality denotes the importance of a node (if the neighbors of a node are central within the network itself, the node is of high eigenvector centrality, namely of high importance), defined as the first eigenvector of the adjacent matrix [Lohmann et al., 2010; Zuo et al., 2012].",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8231,
+            "end": 8292,
+            "text": "The results were thresholded using an FDR-corrected P < 0.05.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0079"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "data": {
+    "title": "The Musical Structure of Time in the Brain: Repetition, Rhythm, and Harmony in fMRI During Rest and Passive Movie Viewing",
+    "text": "Graphs\nAssociation matrices were constructed using partial correlations\nbetween all voxels in each image series, while controlling for\ntheir mean activation (Marrelec et al., 2007; Smith et al.,\n2011; Hutchison et al., 2013; Varoquaux and Craddock, 2013;\nEpskamp and Fried, 2018). Each matrix was converted to\nbinary (undirected) connection graph by thresholding the matrix\nto preserve the top 5% of inter-node values (Rubinov and\nSporns, 2010). These binary association matrices were the basis\nfor all subsequent analyses. In traditional network analysis,\nthese steps would be applied to spatially distinct regions\n(usually anatomically defined regions of interest). Here, the\nentities to be linked are not spatial but temporal. Instead\nof measuring correlations of time series between regions, we\nmeasure correlations of spatial patterns between time points. The\noverall analysis is sketched in Figure 1, with a division between\na space-first parcellation (A) and a temporal parcellation (B).\nEach whole-brain image is a node (a “moment”) in a temporally\nconnected network, to be analyzed with graph theoretic methods.\nAll the measures described herein were assessed for significance\nby contrast with baseline random images that preserve the degree\ndistribution of the original data (“null-hypothesis networks,”\nRubinov and Sporns, 2010). That is, the distribution of the\nnumbers of links originating from nodes remains constant while\nthe pairings of the connection matrix are varied randomly\n(Maslov and Sneppen, 2002). The randomizing function and\nother functions are found in the Brain Connectivity Toolbox\n(BCT4 Rubinov and Sporns, 2010). In all cases except where\nnoted 100 baseline association matrices were generated for each\nsubject to be contrasted, subject by subject, with the actual data.\nAppropriate corrections for multiple comparisons were applied\nusing the Bonferroni method.\n\nTheme and Modularity\nModularity in network analysis denotes the subdivision of\nnetwork nodes into non-overlapping groups where similarity is\ngreatest within the group, and minimized between the groups\n(Rubinov and Sporns, 2010). The temporal analog of the\nmodule is the theme, which comprises moments of similarity\namong the full brain images, as assessed through the association\nmatrix described above. A temporal theme is conceptually quite\ndifferent from a spatial module; nonetheless various measures\nof modularity can be applied. Modularity was measured using\ntwo standard measures (Girvan and Newman, 2002; Newman,\n2006; Reichardt and Bornholdt, 2006; Blondel et al., 2008),\nalso implemented through BCT. Modularity assessments with\nthese two algorithms were very similar, and so further analysis\nwas based in the Louvain group method of Blondel et al.\n(2008). In addition to providing the optimal group divisions,\nthe modularity algorithms calculate a statistic quantifying the\ndegree to which the network can be subdivided into groups\nwith high ingroup similarity and low outgroup similarity (Kaiser,\n2011). We compare this statistic for each subject with the same\nstatistic generated for 18,000 surrogate association matrices (100\nper subject). Similar analyses, including baseline contrasts, were\nconducted for both the rest and movie conditions."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 51,
+            "end": 71,
+            "text": "1",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 51,
+            "end": 71,
+            "text": "partial correlations",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 119,
+            "end": 156,
+            "text": "controlling for\ntheir mean activation",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 310,
+            "end": 346,
+            "text": "2",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 310,
+            "end": 346,
+            "text": "binary (undirected) connection graph",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 350,
+            "end": 373,
+            "text": "3",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 350,
+            "end": 373,
+            "text": "thresholding the matrix",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 390,
+            "end": 417,
+            "text": "top 5% of inter-node values",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2715,
+            "end": 2735,
+            "text": "4",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2581,
+            "end": 2604,
+            "text": "BCT",
+            "labels": [
+              "Network definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2715,
+            "end": 2735,
+            "text": "Louvain group method",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2430,
+            "end": 2453,
+            "text": "5",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2581,
+            "end": 2604,
+            "text": "BCT",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2820,
+            "end": 2863,
+            "text": "modularity algorithms calculate a statistic",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1203,
+            "end": 1225,
+            "text": "6",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1585,
+            "end": 1611,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Result aggregation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1189,
+            "end": 1225,
+            "text": "contrast with baseline random images",
+            "labels": [
+              "Result aggregation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1677,
+            "end": 1710,
+            "text": "100 baseline association matrices",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3092,
+            "end": 3129,
+            "text": "18,000 surrogate association matrices",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1875,
+            "end": 1892,
+            "text": "Bonferroni method",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

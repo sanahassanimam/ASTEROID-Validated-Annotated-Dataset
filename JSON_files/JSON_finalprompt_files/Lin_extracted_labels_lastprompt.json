@@ -1,0 +1,735 @@
+{
+  "data": {
+    "text": "Altered Brain Connectivity Patterns of Individual Differences in Insightful Problem Solving\nFrontiers in Behavioral Neuroscience. ORIGINAL RESEARCH published: 11 May 2022.\nAuthors: Jiabao Lin, Yajue Chen, Jiushu Xie, Lei Mo.\ndoi: 10.3389/fnbeh.2022.905806\n\nParticipants\nSixty-two healthy native Mandarin Chinese speakers (28 males/34 females, aged 18–27 years old) were selected as participants with an average age of 20.93 (SD = 2.07). Only right-handed respondents were included as participants. Inclusion criteria: no history of psychiatric illness, no brain injury, normal vision, and no history of neurologic disease. This research got ethical approval from Research Ethics Review Board of South China Normal University. All volunteers signed a consent form before participation.\n\nThe Assessment of Individual Differences in Insight Problem Solving\nIndividual differences of IPS were evaluated using the insightful Mandarin character chunk decomposition task, which consists of two tasks (the low insightful task and high insightful task). In the low insight task, participants removed a compound character from the given character to alter it into the target character; in the high insight task, participants needed to remove an isolated character from the given character in order to obtain the target character.\n\nMagnetic Resonance Imaging Data Acquisition\nImage collection was conducted with a 3.0 T Siemens Tim Trio MRI scanner with a 12-channel head coil. Resting-state images used a gradient echo-planar imaging sequence with parameters: Repetition time = 2000 ms; echo time = 30 ms; image thickness = 3.5 mm; field of view = 204 × 204 mm2; flip angle = 90°; data matrix = 64 × 64; 33 slices for a full brain.\n\nMRI Data Process — Data Preprocess\nThe image data were preprocessed and analyzed using the DPABI toolbox. First, the first ten images were removed. For the rest of 230 images, slice-timing correction and head motion movement correction were carried out. All images fulfilled the head motion criteria: ≤ 2.5 mm translation; ≤ 2.5° rotation. Then, the volumes were co-registered with the structural ones, and standardized into a voxel size of 3 × 3 × 3 mm3 with a standard MNI template. Subsequently, all the volumes were performed linear detrending and regressed out head motion parameters (Friston 24-parameter model), white matter and cerebrospinal fluid signal. Mean framewise displacement (FD) was acquired and then employed as a factor of no interest to be regressed out in group-level analyses. Finally, temporal bandpass filtering (0.01–0.08 Hz) was conducted to minimize high-frequency physiological noise. Notably, in order to calculate the degree centrality (DC), we didn’t perform smoothing; conversely, when evaluating the resting-state functional connectivity (FC), all the volumes were smoothed with a 4 mm full-width at half-maximum (FWHM).\n\nDATA AVAILABILITY STATEMENT\nThe raw data supporting the conclusions of this article will be made available by the authors, without undue reservation.\n\nETHICS STATEMENT\nThe studies involving human participants were reviewed and approved by Research Ethics Review Board of South China Normal University. The participants provided their written informed consent to participate in this study."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 91,
+            "text": "Altered Brain Connectivity Patterns of Individual Differences in Insightful Problem Solving",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 159,
+            "end": 170,
+            "text": "11 May 2022",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 181,
+            "end": 191,
+            "text": "Jiabao Lin",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 230,
+            "end": 255,
+            "text": "10.3389/fnbeh.2022.905806",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2879,
+            "end": 2906,
+            "text": "DATA AVAILABILITY STATEMENT",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1403,
+            "end": 1425,
+            "text": "3.0 T Siemens Tim Trio",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1694,
+            "end": 1703,
+            "text": "33 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1596,
+            "end": 1620,
+            "text": "image thickness = 3.5 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1653,
+            "end": 1669,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1622,
+            "end": 1651,
+            "text": "field of view = 204 × 204 mm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1550,
+            "end": 1575,
+            "text": "Repetition time = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1577,
+            "end": 1594,
+            "text": "echo time = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2150,
+            "end": 2177,
+            "text": "voxel size of 3 × 3 × 3 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1467,
+            "end": 1487,
+            "text": "Resting-state images",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 270,
+            "end": 320,
+            "text": "Sixty-two healthy native Mandarin Chinese speakers",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1814,
+            "end": 1827,
+            "text": "DPABI toolbox",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 270,
+            "end": 341,
+            "text": "Sixty-two healthy native Mandarin Chinese speakers (28 males/34 females",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 322,
+            "end": 341,
+            "text": "28 males/34 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 343,
+            "end": 363,
+            "text": "aged 18–27 years old",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 437,
+            "end": 480,
+            "text": "Only right-handed respondents were included",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 498,
+            "end": 622,
+            "text": "Inclusion criteria: no history of psychiatric illness, no brain injury, normal vision, and no history of neurologic disease.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 663,
+            "end": 724,
+            "text": "Research Ethics Review Board of South China Normal University",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1070,
+            "end": 1319,
+            "text": "participants removed a compound character from the given character to alter it into the target character; in the high insight task, participants needed to remove an isolated character from the given character in order to obtain the target character.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 909,
+            "end": 963,
+            "text": "insightful Mandarin character chunk decomposition task",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1840,
+            "end": 1869,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1814,
+            "end": 1827,
+            "text": "DPABI toolbox",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Type"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1840,
+            "end": 1869,
+            "text": "first ten images",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1899,
+            "end": 1922,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1814,
+            "end": 1827,
+            "text": "DPABI toolbox",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters",
+            "Type"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1927,
+            "end": 1958,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1814,
+            "end": 1827,
+            "text": "DPABI toolbox",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Type"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2024,
+            "end": 2061,
+            "text": "≤ 2.5 mm translation; ≤ 2.5° rotation",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2086,
+            "end": 2124,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1814,
+            "end": 1827,
+            "text": "DPABI toolbox",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters",
+            "Type"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2130,
+            "end": 2177,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1814,
+            "end": 1827,
+            "text": "DPABI toolbox",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Type"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2130,
+            "end": 2177,
+            "text": "3 × 3 × 3 mm3; MNI template",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2253,
+            "end": 2270,
+            "text": "6",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1814,
+            "end": 1827,
+            "text": "DPABI toolbox",
+            "labels": [
+              "Temporal detrending — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters",
+            "Type"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2275,
+            "end": 2340,
+            "text": "7",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1814,
+            "end": 1827,
+            "text": "DPABI toolbox",
+            "labels": [
+              "motion regression — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2278,
+            "end": 2339,
+            "text": "regressed out head motion parameters (Friston 24-parameter model)",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2342,
+            "end": 2385,
+            "text": "8",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1814,
+            "end": 1827,
+            "text": "DPABI toolbox",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters",
+            "Type"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2387,
+            "end": 2419,
+            "text": "9",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters",
+            "Software",
+            "Type"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2532,
+            "end": 2574,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1814,
+            "end": 1827,
+            "text": "DPABI toolbox",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2532,
+            "end": 2559,
+            "text": "bandpass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2561,
+            "end": 2573,
+            "text": "0.01–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2822,
+            "end": 2876,
+            "text": "11",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1814,
+            "end": 1827,
+            "text": "DPABI toolbox",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Type"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2838,
+            "end": 2876,
+            "text": "4 mm FWHM",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

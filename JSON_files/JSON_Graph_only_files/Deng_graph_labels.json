@@ -1,0 +1,193 @@
+{
+  "data": {
+    "text": "The network nodes were defined by segmenting the data into 90 regions (45 regions per hemisphere) using the AAL template (Tzourio-Mazoyer et al., 2002). For each participant, the time series of each region was extracted by averaging the time series across all voxels in the region. Pearson's correlation coefficients between the time series of each possible pair of the 90 regions were subsequently calculated to generate a symmetric correlation matrix. Each correlation matrix was thresholded to obtain an undirected binarized graph in which nodes represented regions and the edges represented connections. A fixed network cost value (defined as the total number of edges in a network divided by the maximum possible number of edges) was used to threshold each correlation matrix. This approach ensured that each network had the same number of edges or wiring cost. For a binary graph G w with N nodes, the edge between the nodes ( I,j ) is represented by a ij , which is either 1 if an edge exists between these two nodes ( a ij = 1 if |r ij | r c , where r ij represents the correlation between nodes i and j and r c represents the cost threshold), or 0 if it does not (|r ij | < r c ). To ensure that the results were not dependent on a specific cost value, each correlation matrix was thresholded over a range of .10-.40 at intervals of .02. The parcellation scheme of the AAL-1024 atlas (512 ROIs for each hemisphere) was based on the method reported in previous studies (Fornito, Zalesky, & Bullmore, 2010; Zalesky et al., 2010)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 100,
+            "end": 120,
+            "text": "AAL template",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 121,
+            "end": 127,
+            "text": "template",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 150,
+            "end": 165,
+            "text": "time series of each region",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 170,
+            "end": 185,
+            "text": "averaging the time series",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 230,
+            "end": 245,
+            "text": "Pearson's correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 300,
+            "end": 315,
+            "text": "fixed network cost value",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 320,
+            "end": 335,
+            "text": ".10-.40 at intervals of .02",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 350,
+            "end": 365,
+            "text": "undirected binarized graph",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 380,
+            "end": 395,
+            "text": "correlation matrix",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 400,
+            "end": 415,
+            "text": "binary graph G w",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 420,
+            "end": 435,
+            "text": "N nodes",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 440,
+            "end": 455,
+            "text": "a ij",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 460,
+            "end": 475,
+            "text": "r ij",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 480,
+            "end": 495,
+            "text": "r c",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{ "data": { "text": "Task-specific functional connectivity estimation. After the functional data were preprocessed, task-specific timecourses were extracted for each task and each subject from a set of 264 nodes identified in a meta-analysis and resting-state parcellation study by Power and colleagues (2011). To create task-specific timecourses, we excised 38 s (19 TRs) of data from each task block (beginning 10 s after cue onset and ending 2 s after the offset of the fourth trial) and concatenated these segments across the 24 blocks of each task condition, resulting in 456 TRs of data for each task. We then averaged the timecourses within all voxels of each node, and then correlated these mean timecourses across all pairs of nodes to yield a 264 × 264 correlation matrix for each task and each subject. To improve normality and facilitate statistical testing, each subject's matrix of Pearson's r values was Fisher-transformed before further analysis.\n\nGraph theoretic analysis. We used the Brain Connectivity Toolbox (Rubinov and Sporns, 2010) to estimate several graph theoretic metrics of interest from each correlation matrix. The graph theory metrics were measured at a range of sparsity levels for each task, ranging from a lower bound of the top 4% of correlation strengths to an upper bound of the top 20% of correlation strengths, in 2% intervals (including 6, 8, 10, 12, 14, 16, and 18%). Clustering and path length were normalized by dividing the obtained metric with the average metric obtained in 10 randomly initialized networks. All graph theory metrics were aggregated across the different sparsity thresholds by calculating the area under the curve (AUC). Modularity (Q) was calculated for all three tasks and all subjects using the Louvain algorithm (Blondel et al., 2008). Small-worldness was defined as normalized clustering divided by normalized path length." }, "annotations": [ { "result": [ { "from_name": "Atlas definition", "to_name": "text", "type": "labels", "value": { "start": 129, "end": 193, "text": "parcellation study by Power and colleagues (2011)", "labels": ["Atlas definition — Parameters"] } }, { "from_name": "Atlas definition", "to_name": "text", "type": "labels", "value": { "start": 165, "end": 185, "text": "parcellation study", "labels": ["Atlas definition — Type"] } }, { "from_name": "Atlas definition", "to_name": "text", "type": "labels", "value": { "start": 0, "end": 4, "text": "1", "labels": ["Atlas definition — Step Number"] } },
+    {
+      "from_name": "ROI definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 118, "end": 128, "text": "264 nodes", "labels": ["ROI definition — Parameters"] }
+    },
+    {
+      "from_name": "ROI definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 5, "end": 9, "text": "2", "labels": ["ROI definition — Step Number"] }
+    },
+
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 408, "end": 446, "text": "averaged the timecourses within all voxels", "labels": ["Time series ROI — Algorithm"] }
+    },
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 243, "end": 257, "text": "38 s (19 TRs)", "labels": ["Time series ROI — Parameters"] }
+    },
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 353, "end": 361, "text": "456 TRs", "labels": ["Time series ROI — Parameters"] }
+    },
+    {
+      "from_name": "Time series ROI",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 10, "end": 14, "text": "3", "labels": ["Time series ROI — Step Number"] }
+    },
+
+    {
+      "from_name": "Combine block",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 309, "end": 355, "text": "concatenated these segments across the 24 blocks", "labels": ["Combine block — Algorithm/Type"] }
+    },
+    {
+      "from_name": "Combine block",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 343, "end": 351, "text": "24 blocks", "labels": ["Combine block — Parameters"] }
+    },
+    {
+      "from_name": "Combine block",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 15, "end": 19, "text": "4", "labels": ["Combine block — Step Number"] }
+    },
+
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 458, "end": 476, "text": "correlated these mean timecourses", "labels": ["Compute connectivity — Algorithm"] }
+    },
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 528, "end": 548, "text": "264 × 264 correlation", "labels": ["Compute connectivity — Parameters"] }
+    },
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 601, "end": 617, "text": "Pearson's r values", "labels": ["Compute connectivity — Algorithm"] }
+    },
+    {
+      "from_name": "Compute connectivity",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 20, "end": 24, "text": "5", "labels": ["Compute connectivity — Step Number"] }
+    },
+
+    {
+      "from_name": "Connectivity normalization",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 641, "end": 659, "text": "Fisher-transformed", "labels": ["Connectivity normalization — Algorithm"] }
+    },
+    {
+      "from_name": "Connectivity normalization",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 25, "end": 29, "text": "6", "labels": ["Connectivity normalization — Step Number"] }
+    },
+
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 775, "end": 806, "text": "Brain Connectivity Toolbox", "labels": ["Graph measures — Software"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1179, "end": 1189, "text": "modularity", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Network definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1217, "end": 1234, "text": "Louvain algorithm", "labels": ["Network definition — Algorithm"] }
+    },
+    {
+      "from_name": "Network definition",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 30, "end": 34, "text": "7", "labels": ["Network definition — Step Number"] }
+    },
+
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 930, "end": 1008, "text": "top 4% ... top 20% ... in 2% intervals (including 6, 8, 10, 12, 14, 16, and 18%)", "labels": ["Sparsity control — Parameters"] }
+    },
+    {
+      "from_name": "Sparsity control",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 35, "end": 39, "text": "8", "labels": ["Sparsity control — Step Number"] }
+    },
+
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1038, "end": 1074, "text": "Clustering and path length were normalized", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1150, "end": 1180, "text": "Small-worldness was defined", "labels": ["Graph measures — Algorithm"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1113, "end": 1136, "text": "10 randomly initialized", "labels": ["Graph measures — Parameters"] }
+    },
+    {
+      "from_name": "Graph measures",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 40, "end": 44, "text": "9", "labels": ["Graph measures — Step Number"] }
+    },
+
+    {
+      "from_name": "Result aggregation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 1082, "end": 1127, "text": "area under the curve (AUC)", "labels": ["Result aggregation — Algorithm/Type"] }
+    },
+    {
+      "from_name": "Result aggregation",
+      "to_name": "text",
+      "type": "labels",
+      "value": { "start": 45, "end": 49, "text": "10", "labels": ["Result aggregation — Step Number"] }
+    }
+  ]
+}
+] }

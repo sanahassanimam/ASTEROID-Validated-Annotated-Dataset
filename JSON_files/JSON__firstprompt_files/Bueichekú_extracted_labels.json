@@ -1,0 +1,823 @@
+{
+  "data": {
+    "text": "Participants\n\nThirty-eight healthy undergraduate students from the\nUniversitat Jaume I participated in this study and were paid\nfor their participation. All the participants were right-handed\n(Oldfield 1971), had normal or corrected-to-normal vision,\nand reported no neurological or psychiatric history, or past\nor current use of any drugs. Participants were randomly\nassigned to a trained group (N = 19, 10 men; age: M = 20.84\nSD = 1.45) or to a control group (N = 19, 10 men; age: M =\n20.84, SD = 2.01). A between-groups t-test was used to deter-\nmine that the experimental groups did not differ in age\n(t(36) = 0 p = 1). Intellectual level was evaluated with the\nMatrix Reasoning Test (WAIS-III-R) (Trained group: M =\n21.58 SD = 2.11; Control group: M = 21.74 SD = 1.49). A\nbetween-groups t-test was used to determine that the experi-\nmental groups did not differ in intellectual level (t(36) = −0.27\np = 0.79). All the participants provided written informed con-\nsent prior to scanning. The study was approved by the Ethics\nCommittee of the Universitat Jaume I.\n\n\nExperiment\n\nWe used a letter-based consistent mapping VST, which was\nadapted to a block design and presented with E-Prime\nSoftware (Schneider et al. 2 002), and in scanner it was visu-\nally presented through MRI-compatible goggles (VisuaStim,\nResonance Technology, Inc., Northridge, CA, USA).\n\nThe task consisted in a control condition (a detection task) and\ntwo visual search conditions (two sets of targets: B,C,D,F,G,H\nand L,M,N,P,Q,R), which were counterbalanced. For the search\ntasks, distractors were: J,K,Ñ,S,T,V,W,X,Y,Z. Each condition\nhave 14 blocks with 12 trials (300 ms of a fixation point,\n1500 ms of a search frame, and 200 ms of a blank screen),\nfollowed by a passive block, in which the screen remained\ncompletely blank (8000 ms). Stimuli were arranged circularly\naround a fixation cross. In control condition, the search frame\nwere either a six A-letters array (target) or a six X-letters (no-\ntarget). In search conditions, the search frame consisted of the\npresentation of either six distractors or five distractors and one\ntarget. The frames were counterbalanced, and in all the blocks, 50\n% of the trials constituted a target-present frame.\n\nIn all conditions, the participants gave manual responses\nonly with their right hand: target detection was indicated with\ntheir right thumb, and target absence with their right forefinger\n(using MRI-compatible response-grips; NordicNeuroLab,\nBergen, Norway). Participants were\nasked to answer as quickly as possible, but without\ncompromising accuracy. Stimulus presentation timing and du-\nration, and participants’ accuracy and reaction times (RTs) to\neach stimulus were saved in the E-Prime’s logfile.\n\nThe task was identical before and after training, and it lasted 25 min.\n\n\nImage acquisition\n\nThe fMRI data were acquired in a 1.5 T Siemens Avanto\nscanner (Erlangen, Germany). The same protocol was used\nduring the Pre- and Post-training sessions. All the participants\nwere placed in the scanner in the supine position. Fixation\ncushions were used to reduce head motion. A gradient-echo\nT2*-weighted echo-planar MR sequence was used to obtain\n602 volumes for the fMRI task (29 interleaved ascending\nslices, 3.5 × 3.5 mm in-plane voxel size, slice thickness of\n3.6 mm, interslice gap of 0.4 mm, TR = 2500 ms, TE =\n50 ms, flip angle 90 °, 64 × 64 matrix). Prior to task-fMRI\ndata acquisition, one high-resolution T1-weighted MPRAGE\nanatomical image was obtained per participant (TR =\n2200 ms, TE = 3.8 ms, 256 × 256 × 160 matrix, 1 × 1 ×\n1 mm in-plane voxel size). All the scanner acquisitions were\nperformed in parallel to the anterior commissure-posterior\ncommissure plane (AC-PC), and they covered the entire brain.\n\n\nFunctional MRI connectivity pre-processing analysis\n\nDPARSF Advanced software (Chao-Gan and Yu-Feng\n2010) was used for pre-processing. Standard pre-processing\nwas conducted, which included the correction of the slice\ntiming differences for interleaved ascending acquisitions\n(using the middle slice, which was the 29th, as the reference\nslice) and a two-pass procedure in realignment (first registra-\ntion to the first image, then registration to the mean image) to\ncorrect head motion during acquisition. None of the partici-\npants had more than 2.0 mm of maximum displacement in any\ndirection or 2.0° of any angular motion while the scan lasted.\nIn order to control the movement effect throughout the exper-\niment, the Root Mean Squared movement values (RMS, of\ntranslation and rotation parameters) were used to conduct a\nrepeated-measures 2 × 2 ANOVA with the Experimental\nGroup (Trained group vs. Control group) as the between-\nsubjects factor, and Session (Pre-training session vs. Post-\ntraining session) as the within-subjects factor. No significant\ndifferences were found (RMS: F(1,36) = 0.061 p = 0.806).\nThen, within the nuisance regression step, and in order to\nreduce respiratory and cardiac effects on the blood-\noxygenation level-dependent (BOLD) signal, several sources\nof spurious variance were removed: the linear trend in the time\nseries, six parameters from rigid body head motion (obtained\nfrom motion correction), and three parameters corresponding\nto the global mean signal, the white matter signal, and the\ncerebrospinal fluid signal (Biswal et al. 1995). Spatial normal-\nization to the Montreal Neurological Institute (MNI) space\n(3 mm3) was conducted using echo-planar image (EPI) tem-\nplates. The temporal band-pass filtering step removed low and\nhigh frequency drift effects (retaining the fMRI signal be-\ntween 0.01–0.08 Hz). Finally, for computational efficiency,\nthe data were down-sampled from a 3 mm to a 6 mm voxel\nsize by means of the SPM Image Calculator (ImCalc Toolbox,\nhttp://robjellis.net/tools.html).\n\n\nPost-processing analysis: Individual local and distant degree maps\n\nDegree analyses were used to study the effects of training\non task-related functional connectivity and its spatial distribu-\ntion. At the individual level, a whole-brain matrix Pearson Correlation Coefficient\nbetween each voxel pair’s time course was estimated for each\nparticipant and session. A mask of 6332 voxels was used that\ncovered the entire brain. ... we used the positive correlations in the following\nsteps of the analysis, and we removed the negative r-values due to their controversial\ninterpretation in functional connectivity MRI.\n\n\nDegree map visualization and network layout\n\nFirstly, the degree maps’ images were spatially smoothed with\nan isotropic Gaussian kernel of 6 mm, full-width at half-\nmaximum (FWHM), by means of SPM8.\n\n\nOverlap analysis using network parcellation maps\n\nThe 7-network estimate parcellation liberal mask of the hu-\nman cerebral cortex (Yeo et al. 2011) was applied to our de-\ngree maps in order to classify and describe the results.\n\n\nBrain behavior correlation analysis — ROI selection\n\n... we selected the three areas within the VST map that showed\ngreatest enhancement in connectivity for the trained group\ncompared to the control group: the right dorsolateral prefron-\ntal cortex (rDLPFC, MNI: x = 42 y = 38 z = 38 BA 46), the\nright posterior parietal cortex (rPPC, MNI: x = 18 y = −70 z =\n56, BA 7), and the precuneus (MNI: x = 12 y = −64, z = 38).\nAround their coordinates, a binary 6-mm radius sphere mask,\nor region of interest (ROI), was defined using SPM Wake\nForest University PickAtlas software (Maldjian et al. 2003).\n\n\nPublication\n\nVisual search task immediate training effects on task-related functional connectivity\nElisenda Bueichekú, César Ávila, Anna Miró-Padilla, Jorge Sepulcre\nBrain Imaging and Behavior (2019) 13:1566–1579\nhttps://doi.org/10.1007/s11682-018-9993-y\nSpringer Nature"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7454,
+            "end": 7539,
+            "text": "Visual search task immediate training effects on task-related functional connectivity",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7540,
+            "end": 7558,
+            "text": "Elisenda Bueichekú",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7560,
+            "end": 7571,
+            "text": "César Ávila",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7573,
+            "end": 7590,
+            "text": "Anna Miró-Padilla",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7592,
+            "end": 7606,
+            "text": "Jorge Sepulcre",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7607,
+            "end": 7653,
+            "text": "Brain Imaging and Behavior (2019) 13:1566–1579",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7654,
+            "end": 7695,
+            "text": "https://doi.org/10.1007/s11682-018-9993-y",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7454,
+            "end": 7539,
+            "text": "Visual search task immediate training effects on task-related functional connectivity",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2861,
+            "end": 2881,
+            "text": "1.5 T Siemens Avanto",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3208,
+            "end": 3232,
+            "text": "29 interleaved ascending",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3275,
+            "end": 3300,
+            "text": "slice thickness of\n3.6 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3302,
+            "end": 3326,
+            "text": "interslice gap of 0.4 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3354,
+            "end": 3369,
+            "text": "flip angle 90 °",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3328,
+            "end": 3340,
+            "text": "TR = 2500 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3342,
+            "end": 3352,
+            "text": "TE =\n50 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3241,
+            "end": 3273,
+            "text": "3.5 × 3.5 mm in-plane voxel size",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2735,
+            "end": 2806,
+            "text": "The task was identical before and after training, and it lasted 25 min.",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3397,
+            "end": 3406,
+            "text": "task-fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14,
+            "end": 57,
+            "text": "Thirty-eight healthy undergraduate students",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3806,
+            "end": 3830,
+            "text": "DPARSF Advanced software",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1617,
+            "end": 1641,
+            "text": "14 blocks with 12 trials",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1643,
+            "end": 1726,
+            "text": "300 ms of a fixation point,\n1500 ms of a search frame, and 200 ms of a blank screen",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1743,
+            "end": 1813,
+            "text": "passive block, in which the screen remained\ncompletely blank (8000 ms)",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2508,
+            "end": 2582,
+            "text": "asked to answer as quickly as possible, but without\ncompromising accuracy.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1457,
+            "end": 1505,
+            "text": "two sets of targets: B,C,D,F,G,H\nand L,M,N,P,Q,R",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2119,
+            "end": 2229,
+            "text": "The frames were counterbalanced, and in all the blocks, 50\n% of the trials constituted a target-present frame.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 14,
+            "end": 57,
+            "text": "Thirty-eight healthy undergraduate students",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 413,
+            "end": 437,
+            "text": "age: M = 20.84\nSD = 1.45",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 153,
+            "end": 191,
+            "text": "All the participants were right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 405,
+            "end": 411,
+            "text": "10 men",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 209,
+            "end": 340,
+            "text": "had normal or corrected-to-normal vision,\nand reported no neurological or psychiatric history, or past\nor current use of any drugs.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 991,
+            "end": 1065,
+            "text": "The study was approved by the Ethics\nCommittee of the Universitat Jaume I.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2632,
+            "end": 2733,
+            "text": "participants’ accuracy and reaction times (RTs) to\neach stimulus were saved in the E-Prime’s logfile.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3946,
+            "end": 4027,
+            "text": "correction of the slice\ntiming differences for interleaved ascending acquisitions",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3806,
+            "end": 3830,
+            "text": "DPARSF Advanced software",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3946,
+            "end": 4027,
+            "text": "correction of the slice\ntiming differences for interleaved ascending acquisitions",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "value_text_override": "1"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4028,
+            "end": 4096,
+            "text": "(using the middle slice, which was the 29th, as the reference\nslice)",
+            "labels": [
+              "Slice timing correction — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4103,
+            "end": 4215,
+            "text": "two-pass procedure in realignment (first registra-\ntion to the first image, then registration to the mean image)",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3806,
+            "end": 3830,
+            "text": "DPARSF Advanced software",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4103,
+            "end": 4215,
+            "text": "two-pass procedure in realignment (first registra-\ntion to the first image, then registration to the mean image)",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "value_text_override": "2"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4884,
+            "end": 4903,
+            "text": "nuisance regression",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5022,
+            "end": 5309,
+            "text": "several sources\nof spurious variance were removed: the linear trend in the time\nseries, six parameters from rigid body head motion (obtained\nfrom motion correction), and three parameters corresponding\nto the global mean signal, the white matter signal, and the\ncerebrospinal fluid signal",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4884,
+            "end": 4903,
+            "text": "nuisance regression",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "value_text_override": "3"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3806,
+            "end": 3830,
+            "text": "DPARSF Advanced software",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5332,
+            "end": 5471,
+            "text": "Spatial normal-\nization to the Montreal Neurological Institute (MNI) space\n(3 mm3) was conducted using echo-planar image (EPI) tem-\nplates.",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3806,
+            "end": 3830,
+            "text": "DPARSF Advanced software",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5332,
+            "end": 5471,
+            "text": "Spatial normal-\nization to the Montreal Neurological Institute (MNI) space\n(3 mm3) was conducted using echo-planar image (EPI) tem-\nplates.",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "value_text_override": "4"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5407,
+            "end": 5414,
+            "text": "(3 mm3)",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5476,
+            "end": 5605,
+            "text": "temporal band-pass filtering step removed low and\nhigh frequency drift effects (retaining the fMRI signal be-\ntween 0.01–0.08 Hz)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5476,
+            "end": 5605,
+            "text": "temporal band-pass filtering step removed low and\nhigh frequency drift effects (retaining the fMRI signal be-\ntween 0.01–0.08 Hz)",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "value_text_override": "5"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5592,
+            "end": 5604,
+            "text": "0.01–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3806,
+            "end": 3830,
+            "text": "DPARSF Advanced software",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6495,
+            "end": 6610,
+            "text": "spatially smoothed with\nan isotropic Gaussian kernel of 6 mm, full-width at half-\nmaximum (FWHM), by means of SPM8.",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6605,
+            "end": 6609,
+            "text": "SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6495,
+            "end": 6610,
+            "text": "spatially smoothed with\nan isotropic Gaussian kernel of 6 mm, full-width at half-\nmaximum (FWHM), by means of SPM8.",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "value_text_override": "6"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6667,
+            "end": 6698,
+            "text": "7-network estimate parcellation",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6744,
+            "end": 6759,
+            "text": "Yeo et al. 2011",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7325,
+            "end": 7362,
+            "text": "region of interest (ROI), was defined",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7290,
+            "end": 7414,
+            "text": "binary 6-mm radius sphere mask,\nor region of interest (ROI), was defined using SPM Wake\nForest University PickAtlas software",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6020,
+            "end": 6124,
+            "text": "a whole-brain matrix Pearson Correlation Coefficient\nbetween each voxel pair’s time course was estimated",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6303,
+            "end": 6335,
+            "text": "we removed the negative r-values",
+            "labels": [
+              "Negative correlation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5864,
+            "end": 5889,
+            "text": "Degree analyses were used",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

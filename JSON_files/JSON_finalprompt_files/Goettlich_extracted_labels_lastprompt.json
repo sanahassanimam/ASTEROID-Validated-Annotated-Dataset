@@ -1,0 +1,843 @@
+{
+  "data": {
+    "text": "Viewing socio-affective stimuli increases connectivity within an extended default mode network\nNeuroImage 148 (2017) 8–19\nAvailable online 05 January 2017\ndoi:10.1016/j.neuroimage.2016.12.044\n\n2.1. Participants\n\nThe analysis presented in this work utilized two independent data sets. Data-set one comprised seventeen healthy subjects (11 women; age=27.8 ± 4.8 years). The univariate analysis of this data set has been reported previously (Krämer et al., 2010). In the present study, this data set was used to identify relevant brain regions for the network analysis and the modular structure of these brain regions. The network analysis itself was performed in an independent data-set. For data-set two, twenty-seven different healthy subjects were recruited (21 women; age=23.0 ± 3.3 years). All participants were right-handed (except for one woman in group one) and free of any psychiatric and neurological disorder (self-report). In each group, one female subject was excluded due to excessive head motion during the functional imaging, leaving sixteen and twenty-six subjects for the final analysis. In accordance with the Declaration of Helsinki, all subjects gave their written informed consent before participation. The study was approved by the ethics committees of the University of Magdeburg (cohort 1) and the University of Barcelona (cohort 2).\n\n2.2. Empathy paradigm\n\nExactly the same paradigm was used in both cohorts. For the measurement of neural responses to socio-emotional stimuli, participants were presented with black-and-white drawings of five categories: emotionally neutral situations involving one person only (one person performing a neutral action, such as ironing), emotionally neutral situations involving two persons (two people interacting in a neutral manner, such as playing chess), emotionally negative situations involving one person (one person in distress, such as falling off a boat), emotionally negative situations involving two persons (two people interacting in an aversive manner, such as a man hitting a woman) and scenes with objects only (e.g. a desk). Then, participants were asked to simply watch the pictures attentively. There were three experimental runs employing a slow event-related design. Each picture was presented for 6 s, followed by a 10 s fixation cross. Each run comprised 40 drawings, 8 per condition. A picture was only shown once in the whole experiment. A short test-phase followed each experimental run; participants indicated whether a given picture was mirrored or not.\n\n2.3. Image acquisition\n\n2.3.1. Data-set one\nA 3-T Siemens Magnetom Allegra Scanner was used to collect structural (T1-weighted MPRAGE sequence; 1×1×1 mm3 resolution; 256×256 matrix; 192 sagittal slices) and functional images (single-shot gradient echo echo-planar imaging; TR=2000 ms; TE=30 ms; matrix 64×64; 32 3-mm transversal slices; 0.75 mm gap; 3×3 mm2 in-plane resolution; flip angle 80°).\n\n2.3.2. Data-set two\nStructural and functional MRI was performed using a 3-T Siemens Magnetom Trio Scanner. Functional images were acquired using a single-shot gradient echo echo-planar imaging (EPI) sequence sensitive to blood oxygen level dependent (BOLD) contrast (TR=2000 ms; TE=29 ms; flip angle=80°; in-plane resolution 1.9×1.9 mm2; 32 transversal slices; 4 mm slice thickness; 240×240 mm2 field of view; GRAPPA factor 4). Additionally, structural images of the whole brain using a 3D T1-weighted MPRAGE sequence (TR=2300 ms, TE=3 ms, TI=900 ms, flipangle 9°, 1×1×1 mm3 resolution, 240 sagittal slices, 244×244 mm2 field of view) were acquired.\n\n2.4. Preprocessing\n\nPreprocessing was performed using the SPM8 software package (Wellcome Trust Centre for Neuroimaging, London). Functional images were preprocessed using standard procedures which included the following steps: (i) The first four images of each dataset were discarded to allow for magnetization equilibrium. (ii) The data was corrected for differences in the image acquisition time between slices. (iii) A six parameter rigid body spatial transformation was performed to correct for head motion during data acquisition. (iv) The structural image was co-registered to the mean functional image. (v) The structural images were spatially normalized to a standard template (Montreal Neurological Institute). (vi) Spatial normalization of the functional images was performed using the normalization parameters estimated in the previous preprocessing step. (vii) The functional images were resampled to 3 mm×3 mm×3 mm. (viii) Spatial smoothing of the functional data was performed with an 8 mm full width half maximum Gaussian kernel.\n\n2.5. Univariate analysis\n\nFunctional images were analyzed using a general linear model (GLM). On the single subject level, a design matrix was defined which included one regressor for each of the five conditions (8 trials per run for each condition; duration 6 s). The design matrix also included the six motion regressors (x, y, z, pitch, roll, yaw) estimated in the motion correction step during the preprocessing to minimize signal-correlated motion effects. A high-pass filter of 128 s was applied to the data. Classical parameter estimation was performed with a one-lag autoregressive model AR(1) to account for serial correlations in fMRI time series.\n\n2.6. Network analysis — nodes, edges, modules\n\nWe used a whole brain atlas provided by Craddock et al. (2012) subdividing the brain into N=773 regions. Any brain region which showed a significant activation (p < 0.01; uncorrected; 773 statistical tests) comparing socio-affective to object stimuli was selected; the number of brain regions pre-selected by this approach was n=202. The functional connectivity between brain regions was established by a beta-series correlation analysis using the BASCO toolbox for MATLAB®. Mean beta-series were extracted for each ROI and a network matrix was calculated correlating all ROI beta-series applying Pearson's linear correlation. Correlation coefficients were Fisher-z transformed. We obtained connectivity matrices for each experimental condition. The mean network matrix was thresholded keeping 25% of the strongest connections and a community structure was identified applying Newman's spectral algorithm (BCT)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 94,
+            "text": "Viewing socio-affective stimuli increases connectivity within an extended default mode network",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 95,
+            "end": 105,
+            "text": "NeuroImage",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 111,
+            "end": 115,
+            "text": "2017",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 155,
+            "end": 191,
+            "text": "doi:10.1016/j.neuroimage.2016.12.044",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2587,
+            "end": 2615,
+            "text": "3-T Siemens Magnetom Allegra",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3010,
+            "end": 3035,
+            "text": "3-T Siemens Magnetom Trio",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2850,
+            "end": 2876,
+            "text": "32 3-mm transversal slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3299,
+            "end": 3319,
+            "text": "4 mm slice thickness",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2878,
+            "end": 2889,
+            "text": "0.75 mm gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2920,
+            "end": 2934,
+            "text": "flip angle 80°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2814,
+            "end": 2824,
+            "text": "TR=2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2826,
+            "end": 2834,
+            "text": "TE=30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4503,
+            "end": 4517,
+            "text": "3 mm×3 mm×3 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3321,
+            "end": 3346,
+            "text": "240×240 mm2 field of view",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3647,
+            "end": 3651,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2219,
+            "end": 2244,
+            "text": "slow event-related design",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1040,
+            "end": 1102,
+            "text": "leaving sixteen and twenty-six subjects for the final analysis",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2349,
+            "end": 2364,
+            "text": "8 per condition",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2246,
+            "end": 2280,
+            "text": "Each picture was presented for 6 s",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2282,
+            "end": 2309,
+            "text": "followed by a 10 s fixation",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1501,
+            "end": 1577,
+            "text": "participants were presented with black-and-white drawings of five categories",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2366,
+            "end": 2419,
+            "text": "A picture was only shown once in the whole experiment",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2124,
+            "end": 2170,
+            "text": "asked to simply watch the pictures attentively",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 307,
+            "end": 366,
+            "text": "seventeen healthy subjects (11 women; age=27.8 ± 4.8 years)",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 704,
+            "end": 791,
+            "text": "twenty-seven different healthy subjects were recruited (21 women; age=23.0 ± 3.3 years)",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 345,
+            "end": 365,
+            "text": "age=27.8 ± 4.8 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 770,
+            "end": 790,
+            "text": "age=23.0 ± 3.3 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 335,
+            "end": 343,
+            "text": "11 women",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 760,
+            "end": 768,
+            "text": "21 women",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 793,
+            "end": 863,
+            "text": "All participants were right-handed (except for one woman in group one)",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 868,
+            "end": 917,
+            "text": "free of any psychiatric and neurological disorder",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 948,
+            "end": 1008,
+            "text": "one female subject was excluded due to excessive head motion",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1237,
+            "end": 1355,
+            "text": "approved by the ethics committees of the University of Magdeburg (cohort 1) and the University of Barcelona (cohort 2)",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3821,
+            "end": 3873,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3932,
+            "end": 4002,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3647,
+            "end": 3651,
+            "text": "SPM8",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4010,
+            "end": 4059,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3647,
+            "end": 3651,
+            "text": "SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4156,
+            "end": 4198,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3647,
+            "end": 3651,
+            "text": "SPM8",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4231,
+            "end": 4308,
+            "text": "5",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3647,
+            "end": 3651,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4276,
+            "end": 4307,
+            "text": "Montreal Neurological Institute",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4315,
+            "end": 4375,
+            "text": "6",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3647,
+            "end": 3651,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4503,
+            "end": 4517,
+            "text": "7",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3647,
+            "end": 3651,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4503,
+            "end": 4517,
+            "text": "3 mm×3 mm×3 mm",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4589,
+            "end": 4633,
+            "text": "8",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3647,
+            "end": 3651,
+            "text": "SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4589,
+            "end": 4633,
+            "text": "8 mm full width half maximum Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4937,
+            "end": 4986,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4937,
+            "end": 4986,
+            "text": "six motion regressors (x, y, z, pitch, roll, yaw)",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5098,
+            "end": 5125,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5120,
+            "end": 5125,
+            "text": "128 s",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 971,
+            "end": 1008,
+            "text": "11",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 987,
+            "end": 1008,
+            "text": "excessive head motion",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5382,
+            "end": 5445,
+            "text": "Craddock et al. (2012) subdividing the brain into N=773 regions",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5607,
+            "end": 5674,
+            "text": "the number of brain regions pre-selected by this approach was n=202",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5817,
+            "end": 5861,
+            "text": "Mean beta-series were extracted for each ROI",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5930,
+            "end": 5967,
+            "text": "applying Pearson's linear correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5999,
+            "end": 6019,
+            "text": "Fisher-z transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6219,
+            "end": 6246,
+            "text": "Newman's spectral algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6116,
+            "end": 6168,
+            "text": "thresholded keeping 25% of the strongest connections",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

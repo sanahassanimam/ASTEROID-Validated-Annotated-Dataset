@@ -1,0 +1,131 @@
+{
+  "data": {
+    "text": "2.4. Brain Network Construction\nBased on graph theory, the human brain network was modeled as a graph, and the\nundirected weighted network of the whole brain was created for each participant. First,\nwe constructed the brain functional network for each subject based on the Automated\nAnatomical Labeling (AAL) atlas template [ 38]. The template consists of 90 ROIs (45 for\neach hemisphere) (Table S1) and is widely used in brain network studies [ 39–41], thus\nimproving comparability across studies [ 42]. A node was used to represent a region,\nand using this conﬁguration, we could then extract the time series of the 90 regions.\nSecond, Pearson’s correlation coefﬁcient rbetween each brain region was calculated as\nthe strength of the functional connectivity between the pair of brain regions according\nto the extracted time series, so a 90 \u000290 correlation coefﬁcient matrix was obtained. To\ntest whether functional connectivity was signiﬁcantly different between the BG and MG\ngroups, correlation coefﬁcients were further converted into zvalues by using Fisher’s r-to-z\ntransformation. This transformation generated values that were approximately normally\ndistributed, and a Zstatistic was then used to compare these transformed zvalues to\ndetermine the signiﬁcance of the between-group differences in the correlations [ 43]. The\nfunctional connectivity between nodes i and j was considered as an edge, and the positive\nvalues were retained as weighted network connectivity.\n2.5. Network-Based Statistic (NBS) Analysis\nFirst, to reduce spurious correlations, a one-sample t-test was performed for every\ncorrelation in each group. We retained those correlations whose corresponding pvalues\npassed a statistical threshold of p< 0.05 after Bonferroni correction for each correlation\nmatrix; otherwise, the correlations were set to zero. In addition, we obtained a union\nmask containing connectivity that was signiﬁcant in either of the two groups. Then, we\nperformed two-sample one-tailed t-tests (after controlling for the effects of age and sex)\nwithin this mask to determine group differences in functional connectivity, similar to\nprevious studies [ 39,44,45]. A primary threshold ( p< 1\u000210\u00004) was applied to identify\nsuprathreshold links, among which the connected components and their size (the number\nof links included in the components) were detected. To estimate the signiﬁcance of each\ncomponent, a nonparametric permutation approach was used to derive the null distribution\nof the size of the connected component (5000 permutations). Brieﬂy, all subjects were\nrandomly reallocated into two groups in each permutation, and two-sample one-tailed\nt-tests were performed for the same set of links as mentioned above. The same primary\nthreshold ( p< 1\u000210\u00004) was subsequently used to produce suprathreshold links, within\nwhich the size of the maximal connected component was identiﬁed. Finally, for the\nconnected component of size M identiﬁed in the real grouping of BGs and MGs, we\ncalculated the proportion of the 5000 permutations, for which the maximal connected\ncomponent was larger than M, to determine the corrected pvalue.\nBrain Sci. 2021 ,11, 310 6 of 18\n2.6. Graph Analysis\nGraph theory was used to characterize the topological properties of the human brain\nfunctional networks [ 28,29]. As there would be different connection densities of graphs\nwhen applying different sparsity thresholds, we tested 36 sparsity thresholds ranging from\n5% to 40% with an increase of 1%—as in a previous study [ 46]—to ensure the stability of\nnetwork properties [47].\nWe computed ﬁve global network metrics, including the clustering coefﬁcient ( Cp),\ncharacteristic path length ( Lp), small-worldness index, global efﬁciency ( Eg), and local\nefﬁciency ( Eloc). The Cpmeasures the extent of local interconnectivity or cliquishness of a\ngraph [ 47]. The Lpbetween each possible pair of nodes is the number of edges in the shortest\npath between them, divided by all possible pairs of nodes in the network. It measures the\nextent of overall routing efﬁciency, where a high Lprepresents less efﬁcient information ﬂow\ndue to long routes [ 48]. The small-worldness index is the ratio between the normalized Cp\nand normalized Lp, which are standardized by dividing their values by random networks\npreserving the same degree distribution and connections with the original brain network.\nThose combining high local clustering with short paths, representing an effective system,\nshow features of a small world network [ 48–51].Egis the average inverse shortest path\nlength and captures the extent of information propagation in the network [ 52]. The Eloc is\nthe local efﬁciency computed on node neighborhoods, describing the extent of information\ntransfer of the respective node with all other nodes in the network [52].\n2.7. Statistical Analysis of Network Properties\nNBS analysis and network property calculations were conducted in the network anal-\nysis toolbox GRETNA (Version 2.0.0, http://www.nitrc.org/projects/gretna/ (accessed on\n30 October 2020)), based on MATLAB, while the brain was visualized using the BrainNet\nViewer toolkit (http://www.nitrc.org/projects/bnv/ (accessed on 30 October 2020)). When\ncomparing the differences between global topological properties between two groups, a\nnonparametric permutation test [ 53] (permutation = 10,000) was used. Age and sex were\nentered as nuisance covariates to regress out any potential mixed effects [ 44]. In addition,\nwe used false discovery rate (FDR) correction (at q= 0.05) to reduce false-positive errors\ncaused by multiple comparisons [54,55]."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 304,
+            "end": 323,
+            "text": "AAL) atlas template",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 331,
+            "end": 363,
+            "text": "The template consists of 90 ROIs",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 587,
+            "end": 629,
+            "text": "extract the time series of the 90 regions.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 111,
+            "end": 169,
+            "text": "undirected weighted network of the whole brain was created",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 111,
+            "end": 169,
+            "text": "1",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 304,
+            "end": 323,
+            "text": "2",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 331,
+            "end": 363,
+            "text": "3",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 587,
+            "end": 629,
+            "text": "4",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "data": {
+    "text": "Resting-state functional connectivity\nThe RSFC was computed from 187 different brain regions\ndeﬁned within the sensorimotor, cingulo-opercular task control,\nfronto-parietal task control, dors al/ventral attention, default\nmode network (DMN), salience network and subcortical/cerebellar network (Power et al ., 2011). In each of these brain\nregions, signals resulting from the processed functional data\nwere extracted and averaged over a spherical region of interest(ROI) with a radius of 4 mm. Pearson correlation coefﬁcient ( r\nij)\nwas calculated for the ith and jth ROI. This generated a\n187·187 adjacency matrix, M, for each subject, which served\nas the RSFC matrix for each subject within each group.\nThresholding brain networks\nThresholding an RSFC matrix is critical for obtaining a\nsparse adjacency matrix in that it should be optimal andAGE-RELATED BRAIN FUNCTIONAL REORGANIZATION 663\ncontain not too little functional connections for detecting\ngroup differences but not too many functional connections\nthat it may dilute group differences. The most commonlyused approach for thresholding is to globally threshold theRSFC matrix at a ﬁxed threshold, q, for any r\nijbetween\n/C01 and 1. If rij‡q, the corresponding element of the adja-\ncency matrix, Mij, is kept for the actual value of rijfor a\nweighted adjacency matrix or is set to be 1 for a binary ad-\njacency matrix. If rij<q, then Mijis set to be 0 for both\nweighted and binary matrices. Note: except for strength,measures of modularity, local and global efﬁciency were\ncomputed using the binary adjacency matrix. One potential\nproblem with this global thresholding method is that oncethresholded, the sparse matrices are not fully connected\nfrom node to node (Alexander-Bloch et al., 2010). This dis-\nconnectedness of the resulting graphs may ultimately changethe properties of the original global and local functionalconnectivity, which may bias the comparisons of graph-\ntheoretic metrics between different groups of subjects.\nIn this study, we anticipated that this might be a factor af-\nfecting our observations in age-related differences in RSFC,\nand used a minimum spanning tree (MST) method in order to\npreserve fully connected brain graphs (Achard et al., 2012;Alexander-Bloch et al., 2010). In this study, each MST per\nsubject is a spanning tree of a weighted subgraph that is\nfully connected with all nodes having a maximum totalweight of all links. Although the MST sparsely represents\na ‘‘skeleton structure’’ of the brain graph, it does not form\nclusters or loops at the regional level that keeps it from a bi-ologically meaningful sparse representation (Alexander-Bloch et al., 2010). To obtain a sparse, fully connected,\nand biologically meaningful graph, we added extra links to\nthe MST from the remaining adjacency matrix. To do so,for each ﬁnal sparse adjacency matrix, we added top 2–\n40% of the remaining links to the MST, respectively, to in-\nclude the highest proportion of the remaining functionalconnectivity. This ensured that each ﬁnal graph per subject\nhad an equal number of links, and, thus, observations on age-\nrelated group differences were independent of number offunctional connections. Several values of the threshold weretested in order to examine the effect of different proportional\nthresholding on aging-related group differences. Thresholds\nfrom 2% to 40% were chosen based on the reasons that (1)the network measures are relatively constant over this range\n(Alexander-Bloch et al., 2010); (2) graphs become more ran-\ndom above a threshold level of 50% (Humphries et al., 2006).Current ﬁndings are based on thresholds from 2% to 8%\nat 2% intervals; results obtained from thresholds of 10% to\n40% at 10% intervals can be found in the SupplementaryMaterials (Supplementary Figs. S1–S10; Supplementary\nData are available online at www.liebertpub.com/brain).\nMeasures of graph metrics\nGraph metrics, including modularity, local and global efﬁ-\nciency, and strength, were estimated using the Brain Connec-\ntivity Toolbox (Rubinov and Sporns, 2010) with adaptationmade for nodal or regional-level calculation. Previous studies\nhave reported age-related changes in connectivity and network\nmeasures on a global or brain-wide level (Alexander-Blochet al., 2010; Geerligs et al., 2014; Meunier et al., 2009a). In\nthis study, network measures were estimated at global and re-gional level, thus enabling an examination of age-related\nchanges in functional connectivity at a brain-wide level and\nat regional level for a ﬁner-grained analysis. Global-levelgraph metrics were estimated by averaging each measureacross all nodal regions and across all subjects in each\ngroup; regional level measures, except for modularity, were\nestimated for each node averaging across all subjects withineach group. Statistical group comparison was conducted for\neach graph metric at each threshold using the Wilcoxon\nrank sum test.\nModularity is a global measure of how well a network can\nbe decomposed into a set of sparsely interconnected but\ndensely intraconnected modules (Newman, 2004) and canbe a valuable tool in identifying the functional blocks within\nthe brain network. The optimal modular structure for a given\nnetwork is typically estimated with optimization algorithmsrather than computed exactly (Danon et al., 2005; Rubinovand Sporns, 2010). In this study, network modularity was es-\ntimated via a two-step approach to achieve an optimal mod-\nule division, similar to the one applied in other studies(Geerligs et al., 2014; Rubinov and Sporns, 2011). Modular-\nity was ﬁrst estimated using the Newman–Girvan algorithm\n(Newman, 2006a, 2006b). Each module is extracted as agroup of nonoverlapping nodes by maximizing the number\nof within-module links and minimizing the number of\nbetween-module links among those nodes. Since the optimalcommunity structure and maximized modularity may vary\nfrom run to run due to heuristics in the algorithm (Rubinov\nand Sporns, 2010), this step was repeated 500 times. In thesecond step, all previously detected community structureswere reﬁned using a ﬁne-tuning algorithm (Rubinov and\nSporns, 2010; Sun et al., 2009) with a maximum 500\ntimes’ iteration. Once an optimal modular structure of thenetwork has been identiﬁed, it is possible to assign topolog-\nical roles to each node based on its density of intra- and inter-\nmodular connections (Guimera et al., 2005). Therefore,intramodular connectivity of each node was measured by\nthe normalized intramodular degree, that is, the within-module\ndegree z-score (Rubinov and Sporns, 2010). The within-\nmodule degree z-score is large for a node that has a large\nnumber of intramodular connections relative to other nodes\nin the same module. We used the measure of within-module\ndegree z-score to identify those ‘‘hub’’ nodes with high intra-\nmodular connectivity and examined the age-related changes\nin these functionally important regions.\nLocal efﬁciency is a measure of information transfer in the\nimmediate neighborhood of each node, indicating to what\nextent connections are being segregated into subnetworks\n(Achard et al., 2012), while global efﬁciency is a measureof information propagating in the whole network, indicating\nto what extent connections are being integrated into a whole\nbrain-wide network (Rubinov and Sporns, 2010). These twomeasures are based on a pre-estimation of the minimum pathlength. For the local efﬁciency, the minimum path length is\nestimated as the shortest path length from node ito its nearest\nneighbor node jin the subgraph they both belong to. For the\nglobal efﬁciency, the minimum path length is estimated as\nthe shortest path length from node ito all other nodes jin\nthe whole graph.\nThe strength of functional connectivity of each node is mea-\nsured as the mean value of weights (i.e., cross-correlation\ncoefﬁcients) of all functional connections linking to the664 SONG ET AL.\nnode. It provides an estimation of the functional importance\nof each node.\nMeasures of alteration of graph metrics\nAge-related topological changes are different across brain\nlocations and networks. These patterns of changes cannot betruly reﬂected with a solely brain-wide examination. How-\never, it might be visualized by plotting, for a given graphmetric, the mean value at each node in the younger group\nversus the difference between the older and younger groups\nat each node. This approach was originally reported and usedfor detecting functional network changes in comatose pa-tients, and the gradient of a straight line ﬁtted to the data\nwas referred to as a hub disruption index, j(Achard et al.,\n2012). In this study, the hub disruption index for a givengraph metric, for example, strength, was constructed by sub-\ntracting the younger group mean nodal strength from the\nFIG. 1. Adjacency matri-\nces shown at threshold of 8%(Young—upper panel,Older—bottom panel). Func-\ntional networks are illustrated\nusing adjacency matrices.Rows and columns denote the187 nodes, and each element\nof the matrix denotes a link\nbetween the correspondingnodes. Square blocks from the\ntop left to the bottom right\nalong the main diagonal rep-resent the sensorimotor (red;35 regions), cingulo-opercular\ntask control (orange; 14 re-\ngions), fronto-parietal taskcontrol (gold; 25 regions),dorsal/ventral attention (ma-\ngenta, 20 regions), default\nmode network (DMN; me-dium blue, 58 regions), sa-\nlience network (royal blue;\n18 regions), and subcortical/cerebellar (green; 17 regions)network. Elements within\neach block represent within-\nnetwork functional connec-tions and elements outsideblocks represent between-\nnetwork connections.AGE-RELATED BRAIN FUNCTIONAL REORGANIZATION 665\nmean strength of the corresponding node in the older group\nand plotting this group mean difference against the younger\ngroup mean. This transformation improves visualization ofthe age-related differences in the proﬁle of regional networkproperties."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 38,
+            "end": 316,
+            "text": "The RSFC was computed from 187 different brain regions\ndeﬁned within the sensorimotor, cingulo-opercular task control,\nfronto-parietal task control, dors al/ventral attention, default\nmode network (DMN), salience network and subcortical/cerebellar network (Power et al ., 2011).",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 317,
+            "end": 493,
+            "text": "In each of these brain\nregions, signals resulting from the processed functional data\nwere extracted and averaged over a spherical region of interest(ROI) with a radius of 4 mm.",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 317,
+            "end": 493,
+            "text": "In each of these brain\nregions, signals resulting from the processed functional data\nwere extracted and averaged over a spherical region of interest(ROI) with a radius of 4 mm.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 494,
+            "end": 572,
+            "text": "Pearson correlation coefﬁcient ( r\nij)\nwas calculated for the ith and jth ROI.",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1193,
+            "end": 1378,
+            "text": "If rij‡q, the corresponding element of the adja-\ncency matrix, Mij, is kept for the actual value of rijfor a\nweighted adjacency matrix or is set to be 1 for a binary ad-\njacency matrix.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3582,
+            "end": 3729,
+            "text": "Current ﬁndings are based on thresholds from 2% to 8%\nat 2% intervals; results obtained from thresholds of 10% to\n40% at 10% intervals can be found",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3885,
+            "end": 4062,
+            "text": "Graph metrics, including modularity, local and global efﬁ-\nciency, and strength, were estimated using the Brain Connec-\ntivity Toolbox (Rubinov and Sporns, 2010) with adaptation",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3885,
+            "end": 4062,
+            "text": "Graph metrics, including modularity, local and global efﬁ-\nciency, and strength, were estimated using the Brain Connec-\ntivity Toolbox (Rubinov and Sporns, 2010) with adaptation",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3885,
+            "end": 4062,
+            "text": "Graph metrics, including modularity, local and global efﬁ-\nciency, and strength, were estimated using the Brain Connec-\ntivity Toolbox (Rubinov and Sporns, 2010) with adaptation",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8185,
+            "end": 8367,
+            "text": "it might be visualized by plotting, for a given graphmetric, the mean value at each node in the younger group\nversus the difference between the older and younger groups\nat each node.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 38,
+            "end": 316,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 317,
+            "end": 493,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 317,
+            "end": 493,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 494,
+            "end": 572,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1193,
+            "end": 1378,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3582,
+            "end": 3729,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3885,
+            "end": 4062,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3885,
+            "end": 4062,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8185,
+            "end": 8367,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        }
+      ]
+    }
+  ]
+}

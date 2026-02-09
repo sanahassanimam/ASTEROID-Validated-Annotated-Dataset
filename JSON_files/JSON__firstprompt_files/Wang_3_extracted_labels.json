@@ -1,0 +1,778 @@
+{
+  "data": {
+    "text": "The longitudinal development of large-scale functional brain networks for arithmetic ability from childhood to adolescence\nEur J Neurosci. 2022;55:1825–1839.\nDOI: https://doi.org/10.1111/ejn.15651\n© 2022 Federation of European Neuroscience Societies and John Wiley & Sons Ltd\n\nArithmetic ability is an important high-level cognitive function that requires interaction among multiple brain regions. Previous studies on arithmetic development have focused on task-induced activation in isolated brain regions or functional connectivity among particular seed regions. However, it remains largely unknown whether and how functional connectivity among large-scale brain modules contributes to arithmetic development. In the present study, we used a longitudinal sample of task-based functional magnetic resonance imaging (fMRI) data comprising 63 typically developing children, with two testing points being about 2 years apart. With graph theory, we examined the longitudinal development of large-scale brain modules for a multiplication task in younger (mean age 9.88 at time 1) and older children (mean age 12.34 at time 1), respectively. The results showed that the default-mode (DMN) and frontal-parietal networks (FPN) became increasingly segregated over time. Specifically, intra-connectivity within the DMN and FPN increased significantly with age, and inter-connectivity between the DMN and visual network decreased significantly with age. Such developmental changes were mainly observed in the younger children but not in the older children. Moreover, the change in network segregation of the DMN was positively correlated with longitudinal gain in arithmetic performance in the younger children, and individual difference in network segregation of the FPN was positively correlated with arithmetic performance at Time 2 in the older children.\n\nA total of 63 typically developing children aged 8–15 years were tested twice, with testing sessions being about 2 years apart. All participants were native English speakers, right-handed and were reported to have normal hearing, normal or corrected-to-normal vision and no history of neurological or psychiatric disorders. Nine children were excluded, of whom six with excessive head movements in the MRI scanner (exceeding 3.0 mm in displacement or 3° in rotation) and three with inside-scanner task accuracy being below 50% either at Time 1 (T1) or at Time 2 (T2), yielding 54 children in the final sample. Two groups were created based on the median-split of participant’s age at Time 1: younger group and older group. The two groups differed significantly in age both at T1 and T2, with no differences in gender distribution, time between sessions and intelligence scores. This study was approved by the Research Ethics Review Board of Hangzhou Normal University.\n\nData in the present study were taken from a public neuroimaging dataset entitled ‘Brain Correlates of Math Development’. This dataset has been deposited in the OpenNeuro (https://openneuro.org/datasets/ds001486/versions/1.3.0).\n\nThe inside-scanner task involved 72 single-digit multiplication problems: 48 with correct solutions and 24 with false solutions. Problems involving zero, one or ties (e.g., 3 × 3) were not included. In each trial, the multiplication problem and proposed solution were presented successively on a white background for 800 ms, separated by an inter-stimulus interval for 200 ms. Then a red fixation square was displayed for 2200, 2600 or 3000 ms. Participants were instructed to respond with their index finger if the proposed solution of the multiplication problem was correct and with their middle finger if the solution was incorrect. To control for motor responses, 24 control trials were designed, where a blue square was presented for 800 ms, followed by a red fixation square lasting 2200, 2600 or 3000 ms. The total scanning lasted about 8 min. Reaction time and accuracy were recorded for each trial.\n\nThe outside-scanner task was the multiplication subtest of the Comprehensive Mathematical Abilities Test (CMAT). It was a paper-and-pencil test with no time limits. For each participant, the number of correct answers was used as an estimate of multiplication ability.\n\nWhole-brain imaging was performed on a Siemens 3T TIM Trio MRI scanner using a 32-channel head coil. For each subject, BOLD-sensitive T2*-weighted functional images were acquired using a susceptibility weighted single-shot echo planar imaging sequence (repetition time = 2000 ms, echo time = 20 ms, flip angle = 80°, field of view = 220 × 206.25 mm, matrix size = 128 × 120, slice thickness/gap = 3/0.48 mm and slice number = 32). Prior to functional image acquisition, a high-resolution 3D structural image was acquired for anatomic normalization (repetition time = 2300 ms, echo time = 3.36 ms, matrix size = 256 × 256, field of view = 240 mm, slice thickness = 1 mm and slice number = 160).\n\nIn the present study, we preprocessed the raw imaging data using SPM12. First, the first six functional images of each participant were discarded due to instability of initial MR signals. Then, the imaging data were preprocessed with reorientation to the anterior–posterior commissure line, slice time correction and head-motion correction. The individual high-resolution structural image of each participant was co-registered with the mean functional image. Grey matter, white matter and cerebrospinal fluid were segmented using the SPM12 New Segmentation procedure. A child template was created by the Template-O-Matic toolbox and used in the New Segment procedure. Subsequently, the DARTEL tool was applied to normalize each participant’s high-resolution structural image to the Montreal Neurological Institute space, and the normalization parameters were applied to the functional images. Finally, spatial smoothing was conducted using a 6-mm full-width half-maximum Gaussian kernel. A censoring/scrubbing strategy was used to remove time points with frame-wise displacement (FD) greater than 0.3 mm. Thereafter, three additional processes were applied before calculating brain connectivity measures: (1) high-pass filtering with a cut-off frequency of 1/128 Hz; (2) linear detrending; (3) regression of the first five principal components of white-matter and cerebrospinal fluid signals, six motion parameters and their temporal first-order derivatives.\n\nWe first analysed the changes in behavioural performance over time for the children by running a Group (younger, older) × Time (T1, T2) repeated measures analysis of variance (ANOVA). Follow-up tests included paired and independent-samples t tests as appropriate."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 122,
+            "text": "The longitudinal development of large-scale functional brain networks for arithmetic ability from childhood to adolescence",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 139,
+            "end": 143,
+            "text": "2022",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 254,
+            "end": 275,
+            "text": "John Wiley & Sons Ltd",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 163,
+            "end": 196,
+            "text": "https://doi.org/10.1111/ejn.15651",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 277,
+            "end": 341,
+            "text": "Arithmetic ability is an important high-level cognitive function",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2991,
+            "end": 3045,
+            "text": "https://openneuro.org/datasets/ds001486/versions/1.3.0",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4266,
+            "end": 4297,
+            "text": "Siemens 3T TIM Trio MRI scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4638,
+            "end": 4655,
+            "text": "slice number = 32",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4602,
+            "end": 4633,
+            "text": "slice thickness/gap = 3/0.48 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4526,
+            "end": 4542,
+            "text": "flip angle = 80°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4602,
+            "end": 4633,
+            "text": "slice thickness/gap = 3/0.48 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4544,
+            "end": 4575,
+            "text": "field of view = 220 × 206.25 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4480,
+            "end": 4505,
+            "text": "repetition time = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4507,
+            "end": 4524,
+            "text": "echo time = 20 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3861,
+            "end": 3898,
+            "text": "The total scanning lasted about 8 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2418,
+            "end": 2458,
+            "text": "yielding 54 children in the final sample",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4944,
+            "end": 4992,
+            "text": "we preprocessed the raw imaging data using SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 767,
+            "end": 822,
+            "text": "task-based functional magnetic resonance imaging (fMRI)",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3073,
+            "end": 3176,
+            "text": "involved 72 single-digit multiplication problems: 48 with correct solutions and 24 with false solutions",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3390,
+            "end": 3424,
+            "text": "inter-stimulus interval for 200 ms",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3317,
+            "end": 3372,
+            "text": "presented successively on a white background for 800 ms",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3494,
+            "end": 3684,
+            "text": "Participants were instructed to respond with their index finger if the proposed solution of the multiplication problem was correct and with their middle finger if the solution was incorrect.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3085,
+            "end": 3121,
+            "text": "single-digit multiplication problems",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6518,
+            "end": 6564,
+            "text": "repeated measures analysis of variance (ANOVA)",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6566,
+            "end": 6629,
+            "text": "Follow-up tests included paired and independent-samples t tests",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1850,
+            "end": 1893,
+            "text": "A total of 63 typically developing children",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1894,
+            "end": 1909,
+            "text": "aged 8–15 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2025,
+            "end": 2037,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2064,
+            "end": 2172,
+            "text": "normal hearing, normal or corrected-to-normal vision and no history of neurological or psychiatric disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2174,
+            "end": 2201,
+            "text": "Nine children were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2637,
+            "end": 2726,
+            "text": "with no differences in gender distribution, time between sessions and intelligence scores",
+            "labels": [
+              "Group matching"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2728,
+            "end": 2817,
+            "text": "This study was approved by the Research Ethics Review Board of Hangzhou Normal University",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3900,
+            "end": 3955,
+            "text": "Reaction time and accuracy were recorded for each trial",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5001,
+            "end": 5067,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5001,
+            "end": 5032,
+            "text": "first six functional images",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5213,
+            "end": 5234,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5239,
+            "end": 5261,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5335,
+            "end": 5379,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5436,
+            "end": 5488,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5436,
+            "end": 5488,
+            "text": "SPM12 New Segmentation",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5604,
+            "end": 5644,
+            "text": "6",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5604,
+            "end": 5644,
+            "text": "DARTEL",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5604,
+            "end": 5735,
+            "text": "Montreal Neurological Institute",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5824,
+            "end": 5908,
+            "text": "7",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5824,
+            "end": 5908,
+            "text": "6-mm full-width half-maximum Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5912,
+            "end": 5971,
+            "text": "8",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5912,
+            "end": 5971,
+            "text": "Scrubbing",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5912,
+            "end": 6025,
+            "text": "frame-wise displacement (FD) greater than 0.3 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6131,
+            "end": 6187,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6131,
+            "end": 6187,
+            "text": "band/high/low pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6131,
+            "end": 6187,
+            "text": "cut-off frequency of 1/128 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6193,
+            "end": 6210,
+            "text": "10",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6193,
+            "end": 6210,
+            "text": "Linear detrending",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6315,
+            "end": 6379,
+            "text": "11",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6315,
+            "end": 6379,
+            "text": "Motion regression",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6315,
+            "end": 6379,
+            "text": "six motion parameters and their temporal first-order derivatives",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6234,
+            "end": 6313,
+            "text": "12",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6234,
+            "end": 6313,
+            "text": "Confound regression",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6234,
+            "end": 6313,
+            "text": "first five principal components of white-matter and cerebrospinal fluid signals",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

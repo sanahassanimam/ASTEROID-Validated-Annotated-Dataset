@@ -1,0 +1,810 @@
+{
+  "data": {
+    "text": "Hemisphere- and gender-related differences in small-world brain networks: A resting-state functional MRI study\nNeuroImage 54 (2011) 191–202\nLixia Tian, Jinhui Wang, Chaogan Yan, Yong He\ndoi:10.1016/j.neuroimage.2010.07.066\n\nWe employed resting-state functional MRI (R-fMRI) to investigate hemisphere- and gender-related differences in the topological organization of human brain functional networks.\n\nData were selected from a large sample resting-state fMRI dataset of our group, which has been publicly released in the “1000 Functional Connectomes” Project (http://www.nitrc.org/projects/fcon_1000/) (Biswal et al., 2010). We selected 86 young healthy volunteers (48 females: 20.8±1.6 years old, range 18–25; and 38 males: 20.7±1.7 years old, range 17–25) with head motion less than 2.0 mm displacement in any of the x, y, or z directions or 2.0° of any angular motion throughout the resting-state scan. All are right-handed and had no history of neurological and psychiatric disorders. Written informed consent was obtained from each participant, and the study was approved by the Institutional Review Board of Beijing Normal University Imaging Center for Brain Research. During the resting state, the subjects were instructed to keep still with their eyes closed but not fall asleep, remain as motionless as possible, and to think of nothing in particular. All the subjects had not fallen asleep according to a simple questionnaire after the scan.\n\nResting data were obtained using a 3.0 T Siemens scanner at the Imaging Center for Brain Research, Beijing Normal University. A total of 240 volumes of EPI images were obtained axially (repetition time, 2000 ms; echo time, 30 ms; slices, 33; thickness, 3 mm; gap, 0.6 mm; field of view, 200×200 mm2; resolution, 64×64; flip angle, 90°).\nPrior to preprocessing, the first 10 volumes were discarded to allow for scanner stabilization and the subjects' adaptation to the environment. R-fMRI data preprocessing was then conducted by SPM5 (http://www.fil.ion.ucl.ac.uk/spm/) and Data Processing Assistant for Resting-State fMRI (DPARSF) (Yan and Zang, 2010). Briefly, the remaining functional scans were first corrected for within-scan acquisition time differences between slices, and then realigned to the first volume to correct for inter-scan head motions. Subsequently, the functional scans were spatially normalized to a standard template (Montreal Neurological Institute) and resampled to 3×3×3 mm3. The waveform of each voxel was finally passed through a band-pass filter (0.01–0.1 Hz) to reduce low-frequency drift and high-frequency physiological noise.\n\nTo construct brain functional networks in this study, we first employed an automated anatomical labeling (AAL) atlas (Tzourio-Mazoyer et al., 2002) to parcellate the brain into 90 regions of interest (ROIs) (45 in each hemisphere). The time series was acquired on each ROI by averaging the signals of all voxels within that region and then linearly regressing out the influences of head motion and global signals. By calculating the Pearson correlation coefficient in the residual time courses between each pair of ROIs within the same hemisphere, two 45×45 correlation matrices were obtained for each subject, one for the left hemisphere and the other for the right hemisphere. Finally, each correlation matrix was thresholded into a binarized matrix with a fixed sparsity value (defined as the total number of edges in a network divided by the maximum possible number of edges). Specifically, we thresholded each correlation matrix repeatedly over a wide range of sparsity (10%≤s≤46%) at the intervals of 0.01. Through this thresholding, unweighted graphs were obtained with the nodes representing brain regions and the edges representing functional relationships between brain regions.\n\nTo determine whether there were significant differences in any of the six global network parameters, a two-way repeated-measures analysis of variance (ANOVA) was performed with gender as a between-subject factor and hemisphere (left and right) as a repeated-measures factor. If any main effect survived a threshold of P<0.05, a further t-test (paired t-test for the hemisphere effect and two-sample t-test for the gender effect) was performed."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 110,
+            "text": "Hemisphere- and gender-related differences in small-world brain networks: A resting-state functional MRI study",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 140,
+            "end": 185,
+            "text": "Lixia Tian, Jinhui Wang, Chaogan Yan, Yong He",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 111,
+            "end": 139,
+            "text": "NeuroImage 54 (2011) 191–202",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 111,
+            "end": 139,
+            "text": "NeuroImage 54 (2011) 191–202",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 186,
+            "end": 222,
+            "text": "doi:10.1016/j.neuroimage.2010.07.066",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 224,
+            "end": 399,
+            "text": "We employed resting-state functional MRI (R-fMRI) to investigate hemisphere- and gender-related differences in the topological organization of human brain functional networks.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 521,
+            "end": 601,
+            "text": "“1000 Functional Connectomes” Project (http://www.nitrc.org/projects/fcon_1000/)",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1488,
+            "end": 1501,
+            "text": "3.0 T Siemens",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1683,
+            "end": 1693,
+            "text": "slices, 33",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1695,
+            "end": 1710,
+            "text": "thickness, 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1712,
+            "end": 1723,
+            "text": "gap, 0.6 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1772,
+            "end": 1787,
+            "text": "flip angle, 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1725,
+            "end": 1751,
+            "text": "field of view, 200×200 mm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1639,
+            "end": 1663,
+            "text": "repetition time, 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1665,
+            "end": 1681,
+            "text": "echo time, 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2430,
+            "end": 2452,
+            "text": "resampled to 3×3×3 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 625,
+            "end": 664,
+            "text": "We selected 86 young healthy volunteers",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1982,
+            "end": 1986,
+            "text": "SPM5",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1186,
+            "end": 1199,
+            "text": "resting state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1255,
+            "end": 1266,
+            "text": "eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 625,
+            "end": 664,
+            "text": "We selected 86 young healthy volunteers",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 678,
+            "end": 756,
+            "text": "20.8±1.6 years old, range 18–25; and 38 males: 20.7±1.7 years old, range 17–25",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 906,
+            "end": 926,
+            "text": "All are right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 666,
+            "end": 676,
+            "text": "48 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 763,
+            "end": 870,
+            "text": "head motion less than 2.0 mm displacement in any of the x, y, or z directions or 2.0° of any angular motion",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 931,
+            "end": 987,
+            "text": "had no history of neurological and psychiatric disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1068,
+            "end": 1173,
+            "text": "approved by the Institutional Review Board of Beijing Normal University Imaging Center for Brain Research",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1233,
+            "end": 1359,
+            "text": "keep still with their eyes closed but not fall asleep, remain as motionless as possible, and to think of nothing in particular",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1255,
+            "end": 1266,
+            "text": "eyes closed",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3905,
+            "end": 3959,
+            "text": "two-way repeated-measures analysis of variance (ANOVA)",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3979,
+            "end": 4075,
+            "text": "gender as a between-subject factor and hemisphere (left and right) as a repeated-measures factor",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1818,
+            "end": 1849,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1818,
+            "end": 1849,
+            "text": "first 10 volumes were discarded",
+            "labels": [
+              "Removal Init Vol — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2158,
+            "end": 2227,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2158,
+            "end": 2227,
+            "text": "corrected for within-scan acquisition time differences between slices",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2238,
+            "end": 2267,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2238,
+            "end": 2267,
+            "text": "realigned to the first volume",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2348,
+            "end": 2425,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2348,
+            "end": 2425,
+            "text": "spatially normalized to a standard template (Montreal Neurological Institute)",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2430,
+            "end": 2452,
+            "text": "resampled to 3×3×3 mm3",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2510,
+            "end": 2540,
+            "text": "5",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2510,
+            "end": 2540,
+            "text": "band-pass filter (0.01–0.1 Hz)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2528,
+            "end": 2539,
+            "text": "0.01–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2728,
+            "text": "6",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2687,
+            "end": 2728,
+            "text": "automated anatomical labeling (AAL) atlas",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2888,
+            "end": 2942,
+            "text": "7",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2888,
+            "end": 2942,
+            "text": "averaging the signals of all voxels within that region",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2961,
+            "end": 3005,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2961,
+            "end": 3005,
+            "text": "regressing out the influences of head motion",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3010,
+            "end": 3024,
+            "text": "9",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3010,
+            "end": 3024,
+            "text": "global signals",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3045,
+            "end": 3076,
+            "text": "10",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3045,
+            "end": 3076,
+            "text": "Pearson correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3371,
+            "end": 3391,
+            "text": "11",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3371,
+            "end": 3391,
+            "text": "fixed sparsity value",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3588,
+            "end": 3597,
+            "text": "10%≤s≤46%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3652,
+            "end": 3683,
+            "text": "12",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3652,
+            "end": 3683,
+            "text": "unweighted graphs were obtained",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

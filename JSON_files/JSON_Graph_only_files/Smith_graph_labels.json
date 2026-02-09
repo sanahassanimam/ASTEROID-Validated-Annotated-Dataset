@@ -1,0 +1,345 @@
+{
+  "data": {
+    "title": "Higher levels of trait emotional awareness are associated with more efficient global information integration throughout the brain: a graph-theoretic analysis of resting state functional connectivity",
+    "text": "Graph theory analyses\n\nGraph theory analyses were performed using the default func-\ntional connectivity processing pipeline in the CONN toolbox (for\ndetails, see Whitfield-Gabrieli and Nieto-Castanon, 2012). Using\nthis processing pipeline, physiological and other sources of\nnoise were estimated with the aCompcor method (Behzadi et al.,\n2007; Whitfield-Gabrieli et al., 2009; Chai et al., 2012); they were\nthen removed along with the movement- and artifact-related\ncovariates mentioned above. The residual BOLD time-series was\nthen band-pass filtered (0.008–0.09 Hz). Every participant’s\nstructural image was segmented into gray matter, white matter,\nand cerebral spinal fluid using SPM12. White matter and cere-\nbral spinal fluid noise effects were removed through regression.\nThe regions of interest (ROIs) in the present study were derived\nfrom a freely available ROI atlas defined by correlated activation\npatterns (http://findlab.stanford.edu/functional_ROIs.html). The\n90 ROIs within this atlas span several networks: the anterior\nand posterior SNs, dorsal and ventral DMNs, left and right ECNs,\nauditory network, basal ganglia network, higher visual network,\nlanguage network, sensorimotor network, primary visual net-\nwork, visuospatial network and precuneus network (for details,\nsee Shirer et al., 2012). However, rather than focus on any of\nthese networks in isolation, we treated all ROIs as “nodes” with-\nin a whole-brain network.\n\nWe extracted the residual BOLD time course for each ROI for\neach participant to produce single-participant Pearson’s correl-\nation maps for the time courses of all pairs of ROIs. At the se-\ncond level, controlling for age, gender and IQ, we used the\nCONN toolbox’s automated graph theory analysis algorithms\n(for a detailed description, see https://sites.google.com/view/\nconn/resources/manuals) to examine the relationship between\nLEAS TOTAL scores and several graph theory metrics: (i) Average\npath length, defined as the mean shortest path length among all\npossible pairs of nodes, represents the efficiency of information\ntransfer between ROIs (for this measure, CONN only computes\nthe average path length across connected nodes; i.e. the ana-\nlysis excludes ROIs with no connections to the graph, as the\naverage path length from this node to any other node would be\ninfinite). (ii) The global efficiency of the network, defined as the\nmean inverse shortest path length for all possible pairs of\nnodes, represents a complementary measure of the efficiency\nof information transfer among all ROIs. (iii) Local efficiency, which\ncan be thought of as the global efficiency of the sub-network\nconsisting only of a node’s neighbors (regions to which a given\nROI has direct functional connections; excluding the ROI itself);\nat the whole-network level, local efficiency reflects the average\nsub-network efficiency across all ROIs, and indicates the net-\nwork’s ability to effectively compensate for the localized failure\nof a single node. (iv) The clustering coefficient, which reflects the\ndegree to which nodes tend to cluster together (i.e. the regions\nto which an ROI is directly connected also have direct connec-\ntions among themselves); on the whole-network level, the clus-\ntering coefficient can be thought of as the average level of\nclustering (as defined above) across all ROIs—representing the\naverage efficiency of information transfer within local ROI clus-\nters. (v) The degree of connectivity is the number of edges linked\nto a node, representing the number of direct functional connec-\ntions between an ROI and other ROIs. Average degree, also\ncalled ‘network density’, is a measure of the interconnectedness\nof the network as a whole.\n\nEach of these metrics can be seen as complementary meas-\nures of how efficiently the information represented within a\ngiven node could be passed to (i.e. made available to) any other\nnode in the network (for a review of these graph theory metrics,\nsee Bullmore and Sporns, 2009). We predicted that individuals\nwith higher tEA would display greater efficiency of information\ntransfer throughout the brain, such that, for the whole-brain\nnetwork, higher LEAS TOTAL scores would be associated with\nshorter average path length, higher global and local efficiency, a\ngreater clustering coefficient, and higher network density. For\nthese analyses, we initially set a binary ROI-to-ROI correlation\nthreshold of r¼0.3 to define the presence/absence of edges/con-\nnections between all possible pairs of nodes. However, as there\nis little consensus in the field about proper a priori threshold se-\nlection in graph theoretic neural network analyses, we repeated\nthe analyses with thresholds of r¼0.2 and r¼0.4 as well (see\nSupplementary Results).\n\nAfter confirming our a priori hypotheses regarding whole-\nnetwork-level relationships between LEAS TOTAL scores and\nthe above-mentioned graph theory metrics, we also explored\nROI-specific graph-theoretic results using a false discovery\nrate (FDR)-corrected P-value threshold of P(cid:4)0.05 (all reported\nP-values are two-tailed).\n\nFinally, we then re-performed the analyses of several of the\ngraph theory metrics above, while controlling for individual dif-\nferences in network density (average degree). This was done in\norder to clarify between two possible interpretations of our\nthe relationship between"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 920,
+            "end": 970,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 851,
+            "end": 919,
+            "text": "freely available ROI atlas defined by correlated activation\npatterns",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 920,
+            "end": 970,
+            "text": "(http://findlab.stanford.edu/functional_ROIs.html)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1294,
+            "end": 1313,
+            "text": "Shirer et al., 2012",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 976,
+            "end": 1275,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1385,
+            "end": 1412,
+            "text": "treated all ROIs as “nodes”",
+            "labels": [
+              "ROI definition — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 976,
+            "end": 1275,
+            "text": "90 ROIs within this atlas span several networks: the anterior\nand posterior SNs, dorsal and ventral DMNs, left and right ECNs,\nauditory network, basal ganglia network, higher visual network,\nlanguage network, sensorimotor network, primary visual net-\nwork, visuospatial network and precuneus network",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1449,
+            "end": 1488,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1449,
+            "end": 1488,
+            "text": "extracted the residual BOLD time course",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 305,
+            "end": 320,
+            "text": "aCompcor method",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1553,
+            "end": 1581,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1553,
+            "end": 1581,
+            "text": "Pearson’s correl-\nation maps",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1590,
+            "end": 1623,
+            "text": "time courses of all pairs of ROIs",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4421,
+            "end": 4460,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4358,
+            "end": 4397,
+            "text": "binary ROI-to-ROI correlation\nthreshold",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4421,
+            "end": 4460,
+            "text": "presence/absence of edges/con-\nnections",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4388,
+            "end": 4406,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4388,
+            "end": 4406,
+            "text": "threshold of r¼0.3",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4667,
+            "end": 4686,
+            "text": "thresholds of r¼0.2",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4691,
+            "end": 4696,
+            "text": "r¼0.4",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1900,
+            "end": 3597,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 131,
+            "end": 143,
+            "text": "CONN toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1711,
+            "end": 1753,
+            "text": "automated graph theory analysis algorithms",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1900,
+            "end": 3597,
+            "text": "several graph theory metrics: (i) Average\npath length, defined as the mean shortest path length among all\npossible pairs of nodes, represents the efficiency of information\ntransfer between ROIs (for this measure, CONN only computes\nthe average path length across connected nodes; i.e. the ana-\nlysis excludes ROIs with no connections to the graph, as the\naverage path length from this node to any other node would be\ninfinite). (ii) The global efficiency of the network, defined as the\nmean inverse shortest path length for all possible pairs of\nnodes, represents a complementary measure of the efficiency\nof information transfer among all ROIs. (iii) Local efficiency, which\ncan be thought of as the global efficiency of the sub-network\nconsisting only of a node’s neighbors (regions to which a given\nROI has direct functional connections; excluding the ROI itself);\nat the whole-network level, local efficiency reflects the average\nsub-network efficiency across all ROIs, and indicates the net-\nwork’s ability to effectively compensate for the localized failure\nof a single node. (iv) The clustering coefficient, which reflects the\ndegree to which nodes tend to cluster together (i.e. the regions\nto which an ROI is directly connected also have direct connec-\ntions among themselves); on the whole-network level, the clus-\ntering coefficient can be thought of as the average level of\nclustering (as defined above) across all ROIs—representing the\naverage efficiency of information transfer within local ROI clus-\nters. (v) The degree of connectivity is the number of edges linked\nto a node, representing the number of direct functional connec-\ntions between an ROI and other ROIs. Average degree",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

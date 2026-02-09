@@ -1,0 +1,1101 @@
+{
+  "data": {
+    "text": "Associations between genetic risk, functional brain network organization and neuroticism\nMichelle N. Servaas, Linda Geerligs, Jojanneke A. Bastiaansen, Remco J. Renken, Jan-Bernard C. Marsman, Ilja M. Nolte, Johan Ormel, André Aleman, Harriëtte Riese\nBrain Imaging and Behavior (2017) 11:1581–1591 — Published online: 14 October 2016 — DOI 10.1007/s11682-016-9626-2\nThis article is published with open access at Springerlink.com — Creative Commons Attribution 4.0 International License.\n\nParticipants\nIn short, 120 individuals (mean age: 20.8 SD ± 2.0, age range: 18–25) were selected from a larger sample of 240 students from the University of Groningen on the basis of their scores on the NEO Five-Factor Inventory (NEO-FFI). To ensure sufficient numbers of participants with high levels of neuroticism, sixty individuals were selected from the highest quartile of neuroticism scores (NEO-FFI score ≥ 32, range 32–47) and sixty individuals were randomly selected from the three lowest quartiles (NEO-FFI < 32, range 17–31). Participants met the following selection criteria: 1) female gender, 2) age between 18 and 25 years, 3) Dutch as native language, 4) Caucasian descent, 5) right handed, 6) no use of contraceptive medication, except for oral contraceptive pills (21-pill packet). Exclusion criteria were 1) a history of seizure or head injury, 2) a life time diagnosis of psychiatric and/or neurological disorders, 3) a life time diagnosis of psychiatric disorders in first degree relatives of the participant, 4) the use of medication that can influence test results, 5) visual or auditory problems that cannot be corrected, 6) MRI incompatible implants or tattoos, 7) claustrophobia, 8) suspected or confirmed pregnancy. On the day of the experiment, after explaining the procedure, participants gave informed consent. The study was approved by the Medical Ethical Committee of the University Medical Center Groningen and was conducted in accordance with the Declaration of Helsinki.\n\nImage acquisition\nA 3 Tesla Philips Intera MRI scanner (Philips Medical Systems, Best, the Netherlands), equipped with a 32-channel SENSE head coil, was used to acquire the images. Resting-state functional magnetic resonance imaging (rs-fMRI) images were acquired with a T2*-weighted gradient echo planar imaging (EPI) sequence. Participants were instructed to close their eyes and to not fall asleep. The scan comprised 300 volumes of 37 axial-slices (TR: 2000 ms; TE: 30 ms; FOV: 220 × 221; 64 × 62 matrix; voxel size: 3.5 × 3.5 × 3.5 mm). Slices were acquired in descending order without a gap. A high-resolution T1-weighted 3D structural image was obtained using fast-field echo (FFE) for anatomical reference (170 slices; TR: 9 ms; TE: 8 ms; FOV: 256 × 231; 256 × 256 matrix; voxel size: 1 × 1 × 1 mm).\n\nData preprocessing\nImage processing was performed using SPM8 (http://www.fil.ion.ucl.ac.uk/spm), implemented in Matlab 7.8.0. Preprocessing included realignment, coregistration, DARTEL normalization (2×2×2 mm isotropic voxels) and smoothing (8 mm full-width at half maximum (FWHM) Gaussian kernel).\nNext, a series of preprocessing steps specific to rs-fMRI analysis were performed. First, we performed segmentation of the T1-weighted image to create a WM and CSF mask. Second, regression of several nuisance variables was applied per grey matter voxel to remove sources of spurious variance, comprising: six rigid body head motion parameters, the global signal, white matter (WM) signal and cerebrospinal fluid (CSF) signal. In addition, the first temporal derivatives of abovementioned nuisance variables were removed. Third, temporal band-pass filtering was applied to detrend the signal and to retain frequencies between 0.008–0.08 Hz. Fourth, we performed scrubbing to additionally remove influences of movement on the rs-fMRI data (Power et al., 2012).\n\nAfter data preprocessing, nine participants were excluded from further analysis; two because of anatomical abnormalities, five because of technical difficulties, and two because of excessive scrubbing (more than one-third of the volumes had to be removed). Furthermore, for the COMT polymorphism, two additional subjects had to be excluded due to failure of genotyping. The following total samples remained for statistical analysis: for the 5-HTTLPR polymorphism, a sample of 111 participants, and for the COMT polymorphism, a sample of 109 participants.\n\nNetwork construction\nNodes were built by creating a sphere of 5 mm radius around 264 coordinates provided by Power et al. (2011). We added bilateral amygdala, hippocampus and caudate from the Harvard-Oxford Subcortical Structural Atlas, resulting in a total of 270 ROIs; after exclusions based on coverage, 259 ROIs remained. To construct a connectivity matrix per subject, we extracted the regional mean time series for each ROI and calculated Pearson correlations between all pairs. Correlations were set to zero when the distance was less than 20 mm between the centres of two ROIs, and diagonal elements were set to zero as well.\n\nThresholding and module index\nWe applied a range of proportional thresholds to each correlation matrix per subject from 1% to 30% in 1% increments. Subnetworks were derived by applying the algorithm of Blondel et al. (2008) and the modularity fine-tuning algorithm of Sun et al. (2009). The optimal threshold in the current study was 1.8%. In total, six subnetworks were derived: affective (AS), cingulo-operculum (COS), default mode (DMS), fronto-parietal (FPS), somatosensory-motor (SMS) and visual (VS).\n\nNetwork measures\nNetwork measures were calculated on weighted graphs using the Brain Connectivity Toolbox. Whole-brain network measures included global efficiency, local efficiency and maximized modularity. At the subnetwork level, we calculated local efficiency and the participation coefficient (averaged across nodes) per module.\n\nNetwork construction\n\nNetwork construction was previously applied in Servaas et al.\n(2015). Nodes (i.e. brain regions of interest) were built by\ncreating a sphere of 5 mm radius around 264 coordinates\nprovided by Power et al. (2011). After visual inspection of\nthe regions of interest (ROIs), we noted the absence of three\nrelevant subcortical structures for research on neuroticism:\nbilateral amygdala, hippocampus and caudate (Servaas et al.\n2013). The coordinates for these regions were determined\nusing the Harvard-Oxford Subcortical Structural Atlas. First,\nwe thresholded the Harvard-Oxford atlas files at probability\n80 % and second, we selected coordinates with the highest\nprobability for the left and right amygdala, hippocampus and\ncaudate separately. This resulted in a total of 270 ROIs. No\noverlap was observed between the additional ROIs and the\nROIs of Power et al. (2011). Next, a whole-brain group mask\nwas built based on the EPI images to locate the parts of the\nbrain that are free from susceptibility artifacts in all subjects.\nSubsequently, we checked whether nodes overlapped more\nthan 50 % (voxel-wise) with the group mask. This resulted\nin the exclusion of eleven ROIs. To construct a connectivity\nmatrix per subject, we extracted the regional mean time series\nfor each of the remaining 259 ROIs and calculated Pearson\ncorrelations between all pairs. Furthermore, to prevent biases\ndue to shared non-biological signal between adjacent ROIs,\ncorrelations were set to zero when the distance was less than\n20 mm between the centres of two ROIs (Power et al. 2011)\n(540 connections, 1.62 %). In addition, correlations on the\ndiagonal of the connectivity matrix were set to zero as well.\n\nThresholding and module index\n\nWe applied a range of proportional thresholds to each corre-\nlation matrix per subject to avoid the confound of discrepant\nresults on network measures, due to their sensitivity to the\n\nnumber of edges (i.e. connections) in a graph (van Wijk\net al. 2010). The threshold values ranged from 1 % to 30 %\nin increments of 1 %. Network measures were calculated\nacross the selected range of threshold values. Subnetworks\nwere derived from the whole-brain graph by applying the\nalgorithm of Blondel et al. (2008) and the modularity fine-\ntuning algorithm of Sun et al. (2009) (see Online resource 1,\nSupplement 5 for details on the module decomposition). For\nthis procedure, we selected a single optimal threshold by using\nthe method of Geerligs et al. (2015). The optimal threshold in\nthe current study was 1.8 % (see Online resource 1,\nSupplement 6 for details on the selection of the optimal\nthreshold). In total, six subnetworks could be derived with a\nmaximum number of within-group edges and a minimum\nnumber of between-group edges (Rubinov and Sporns\n2010). These included the AS, COS, DMS, FPS, SMS and\nVS (see Fig. 1).\n\nNetwork measures\n\nNetwork measures were calculated on weighted (i.e. edge\nstrengths are preserved) graphs across the selected range of\nthreshold values by using functions implemented in the Brain\nConnectivity Toolbox (www.brain-connectivity-toolbox.net,\nRubinov and Sporns 2010). First, we calculated the whole-\nbrain network measures: global efficiency, local efficiency\n(averaged across nodes) and maximized modularity. Global\nefficiency is calculated as the average inverse shortest path\n\nFig. 1 Module decomposition. Nodes could be partitioned in six\nfunctional subnetworks with a maximum number of within-group edges\nand a minimum number of between-group edges. Colors indicate the\ndifferent modules that nodes belong to: AS, affective subnetwork\n(green); COS, cingulo-operculum subnetwork (dark blue); DMS, default\nmode subnetwork (purple); FPS, fronto-parietal subnetwork (red); SMS,\nsomatosensory-motor subnetwork (orange); VS, visual subnetwork (light\nblue). Nodes are pasted on an inflated surface rendering of the human\nbrain using the program CARET (v5.65). In the panels, different views\nare shown: A. left lateral, B. left medial, C. cerebellum dorsal, D. right\nlateral, E. right medial (reprinted from Servaas et al. 2015)\n\n\f1586\n\nBrain Imaging and Behavior (2017) 11:1581–1591\n\nlength between all pairs of nodes. Local efficiency is calculat-\ned in a similar manner, but then between the neighbours of a\nspecific node (Latora and Marchiori 2001; Rubinov and\nSporns 2010). Maximized modularity is calculated with a\nfunction that quantifies the degree to which a network can\nbe clearly delineated in non-overlapping groups of nodes\n(Rubinov and Sporns 2010). Second, we calculated local effi-\nciency (averaged across nodes) and the participation coeffi-\ncient (averaged across nodes) per module. The participation\ncoefficient is calculated as the ratio of intra- versus\nintermodular connections per node (Rubinov and Sporns\n2010). For the interaction analyses, we only examined net-\nwork measures that were related to neuroticism in our previ-\nous paper (Servaas et al. 2015) to investigate whether genetic\nvariation in the 5-HTTLPR and COMT polymorphism ex-\nplains the reported associations between functional network\norganization and neuroticism. These include all three whole-\nbrain network measures, local efficiency for the modules\nDMS, FPS, SMS and VS, and the participation coefficient\nfor the modules COS and SMS.\n\nNetwork analyses\n\nAcross the selected range of threshold values, we calculated i)\nthe mean difference between the genetic risk and non-risk\ngroup per network measure for both polymorphisms, ii) the\ndifference in slope between the genetic risk and non-risk\ngroup for the association between neuroticism and a specific\nnetwork measure for both polymorphisms. These difference\nmeasures were plotted and visually checked for consistency\nacross threshold values. Subsequently, we calculated the AUC\nacross threshold values per network measure for both poly-\nmorphisms to obtain a summarized scalar that is independent\nof single threshold selection. Next, non-parametric permuta-\ntion testing was applied on the AUC per network measure to\nassess whether the results could have occurred by chance. To\nthis end, genetic group membership was permuted randomly\nand the difference measures were recalculated. This procedure\nwas repeated 5000 times and a two-tailed test of the null hy-\npothesis (p < 0.05) was performed (Zhang et al. 2011)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 88,
+            "text": "Associations between genetic risk, functional brain network organization and neuroticism",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 89,
+            "end": 250,
+            "text": "Michelle N. Servaas, Linda Geerligs, Jojanneke A. Bastiaansen, Remco J. Renken, Jan-Bernard C. Marsman, Ilja M. Nolte, Johan Ormel, André Aleman, Harriëtte Riese",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 300,
+            "end": 333,
+            "text": "Published online: 14 October 2016",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 336,
+            "end": 365,
+            "text": "DOI 10.1007/s11682-016-9626-2",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 251,
+            "end": 297,
+            "text": "Brain Imaging and Behavior (2017) 11:1581–1591",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 366,
+            "end": 428,
+            "text": "This article is published with open access at Springerlink.com",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 431,
+            "end": 485,
+            "text": "Creative Commons Attribution 4.0 International License",
+            "labels": [
+              "Remarks"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2015,
+            "end": 2098,
+            "text": "3 Tesla Philips Intera MRI scanner (Philips Medical Systems, Best, the Netherlands)",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2324,
+            "end": 2396,
+            "text": "Participants were instructed to close their eyes and to not fall asleep.",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2431,
+            "end": 2446,
+            "text": "37 axial-slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2448,
+            "end": 2459,
+            "text": "TR: 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2461,
+            "end": 2470,
+            "text": "TE: 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2504,
+            "end": 2534,
+            "text": "voxel size: 3.5 × 3.5 × 3.5 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2472,
+            "end": 2486,
+            "text": "FOV: 220 × 221",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2537,
+            "end": 2592,
+            "text": "Slices were acquired in descending order without a gap.",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2176,
+            "end": 2237,
+            "text": "Resting-state functional magnetic resonance imaging (rs-fMRI)",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2860,
+            "end": 2864,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4327,
+            "end": 4355,
+            "text": "a sample of 111 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4388,
+            "end": 4416,
+            "text": "a sample of 109 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 511,
+            "end": 526,
+            "text": "120 individuals",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 528,
+            "end": 569,
+            "text": "mean age: 20.8 SD ± 2.0, age range: 18–25",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1181,
+            "end": 1193,
+            "text": "right handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1080,
+            "end": 1093,
+            "text": "female gender",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1026,
+            "end": 1075,
+            "text": "Participants met the following selection criteria",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3889,
+            "end": 3920,
+            "text": "nine participants were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 806,
+            "end": 878,
+            "text": "sixty individuals were selected from the highest quartile of neuroticism",
+            "labels": [
+              "Group matching"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1843,
+            "end": 1927,
+            "text": "approved by the Medical Ethical Committee of the University Medical Center Groningen",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2953,
+            "end": 2964,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0028"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2860,
+            "end": 2864,
+            "text": "SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2966,
+            "end": 2980,
+            "text": "2",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0030"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2860,
+            "end": 2864,
+            "text": "SPM8",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2982,
+            "end": 3002,
+            "text": "3",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2860,
+            "end": 2864,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2982,
+            "end": 2988,
+            "text": "DARTEL",
+            "labels": [
+              "Spatial normalization — Algorithm"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3004,
+            "end": 3029,
+            "text": "2×2×2 mm isotropic voxels",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3035,
+            "end": 3101,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm"
+          ],
+          "id": "m0036"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2860,
+            "end": 2864,
+            "text": "SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3046,
+            "end": 3100,
+            "text": "8 mm full-width at half maximum (FWHM) Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3193,
+            "end": 3243,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0039"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2860,
+            "end": 2864,
+            "text": "SPM8",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3408,
+            "end": 3445,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0041"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3408,
+            "end": 3445,
+            "text": "six rigid body head motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3447,
+            "end": 3464,
+            "text": "7",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0043"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3447,
+            "end": 3464,
+            "text": "the global signal",
+            "labels": [
+              "Global signal — Type"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3466,
+            "end": 3527,
+            "text": "8",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0045"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3466,
+            "end": 3527,
+            "text": "white matter (WM) signal and cerebrospinal fluid (CSF) signal",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3728,
+            "end": 3741,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0047"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3640,
+            "end": 3649,
+            "text": "band-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3728,
+            "end": 3741,
+            "text": "0.008–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3764,
+            "end": 3773,
+            "text": "10",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Type",
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0050"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4904,
+            "end": 4971,
+            "text": "Correlations were set to zero when the distance was less than 20 mm",
+            "labels": [
+              "Connectivity normalization"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6041,
+            "end": 6129,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ],
+          "id": "m0052"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6041,
+            "end": 6129,
+            "text": "creating a sphere of 5 mm radius around 264 coordinates\nprovided by Power et al. (2011).",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6397,
+            "end": 6451,
+            "text": "using the Harvard-Oxford Subcortical Structural Atlas.",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6041,
+            "end": 6129,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0055"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6041,
+            "end": 6129,
+            "text": "creating a sphere of 5 mm radius around 264 coordinates\nprovided by Power et al. (2011).",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6397,
+            "end": 6451,
+            "text": "using the Harvard-Oxford Subcortical Structural Atlas.",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7139,
+            "end": 7239,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0058"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7139,
+            "end": 7239,
+            "text": "we extracted the regional mean time series\nfor each of the remaining 259 ROIs and calculated Pearson",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7217,
+            "end": 7271,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0060"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7217,
+            "end": 7271,
+            "text": "and calculated Pearson\ncorrelations between all pairs.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7362,
+            "end": 7461,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0062"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7362,
+            "end": 7461,
+            "text": "correlations were set to zero when the distance was less than\n20 mm between the centres of two ROIs",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7891,
+            "end": 7957,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0064"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7891,
+            "end": 7957,
+            "text": "The threshold values ranged from 1 % to 30 %\nin increments of 1 %.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8038,
+            "end": 8203,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0066"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8038,
+            "end": 8203,
+            "text": "Subnetworks\nwere derived from the whole-brain graph by applying the\nalgorithm of Blondel et al. (2008) and the modularity fine-\ntuning algorithm of Sun et al. (2009)",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8693,
+            "end": 8755,
+            "text": "These included the AS, COS, DMS, FPS, SMS and\nVS (see Fig. 1).",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9037,
+            "end": 9178,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9037,
+            "end": 9178,
+            "text": "First, we calculated the whole-\nbrain network measures: global efficiency, local efficiency\n(averaged across nodes) and maximized modularity.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8775,
+            "end": 9036,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11652,
+            "end": 11984,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0072"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11652,
+            "end": 11984,
+            "text": "Subsequently, we calculated the AUC\nacross threshold values per network measure for both poly-\nmorphisms to obtain a summarized scalar that is independent\nof single threshold selection. Next, non-parametric permuta-\ntion testing was applied on the AUC per network measure to\nassess whether the results could have occurred by chance.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "id": "m0073"
+        }
+      ]
+    }
+  ]
+}

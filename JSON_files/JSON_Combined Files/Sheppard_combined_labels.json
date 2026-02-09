@@ -1,0 +1,973 @@
+{
+  "data": {
+    "text": "Large-Scale Cortical Functional Organization and Speech\nPerception across the Lifespan\nJohn P. Sheppard1,2¤, Ji-Ping Wang3, Patrick C. M. Wong1,4*\n\n\nCitation: Sheppard JP, Wang J-P, Wong PCM (2011) Large-Scale Cortical Functional Organization and Speech Perception across the Lifespan. PLoS ONE 6(1): e16510. doi:10.1371/journal.pone.0016510\n\n\nEthics Statement\nAll subjects in this experiment gave informed written consent prior to inclusion in the study and were compensated monetarily for their participation. All research was conducted under the approval of the Northwestern University Institutional Review Board, and thus adhered to the ethical standards outlined in the 1964 Declaration of Helsinki.\n\n\nSubject recruitment\nWe recruited twelve younger (19–27 years; mean age 21.75±3.05 years (SD); 8 females) and twelve older (63–75 years; mean age = 67.50±3.58 years (SD); 6 females) adults with no reported neurological deficits for participation in the study.\n\n\nScanner experiment\nIn the scanner experiment, subjects were presented with one-word speech stimuli via headphones (either in quiet or embedded in multi-talker noise). During each stimulus presentation, subjects were shown three images on a screen, including an image matching the target word and two distracters, and used a response box to select the image corresponding to the target word. For instance, in one trial, subjects heard the word “witch” in the presence of background noise, and had to select between images of a witch and two other objects from the list of stimuli. Stimuli were presented in 12-second blocks consisting of three individual stimuli (each corresponding to the same listening condition), limiting response times to four seconds per stimulus. In total, the fMRI experiment consisted of 60 stimulus blocks per condition as well as 30 null blocks during which no stimuli were presented, with all blocks presented in pseudorandomized order.\n\n\nMR imaging data were acquired on a Siemens 3T Trio machine at the Center for Advanced MRI at Northwestern University. T1-weighted, high-resolution anatomical images were acquired axially (MP-RAGE; TR/TE = 2300 ms/3.36 ms; flip angle = 9°; TI = 900 ms; matrix size = 256×256; FOV = 22 cm; slice thickness = 1 mm). During the speech perception experiment, T2*-weighted functional images were acquired using a susceptibility-weighted EPI pulse sequence (TE = 30 ms; flip angle = 90°; in-plane resolution = 3.4375 mm×3.4375 mm), with 24 slices acquired per scan in an interleaved measurement (3 mm slice thickness; zero gap). Functional image acquisition occurred directly after each 12-second stimulus block and lasted two seconds in duration, resulting in a 14-second repetition time (TR). The sparse functional image acquisition (long TR) ensured there was no scanner noise during stimulus presentation. 210 (60×3+30) 14-second TRs were acquired in total.\n\n\nMRI Data Pre-Processing\nWe pre-processed MRI data using AFNI, SUMA, and the FreeSurfer analysis suite. Pre-processing of functional time series data was performed in the native three-dimensional (volumetric) space of each individual subject. Initially, the first image from each functional dataset was discarded to minimize T1 equilibration artifacts. Next, differences in the time of acquisition between slices were corrected using Fourier interpolation. Functional data were then corrected for head movement artifacts, using the second image of the acquisition as a reference to which subsequent images were adjusted. Due to the limited frequency spectrum of the acquired functional images (long TR), we did not apply bandpass filtering to the functional data. Subsequently, we mapped the processed volumetric data onto high-resolution, two-dimensional cortical surface meshes prepared for each subject using FreeSurfer and SUMA software, without regressing out the whole-brain signal. To avoid introduction of artificial local correlations in the fMRI signal, no spatial filtering was performed after mapping data onto the cortical surfaces.\n\n\nUsing FreeSurfer’s automated cortical parcellation, we obtained a classification of each subjects’ cortical surface into 66 anatomical regions (33 per hemisphere), corresponding to the cortical regions defined in the Desikan-Killiany atlas. For each subject and listening condition (i.e., quiet and noisy), node-averaged vectors were extracted containing the functional data from the stimulus blocks corresponding to the listening condition of interest, and pair-wise, zero time-lag Pearson’s correlations were calculated between nodes. Subsequently, we defined weighted cortical graphs by assigning undirected, weighted connections between nodes whose absolute pair-wise correlation exceeded a pre-specified cost threshold. The cost thresholds were specified separately for each subject in order to generate networks with fixed costs. To ensure that results were not dependent on any particular network cost, we constructed networks over a cost range from 0.10 to 0.40 at increments of 0.02. We computed normalized measures by dividing the network properties by the average values obtained in 50 randomized surrogate networks of conserved size and connectivity distribution.\n\n\nFollowing network construction, measures of global (Eglob) and local (Eloc) efficiency were computed and averaged across all cortical regions to quantify the efficiency of global and local information transfer within the networks.\n\n\nNext, using FreeSurfer's automated cortical parcellation [79], we obtained a classification of each subjects' cortical surface into 66 anatomical regions (33 per hemisphere), corresponding to the cortical regions defined in the Desikan-Killiany atlas [50]. For each subject and listening condition (i.e., quiet and noisy), node-averaged vectors ( V ) were extracted containing the functional data from the stimulus blocks corresponding to the listening condition of interest, and pair-wise, zero time-lag Pearson's correlations were calculated between nodes. This established a raw correlation matrix ( R ) containing the pair-wise correlations of the fMRI responses between each pair of cortical regions for each listening condition.\n\nSubsequently, we defined weighted cortical graphs G by assigning undirected, weighted connections (edges) between nodes whose absolute pair-wise correlation exceeded a pre-specified cost threshold, rc. This resulted in a weighted adjacency matrix ( W ), such that Wij = |Rij| if |Rij| ≥ rc or Wij = 0 if |Rij| < rc. The cost thresholds ( rc ) were specified separately for each subject in order to generate networks with fixed costs (i.e., the fraction of existing to possible edges in the network). To ensure that results were not dependent on any particular network cost, we constructed networks over a cost range from 0.10 to 0.40 at increments of 0.02.\n\nSmall-world networks possess Eglob approaching (but slightly less than) that of comparable random networks (i.e., Eglob ≲ Erandglob), and Eloc greater than random networks (i.e., Eloc ≳ Erandloc). Since differences in mean connection strengths affect the values of Eglob and Eloc, we computed normalized Eglob (Eglob/Erandglob) and Eloc (Eloc/Erandloc) by dividing the network properties by the average values obtained in 50 randomized surrogate networks of conserved size and connectivity distribution [83]. To reduce the number of statistical comparisons, we computed summary measures by averaging the normalized Eglob and Eloc values across the entire network cost curves (for both the nodal and network average measures)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 86,
+            "text": "Large-Scale Cortical Functional Organization and Speech\nPerception across the Lifespan",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 87,
+            "end": 146,
+            "text": "John P. Sheppard1,2¤, Ji-Ping Wang3, Patrick C. M. Wong1,4*",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 191,
+            "end": 197,
+            "text": "(2011)",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 286,
+            "end": 294,
+            "text": "PLoS ONE",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 309,
+            "end": 341,
+            "text": "doi:10.1371/journal.pone.0016510",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 565,
+            "end": 615,
+            "text": "Northwestern University Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 727,
+            "end": 811,
+            "text": "We recruited twelve younger (19–27 years; mean age 21.75±3.05 years (SD); 8 females)",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 816,
+            "end": 887,
+            "text": "twelve older (63–75 years; mean age = 67.50±3.58 years (SD); 6 females)",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 756,
+            "end": 767,
+            "text": "19–27 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 830,
+            "end": 841,
+            "text": "63–75 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 801,
+            "end": 810,
+            "text": "8 females",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 877,
+            "end": 886,
+            "text": "6 females",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 900,
+            "end": 933,
+            "text": "no reported neurological deficits",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1285,
+            "end": 1357,
+            "text": "used a response box to select the image corresponding to the target word",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1043,
+            "end": 1066,
+            "text": "one-word speech stimuli",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1781,
+            "end": 1839,
+            "text": "60 stimulus blocks per condition as well as 30 null blocks",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1548,
+            "end": 1590,
+            "text": "Stimuli were presented in 12-second blocks",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1711,
+            "end": 1736,
+            "text": "four seconds per stimulus",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1970,
+            "end": 1985,
+            "text": "Siemens 3T Trio",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2460,
+            "end": 2492,
+            "text": "with 24 slices acquired per scan",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2524,
+            "end": 2554,
+            "text": "3 mm slice thickness; zero gap",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2398,
+            "end": 2414,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2546,
+            "end": 2554,
+            "text": "zero gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2210,
+            "end": 2221,
+            "text": "FOV = 22 cm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2691,
+            "end": 2721,
+            "text": "14-second repetition time (TR)",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2386,
+            "end": 2396,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2416,
+            "end": 2457,
+            "text": "in-plane resolution = 3.4375 mm×3.4375 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2524,
+            "end": 2544,
+            "text": "3 mm slice thickness",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2644,
+            "end": 2674,
+            "text": "lasted two seconds in duration",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2259,
+            "end": 2287,
+            "text": "speech perception experiment",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2948,
+            "end": 2993,
+            "text": "AFNI, SUMA, and the FreeSurfer analysis suite",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 727,
+            "end": 811,
+            "text": "We recruited twelve younger (19–27 years; mean age 21.75±3.05 years (SD); 8 females)",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 816,
+            "end": 887,
+            "text": "twelve older (63–75 years; mean age = 67.50±3.58 years (SD); 6 females)",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3250,
+            "end": 3346,
+            "text": "differences in the time of acquisition between slices were corrected using Fourier interpolation",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Parameters"
+          ],
+          "id": "m0034"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2948,
+            "end": 2993,
+            "text": "AFNI, SUMA, and the FreeSurfer analysis suite",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3250,
+            "end": 3346,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3348,
+            "end": 3411,
+            "text": "Functional data were then corrected for head movement artifacts",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ],
+          "id": "m0037"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3348,
+            "end": 3411,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3672,
+            "end": 3770,
+            "text": "mapped the processed volumetric data onto high-resolution, two-dimensional cortical surface meshes",
+            "labels": [
+              "Surface — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Surface — Parameters"
+          ],
+          "id": "m0039"
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3803,
+            "end": 3831,
+            "text": "FreeSurfer and SUMA software",
+            "labels": [
+              "Surface — Software"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3672,
+            "end": 3770,
+            "text": "3",
+            "labels": [
+              "Surface — Step Number"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5617,
+            "end": 5639,
+            "text": "Desikan-Killiany atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5617,
+            "end": 5639,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5556,
+            "end": 5576,
+            "text": "66 anatomical regions",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5577,
+            "end": 5597,
+            "text": "33 per hemisphere",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5462,
+            "end": 5503,
+            "text": "FreeSurfer's automated cortical parcellation",
+            "labels": [
+              "ROI definition — Software"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5556,
+            "end": 5576,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5693,
+            "end": 5712,
+            "text": "node-averaged vectors",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5693,
+            "end": 5712,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5811,
+            "end": 5830,
+            "text": "Pearson's correlations",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5795,
+            "end": 5808,
+            "text": "zero time-lag",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5811,
+            "end": 5830,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5927,
+            "end": 5948,
+            "text": "undirected, weighted",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6054,
+            "end": 6077,
+            "text": "weighted adjacency matrix",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5927,
+            "end": 5948,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5986,
+            "end": 6012,
+            "text": "absolute pair-wise correlation",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5986,
+            "end": 5993,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6180,
+            "end": 6190,
+            "text": "fixed costs",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6352,
+            "end": 6378,
+            "text": "cost range from 0.10 to 0.40",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6382,
+            "end": 6402,
+            "text": "increments of 0.02",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6180,
+            "end": 6190,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6466,
+            "end": 6487,
+            "text": "global ( Eglob )",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6492,
+            "end": 6511,
+            "text": "local ( Eloc )",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6466,
+            "end": 6487,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6768,
+            "end": 6800,
+            "text": "50 randomized surrogate networks",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6957,
+            "end": 6986,
+            "text": "averaging the normalized",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7010,
+            "end": 7047,
+            "text": "across the entire network cost curves",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6957,
+            "end": 6986,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "id": "m0068"
+        }
+      ]
+    }
+  ]
+}

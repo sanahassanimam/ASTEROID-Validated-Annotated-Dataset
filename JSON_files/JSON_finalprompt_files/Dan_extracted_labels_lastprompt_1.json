@@ -1,0 +1,626 @@
+{
+  "data": {
+    "text": "Emotional states as distinct configurations of functional brain networks\nRotem Dan, Marta Weinstock, Gadi Goelman\nCerebral Cortex, 2023, 33, 5727–5739\nhttps://doi.org/10.1093/cercor/bhac455\n© The Author(s) 2022. Published by Oxford University Press.\n\nHere, we investigated the brain’s functional network organization during experiences of sadness, amusement, and neutral states elicited by movies, in addition to a resting-state.\n\nHealthy young participants were recruited among undergraduate students at the Hebrew University of Jerusalem. Exclusion criteria included past or present psychiatric or neurological disorders, use of psychiatric medication, use of hormonal contraceptives, or any premenstrual symptoms. One participant was excluded due to anxiety in the MRI scanner, and another was excluded because of in-scanner motion (see MRI data preprocessing in the Supplemental Methods). The final analyzed sample comprised 50 healthy participants (30 women, 20 men; age: 23.94 ± 2.64 years). Datasets from a subsample of the participants were previously used in a prior study (Dan et al. 2019). For women that completed two MRI scans as part of a separate parallel study, data utilized in this study were always taken from their first scan. Note that half of the women were scanned during the mid-follicular phase and half during the late-luteal phase. Participants provided written informed consent prior to inclusion. The study was approved by the Hadassah Hebrew University Medical Center Ethics Committee and was carried out in compliance with the Declaration of Helsinki.\n\nEach fMRI scan included the following sequence to induce four different mental states: (i) resting-state (10 minutes): eyes open, fixating on a visual crosshair, (ii, iii) two emotional states (10 minutes each): sadness and amusement, induced by continuous exposures to movies, and (iv) a neutral movie state (10 minutes). Each movie state (sadness, amusement, and neutral) was induced by four movie clips (2–3 minutes each) presented in a row. The order of the emotional states (sadness, amusement) was counterbalanced across the sample and within each sex. The resting-state preceded the movie states, and the neutral state was induced between the emotional states.\n\nBefore the MRI scan, participants were instructed to allow themselves to feel whatever emotions that come up without trying to suppress them. Within the scanner, participants rated after each movie state their subjective emotional experience during movie-watching on 1-to-8 Likert scales for: sadness, amusement, fear, anger, calmness, arousal, and attention.\n\nMRI data were acquired on a 3T Magnetom Skyra. Preprocessing of fMRI data was done using SPM12 (Wellcome Trust Centre for Neuroimaging, London, United Kingdom, http://www.fil.ion.ucl.ac.uk/spm/software/spm12). Details of acquisition, preprocessing, and in-scanner motion are found in the Supplemental Methods.\n\nFor each participant and mental state (i.e. sadness, amusement, neutral, rest), a whole-brain functional connectome covering the cortex and subcortex (excluding the cerebellum) was computed using CONN (Whitfield-Gabrieli and Nieto-Castanon 2012). The brain was parcellated into nodes and the average fMRI BOLD time series was calculated for each node. Pearson’s correlations were computed between time series from all pairs of nodes, and Fisher’s transform was applied to correlation values, resulting in symmetric connectivity matrices.\n\nIn a network analysis of the brain, the effect of the atlas used for node definition is an area of ongoing investigation. We, therefore, calculated functional connectomes using four different atlases: (i) automated anatomical labeling atlas (AAL) (Tzourio-Mazoyer et al. 2002): 90 nodes; (ii) Harvard-Oxford atlas (HO) (Desikan et al. 2006): 105 nodes; (iii) Shen atlas (Shen et al. 2013): 218 nodes (excluding the cerebellum); and (iv) Schaefer atlas (Schaefer et al. 2018): 400 nodes. The brain stem and cerebellum were excluded from the atlases. Since the Schaefer brain subdivision does not include the subcortex, 14 subcortical nodes from the HO atlas were added to the Schaefer atlas, resulting in a total of 414 nodes. Note that the AAL and HO subdivisions were defined based on anatomical features whereas Shen and Schaefer defined parcels based on the functional homogeneity of resting-state time series.\n\nFor each parcellation atlas, functional connectivity matrices were thresholded at z = 0 (i.e. negative weights were set to zero) to include only positive correlations. To minimize the potential confounding effects of visual features of the movie stimuli on the state-specific functional connectivity matrices, the entire occipital cortex was excluded from the functional connectome similarity analyses. To examine the within- and between-subject similarity in the functional connectome, we followed previous approaches (Cole et al. 2014; Finn et al. 2017): the unique elements of each connectivity matrix were extracted by taking the upper triangle of the matrix, resulting in a vector of edge values for each participant for each mental state. The between-subject similarity was calculated using Pearson’s correlation between all possible pairs of participants for a certain state. These values were Fisher’s z-transformed, averaged across participants, and reverted to r values, resulting in a single value per participant per state. The within-subject similarity was calculated using Pearson’s correlation between all pairs of states for each participant, resulting in six values per participant (sadness vs. amusement, sadness vs. neutral, amusement vs. neutral, sadness vs. rest, amusement vs. rest, neutral vs. rest).\n\nTo decompose the entire brain network into functional communities for each mental state, modularity analysis was conducted on the weighted functional connectivity matrices using a consensus partitioning algorithm (Lancichinetti and Fortunato 2012) implemented in the Brain Connectivity Toolbox (BCT) (Rubinov and Sporns 2010). This algorithm partitions a whole-brain network into nonoverlapping groups of brain regions, i.e. “communities” or “modules,” by maximizing a modularity function. The HO atlas was chosen for node definition since it showed greater between-subject similarity in the functional connectome per state, compared to the higher resolution network parcellations of Shen and Schaefer. In the first step, for each participant and each state separately, we applied a Louvain modularity optimization procedure 500 times to define an agreement matrix. Each cell in the agreement matrix corresponded to the proportion of times that a pair of nodes were assigned to the same community over the 500 repetitions. At the next step, Louvain modularity optimization was conducted on the agreement matrix, with 500 repetitions, generating a new agreement matrix. This step was repeated until convergence, i.e. until the agreement matrix was binary: containing only zeros or ones.\n\nAfter a consensus partition was identified for each participant, we computed a group-level consensus partitioning for each state. The consensus partitions of all participants for a specific state were combined to create a group-level agreement matrix. Each cell in the group-level agreement matrix corresponded to the proportion of times that a pair of nodes were assigned to the same community across participants. At the next step, Louvain modularity optimization was conducted on the group-level agreement matrix, using 500 repetitions, generating a new group-level agreement matrix. This step was repeated until convergence to a binary group-level matrix. The procedure yielded a community structure, or modular organization, for each state at the individual and group levels.\n\nThe consensus partitioning procedure was repeated over a range of the resolution parameter gamma (Reichardt and Bornholdt 2006) and with different treatments of negative weights in the modularity function (Rubinov and Sporns 2011). A resolution parameter gamma = 2.25 and a positive-only weighted modularity function were chosen.\n\nAfter each node was assigned to a group-level module for each mental state, we calculated the following measures of modular segregation and integration. Note that all measures retain the weights of the functional connections and were calculated for a specific state. Similarly to the functional connectome analyses, visual modules were excluded to minimize the possible confounding impact of the visual movie stimuli. (i) System segregation (Chan et al. 2014): the normalized difference between within- and between-module connectivity. A higher value indicates greater segregation, i.e. less interaction between modules. This measure was calculated for each module. (ii) Participation coefficient (Guimerà and Amaral 2005): quantifies the diversity of a node’s connections across modules. It is close to 1 if the node’s connections are distributed uniformly among all modules and 0 if all connections are within the node’s module. A high participation coefficient indicates high integration, i.e. strong connections to many modules, whereas a low participation coefficient indicates high segregation, i.e. weak interactions with other modules. For each module, we calculated the mean participation coefficient across all its nodes. (iii) Pairwise between-module connectivity: defined as the mean functional connectivity strength (Fisher transformed z-values) between pairs of modules.\n\nValence and interest were rated outside the scanner for the three movie states: sadness, amusement, and neutral. Arousal and the intensity of the target emotion were rated both within and outside the scanner. For the detailed questionnaires outside the scanner, the intensity of sadness was calculated as the average rating for “sadness” and “sorrow” and the intensity of amusement was calculated as the average of “amusement” and “enjoyment.” Attention was rated within the scanner.\n\nThe between-subject similarity in the behavioral report of emotion was computed for each movie state (sadness, amusement, neutral), utilizing a similar approach to the one used for the functional connectome. The detailed ratings outside the scanner were used and the vector of ratings for the 19 items (emotional categories, valence, interest) was extracted for each participant for each state. The between-subject similarity was calculated using Pearson’s correlation between all possible pairs of participants for a certain state. These values were Fisher’s z-transformed and averaged across participants resulting in a single value per participant.\n\nFor each behavioral measure (valence, arousal, intensity, interest, attention, between-subject similarity), statistical analysis was conducted in SPSS by two-way mixed ANOVA models implemented by a GLM with state as a within-subject factor and sex as a between-subject factor. Post hoc pairwise comparisons were conducted using Sidak correction.\n\nSupplementary material is available at Cerebral Cortex online.\n\nThe Brain Connectivity Toolbox (BCT) was used for modularity analyses and is freely available at https://sites.google.com/site/bctnet. Consensus partitioning was done using the following BCT functions: community_louvain.m, agreement.m, consensus_und.m. The weighted participation coefficient was calculated using the participation_coef.m function from the BCT. The normalized mutual information (NMI) was computed using getNMI.m function and is available at https://www.mathworks.com/matlabcentral/fileexchange/62974-getnmi-a-b."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 72,
+            "text": "Emotional states as distinct configurations of functional brain networks",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 73,
+            "end": 113,
+            "text": "Rotem Dan, Marta Weinstock, Gadi Goelman",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 114,
+            "end": 150,
+            "text": "2023",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 212,
+            "end": 249,
+            "text": "Published by Oxford University Press.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 151,
+            "end": 189,
+            "text": "https://doi.org/10.1093/cercor/bhac455",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 251,
+            "end": 429,
+            "text": "Here, we investigated the brain’s functional network organization during experiences of sadness, amusement, and neutral states elicited by movies, in addition to a resting-state.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10975,
+            "end": 11037,
+            "text": "Supplementary material is available at Cerebral Cortex online.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11039,
+            "end": 11173,
+            "text": "The Brain Connectivity Toolbox (BCT) was used for modularity analyses and is freely available at https://sites.google.com/site/bctnet.",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2642,
+            "end": 2659,
+            "text": "3T Magnetom Skyra",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2703,
+            "end": 2708,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1675,
+            "end": 1906,
+            "text": "resting-state (10 minutes): eyes open, fixating on a visual crosshair, (ii, iii) two emotional states (10 minutes each): sadness and amusement, induced by continuous exposures to movies, and (iv) a neutral movie state (10 minutes).",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 893,
+            "end": 997,
+            "text": "50 healthy participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1973,
+            "end": 2028,
+            "text": "four movie clips",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1991,
+            "end": 2007,
+            "text": "2–3 minutes each",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2274,
+            "end": 2394,
+            "text": "participants were instructed to allow themselves to feel whatever emotions that come up without trying to suppress them.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1973,
+            "end": 2028,
+            "text": "movie clips",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1973,
+            "end": 2028,
+            "text": "four movie clips (2–3 minutes each) presented in a row",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10782,
+            "end": 10904,
+            "text": "two-way mixed ANOVA models",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10905,
+            "end": 10973,
+            "text": "Post hoc pairwise comparisons were conducted using Sidak correction.",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 893,
+            "end": 997,
+            "text": "50 healthy participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 972,
+            "end": 995,
+            "text": "age: 23.94 ± 2.64 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 954,
+            "end": 970,
+            "text": "30 women, 20 men",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 541,
+            "end": 716,
+            "text": "Exclusion criteria included past or present psychiatric or neurological disorders, use of psychiatric medication, use of hormonal contraceptives, or any premenstrual symptoms.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 717,
+            "end": 834,
+            "text": "One participant was excluded due to anxiety in the MRI scanner, and another was excluded because of in-scanner motion",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1426,
+            "end": 1514,
+            "text": "The study was approved by the Hadassah Hebrew University Medical Center Ethics Committee",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2415,
+            "end": 2612,
+            "text": "participants rated after each movie state their subjective emotional experience during movie-watching on 1-to-8 Likert scales for: sadness, amusement, fear, anger, calmness, arousal, and attention.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2661,
+            "end": 2708,
+            "text": "1",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Algorithm",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2703,
+            "end": 2708,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3586,
+            "end": 3663,
+            "text": "2",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3669,
+            "end": 3740,
+            "text": "automated anatomical labeling atlas (AAL) (Tzourio-Mazoyer et al. 2002)",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3757,
+            "end": 3815,
+            "text": "Harvard-Oxford atlas (HO) (Desikan et al. 2006): 105 nodes",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3172,
+            "end": 3276,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3121,
+            "end": 3170,
+            "text": "CONN (Whitfield-Gabrieli and Nieto-Castanon 2012)",
+            "labels": [
+              "Time series ROI — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3277,
+            "end": 3357,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3277,
+            "end": 3357,
+            "text": "Pearson’s correlations were computed between time series from all pairs of nodes",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3363,
+            "end": 3415,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3363,
+            "end": 3415,
+            "text": "Fisher’s transform was applied to correlation values",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4408,
+            "end": 4507,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4473,
+            "end": 4506,
+            "text": "negative weights were set to zero",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5793,
+            "end": 5916,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5971,
+            "end": 6029,
+            "text": "Brain Connectivity Toolbox (BCT) (Rubinov and Sporns 2010)",
+            "labels": [
+              "Network definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5884,
+            "end": 5951,
+            "text": "consensus partitioning algorithm (Lancichinetti and Fortunato 2012)",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8005,
+            "end": 8102,
+            "text": "A resolution parameter gamma = 2.25 and a positive-only weighted modularity function were chosen.",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8180,
+            "end": 8256,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8526,
+            "end": 8639,
+            "text": "System segregation (Chan et al. 2014): the normalized difference between within- and between-module connectivity.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5262,
+            "end": 5414,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5304,
+            "end": 5414,
+            "text": "averaged across participants, and reverted to r values, resulting in a single value per participant per state.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

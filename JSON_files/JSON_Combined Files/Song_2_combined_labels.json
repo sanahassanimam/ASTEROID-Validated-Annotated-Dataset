@@ -1,0 +1,1074 @@
+{
+  "data": {
+    "text": "Changed hub and functional connectivity patterns of the posterior fusiform gyrus in chess experts\n\nLimei Song1\n& Qinmu Peng2\n\n& Shuwei Liu1\n& Jiaojian Wang3\n\nPublished online: 5 January 2019\n# Springer Science+Business Media, LLC, part of Springer Nature 2018\nBrain Imaging and Behavior (2020) 14:797–805\nhttps://doi.org/10.1007/s11682-018-0020-0\n\nParticipants\n\nTwenty-eight chess players (ten female, mean and standard deviation of 27.64 ± 9.15 years) and 27 novice players (15 female, mean and standard deviation of 26.37 ± 6.68 years) were used in this study. This dataset was accessed from the B1000 Functional Connectomes Project (https://www.nitrc.org/projects/fcon_1000/). The chess players were recruited from the First National Intelligence Games held in Chengdu, China. These professional chess players had been seriously training regularly (training time: 4.17 ± 1.72 h/day). In particular, sixteen of them were rated as chess grand masters and masters, and twenty-one scored over 2200 on Elo’s chess-skill rating scale (Elo scale: 2408.95 ± 120.55) (Elo 1978), which is an entry level for chess masters by the standards of United States Chess Federation. The 27 gender- and age-matched novice players knew the rules and simple strategies of playing Chinese chess (gender: p = 0.14; age: p = 0.57). All participants were right handed and had no history of psychiatric or neurological disorders. No differences on observation skills or clear-thinking ability were found between these two groups (Li et al. 2015). Written informed consent was obtained from each subject and approval was obtained through the local Institutional Review Board of the West China Hospital of Sichuan University. The detailed information of this dataset can be found in Li and colleagues’ study (Li et al. 2015).\n\nResting-state fMRI data acquisition\n\nThe MRI data were acquired on a 3 T Siemens Trio system (Erlangen, German) at the MR Research Center of West China Hospital of Sichuan University, Chengdu, China. All MR scans were performed when subjects were relaxed with their eyes open and fixated on a cross-hair centered on the screen. A T2-weighted gradient-echo echo-planar pulse sequence was used to obtain the fMRI images. A total of 205 whole brain echo-planar pulse sequence volumes were acquired using the following parameters: TR = 2000 ms, TE = 30 ms, flip angle = 90°, axial slice thickness = 5 mm, with no gap, slice number = 30, voxel size = 3.75 × 3.75 × 5 mm3.\n\nResting-state fMRI data preprocessing\n\nThe rs-fMRI images were preprocessed using SPM8 software with DPARSF version 2.3 (www.restfmri.net/forum/DPARSF). We removed the first 10 volumes to facilitate magnetization equilibrium effects. After slice timing, the corrected time series was realigned to the first volume for head motion correction. The fMRI images were normalized to the EPI template in MNI space and resampled to 3 mm isotropic voxels. Friston 24-parameter model of head motion, white matter and cerebrospinal fluid mean signals were regressed out and filtered with a temporal band-path of 0.01–0.1 Hz. To further exclude the head motion effects on functional connectivity analysis, a scrubbing method was conducted to censor each subject’s fMRI time series to find the mean frame displacement (FD) which was above 0.5 mm, and one volume before and two volumes after the bad volume were discarded (Power et al. 2012). Finally, FCS, ReHo, ALFF, and fALFF were calculated with scrubbed fMRI data. For resting-state functional connectivity analyses, the fMRI data were first smoothed with a Gaussian kernel (full-width at half maximum (FWHM) of 6 mm) after normalization, and then covariates regression, filtering and scrubbing were performed. Because the whole-brain signal regression will exaggerate anti-correlation, for functional connectivity analyses of the changed hubs, the global signal was not regressed to ensure that the obtained results were reliable (Saad et al. 2013; Wang et al. 2017b, 2018).\n\n\nResting-state functional connectivity\nThe RSFC was computed from 187 different brain regions\ndefined within the sensorimotor, cingulo-opercular task control,\nfronto-parietal task control, dorsal/ventral attention, default\nmode network (DMN), salience network and subcortical/\ncerebellar network (Power et al., 2011). In each of these brain\nregions, signals resulting from the processed functional data\nwere extracted and averaged over a spherical region of interest\n(ROI) with a radius of 4 mm. Pearson correlation coefficient (rij)\nwas calculated for the ith and jth ROI. This generated a\n187 · 187 adjacency matrix, M, for each subject, which served\nas the RSFC matrix for each subject within each group.\n\nThresholding brain networks\nThresholding an RSFC matrix is critical for obtaining a\nsparse adjacency matrix in that it should be optimal and\ncontain not too little functional connections for detecting\ngroup differences but not too many functional connections\nthat it may dilute group differences. The most commonly\nused approach for thresholding is to globally threshold the\nRSFC matrix at a fixed threshold, q, for any rij between\n1 and 1. If rij ‡ q, the corresponding element of the adja-\ncency matrix, Mij, is kept for the actual value of rij for a\nweighted adjacency matrix or is set to be 1 for a binary ad-\njacency matrix. If rij < q, then Mij is set to be 0 for both\nweighted and binary matrices.\nNote: except for strength,\nmeasures of modularity, local and global efficiency were\ncomputed using the binary adjacency matrix.\nIn this study, we anticipated that this might be a factor af-\nfecting our observations in age-related differences in RSFC,\nand used a minimum spanning tree (MST) method in order to\npreserve fully connected brain graphs (Achard et al., 2012;\nAlexander-Bloch et al., 2010).\nTo obtain a sparse, fully connected,\nand biologically meaningful graph, we added extra links to\nthe MST from the remaining adjacency matrix. To do so,\nfor each final sparse adjacency matrix, we added top 2–\n40% of the remaining links to the MST, respectively, to in-\nclude the highest proportion of the remaining functional\nconnectivity.\nCurrent findings are based on thresholds from 2% to 8%\nat 2% intervals; results obtained from thresholds of 10% to\n40% at 10% intervals can be found in the Supplementary\nMaterials.\n\nMeasures of graph metrics\nGraph metrics, including modularity, local and global effi-\nciency, and strength, were estimated using the Brain Connec-\ntivity Toolbox (Rubinov and Sporns, 2010) with adaptation\nmade for nodal or regional-level calculation.\nGlobal-level\ngraph metrics were estimated by averaging each measure\nacross all nodal regions and across all subjects in each\ngroup; regional level measures, except for modularity, were\nestimated for each node averaging across all subjects within\neach group.\nModularity is a global measure of how well a network can\nbe decomposed into a set of sparsely interconnected but\ndensely intraconnected modules (Newman, 2004) and can\nbe a valuable tool in identifying the functional blocks within\nthe brain network.\nModular-\nity was first estimated using the Newman–Girvan algorithm\n(Newman, 2006a, 2006b).\nSince the optimal\ncommunity structure and maximized modularity may vary\nfrom run to run due to heuristics in the algorithm (Rubinov\nand Sporns, 2010), this step was repeated 500 times.\nIn the\nsecond step, all previously detected community structures\nwere refined using a fine-tuning algorithm (Rubinov and\nSporns, 2010; Sun et al., 2009) with a maximum 500\ntimes’ iteration.\nTherefore,\nintramodular connectivity of each node was measured by\nthe normalized intramodular degree, that is, the within-module\ndegree z-score (Rubinov and Sporns, 2010).\nLocal efficiency is a measure of information transfer in the\nimmediate neighborhood of each node, while global efficiency is a measure\nof information propagating in the whole network.\nThe strength of functional connectivity of each node is mea-\nsured as the mean value of weights (i.e., cross-correlation\ncoefficients) of all functional connections linking to the\nnode."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 97,
+            "text": "Changed hub and functional connectivity patterns of the posterior fusiform gyrus in chess experts",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 99,
+            "end": 156,
+            "text": "Limei Song1\n& Qinmu Peng2\n\n& Shuwei Liu1\n& Jiaojian Wang3",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 260,
+            "end": 304,
+            "text": "Brain Imaging and Behavior (2020) 14:797–805",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 191,
+            "end": 259,
+            "text": "# Springer Science+Business Media, LLC, part of Springer Nature 2018",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 305,
+            "end": 346,
+            "text": "https://doi.org/10.1007/s11682-018-0020-0",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 563,
+            "end": 679,
+            "text": "This dataset was accessed from the B1000 Functional Connectomes Project (https://www.nitrc.org/projects/fcon_1000/).",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1870,
+            "end": 1886,
+            "text": "3 T Siemens Trio",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2220,
+            "end": 2281,
+            "text": "A total of 205 whole brain echo-planar pulse sequence volumes",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2328,
+            "end": 2340,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2342,
+            "end": 2352,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2354,
+            "end": 2370,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2372,
+            "end": 2400,
+            "text": "axial slice thickness = 5 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2402,
+            "end": 2413,
+            "text": "with no gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2415,
+            "end": 2432,
+            "text": "slice number = 30",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2434,
+            "end": 2466,
+            "text": "voxel size = 3.75 × 3.75 × 5 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2067,
+            "end": 2104,
+            "text": "eyes open and fixated on a cross-hair",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3479,
+            "end": 3503,
+            "text": "resting-state functional",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 362,
+            "end": 537,
+            "text": "Twenty-eight chess players (ten female, mean and standard deviation of 27.64 ± 9.15 years) and 27 novice players (15 female, mean and standard deviation of 26.37 ± 6.68 years)",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 389,
+            "end": 400,
+            "text": "(ten female",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 475,
+            "end": 485,
+            "text": "(15 female",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1310,
+            "end": 1344,
+            "text": "All participants were right handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1349,
+            "end": 1404,
+            "text": "had no history of psychiatric or neurological disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1174,
+            "end": 1197,
+            "text": "gender- and age-matched",
+            "labels": [
+              "Group matching"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1583,
+            "end": 1698,
+            "text": "approval was obtained through the local Institutional Review Board of the West China Hospital of Sichuan University",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1523,
+            "end": 1578,
+            "text": "Written informed consent was obtained from each subject",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2622,
+            "end": 2653,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2622,
+            "end": 2653,
+            "text": "10 volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2703,
+            "end": 2721,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2703,
+            "end": 2721,
+            "text": "SPM8 (DPARSF 2.3)",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2753,
+            "end": 2809,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2753,
+            "end": 2809,
+            "text": "head motion correction (realignment)",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2832,
+            "end": 2914,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2832,
+            "end": 2914,
+            "text": "EPI template in MNI; 3 mm",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2551,
+            "end": 2588,
+            "text": "SPM8 with DPARSF 2.3",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2916,
+            "end": 3027,
+            "text": "5",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2916,
+            "end": 3027,
+            "text": "Friston 24-parameter; WM/CSF means",
+            "labels": [
+              "Other confound regression — Algorithm"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3032,
+            "end": 3081,
+            "text": "6",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3032,
+            "end": 3081,
+            "text": "band-path",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3032,
+            "end": 3081,
+            "text": "0.01–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3163,
+            "end": 3237,
+            "text": "7",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3163,
+            "end": 3237,
+            "text": "a scrubbing method was conducted to censor each subject’s fMRI time series",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3250,
+            "end": 3301,
+            "text": "mean frame displacement (FD) which was above 0.5 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3307,
+            "end": 3376,
+            "text": "one volume before and two volumes after the bad volume were discarded",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3552,
+            "end": 3627,
+            "text": "8",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3552,
+            "end": 3627,
+            "text": "Gaussian kernel; FWHM 6 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2551,
+            "end": 2588,
+            "text": "SPM8 (DPARSF)",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2551,
+            "end": 2588,
+            "text": "SPM8 with DPARSF 2.3",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 362,
+            "end": 537,
+            "text": "Twenty-eight chess players (ten female, mean and standard deviation of 27.64 ± 9.15 years) and 27 novice players (15 female, mean and standard deviation of 26.37 ± 6.68 years)",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4284,
+            "end": 4302,
+            "text": "Power et al., 2011",
+            "labels": [
+              "Atlas definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4067,
+            "end": 4080,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4467,
+            "end": 4481,
+            "text": "radius of 4 mm",
+            "labels": [
+              "ROI definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4425,
+            "end": 4453,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4395,
+            "end": 4417,
+            "text": "extracted and averaged",
+            "labels": [
+              "Time series ROI — Type"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4337,
+            "end": 4354,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4483,
+            "end": 4514,
+            "text": "Pearson correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4483,
+            "end": 4490,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5249,
+            "end": 5324,
+            "text": "weighted adjacency matrix or is set to be 1 for a binary ad-\njacency matrix",
+            "labels": [
+              "Graph characteristics — Type"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5249,
+            "end": 5274,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5663,
+            "end": 5697,
+            "text": "minimum spanning tree (MST) method",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6001,
+            "end": 6034,
+            "text": "top 2–\n40% of the remaining links",
+            "labels": [
+              "Sparsity control — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6169,
+            "end": 6193,
+            "text": "thresholds from 2% to 8%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4696,
+            "end": 4708,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6347,
+            "end": 6427,
+            "text": "Graph metrics, including modularity, local and global effi-\nciency, and strength",
+            "labels": [
+              "Graph measures — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6454,
+            "end": 6482,
+            "text": "Brain Connec-\ntivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6321,
+            "end": 6329,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7122,
+            "end": 7145,
+            "text": "Newman–Girvan algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7441,
+            "end": 7462,
+            "text": "fine-tuning algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7335,
+            "end": 7353,
+            "text": "repeated 500 times",
+            "labels": [
+              "Network definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7515,
+            "end": 7543,
+            "text": "maximum 500\ntimes’ iteration",
+            "labels": [
+              "Network definition — Parameters"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6830,
+            "end": 6840,
+            "text": "8",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6617,
+            "end": 6688,
+            "text": "averaging each measure\nacross all nodal regions and across all subjects",
+            "labels": [
+              "Result aggregation — Type"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6572,
+            "end": 6584,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "id": "m0072"
+        }
+      ]
+    }
+  ]
+}

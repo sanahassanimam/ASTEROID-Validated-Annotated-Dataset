@@ -1,0 +1,225 @@
+{
+  "data": {
+    "text": "Regions of interest. The ROIs ( Table 1 ) were selected\nbased on earlier studies of cortical regions that were detectedacross multiple studies using a variety of cognitive tasks. The ROIsincluded nodes identified as part of the default-mode network[27,28]. Each ROI (node) consisted of a 10 mm\n3sphere centered\non the peak loci of activation reported in those studies. Mean timecourses were extracted from the 34 ROIs in previous work. Eachparticipant’s ROI timecourses were inter-correlated to form a\n34634 connectivity matrix representing the strength of connection\nbetween every pair of ROIs. Subsequent network analyses wereperformed on these matrices.\nGraph Construction\nAll network measures were calculated using functions written in\nthe Brain Connectivity Toolbox created by Sporns and colleagues(https://sites.google.com/a/brai n-connectivity-toolbox.net/bct/\nHome) The formulae for the network measures are provided intheir recent paper [8]. For each individual dataset, theconnectivity graph was co nstructed by creating a 34 634\ncorrelation matrix M. We then created a binarized matrix (B)\nformed by thresholding each M by a threshold T. All values of\ncells of the correlation matrix ,T were then set to equal 0. All\nother cells were set equal to 1. Binarizing a graph requireschoosing a threshold value of r above which a connectionbetween two nodes is considered to exist. Setting a threshold toolow carries a risk of over-estimating the influence of noisy,physiologically insignificant weak correlations, thereby losingsensitivity to the underlying ne twork organization. Conversely,\nvery high thresholds can cause excessive fragmentation and may\nmisrepresent the graph structur e by disregarding correlations of\npotential functional importance. As no definitive method ofselecting an optimal threshold is currently available, weperformed our analyses at a range of plausible thresholds, butreported results using a threshold for visualizations (r = 0.25)based on the characteristics described below. This threshold wasdetermined by satisfying the following criteria (also see Figure\nS1). First, the network must differ from a random graph on\nmeasures of modularity and small-world properties. Random\ngraphs were constructed using randomly placed connectionsconstrained to have the same degree distribution as the realgraphs [9]. This comparison ac ross different binarization\nthresholds indicates at what threshold values, the apparentstructure of the graph is unlikely to have resulted by chance.Additionally, the average reachability of the network, theprobability that a direct or indirect path exists between anyNetwork Modularity and Working Memory Variability\nPLoS ONE | www.plosone.org 8 January 2012 | Volume 7 | Issue 1 | e30468\ntwo nodes in the graph, must not differ significantly from 1.0.\nSetting T to correlations of 0.25 to 0.30 satisfied these conditionsfor all individual subject connectivity maps. We note that thisapproach allows the number of connections included in thenetwork to vary across participants.\nWe also performed the network thresholding using the\nconnection density thresholds to binarize the individual partici-pants correlation matrices ( Text S1 ). Unlike correlation based\nthresholds which allow the number of connections in the networkto vary between subjects, connection density holds the number ofconnections in the network constant by retaining the specifiedproportion of connections determined by correlation strength.While this approach produced similar results at session 1, in termsof the relationship between small-worldness and VSTM capacity,it failed to reveal the same relationship at Session 2 ( see Figure\nS2).\nReachability. A measure of the proportion of nodes that are\nconnected by any path, regardless of the path length (i.e. thenumber of intervening nodes that must be traversed in order to\nreach one node from the other). A low reachability score implies a\nfragmented graph where some nodes are completely disconnectedfrom all others in the network, which is biologically implausible asa model of the brain [8].\nSmall-worldness. A measure of global network\norganization, reflects high local inter-connectivity coupled with ashorter than expected distances between any two nodes due to thepresence of ‘‘hubs’’ - nodes that are densely connected to othernodes. It is defined in terms of clustering coefficient andcharacteristic path length [10,11]. Characteristic path length ( l)\nis a measure of the mean number of links that must be traversed inorder to travel between any two nodes in the network. Clusteringcoefficient (C) is a measure of the average proportion of a node’snearest neighbors that are also connected to each other. Small-world networks possess a clustering coefficient that is much largerthan a random graph, and a characteristic path length that is equalor only slightly larger than in a random graph. The ‘small-worldness’ of a network (S) can thus be quantified as (C\nreal/\nCrandom )/(lreal/lrandom ) [11,12].\nModularity estimation. Modularity, or community\nstructure, is a technique for subdividing the network intoseparate modules (communities), which maximize theconnections within each module and minimize the connectionsbetween modules [8,9,13]. Modularity is estimated usingoptimization algorithms. Network modularity values in thecurrent study were estimated using the method of Newman [9]and then confirmed using the algorithm developed by Blondel[13]. As the Blondel modularity algorithm is non-deterministic andcan yield slightly different values of modularity for a given networkacross multiple runs, we calculated modularity using both thesetechniques for each subject by averaging across 100 iterations ofthe algorithm. The two different modularity estimates convergedto near unity at both sessions (Session 1: r(15) = 0.98, p ,0.001;\nSession 2: r(15) = 0.98, p ,0.001). We further tested the reliability\nof the modularity values using the Variation of Information, ameasure of the stability of the network’s organization [42] ( Text\nS1, Figure S3 )."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 55,
+            "text": "Regions of interest. The ROIs ( Table 1 ) were selected",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 369,
+            "end": 417,
+            "text": "Mean timecourses were extracted from the 34 ROIs",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 475,
+            "end": 527,
+            "text": "inter-correlated to form a\n34634 connectivity matrix",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1062,
+            "end": 1148,
+            "text": "We then created a binarized matrix (B)\nformed by thresholding each M by a threshold T.",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2817,
+            "end": 2885,
+            "text": "Setting T to correlations of 0.25 to 0.30 satisfied these conditions",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3894,
+            "end": 3990,
+            "text": "A low reachability score implies a\nfragmented graph where some nodes are completely disconnected",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 676,
+            "end": 770,
+            "text": "All network measures were calculated using functions written in\nthe Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4084,
+            "end": 4128,
+            "text": "Small-worldness. A measure of global network",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5002,
+            "end": 5075,
+            "text": "Modularity estimation. Modularity, or community\nstructure, is a technique",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 55,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 369,
+            "end": 417,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 475,
+            "end": 527,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2817,
+            "end": 2885,
+            "text": "4",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3894,
+            "end": 3990,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5002,
+            "end": 5075,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

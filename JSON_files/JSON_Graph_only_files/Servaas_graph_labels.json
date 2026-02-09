@@ -1,0 +1,330 @@
+{
+  "data": {
+    "text": "Network construction\n\nNetwork construction was previously applied in Servaas et al.\n(2015). Nodes (i.e. brain regions of interest) were built by\ncreating a sphere of 5 mm radius around 264 coordinates\nprovided by Power et al. (2011). After visual inspection of\nthe regions of interest (ROIs), we noted the absence of three\nrelevant subcortical structures for research on neuroticism:\nbilateral amygdala, hippocampus and caudate (Servaas et al.\n2013). The coordinates for these regions were determined\nusing the Harvard-Oxford Subcortical Structural Atlas. First,\nwe thresholded the Harvard-Oxford atlas files at probability\n80 % and second, we selected coordinates with the highest\nprobability for the left and right amygdala, hippocampus and\ncaudate separately. This resulted in a total of 270 ROIs. No\noverlap was observed between the additional ROIs and the\nROIs of Power et al. (2011). Next, a whole-brain group mask\nwas built based on the EPI images to locate the parts of the\nbrain that are free from susceptibility artifacts in all subjects.\nSubsequently, we checked whether nodes overlapped more\nthan 50 % (voxel-wise) with the group mask. This resulted\nin the exclusion of eleven ROIs. To construct a connectivity\nmatrix per subject, we extracted the regional mean time series\nfor each of the remaining 259 ROIs and calculated Pearson\ncorrelations between all pairs. Furthermore, to prevent biases\ndue to shared non-biological signal between adjacent ROIs,\ncorrelations were set to zero when the distance was less than\n20 mm between the centres of two ROIs (Power et al. 2011)\n(540 connections, 1.62 %). In addition, correlations on the\ndiagonal of the connectivity matrix were set to zero as well.\n\nThresholding and module index\n\nWe applied a range of proportional thresholds to each corre-\nlation matrix per subject to avoid the confound of discrepant\nresults on network measures, due to their sensitivity to the\n\nnumber of edges (i.e. connections) in a graph (van Wijk\net al. 2010). The threshold values ranged from 1 % to 30 %\nin increments of 1 %. Network measures were calculated\nacross the selected range of threshold values. Subnetworks\nwere derived from the whole-brain graph by applying the\nalgorithm of Blondel et al. (2008) and the modularity fine-\ntuning algorithm of Sun et al. (2009) (see Online resource 1,\nSupplement 5 for details on the module decomposition). For\nthis procedure, we selected a single optimal threshold by using\nthe method of Geerligs et al. (2015). The optimal threshold in\nthe current study was 1.8 % (see Online resource 1,\nSupplement 6 for details on the selection of the optimal\nthreshold). In total, six subnetworks could be derived with a\nmaximum number of within-group edges and a minimum\nnumber of between-group edges (Rubinov and Sporns\n2010). These included the AS, COS, DMS, FPS, SMS and\nVS (see Fig. 1).\n\nNetwork measures\n\nNetwork measures were calculated on weighted (i.e. edge\nstrengths are preserved) graphs across the selected range of\nthreshold values by using functions implemented in the Brain\nConnectivity Toolbox (www.brain-connectivity-toolbox.net,\nRubinov and Sporns 2010). First, we calculated the whole-\nbrain network measures: global efficiency, local efficiency\n(averaged across nodes) and maximized modularity. Global\nefficiency is calculated as the average inverse shortest path\n\nFig. 1 Module decomposition. Nodes could be partitioned in six\nfunctional subnetworks with a maximum number of within-group edges\nand a minimum number of between-group edges. Colors indicate the\ndifferent modules that nodes belong to: AS, affective subnetwork\n(green); COS, cingulo-operculum subnetwork (dark blue); DMS, default\nmode subnetwork (purple); FPS, fronto-parietal subnetwork (red); SMS,\nsomatosensory-motor subnetwork (orange); VS, visual subnetwork (light\nblue). Nodes are pasted on an inflated surface rendering of the human\nbrain using the program CARET (v5.65). In the panels, different views\nare shown: A. left lateral, B. left medial, C. cerebellum dorsal, D. right\nlateral, E. right medial (reprinted from Servaas et al. 2015)\n\n\f1586\n\nBrain Imaging and Behavior (2017) 11:1581–1591\n\nlength between all pairs of nodes. Local efficiency is calculat-\ned in a similar manner, but then between the neighbours of a\nspecific node (Latora and Marchiori 2001; Rubinov and\nSporns 2010). Maximized modularity is calculated with a\nfunction that quantifies the degree to which a network can\nbe clearly delineated in non-overlapping groups of nodes\n(Rubinov and Sporns 2010). Second, we calculated local effi-\nciency (averaged across nodes) and the participation coeffi-\ncient (averaged across nodes) per module. The participation\ncoefficient is calculated as the ratio of intra- versus\nintermodular connections per node (Rubinov and Sporns\n2010). For the interaction analyses, we only examined net-\nwork measures that were related to neuroticism in our previ-\nous paper (Servaas et al. 2015) to investigate whether genetic\nvariation in the 5-HTTLPR and COMT polymorphism ex-\nplains the reported associations between functional network\norganization and neuroticism. These include all three whole-\nbrain network measures, local efficiency for the modules\nDMS, FPS, SMS and VS, and the participation coefficient\nfor the modules COS and SMS.\n\nNetwork analyses\n\nAcross the selected range of threshold values, we calculated i)\nthe mean difference between the genetic risk and non-risk\ngroup per network measure for both polymorphisms, ii) the\ndifference in slope between the genetic risk and non-risk\ngroup for the association between neuroticism and a specific\nnetwork measure for both polymorphisms. These difference\nmeasures were plotted and visually checked for consistency\nacross threshold values. Subsequently, we calculated the AUC\nacross threshold values per network measure for both poly-\nmorphisms to obtain a summarized scalar that is independent\nof single threshold selection. Next, non-parametric permuta-\ntion testing was applied on the AUC per network measure to\nassess whether the results could have occurred by chance. To\nthis end, genetic group membership was permuted randomly\nand the difference measures were recalculated. This procedure\nwas repeated 5000 times and a two-tailed test of the null hy-\npothesis (p < 0.05) was performed (Zhang et al. 2011)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 145,
+            "end": 233,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 145,
+            "end": 233,
+            "text": "creating a sphere of 5 mm radius around 264 coordinates\nprovided by Power et al. (2011).",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 501,
+            "end": 555,
+            "text": "using the Harvard-Oxford Subcortical Structural Atlas.",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 145,
+            "end": 233,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 145,
+            "end": 233,
+            "text": "creating a sphere of 5 mm radius around 264 coordinates\nprovided by Power et al. (2011).",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 501,
+            "end": 555,
+            "text": "using the Harvard-Oxford Subcortical Structural Atlas.",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1243,
+            "end": 1343,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1243,
+            "end": 1343,
+            "text": "we extracted the regional mean time series\nfor each of the remaining 259 ROIs and calculated Pearson",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1321,
+            "end": 1375,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1321,
+            "end": 1375,
+            "text": "and calculated Pearson\ncorrelations between all pairs.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1466,
+            "end": 1565,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1466,
+            "end": 1565,
+            "text": "correlations were set to zero when the distance was less than\n20 mm between the centres of two ROIs",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1995,
+            "end": 2061,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1995,
+            "end": 2061,
+            "text": "The threshold values ranged from 1 % to 30 %\nin increments of 1 %.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2142,
+            "end": 2307,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2142,
+            "end": 2307,
+            "text": "Subnetworks\nwere derived from the whole-brain graph by applying the\nalgorithm of Blondel et al. (2008) and the modularity fine-\ntuning algorithm of Sun et al. (2009)",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2797,
+            "end": 2859,
+            "text": "These included the AS, COS, DMS, FPS, SMS and\nVS (see Fig. 1).",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3141,
+            "end": 3282,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3141,
+            "end": 3282,
+            "text": "First, we calculated the whole-\nbrain network measures: global efficiency, local efficiency\n(averaged across nodes) and maximized modularity.",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2879,
+            "end": 3140,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5756,
+            "end": 6088,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5756,
+            "end": 6088,
+            "text": "Subsequently, we calculated the AUC\nacross threshold values per network measure for both poly-\nmorphisms to obtain a summarized scalar that is independent\nof single threshold selection. Next, non-parametric permuta-\ntion testing was applied on the AUC per network measure to\nassess whether the results could have occurred by chance.",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1249 @@
+{
+  "data": {
+    "text": "Increased Functional Connectivity Within and Between Cognitive-Control Networks from Early Infancy to Nine Years During Story Listening\nRola Farah and Tzipi Horowitz-Kraus\nBRAIN CONNECTIVITY, Volume 9, Number 3, 2019 — © Mary Ann Liebert, Inc. — DOI: 10.1089/brain.2018.0625\n\nDevelopmental increase in functional connectivity within the CO network and between the CO and FP networks, as well as global efficiency of the CO network from 17 months to 9 years of age, was observed.\n\nParticipants. Seventy-four typically developing children between the ages of 17 months and 9 years (mean age: 69 months, standard deviation [SD] = 26, 46 females) participated in the current study. All participants were native monolingual English speakers and had no history of neurological impairments or developmental disorders. Informed consent was provided by the parents of all participants. The study was reviewed and approved by Cincinnati Children’s Hospital Medical Center Institutional Review Board.\n\nBehavioral measures. To verify that the nonverbal and verbal intelligence quotient was within the normal range, participants were administered standardized age-appropriate tests, including the Bayley Scales of Infant and Toddler Development (Bayley-III), Wechsler Preschool and Primary Scale of Intelligence (WPPSI-III), Wechsler Intelligence Scale for Children-Fourth Edition (WISC-IV), and the Peabody Picture Vocabulary Test, Fourth Edition (PPVT-4). For older participants, FSIQ composite score was assessed and used.\n\nStory listening task. The story listening task involved passive listening to natural speech stories presented in a female voice. A total of five stories, one for each 30-sec task period, were presented; the control condition consisted of nonspeech tones presented at random frequencies (200–4000 Hz) and intervals (1–3 sec). Five cycles of active and control stimuli were presented for a total scan time of 5 min. The contrast consisted of stories versus noise.\n\nAvailability (stimuli). The audio of the stories can be downloaded from https://irc.cchmc.org/software/pedaudio.php\n\nMRI acquisition. All participants were scanned using a 3T Philips Achieva MRI scanner. A gradient echo planar sequence was used for T2*-weighted BOLD fMRI with the following parameters: repetition time/echo time = 2000/38 ms; field of view = 25.6 · 25.6 cm; matrix = 64 · 64; slice thickness = 5 mm; 35 acquired slices covered the entire cerebrum. Seventy-eight image volumes were acquired during the functional MRI experiment, consisting of 30 sec per condition for a total acquisition time of 5 min and 30 sec.\n\nFunctional MRI data preprocessing. Data preprocessing and first-level analysis were performed using SPM12. Preprocessing included slice time correction, realignment, and normalization using the 3D anatomical whole-brain scan (seventh degree-spline interpolation) to match the Montreal Neurological Institute (MNI) standard template, resampling (3 mm3 voxels), and smoothing with 8-mm full-width at half-maximum. An infant template was used for segmentation and normalization with infants <5 years old. We performed 3D affine transformation to align the volumes yielding six motion parameters (three translational and three rotational).\n\nHead motion and scrubbing. Volumes with framewise displacement (FD) >0.9 mm were identified and excluded from the analysis. The mean FD value across participants after removal of invalid volumes was 0.246 mm (minimum = 0.081 mm, maximum = 0.514 mm). Participants with >10% of outlier volumes were excluded from further group analysis (n = 4).\n\nDenoising and confounds (CONN). Task-based data were processed in CONN. Voxelwise temporal denoising of the BOLD signal was applied by regression of zero- and first-order derivatives of the six motion parameters, regression of the top five principal components of each of the average white matter and CSF BOLD signal, and applying 0.008 Hz high-pass filtering. Following preprocessing, frames with composite motion >0.9 mm or global mean intensity z-score >–6 were marked as outliers and removed. Covariates of no interest included BOLD signal from white matter and CSF masks, within-subject covariates (realignment and scrubbing parameters), and the story condition effects.\n\nNetwork definition. Regions of interest (ROIs) for the cingulo-opercular (CO) and frontoparietal (FP) networks were defined based on coordinates reported by Dosenbach et al. (2008), transformed to Talairach space and labeled as Brodmann areas. Brodmann-area masks in CONN were used to generate CO and FP network masks.\n\nFunctional connectivity analysis. Within-network functional connectivity constitutes average ROI-to-ROI connections within each network, while the between-network functional connectivity averages the ROI-to-ROI connectivity values between all ROI pairs in both networks. Pairwise, bivariate correlation coefficients were Fisher-transformed for analysis.\n\nGraph measures. Global efficiency was calculated in CONN for the CO and FP networks separately for all participants.\n\nData source. Data presented in this work were obtained from the Cincinnati MR Imaging of Neurodevelopment (C-MIND) database (https://research.cchmc.org/c-mind).\n\nDefining the CO and FP networks. To determine the functional connectivity within and between the CO and FP networks, we first identified ROIs by defining the nodes of those networks based on coordinates reported by Dosenbach and associates (2008). MNI coordinates were transformed to the Talairach space using a best-fit transform (icbm_spm2tal; http://brainmap.org/icbm2tal) where bias associated with reference frame and scaling was minimized. The Talairach client (Lancaster et al., 1997, 2000) was used to label brain regions as Brodmann areas (BAs) (following Hutton et al., 2017; Tomasi and Volkow, 2010; Zhang et al., 2018). BAs of each network were then chosen from the Brodmann atlas file in CONN to generate network masks for the CO network (Fig. 2, right) and the FP network (Fig. 2, left) using codes written in MATLAB. See Table 2 for the coordinates of the ROIs related to the networks.\n\nFunctional connectivity analysis\n\nWithin- and between-network functional connectivity analyses were performed using in-house routines written in MATLAB for the CONN toolbox. Within-network functional connectivity constitutes average overall ROI connections (correlations between ROI time series) within each network, while the between-network functional connectivity averages the ROI-to-ROI connectivity values between all ROI pairs in both networks. Normalized bias-corrected T1 images were generated in SPM (www.fil.ion.ucl.ac.uk/spm) and segmented into gray matter, white matter, and CSF. The principal eigenvariate of the BOLD time-courses from white matter and CSF, as well as the six motion-correction parameters, were included as regressors of no interest and removed from the analysis. Results were corrected for multiple comparisons using false discovery rate (FDR) correction with a significance threshold of p < 0.05.\n\nTask-based functional connectivity analyses. Following spatial preprocessing, the task-based data were fed into CONN (Whitfield-Gabrieli and Nieto-Castanon, 2012), a functional connectivity toolbox for MATLAB (The MathWorks, Natick, MA; www.mathworks.com/products/matlab.html).\n\nVoxelwise temporal denoising of the BOLD signal was applied by regression of zero- and first-order derivatives of the six motion parameters, regression of the top five principal components of each of the average white matter and CSF BOLD signal, and applying 0.008 Hz high-pass filtering. As connectivity analyses are highly inclined to bias from head motion, especially in the pediatric population, following preprocessing, frames with composite motion > 0.9 mm (Siegel et al., 2014) or global mean intensity z-score > −6 were marked as outliers and removed from the data.\n\nFunctional connectivity between and within the CO and FP networks was calculated as the mean of the sum of pairwise, Fisher-transformed, bivariate correlation coefficients for all regions of interest (ROIs) within or between the networks.\n\nThe global efficiency was calculated in CONN using the following formula (from Latora and Marchiori, 2001):\n\nE = 1 n + i 2 N Ei = 1 n + i 2 N + j 2 N , j ¼ i d −1 ij n −1\n\nwhere Ei is the efficiency of node i, n is the number of network nodes, N is the set of all network nodes, and dij −1 is the inverse shortest path length between nodes i and j.\n\nCalculation of global efficiency was performed for the CO and FP networks separately for all participants. Correlation analyses of global efficiency with age were conducted in SPSS (IBM Corp., Armonk, NY). Pairwise correlations were corrected for multiple comparisons using an FDR correction [also reported by Benjamini and Hochberg (1995)], with the alpha set to 0.05."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 135,
+            "text": "Increased Functional Connectivity Within and Between Cognitive-Control Networks from Early Infancy to Nine Years During Story Listening",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 136,
+            "end": 146,
+            "text": "Rola Farah",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 151,
+            "end": 171,
+            "text": "Tzipi Horowitz-Kraus",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 212,
+            "end": 216,
+            "text": "2019",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 221,
+            "end": 243,
+            "text": "Mary Ann Liebert, Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 251,
+            "end": 274,
+            "text": "10.1089/brain.2018.0625",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 276,
+            "end": 478,
+            "text": "Developmental increase in functional connectivity within the CO network and between the CO and FP networks, as well as global efficiency of the CO network from 17 months to 9 years of age, was observed.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5123,
+            "end": 5173,
+            "text": "Cincinnati MR Imaging of Neurodevelopment (C-MIND)",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2049,
+            "end": 2092,
+            "text": "https://irc.cchmc.org/software/pedaudio.php",
+            "labels": [
+              "Remarks"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2149,
+            "end": 2167,
+            "text": "3T Philips Achieva",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2394,
+            "end": 2412,
+            "text": "35 acquired slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2370,
+            "end": 2392,
+            "text": "slice thickness = 5 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2308,
+            "end": 2312,
+            "text": "2000",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2313,
+            "end": 2315,
+            "text": "38",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2320,
+            "end": 2350,
+            "text": "field of view = 25.6 · 25.6 cm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2352,
+            "end": 2368,
+            "text": "matrix = 64 · 64",
+            "labels": [
+              "Matrix"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2563,
+            "end": 2605,
+            "text": "total acquisition time of 5 min and 30 sec",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 494,
+            "end": 536,
+            "text": "Seventy-four typically developing children",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2708,
+            "end": 2713,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1536,
+            "end": 1560,
+            "text": "The story listening task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2941,
+            "end": 2966,
+            "text": "resampling (3 mm3 voxels)",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1643,
+            "end": 1699,
+            "text": "A total of five stories, one for each 30-sec task period",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1681,
+            "end": 1687,
+            "text": "30-sec",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1818,
+            "end": 1837,
+            "text": "intervals (1–3 sec)",
+            "labels": [
+              "ISI distribution"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2536,
+            "end": 2556,
+            "text": "30 sec per condition",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1570,
+            "end": 1587,
+            "text": "passive listening",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1591,
+            "end": 1641,
+            "text": "natural speech stories presented in a female voice",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1839,
+            "end": 1895,
+            "text": "Five cycles of active and control stimuli were presented",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 494,
+            "end": 536,
+            "text": "Seventy-four typically developing children",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Group matching"
+          ],
+          "id": "m0029"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 537,
+            "end": 629,
+            "text": "between the ages of 17 months and 9 years (mean age: 69 months, standard deviation [SD] = 26",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 631,
+            "end": 641,
+            "text": "46 females",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 740,
+            "end": 809,
+            "text": "had no history of neurological impairments or developmental disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3495,
+            "end": 3586,
+            "text": "Participants with >10% of outlier volumes were excluded from further group analysis (n = 4)",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 891,
+            "end": 988,
+            "text": "reviewed and approved by Cincinnati Children’s Hospital Medical Center Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1469,
+            "end": 1502,
+            "text": "FSIQ composite score was assessed",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2715,
+            "end": 2716,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2708,
+            "end": 2713,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2738,
+            "end": 2759,
+            "text": "slice time correction",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0038"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2761,
+            "end": 2762,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2708,
+            "end": 2713,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2761,
+            "end": 2772,
+            "text": "realignment",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3178,
+            "end": 3199,
+            "text": "six motion parameters",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2792,
+            "end": 2793,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2708,
+            "end": 2713,
+            "text": "SPM12",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2871,
+            "end": 2872,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2708,
+            "end": 2713,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2778,
+            "end": 2791,
+            "text": "normalization",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2941,
+            "end": 2966,
+            "text": "resampling (3 mm3 voxels)",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2972,
+            "end": 2973,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2708,
+            "end": 2713,
+            "text": "SPM12",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2972,
+            "end": 2981,
+            "text": "smoothing",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2987,
+            "end": 3018,
+            "text": "8-mm full-width at half-maximum",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3272,
+            "end": 3273,
+            "text": "6",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3313,
+            "end": 3320,
+            "text": ">0.9 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Type"
+          ],
+          "id": "m0054"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3802,
+            "end": 3803,
+            "text": "7",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3820,
+            "end": 3905,
+            "text": "top five principal components of each of the average white matter and CSF BOLD signal",
+            "labels": [
+              "aCompCor — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Type"
+          ],
+          "id": "m0056"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3724,
+            "end": 3725,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3738,
+            "end": 3800,
+            "text": "zero- and first-order derivatives of the six motion parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Type"
+          ],
+          "id": "m0058"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3911,
+            "end": 3912,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3929,
+            "end": 3948,
+            "text": "high-pass filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3920,
+            "end": 3928,
+            "text": "0.008 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4086,
+            "end": 4087,
+            "text": "10",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4193,
+            "end": 4229,
+            "text": "realignment and scrubbing parameters",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Type"
+          ],
+          "id": "m0063"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4620,
+            "end": 4621,
+            "text": "13",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4679,
+            "end": 4701,
+            "text": "ROI-to-ROI connections",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0065"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5604,
+            "end": 5625,
+            "text": "Brodmann atlas file",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5629,
+            "end": 5633,
+            "text": "CONN",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5604,
+            "end": 5625,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5392,
+            "end": 5429,
+            "text": "coordinates reported by Dosenbach",
+            "labels": [
+              "ROI definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5353,
+            "end": 5357,
+            "text": "ROIs",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5392,
+            "end": 5429,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5649,
+            "end": 5668,
+            "text": "generate network masks",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5629,
+            "end": 5633,
+            "text": "CONN",
+            "labels": [
+              "Network definition — Software"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5649,
+            "end": 5668,
+            "text": "3",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6595,
+            "end": 6622,
+            "text": "bivariate correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6394,
+            "end": 6398,
+            "text": "CONN",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6595,
+            "end": 6622,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6568,
+            "end": 6585,
+            "text": "Fisher-transformed",
+            "labels": [
+              "Connectivity normalization — Parameters"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6568,
+            "end": 6585,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6778,
+            "end": 6795,
+            "text": "global efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7035,
+            "end": 7073,
+            "text": "inverse shortest path length",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6778,
+            "end": 6795,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0082"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6236,
+            "end": 6239,
+            "text": "FDR",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6270,
+            "end": 6278,
+            "text": "p < 0.05",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7181,
+            "end": 7185,
+            "text": "SPSS",
+            "labels": [
+              "Result aggregation — Software"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6236,
+            "end": 6239,
+            "text": "7",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "id": "m0086"
+        }
+      ]
+    }
+  ]
+}

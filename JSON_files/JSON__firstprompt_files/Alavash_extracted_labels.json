@@ -1,0 +1,726 @@
+{
+  "data": {
+    "text": "Is functional integration of resting state brain networks an unspecific biomarker for working memory performance?\nMohsen Alavash; Philipp Doebler; Heinz Holling; Christiane M. Thiel; Carsten Gießing\nNeuroImage 108 (2015) 182–193\nhttp://dx.doi.org/10.1016/j.neuroimage.2014.12.046\n© 2014 Elsevier Inc. All rights reserved.\n\nTwenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. Two female subjects showed large head movements during scanning (more than 3.5 mm of translation or degrees of rotation) and were excluded from further analyses. Ethical approval was obtained from the ethics committee of the University of Oldenburg. All procedures were carried out with written informed consent.\n\nDuring resting state fMRI scans subjects were instructed to lie still inside the scanner, close their eyes and not to think about something specific for around 13 min. Meanwhile T2*-weighted gradient echo planar imaging (EPI) volumes with BOLD contrast were recorded by means of a 3-Tesla MRI scanner (Siemens MAGNETOM Verio): repetition time (TR) = 1.5 s, echo time (TE) = 30 ms, flip angle (FA) = 80°, voxel size = 3 × 3 × 3.5 mm, between-slice gap = 4.37 mm, number of slices = 27, image size = 64 × 64 pixels, number of volumes = 512. Structural T1-weighted images (TR = 1.9 s, TE = 2.52 ms, FA = 9°, voxel size = 0.9 × 0.9 × 1 mm, number of slices = 176, image size = 256 × 256) were acquired after completion of functional scans.\n\nPre-processing of the fMRI data was conducted using SPM8. The brain scans were corrected for head motion by spatially aligning images to the first image of each run. Next structural and functional scans were co-registered. Finally images were spatially normalized to the standard stereotaxic MNI space. No spatial smoothing was applied.\n\nTo subdivide the brain in different subregions the parcellation routine from Fornito et al. (2010) and Zalesky et al. (2010) was applied. This approach randomly parcellates the anatomically delineated and labelled T1 volume provided by the AAL toolbox in SPM into 462 cortical regions. As a regional time series, mean time series are computed by averaging across voxels within a parcel.\n\nIn order to minimize the effects of spurious temporal correlations induced by physiological and movement artefacts the six rigid-body movement parameters from the realignment procedure and two additional mean time series extracted from areas within white-matter and ventricles were regressed out from the local time series. Regional time series were band-pass filtered by means of maximum overlap discrete wavelet transform (MODWT) within four frequency intervals (in the range of 0.02–0.33 Hz). We focused our subsequent analyses on wavelet scale 2 (0.08–0.17 Hz). To obtain a measure of association between each pair of cortical regions, Pearson correlation between wavelet coefficients were computed which in turn gave an N by N association matrix for each subject.\n\nNetworks were constructed at 16 equally spaced connection densities (5%–50%). Binary graphs at each density were constructed by thresholding each association matrix to create an adjacency matrix. The thresholding algorithm is based on the minimum spanning tree; once the tree was detected, edges were rank-thresholded and added in the order of their absolute correlation strength.\n\nTo analyse network integration on different organizational levels three key topological properties were estimated for each graph: global efficiency, modularity and clustering.\n\nIn the current study functional resting state networks of 22 participants were analysed."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 113,
+            "text": "Is functional integration of resting state brain networks an unspecific biomarker for working memory performance?",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 114,
+            "end": 198,
+            "text": "Mohsen Alavash; Philipp Doebler; Heinz Holling; Christiane M. Thiel; Carsten Gießing",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 199,
+            "end": 228,
+            "text": "NeuroImage 108 (2015) 182–193",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 280,
+            "end": 321,
+            "text": "© 2014 Elsevier Inc. All rights reserved.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 229,
+            "end": 279,
+            "text": "http://dx.doi.org/10.1016/j.neuroimage.2014.12.046",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 803,
+            "end": 834,
+            "text": "During resting state fMRI scans",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 893,
+            "end": 909,
+            "text": "close their eyes",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 956,
+            "end": 969,
+            "text": "around 13 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1084,
+            "end": 1128,
+            "text": "3-Tesla MRI scanner (Siemens MAGNETOM Verio)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1147,
+            "end": 1158,
+            "text": "TR) = 1.5 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1171,
+            "end": 1182,
+            "text": "TE) = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1196,
+            "end": 1205,
+            "text": "FA) = 80°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1207,
+            "end": 1234,
+            "text": "voxel size = 3 × 3 × 3.5 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1236,
+            "end": 1263,
+            "text": "between-slice gap = 4.37 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1265,
+            "end": 1286,
+            "text": "number of slices = 27",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 489,
+            "text": "Twenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. ",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 489,
+            "text": "Twenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. ",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 489,
+            "text": "Twenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. ",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 489,
+            "text": "Twenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. ",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 489,
+            "text": "Twenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. ",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 489,
+            "end": 651,
+            "text": "Two female subjects showed large head movements during scanning (more than 3.5 mm of translation or degrees of rotation) and were excluded from further analyses. ",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3595,
+            "end": 3683,
+            "text": "In the current study functional resting state networks of 22 participants were analysed.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 651,
+            "end": 738,
+            "text": "Ethical approval was obtained from the ethics committee of the University of Oldenburg.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1619,
+            "end": 1705,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1540,
+            "end": 1597,
+            "text": "Pre-processing of the fMRI data was conducted using SPM8.",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1619,
+            "end": 1705,
+            "text": "corrected for head motion by spatially aligning images to the first image of each run.",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1706,
+            "end": 1762,
+            "text": "2",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1540,
+            "end": 1597,
+            "text": "Pre-processing of the fMRI data was conducted using SPM8.",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1763,
+            "end": 1842,
+            "text": "3",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1540,
+            "end": 1597,
+            "text": "Pre-processing of the fMRI data was conducted using SPM8.",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1763,
+            "end": 1842,
+            "text": "Finally images were spatially normalized to the standard stereotaxic MNI space.",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2118,
+            "end": 2163,
+            "text": "4",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2118,
+            "end": 2163,
+            "text": "AAL toolbox in SPM into 462 cortical regions.",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2118,
+            "end": 2163,
+            "text": "AAL toolbox in SPM into 462 cortical regions.",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2191,
+            "end": 2264,
+            "text": "5",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2191,
+            "end": 2264,
+            "text": "mean time series are computed by averaging across voxels within a parcel.",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "6",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "six rigid-body movement parameters from the realignment procedure and two additional mean time series extracted from areas within white-matter and ventricles were regressed out",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "7",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "six rigid-body movement parameters from the realignment procedure and two additional mean time series extracted from areas within white-matter and ventricles were regressed out",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "8",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "six rigid-body movement parameters from the realignment procedure and two additional mean time series extracted from areas within white-matter and ventricles were regressed out",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2616,
+            "end": 2697,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2616,
+            "end": 2697,
+            "text": "band-pass filtered by means of maximum overlap discrete wavelet transform (MODWT)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2817,
+            "end": 2829,
+            "text": "0.08–0.17 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2906,
+            "end": 2968,
+            "text": "10",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2906,
+            "end": 2968,
+            "text": "Pearson correlation between wavelet coefficients were computed",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3065,
+            "end": 3112,
+            "text": "11",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3065,
+            "end": 3112,
+            "text": "16 equally spaced connection densities (5%–50%)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3275,
+            "end": 3296,
+            "text": "minimum spanning tree",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3386,
+            "end": 3415,
+            "text": "12",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3386,
+            "end": 3415,
+            "text": "absolute correlation strength",
+            "labels": [
+              "Negative correlation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3548,
+            "end": 3592,
+            "text": "13",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3548,
+            "end": 3592,
+            "text": "global efficiency, modularity and clustering",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1540,
+            "end": 1597,
+            "text": "Pre-processing of the fMRI data was conducted using SPM8.",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

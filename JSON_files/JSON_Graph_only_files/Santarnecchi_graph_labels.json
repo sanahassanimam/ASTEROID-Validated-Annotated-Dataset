@@ -1,0 +1,328 @@
+{
+  
+  "data": {
+	"title": "Efficiency of Weak Brain Connections Support General Cognitive Functioning",
+    "text": "Overview of Network Analysis and Thresholding\nProcedure\nNetwork nodes were defined by parcellating the brain\ninto 90 cortical and subcortical ROIs according to the automatic anatomical labeling atlas (AAL) [Tzourio-Mazoyeret al., 2002], one of the most commonly employed atlas fornetwork analyses [Achard and Bullmore, 2007; Achardet al., 2006; Liu et al., 2008; Wang et al., 2010]. As recentlysuggested [Craddock et al., 2013; Zalesky et al., 2010], dif-ferent anatomical parcellation schemes may impact func-tional connectivity estimation. To rule out any effect of thea priori selection of a specific atlas on the correlation\nbetween intelligence and brain topology, we carried outthe main analyses using three additional atlases for func-tional images parcellation and analysis (one anatomical,two functional). Analogous results were obtained acrossthe four atlases (details about the atlases and results areincluded in Supporting Information). The computation oftopological properties requires the creation of a so-calledadjacency matrix, which graphically represents the overallbrain organization in terms of nodes (brain regions) andedges (representing the dependency between the BOLDtime series of each pair of brain regions). Here, adjacencymatrices were obtained for each subject by computing thepairwise zero-lag correlation coefficients (“ r”) between the\nmean BOLD time series of all possible voxels within eachROI, leading to a 90 390 matrix with 4,005 edges, i.e.,\nconnections. These normalized edges represented thewhole range of possible functional links between corticaland/or subcortical regions, covering strong ( r>0.7), intermediate (0.2 <r<0.7), and weak (0 <r<0.2) connections,\nas well as negative ones ( r/C200) (as described in [Schwarz\nand McGonigle, 2011]). Several studies have shown thattopological properties, including modularity and small-worldness, may be better identified and reliably quantifiedby analyzing thresholded version of the full adjacencymatrix (composed by a subpopulation of overall connections falling above a certain rvalue) [Achard and Bullmore, 2007].\nHere, we studied whether strong and weak brain connections differentially contribute to individual differencesin IQ by applying the thresholding procedure for graphtopology computation suggested by Schwarz and McGoni-gle [2011]. Assuming that sparsity estimates are inverselyrelated to connection strength, this procedure is based onthe computation of different sparsity windows retainingconnections falling within a lower ( r\nc+) and an upper\nbound ( rc+). For instance, a sparsity window that retains\nconnections within the 15% and the 20% of the distribu-tion leads to the representation of the 15th to the 20th per-centile of the strongest connections in the brain. Briefly,each adjacent matrix, a ij, was computed according to the\nfollowing formula:\na\nij51;rc+/rij/rc*\n0;rc+/rij/rc*/C26\nwhere rijrepresents the correlation range of interest,\nrc+is correlation upper bound, rc+is the lower one, “0” represents correlation values falling below or above the rangeof interest and therefore excluded from the matrix, and“1” correlation values falling within that range and there-fore preserved in the matrix. This allows a characterization\nof brain topology within predefined sparsity ranges of\ninterest (e.g., weak, intermediate, and strong brain connec-tions). For a synthetic explanation of analysis workflow(see Fig. 2).\nThe distribution of correlation coefficients varies across\nsubjects, and its shape determines network organization[Schwarz and McGonigle, 2011]. As the aim of our studywas to estimate the correlation between individual IQsand the magnitude of different correlation strengths, webased our analysis on individually thresholded matricesinstead of using group-averaged strength values. In thisway, we avoided connection strength misrepresentationsthat may arise by averaging high and low connectionstrengths across individuals. Moreover, topological proper-ties were estimated separately for each participant, so thatsubjects with High or Low IQs independently contributedto the topological profile of their group. We then calcu-lated the network properties for five windows of differentconnection strength. This resulted in five “quintile” matri-ces for each participant, representing the strongest (win-dow [1] 51–20%, hereafter Q1), intermediate (window\n[2]521–40%, Q2, window [3] 541–60%, Q3, window\n[4]561–80%, Q4) and weakest brain connections (window\n[5]581–100%, Q5). The division of cost windows into\nquintiles was performed to avoid inconsistent IQ-networkproperty correlation coefficients between neighboring win-dows that could arise using finer grained sparsity resolutions (e.g., 1 or 2% sparsity windows) (see [Schwarz and\nMcGonigle, 2011], for a similar approach). In addition, avast literature supports the conversion of weighted matri-ces to binary graphs [Bassett and Bullmore, 2009; Dosen-bach et al., 2010], in which the information about pairwiseconnections is downgraded to a simple representation oftheir presence or absence. Our aim to identify an interac-tion between connectivity strength and IQ discouragedthis approach; we thus computed topological propertiesstarting from weighted matrices [Latora and Marchiori,2001], obtaining both global (an unique value referred tothe overall brain, i.e., brain local efficiency) and local (avalues for each brain region) indices.\nFinally, we computed a two-tailed, one-sample ttest for\neach participant and quintile matrix to ensure that topo-logical features were computed on statistically reliable con-nections and thus to avoid type I errors [Zalesky et al.,2012a]. Only connections surviving the false discovery raterSantarnecchi et al. r\nr4570 r\n\n(FDR, P<0.05) correction for multiple comparisons were\nused for subsequent analyses.\nBelow, we report a brief summary of network properties\nthat entered the statistical analyses, assuming: ( N) as the\nset of all nodes in the network, ( n) as the number of\nnodes, ( k) as a specific node, ( L) as the set of all links in\nthe network, ( l) as the number of links, ( i,j) as the link\nbetween nodes iand j,(aij) as the connection status\nbetween iand j(aij = 1 when link i,jexists; aij = 0 otherwise). Properties were calculated using the Brain Connec-tivity Toolbox (http://www.sites.google.com/site/bctnet/).\nIntegration and Brain Distributed Processing\nDistributed information processing is a key feature of\ncognitive functioning [Yeo et al., 2011]. To assess long-distance, inter-regional functional connections within thequintile brain networks, two indices were selected, theGlobal efficiency - E , and the largest connected component -\nLCC . Network Eis usually conceptualized as expression of\noverall network information processing, and defined as:E =\n1\nnX\ni2NEi51\nnX\ni2NX\nj2N;j6¼idij21\nn21;\nwhere drepresents the distance matrix, whose ijvalues\nrepresent the shortest path length (or distance) between allpairs of nodes. At the neurophysiological level, a networkwith high E\nLocis composed of nodes placed at short distance from each other. This configuration allows a fast\ninteraction between nodes and enhances high functional\nintegration. Therefore high Evalues represent better overall brain information processing, compared to low ones.The Ewas preferred over the widely-used average path\nlength (which represents the average number of stepsalong the shortest paths for all possible pairs of networknodes) because of its lower sensitivity to the presence ofdisconnected, or very weakly connected, nodes [Zaleskyet al., 2012b]. We hypothesized that the correlationbetween brain organization and connection strength mightbe reflected in the overall “connectedness”, that is, thenumber of subnetworks composed by subsets of tightlyconnected regions (i.e., components ). In this context, the\nsize of the largest connected component—LCC , an index\nFigure 2.\nPreprocessing, thresholding, and graph-topological properties\ncomputation workflow. Schematic representation of the majorsteps for network topology computation, involving images pre-processing, the thresholding procedure based on the connectiv-ity strength and topology indices computation. From left toright, images underwent canonical preprocessing involving twodifferent approaches for motion correction, removal of possibleconfounding factor related to breathing and cardiac signals, tem-poral band-pass filtering, coregistration, and spatial normalizationusing the DARTEL module for SPM. Four different atlases (2functional, 2 anatomical) were used for resting-state parcellationinto regions of interest and consequent BOLD signal time seriesextraction. A one-sample ttest was applied over resulting connectivity matrices to retain only significant connections, whichwere used to define several matrices based on connectivitystrength and representing strong, intermediate, and weak brain\nconnections (windowed thresholding, upper row). A few matri-ces obtained at identical sparsity values with the windowed andcumulative thresholding approaches are shown to highlight thedifferent representation of brain connectivity resulting from theprocedures. T o normalize graph topology indices, anHirschberger-Qi-Steuer algorithm was used to create transitivitypreserved null networks based on the random correlation mat-rices matched for degree-distribution. Considering our focus onconnectivity strength distribution, all previous steps includingmatrix thresholding were performed at the single subjectlevel. Additional details are provided in Methods. [Colorfigure can be viewed in the online issue, which is available atwileyonlinelibrary.com.]rEfficiency of Weak and Strong BrainConnections and Intelligence r\nr4571 r\n\nusually applied for complex networks resilience estimation\n[Albert et al., 2000], was defined as the largest number of\nnodes constituting a component. LCC was computed as:\ndij5X\nauv2gi$jauv’\nwith gi$jrepresenting the shortest path between nodes i\nand j(disconneted pairs 51). Each cell within the resulting matrices represents the minimum number of steps(node-to-node connections) required to connect each pair\nof nodes, so that a ( i,j) blank cell indicates the impossibility to directly or indirectly connect nodes iand j.\nSegregation and Brain Local Processing\nLocal processing reflects the synchronization between\nadjacent neuronal populations, a functional prerequisite forseveral cognitive functions within the motor, visual, soma-tosensory, and also memory domains [Ding et al., 2011].Local and global efficiency are mutually responsible for anetwork’s ability to sustain parallel information transfer[Latora and Marchiori, 2001]. Here, we characterized brainsegregation using the Local efficiency index - E\nLoc, a measure\nof the average efficiency within local subgraphs or neigh-borhoods. E\nLochas been calculated as follows:\nELoc51\nnX\ni2NELoc;i51\nnX\ni2NX\nj;h2N;j6¼iaijaihdjhNiðÞ/C2/C321\nkiðki21Þ\nwhere ELoc,iis the local efficiency of node i, and djh(Ni)i s\nthe length of the shortest path between jand h, that contains only neighbors of h. High levels of ELocrepresent better information processing at the local, compared to theglobal, level.\nRegional Centrality for Overall Brain Processing\nAn intrinsic feature of brain networks is regional degree,\nwhich reflects the existence of a limited number of regionsshowing a large number of connections, thus crucially con-tributing to network information flow and stability [Bull-more and Sporns, 2012]. We hypothesized that therelevance of a node for the overall network dynamicsmight correlate with individual IQs. We thus estimatednodes’ betweeness centrality - b\ni, which reflects the number of the shortest node-to-node paths that pass through aspecific node. B\nifor the node ihas been defined as:\nbi = 1\nðn21Þðn22ÞX\nh;j2N\nh6¼j;h6¼i;j6¼iqhjðiÞ\nqhj’\nwhere qhjis the number of shortest paths between hand j,\nandqhj(i) is the number of shortest paths between hand j\nthat pass through i."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 164,
+            "end": 205,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 164,
+            "end": 205,
+            "text": "automatic anatomical labeling atlas (AAL)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 114,
+            "end": 146,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 114,
+            "end": 146,
+            "text": "90 cortical and subcortical ROIs",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1368,
+            "end": 1389,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1368,
+            "end": 1389,
+            "text": "mean BOLD time series",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1306,
+            "end": 1348,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1306,
+            "end": 1348,
+            "text": "pairwise zero-lag correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1713,
+            "end": 1736,
+            "text": "5",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1713,
+            "end": 1726,
+            "text": "negative ones",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1729,
+            "end": 1735,
+            "text": "r/C200",
+            "labels": [
+              "Negative correlation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2467,
+            "end": 2493,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2467,
+            "end": 2493,
+            "text": "sparsity windows retaining",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4340,
+            "end": 4359,
+            "text": "1–20%, hereafter Q1",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4488,
+            "end": 4499,
+            "text": "81–100%, Q5",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5748,
+            "end": 5751,
+            "text": "FDR",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5228,
+            "end": 5245,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5228,
+            "end": 5245,
+            "text": "weighted matrices",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6623,
+            "end": 6688,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6623,
+            "end": 6644,
+            "text": "Global efficiency - E",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6655,
+            "end": 6688,
+            "text": "largest connected component -\nLCC",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6910,
+            "end": 6930,
+            "text": "shortest path length",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

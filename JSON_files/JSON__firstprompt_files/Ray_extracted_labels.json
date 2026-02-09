@@ -1,0 +1,778 @@
+{
+  "data": {
+    "text": "Dynamic Reorganization of the Frontal Parietal Network During Cognitive Control and Episodic Memory\n\nKimberly L Ray1, J Daniel Ragland1, Angus W MacDonald2, James M Gold3, Steven M Silverstein4, Deanna M Barch5, Cameron S Carter1,6\n\nCogn Affect Behav Neurosci. 2020 February ; 20(1): 76–90. doi:10.3758/s13415-019-00753-9.\n\nNone of the data or materials for the experiments reported here are available, and none of the experiments were preregistered.\n\nSubjects\n\nData were obtained on 60 healthy adults (HC). Participants were excluded if they exhibited excess movement (i.e., >0.37 mm mean frame-to-frame movement), below-chance performance, or image acquisition errors. This left final samples of 56 HC (34.0±11.4 yrs) for the RiSE task, and 52 HC (34.1±10.4 yrs) for DPX task (Table 1).\n\nData Acquisition\n\nImages were acquired in a single 3T MRI session using a consistent protocol across sites. Functional images were acquired using gradient-echo BOLD echo-planar imaging (TR=2000 ms, TE=30 ms, 77° flip angle, FOV=220 mm2, 3.43×3.43×4 mm voxels, 32 axial slices parallel with the anterior/posterior commissure).\n\nPreprocessing\n\nPre-processing was carried out using the FMRI Expert Analysis Tool (FEAT) in the FMRIB Software Library (FSL version 4.1; www.fmrib.ox.ac.uk/fsl) using standard procedures, including field map correction, spatial normalization and nonlinear registration to MNI152. Field maps to correct fMRI data for geometric distortion caused by magnetic field inhomogeneity and a T1-weighted anatomical image (1-mm isotropic voxels) were also acquired.\n\nData Processing (Beta-series regression)\n\nSubject-wise beta-series regression analysis was performed on RiSE and DPX fMRI data in order to capture trial specific BOLD effects for each condition (Turner et al., 2012). Using the least squares-separate (LS-S) method to measure event-related functional connectivity, individual trials were modeled with a new GLM in SPM8 with two predicted BOLD time courses—one that reflects the expected BOLD response to the current event and another for the BOLD responses to all events except the current event.\n\nAdditional motion correction steps were taken analogous to data-scrubbing procedures often performed in resting-state functional connectivity analyses (Power et al., 2014). Beta-images containing frame-wise displacement (FD) values greater than 0.5mm motion were excluded from beta-series. If more than 10% of TRs within a block contained frame-wise displacement >0.5 mm, the entire block was excluded from analysis.\n\nParcellation and Connectivity\n\nNext, each participant’s brain data was parcellated into discrete regions of interest representing nodes obtained from the Power atlas (Power et al., 2011). Twenty-one Power nodes were eliminated due to low signal, and two bilateral MTL nodes were added (MNI coords: −30,−12,−22;32,−14,−22) resulting with 245 nodes across the whole-brain. Beta-series pairwise correlations for all 245 nodes were extracted and z-transformed resulting with a 245 by 245 connectivity matrix. A final group FC graph for each condition was established by summing the 5% thresholded connection matrices across all subjects, then applying a subsequent 5% threshold on the summed group connection matrix to identify connections that are consistently strongest across participants, followed by binarization of the summed group connection matrix.\n\nGraph Analysis and Measures\n\nModularity (Q) and modular partitions were extracted using the community Louvain algorithm provided by the Brain Connectivity Toolbox. We also quantified reorganization between high and low control using mutual information and variation of information, and examined the participation coefficient of FPN nodes.\n\nRelational and Item-Specific Encoding (RiSE) task\n\nParticipants completed 4 encoding and 4 recognition fMRI runs. During encoding, participants alternated between 3 item-specific blocks (“Is either object living?”; 9 low cognitive control trials each) and 3 relational blocks (“Can one object fit inside the other?”; 9 high cognitive control trials each) in a jittered event-related design. During item recognition, 54 individual objects from each encoding condition (54 item-specific, 54 relational) were randomly presented with 54 new items. OPTSEQ was used to optimize the efficiency of trial presentation timing and randomization across each block.\n\nDot Pattern Expectancy (DPX) task\n\nEach block consisted of 40 trials: 24 AX, 6 AY, 6 BX, and 4 BY. Cues indicated the need for high (B Cues) or low (A Cues) levels of cognitive control. Correct responses from 4 runs of the DPX task were used for analysis. OPTSEQ was used to optimize efficiency and randomization across blocks.\n\nEthics\n\nRecruitment and informed consent procedures for each site were approved by their Institutional Review Boards (IRB).\n\nBehavioral performance\n\nAs reported in Ragland et al., 2015, mean accuracy for healthy adults was 72.0% and 86.1% for item and relational recognition trials respectively."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 99,
+            "text": "Dynamic Reorganization of the Frontal Parietal Network During Cognitive Control and Episodic Memory",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 291,
+            "end": 322,
+            "text": "doi:10.3758/s13415-019-00753-9.",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 101,
+            "end": 231,
+            "text": "Kimberly L Ray1, J Daniel Ragland1, Angus W MacDonald2, James M Gold3, Steven M Silverstein4, Deanna M Barch5, Cameron S Carter1,6",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 324,
+            "end": 450,
+            "text": "None of the data or materials for the experiments reported here are available, and none of the experiments were preregistered.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 324,
+            "end": 450,
+            "text": "None of the data or materials for the experiments reported here are available, and none of the experiments were preregistered.",
+            "labels": [
+              "Preregistered"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 99,
+            "text": "Dynamic Reorganization of the Frontal Parietal Network During Cognitive Control and Episodic Memory",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 681,
+            "end": 777,
+            "text": "final samples of 56 HC (34.0±11.4 yrs) for the RiSE task, and 52 HC (34.1±10.4 yrs) for DPX task",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 508,
+            "end": 670,
+            "text": "Participants were excluded if they exhibited excess movement (i.e., >0.37 mm mean frame-to-frame movement), below-chance performance, or image acquisition errors.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 975,
+            "end": 1114,
+            "text": "(TR=2000 ms, TE=30 ms, 77° flip angle, FOV=220 mm2, 3.43×3.43×4 mm voxels, 32 axial slices parallel with the anterior/posterior commissure)",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 975,
+            "end": 1114,
+            "text": "(TR=2000 ms, TE=30 ms, 77° flip angle, FOV=220 mm2, 3.43×3.43×4 mm voxels, 32 axial slices parallel with the anterior/posterior commissure)",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 975,
+            "end": 1114,
+            "text": "(TR=2000 ms, TE=30 ms, 77° flip angle, FOV=220 mm2, 3.43×3.43×4 mm voxels, 32 axial slices parallel with the anterior/posterior commissure)",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 975,
+            "end": 1114,
+            "text": "(TR=2000 ms, TE=30 ms, 77° flip angle, FOV=220 mm2, 3.43×3.43×4 mm voxels, 32 axial slices parallel with the anterior/posterior commissure)",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 975,
+            "end": 1114,
+            "text": "(TR=2000 ms, TE=30 ms, 77° flip angle, FOV=220 mm2, 3.43×3.43×4 mm voxels, 32 axial slices parallel with the anterior/posterior commissure)",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 975,
+            "end": 1114,
+            "text": "(TR=2000 ms, TE=30 ms, 77° flip angle, FOV=220 mm2, 3.43×3.43×4 mm voxels, 32 axial slices parallel with the anterior/posterior commissure)",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1315,
+            "end": 1335,
+            "text": "field map correction",
+            "labels": [
+              "Field map correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1315,
+            "end": 1316,
+            "text": "1",
+            "labels": [
+              "Field map correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Field map correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1173,
+            "end": 1252,
+            "text": "FMRI Expert Analysis Tool (FEAT) in the FMRIB Software Library (FSL version 4.1",
+            "labels": [
+              "Field map correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1337,
+            "end": 1395,
+            "text": "spatial normalization and nonlinear registration to MNI152",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1337,
+            "end": 1338,
+            "text": "2",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1173,
+            "end": 1252,
+            "text": "FMRI Expert Analysis Tool (FEAT) in the FMRIB Software Library (FSL version 4.1",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2293,
+            "end": 2409,
+            "text": "Beta-images containing frame-wise displacement (FD) values greater than 0.5mm motion were excluded from beta-series.",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2293,
+            "end": 2294,
+            "text": "3",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2293,
+            "end": 2409,
+            "text": "Beta-images containing frame-wise displacement (FD) values greater than 0.5mm motion were excluded from beta-series.",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2410,
+            "end": 2536,
+            "text": "If more than 10% of TRs within a block contained frame-wise displacement >0.5 mm, the entire block was excluded from analysis.",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2692,
+            "end": 2724,
+            "text": "Power atlas (Power et al., 2011)",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2692,
+            "end": 2693,
+            "text": "4",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2823,
+            "end": 2859,
+            "text": "(MNI coords: −30,−12,−22;32,−14,−22)",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1929,
+            "end": 1940,
+            "text": "GLM in SPM8",
+            "labels": [
+              "Time series ROI — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1628,
+            "end": 1639,
+            "text": "beta-series",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1628,
+            "end": 1629,
+            "text": "5",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2980,
+            "end": 3042,
+            "text": "z-transformed resulting with a 245 by 245 connectivity matrix.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2980,
+            "end": 2981,
+            "text": "6",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2980,
+            "end": 3042,
+            "text": "z-transformed resulting with a 245 by 245 connectivity matrix.",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2980,
+            "end": 2981,
+            "text": "7",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3104,
+            "end": 3150,
+            "text": "summing the 5% thresholded connection matrices",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3104,
+            "end": 3105,
+            "text": "8",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3327,
+            "end": 3390,
+            "text": "followed by binarization of the summed group connection matrix.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3327,
+            "end": 3328,
+            "text": "9",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3484,
+            "end": 3511,
+            "text": "community Louvain algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3484,
+            "end": 3485,
+            "text": "10",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3625,
+            "end": 3672,
+            "text": "mutual information and variation of information",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3691,
+            "end": 3729,
+            "text": "participation coefficient of FPN nodes",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3625,
+            "end": 3626,
+            "text": "11",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3104,
+            "end": 3150,
+            "text": "summing the 5% thresholded connection matrices",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3327,
+            "end": 3390,
+            "text": "followed by binarization of the summed group connection matrix.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3104,
+            "end": 3105,
+            "text": "12",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3876,
+            "end": 4086,
+            "text": "alternated between 3 item-specific blocks (“Is either object living?”; 9 low cognitive control trials each) and 3 relational blocks (“Can one object fit inside the other?”; 9 high cognitive control trials each)",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3876,
+            "end": 4086,
+            "text": "alternated between 3 item-specific blocks (“Is either object living?”; 9 low cognitive control trials each) and 3 relational blocks (“Can one object fit inside the other?”; 9 high cognitive control trials each)",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3876,
+            "end": 4086,
+            "text": "alternated between 3 item-specific blocks (“Is either object living?”; 9 low cognitive control trials each) and 3 relational blocks (“Can one object fit inside the other?”; 9 high cognitive control trials each)",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4421,
+            "end": 4484,
+            "text": "Each block consisted of 40 trials: 24 AX, 6 AY, 6 BX, and 4 BY.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4276,
+            "end": 4384,
+            "text": "OPTSEQ was used to optimize the efficiency of trial presentation timing and randomization across each block.",
+            "labels": [
+              "Efficiency optimization"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4485,
+            "end": 4571,
+            "text": "Cues indicated the need for high (B Cues) or low (A Cues) levels of cognitive control.",
+            "labels": [
+              "Block/event correlation"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3484,
+            "end": 3511,
+            "text": "community Louvain algorithm",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4786,
+            "end": 4838,
+            "text": "approved by their Institutional Review Boards (IRB).",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4901,
+            "end": 5010,
+            "text": "mean accuracy for healthy adults was 72.0% and 86.1% for item and relational recognition trials respectively.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 884,
+            "end": 896,
+            "text": "across sites",
+            "labels": [
+              "Multicenter study? (Y/N)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3732,
+            "end": 3781,
+            "text": "Relational and Item-Specific Encoding (RiSE) task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1173,
+            "end": 1252,
+            "text": "FMRI Expert Analysis Tool (FEAT) in the FMRIB Software Library (FSL version 4.1",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 681,
+            "end": 777,
+            "text": "final samples of 56 HC (34.0±11.4 yrs) for the RiSE task, and 52 HC (34.1±10.4 yrs) for DPX task",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,766 @@
+{
+  "data": {
+    "text": "Investigation of functional brain network reconfiguration during exposure to naturalistic stimuli using graph-theoretical analysis\nGaoyan Zhang and Xin Liu\nJournal of Neural Engineering — OPEN ACCESS — 13 September 2021\nhttps://doi.org/10.1088/1741-2552/ac20e7\n\nAbstract\nObjective. One of the most significant features of the human brain is that it can dynamically reconfigure itself to adapt to a changing environment. Approach. We used open-source functional magnetic resonance imaging (fMRI) data from 15 participants who underwent fMRI scans while watching an audio–visual movie ‘Forrest Gump’. The community detection algorithm based on inter-subject functional correlation was used to study the time-varying functional networks only induced by the movie stimuli.\n\n2. Method\n\n2.1. Data description\nA high-quality public dataset was used in this study (Hanke et al 2016). This dataset is extracted from the studyforrest project (www.studyforrest.org) in which 15 native German speakers (mean age 29.4 years, range 21–39, 6 females) watched an German dubbed movie ‘Forrest Gump’ visual–audio movie during fMRI acquisition. All participants had normal hearing and normal or corrected-to-normal vision, and no known history of neurological disorders. The studyforrest dataset provides the required ethics and consent needed for study and dissemination, such that no further institutional review board approval is required.\n\nThe data were collected using a Philips 3.0T MRI scanner equipped with a 32-channel head coil. A gradient echo plane imaging sequence was used to obtain blood oxygenation level-dependent (BOLD) images with the following parameters: echo time (TE) = 30 ms, repetition time (TR) = 2000 ms, flip angle (FA) = 90◦, field of view (FOV) = 240 mm× 240 mm, matrix = 80× 80, slice thickness = 3.0 mm, slice gap = 0.3 mm, and number of slices = 35. The movie was divided into eight segments. All participants underwent two 1h fMRI sessions. Each session consisted of four runs. They were instructed to not perform any actions and to enjoy the movie. Some questions such as story depth, fatigue, feeling and rating were asked after the scanning to test whether subjects paid enough attention to the movie stimuli during the whole experiment.\n\n2.2. Data preprocessing\nfMRI data were preprocessed using SPM12 and GRETNA (Wang et al 2015). Functional data were adjusted for acquisition time, corrected for head motion, and normalised to the Montreal Neurological Institute space with a resample size of 3 × 3 × 3 mm3. Subsequently, spatial smoothing with 5 mm full-width at half-maximum Gaussian kernel was applied to the normalised data to improve the signal-to-noise ratio. Then, linear trends were removed from the smoothed data. Nuisance factors, including 24 motion parameters (three translation and three rotation motion parameters and their expansion) and average signals from white matter and cerebrospinal fluid masks, were regressed out from each BOLD time series. The low-frequency signals were removed using a high-pass filter with a threshold of 0.01 Hz. The data of two participants were excluded from further analysis owing to substantial motion (Hanke et al 2016). The remaining preprocessed BOLD time series were used for the functional network analyses. The entire procedure is shown in figure 1.\n\n2.3. Definition of brain nodes\nLarge-scale brain networks were identified based on an atlas of 264 brain nodes of interest (Power et al 2011). The 264 brain nodes were assigned to sub-networks. For each subject, the nodal signals were extracted by averaging the time series over all voxels in each of the 264 nodes and then by normalising to a zero mean and unit variance. The resulting time-series was used to construct the ISFC network.\n\n2.4. Time-varying ISFC\nTime-varying ISFC was computed using a sliding window method. We selected a window width of 35-TRs and a step of 1-TR between windows. In each window, all subjects were evenly and randomly divided into two groups. The group-level ROI time series was obtained by averaging within group, and the ISFC matrix was constructed by calculating the Pearson correlation between two groups of ROIs. This procedure was repeated 50 times by randomly assigning the subjects to each group. The r-values of these matrices were converted to z-values using Fisher’s z-transformation and then averaged to obtain the mean ISFC matrix. Subsequently, this ISFC matrix was converted back to the r-value by inverse Fisher z-transformation. We took the (ISFC + ISFCᵀ)/2 to ensure symmetry.\n\n2.5. Dynamic community detection analysis\nAn optimised community detection algorithm in the Brain Connectivity Toolbox was used to detect the community structure of the ISFC matrix in each time window. It considers both positive and negative correlations in a network. We ran this algorithm 100 times and chose the maximum Q and its corresponding community partition as the result. The default resolution parameter γ = 1 was selected, yielding the modularity scores and time-resolved partitions.\n\nData availability statement\nThe description about the dataset that supports the findings of this study is openly available at the URL: www.studyforrest.org. The 3T audio–visual fMRI data can be downloaded at the following URL: https://gin.gnode.org/studyforrest. The raw emotion ratings are open available at the following URL: https://osf.io/3g2zq.\n\nCreative Commons\nOriginal content from this work may be used under the terms of the Creative Commons Attribution 4.0 licence. Any further distribution of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 130,
+            "text": "Investigation of functional brain network reconfiguration during exposure to naturalistic stimuli using graph-theoretical analysis",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 131,
+            "end": 155,
+            "text": "Gaoyan Zhang and Xin Liu",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 215,
+            "end": 219,
+            "text": "2021",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 156,
+            "end": 185,
+            "text": "Journal of Neural Engineering",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 220,
+            "end": 260,
+            "text": "https://doi.org/10.1088/1741-2552/ac20e7",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 430,
+            "end": 598,
+            "text": "We used open-source functional magnetic resonance imaging (fMRI) data from 15 participants who underwent fMRI scans while watching an audio–visual movie ‘Forrest Gump’.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5489,
+            "end": 5529,
+            "text": "Creative Commons Attribution 4.0 licence",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 933,
+            "end": 953,
+            "text": "www.studyforrest.org",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5281,
+            "end": 5315,
+            "text": "https://gin.gnode.org/studyforrest",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5382,
+            "end": 5402,
+            "text": "https://osf.io/3g2zq",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1457,
+            "end": 1481,
+            "text": "Philips 3.0T MRI scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1841,
+            "end": 1862,
+            "text": "number of slices = 35",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1791,
+            "end": 1815,
+            "text": "slice thickness = 3.0 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1817,
+            "end": 1835,
+            "text": "slice gap = 0.3 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1713,
+            "end": 1734,
+            "text": "flip angle (FA) = 90◦",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1736,
+            "end": 1772,
+            "text": "field of view (FOV) = 240 mm× 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1681,
+            "end": 1711,
+            "text": "repetition time (TR) = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1657,
+            "end": 1679,
+            "text": "echo time (TE) = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2514,
+            "end": 2527,
+            "text": "3 × 3 × 3 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2315,
+            "end": 2320,
+            "text": "SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2325,
+            "end": 2331,
+            "text": "GRETNA",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 552,
+            "end": 597,
+            "text": "watching an audio–visual movie ‘Forrest Gump’",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1934,
+            "end": 1954,
+            "text": "two 1h fMRI sessions",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 505,
+            "end": 520,
+            "text": "15 participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 964,
+            "end": 989,
+            "text": "15 native German speakers",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 991,
+            "end": 1023,
+            "text": "mean age 29.4 years, range 21–39",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1025,
+            "end": 1034,
+            "text": "6 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3091,
+            "end": 3121,
+            "text": "two participants were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1364,
+            "end": 1422,
+            "text": "no further institutional review board approval is required",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1993,
+            "end": 2064,
+            "text": "They were instructed to not perform any actions and to enjoy the movie.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 577,
+            "end": 597,
+            "text": "movie ‘Forrest Gump’",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1864,
+            "end": 1906,
+            "text": "The movie was divided into eight segments.",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2372,
+            "end": 2401,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2315,
+            "end": 2320,
+            "text": "SPM12",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm, Type, Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2403,
+            "end": 2428,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2315,
+            "end": 2320,
+            "text": "SPM12",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2403,
+            "end": 2428,
+            "text": "corrected for head motion",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Type, Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2434,
+            "end": 2527,
+            "text": "3",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2315,
+            "end": 2320,
+            "text": "SPM12",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2434,
+            "end": 2489,
+            "text": "normalised to the Montreal Neurological Institute space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2514,
+            "end": 2527,
+            "text": "3 × 3 × 3 mm3",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Type"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2543,
+            "end": 2613,
+            "text": "4",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2315,
+            "end": 2320,
+            "text": "SPM12",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2566,
+            "end": 2613,
+            "text": "5 mm full-width at half-maximum Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm, Type"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2693,
+            "end": 2719,
+            "text": "5",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2315,
+            "end": 2320,
+            "text": "SPM12",
+            "labels": [
+              "Temporal detrending — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm, Type, Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2772,
+            "end": 2792,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2775,
+            "end": 2792,
+            "text": "motion parameters",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1758,
+            "end": 1760,
+            "text": "24",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software, Algorithm"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2895,
+            "end": 2931,
+            "text": "7",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2895,
+            "end": 2931,
+            "text": "white matter and cerebrospinal fluid",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software, Algorithm, Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3033,
+            "end": 3077,
+            "text": "8",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3033,
+            "end": 3049,
+            "text": "high-pass filter",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3070,
+            "end": 3077,
+            "text": "0.01 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software, Algorithm"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3091,
+            "end": 3121,
+            "text": "9",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3091,
+            "end": 3121,
+            "text": "two participants were excluded",
+            "labels": [
+              "Exclusion — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software, Type, Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

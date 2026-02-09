@@ -1,0 +1,352 @@
+{
+ "data": {
+  "text": "We extracted time-varying mean BOLD signal from N=360 regions of interest, which collectively comprised a multimodal parcellation of the cerebral cortex (Glasser et al. 2016). We estimated the functional connectivity (Friston 2011) between any two brain regions (region i and region j) by calculating the Pearson correlation coefficient (Zalesky et al. 2012a) between the mean activity timeseries of region i and the mean activity timeseries of region j (Biswal et al. 1995). We represented the N × N functional connectivity matrix as a graph or network in which regions were encoded as network nodes and in which the functional connectivity between region i and region j was encoded as the weight of the network edge between node i and node j. We used this encoding of the data as a network to produce an undirected, signed adjacency matrix A. Additionally, to evaluate whether our results were dependent on specific node definitions, we examined an alternative network constructed by applying a gradient and similarity-based parcellation of the cerebral cortex (Schaefer et al. 2017; see Supplementary Section 3 and Supplementary Figure 6).\n\nIn light of these two strands of evidence from the application domain and from mathematics, we maintained all edge weights without thresholding and studied the full graph including both positive and negative correlations.\n\nSpecifically, we observed that 23 participants did not have adequate coverage (<50% brain tissue in functional space) of the right area 52 parcel, which is the smallest parcel in the multimodal parcellation used in this work. Accordingly, we excluded this parcel across all participants, leaving 359 nodes for subsequent analysis.\n\nWe specifically used a formulation that was recently generalized to signed weighted networks (Zhang and Horvath 2005; Costantini and Perugini 2014). This version is sensitive to nonredundancy in path information based on edge sign as well as edge weight and importantly distinguishes between positive triangles and negative triangles, which have distinct meanings in networks constructed from correlation matrices.\n\nWe use a Louvain-like locally greedy algorithm as a heuristic to maximize this modularity quality index subject to a partition M of nodes into communities.\n\nTo examine associations between SES and development within putative functional networks, we assigned each node to 1 of 7 large-scale functional systems defined a priori (Yeo et al. 2011).\n\nTo examine the effect of physical distance on our findings, we follow Betzel and Bassett (2018) by thresholding each network by distance in bins, ranging from the top 10% of shortest edges to the bottom 10% of longest edges. We then calculated the clustering coefficient on these sparse networks and estimated the age × SES effect within each distance bin."
+ },
+ "annotations": [
+  {
+   "result": [
+    {
+     "from_name": "Time series ROI",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 13,
+      "end": 39,
+      "text": "mean BOLD signal",
+      "labels": [
+       "Time series ROI — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Time series ROI",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 40,
+      "end": 44,
+      "text": "from",
+      "labels": [
+       "Time series ROI — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "ROI definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 45,
+      "end": 69,
+      "text": "N=360 regions of interest",
+      "labels": [
+       "ROI definition — Parameters"
+      ]
+     }
+    },
+    {
+     "from_name": "ROI definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 71,
+      "end": 76,
+      "text": "which",
+      "labels": [
+       "ROI definition — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Atlas definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 100,
+      "end": 174,
+      "text": "multimodal parcellation of the cerebral cortex (Glasser et al. 2016)",
+      "labels": [
+       "Atlas definition — Software",
+       "Atlas definition — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Atlas definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 80,
+      "end": 92,
+      "text": "collectively",
+      "labels": [
+       "Atlas definition — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Compute connectivity",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 298,
+      "end": 329,
+      "text": "Pearson correlation coefficient",
+      "labels": [
+       "Compute connectivity — Algorithm"
+      ]
+     }
+    },
+    {
+     "from_name": "Compute connectivity",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 279,
+      "end": 290,
+      "text": "calculating",
+      "labels": [
+       "Compute connectivity — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph characteristics",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 689,
+      "end": 724,
+      "text": "undirected, signed adjacency matrix",
+      "labels": [
+       "Graph characteristics — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph characteristics",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 681,
+      "end": 688,
+      "text": "produce",
+      "labels": [
+       "Graph characteristics — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Atlas definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 880,
+      "end": 969,
+      "text": "gradient and similarity-based parcellation of the cerebral cortex (Schaefer et al. 2017; ",
+      "labels": [
+       "Atlas definition — Software",
+       "Atlas definition — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph characteristics",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1137,
+      "end": 1184,
+      "text": "maintained all edge weights without thresholding",
+      "labels": [
+       "Graph characteristics — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Negative correlation",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1218,
+      "end": 1269,
+      "text": "including both positive and negative correlations",
+      "labels": [
+       "Negative correlation — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Negative correlation",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1207,
+      "end": 1217,
+      "text": "full graph",
+      "labels": [
+       "Negative correlation — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "ROI definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1500,
+      "end": 1547,
+      "text": "excluded this parcel... leaving 359 nodes",
+      "labels": [
+       "ROI definition — Parameters"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph measures",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1629,
+      "end": 1653,
+      "text": "signed weighted networks",
+      "labels": [
+       "Graph measures — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph measures",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1655,
+      "end": 1678,
+      "text": "Zhang and Horvath 2005",
+      "labels": [
+       "Graph measures — Software"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph measures",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1610,
+      "end": 1619,
+      "text": "generalized",
+      "labels": [
+       "Graph measures — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Network definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1957,
+      "end": 1996,
+      "text": "Louvain-like locally greedy algorithm",
+      "labels": [
+       "Network definition — Algorithm"
+      ]
+     }
+    },
+    {
+     "from_name": "Network definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 1950,
+      "end": 1956,
+      "text": "use a",
+      "labels": [
+       "Network definition — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph measures",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 2029,
+      "end": 2053,
+      "text": "modularity quality index",
+      "labels": [
+       "Graph measures — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Network definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 2187,
+      "end": 2244,
+      "text": "1 of 7 large-scale functional systems defined a priori",
+      "labels": [
+       "Network definition — Type",
+       "Network definition — Parameters"
+      ]
+     }
+    },
+    {
+     "from_name": "Network definition",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 2246,
+      "end": 2261,
+      "text": "Yeo et al. 2011",
+      "labels": [
+       "Network definition — Software"
+      ]
+     }
+    },
+    {
+     "from_name": "Sparsity control",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 2341,
+      "end": 2382,
+      "text": "thresholding each network by distance in bins",
+      "labels": [
+       "Sparsity control — Type"
+      ]
+     }
+    },
+    {
+     "from_name": "Sparsity control",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 2338,
+      "end": 2340,
+      "text": "by",
+      "labels": [
+       "Sparsity control — Step Number"
+      ]
+     }
+    },
+    {
+     "from_name": "Graph measures",
+     "to_name": "text",
+     "type": "labels",
+     "value": {
+      "start": 2496,
+      "end": 2518,
+      "text": "clustering coefficient",
+      "labels": [
+       "Graph measures — Type"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

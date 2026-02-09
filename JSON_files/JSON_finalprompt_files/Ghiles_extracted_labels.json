@@ -1,0 +1,698 @@
+{
+  "data": {
+    "text": "BJR\nCite this article as:\nGhiles CW, Clark MD, Kuzminski SJ, Fraser MA, Petrella JR, Guskiewicz KM. Changes in resting state networks in high school football athletes across a single season. Br J Radiol (2023) 10.1259/bjr.20220359.\n© 2023 The Authors. Published by the British Institute of Radiology under the terms of the Creative Commons Attribution 4.0 Unported License http://creativecommons.org/licenses/by/4.0/, which permits unrestricted use, distribution and reproduction in any medium, provided the original author and source are credited.\n\nObjective: The aim of this pilot cohort study was to examine changes in the organization of resting-state brain networks in high school football athletes and its relationship to exposure to on-field head impacts over the course of a single season.\n\nParticipants\nThis longitudinal cohort study investigated the effects of cumulative impacts over the course of the 2013–2014 high school football season. 17 male high school football players (mean age = 16 years, SD = 0.75 years, range = 15–17 years) were recruited from a local high school football team through an informational meeting that included both the players and players’ parents. Because the individuals were all minors, informed consent was obtained by the players’ guardian(s) and assent was obtained from each player. Player demographic information was collected at the start of the study including, age, playing position, years of football experience, and concussion history. The first MRI scan was held at the beginning of the season and prior to the first full-contact practice in the fall (average 4.6±5.0 days before the first contact practice), and the second MRI was conducted at the end of the season (14.5±8.5 days after the final game). Furthermore, individuals who were diagnosed with a concussion were also asked to undergo an MRI scan within 48h of the injury in addition to both the pre- and post-season scans. All MRI sessions followed the same protocol. Participants were excluded if they presented with any of the common MRI contraindications or exhibited a structural abnormality in the MRI, such as tumors, hematomas, or intraparenchymal hemorrhages.\n\nNeurocognitive assessment\nNeurocognitive function was assessed using a computerized neurocognitive test battery (CNS Vital Signs (CNSVS); Morrisville, NC) during the pre- and post-season. This computerized test battery consists of seven different tests: (1) Verbal Memory Test (VBM) and Visual Memory Test (VMT), (2) Finger Tapping Test (FTT), (3) Digit Symbol Substitution (DSS), (4) Stroop Test, (5) Shifting Attention Test (SAT), (6) Continuous Performance Test (CPT), and (7) Non-Verbal Reasoning Test (NVRT). These seven tests are used to generate age-normalized scores for 10 clinical domains: (1) Neurocognition Index (overall neurocognitive status), (2) composite memory, (3) verbal memory, (4) visual memory, (5) processing speed, (6) executive function, (7) psychomotor speed, (8) reaction time, (9) complex attention, and (10) cognitive flexibility.\n\nMagnetic resonance imaging\nImaging was performed using a GE DISCOVERY MR750 3-Tesla scanner with an 8-channel head coil. Resting-state functional MR images were acquired using an axial plane, gradient-echo echo planar imaging sequence with TR = 2200 ms, TE = 26 ms, flip angle = 79°, field of view = 256 x 256 mm2, matrix size of 64 × 64 mm2, voxel size = 4 x 4 x 4 mm3, and slice spacing = 4 mm. 274 consecutive volumes were collected over a 10min acquisition period, during which subjects were instructed to remain still, keep their eyes closed, and not to think of anything specifically. In addition, a 3D Sagittal T1 SPGR was acquired for anatomical reference (TE = 1.9 ms, TI = 400 ms, flip angle = 11°, voxel size = 0.93 × 0.93 × 1.2 mm3).\n\nImage processing\nImage pre-processing was carried out using the FSL/Python Resting State Pipeline which uses a python wrapper for the FMRIB Software Library (FSL). This pipeline was developed to improve consistency of longitudinal analysis of rs-fMRI data. In brief, functional MRI images were slice-time and motion-corrected and non-brain voxels were removed. The preprocessed functional scans were then registered to the subjects’ T1 scans before being normalized to the MNI 152 template using FSL’s FLIRT. White matter and CSF masks were regressed out of the functional data and the images were then band-pass filtered between 0.001 and 0.08 Hz. Finally, the images were parcellated into 90 cortical/subcortical regions using the automated anatomical labeling atlas. The average-time series BOLD signal was extracted for each region, and the Pearson cross-correlation coefficients between each region were calculated. The absolute values of the cross-correlations were used to equally weight both correlations and anti-correlations. These absolute values of the cross-correlations were defined as functional connections, or edges, in the subsequent graph analysis.\n\nGraph metrics\nMean strength and mean local efficiency were calculated for each subnetwork using the Brain Connectivity Toolbox in MatLab 2016a. We examined both metrics over a range of correlation thresholds from ≥0 to ≥0.9. Two graph theory metrics of interest were derived from the correlation matrices, local efficiency and strength. Local efficiency is a measure of the interconnectedness between nodes; in this study, it is a measure of the correlational structure of resting-state time series data within a brain network. Strength, or nodal strength, is a sum of the connections to a node weighted by the strength of the connection. In this study, strength is the measure of the correlational strength of resting-state time series within a given brain region."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 26,
+            "end": 98,
+            "text": "Ghiles CW, Clark MD, Kuzminski SJ, Fraser MA, Petrella JR, Guskiewicz KM",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 100,
+            "end": 189,
+            "text": "Changes in resting state networks in high school football athletes across a single season",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 203,
+            "end": 209,
+            "text": "(2023)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 269,
+            "end": 299,
+            "text": "British Institute of Radiology",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 210,
+            "end": 230,
+            "text": "10.1259/bjr.20220359",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 561,
+            "end": 797,
+            "text": "The aim of this pilot cohort study was to examine changes in the organization of resting-state brain networks in high school football athletes and its relationship to exposure to on-field head impacts over the course of a single season.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 372,
+            "text": "Creative Commons Attribution 4.0 Unported License",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 424,
+            "end": 548,
+            "text": "permits unrestricted use, distribution and reproduction in any medium, provided the original author and source are credited.",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3102,
+            "end": 3136,
+            "text": "GE DISCOVERY MR750 3-Tesla scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3311,
+            "end": 3327,
+            "text": "flip angle = 79°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3329,
+            "end": 3358,
+            "text": "field of view = 256 x 256 mm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3285,
+            "end": 3297,
+            "text": "TR = 2200 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3299,
+            "end": 3309,
+            "text": "TE = 26 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3388,
+            "end": 3414,
+            "text": "voxel size = 4 x 4 x 4 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3420,
+            "end": 3440,
+            "text": "slice spacing = 4 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3442,
+            "end": 3512,
+            "text": "274 consecutive volumes were collected over a 10min acquisition period",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3569,
+            "end": 3591,
+            "text": "keep their eyes closed",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3166,
+            "end": 3214,
+            "text": "Resting-state functional MR images were acquired",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3926,
+            "end": 3954,
+            "text": "FMRIB Software Library (FSL)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 952,
+            "end": 988,
+            "text": "17 male high school football players",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 990,
+            "end": 1047,
+            "text": "mean age = 16 years, SD = 0.75 years, range = 15–17 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 952,
+            "end": 988,
+            "text": "17 male high school football players",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1054,
+            "end": 1102,
+            "text": "recruited from a local high school football team",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1982,
+            "end": 2120,
+            "text": "Participants were excluded if they presented with any of the common MRI contraindications or exhibited a structural abnormality in the MRI",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2736,
+            "end": 2781,
+            "text": "age-normalized scores for 10 clinical domains",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4086,
+            "end": 4087,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4086,
+            "end": 4096,
+            "text": "slice-time",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4101,
+            "end": 4102,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4101,
+            "end": 4117,
+            "text": "motion-corrected",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4122,
+            "end": 4123,
+            "text": "3",
+            "labels": [
+              "Skull extraction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Skull extraction — Software",
+            "Skull extraction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4122,
+            "end": 4151,
+            "text": "non-brain voxels were removed",
+            "labels": [
+              "Skull extraction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4197,
+            "end": 4198,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4197,
+            "end": 4233,
+            "text": "registered to the subjects’ T1 scans",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4247,
+            "end": 4248,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": []
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4247,
+            "end": 4281,
+            "text": "normalized to the MNI 152 template",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4288,
+            "end": 4299,
+            "text": "FSL’s FLIRT",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4265,
+            "end": 4281,
+            "text": "MNI 152 template",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4301,
+            "end": 4302,
+            "text": "6",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4301,
+            "end": 4369,
+            "text": "White matter and CSF masks were regressed out of the functional data",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4395,
+            "end": 4396,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4395,
+            "end": 4413,
+            "text": "band-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4422,
+            "end": 4439,
+            "text": "0.001 and 0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4483,
+            "end": 4560,
+            "text": "90 cortical/subcortical regions using the automated anatomical labeling atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4562,
+            "end": 4627,
+            "text": "The average-time series BOLD signal was extracted for each region",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4637,
+            "end": 4711,
+            "text": "Pearson cross-correlation coefficients between each region were calculated",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4713,
+            "end": 4826,
+            "text": "The absolute values of the cross-correlations were used to equally weight both correlations and anti-correlations",
+            "labels": [
+              "Connectivity normalization — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5061,
+            "end": 5087,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4975,
+            "end": 5014,
+            "text": "Mean strength and mean local efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5267,
+            "end": 5296,
+            "text": "local efficiency and strength",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5130,
+            "end": 5184,
+            "text": "over a range of correlation thresholds from ≥0 to ≥0.9",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4975,
+            "end": 5050,
+            "text": "Mean strength and mean local efficiency were calculated for each subnetwork",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

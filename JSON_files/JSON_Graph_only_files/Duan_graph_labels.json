@@ -1,0 +1,499 @@
+{
+  "data": {
+    "title": "Functional organization of intrinsic connectivity networks in Chinese-chess experts",
+    "text": "Title: Functional organization of intrinsic connectivity networks in Chinese-chess experts\n\n5.3. Functional connectivity network construction\nNodes and edges between nodes are two fundamental elements in a network. To determine the nodes of brain functional connectivity networks, we used the automated anatomical labeling (AAL) algorithm (Tzourio-Mazoyer et al., 2002) to parcellate the whole brain into 90 non-cerebellar anatomical regions of interest (45 regions of interest for each hemisphere), with each representing a node in the network.\n\nFor each subject, the representative time series in each region of interest was obtained by averaging fMRI time series across all voxels in the region of interest.\n\nFinally, a square N × N (where N=90 is the number of regions of interest) correlation matrix (i.e. functional connectivity matrix) was obtained for each subject by computing Pearson correlation coefficients between the preprocessed time series of every pair of regions of interest. Of note, both positive and negative correlation coefficients were entered into the correlation matrices.\n\nA Fisher's r-to-z transformation was applied to the correlation matrices to improve the normality of the correlation coefficients (Liao et al., 2010; Liu et al., 2008).\n\n5.5. Graph–theory analysis\n5.5.1. Threshold selection\nTo investigate the topological properties of brain functional networks, each correlation matrix was thresholded into a set of weighted graphs (i.e. networks), by selecting the strongest connections until the desired sparsity was reached. In those graphs nodes represented brain regions and edges represented undirected connections. In this study, connection sparsity S was adopted as a threshold measurement.\n\nInstead of selecting a single threshold, we applied a threshold range of 0.1<S<0.48 with an interval of 0.01 to each weighted matrix. The following network analysis was repeatedly performed on this defined threshold range.\n\n5.5.2. Network characteristics\nFor brain networks at each sparsity threshold S, we computed global network characteristics including (1) small-world parameters involving weighted clustering coefficient Cw, weighted characteristic path length Lw, normalized weighted clustering coefficient γ, normalized weighted characteristic path length λ, and small-worldness s; (2) network efficiency involving local efficiency Elocal and global efficiency Eglobal; and (3) total connection strength Sw.\n\nA real world would be considered small world if it has similar path length but higher clustering coefficient than random network, which is γ = Cw/Cw_random>1, λ = Lw/Lw_random≈1 (Watts and Strogatz, 1998), where Cw_random and Lw_random are the mean weighted clustering coefficient and weighted characteristic path length of 100 matched random networks that preserve the same number of nodes, edges, and degree distribution as the real network. These two measures are summarized into a scalar metric, small-worldness, s = γ/λ, which is typically larger than 1 in the case of small-world organization.\n\n5.5.3. Statistical analysis\nTo evaluate the between-group differences in overall topological characteristics, we calculated the area under the curve (AUC) over the whole range of thresholds of 0.1<S<0.48. In the present study, S1=0.1, Sn=0.48, and ΔS=0.01. Subsequently, nonparametric permutation testing was applied to test between-group differences of the integrated AUC metrics."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 201,
+            "end": 246,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 201,
+            "end": 246,
+            "text": "automated anatomical labeling (AAL) algorithm",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 313,
+            "end": 361,
+            "text": "90 non-cerebellar anatomical regions of interest",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 363,
+            "end": 405,
+            "text": "45 regions of interest for each hemisphere",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 342,
+            "end": 406,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 313,
+            "end": 361,
+            "text": "90 non-cerebellar anatomical regions of interest",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 477,
+            "end": 503,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 547,
+            "end": 591,
+            "text": "averaging fMRI time series across all voxels",
+            "labels": [
+              "Time series ROI — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 794,
+            "end": 826,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 794,
+            "end": 826,
+            "text": "Pearson correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 631,
+            "end": 712,
+            "text": "square N × N (where N=90 is the number of regions of interest) correlation matrix",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 911,
+            "end": 962,
+            "text": "5",
+            "labels": [
+              "Negative correlation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 911,
+            "end": 962,
+            "text": "both positive and negative correlation coefficients",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1010,
+            "end": 1040,
+            "text": "6",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1010,
+            "end": 1040,
+            "text": "Fisher's r-to-z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1358,
+            "end": 1373,
+            "text": "7",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1358,
+            "end": 1373,
+            "text": "weighted graphs",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1540,
+            "end": 1562,
+            "text": "undirected connections",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1579,
+            "end": 1600,
+            "text": "8",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1579,
+            "end": 1600,
+            "text": "connection sparsity S",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1715,
+            "end": 1725,
+            "text": "0.1<S<0.48",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1734,
+            "end": 1750,
+            "text": "interval of 0.01",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2003,
+            "end": 2025,
+            "text": "9",
+            "labels": [
+              "Graph measures — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2036,
+            "end": 2070,
+            "text": "weighted clustering coefficient Cw",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2072,
+            "end": 2110,
+            "text": "weighted characteristic path length Lw",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2112,
+            "end": 2156,
+            "text": "normalized weighted clustering coefficient γ",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2158,
+            "end": 2206,
+            "text": "normalized weighted characteristic path length λ",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2212,
+            "end": 2229,
+            "text": "small-worldness s",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2264,
+            "end": 2287,
+            "text": "local efficiency Elocal",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2292,
+            "end": 2317,
+            "text": "global efficiency Eglobal",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2327,
+            "end": 2355,
+            "text": "total connection strength Sw",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2682,
+            "end": 2709,
+            "text": "100 matched random networks",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3087,
+            "end": 3113,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3087,
+            "end": 3113,
+            "text": "area under the curve (AUC)",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3230,
+            "end": 3263,
+            "text": "nonparametric permutation testing",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

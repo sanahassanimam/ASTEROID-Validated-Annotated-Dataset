@@ -1,0 +1,778 @@
+{
+  "data": {
+    "text": "Default Mode Dynamics for Global Functional Integration\nDeniz Vatansever, David K. Menon, Anne E. Manktelow, Barbara J. Sahakian, and Emmanuel A. Stamatakis\nThe default mode network (DMN) has been traditionally assumed to hinder behavioral performance in externally focused, goal-directed paradigms and to provide no active contribution to human cognition.\nThis article is freely available online through the J Neurosci Author Open Choice option. Copyright © 2015 Vatansever et al. This is an Open Access article distributed under the terms of the Creative Commons Attribution License Creative Commons Attribution 4.0 International.\n\nParticipants. After the study proposal was approved by the local ethics committee, informed consent was obtained from 22 right-handed healthy participants (age range, 19–57 years; mean age, 35.0 years; SD 11.2; female-to-male ratio, 9/13), all of whom took part in the n-back working-memory experiment as well as four other cognitive paradigms that are not reported in this study. The average score for the measure of premorbid IQ via the National Adult Reading Test was 117.1 (SD 5.76). Meanwhile, results of the Mini Mental State Exam averaged 29.33 (SD 0.85). Thus, no signs of memory problems were detected. In addition, no history of drug or alcohol abuse, psychiatric or neurological disorders, or head injury was recorded in any of the participants.\n\nImage acquisition. The experiment was conducted in a Siemens Trio 3T scanner at the Wolfson Brain Imaging Centre, Addenbrooke’s Hospital, Cambridge. The imaging session began with a localizer, followed by a high-resolution, T1-weighted, magnetization-prepared, 180° radiofrequency pulses and rapid gradient-echo structural scan [TR 2300 ms; TE 2.98 ms; TA 9.14 min; flip angle, 9°; field-of-view (FOV) read, 256 mm; voxel size, 1.0 × 1.0 × 1.0 mm; slices per slab, 176]. Whole-brain echo planar imaging was used for the n-back paradigm (TR 2000 ms; TE 30 ms; flip angle, 78°; FOV read, 192 mm; voxel size, 3.0 × 3.0 × 3.0 mm; volumes, 345; slices per volume, 32].\n\nParadigm specifications. In the n-back working-memory paradigm, three fixation blocks were pseudorandomly interleaved with five cycles of four n-back blocks ranging in difficulty between 0-back and 3-back. Single letters in white font were presented serially on a black background for 500 ms, each followed by 2500 ms fixation on a cross. While in the 0-back trials, participants were requested to press a button with their left index finger on the appearance of the letter Z in a string of random letters. More difficult levels of n-back required the same button press in response to a match between the current and one previous letter (1-back), two previous letters (2-back), or three previous letters (3-back). The participants also responded to nontargets by pressing a button under their right-hand middle finger. Each trial, including the fixation and task blocks, lasted 36 s, and 10-s-long instructions were presented before each block.\n\nSpatial and temporal preprocessing. The preprocessing and image analysis were performed using Statistical Parametric Mapping (SPM) Version 8.0 and Matlab Version 12a platforms. The first six volumes were removed to eliminate saturation effects and achieve steady-state magnetization. The remaining data were slice-time adjusted, motion corrected, normalized to the Montreal Neurological Institute (MNI) space by using the segmented high-resolution gray matter structural image and a gray matter template. The final preprocessing step involved smoothing the images with an 8 mm FWHM Gaussian kernel. The resulting data were used for statistical modeling. A strict temporal preprocessing pipeline of nuisance regression included motion and CompCor components attributable to the signal from white matter and CSF, as well as a linear detrending term, eliminating the need for global signal normalization. The subject-specific six realignment parameters, the main effect of task condition, and their first order derivatives were also included in the analysis as potential confounds. Moreover, a temporal filter of 0.009 and 0.08 Hz was applied to focus on low-frequency fluctuations.\n\nCorrelation matrices. We used the Conn functional connectivity toolbox to construct task-specific (Fixation, 0-back, 1-back, 2-back, 3-back) functional connectivity matrices. Following this concatenation procedure, undirected and weighted matrices (264 × 264) of Fisher z-transformed bivariate correlation coefficients (Pearson’s r) were constructed for each experimental condition and each subject using the average signal from the 6 mm spheres placed on the MNI coordinates for all 264 ROIs described above.\n\nModularity analysis and behavioral correlation. For each condition, including Fixation and the four levels of difficulty, the average correlation matrices were significance-clustered into modules using an Infomax community detection algorithm over 1000 bootstrap resampling and 10 partitioning iterations at the 0.05 level of significance. To make a statistical inference on the change in modularity with increasing task difficulty, the 0-Back control (low demand) and 3-Back task conditions (high demand) were chosen for comparison. The Louvain modularity Q score was calculated on weighted correlation matrices for each subject at 0-Back and 3-Back conditions. For a behavioral analysis, the reaction times to correct responses were first averaged across all trials and all blocks for each subject, separately for each level of task difficulty. One outlier was removed as identified by the outlier-labeling rule. Paired t tests revealed a decrease in d and an increase in reaction times to correct responses when comparing 0-Back (mean: d 3.45; reaction time, 619.26 ms) with 3-Back conditions (mean: d 2.19; reaction time, 958.12 ms), confirming greater task difficulty at higher levels of n-back."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 56,
+            "end": 156,
+            "text": "Deniz Vatansever, David K. Menon, Anne E. Manktelow, Barbara J. Sahakian, and Emmanuel A. Stamatakis",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 55,
+            "text": "Default Mode Dynamics for Global Functional Integration",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 459,
+            "end": 463,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 157,
+            "end": 356,
+            "text": "The default mode network (DMN) has been traditionally assumed to hinder behavioral performance in externally focused, goal-directed paradigms and to provide no active contribution to human cognition.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 409,
+            "end": 445,
+            "text": "J Neurosci Author Open Choice option",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 357,
+            "end": 446,
+            "text": "This article is freely available online through the J Neurosci Author Open Choice option.",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 585,
+            "end": 632,
+            "text": "Creative Commons Attribution 4.0 International.",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1445,
+            "end": 1468,
+            "text": "Siemens Trio 3T scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2032,
+            "end": 2053,
+            "text": "slices per volume, 32",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1951,
+            "end": 1966,
+            "text": "flip angle, 78°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1968,
+            "end": 1984,
+            "text": "FOV read, 192 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1929,
+            "end": 1939,
+            "text": "TR 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1941,
+            "end": 1949,
+            "text": "TE 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1986,
+            "end": 2016,
+            "text": "voxel size, 3.0 × 3.0 × 3.0 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 752,
+            "end": 788,
+            "text": "22 right-handed healthy participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2089,
+            "end": 2119,
+            "text": "n-back working-memory paradigm",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3097,
+            "end": 3145,
+            "text": "Statistical Parametric Mapping (SPM) Version 8.0",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2121,
+            "end": 2213,
+            "text": "three fixation blocks were pseudorandomly interleaved with five cycles of four n-back blocks",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2876,
+            "end": 2939,
+            "text": "Each trial, including the fixation and task blocks, lasted 36 s",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2338,
+            "end": 2394,
+            "text": "for 500 ms, each followed by 2500 ms fixation on a cross",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2424,
+            "end": 2563,
+            "text": "participants were requested to press a button with their left index finger on the appearance of the letter Z in a string of random letters.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2263,
+            "end": 2337,
+            "text": "Single letters in white font were presented serially on a black background",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2642,
+            "end": 2770,
+            "text": "a match between the current and one previous letter (1-back), two previous letters (2-back), or three previous letters (3-back).",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5128,
+            "end": 5228,
+            "text": "the 0-Back control (low demand) and 3-Back task conditions (high demand) were chosen for comparison.",
+            "labels": [
+              "Comparisons"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 752,
+            "end": 788,
+            "text": "22 right-handed healthy participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 790,
+            "end": 843,
+            "text": "age range, 19–57 years; mean age, 35.0 years; SD 11.2",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 755,
+            "end": 788,
+            "text": "right-handed healthy participants",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 845,
+            "end": 871,
+            "text": "female-to-male ratio, 9/13",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1259,
+            "end": 1349,
+            "text": "no history of drug or alcohol abuse, psychiatric or neurological disorders, or head injury",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5542,
+            "end": 5609,
+            "text": "One outlier was removed as identified by the outlier-labeling rule.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 648,
+            "end": 746,
+            "text": "After the study proposal was approved by the local ethics committee, informed consent was obtained",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5610,
+            "end": 5831,
+            "text": "Paired t tests revealed a decrease in d and an increase in reaction times to correct responses when comparing 0-Back (mean: d 3.45; reaction time, 619.26 ms) with 3-Back conditions (mean: d 2.19; reaction time, 958.12 ms)",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4668,
+            "end": 4692,
+            "text": "264 ROIs described above",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4583,
+            "end": 4659,
+            "text": "using the average signal from the 6 mm spheres placed on the MNI coordinates",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4447,
+            "end": 4516,
+            "text": "Fisher z-transformed bivariate correlation coefficients (Pearson’s r)",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4447,
+            "end": 4467,
+            "text": "Fisher z-transformed",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5233,
+            "end": 5307,
+            "text": "Louvain modularity Q score was calculated on weighted correlation matrices",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4821,
+            "end": 4999,
+            "text": "average correlation matrices were significance-clustered into modules using an Infomax community detection algorithm over 1000 bootstrap resampling and 10 partitioning iterations",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3180,
+            "end": 3214,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3180,
+            "end": 3286,
+            "text": "The first six volumes were removed to eliminate saturation effects and achieve steady-state magnetization.",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3311,
+            "end": 3330,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3311,
+            "end": 3330,
+            "text": "slice-time adjusted",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3332,
+            "end": 3348,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3332,
+            "end": 3348,
+            "text": "motion corrected",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3350,
+            "end": 3411,
+            "text": "4",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3350,
+            "end": 3507,
+            "text": "normalized to the Montreal Neurological Institute (MNI) space by using the segmented high-resolution gray matter structural image and a gray matter template.",
+            "labels": [
+              "Spatial normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization — Software",
+            "Spatial normalization — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3546,
+            "end": 3600,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3546,
+            "end": 3600,
+            "text": "smoothing the images with an 8 mm FWHM Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3730,
+            "end": 3812,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3730,
+            "end": 3812,
+            "text": "motion and CompCor components attributable to the signal from white matter and CSF",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3741,
+            "end": 3812,
+            "text": "7",
+            "labels": [
+              "CompCor — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3741,
+            "end": 3812,
+            "text": "CompCor components attributable to the signal from white matter and CSF",
+            "labels": [
+              "CompCor — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "CompCor — Software",
+            "CompCor — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3825,
+            "end": 3849,
+            "text": "8",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3825,
+            "end": 3849,
+            "text": "a linear detrending term",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Software",
+            "Temporal detrending — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4092,
+            "end": 4142,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4092,
+            "end": 4182,
+            "text": "a temporal filter of 0.009 and 0.08 Hz was applied to focus on low-frequency fluctuations.",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software",
+            "Temporal filt — Type"
+          ]
+        }
+      ]
+    }
+  ]
+}

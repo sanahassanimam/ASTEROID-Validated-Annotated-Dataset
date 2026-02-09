@@ -1,0 +1,789 @@
+{
+  "data": {
+    "text": "Brain Modularity Mediates the Relation between\nTask Complexity and Performance\n\nQiuhai Yue, Randi C. Martin, Simon Fischer-Baum, Aurora I. Ramos-Nuñez,\nFengdan Ye, and Michael W. Deem\nJournal of Cognitive Neuroscience 29:9, pp. 1532–1546\ndoi:10.1162/jocn_a_01142\n\nParticipants\n\nFifty-two (18–26 years old, mean = 19.8 years old;\n16 men and 36 women) students from Rice University\nparticipated in this study. Participants reported no neuro-\nlogical or psychiatric disorders. Informed consent was\nobtained according to procedures approved by the Rice\nUniversity institutional review board. Participants were\ncompensated $50 for their participation.\n\nResting-state fMRI\n\nImaging Data Acquisition\n\nResting-state fMRI scans were conducted at the Core for\nAdvanced Magnetic Resonance Imaging at Baylor College\nof Medicine. Images were obtained on a 3-T Siemens\n(Erlangen, Germany) Magnetom Tim Trio scanner\nequipped with a 12-channel head coil. Foam pads were\nused to keep participants’ heads stable during the scan-\nning. A high-resolution T1-weighted structural image was\nacquired by using magnetization prepared rapid gradient-\necho sequence in the sagittal direction (repetition time =\n2500 msec, echo time = 4.71 msec, field of view =\n256 mm, voxel size = 1 × 1 × 1 mm3). Three 7-min\nresting-state functional runs were obtained by using an\nEPI sequence as follows: repetition time = 2000 msec,\necho time= 40msec, field of view= 220mm, voxel size=\n3× 3mm2, and slice thickness = 4mm. Each resting-state\nrun had 210 volumes, and each volume had 34 slices in\nthe axial plane to cover the whole brain. All 52 participants\ncompleted the imaging session.\n\nPreprocessing\n\nImage preprocessing was conducted using the AFNI soft-\nware (AFNI version: AFNI_2011_12_21_1014; Cox, 1996).\nThe first six volumes of each functional run were dis-\ncarded to allow stabilization of the BOLD signal. Prepro-\ncessing procedures basically followed the pipelines\nrecommended by Jo et al.’s (2013) article and AFNI’s\nscript afni_proc.py. Each functional run was prepro-\ncessed separately, including de-spiking of large fluctua-\ntions for some time points, slice timing, and head\nmotion correction. Then, each participant’s functional\nimages were aligned to that individual’s structural image,\nwarped to the Talairach standard space, and resampled\nto 3-mm isotropic voxels. Next, the functional images\nwere spatially smoothed with a 4-mm FWHM Gaussian\nkernel. A whole-brain mask was then generated and ap-\nplied for all subsequent analyses. A multiple regression\nmodel was then applied to each voxel’s time series to re-\ngress out several nuisance signals, including third-order\npolynomial baseline trends, six head motion correction\nparameters, and six derivatives of head motion. Band-\npass (0.005–0.1 Hz) filtering and outlier censoring were\nconducted in the same regression model. The outlier\ncensoring removed the time points in which head mo-\ntion exceeded a distance (Euclidean norm) of 0.2 mm\nwith respect to the previous time point or in which\n>10% of whole-brain voxels were considered as outliers\nby AFNI’s 3dToutcount. The residual time series after\napplication of the regression model were used for the\nfollowing network analyses.\n\nTask-shifting Task\n\nFor each condition, to take into account\nboth RT and accuracy in a single measure, we calculated\nan inverse efficiency (IE) score (Townsend & Ashby,\n1983) defined as mean RT/proportion correct.\n\nAttention Network Test\n\nThe ANT (Fan et al., 2002) was used to measure three\ndifferent attentional components: alerting, orienting,\nand conflict resolution. RTs and accuracy were recorded with mean RT based\non correct trials only. IE was calculated for each condi-\ntion. The alerting effect was computed by subtracting\nthe IE for the no-cue condition from the IE for the\ndouble-cue condition. The orienting effect was com-\nputed by subtracting the IE for the center cue condition\nfrom the IE for the spatial cue condition. The conflict\neffect was computed by subtracting the IE for the congru-\nent condition from the IE for the incongruent condition.\n\nTraffic Light Task\n\nIn this task, participants saw a red square in the center of\nscreen, which was replaced after an unpredictable time\ndelay (from 2 to 3 sec) by a green circle. Participants\npressed a button as quickly as possible when they saw\nthe green circle. There were 25 trials in total.\n\nAvailability\n\nSupplementary figures and tables are available at the Open Science Framework: osf.io/9tmhc/"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 46,
+            "text": "Brain Modularity Mediates the Relation between",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 80,
+            "end": 183,
+            "text": "Qiuhai Yue, Randi C. Martin, Simon Fischer-Baum, Aurora I. Ramos-Nuñez,\nFengdan Ye, and Michael W. Deem",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 184,
+            "end": 217,
+            "text": "Journal of Cognitive Neuroscience",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 238,
+            "end": 262,
+            "text": "doi:10.1162/jocn_a_01142",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 184,
+            "end": 222,
+            "text": "Journal of Cognitive Neuroscience 29:9",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4449,
+            "end": 4471,
+            "text": "Open Science Framework",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4395,
+            "end": 4427,
+            "text": "Supplementary figures and tables",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 843,
+            "end": 892,
+            "text": "3-T Siemens\n(Erlangen, Germany) Magnetom Tim Trio",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "Missing_sublabels": [
+            "Multicenter study? (Y/N)",
+            "Flip angle",
+            "Inter-slice gap",
+            "Eyes open/closed"
+          ]
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1364,
+            "end": 1391,
+            "text": "repetition time = 2000 msec",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1393,
+            "end": 1410,
+            "text": "echo time= 40msec",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1542,
+            "end": 1551,
+            "text": "34 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1459,
+            "end": 1480,
+            "text": "slice thickness = 4mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1412,
+            "end": 1432,
+            "text": "field of view= 220mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1446,
+            "end": 1453,
+            "text": "3× 3mm2",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1271,
+            "end": 1312,
+            "text": "Three 7-min\nresting-state functional runs",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 694,
+            "end": 718,
+            "text": "Resting-state fMRI scans",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1597,
+            "end": 1647,
+            "text": "All 52 participants\ncompleted the imaging session.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1759,
+            "text": "AFNI soft-\nware (AFNI version: AFNI_2011_12_21_1014",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 278,
+            "end": 287,
+            "text": "Fifty-two",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Group matching",
+            "Rejected subjects"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 288,
+            "end": 328,
+            "text": "(18–26 years old, mean = 19.8 years old;",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 329,
+            "end": 348,
+            "text": "16 men and 36 women",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 408,
+            "end": 473,
+            "text": "Participants reported no neuro-\nlogical or psychiatric disorders.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 517,
+            "end": 587,
+            "text": "procedures approved by the Rice\nUniversity institutional review board.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3338,
+            "end": 3367,
+            "text": "inverse efficiency (IE) score",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3664,
+            "end": 3703,
+            "text": "IE was calculated for each condi-\ntion.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4277,
+            "end": 4348,
+            "text": "pressed a button as quickly as possible when they saw\nthe green circle.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4136,
+            "end": 4263,
+            "text": "a red square in the center of\nscreen, which was replaced after an unpredictable time\ndelay (from 2 to 3 sec) by a green circle.",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1777,
+            "end": 1778,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1998,
+            "end": 2010,
+            "text": "afni_proc.py",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1777,
+            "end": 1794,
+            "text": "first six volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2073,
+            "end": 2074,
+            "text": "2",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Despiking — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2130,
+            "end": 2131,
+            "text": "3",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2148,
+            "end": 2149,
+            "text": "4",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2220,
+            "end": 2221,
+            "text": "5",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2267,
+            "end": 2268,
+            "text": "6",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2311,
+            "end": 2345,
+            "text": "resampled\nto 3-mm isotropic voxels",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2380,
+            "end": 2381,
+            "text": "7",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2406,
+            "end": 2431,
+            "text": "4-mm FWHM Gaussian\nkernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2652,
+            "end": 2653,
+            "text": "8",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Temporal detrending — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2652,
+            "end": 2662,
+            "text": "polynomial",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2640,
+            "end": 2651,
+            "text": "third-order",
+            "labels": [
+              "Temporal detrending — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2680,
+            "end": 2681,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "motion regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2680,
+            "end": 2753,
+            "text": "six head motion correction\nparameters, and six derivatives of head motion",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2755,
+            "end": 2756,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1708,
+            "end": 1712,
+            "text": "AFNI",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2755,
+            "end": 2765,
+            "text": "Band-\npass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2767,
+            "end": 2779,
+            "text": "0.005–0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2795,
+            "end": 2796,
+            "text": "11",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3084,
+            "end": 3102,
+            "text": "AFNI’s 3dToutcount",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2803,
+            "end": 2812,
+            "text": "censoring",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2967,
+            "end": 3052,
+            "text": "0.2 mm\nwith respect to the previous time point or in which\n>10% of whole-brain voxels",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

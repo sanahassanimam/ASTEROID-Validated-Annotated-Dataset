@@ -1,0 +1,699 @@
+{
+  "data": {
+    "text": "Brain’s functional network clustering coefficient changes in response to instruction (RTI) in students with and without reading disabilities: Multi-leveled reading brain’s RTI\nTodd L. Richards, Virginia W. Berninger, Kevin Yagle, Robert D. Abbott, and Dan Peterson\nCogent Psychol. 2018; 5:. doi:10.1080/23311908.2018.1424680.\n\nIn students in grades 4 to 9 (22 males, 20 females), two reading disability groups—dyslexia (n = 20) or oral and written language learning disability (OWL LD) (n = 6)—were compared to each other and two kinds of control groups—typical readers (n = 6) or dysgraphia (n = 10).\n\nAltogether 42 upper elementary and middle school participants (22 males and 20 females; grades 4 to 9; average age 11 years 10 months) completed brain imaging before and after they completed 18 lessons of specialized writing instruction: controls (n = 6), dysgraphia (n = 10), dyslexia (n = 20), and OWL LD (n = 6).\n\nChildren with persisting reading disabilities in grades 4 to 9 were recruited from local schools near the university where the research was conducted and the university institutional board (IRB) had approved the research with human participants. The research was conducted in compliance with IRB approved procedures and the ethical guidelines of the American Psychological Association.\n\nBecause specific learning disabilities occur in otherwise typically developing individuals, exclusionary criteria included evidence of overall cognitive or language functioning outside the normal range or previously diagnosed developmental disabilities or severe neurological disorders.\n\nAll scans were acquired at the Diagnostic Imaging Sciences Center in collaboration with the Integrated Brain Imaging Center and had Institutional Review Board approval. First diffusion tensor imaging (DTI) scans and then functional magnetic resonance imaging (fMRI) connectivity scans were obtained for all 42 children on a Philips 3 T Achieva scanner (release 3.2.2 with the 32-channel head coil) to obtain measures of white matter integrity and fMRI functional connectivity, respectively. Participants practiced lying still before entering the scanner and were instructed to lie still throughout the scanning. They also practiced the tasks before scanning and had to achieve 90% accuracy on them to continue participation.\n\nThe following MRI series were scanned: (1) 3-plane scout view with gradient echo pulse sequence: TR/TE 9.8/4.6 ms; Field of view 250 × 250 × 50 mm; acquisition time 30.3 s; (2) reference scan (used in parallel imaging) with gradient echo pulse sequence: TR/TE 4.0/0.75 ms; Field of View 530 × 530 × 300 mm; acquisition time 44.4 s; (3) Resting State fMRI scan with echo-planar gradient echo pulse sequence (single shot): TR/TE 2000/25 ms; Field of view 240 × 240 × 99 mm; slice orientation transverse, acquisition voxel size 3.0 × 3.08 × 3.0 mm; acquisition matrix 80 × 80 × 33; slice thickness 3.0, SENSE factor in the AP direction 2.3; epi factor 37; bandwidth in the EPI frequency direction 1933 Hz, SoftTone factor 3.5, sound pressure 6.1 dB, 180 dynamic scans; 5 dummy scans; fold over direction AP, acquisition time 6:14 min/s; (4) B0 field map imaging with gradient echo pulse sequence and 2 echos; TR/TE 11/6.3 ms; delta TE 1.0 ms; slice orientation transverse, Field of view 240 × 240 × 129 mm; voxel size 1.5 × 1.5 × 3.0 mm; acquisition matrix 160 × 160 × 43, output image magnitude and phase, acquisition time 2:29 min/s; (5) MPRAGE structural scan: TR/TE 7.7/3.5 ms, Field of view 256 × 256 × 176 mm, slice orientation sagittal, voxel size 1 × 1 × 1 mm, inversion pulse delay 1100 ms, Sense factor 2 in the AP direction, acquisition time 5:33 min/s; (6) diffusion tensor imaging with echo-planar spin-echo diffusion pulse sequence: TR/TE 8593/78 ms, slice orientation transverse, Field of view 220 × 220 × 128 mm, voxel size 2.2 × 2.2 × 2.0 mm, bvalues 0 and 1000, output images 1 bvalue at 0 and 32 bvalues at 1000 with 32 different diffusion vector non-colinear directions, SoftTone factor 4.0, sound pressure 3.1 dB, bandwidth in the EPI frequency direction 1557.7 Hz, epi factor 57, acquisition time 9:35.7 min/s; and (7) fMRI during the reading tasks: same parameters as with the Resting State fMRI described above except with dynamic scans 396, acquisition time 13:26 min/s.\n\nParticipants were instructed to look at a fixation cross (no reading task) or to complete a specific reading task. To ensure continuous cognitive engagement, each reading task was presented with self-paced advancing of stimuli for two minutes.\n\nWord-level lexical judgments requiring knowledge of word-specific spellings in silent word reading (Ehri, 1980)—The participant is instructed to press yes if written word on screen is a correctly spelled real word, but press no if written word on screen is not a correctly spelled word, even though when pronounced it sounds like a real word. Example of yes item is “bus.” Example of no item, a homonym, is foil “eer.”\n\nSyntactic-level reading comprehension judgments of sentences with and without homonym foils—The participant is instructed to press yes if the sentence could be a real sentence that is meaningful because all the words are spelled correctly and make sense in the sentence, but press no if the sentence is not meaningful because all the words do not make sense in the sentence. Each sentence was presented for 3 s. The “no” items differed from the “yes” items by only one word which was a homonym foil.\n\nMulti-sentence reading comprehension text judgments—The participant is instructed to read each of the four sentences that will appear on the monitor one at a time and then press yes if the fifth sentence is true based on the four prior sentences read or no if it is false. Five written sentences are presented on the monitor one at a time (each presented for constant time interval). The last one is always a statement about the accumulating text so far that can be answered true (yes) or false (no).\n\nMixed ANOVAs for time, diagnostic group, and interaction between time and group were then performed on the clustering coefficient outcomes that resulted from the graph analyses.\n\nFunctional images were corrected for motion using FSL MCFLIRT, and then high-pass filtered at sigma = 20.83 (in units of fMRI volumes not seconds). Spikes were identified and removed using the default parameters in AFNI’s 3dDespike. Slice-timing correction was applied with FSL’s slicetimer and spatial smoothing was performed using a 3D Gaussian kernel with FWHM = 4.0 mm. Time series motion parameters and the mean signal for eroded (1 mm in 3D) masks of the lateral ventricles and white matter (derived from running FreeSurfer’s recon-all on the T1-weighted image) were analyzed. Co-registration of functional images to the T1 image was performed using boundary-based registration based on a white matter segmentation of the T1 image through epi_reg in FSL. The MPRAGE structural scan was segmented using FreeSurfer software; white matter regressors were used to remove unwanted physiological components. Software was written in gfortran to compute a 68 × 68 correlation matrix which was used in the Brain Connectivity Toolbox. This 68 × 68 correlation matrix was made by finding the cross correlation between the fMRI time series signal between brain regions where each of the 68 brain regions were parceled using the cortical regions of the Mori atlas. The individual space of the fMRI scan was coregistered to this atlas using FSL FLIRT software.\n\nTo conduct Graph Theory Analysis, we used matlab software called “Brain Connectivity Toolbox” to perform the complex network analysis/graph theory analysis as described in Rubinov and Sporns (2010). Clustering coefficients for the nodes in the cingulo-operculum (CO) network were calculated using this toolbox. Graph theory-based approaches model the brain as a complex network represented by a collection of nodes connected by edges. Results reported are for clustering coefficient measures informed by graph theory, according to which a clustering coefficient is a measure of the degree to which nodes in a graph tend to cluster together.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 175,
+            "text": "Brain’s functional network clustering coefficient changes in response to instruction (RTI) in students with and without reading disabilities: Multi-leveled reading brain’s RTI",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 176,
+            "end": 264,
+            "text": "Todd L. Richards, Virginia W. Berninger, Kevin Yagle, Robert D. Abbott, and Dan Peterson",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 281,
+            "end": 285,
+            "text": "2018",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 291,
+            "end": 325,
+            "text": "doi:10.1080/23311908.2018.1424680.",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 327,
+            "end": 601,
+            "text": "In students in grades 4 to 9 (22 males, 20 females), two reading disability groups—dyslexia (n = 20) or oral and written language learning disability (OWL LD) (n = 6)—were compared to each other and two kinds of control groups—typical readers (n = 6) or dysgraphia (n = 10).",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 603,
+            "end": 664,
+            "text": "Altogether 42 upper elementary and middle school participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 665,
+            "end": 690,
+            "text": "(22 males and 20 females;",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 706,
+            "end": 736,
+            "text": "average age 11 years 10 months",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1078,
+            "end": 1165,
+            "text": "university institutional board (IRB) had approved the research with human participants.",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2257,
+            "end": 2318,
+            "text": "had to achieve 90% accuracy on them to continue participation",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1919,
+            "end": 1992,
+            "text": "Philips 3 T Achieva scanner (release 3.2.2 with the 32-channel head coil)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2742,
+            "end": 2758,
+            "text": "TR/TE 2000/25 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2742,
+            "end": 2758,
+            "text": "TR/TE 2000/25 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2760,
+            "end": 2791,
+            "text": "Field of view 240 × 240 × 99 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2823,
+            "end": 2865,
+            "text": "acquisition voxel size 3.0 × 3.08 × 3.0 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2867,
+            "end": 2898,
+            "text": "acquisition matrix 80 × 80 × 33",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4284,
+            "end": 4312,
+            "text": "acquisition time 13:26 min/s",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4672,
+            "end": 4845,
+            "text": "The participant is instructed to press yes if written word on screen is a correctly spelled real word, but press no if written word on screen is not a correctly spelled word",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5072,
+            "end": 5354,
+            "text": "The participant is instructed to press yes if the sentence could be a real sentence that is meaningful because all the words are spelled correctly and make sense in the sentence, but press no if the sentence is not meaningful because all the words do not make sense in the sentence.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5533,
+            "end": 5753,
+            "text": "The participant is instructed to read each of the four sentences that will appear on the monitor one at a time and then press yes if the fifth sentence is true based on the four prior sentences read or no if it is false.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4718,
+            "end": 4740,
+            "text": "written word on screen",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5355,
+            "end": 5391,
+            "text": "Each sentence was presented for 3 s.",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5754,
+            "end": 5864,
+            "text": "Five written sentences are presented on the monitor one at a time (each presented for constant time interval).",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5983,
+            "end": 6121,
+            "text": "Mixed ANOVAs for time, diagnostic group, and interaction between time and group were then performed on the clustering coefficient outcomes",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6162,
+            "end": 6223,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6162,
+            "end": 6223,
+            "text": "FSL MCFLIRT",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6234,
+            "end": 6309,
+            "text": "2",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6234,
+            "end": 6309,
+            "text": "high-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6234,
+            "end": 6309,
+            "text": "sigma = 20.83 (in units of fMRI volumes not seconds)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6310,
+            "end": 6394,
+            "text": "3",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          },
+          "Missing_sublabels": []
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6310,
+            "end": 6394,
+            "text": "AFNI’s 3dDespike",
+            "labels": [
+              "Despiking — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6310,
+            "end": 6394,
+            "text": "default parameters",
+            "labels": [
+              "Despiking — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6310,
+            "end": 6394,
+            "text": "identified and removed spikes",
+            "labels": [
+              "Despiking — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6395,
+            "end": 6452,
+            "text": "4",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6395,
+            "end": 6452,
+            "text": "FSL’s slicetimer",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6457,
+            "end": 6535,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6457,
+            "end": 6535,
+            "text": "3D Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6457,
+            "end": 6535,
+            "text": "FWHM = 4.0 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6536,
+            "end": 6744,
+            "text": "6",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Extract regressors — Software"
+          ]
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6536,
+            "end": 6744,
+            "text": "Time series motion parameters and the mean signal for eroded masks of the lateral ventricles and white matter",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "BBR crossmodal registration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6745,
+            "end": 6922,
+            "text": "7",
+            "labels": [
+              "BBR crossmodal registration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "BBR crossmodal registration — Parameters"
+          ]
+        },
+        {
+          "from_name": "BBR crossmodal registration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6745,
+            "end": 6922,
+            "text": "epi_reg in FSL",
+            "labels": [
+              "BBR crossmodal registration — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6923,
+            "end": 7069,
+            "text": "8",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Parameters"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6923,
+            "end": 7069,
+            "text": "FreeSurfer software",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7420,
+            "end": 7514,
+            "text": "9",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7420,
+            "end": 7514,
+            "text": "FSL FLIRT software",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7343,
+            "end": 7418,
+            "text": "68 brain regions were parceled using the cortical regions of the Mori atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7193,
+            "end": 7324,
+            "text": "This 68 × 68 correlation matrix was made by finding the cross correlation between the fMRI time series signal between brain regions",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7165,
+            "end": 7191,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7715,
+            "end": 7826,
+            "text": "Clustering coefficients for the nodes in the cingulo-operculum (CO) network were calculated using this toolbox.",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5983,
+            "end": 6121,
+            "text": "Mixed ANOVAs for time, diagnostic group, and interaction between time and group were then performed on the clustering coefficient outcomes",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

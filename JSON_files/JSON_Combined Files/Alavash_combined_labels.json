@@ -1,0 +1,1047 @@
+{
+  "data": {
+    "text": "Is functional integration of resting state brain networks an unspecific biomarker for working memory performance?\nMohsen Alavash; Philipp Doebler; Heinz Holling; Christiane M. Thiel; Carsten Gießing\nNeuroImage 108 (2015) 182–193\nhttp://dx.doi.org/10.1016/j.neuroimage.2014.12.046\n© 2014 Elsevier Inc. All rights reserved.\n\nTwenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. Two female subjects showed large head movements during scanning (more than 3.5 mm of translation or degrees of rotation) and were excluded from further analyses. Ethical approval was obtained from the ethics committee of the University of Oldenburg. All procedures were carried out with written informed consent.\n\nDuring resting state fMRI scans subjects were instructed to lie still inside the scanner, close their eyes and not to think about something specific for around 13 min. Meanwhile T2*-weighted gradient echo planar imaging (EPI) volumes with BOLD contrast were recorded by means of a 3-Tesla MRI scanner (Siemens MAGNETOM Verio): repetition time (TR) = 1.5 s, echo time (TE) = 30 ms, flip angle (FA) = 80°, voxel size = 3 × 3 × 3.5 mm, between-slice gap = 4.37 mm, number of slices = 27, image size = 64 × 64 pixels, number of volumes = 512. Structural T1-weighted images (TR = 1.9 s, TE = 2.52 ms, FA = 9°, voxel size = 0.9 × 0.9 × 1 mm, number of slices = 176, image size = 256 × 256) were acquired after completion of functional scans.\n\nPre-processing of the fMRI data was conducted using SPM8. The brain scans were corrected for head motion by spatially aligning images to the first image of each run. Next structural and functional scans were co-registered. Finally images were spatially normalized to the standard stereotaxic MNI space. No spatial smoothing was applied.\n\nTo subdivide the brain in different subregions the parcellation routine from Fornito et al. (2010) and Zalesky et al. (2010) was applied. This approach randomly parcellates the anatomically delineated and labelled T1 volume provided by the AAL toolbox in SPM into 462 cortical regions. As a regional time series, mean time series are computed by averaging across voxels within a parcel.\n\nIn order to minimize the effects of spurious temporal correlations induced by physiological and movement artefacts the six rigid-body movement parameters from the realignment procedure and two additional mean time series extracted from areas within white-matter and ventricles were regressed out from the local time series. Regional time series were band-pass filtered by means of maximum overlap discrete wavelet transform (MODWT) within four frequency intervals (in the range of 0.02–0.33 Hz). We focused our subsequent analyses on wavelet scale 2 (0.08–0.17 Hz). To obtain a measure of association between each pair of cortical regions, Pearson correlation between wavelet coefficients were computed which in turn gave an N by N association matrix for each subject.\n\nNetworks were constructed at 16 equally spaced connection densities (5%–50%). Binary graphs at each density were constructed by thresholding each association matrix to create an adjacency matrix. The thresholding algorithm is based on the minimum spanning tree; once the tree was detected, edges were rank-thresholded and added in the order of their absolute correlation strength.\n\nTo analyse network integration on different organizational levels three key topological properties were estimated for each graph: global efficiency, modularity and clustering.\n\nIn the current study functional resting state networks of 22 participants were analysed.\n\nConnectivity analysis and network constructionParcellation scheme\nTo subdivide the brain in different subregions the parcellation routine from Fornito et al. (2010) andZalesky et al. (2010) was applied.\nThis approach randomly parcellates the anatomically delineated and labelled T1 volume provided by the AAL toolbox in SPM ( TzourioMazoyer et al., 2002 ) into a number of cortical regions (in our case\n462 regions). In contrast to other approaches, this parcellation has the\nadvantage of generating similar-sized brain parcels. Thus, if time series\nare averaged across voxels within a parcel, mean time series are equallyaffected by noise and are equally reliable. To document that our results\non both global and nodal levels can be reproduced when a different\nparcellation scheme is employed ( Craddock et al., 2012 )w ea d d e df u r -\nther analyses in the Supplementary material (see Inline SupplementaryTables S1 and S3, Inline Supplementary Fig. S1).\nInline Supplementary Tables S1 and S3, Fig. S1 can be found online at\nhttp://dx.doi.org/10.1016/j.neuroimage.2014.12.046 .\n\nIn order to minimize the effects of spurious temporal correlations induced by physiological and movement artefacts the six rigid-body\nmovement parameters from the realignment procedure and two additional mean time series extracted from areas within white-matter and\nventricles were regressed out from the local time series. It has been\npreviously shown that the behavioural correlates of the brain functional\nnetwork topology are best observed in the frequency range below\n0.1 Hz ( Achard et al., 2006 ). Therefore regional time series were bandpass filtered by means of maximum overlap discrete wavelet transform\n(MODWT; Percival and Walden, 2006 ) within four frequency intervals\n(in the range of 0.02 –0.33 Hz, each corresponding to a wavelet scale).\nAs the result of our analysis of functional connectivity revealed the\nstrongest difference in correlations between mean connectivity and\neach the CS and the SWM task in wavelet scale 2 (see scale 2 (0.08 –0.17 Hz). The behavioural relevance of this frequency\nrange was also documented in our previous work. In Giessing et al.\n(2013) we found that experimentally induced changes in performance predominately correlated with changes in functional connectivity in the same frequency components. In order to obtain a\nmeasure of association between each pair of cortical regions, Pearson\ncorrelation between wavelet coef ficients were computed which in\nturn gave an NbyNassociation matrix ( Ndenotes the number of\nnodes) for the resting state data set of each subject. The global\nstrength of functional connectivity was estimated by computing\nthe mean of each association matrix.\norg/10.1016/j.neuroimage.2014.12.046 .\nNetworks were constructed at 16 equally spaced connection densities (cost thresholds), in the range of 5% –50%. The connection density\nreflects the percentage of edges in a graph and is de fined as the number\nof edges in the graph relative to the maximum possible number of edges\n((N×(N−1) / 2) where Nequals the number of nodes). Binary graphs\nat each arbitrary connection density were constructed by thresholdingeach association matrix to create an adjacency matrix. Binary instead\nof weighted graphs were used in order to disentangle differences in\nnetwork densities from differences in topology ( Ginestet et al., 2011 ).\nThe above thresholding was implemented by means of an algorithmwhich is based on the minimum spanning tree of a graph. This algorithm ensures that all regional nodes are connected by at least one\nedge to the rest of the network, even at the sparsest connection density\n(Alexander-Bloch et al., 2010 ). Once the minimum spanning tree was\ndetected, edges were rank thresholded and added in the order of their absolute correlation strength.\n\nNetwork diagnostics\nTo analyse network integration on different organizational levels\nthree key topological properties were estimated for each graph at\neach connection density ( Latora and Marchiori, 2001 ): network efficiency, modularity and clustering. For each topological property we computed a global network metric which characterizes the topological\nproperty at the whole brain scale (global scale) and a regional metric\ncharacterizing the same property but for a certain brain node (nodal\nscale).\nEfficiency\nFor a given network g comprised of N nodes, global efficiency E\nglobal\ncaptures the integration of the entire network and is estimated by theinverse of the harmonic mean of the minimum path lengths (the\nsmallest number of intervening edges) between each pair of nodes Li,j:\nEglobal¼1\nNN−1ðÞX\ni≠j∈G1\nLi;j: ð1Þ\nThus networks which have a highly integrated organization, characterized by a short minimum path length between any pair of regionalnodes, will have high global efficiency.\nThe nodal efficiency at node i,E\nnodal (i), is likewise inversely related to\nthe path length of connections between a particular node and the rest of\nthe network:\nEnodal i ðÞ¼1\nN−1ðÞX\nj∈G1\nLi;j: ð2Þ\nEven though nodal efficiency measures regional properties of a\nnetwork, it still describes the integration of a particular node with the\nentire network.\n\nModularity\nModularity estimates the decomposability of a network into smaller\nsub-networks which are relatively densely intra-connected, and relatively sparsely interconnected. To estimate modularity resting state networks were decomposed into non-overlapping modules by maximizing\nthe modularity index Q(Newman, 2006 ) through the Louvain algorithm\navailable from Brain Connectivity Toolbox ( Blondel et al., 2008; Rubinov\nand Sporns, 2010 ).\nQ has a scalar value between −1 and 1, which is de fined as:\nQ¼1\n2mX\ni;jAi;j−kikj\n2m/C20/C21\nδci;cj/C16/C17\nð3Þ\nwhere Ai,jrepresents the weight (zero or one in the case of a binary network) of the edge between node iand j,ki=ΣjAi,jis the sum of the\nweights of the edges attached to node i(also called strength of node i),\nciis the community to which node ibelongs, the δ-function δ(u,v)i s1\nifu=vand 0 otherwise and m¼1\n2∑\ni;jAi;j. The maximization of the\nmodularity index Qgives a partition of the network into modules such\nthat the total edge weight within modules is as large as possible, relative\nto a most commonly used null model whose total within-module edge\nweights followkikj\n2m.\nDue to stochastic initialization of the greedy optimization, the\nmodule detection algorithm was applied 100 times for each network\nper threshold and the partition which delivered the highest Qvalue\nwas kept. Qis high if a network can be decomposed into modules\nTable 2\nCorrelation between nodal clustering and working memory performance.\nAnatomical label xayzr CSbrSWMcpdiffdpdiff fdrepdiff fdr relf\nR. inferior frontal gyrus 54 28 −4 0.65 −0.17 0.0003 0.045 9e−09\nL. anterior cingulate −2 30 20 0.55 −0.25 0.0007 0.045 6.2e−07\nR. cingulate g. 4 28 30 0.59 −0.19 0.0008 0.045 1.6e−07\nR. superior temporal gyrus 52 −50 18 0.50 −0.32 0.0006 0.045 1.7e−06\nL. superior temporal gyrus −42 −60 18 0.40 −0.43 0.0005 0.045 2.9e−06\nL. middle temporal gyrus −58 −14 −10 0.57 −0.28 0.0003 0.045 4.9e−07\nL. parahippocampal gyrus −22 −36 −12 0.48 −0.31 0.0009 0.046 2.2e−06\nL. intraparietal sulcus −36 −48 48 0.50 −0.35 0.0004 0.045 1.5e−06\nL. intraparietal sulcus −30 −70 30 0.48 −0.37 0.0004 0.045 1.8e−06\nax,y,a n d zdenote MNI coordinates of the brain nodes (centre of gravity)\nbCorrelation between clustering and the CS test\ncCorrelation between clustering and the SWM test\ndp-value testing the difference between the correlations\neFDR-corrected p-value testing the difference between the correlations\nfFDR-corrected p-value testing the difference between the correlations corrected for different reliabilities of the CS and the SWM tests187 M. Alavash et al. / NeuroImage 108 (2015) 182 –193\n\nwith many connections within and only a few connections between\nthem. Thus a high Qreflects high network integration within modules\nand high segregation between modules on an intermediate level ofnetwork organization.\nTo de fine a network diagnostic which quanti fies the modular structure at a regional scale we estimated the edge ratio W\neof each module M\n(Baumes et al., 2005; Wang et al., 2009 ). This metric captures the density of connections within a brain module relative to the total number ofconnections to the nodes inside and outside the module:\nW\neMðÞ ¼EMðÞ\nEMðÞ þ EoutMðÞð4Þ\nwhere E(M) is the number of edges within module MandEout(M)i st h e\nnumber of edges connecting the nodes inside module Mto nodes\noutside the module. For the analysis on nodal level we computed We\nfor each module and assigned this value to each node of the module.\n\nClustering\nTo estimate the integration of nodes surrounding a certain node we\ncomputed the clustering coef ficient for each node iof the network. The\nclustering coef ficient of node iis equal to the ratio L/T, where Lis the\nnumber of edges between nodes that are directly connected with\nnode i,a n d Tis the number of edges that could possibly exist between\nthese nearest neighbours of node i(Watts and Strogatz, 1998 ). This\ncan be averaged over all nodes to estimate the clustering of the graph\nas a whole. Thus networks that have a cliquish organization, characterized by many connections between the nearest neighbours of any given\nnode, will have high clustering.\n\nControlling effects of network densities\nTo show that our results are stable across different network densities\nwe used two different approaches for the analyses on the global scale. In\nthefirst approach we performed statistical tests on equally spaced\nsampling points within the investigated range of network density. Inthe second approach we averaged graph metrics across the entire\nrange of network density to avoid multiple comparisons at individual\nsampling points and to reduce the dependency of any signi ficant differences in network topology on the arbitrary choice of a single connectiondensity. This approach has been used in previous graph analyses\n(Bassett et al., 2008; Lynall et al., 2010; Giessing et al., 2013 ) and its theoretical background was discussed in detail by Ginestet et al. (2011) ."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 113,
+            "text": "Is functional integration of resting state brain networks an unspecific biomarker for working memory performance?",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 114,
+            "end": 198,
+            "text": "Mohsen Alavash; Philipp Doebler; Heinz Holling; Christiane M. Thiel; Carsten Gießing",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 199,
+            "end": 228,
+            "text": "NeuroImage 108 (2015) 182–193",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 280,
+            "end": 321,
+            "text": "© 2014 Elsevier Inc. All rights reserved.",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 229,
+            "end": 279,
+            "text": "http://dx.doi.org/10.1016/j.neuroimage.2014.12.046",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 803,
+            "end": 834,
+            "text": "During resting state fMRI scans",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 893,
+            "end": 909,
+            "text": "close their eyes",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 956,
+            "end": 969,
+            "text": "around 13 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1084,
+            "end": 1128,
+            "text": "3-Tesla MRI scanner (Siemens MAGNETOM Verio)",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1147,
+            "end": 1158,
+            "text": "TR) = 1.5 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1171,
+            "end": 1182,
+            "text": "TE) = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1196,
+            "end": 1205,
+            "text": "FA) = 80°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1207,
+            "end": 1234,
+            "text": "voxel size = 3 × 3 × 3.5 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1236,
+            "end": 1263,
+            "text": "between-slice gap = 4.37 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1265,
+            "end": 1286,
+            "text": "number of slices = 27",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 489,
+            "text": "Twenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. ",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 489,
+            "text": "Twenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. ",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 489,
+            "text": "Twenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. ",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 489,
+            "text": "Twenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. ",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 489,
+            "text": "Twenty-four healthy, right-handed subjects (12 females, 12 males) whose age was in the range of 19–32 years (mean = 24.12, sd = 3.35) participated in the experiment. ",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 489,
+            "end": 651,
+            "text": "Two female subjects showed large head movements during scanning (more than 3.5 mm of translation or degrees of rotation) and were excluded from further analyses. ",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3595,
+            "end": 3683,
+            "text": "In the current study functional resting state networks of 22 participants were analysed.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 651,
+            "end": 738,
+            "text": "Ethical approval was obtained from the ethics committee of the University of Oldenburg.",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1619,
+            "end": 1705,
+            "text": "1",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1540,
+            "end": 1597,
+            "text": "Pre-processing of the fMRI data was conducted using SPM8.",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1619,
+            "end": 1705,
+            "text": "corrected for head motion by spatially aligning images to the first image of each run.",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1706,
+            "end": 1762,
+            "text": "2",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1540,
+            "end": 1597,
+            "text": "Pre-processing of the fMRI data was conducted using SPM8.",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1763,
+            "end": 1842,
+            "text": "3",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1540,
+            "end": 1597,
+            "text": "Pre-processing of the fMRI data was conducted using SPM8.",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1763,
+            "end": 1842,
+            "text": "Finally images were spatially normalized to the standard stereotaxic MNI space.",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "6",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "six rigid-body movement parameters from the realignment procedure and two additional mean time series extracted from areas within white-matter and ventricles were regressed out",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "7",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "six rigid-body movement parameters from the realignment procedure and two additional mean time series extracted from areas within white-matter and ventricles were regressed out",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "8",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2561,
+            "text": "six rigid-body movement parameters from the realignment procedure and two additional mean time series extracted from areas within white-matter and ventricles were regressed out",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2616,
+            "end": 2697,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2616,
+            "end": 2697,
+            "text": "band-pass filtered by means of maximum overlap discrete wavelet transform (MODWT)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2817,
+            "end": 2829,
+            "text": "0.08–0.17 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1540,
+            "end": 1597,
+            "text": "Pre-processing of the fMRI data was conducted using SPM8.",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3990,
+            "end": 4008,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0042"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3990,
+            "end": 4008,
+            "text": "AAL toolbox in SPM",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3990,
+            "end": 4040,
+            "text": "AAL toolbox in SPM ( TzourioMazoyer et al., 2002 )",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4088,
+            "end": 4099,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0045"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4088,
+            "end": 4099,
+            "text": "462 regions",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4279,
+            "end": 4295,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0047"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4955,
+            "end": 5042,
+            "text": "two additional mean time series extracted from areas within white-matter and\nventricles",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6095,
+            "end": 6114,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0049"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6095,
+            "end": 6114,
+            "text": "Pearson\ncorrelation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6463,
+            "end": 6501,
+            "text": "5",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0051"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6463,
+            "end": 6519,
+            "text": "16 equally spaced connection densities (cost thresholds)",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6521,
+            "end": 6544,
+            "text": "in the range of 5% –50%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7145,
+            "end": 7177,
+            "text": "minimum spanning tree of a graph",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6765,
+            "end": 6778,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0055"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6765,
+            "end": 6778,
+            "text": "Binary graphs",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6903,
+            "end": 6936,
+            "text": "Binary instead\nof weighted graphs",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7467,
+            "end": 7496,
+            "text": "7",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0058"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7467,
+            "end": 7496,
+            "text": "absolute correlation strength",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7707,
+            "end": 7752,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0060"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7707,
+            "end": 7752,
+            "text": "network efficiency, modularity and clustering",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8059,
+            "end": 8076,
+            "text": "global efficiency",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7727,
+            "end": 7737,
+            "text": "modularity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12415,
+            "end": 12438,
+            "text": "clustering coef ficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9182,
+            "end": 9199,
+            "text": "9",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ],
+          "id": "m0065"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9182,
+            "end": 9199,
+            "text": "Louvain algorithm",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9215,
+            "end": 9241,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Network definition — Software"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10049,
+            "end": 10097,
+            "text": "module detection algorithm was applied 100 times",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13338,
+            "end": 13403,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ],
+          "id": "m0069"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13338,
+            "end": 13403,
+            "text": "averaged graph metrics across the entire\nrange of network density",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13232,
+            "end": 13311,
+            "text": "equally spaced\nsampling points within the investigated range of network density",
+            "labels": [
+              "Result aggregation — Type"
+            ]
+          },
+          "id": "m0071"
+        }
+      ]
+    }
+  ]
+}

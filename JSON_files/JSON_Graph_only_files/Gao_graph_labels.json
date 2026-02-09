@@ -1,0 +1,325 @@
+{
+  "data": {
+    "text": "fMRI data were parcellated into 268 nodes using a whole-brain functional atlas defined in a separate sample (Shen et al., 2013). These 'raw' time series were then used to generate functional connectivity based on different methods, and no regression of task-evoked activity was performed.\n\nPearson correlation matrices were generated for both the LR and RL phase encoding runs in the HCP data, resulting in two 268 × 268 connectivity matrices per individual per task condition. Nine nodes (node index: {249, 239, 243, 129, 266, 109, 115, 118, 250}) which had missing coverage during any individual's scan were excluded from all individuals. These matrices were used to perform fingerprinting or generate cross-validated predictive models of fluid intelligence.\n\nMoreover, as the CFC, by nature, is fully connected, signed, and weighted, the graph often needs to be thresholded or binarized before one can use graph-theoretic analysis. The thresholding is normally done by setting absolute (correlation-based) or proportional (sparsity-based) thresholds (Garrison et al., 2015).\n\nAdditionally, how to interpret the negative correlations when global signal regression (GSR) is performed remains a topic of debate (Fox et al., 2009; Murphy et al., 2009; Murphy and Fox, 2017; Saad et al., 2012). The negative edge weights can be converted to the absolute values or simply ignored, and different choices might lead to different graph properties.\n\nCommon measures of network organizations including average clustering coefficient, characteristic path length, global efficiency, assortativity and modularity were computed using the Brain Connectivity Toolbox (see Rubinov and Sporns (2010) for detailed description), and are presented in the main text and supplementary. In addition to these common measures, we also computed the small world propensity (SWP; Muldoon et al. (2016)), which quantifies the extent to which a network displays the structure of small-worldness, an important property that is ubiquitous across many real-world networks.\n\nCFCs were also sparsified to match the sparsity level of the subject's corresponding log-penalized graph. The sparsification was done by retaining the edges with the top absolute value of edge weights."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 15,
+            "end": 26,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 50,
+            "end": 78,
+            "text": "whole-brain functional atlas",
+            "labels": [
+              "Atlas definition — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 32,
+            "end": 41,
+            "text": "268 nodes",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 32,
+            "end": 41,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 32,
+            "end": 41,
+            "text": "268 nodes",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 135,
+            "end": 152,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 135,
+            "end": 152,
+            "text": "'raw' time series",
+            "labels": [
+              "Time series ROI — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 290,
+            "end": 318,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 290,
+            "end": 318,
+            "text": "Pearson correlation matrices",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 411,
+            "end": 442,
+            "text": "268 × 268 connectivity matrices",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1114,
+            "end": 1135,
+            "text": "5",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1326,
+            "end": 1376,
+            "text": "converted to the absolute values or simply ignored",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 865,
+            "end": 889,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 865,
+            "end": 889,
+            "text": "thresholded or binarized",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 980,
+            "end": 1052,
+            "text": "absolute (correlation-based) or proportional (sparsity-based) thresholds",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2179,
+            "end": 2242,
+            "text": "retaining the edges with the top absolute value of edge weights",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1626,
+            "end": 1652,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1626,
+            "end": 1652,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1494,
+            "end": 1601,
+            "text": "average clustering coefficient, characteristic path length, global efficiency, assortativity and modularity",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1824,
+            "end": 1875,
+            "text": "small world propensity (SWP; Muldoon et al. (2016))",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 798,
+            "end": 835,
+            "text": "8",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 798,
+            "end": 835,
+            "text": "fully connected, signed, and weighted",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1531 @@
+{
+  "data": {
+    "text": "Differences between child and adult large-scale functional brain networks for reading tasks\nHum Brain Mapp. 2018;39:662–679. https://doi.org/10.1002/hbm.23871\n\nSeventeen adults (male: 9; ages ranged from 19 to 28 years; mean: 21.8, standard deviation (SD): 2.3) and 16 typically developing children (male: 11; ages ranged from 11 to 13 years; mean: 12, SD: 0.4) were included. Inclusion criteria were as follows: (1) native Chinese speakers; (2) right-handed; (3) normal hearing and normal or corrected to normal vision; (4) no neurological disease or psychiatric disorders; and (5) not taking medication affecting the central nervous system. Written informed consent was obtained from all participants and also from the parents of child participants. This study was approved by the Institutional Review Board at Beijing Normal University.\n\nA rhyming judgment and a meaning judgment task were used to tap into orthography-to-phonology mapping and orthography-to-semantics mapping, respectively. In both tasks, two Chinese characters were visually presented sequentially. The presentation of all characters was 800 ms in duration, followed by a 200 ms interval between the two characters. A red fixation cross (1) appeared on the screen after the offset of the second stimulus to indicate to participants that they should make a response. The response interval was chosen amongst 2,200, 2,600, and 3,000 ms with equal probability. Participants judged whether the two characters rhymed (rhyming task) or were semantically related (meaning task).\n\nWe used an event-related design with four 6 min 44 s runs, including two runs for each task. In each run, there were 48, 12, and 24 pairs of character stimuli, perceptual stimuli, and null stimuli, respectively. An instruction indicating the task type (“rhyming judgment task” or “meaning judgment task”) was presented at the beginning of a run. The administration of the two tasks was counterbalanced across participants.\n\nAll images were acquired using a 3 T Siemens scanner (MAGNETOM Trio, a TIM System). For the functional imaging, a susceptibility weighted single-shot echo planar imaging (EPI) method with blood oxygenation level-dependent (BOLD) signal recording was adopted. The following scan parameters were used: TR=2,000 ms; TE=20 ms; flip angle=80°; slice thickness=3 mm, gap=0.48 mm; number of slices=32; FOV=220 × 206 mm; matrix=128 × 120 × 32; pixel size=1.72 × 1.72 × 3.48 mm.\n\nImage preprocessing was first performed using DPARSF (http://rfmri.org/DPARSF). Image preprocessing included: slice timing, realignment, co-registration, tissue segmentation, normalization, smoothing, high-pass filtering, detrending, and regressing out potential sources of particular signals. Specifically, slice-timing correction was performed by interpolating the voxel time series using slice interpolation, and the middle slice in time was used as a reference slice. Second, all functional images were spatially realigned and co-registered to their corresponding anatomical images. No participants had more than 3.0 mm of movement within-run in any plane. The resulting images were then spatially normalized to the Montreal Neurological Institute (MNI) space. After normalization, all images were resampled to 3 × 3 × 3 mm voxel size, and were further spatially smoothed using a Gaussian kernel with 8 mm full-width at half maximum (FWHM). After those standard preprocessing procedures, three additional processes were applied for calculating functional connectivity: (1) High-pass temporal filtering with a cutoff of 1/128 Hz; (2) removing linear trends; (3) regressing out potential sources of head motion, white matter signal, and cerebrospinal fluid (CSF) signal.\n\nRt_ACC (mean(SD)) 95.1%(2.2%); Rt_RT (mean(SD)) 1,202 ms (230). Mt_ACC (mean(SD)) 94.2%(3.9%); Mt_RT (mean(SD)) 1,056 ms (210). Rp_ACC (mean(SD)) 99.1%(1.7%); Rp_RT (mean(SD)) 780 ms (200). Mp_ACC (mean(SD)) 96.6%(7.5%); Mp_RT (mean(SD)) 747 ms (223).\n\nGraph theoretical analysis was performed in GRETNA. The brain was parcellated into 90 regions of interest according to the Automated Anatomical Labeling (AAL) atlas. Pearson’s correlation coefficient between each pair of regional time series was calculated, resulting in a 90 × 90 connectivity matrix for each participant per task. Negative correlations were excluded from analysis.\n\nGraph theoretical analysis was performed in GRETNA (http://www.\n\nnitrc.org/projects/gretna/). For each participant,\n\n(excluding cerebellum) was partitioned into 90 regions of interest (ROI)\n\n(Figure 1a) according to the Automated Anatomical Labeling (AAL) tool\n\n(Tzourio-Mazoyer et al., 2002). Regional time series were calculated by\n\naveraging all voxel time series within the region. To construct the net-\n\nwork for the rhyming and meaning judgment tasks, we extracted time\n\nand meaning judgment) were extracted and concatenated over trials,\n\n2012). Time courses were extracted from the onset of the first stimulus\n\nin a pair to one TR after the second stimulus in a pair, for each ROI and\n\neach subject. We only extracted the time series specific to the charac-\n\nmethod with blood oxygenation level-dependent (BOLD) signal record-\ning was adopted. The following scan parameters were used: TR 5 2,000\nms; TE 5 20 ms;\nthickness 5 3 mm,\nangle 5 808;\ngap 5 0.48 mm; number of slices 5 32; FOV 5 220 3 206 mm;\nmatrix 5 128 3 120 3 32; pixel size 5 1.72 3 1.72 3 3.48 mm. In\n\neach brain region of each participant, and we then concatenated the\ntime series over runs. Pearson’s correlation coefficient between each\npair of regional time series was calculated, resulting in a 90 3 90 con-\n\nambiguous biological explanation of negative correlations (Fox et al,\n\n2009; Murphy et al, 2009), we restricted our analysis to positive corre-\n\nlations. Binary matrices B (Figure 1d) were generated from the connec-\n\ntivity matrix of each participant using different values of a sparsity\n\nF I G U R E 1 Schematic of functional network construction. (a) Use Automated Anatomical Labeling (AAL) template to divide the whole brain into\n90 nodes by averaging all voxel time series within each node; (b) Time series from the Chinese character condition for each task were extracted\nfor each node; (c) Time series concatenated over runs to calculate pairwise correlation matrices for each subject and task; (d) Binary matrix was\ngenerated from the correlation matrix for each subject and task; (e) Visualization of the functional network in the character condition for each\ntask after regressing out confounding factors and FDR correction [Color figure can be viewed at wileyonlinelibrary.com]\n\nthreshold. bij was set to 1 if the absolute value of the correlation coeffi-\ncient between regions i and j (i 6¼ j) was above the sparsity threshold;\n\notherwise, it was set to 0. We applied a set of sparsity thresholds (rang-\n\ning from 0.05 to 0.4, with a step size of 0.01) to binarize networks.\n\nThis range of sparsity threshold was chosen because networks were\n\nnot fully connected at lower sparsity values and were less likely to\n\nmaintain small-world architecture at higher sparsity values, as demon-\n\nGlobal efficiency\n\nLocal efficiency\n\nwork G with N nodes, the local efficiency is defined as the average\n\nnetwork. A network with high global efficiency possesses superior\n\nbal (Gi) is the global efficiency of Gi (Latora & Marchiori, 2001).\n\nNodal Degree\n\nDegree (ki) of a particular node is the number of other nodes that\ndirectly connect to that node, i.e., the number of edges that connect it\n\nto the rest of the network. Highly connected nodes have large degree.\nNormalized ki is obtained by dividing a given node’s ki by the mean ki\nof the whole network. Degree reveals the importance of a given node\n\nHubs\n\naccuracy in the adult (reaction time: t(16) 5 1.368, p 5 .190; accuracy: t\n(16) 5 1.269, p 5 .223) or the child group (reaction time: t(15) 5 2\n0.980, p 5 .343; accuracy: t(15) 5 1.344, p 5 .199).\n\nanalysis over a range of sparsity thresholds (from 0.05 to 0.4) and com-\n\nHubs of a functional network are crucial nodes that can be defined by\n\nputed the area under the curve (AUC, curves are global network effi-\n\nciency vs sparsity threshold and local network efficiency vs sparsity\n\nchose degree to define the hubs of the network, as in our previous\n\nthreshold) for the rhyming and meaning judgment tasks separately. We\n\nstudy (Qi et al., 2016). If the normalized degree of a node was 1.5 SD\n\ngreater than the mean degree across all nodes in the network, the\n\nWe calculated the AUC for nodal degree (curve is degree vs sparsity\n\nthreshold) to obtain measures for nodal topology that were independ-\n\nent of a single threshold (Bassett, Nelson, Mueller, Camchong, & Lim,\n\n2012). Following this, we tested whether there were significant group\nor task differences in each node’s degree using two sample or paired\n\nwere generated for each region (e.g., AAL 01) by randomizing the phase\n\nconducted at an alpha level of 0.05 to correct\n\nphase series (1000) of each region (e.g., AAL 01) with the time series of\n\nother regions (e.g., AAL 02). These 1000 correlation coefficients\n\nmethod circumvents the need to match groups on network sparsity,"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 91,
+            "text": "Differences between child and adult large-scale functional brain networks for reading tasks",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 125,
+            "end": 158,
+            "text": "https://doi.org/10.1002/hbm.23871",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 92,
+            "end": 124,
+            "text": "Hum Brain Mapp. 2018;39:662–679.",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 108,
+            "end": 112,
+            "text": "2018",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 160,
+            "end": 176,
+            "text": "Seventeen adults",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 266,
+            "end": 298,
+            "text": "16 typically developing children",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 178,
+            "end": 185,
+            "text": "male: 9",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 300,
+            "end": 308,
+            "text": "male: 11",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 187,
+            "end": 218,
+            "text": "ages ranged from 19 to 28 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 310,
+            "end": 341,
+            "text": "ages ranged from 11 to 13 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 446,
+            "end": 458,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 417,
+            "end": 440,
+            "text": "native Chinese speakers",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 525,
+            "end": 573,
+            "text": "no neurological disease or psychiatric disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 783,
+            "end": 838,
+            "text": "Institutional Review Board at Beijing Normal University",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1430,
+            "end": 1483,
+            "text": "Participants judged whether the two characters rhymed",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1499,
+            "end": 1527,
+            "text": "or were semantically related",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1010,
+            "end": 1069,
+            "text": "two Chinese characters were visually presented sequentially",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1556,
+            "end": 1576,
+            "text": "event-related design",
+            "labels": [
+              "Efficiency optimization"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1582,
+            "end": 1602,
+            "text": "four 6 min 44 s runs",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1662,
+            "end": 1741,
+            "text": "48, 12, and 24 pairs of character stimuli, perceptual stimuli, and null stimuli",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1110,
+            "end": 1116,
+            "text": "800 ms",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1144,
+            "end": 1159,
+            "text": "200 ms interval",
+            "labels": [
+              "ISI distribution"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1379,
+            "end": 1405,
+            "text": "2,200, 2,600, and 3,000 ms",
+            "labels": [
+              "ISI distribution"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2002,
+            "end": 2051,
+            "text": "3 T Siemens scanner (MAGNETOM Trio, a TIM System)",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2343,
+            "end": 2362,
+            "text": "number of slices=32",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2308,
+            "end": 2328,
+            "text": "slice thickness=3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2292,
+            "end": 2306,
+            "text": "flip angle=80°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2330,
+            "end": 2341,
+            "text": "gap=0.48 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2364,
+            "end": 2380,
+            "text": "FOV=220 × 206 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2269,
+            "end": 2280,
+            "text": "TR=2,000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2282,
+            "end": 2290,
+            "text": "TE=20 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2405,
+            "end": 2437,
+            "text": "pixel size=1.72 × 1.72 × 3.48 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 160,
+            "end": 176,
+            "text": "Seventeen adults",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 266,
+            "end": 298,
+            "text": "16 typically developing children",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 841,
+            "end": 887,
+            "text": "A rhyming judgment and a meaning judgment task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3714,
+            "end": 3743,
+            "text": "Rt_ACC (mean(SD)) 95.1%(2.2%)",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3745,
+            "end": 3776,
+            "text": "Rt_RT (mean(SD)) 1,202 ms (230)",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3778,
+            "end": 3807,
+            "text": "Mt_ACC (mean(SD)) 94.2%(3.9%)",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3809,
+            "end": 3840,
+            "text": "Mt_RT (mean(SD)) 1,056 ms (210)",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4248,
+            "end": 4267,
+            "text": "connectivity matrix",
+            "labels": [
+              "Network definition"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2748,
+            "end": 2771,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ],
+          "id": "m0043"
+        },
+        {
+          "from_name": "Within-run motion correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2957,
+            "end": 2966,
+            "text": "2",
+            "labels": [
+              "Within-run motion correction — Step Number"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Within-run motion correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "Within-run motion correction — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Within-run motion correction — Type",
+            "Within-run motion correction — Parameters"
+          ],
+          "id": "m0045"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2971,
+            "end": 2984,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Type",
+            "Coregistration — Parameters"
+          ],
+          "id": "m0047"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2594,
+            "end": 2613,
+            "text": "4",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Type",
+            "Segmentation — Parameters"
+          ],
+          "id": "m0049"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3132,
+            "end": 3203,
+            "text": "5",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Type",
+            "Spatial normalization (functional) — Parameters"
+          ],
+          "id": "m0051"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3297,
+            "end": 3315,
+            "text": "6",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3345,
+            "end": 3383,
+            "text": "8 mm full-width at half maximum (FWHM)",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Algorithm"
+          ],
+          "id": "m0054"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3517,
+            "end": 3545,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3517,
+            "end": 3545,
+            "text": "High-pass temporal filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3563,
+            "end": 3571,
+            "text": "1/128 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3577,
+            "end": 3599,
+            "text": "8",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "Temporal detrending — Software"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3577,
+            "end": 3599,
+            "text": "removing linear trends",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Parameters"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3641,
+            "end": 3652,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "motion regression — Software"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3641,
+            "end": 3652,
+            "text": "head motion",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Parameters"
+          ],
+          "id": "m0064"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3654,
+            "end": 3673,
+            "text": "10",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3654,
+            "end": 3673,
+            "text": "white matter signal",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Parameters"
+          ],
+          "id": "m0067"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3679,
+            "end": 3711,
+            "text": "11",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2486,
+            "end": 2492,
+            "text": "DPARSF",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3679,
+            "end": 3711,
+            "text": "cerebrospinal fluid (CSF) signal",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Parameters"
+          ],
+          "id": "m0070"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4571,
+            "end": 4606,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4571,
+            "end": 4606,
+            "text": "Automated Anatomical Labeling (AAL)",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4469,
+            "end": 4489,
+            "text": "excluding cerebellum",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4512,
+            "end": 4534,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4512,
+            "end": 4534,
+            "text": "90 regions of interest",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4686,
+            "end": 4735,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4686,
+            "end": 4735,
+            "text": "averaging all voxel time series within the region",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4940,
+            "end": 4967,
+            "text": "onset of the first stimulus",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4982,
+            "end": 4994,
+            "text": "one TR after",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4855,
+            "end": 4893,
+            "text": "4",
+            "labels": [
+              "Combine block — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4855,
+            "end": 4893,
+            "text": "extracted and concatenated over trials",
+            "labels": [
+              "Combine block — Algorithm"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5475,
+            "end": 5513,
+            "text": "concatenated the\ntime series over runs",
+            "labels": [
+              "Combine block — Algorithm"
+            ]
+          },
+          "id": "m0082"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5515,
+            "end": 5548,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5515,
+            "end": 5548,
+            "text": "Pearson’s correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5622,
+            "end": 5633,
+            "text": "90 3 90 con",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5737,
+            "end": 5778,
+            "text": "6",
+            "labels": [
+              "Negative correlation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0086"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5737,
+            "end": 5778,
+            "text": "restricted our analysis to positive corre",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0087"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6824,
+            "end": 6843,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0088"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6824,
+            "end": 6843,
+            "text": "sparsity thresholds",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          },
+          "id": "m0089"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6861,
+            "end": 6872,
+            "text": "0.05 to 0.4",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0090"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6881,
+            "end": 6898,
+            "text": "step size of 0.01",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0091"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5790,
+            "end": 5805,
+            "text": "8",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0092"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5790,
+            "end": 5805,
+            "text": "Binary matrices",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0093"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6660,
+            "end": 6700,
+            "text": "absolute value of the correlation coeffi",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0094"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7132,
+            "end": 7149,
+            "text": "9",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0095"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4395,
+            "end": 4401,
+            "text": "GRETNA",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0096"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7132,
+            "end": 7149,
+            "text": "Global efficiency",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0097"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7151,
+            "end": 7167,
+            "text": "Local efficiency",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0098"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7374,
+            "end": 7386,
+            "text": "Nodal Degree",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0099"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7739,
+            "end": 7743,
+            "text": "Hubs",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0100"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8431,
+            "end": 8437,
+            "text": "1.5 SD",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0101"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8098,
+            "end": 8123,
+            "text": "10",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0102"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7952,
+            "end": 8006,
+            "text": "over a range of sparsity thresholds (from 0.05 to 0.4)",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0103"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8098,
+            "end": 8123,
+            "text": "area under the curve (AUC",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "id": "m0104"
+        }
+      ]
+    }
+  ]
+}

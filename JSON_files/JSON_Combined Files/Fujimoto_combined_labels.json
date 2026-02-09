@@ -1,0 +1,2555 @@
+{
+  "data": {
+    "text": "N\nEUROSCIENCE\nRESEARCH ARTICLE\nU. Fujimoto et al. / Neuroscience 433 (2020) 163–173\nNetwork Centrality Reveals Dissociable Brain Activity during\nResponse Inhibition in Human Right Ventral Part of Inferior Frontal Cortex\na a a a a,b b c\nUta Fujimoto, Akitoshi Ogawa, Takahiro Osada, Masaki Tanaka, Akimitsu Suda, Nobutaka Hattori, Koji Kamagata,\nc a,d,e,f\nShigeki Aoki and Seiki Konishi *\na\nDepartment of Neurophysiology, Juntendo University School of Medicine, Tokyo, Japan\nb\nDepartment of Neurology, Juntendo University School of Medicine, Tokyo, Japan\nc\nDepartment of Radiology, Juntendo University School of Medicine, Tokyo, Japan\nd\nResearch Institute for Diseases of Old Age, Juntendo University School of Medicine, Tokyo, Japan\ne\nSportology Center, Juntendo University School of Medicine, Tokyo, Japan\nf\nAdvanced Research Institute for Health Science, Juntendo University School of Medicine, Tokyo, Japan\nAbstract—The human right inferior frontal cortex (IFC) plays a critical role in response inhibition. It has also been\ndemonstrated that the IFC is heterogeneous and that the ventral part of the IFC (vIFC) is more critical to inhibition\nof prepotent response tendency. Recent areal parcellation analyses based on resting-state functional connectiv-\nity have revealed that the right vIFC consists of multiple functional areas. In the present study, we characterized\nthe parcellated areas (parcels) in the right vIFC using graph theory analysis, which characterizes local connectiv-\nity properties of a brain network by referring to its global structure of functional connectivity. Functional magnetic\nresonance imaging (MRI) scans were obtained during performance of a stop-signal task and during resting state.\nThe cerebral cortex was parcellated into areas using resting-state functional connectivity. The parcels were then\nsubjected to graph theory analysis to reveal central areas. Two parcels, ventral and dorsal, in the posterior part of\nthe vIFC, exhibited signiﬁcant brain activity during response inhibition. The ventral parcel exhibited a positive\ncorrelation between betweenness centrality and brain activity while the dorsal parcel did not. Correlations were\nsigniﬁcantly stronger in the ventral parcel. Moreover, the ventral parcel exhibited a negative correlation between\nbrain activity during response inhibition and stop-signal reaction time (SSRT), a behavioral measure used to eval-\nuate stopping performance. These dissociation results suggest that the ventral region in the vIFC plays a more\ncentral role in the brain network by increasing brain activity, which may further predict better performance of\nresponse inhibition. (cid:1) 2020 IBRO. Published by Elsevier Ltd. All rights reserved.\nKey words: Boundary mapping, Inferior frontal gyrus, Inferior frontal junction.\nINTRODUCTION it has been demonstrated that the ventral part of the IFC\n(vIFC) is more critical to inhibition of prepotent response\nIt has been established that the inferior frontal cortex\ntendency, whereas the dorsal part of the IFC (dIFC) is\n(IFC) is critical to response inhibition, deﬁned as\ninvolved in detection of changes in the environment\ncognitive processes that inhibit a prepotent response.\n(Chikazoe et al., 2009a,b; Verbruggen et al., 2010).\nLesions to the IFC (Aron et al., 2003) and transcranial\nResting-state functional connectivity analyses have\nmagnetic stimulation (TMS) to the right IFC (Chambers\nenabled parcellation of the cerebral cortex into functional\net al., 2006; Verbruggen et al., 2010) prolonged stop-\nareas based on their connectivity patterns (Biswal et al.,\nsignal reaction time (SSRT), a behavioral measure used\n2010; Mars et al., 2012; Hirose et al., 2013; Wig et al.,\nto evaluate stopping performance. Moreover, functional\n2014a; Eickhoﬀ et al., 2015, 2016; Finn et al., 2015;\nheterogeneity in the IFC has been reported. For example,\nLaumann et al., 2015; Poldrack et al., 2015; Wang\net al., 2015; Glasser et al., 2016; Gordon et al., 2016,\n2017). Parcellation analyses have revealed multiple sub-\n*\nCorrespondence to: Seiki Konishi, Department of Neurophysiology,\nareas (parcels) in the vIFC (Glasser et al., 2016;\nJuntendo University School of Medicine, 2-1-1 Hongo, Bunkyo-ku,\nGordon et al., 2016, 2017), suggesting functional hetero-\nTokyo 113-8421, Japan. Tel: +81-3-5802-1026; fax: +81-3-3813-\ngeneity within the vIFC.\n4954.\nE-mail address: skonishi@juntendo.ac.jp (S. Konishi). Graph theoretic methods have been used to\nAbbreviations: IFC, inferior frontal cortex; MRI, magnetic resonance\ninvestigate the organization of whole-brain networks\nimaging; SSRT, stop-signal reaction time; vIFC, ventral part of the IFC.\nhttps://doi.org/10.1016/j.neuroscience.2020.03.010\n(cid:1)\n0306-4522/ 2020 IBRO. Published by Elsevier Ltd. All rights reserved.\n163\n\n164 U. Fujimoto et al. / Neuroscience 433 (2020) 163–173\n(Sporns and Honey, 2006; Sporns et al., 2007; Bullmore 360 volumes, and ten runs were administered. In the\nand Sporns, 2009; Wang et al., 2010; Fornito et al., task scan, one run consisted of 330 volumes, and ten\n2013, 2015, 2016; van den Heuvel and Sporns, 2013; runs were administered. Before each run, one functional\nCole et al., 2014, 2016; Power et al., 2014; Bassett and image was acquired with the opposite phase-encode\nSporns, 2017; Zhang et al., 2018). Critical brain regions direction for subsequent topup distortion correction\nplay a key role in the network by interacting with many (Andersson et al., 2003) in the image preprocessing.\nother regions, and a key index is known as betweenness\ncentrality, which is measured with reference to the global\nBehavioral procedures\norganization (He et al., 2009; Rubinov and Sporns, 2010;\nSubjects performed the stop-signal task (Logan and\nJoyce et al., 2010; Lohmann et al., 2010; Zuo et al.,\nCowan, 1984; Aron et al., 2003; Jimura et al., 2014;\n2012). A region with high betweenness centrality medi-\nYamasaki et al., 2018; Osada et al., 2019; Verbruggen\nates a high proportion of information traﬃc and may con-\net al., 2019) inside the scanner. The task comprised of\ntrol the information passage.\nGo trials and Stop trials pseudorandomly intermixed\nResponse inhibition consists of relatively simple\nwithin runs (Fig. 1B). At the beginning of a trial, a circle\ncognitive processes that complete rapidly and is thought\nwas presented for 500 msec at the center of the screen\nto involve a region with high centrality that plays a\nas a warning. In Go trials, a left- or right-pointing arrow\npivotal role in eﬃcient control of information ﬂow during\n(Go signal) was presented inside the circle, and the sub-\nits processes. We hypothesize that the vIFC, either\njects were instructed to press a button indicating the cor-\nsingle or multiple sub-areas, contributes to response\nresponding direction with their right thumb. In Stop trials,\ninhibition by playing such central roles during response\nthe Go signal was ﬁrst presented inside the circle, similar\ninhibition. The central role played during response\nto Go trials. After a stop-signal delay (SSD), however, the\ninhibition can be detected as the correlation between\narrow was changed to an up-pointing arrow, and the sub-\nthe centrality and the brain activity during response\njects were required to withhold manual response. The\ninhibition (Fig. 1A). In the present study, boundary\nSSD was updated with each Stop trial based on a tracking\nmapping procedures (Margulies et al., 2007; Cohen\nprocedure with increments or decrements of 50 ms,\net al., 2008) were ﬁrst applied to the resting-state images\nenabling maintenance of the accuracy of Stop trials at\nto parcellate the whole cerebral cortex. Graph theory\napproximately 50% (Band et al., 2003). To evaluate the\nanalyses were then applied to the parcel-wise data of\neﬃciency of the response inhibition, this study estimated\nthe resting-state functional connectivity to generate cen-\nthe SSRT as a behavioral index for eﬃcient response inhi-\ntrality indices of the parcels. Brain activity during\nbition in each subject based on an integration method\nresponse inhibition was also calculated on the basis of\n(Logan and Cowan, 1984; Verbruggen et al., 2013,\nparcels in the vIFC. Correlations were then analyzed\n2019), after checking whether the three assuptions of\nbetween brain activity and centrality.\nthe independent race model (see Results). Subjects with\nshorter SSRTs were considered more eﬃcient at\nEXPERIMENTAL PROCEDURES\nresponse inhibition (Logan and Cowan, 1984). Prior to\nthe test runs, two practice runs were performed. Each\nSubjects\nrun comprised 96 Go trials and 32 Stop trials for fMRI\nTwenty right-handed subjects (10 men and 10 women,\nscans: the total number of trials were 960 Go and 320\nage: 26.6 ± 9.2 years (mean ± SD) ranging from 20 to\nStop trials. These procedures conform to the guidelines\n47 years) participated in the experiments. Written\ndescribed in Verbruggen et al. (2019).\ninformed consent was obtained from all subjects\naccording to the Declaration of Helsinki. The\nOverview of image data analysis\nexperimental procedures were approved by the\nInstitutional Review Board of Juntendo University\nFunctional MRI images for analysis consisted of resting-\nSchool of Medicine.\nstate and task datasets (Fig. 1A). Areal boundary\nmapping was performed using the resting-state dataset,\nand functional areas were identiﬁed in the cerebral\nMRI procedures\ncortex. Both the resting-state and task datasets were\nImage data were acquired using a 3-T magnetic\nanalyzed based on the delineated areas. In the resting-\nresonance imaging (MRI) scanner and a 64-channel\nstate dataset, graph theory analyses were performed to\nradio frequency head coil (Siemens Prisma, Erlangen,\ncalculate centrality indices for these areas. In the task\nGermany). T1- and T2-weighted structural images were\ndataset, brain activity related response inhibition was\n(cid:1) (cid:1) 3\nﬁrst obtained (resolution = 0.8 0.8 0.8 mm ).\ncalculated. Finally, correlations were calculated among\nFunctional images were then obtained using multi-band\ncentrality, brain activity and SSRT.\ngradient-echo echo-planar sequences (TR = 1.0 sec,\n(cid:1)\nTE = 30 msec, ﬂip angle = 62 deg, FOV = 192\nAreal parcellation procedures\n2 (cid:1)\n192 mm , matrix size = 96 96, 78 contiguous slices,\n(cid:1) (cid:1) 3\nvoxel size = 2.0 2.0 2.0 mm , multi-band factor = For the resting-state dataset, preprocessing was\n6, phase encode direction = posterior to anterior). In conducted mainly following Human Connectome Project\nthe resting-state scan, subjects were asked to ﬁxate on (HCP) pipelines (Glasser et al., 2013, 2016). Functional\na cross displayed on a screen. One run consisted of images were realigned, topup distortion corrected and\n\n166 U. Fujimoto et al. / Neuroscience 433 (2020) 163–173\nwas regressed out, followed by\nspatial smoothing (FWHM =\n6 mm). Each vertex in the cortical\nsurface of each subject was used\nas a seed to calculate its correla-\ntions with all the vertices. Spatial\npattern similarity of the correlation\nmaps was evaluated using correla-\ntion coeﬃcients, and similarity\nmaps were generated. Spatial gra-\ndients of the similarity maps were\ncomputed for each seed vertex,\nand the gradient maps of individual\nsubjects were averaged across the\nsubjects. After spatial smoothing\n(FWHM = 6 mm), a two-dimen-\nsional watershed algorithm was\napplied to the gradient maps, and\nthe binary watershed maps were\naveraged across seed vertices to\ngenerate a boundary probability\nmap. The watershed algorithm\nwas again applied to the boundary\nprobability map to delineate parcel-\nlated regions.\nFor subsequent analyses, to\navoid non-uniform signal to noise\nratio caused by the diﬀerent\nnumber of vertices in the parcels,\nwe deﬁned regions of interest\n(ROIs) of 40 vertices closest to\nthe centroid of each parcel. When\na parcel contained less than 40\nvertices, the ROI included all the\nvertices in the parcel.\nNetwork construction and\ncentrality calculation\nCorrelation coeﬃcients of prepro-\ncessed time-series of functional\nimages were calculated as the\nmagnitude values of functional\nconnectivity between the parcels.\nFig. 2. Parcellated areas and ROIs. (A) Areal boundary in the whole cerebral cortex delineated using\nThe correlation coeﬃcients\nboundary mapping methods. Diﬀerent areas are indicated by diﬀerent colors. (B) Regions of interest\nbetween the parcels were\n(ROIs) in the delineated areas. Subsequent analyses were performed using the ROIs in these areas\nto match the number of vertices across diﬀerent areas. transformed to z values using\nFisher transformation and then\nnormalized to the standard normal\ndistribution (average = 0 and\nthe subsequent parcellation analysis. The included standard deviation = 1). Nodes of\nimages were 82.3 ± 21.1% (mean ± SD) of the total the network represented the parcels, and edges\nacquired images, and the resultant FD was 0.109 represented the connectivity. To deﬁne a binary\n± 0.015 mm (mean ± SD). undirected network for each subject, a proportional\nThe parcellation analyses based on boundary threshold of 9% was performed on the matrix of\nmapping (Margulies et al., 2007; Cohen et al., 2008; functional connectivity. The threshold was determined\nBiswal et al., 2010; Hirose et al., 2012, 2013, 2016; based on the clustering coeﬃcients such that the\nZhang and Li, 2012; Zhang et al., 2012; Wig et al., number of clusters (the structure of three nodes that\n2014b; Laumann et al., 2015; Poldrack et al., 2015; were all connected with each other via edges) in the\nGlasser et al., 2016; Gordon et al., 2016, 2017; Osada network was maximized using a reasonable number of\net al., 2017, 2019; Ogawa et al., 2018) were applied to edges (Rubinov and Sporns, 2010; van den Heuvel and\nthe cerebral cortical surface. Mean gray matter signal Sporns, 2013; Sporns, 2014). The binarized matrix was\n\n170 U. Fujimoto et al. / Neuroscience 433 (2020) 163–173\nvious studies using graph theory analyses have revealed parcel. Although the spatial extent of TMS eﬀects is diﬃ-\nregions with high centrality in the inferior parietal lobule, cult to determine (Tamura et al., 2019), these results sug-\nprecuneus, dorsolateral prefrontal cortex and medial pre- gest that both parcels are critical for response inhibition in\nfrontal cortex (Buckner et al., 2009; van den Heuvel et al., diﬀerent ways. Further studies are required to understand\n2010; Fornito et al., 2012; Sepulcre et al., 2012; Zuo et al., ﬁner details regarding the functional diﬀerences within the\n2012; Li et al., 2013; Nijhuis et al., 2013), consistent with vIFC.\nour present study (Fig. 3). Similarly, brain activation dur- It remains an open question as to how network\ning response inhibition has been reported repeatedly in centrality underscores behavior. In the ventral parcel in\nthe IFC, preSMA, IPS, and TPJ (Konishi et al., 1998, the vIFC, the correlation between centrality and brain\n1999; Garavan et al., 1999; de Zubicaray et al., 2000; activity during response inhibition was signiﬁcant. The\nLiddle et al., 2001; Menon et al., 2001; Rubia et al., correlation between brain activity and SSRT was also\n2010; Bunge et al., 2002; Durston et al., 2002; signiﬁcant. However, the direct correlation between\nMostofsky et al., 2003; Hester et al., 2004; Kelly et al., centrality and SSRT was not signiﬁcant. These results\n2004; Brass et al., 2005; Aron and Poldrack, 2006; suggest an indirect eﬀect of centrality on stopping\nDuann et al., 2006; Aron et al., 2007; Chambers et al., behavior. However, to examine the possibility more\n2006, 2009; Li et al., 2006; Leung and Cai, 2007; Cai closely, more sophisticated analyses, such as mediation\nand Leung, 2009; Chikazoe et al., 2007, 2009a,b; analysis, which require a larger number of subjects (Ide\nHampshire et al., 2010; Sharp et al., 2010; van Gaal and Li, 2011; Hu et al., 2016) are needed. Although our\net al., 2010; Zandbelt and Vink, 2010; Hirose et al., results suggest an indirect relationship between the ven-\n2012, 2014; Whelan et al., 2012; Cai et al., 2014; Erika- tral parcel in the vIFC and stopping behavior, we demon-\nFlorence et al., 2014; Rae et al., 2015; Watanabe et al., strate a functional dissociation in network centrality\n2015; Tsvetanov et al., 2018), consistent with the present between the two parcels in the right vIFC revealed by par-\nresults (Fig. 4D). These results support the basis of the cellation analyses.\nsubsequent correlation analyses.\nOne potential limitation regarding our analyses relates\nACKNOWLEDGMENT\nto the sample size for the correlation analyses in Fig. 5.\nWe thank Mr. T. Kamiya and Mr. H. Goto for technical\nAlthough the post-hoc evaluation of power for the\nassistance.\ncorrelations between the centrality and the brain activity\nwas reasonably strong (0.87), the power for the\ncorrelation between the activity and the SSRT may not\nFUNDING\nbe suﬃcient (0.64). However, because the correlation\nThis work was supported by the Japan Society for the\nbetween the activity and SSRT was calculated only in\nPromotion of Science KAKENHI Grant Number\nROI 1, where signiﬁcant positive correlation was\n19K07807 to A.O. and 18K07348 to T.O. and a grant\ndetected between the centrality and the brain activity,\nfrom Takeda Science Foundation, Japan to S.K.\nfalse negative results do not exist in the activation-\nSSRT correlation analysis.\nREFERENCES\nThe activated regions in the right vIFC were restricted\nto those along the precentral sulcus, consistent with the\nAndersson JL, Skare S, Ashburner J (2003) How to correct\nprevious functional MRI studies reporting distribution of\nsusceptibility distortions in spin-echo echo-planar images:\nactivation foci around the sulcus (Hirose et al., 2009).\napplication to diﬀusion tensor imaging. Neuroimage 20:870–888.\nTwo parcels along the sulcus were identiﬁed: a ventral\nAron AR, Behrens TE, Smith S, Frank MJ, Poldrack RA (2007)\nparcel and a dorsal parcel. The present study revealed\nTriangulating a cognitive control network using diﬀusion-weighted\nfunctional dissociation in network centrality, with the ven- magnetic resonance imaging (MRI) and functional MRI. J\ntral parcel being more central. The signiﬁcant correlation Neurosci 27:743–3752.\nAron AR, Fletcher PC, Bullmore ET, Sahakian BJ, Robbins TW\nin ROI 1 between the centrality and the brain activity sug-\n(2003) Stop-signal inhibition disrupted by damage to right inferior\ngests that the ventral region in the vIFC plays a central\nfrontal gyrus in humans. Nat Neurosci 6:115–116.\nrole in controlling rapid information ﬂow within relatively\nAron AR, Poldrack RA (2006) Cortical and subcortical contributions to\nsimple brain circuits during response inhibition. This view\nstop signal response inhibition: role of the subthalamic nucleus. J\nis consistent with the negative results on the participation\nNeurosci 26:2424–2433.\ncoeﬃcient that measures inter-network interaction Band GP, van der Molen MW, Logan GD (2003) Horse-race model\nsimulations of the stop-signal procedure. Acta Psychol\nrequired in more elaborate functions such as mnemonic\n112:105–142.\nfunctions (Miyashita, 2016; Lynch et al., 2019). On the\nBassett DS, Sporns O (2017) Network neuroscience. Nat Neurosci\nother hand, previous TMS studies have also reported\n20:353–364.\ntransient impairment of response inhibition following stim-\nBiswal BB, Mennes M, Zuo XN, Gohel S, Kelly C, Smith SM,\nulation to the vIFC (Chambers et al., 2006; Verbruggen\nBeckmann CF, Adelstein JS, Buckner RL, Colcombe S,\net al., 2010). For example, in Verbruggen et al. (2010), Dogonowski AM, Ernst M, Fair D, Hampson M, Hoptman MJ,\nHyde JS, Kiviniemi VJ, Ko¨ tter R, Li SJ, Lin CP, Lowe MJ, Mackay\nthe stimulation was targeted at the coordinates of\nC, Madden DJ, Madsen KH, Margulies DS, Mayberg HS,\n(X = 58, Y = 18, Z = 4), which is closer to the ventral\nMcMahon K, Monk CS, Mostofsky SH, Nagel BJ, Pekar JJ,\nparcel. In another example, in Chambers et al. (2006),\nPeltier SJ, Petersen SE, Riedl V, Rombouts SA, Rypma B,\nthe stimulation was targeted at the coordinates of\nSchlaggar BL, Schmidt S, Seidler RD, Siegle GJ, Sorg C, Teng\n(X = 61, Y = 21, Z = 13), which is closer to the dorsal\nGJ, Veijola J, Villringer A, Walter M, Wang L, Weng XC, Whitﬁeld-\n\nU. Fujimoto et al. / Neuroscience 433 (2020) 163–173 171\nGabrieli S, Williamson P, Windischberger C, Zang YF, Zhang HY, Eickhoﬀ SB, Thirion B, Varoquaux G, Bzdok D (2015) Connectivity-\nCastellanos FX, Milham MP (2010) Toward discovery science of based parcellation: Critique and implications. Hum Brain Mapp\nhuman brain function. PNAS 107:4734–4739. 36:4771–4792.\nBloemendaal M, Zandbelt B, Wegman J, van de Rest O, Cools R, Erika-Florence M, Leech R, Hampshire A (2014) A functional network\nAarts E (2016) Contrasting neural eﬀects of aging on proactive perspective on response inhibition and attentional control. Nat\nand reactive response inhibition. Neurobiol Aging 46:96–106. Commun 5:4073.\nBrandes U (2001) A faster algorithm for betweenness centrality. J. Faul F, Erdfelder E, Buchner A, Lang AG (2009) Statistical power\nMath. Sociol. 25:163–177. analyses using G*Power 3.1: tests for correlation and regression\nBrass M, Derrfuss J, von Cramon DY (2005) The inhibition of imitative analyses. Behav Res Methods 41:1149–1160.\nand overlearned responses: a functional double dissociation. Finn ES, Shen X, Scheinost D, Rosenberg MD, Huang J, Chun MM,\nNeuropsychologia 43:89–98. Papademetris X, Constable RT (2015) Functional connectome\nBuckner RL, Sepulcre J, Talukdar T, Krienen FM, Liu H, Hedden T, ﬁngerprinting: identifying individuals using patterns of brain\nAndrews-Hanna JR, Sperling RA, Johnson KA (2009) Cortical connectivity. Nat Neurosci 18:1664–1671.\nhubs revealed by intrinsic functional connectivity: mapping, Fornito A, Harrison BJ, Zalesky A, Simons JS (2012) Competitive and\nassessment of stability, and relation to Alzheimer’s disease. J cooperative dynamics of large-scale brain functional networks\nNeurosci 29:1860–1873. supporting recollection. PNAS 109:12788–12793.\nBullmore E, Sporns O (2009) Complex brain networks: graph Fornito A, Zalesky A, Breakspear M (2013) Graph analysis of the\ntheoretical analysis of structural and functional systems. Nat human connectome: Promise, progress, and pitfalls. Neuroimage\nRev Neurosci 10:186–198. 80:426–444.\nBunge SA, Dudukovic NM, Thomason ME, Vaidya CJ, Gabrieli JD Fornito A, Zalesky A, Breakspear M (2015) The connectomics of\n(2002) Immature frontal lobe contributions to cognitive control in brain disorders. Nat Rev Neurosci 16:159–172.\nchildren: evidence from fMRI. Neuron 33:301–311. Freeman LC (1978) Centrality in social networks. Conceptual\nCai W, Leung HC (2009) Cortical activity during manual response clariﬁcation. Soc Networks 1:215–239.\ninhibition guided by color and orientation cues. Brain Res Garavan H, Ross TJ, Stein EA (1999) Right hemispheric dominance\n1261:20–28. of inhibitory control: an event-related functional MRI study. PNAS\nCai W, Ryali S, Chen T, Li CS, Menon V (2014) Dissociable roles of 96:8301–8306.\nright inferior frontal cortex and anterior insula in inhibitory control: Glasser MF, Sotiropoulos SN, Wilson JA, Coalson TS, Fischl B,\nevidence from intrinsic and task-related functional parcellation, Andersson JL, Xu J, Jbabdi S, Webster M, Polimeni JR, Van\nconnectivity, and response proﬁle analyses across multiple Essen DC, Jenkinson M, WU-Minn HCP Consortium (2013) The\ndatasets. J Neurosci 34:14652–14667. minimal preprocessing pipelines for the Human Connectome\nChambers CD, Bellgrove MA, Stokes MG, Henderson TR, Garavan Project. Neuroimage 80:105–124.\nH, Robertson IH, Morris AP, Mattingley JB (2006) Executive Glasser MF, Coalson TS, Robinson EC, Hacker CD, Harwell J,\n‘‘brake failure” following deactivation of human frontal lobe. J Yacoub E, Ugurbil K, Andersson J, Beckmann CF, Jenkinson M,\nCogn Neurosci 18:444–455. Smith SM, Van Essen DC (2016) A multi-modal parcellation of\nChambers CD, Garavan H, Bellgrove MA (2009) Insight into the human cerebral cortex. Nature 536:171–178.\nneural basis of response inhibition from cognitive and clinical Gordon EM, Laumann TO, Adeyemo B, Huckins JF, Kelley WM,\nneuroscience. Behav Neurosci Rev 33:631–646. Petersen SE (2016) Generation and evaluation of a cortical area\nChikazoe J, Konishi S, Asari T, Jimura K, Miyashita Y (2007) parcellation from resting-state correlations. Cereb Cortex\nActivation of right inferior frontal gyrus during response inhibition 26:288–303.\nacross response modalities. J Cognit Neurosci 19:69–80. Gordon EM, Laumann TO, Gilmore AW, Newbold DJ, Greene DJ,\nChikazoe J, Jimura K, Asari T, Yamashita K, Morimoto H, Hirose S, Berg JJ, Ortega M, Hoyt-Drazen C, Gratton C, Sun H, Hampton\nMiyashita Y, Konishi S (2009a) Functional dissociation in right JM, Coalson RS, Nguyen AL, McDermott KB, Shimony JS,\ninferior frontal cortex during performance of go/no-go task. Cereb Snyder AZ, Schlaggar BL, Petersen SE, Nelson SM, Dosenbach\nCortex 19:146–152. NUF (2017) Precision functional mapping of individual human\nChikazoe J, Jimura K, Hirose S, Yamashita K, Miyashita Y, Konishi S brains. Neuron 95:791–807.\n(2009b) Preparation to inhibit a response complements response Hampshire A, Chamberlain SR, Monti MM, Duncan J, Owen AM\ninhibition during performance of a stop-signal task. J Neurosci (2010) The role of the right inferior frontal gyrus: inhibition and\n29:15870–15877. attentional control. NeuroImage 50:1313–1319.\nCohen AL, Fair DA, Dosenbach NU, Miezin FM, Dierker D, Van He Y, Wang J, Wang L, Chen ZJ, Yan C, Yang H, Tang H, Zhu C,\nEssen DC, Schlaggar BL, Petersen SE (2008) Deﬁning functional Gong Q, Zang Y, Evans AC (2009) Uncovering intrinsic modular\nareas in individual human brains using resting functional organization of spontaneous brain activity in humans. PLoS ONE\nconnectivity MRI. Neuroimage 41:45–57. 4 e5226.\nCole MW, Bassett DS, Power JD, Braver TS, Petersen SE (2014) Hester RL, Murphy K, Foxe JJ, Foxe DM, Javitt DC, Garavan H\nIntrinsic and task-evoked network architectures of the human (2004) Predicting success: patterns of cortical activation and\nbrain. Neuron 83:238–251. deactivation prior to response inhibition. J Cogn Neurosci\nCole MW, Ito T, Bassett DS, Schultz DH (2016) Activity ﬂow over 16:776–785.\nresting-state networks shapes cognitive task activations. Nat Hirose S, Chikazoe J, Jimura K, Yamashita K, Miyashita Y, Konishi S\nNeurosci 19:1718–1726. (2009) Sub-centimeter scale functional organization in human\nde Zubicaray GI, Andrew C, Zelaya FO, Williams SC, Dumanoir C inferior frontal gyrus. Neuroimage 47:442–450.\n(2000) Motor response suppression and the prepotent tendency Hirose S, Jimura K, Kunimatsu A, Abe O, Ohtomo K, Miyashita Y,\nto respond: a parametric study. Neuropsychologia 38:1280–1291. Konishi S (2014) Changes in cerebro-cerebellar interaction during\nDuann JR, Ide JS, Luo X, Li CS (2006) Functional connectivity response inhibition after performance improvement. Neuroimage\ndelineates distinct roles of the inferior frontal cortex and 99:142–148.\npresupplementary motor area in stop signal inhibition. J Hirose S, Osada T, Ogawa A, Tanaka M, Wada H, Yoshizawa Y, Imai\nNeourosci 29:10171–10179. Y, Machida T, Akahane M, Shirouzu I, Konishi S (2016) Lateral-\nDurston S, Thomas KM, Worden MS, Yang Y, Casey BJ (2002) The medial dissociation in rrbitofrontal cortex-hypothalamus\neﬀect of preceding context on inhibition: an event-related fMRI connectivity. Front Hum Neurosci 10:244.\nstudy. Neuroimage 16:449–453. Hirose S, Watanabe T, Jimura K, Katsura M, Kunimatsu A, Abe O,\nEickhoﬀ SB, Laird AR, Fox PT, Bzdok D, Hensel L (2016) Functional Ohtomo K, Miyashita Y, Konishi S (2012) Local signal time-series\nsegregation of the human dorsomedial prefrontal cortex. Cereb during rest used for areal boundary mapping in individual human\nCortex 26:304–321. brains. PLoS ONE 7 e36496.\n\nU. Fujimoto et al. / Neuroscience 433 (2020) 163–173 167\napplied to each ROI using FSL\n(Smith et al., 2004). Events of\ninterest (Go success and Stop\nsuccess), together with nuisance\nevents (Go failure and Stop fail-\nure), were coded at the onset of\nthe Go signal of each trial and\nwere modelled as transient\nevents convolved with a canoni-\ncal hemodynamic response func-\ntion and its temporal derivative.\nSix parameters of head motion\nderived from realignment were\nalso included in the model as\ncovariates of no interest. Time-\nseries data were high-pass ﬁl-\ntered (cutoﬀ: 64 s). A single-level\nanalysis was performed to esti-\nmate signal magnitudes, and the\nmagnitude images were con-\ntrasted between Stop success\nand Go success trials. For a\ngroup analysis, the contrast\nimages were entered into one-\nsample t-test using a random\neﬀect model.\nFig. 3. Centrality index results. A map of centrality indices averaged across all the subjects. Centrality\nindices are indicated using the color scale.\nRESULTS\nAreal parcellation\ntermed the adjacency matrix denoting the presence or\nabsence of functional connections. The centrality index\nIn total, 377 parcels (192 in left hemisphere and 185 in\nof each parcel was calculated using the adjacency matrix.\nright hemisphere) were identiﬁed in the cortical surfaces\nWe employed the betweenness centrality that\n(Fig. 2A). ROIs consisted of 40 vertices closest to the\nmeasures the proportion of shortest paths between all\ncentroid (Fig. 2B). For the 57 parcels that contained\nnode pairs in the network (Freeman, 1978; Brandes,\nless than 40 vertices, the ROI included all the vertices in\n2001). We used the Brain Connectivity Toolbox\nthe parcel. The mean number of vertices in one ROI of\n(Rubinov and Sporns, 2010) to deﬁne the network and\na parcel was 38.8 ± 3.7 (mean ± SD).\ncalculate the betweenness centrality of each parcel. If\ninformation was conveyed in the network along the short-\nCentrality index\nest path, a node with high betweenness centrality medi-\nates a high proportion of information traﬃc. Such nodes Correlation between parcels were calculated on the basis\nmay control the information passage or may act as a bot- of ROIs in the cortical parcels. The correlation matrix of\ntleneck of information ﬂow. The betweenness centrality of both hemispheres was calculated and was binarized to\nnode i was calculated as the proportion of shortest paths generate the adjacency matrix. Fig. 3 shows the\nbetween nodes j and h that pass through node i. centrality index in the whole brain averaged across the\nsubjects. Parcels with high central index were observed\nX q\nð Þ\n1 i\n¼ hj ; in the supramarginal gyrus, anterior temporal cortex and\nb\nq\ni ð (cid:3) Þð (cid:3) Þ\nN 1 N 2\nprecuneus.\n– ; – ; – hj\nh i h j j i\nq\nwhere, (i) is the number of shortest paths between\nhj\nBehavior and activation\nq\nnodes h and j that pass through node i, and is the\nhj\nnumber of shortest paths between node h and node j. N In the scanner, subjects performed the stop-signal task\nis the number of nodes. (Fig. 1B). The reaction time was 457.7 ± 52.4 ms\n(mean ± SD) in Go success trials and 426.1 ± 50.9 ms\nin Stop failure trials. The SSD was 237.1 ± 62.9 ms,\nIMAGE ANALYSIS FOR TASK DATASET\nand the SSRT was 208.9 ± 31.7 ms. Correct response\nFor the task dataset, preprocessing was conducted rate was 98.7 ± 1.9% in Go trials and 49.9 ± 1.6% in\nsimilarly to the resting-state dataset except for ICA-FIX Stop trials. The assumptions of the independent race\ndenoising. The data were also projected to 32 k fs_LR model in the stop-signal task were veriﬁed in the\nsurface space. Task activation was analyzed on the following three ways: (1) reaction times in Stop failure\nbasis of the ROIs by averaging time series signals trials are shorter than in Go success trials; (2) reaction\nacross vertices. A general linear model (GLM) was times in Stop failure trials increase as a function of the\n\n168 U. Fujimoto et al. / Neuroscience 433 (2020) 163–173\nZ-transformed RFT (ZRFT) was\ncalculated as ZRFT = (Mean\n[RTgo] – SSD – SSRT)/SD[RTgo].\nPositive/negative ZRFT values\nindicate shorter/longer SSD. The\ngroup behavioral results conﬁrmed\nthat the three assumptions 1, 2\nand 3 were fulﬁlled, respectively.\nThe group-level brain\nactivation during response\ninhibition (Stop success minus Go\nsuccess) is shown in Fig. 4D.\nBrain activation was observed in\nseveral regions including the IFC,\npreSMA and IPS in the right\nhemisphere. There were only two\nparcels (ROI 1 and ROI 2) in the\nright vIFC that were signiﬁcantly\nactivated during response\ninhibition (ROI 1: t(19) = 5.42,\np < 0.001; ROI 2: t(19) = 5.91,\np < 0.001, where t(19) = 4.8\ncorresponds to p = 0.05 after\nBonferroni correction for whole-\nbrain multiple comparisons). The\nprominent activation in the\nposterior part of the right vIFC\nalong the precentral sulcus is\nconsistent with the detailed\nanalysis in our previous study\n(Hirose et al., 2009). ROI 1 was\nlocated more ventrally at (centroid:\nX = 55, Y = 7, Z = 1, MNI coordi-\nnates), whereas ROI 2 was located\nmore dorsally at (centroid: X = 45,\nY = 10, Z = 20) (Fig. 5A). The\nspatial organization of the two par-\ncels was consistent with that using\nthe dataset of HCP (Van Essen\net al., 2013) (Fig. 5A).\nFig. 4. Behavior and activation results. (A) Reaction times for Go and Stop failure trials. Gray lines\nRelationships among centrality,\nindicate data from each of the subjects. ***p < 0.001. (B) Reaction times for Stop failure trials with\nbrain activity and behavior\nlonger/shorter SSDs than median SSD. ***p < 0.001. (C) The normalized inhibition function that plots\nthe proportion of Stop failure trials as a function of the relative ﬁnishing times of the response and stop\nThe centrality in ROI 1 was 0.0077\nprocesses. A cumulative Weibull function was ﬁt to the group mean standardized inhibition function\n(solid red line). Gray lines indicate data from each of the subjects. ZRFT: z-transformed relative ± 0.0066 (mean ± SD), whereas\nﬁnishing times. (D) A map of brain activity during response inhibition (Stop success vs. Go success\nthat in ROI 2 was 0.0049\ntrials) in the ROIs. T values are indicated by the color scale.\n± 0.0030. The diﬀerence in\ncentrality was not signiﬁcant (t\n(19) = 1.68, p = 0.11). The\nSSD; (3) the probability of Stop failure trials increases as correlations between the centrality and the brain activity\na function of SSD (Zandbelt and Vink, 2010; Smittenaar were calculated for the two ROIs. ROI 1 showed\net al., 2013; Bloemendaal et al., 2016; Verbruggen signiﬁcant correlation (r = 0.62, p = 0.003) (Fig. 5B),\n(cid:3)\net al., 2019). Fig. 4A shows signiﬁcantly longer reaction whereas ROI 2 did not (r = 0.01, p = 0.97) (Fig. 5C).\ntimes for Go success trials than Stop failure trials (paired The diﬀerence in the correlation was also signiﬁcant\nt-test, t(19) = 9.6, p < 0.001). Fig. 4B shows signiﬁcantly (z = 2.15, p = 0.032). For ROI 1, which was\nlonger reaction times for Stop failure trials with longer signiﬁcantly correlated with the centrality, the correlation\nSSDs than those for Stop failure trials with shorter SSDs between activation and SSRT was signiﬁcant\n(cid:3)\n(paired t-test, t(19) = 12.1, p < 0.001). Fig. 4C shows (r = 0.50, p = 0.026) (Fig. 5D). However, the\nthe normalized inhibition function that plots the proportion correlation was not signiﬁcant between centrality and\n(cid:3)\nof Stop failure trials as a function of the relative ﬁnishing SSRT (r = 0.02, p = 0.93) (Fig. 5E). Post-hoc power\ntimes (RFT) of the response and stop processes. analyses (Faul et al., 2009) were conducted to evaluate\n\nU. Fujimoto et al. / Neuroscience 433 (2020) 163–173 169\nWe also calculated the\nparticipation coeﬃcient, which\nmeasures the degree of inter-\nnetwork interconnections of a\nregion that acts as a hub to\nfacilitate inter-network integration\n(Rubinov and Sporns, 2010). The\nparticipation coeﬃcient in ROI 1\nwas 0.37 ± 0.20, whereas that in\nROI 2 was 0.41 ± 0.20. The diﬀer-\nence in centrality was not signiﬁ-\ncant (t(19) = 0.57, p = 0.58). ROI\n1 did not show signiﬁcant correla-\ntion with the activity (r = 0.28,\np = 0.23), nor did ROI 2\n(cid:3)\n(r = 0.24, p = 0.31).\nDISCUSSION\nIn the present fMRI study, the\ncerebral cortex was parcellated\ninto functional areas, and the\ncentrality indices of the graph\ntheory and the brain activity\nduring response inhibition were\ncalculated on an ROI basis. The\ntwo ROIs along the precentral\nsulcus in the right vIFC were\nactivated during response\ninhibition. The correlation between\ncentrality and brain activity was\nsigniﬁcant in ROI 1 (located more\nventrally), whereas the correlation\nin ROI 2 (located more dorsally)\nwas not signiﬁcant. The diﬀerence\nof the correlations was signiﬁcant.\nIn ROI 1, the correlation between\nbrain activity and SSRT was also\nsigniﬁcant. These results\ndemonstrate the dissociation in\nthe right vIFC in terms of the\nnetwork centrality and suggest\nthat the ventral parcel plays a\ncentral role in the brain network\nthat increases brain activity in the\nparcel, which may further predict\nbetter performance of response\ninhibition.\nIn the present study, the\ncerebral cortex was parcellated\nFig. 5. Activated ROIs and correlation results in the right vIFC. (A) Two ROIs in the right vIFC that\ninto 377 areas (Fig. 2) by\nwere activated during response inhibition. The parcellated areas in the right vIFC were reproducible in\nemploying the HCP pipeline\nthe Human Connectome Project dataset. (B) Correlation between the centrality indices and the brain\nactivity (Stop success minus Go success) in ROI 1. (C) Correlation between centrality indices and (Glasser et al., 2013) and the stan-\nbrain activity in ROI 2. (D) Correlation between brain activity and SSRT in ROI 1. (E) Correlation\ndard parcellation parameters for\nbetween centrality indices and SSRT in ROI 1.\nboundary mapping (Laumann\net al., 2015; Gordon et al., 2017).\nthe false negative ratio for the correlation analyses. For The number of parcellated areas\nthe correlations between the centrality and brain activity, was consistent with previous stud-\nthe power waA functional network perspective ons 0.87. ies using parcellation procedures (Glasser et al., 2016;\nFor the correlation between activation and SSRT, the Gordon et al., 2016), and the spatial pattern of parcella-\npower was 0.64. tion in the right vIFC was also reproducible (Fig. 5A). Pre-\n\nU. Fujimoto et al. / Neuroscience 433 (2020) 163–173 173\nSporns O, Honey CJ, Ko¨ tter R (2007) Identiﬁcation and classiﬁcation K, Wang X, Hong B, Liu H (2015) Parcellating cortical functional\nof hubs in brain networks. PLoS ONE 10 e1049. networks in individuals. Nature Neurosci 18:1853–1860.\nTamura K, Osada T, Ogawa A, Tanaka M, Suda A, Shimo Y, Hattori Wang J, Zuo X, He Y (2010) Graph-based network analysis of\nN, Kamagata K, Hori M, Aoki S, Shimizu T, Enomoto H, Hanajima resting-state functional MRI. Front Syst Neurosci 4:16.\nR, Ugawa Y, Konishi S (2019) MRI-based visualization of rTMS- Watanabe T, Hanajima R, Shirota Y, Tsutsumi R, Shimizu T, Hayashi\ninduced cortical plasticity in the primary motor cortex. PLoS ONE T, Terao Y, Ugawa Y, Katsura M, Kunimatsu A, Ohtomo K, Hirose\n14 e0224175. S, Miyashita Y, Konishi S (2015) Eﬀects of rTMS of pre-\nTsvetanov KA, Ye Z, Hughes L, Samu D, Treder MS, Wolpe N, Tyler supplementary motor area on fronto basal ganglia network\nLK, Rowe JB, the Cambridge Centre for Ageing and activity during stop-signal task. J Neurosci 35:4813–4823.\nNeuroscience (2018) Activity and connectivity diﬀerences Whelan R, Conrod PJ, Poline JB, Lourdusamy A, Banaschewski T,\nunderlying inhibitory control across the adult life span. J Barker GJ, Bellgrove MA, Bu¨ chel C, Byrne M, Cummins TD,\nNeurosci 38:7887–7900. Fauth-Bu¨ hler M, Flor H, Gallinat J, Heinz A, Ittermann B, Mann K,\nvan den Heuvel MP, Mandl RC, Stam CJ, Kahn RS, Hulshoﬀ Pol HE Martinot JL, Lalor EC, Lathrop M, Loth E, Nees F, Paus T,\n(2010) Aberrant frontal and temporal complex network structure in Rietschel M, Smolka MN, Spanagel R, Stephens DN, Struve M,\nschizophrenia: a graph theoretical analysis. J Neurosci Thyreau B, Vollstaedt-Klein S, Robbins TW, Schumann G,\n30:15915–15926. Garavan H, IMAGEN Consortium (2012) Adolescent impulsivity\nvan den Heuvel MP, Sporns O (2013) Network hubs in the human phenotypes characterized by distinct brain networks. Nat\nbrain. Trends Cogn Sci 17:683–696. Neurosci 15:920–925.\nVan Essen DC, Smith SM, Barch DM, Behrens TE, Yacoub E, Ugurbil Wig GS, Laumann TO, Cohen AL, Power JD, Nelson SM, Glasser\nK, Consortium WMH (2013) The WU-Minn Human Connectome MF, Miezin FM, Snyder AZ, Schlaggar BL, Petersen SE (2014a)\nProject: an overview. NeuroImage 80:62–79. Parcellating an individual subject’s cortical and subcortical brain\nvan Gaal S, Ridderinkhof KR, Scholte HS, Lamme VA (2010) structures using snowball sampling of resting-state correlations.\nUnconscious activation of the prefrontal no-go network. J Cereb Cortex 24:2036–2054.\nNeurosci 30:4143–4150. Wig GS, Laumann TO, Petersen SE (2014b) An approach for\nVerbruggen F, Aron AR, Stevens MA, Chambers CD (2010) Theta parcellating human cortical areas using resting-state correlations.\nburst stimulation dissociates attention and action updating in Neuroimage 93:276–291.\nhuman inferior frontal cortex. PNAS 107:13966–13971. Yamasaki T, Ogawa A, Osada T, Jimura K, Konishi S (2018) Within-\nVerbruggen F, Chambers CD, Logan GD (2013) Fictitious inhibitory subject correlation analysis to detect functional areas associated\ndiﬀerences: how skewness and slowing distort the estimation of with response inhibition. Front Hum Neurosci 12:208.\nstopping latencies. Psychol Sci 24:352–362. Zandbelt BB, Vink M (2010) On the role of the striatum in response\nVerbruggen F, Aron AR, Band GP, Beste C, Bissett PG, Brockett AT, inhibition. PLoS ONE 5 e13848.\nBrown JW, Chamberlain SR, Chambers CD, Colonius H, Colzato Zhang S, Ide JS, Li CS (2012) Resting-state functional connectivity of\nLS, Corneil BD, Coxon JP, Dupuis A, Eagle DM, Garavan H, the medial superior frontal cortex. Cereb Cortex 22:99–111.\nGreenhouse I, Heathcote A, Huster RJ, Jahfari S, Kenemans JL, Zhang S, Li CS (2012) Functional connectivity mapping of the human\nLeunissen I, Li CR, Logan GD, Matzke D, Morein-Zamir S, Murthy precuneus by resting state fMRI. Neuroimage 59:3548–3562.\nA, Pare´ M, Poldrack RA, Ridderinkhof KR, Robbins TW, Roesch Zhang Y, Zhang S, Ide JS, Hu S, Zhornitsky S, Wang W, Dong G,\nM, Rubia K, Schachar RJ, Schall JD, Stock AK, Swann NC, Tang X, Li CR (2018) Dynamic network dysfunction in cocaine\nThakkar KN, van der Molen MW, Vermeylen L, Vink M, Wessel dependence: graph theoretical metrics and stop signal reaction\nJR, Whelan R, Zandbelt BB, Boehler CN (2019) A consensus time. Neuroimage Clin. 18:793–801.\nguide to capturing the ability to inhibit actions and impulsive Zuo XN, Ehmke R, Mennes M, Imperati D, Castellanos FX, Sporns O,\nbehaviors in the stop-signal task. Elife 8 e46323. Milham MP (2012) Network centrality in the human functional\nWang D, Buckner RL, Fox MD, Holt DJ, Holmes AJ, Stoecklein S, connectome. Cereb Cortex 22:1862–1875.\nLangs G, Pan R, Qian T, Li K, Baker JT, Stuﬄebeam SM, Wang\n(Received 22 August 2019, Accepted 6 March 2020)\n(Available online 17 March 2020)\n\nU. Fujimoto et al. / Neuroscience 433 (2020) 163–173\n\nNetwork Centrality Reveals Dissociable Brain Activity during\n\nU. Fujimoto et al. / Neuroscience 433 (2020) 163–173 165\nFig. 1. Overview of data analysis and stop-signal task. (A) Areal boundary was determined in the cerebral cortex using the resting-state dataset.\nBased on the delineated areas, the centrality indices were generated using the resting-state dataset, and the brain activity during response inhibition\nwas calculated using the task dataset. The thicker downward arrows indicate the processing stream of image data, and the thinner horizontal arrows\nindicate processes applied to the images. Correlations were calculated among centrality indices, brain activity and stop-signal reaction time (SSRT).\n(B) Stop-signal task. The task consisted of Go trials and Stop trials. In Go trials, subjects were instructed to respond using the button, but in Stop\ntrials, a stop signal was presented and the subjects were asked to withhold the response. RT: reaction time; SSD: stop-signal delay.\nspatially normalized to the Montreal Neurological Institute there were 32,492 (32 k) vertices deﬁned in each hemi-\n(MNI) template. Time series data were cleaned using the sphere of the cortex.\nICA-FIX method (Salimi-Khorshidi et al., 2014). After vol- We evaluated the amount of head motion by\numetric preprocessing, the image data were projected to employing frame-wise displacement (FD) (Power et al.,\nthe 32 k fs_LR surface space using the full version of 2012), a measurement of instantaneous head motion that\nthe multimodal surface matching method (MSMAll) can be calculated as a locational diﬀerence between two\n(Robinson et al., 2014; Glasser et al., 2016). The cortical successive volumes (Laumann et al., 2015; Gordon et al.,\nsurface was represented by a collection of vertices of a 2017). Frames with FD >0.25 mm were censored, as\npolygon that approximated the surface of the cerebral cor- well as uncensored segments of data lasting fewer than\ntex. The mean distance between vertices was 2 mm, and 5 contiguous volumes; all such data were excluded from\n\n172 U. Fujimoto et al. / Neuroscience 433 (2020) 163–173\nHirose S, Watanabe T, Wada H, Imai Y, Machida T, Shirouzu I, Nijhuis EH, van Cappellen van Walsum AM, and Norris DG (2013).\nMiyashita Y, Konishi S (2013) Functional relevance of Topographic hub maps of the human structural neocortical\nmicromodules in the human association cortex delineated with network. PLoS One 8, e65511\nhigh-resolution FMRI. Cereb Cortex 23:2863–2871. Ogawa A, Osada T, Tanaka M, Hori M, Aoki S, Nikolaidis A, Milham\nHu S, Ide JS, Zhang S, Li CR (2016) The right superior frontal gyrus MP, Konishi S (2018) Striatal subdivisions that coherently interact\nand individual variation in proactive control of impulsive response. with multiple cerebrocortical networks. Hum Brain Mapp\nJ Neurosci 36:12688–12696. 39:4349–4359.\nIde JS, Li CS (2011) Error-related functional connectivity of the Osada T, Ohta S, Ogawa A, Tanaka M, Suda A, Kamagata K, Hori M,\nhabenula in humans. Front Hum Neurosci 5:25. Aoki S, Shimo Y, Hattori N, Shimizu T, Enomoto H, Hanajima R,\nJimura K, Hirose S, Kunimatsu A, Ohtomo K, Koike Y, Konishi S Ugawa Y, Konishi S (2019) An essential role of the intraparietal\n(2014) Late enhancement of brain-behavior correlations during sulcus in response inhibition predicted by parcellation-based\nresponse inhibition. Neuroscience 274:383–392. network. J Neurosci 39:2509–2521.\nJoyce KE, Laurienti PJ, Burdette JH, Hayasaka S (2010) A new Osada T, Suzuki R, Ogawa A, Tanaka M, Hori M, Aoki S, Tamura Y,\nmeasure of centrality for brain networks. PLoS ONE 5 e12200. Watada H, Kawamori R, Konishi S (2017) Functional subdivisions\nKelly AM, Hester R, Murphy K, Javitt DC, Foxe JJ, Garavan H (2004) of the hypothalamus using areal parcellation and their signal\nPrefrontal-subcortical dissociations underlying inhibitory control changes related to glucose metabolism. Neuroimage 162:1–12.\nrevealed by event-related fMRI. Eur J Neurosci 19:3105–3112. Poldrack RA, Laumann TO, Koyejo O, Gregory B, Hover A, Chen MY,\nKonishi S, Nakajima K, Uchida I, Sekihara K, Miyashita Y (1998) Gorgolewski KJ, Luci J, Joo SJ, Boyd RL, Hunicke-Smith S,\nNogo dominant brain activity in human inferior prefrontal cortex Simpson ZB, Caven T, Sochat V, Shine JM, Gordon E, Snyder\nrevealed by functional magnetic resonance imaging. Eur J AZ, Adeyemo B, Petersen SE, Glahn DC, Reese Mckay D,\nNeurosci 10:1209–1213. Curran JE, Go¨ ring HH, Carless MA, Blangero J, Dougherty R,\nKonishi S, Nakajima K, Uchida I, Kikyo H, Kameyama M, Miyashita Y Leemans A, Handwerker DA, Frick L, Marcotte EM, Mumford JA\n(1999) Common inhibitory mechanism in human inferior prefrontal (2015) Long-term neural and physiological phenotyping of a single\ncortex revealed by event-related functional MRI. Brain human. Nat Commun 6:8885.\n122:981–991. Power JD, Barnes KA, Snyder AZ, Schlaggar BL, Petersen SE (2012)\nLaumann TO, Gordon EM, Adeyemo B, Snyder AZ, Joo SJ, Chen Spurious but systematic correlations in functional connectivity\nMY, Gilmore AW, McDermott KB, Nelson SM, Dosenbach NU, MRI networks arise from subject motion. Neuroimage\nSchlaggar BL, Mumford JA, Poldrack RA, Petersen SE (2015) 59:2142–2154.\nFunctional system and areal organization of a highly sampled Power JD, Schlaggar BL, Petersen SE (2014) Studying brain\nindividual human brain. Neuron 87:657–670. organization via spontaneous fMRI signal. Neuron 84:681–696.\nLeung HC, Cai W (2007) Common and diﬀerential ventrolateral Rae CL, Hughes LE, Anderson MC, Rowe JB (2015) The prefrontal\nprefrontal activity during inhibition of hand and eye movements. J cortex achieves inhibitory control by facilitating subcortical motor\nNeurosci 27:9893–9900. pathway connectivity. J Neurosci 35:786–794.\nLi CS, Huang C, Constable RT, Sinha R (2006) Imaging response Robinson EC, Jbabdi S, Glasser MF, Andersson J, Burgess GC,\ninhibition in a stop-signal task: neural correlates independent of Harms MP, Smith SM, Van Essen DC, Jenkinson M (2014) MSM:\nsignal monitoring and post-response processing. J Neurosci a new ﬂexible framework for multimodal surface matching.\n26:186–192. Neuroimage 100:414–426.\nLi L, Hu X, Preuss TM, Glasser MF, Damen FW, Qiu Y, Rilling J Rubia K, Cubillo A, Smith AB, Woolley J, Heyman I, Brammer MJ\n(2013) Mapping putative hubs in human, chimpanzee and rhesus (2010) Disorder-speciﬁc dysfunction in right inferior prefrontal\nmacaque connectomes via diﬀusion tractography. Neuroimage cortex during two inhibition tasks in boys with attention-deﬁcit\n80:462–474. hyperactivity disorder compared to boys with obsessive\nLiddle PF, Kiehl KA, Smith AM (2001) Event-related fMRI study of compulsive disorder. Hum Brain Mapp 31:287–299.\nresponse inhibition. Hum Brain Mapp 12:100–109. Rubinov M, Sporns O (2010) Complex network measures of brain\nLogan GD, Cowan WB (1984) On the ability to inhibit thought and connectivity: uses and interpretations. Neuroimage\naction: A theory of an act of control. Psychol Rev 91:295. 52:1059–1069.\nLohmann G, Stumvoll M, Horstmann A, Turner R, Pleger B, Salimi-Khorshidi G, Douaud G, Beckmann CF, Glasser MF, Griﬀanti\nGoldhahn D, Schloegl H, Stumvoll M, Villringer A, Turner R L, Smith SM (2014) Automatic denoising of functional MRI data:\n(2010) Eigenvector centrality mapping for analyzing connectivity combining independent component analysis and hierarchical\npatterns in fMRI data of the human brain. PLoS ONE 5 e10232. fusion of classiﬁers. Neuroimage 90:449–468.\nLynch CJ, Breeden AL, Gordon EM, Cherry JBC, Turkeltaub PE, Sepulcre J, Sabuncu MR, Yeo TB, Liu H, Johnson KA (2012)\nVaidya CJ (2019) Precision inhibitory stimulation of individual- Stepwise connectivity of the modal cortex reveals the\nspeciﬁc cortical hubs disrupts information processing in humans. multimodal organization of the human brain. J Neurosci\nCereb Cortex 29:3912–3921. 32:10649–10661.\nMargulies DS, Kelly AM, Uddin LQ, Biswal BB, Castellanos FX, Sharp DJ, Bonnelle V, de Boissezon X, Beckmann CF, James SG,\nMilham MP (2007) Mapping the functional connectivity of anterior Patel MC, Mehta MA (2010) Distinct frontal systems for response\ncingulate cortex. Neuroimage 37:579–588. inhibition, attention capture, and error processing. PNAS\nMars RB, Sallet J, Schuﬀelgen U, Jbabdi S, Toni I, Rushworth MF 107:6106–6111.\n(2012) Connectivity-based subdivisions of the human right Smith SM, Jenkinson M, Woolrich MW, Beckmann C, Behrens TE,\n‘‘temporoparietal junction area”: evidence for diﬀerent areas Johansen-Berg H, Bannister PR, De Luca M, Drobnjak I, Flitney\nparticipating in diﬀerent cortical networks. Cereb Cortex DE, Niazy RK, Saunders J, Vickers J, Zhang Y, De Stefano N,\n22:1894–1903. Brady JM, Matthews PM (2004) Advances in functional and\nMenon V, Adleman NE, White CD, Glover GH, Reiss AL (2001) structural MR image analysis and implementation as FSL.\nErrorrelated brain activation during a Go/NoGo response Neuroimage 23(Suppl 1):S208–S219.\ninhibition task. Hum Brain Mapp 12:131–143. Smittenaar P, Guitart-Masip M, Lutti A, Dolan RJ (2013) Preparing for\nMiyashita Y (2016) The cutting edge in brain science and sportology. selective inhibition within frontostriatal loops. J Neurosci\nJuntendo Medical Journal 62(Suppl 1):6–11. 33:18087–18097.\nMostofsky SH, Schafer JGB, Abrams MT, Goldberg MC, Flower AA, Sporns O (2014) Contributions and challenges for network models in\nBoyce A, Courney SM, Calhoun VD, Kraut MA, Denckla MB, cognitive neuroscience. Nat Neurosci 17:652–660.\nPekar JJ (2003) FMRI evidence that the neural basis of response Sporns O, Honey CJ (2006) Small worlds inside big brains. PNAS\ninhibition is task-dependent. Cogn Brain Res 17:419–430. 103:19219–19220.\n\nThe parcellation analyses based on boundary\nmapping ( Margulies et al., 2007; Cohen et al., 2008;\nBiswal et al., 2010; Hirose et al., 2012, 2013, 2016;\nZhang and Li, 2012; Zhang et al., 2012; Wig et al.,\n2014b; Laumann et al., 2015; Poldrack et al., 2015;Glasser et al., 2016; Gordon et al., 2016, 2017; Osada\net al., 2017, 2019; Ogawa et al., 2018 ) were applied to\nthe cerebral cortical surface. Mean gray matter signalwas regressed out, followed by\nspatial smoothing (FWHM =\n6 mm). Each vertex in the corticalsurface of each subject was usedas a seed to calculate its correla-\ntions with all the vertices. Spatial\npattern similarity of the correlationmaps was evaluated using correla-\ntion coeﬃcients, and similarity\nmaps were generated. Spatial gra-dients of the similarity maps were\ncomputed for each seed vertex,\nand the gradient maps of individualsubjects were averaged across the\nsubjects. After spatial smoothing\n(FWHM = 6 mm), a two-dimen-sional watershed algorithm wasapplied to the gradient maps, and\nthe binary watershed maps were\naveraged across seed vertices togenerate a boundary probability\nmap. The watershed algorithm\nwas again applied to the boundaryprobability map to delineate parcel-\nlated regions.\nFor subsequent analyses, to\navoid non-uniform signal to noiseratio caused by the diﬀerent\nnumber of vertices in the parcels,\nwe deﬁned regions of interest(ROIs) of 40 vertices closest to\nthe centroid of each parcel. When\na parcel contained less than 40vertices, the ROI included all the\nvertices in the parcel.\n\n\nNetwork construction and\ncentrality calculation\nCorrelation coeﬃcients of prepro-\ncessed time-series of functional\nimages were calculated as themagnitude values of functional\nconnectivity between the parcels.\nThe correlation coeﬃcientsbetween the parcels weretransformed to zvalues using\nFisher transformation and then\nnormalized to the standard normaldistribution (average = 0 and\nstandard deviation = 1). Nodes of\nthe network represented the parcels, and edgesrepresented the connectivity. To deﬁne a binary\nundirected network for each subject, a proportional\nthreshold of 9% was performed on the matrix offunctional connectivity. The threshold was determinedbased on the clustering coeﬃcients such that the\nnumber of clusters (the structure of three nodes that\nwere all connected with each other via edges) in thenetwork was maximized using a reasonable number of\nedges ( Rubinov and Sporns, 2010; van den Heuvel and\nSporns, 2013; Sporns, 2014 ). The binarized matrix was\nFig. 2. Parcellated areas and ROIs. (A)Areal boundary in the whole cerebral cortex delineated using\nboundary mapping methods. Diﬀerent areas are indicated by diﬀerent colors. (B)Regions of interest\n(ROIs) in the delineated areas. Subsequent analyses were performed using the ROIs in these areasto match the number of vertices across diﬀerent areas.166 U. Fujimoto et al. / Neuroscience 433 (2020) 163–173\n\n---PAGEBREAK---\n\ntermed the adjacency matrix denoting the presence or\nabsence of functional connections. The centrality indexof each parcel was calculated using the adjacency matrix.\nWe employed the betweenness centrality that\nmeasures the proportion of shortest paths between allnode pairs in the network ( Freeman, 1978; Brandes,\n2001 ). We used the Brain Connectivity Toolbox\n(Rubinov and Sporns, 2010 ) to deﬁne the network and\ncalculate the betweenness centrality of each parcel. If\ninformation was conveyed in the network along the short-\nest path, a node with high betweenness centrality medi-ates a high proportion of information traﬃc. Such nodesmay control the information passage or may act as a bot-\ntleneck of information ﬂow. The betweenness centrality of\nnode i was calculated as the proportion of shortest pathsbetween nodes j and h that pass through node i.\nbi¼1\nN/C01ðÞ N/C02ðÞX\nh–i;h–j;j–iqhjiðÞ\nqhj;\nwhere, qhj(i) is the number of shortest paths between\nnodes hand jthat pass through node i, and qhjis the\nnumber of shortest paths between node hand node j.N\nis the number of nodes.\n\n\nIn total, 377 parcels (192 in left hemisphere and 185 in\nright hemisphere) were identiﬁed in the cortical surfaces\n(Fig. 2 A). ROIs consisted of 40 vertices closest to the\ncentroid ( Fig. 2 B). For the 57 parcels that contained\nless than 40 vertices, the ROI included all the vertices in\nthe parcel. The mean number of vertices in one ROI ofa parcel was 38.8 ± 3.7 (mean ± SD).\nCentrality index\nCorrelation between parcels were calculated on the basis\nof ROIs in the cortical parcels. The correlation matrix ofboth hemispheres was calculated and was binarized togenerate the adjacency matrix. Fig. 3 shows the\ncentrality index in the whole brain averaged across the\nsubjects. Parcels with high central index were observedin the supramarginal gyrus, anterior temporal cortex and\nprecuneus.\n\n\nWe also calculated the\nparticipation coeﬃcient, which\nmeasures the degree of inter-network interconnections of aregion that acts as a hub to\nfacilitate inter-network integration\n(Rubinov and Sporns, 2010 ). The\nparticipation coeﬃcient in ROI 1\nwas 0.37 ± 0.20, whereas that in\nROI 2 was 0.41 ± 0.20. The diﬀer-ence in centrality was not signiﬁ-\ncant ( t(19) = 0.57, p= 0.58). ROI\n1 did not show signiﬁcant correla-tion with the activity ( r= 0.28,\np= 0.23), nor did ROI 2\n(r=/C00.24, p= 0.31).\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4674,
+            "end": 4708,
+            "text": "10.1016/j.neuroscience.2020.03.010",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2685,
+            "end": 2693,
+            "text": "Elsevier",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4752,
+            "end": 4760,
+            "text": "Elsevier",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1222,
+            "end": 1235,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1689,
+            "end": 1693,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1705,
+            "end": 1718,
+            "text": "resting state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1773,
+            "end": 1786,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3311,
+            "end": 3324,
+            "text": "Resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2724,
+            "end": 2729,
+            "text": "words",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1660,
+            "end": 1671,
+            "text": "performance",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2352,
+            "end": 2365,
+            "text": "reaction time",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2423,
+            "end": 2434,
+            "text": "performance",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2617,
+            "end": 2628,
+            "text": "performance",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3598,
+            "end": 3611,
+            "text": "reaction time",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3725,
+            "end": 3736,
+            "text": "performance",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4612,
+            "end": 4625,
+            "text": "reaction time",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10099,
+            "end": 10107,
+            "text": "TR = 1.0",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10121,
+            "end": 10128,
+            "text": "TE = 30",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9658,
+            "end": 9665,
+            "text": "Siemens",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5009,
+            "end": 5013,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5724,
+            "end": 5728,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6051,
+            "end": 6055,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7526,
+            "end": 7539,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7827,
+            "end": 7840,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9209,
+            "end": 9213,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9281,
+            "end": 9294,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9388,
+            "end": 9401,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9406,
+            "end": 9410,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9737,
+            "end": 9741,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10333,
+            "end": 10346,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10485,
+            "end": 10498,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6667,
+            "end": 6715,
+            "text": "instructed to press a button indicating the cor-",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7540,
+            "end": 7546,
+            "text": "images",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8604,
+            "end": 8616,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8627,
+            "end": 8633,
+            "text": "10 men",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8638,
+            "end": 8646,
+            "text": "10 women",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9072,
+            "end": 9098,
+            "text": "Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7575,
+            "end": 7583,
+            "text": "accuracy",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Fuse conform",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4792,
+            "end": 4793,
+            "text": "3",
+            "labels": [
+              "Fuse conform — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Fuse conform — Software"
+          ],
+          "id": "m0039"
+        },
+        {
+          "from_name": "Fuse conform",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8785,
+            "end": 8792,
+            "text": "conform",
+            "labels": [
+              "Fuse conform — Algorithm"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Fuse conform",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6337,
+            "end": 6343,
+            "text": "500 ms",
+            "labels": [
+              "Fuse conform — Parameters"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4792,
+            "end": 4793,
+            "text": "4",
+            "labels": [
+              "Unwarp — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Unwarp — Software"
+          ],
+          "id": "m0042"
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5359,
+            "end": 5364,
+            "text": "topup",
+            "labels": [
+              "Unwarp — Algorithm"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Unwarp",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6337,
+            "end": 6343,
+            "text": "500 ms",
+            "labels": [
+              "Unwarp — Parameters"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11997,
+            "end": 12003,
+            "text": "images",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10701,
+            "end": 10702,
+            "text": "6",
+            "labels": [
+              "INU correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "INU correction — Software"
+          ],
+          "id": "m0046"
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11602,
+            "end": 11613,
+            "text": "non-uniform",
+            "labels": [
+              "INU correction — Algorithm"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10815,
+            "end": 10819,
+            "text": "6 mm",
+            "labels": [
+              "INU correction — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10701,
+            "end": 10702,
+            "text": "7",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software"
+          ],
+          "id": "m0049"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10797,
+            "end": 10806,
+            "text": "smoothing",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10815,
+            "end": 10819,
+            "text": "6 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 17590,
+            "end": 17596,
+            "text": "images",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 20490,
+            "end": 20494,
+            "text": "PNAS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21928,
+            "end": 21932,
+            "text": "PNAS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 22877,
+            "end": 22881,
+            "text": "PNAS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 23937,
+            "end": 23943,
+            "text": "Nature",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 25715,
+            "end": 25719,
+            "text": "PLoS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27761,
+            "end": 27765,
+            "text": "PLoS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 22841,
+            "end": 22854,
+            "text": "event-related",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 23126,
+            "end": 23130,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 24266,
+            "end": 24279,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 24801,
+            "end": 24805,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 25213,
+            "end": 25217,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 25907,
+            "end": 25911,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 26178,
+            "end": 26191,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 26218,
+            "end": 26222,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27324,
+            "end": 27337,
+            "text": "event-related",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 21366,
+            "end": 21368,
+            "text": "RT",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 24777,
+            "end": 24788,
+            "text": "performance",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 25184,
+            "end": 25195,
+            "text": "performance",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 26842,
+            "end": 26853,
+            "text": "performance",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27864,
+            "end": 27867,
+            "text": "FSL",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 30777,
+            "end": 30781,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 30980,
+            "end": 30984,
+            "text": "TASK",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 31052,
+            "end": 31056,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 31164,
+            "end": 31177,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 31337,
+            "end": 31341,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 31377,
+            "end": 31381,
+            "text": "Task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 28450,
+            "end": 28456,
+            "text": "images",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 28545,
+            "end": 28553,
+            "text": "contrast",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 28591,
+            "end": 28597,
+            "text": "t-test",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 30821,
+            "end": 30834,
+            "text": "reaction time",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0082"
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27781,
+            "end": 27782,
+            "text": "12",
+            "labels": [
+              "Denoised — Step Number"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27864,
+            "end": 27867,
+            "text": "FSL",
+            "labels": [
+              "Denoised — Software"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 31258,
+            "end": 31267,
+            "text": "denoising",
+            "labels": [
+              "Denoised — Algorithm"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 30847,
+            "end": 30854,
+            "text": "52.4 ms",
+            "labels": [
+              "Denoised — Parameters"
+            ]
+          },
+          "id": "m0086"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27781,
+            "end": 27782,
+            "text": "13",
+            "labels": [
+              "ICA FIX — Step Number"
+            ]
+          },
+          "id": "m0087"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27864,
+            "end": 27867,
+            "text": "FSL",
+            "labels": [
+              "ICA FIX — Software"
+            ]
+          },
+          "id": "m0088"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 31197,
+            "end": 31204,
+            "text": "ICA-FIX",
+            "labels": [
+              "ICA FIX — Type"
+            ]
+          },
+          "id": "m0089"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 30847,
+            "end": 30854,
+            "text": "52.4 ms",
+            "labels": [
+              "ICA FIX — Parameters"
+            ]
+          },
+          "id": "m0090"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27781,
+            "end": 27782,
+            "text": "14",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0091"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27864,
+            "end": 27867,
+            "text": "FSL",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          },
+          "id": "m0092"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 28326,
+            "end": 28335,
+            "text": "high-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0093"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 30847,
+            "end": 30854,
+            "text": "52.4 ms",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0094"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27781,
+            "end": 27782,
+            "text": "15",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0095"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27864,
+            "end": 27867,
+            "text": "FSL",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          },
+          "id": "m0096"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 27954,
+            "end": 27962,
+            "text": "nuisance",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "id": "m0097"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 30847,
+            "end": 30854,
+            "text": "52.4 ms",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0098"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 32504,
+            "end": 32515,
+            "text": "comparisons",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "id": "m0099"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 34585,
+            "end": 34591,
+            "text": "t-test",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "id": "m0100"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 34925,
+            "end": 34931,
+            "text": "t-test",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "id": "m0101"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 36815,
+            "end": 36826,
+            "text": "performance",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0102"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 38350,
+            "end": 38354,
+            "text": "PLoS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0103"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 38394,
+            "end": 38400,
+            "text": "Nature",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0104"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 38849,
+            "end": 38853,
+            "text": "PLoS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0105"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 39127,
+            "end": 39136,
+            "text": "Cambridge",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0106"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 41031,
+            "end": 41035,
+            "text": "PNAS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0107"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 41555,
+            "end": 41559,
+            "text": "PLoS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0108"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 38608,
+            "end": 38621,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0109"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 39187,
+            "end": 39191,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0110"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 40594,
+            "end": 40607,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0111"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 40886,
+            "end": 40899,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0112"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 41663,
+            "end": 41676,
+            "text": "Resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0113"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 42026,
+            "end": 42039,
+            "text": "resting state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0114"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 42681,
+            "end": 42685,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0115"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43006,
+            "end": 43058,
+            "text": "U. Fujimoto et al. / Neuroscience 433 (2020) 163–173",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0116"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43060,
+            "end": 43120,
+            "text": "Network Centrality Reveals Dissociable Brain Activity during",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0117"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43229,
+            "end": 43233,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0118"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43302,
+            "end": 43315,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0119"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43404,
+            "end": 43417,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0120"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43502,
+            "end": 43506,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0121"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43790,
+            "end": 43794,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0122"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43800,
+            "end": 43804,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0123"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43873,
+            "end": 43924,
+            "text": "instructed to respond using the button, but in Stop",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0124"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43658,
+            "end": 43664,
+            "text": "images",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0125"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44595,
+            "end": 44603,
+            "text": "matching",
+            "labels": [
+              "Group matching"
+            ]
+          },
+          "id": "m0126"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43752,
+            "end": 43765,
+            "text": "reaction time",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0127"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44015,
+            "end": 44017,
+            "text": "RT",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0128"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44019,
+            "end": 44032,
+            "text": "reaction time",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0129"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43122,
+            "end": 43123,
+            "text": "16",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "id": "m0130"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44255,
+            "end": 44258,
+            "text": "FIX",
+            "labels": [
+              "Exclusion — Software"
+            ]
+          },
+          "id": "m0131"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 45108,
+            "end": 45116,
+            "text": "excluded",
+            "labels": [
+              "Exclusion — Algorithm"
+            ]
+          },
+          "id": "m0132"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44873,
+            "end": 44880,
+            "text": "0.25 mm",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "id": "m0133"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43122,
+            "end": 43123,
+            "text": "17",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0134"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44255,
+            "end": 44258,
+            "text": "FIX",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          },
+          "id": "m0135"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44869,
+            "end": 44874,
+            "text": "FD >0",
+            "labels": [
+              "Scrubbing — Algorithm"
+            ]
+          },
+          "id": "m0136"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44873,
+            "end": 44880,
+            "text": "0.25 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0137"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43122,
+            "end": 43123,
+            "text": "13",
+            "labels": [
+              "ICA FIX — Step Number"
+            ]
+          },
+          "id": "m0138"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44255,
+            "end": 44258,
+            "text": "FIX",
+            "labels": [
+              "ICA FIX — Software"
+            ]
+          },
+          "id": "m0139"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44251,
+            "end": 44258,
+            "text": "ICA-FIX",
+            "labels": [
+              "ICA FIX — Type"
+            ]
+          },
+          "id": "m0140"
+        },
+        {
+          "from_name": "ICA FIX",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 44873,
+            "end": 44880,
+            "text": "0.25 mm",
+            "labels": [
+              "ICA FIX — Parameters"
+            ]
+          },
+          "id": "m0141"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 45485,
+            "end": 45489,
+            "text": "PLoS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0142"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 46656,
+            "end": 46660,
+            "text": "PLoS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0143"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 50477,
+            "end": 50481,
+            "text": "PLoS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0144"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 51285,
+            "end": 51289,
+            "text": "PNAS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0145"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 52661,
+            "end": 52665,
+            "text": "PNAS",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0146"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 51908,
+            "end": 51911,
+            "text": "FSL",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0147"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 47006,
+            "end": 47019,
+            "text": "event-related",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0148"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 47832,
+            "end": 47845,
+            "text": "event-related",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0149"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 48971,
+            "end": 48975,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0150"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 49697,
+            "end": 49710,
+            "text": "Event-related",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0151"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 52014,
+            "end": 52018,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0152"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 52680,
+            "end": 52684,
+            "text": "task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0153"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 49174,
+            "end": 49182,
+            "text": "matching",
+            "labels": [
+              "Group matching"
+            ]
+          },
+          "id": "m0154"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 48847,
+            "end": 48849,
+            "text": "RT",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0155"
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 45123,
+            "end": 45124,
+            "text": "12",
+            "labels": [
+              "Denoised — Step Number"
+            ]
+          },
+          "id": "m0156"
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 51908,
+            "end": 51912,
+            "text": "FSL.",
+            "labels": [
+              "Denoised — Software"
+            ]
+          },
+          "id": "m0157"
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 50278,
+            "end": 50287,
+            "text": "denoising",
+            "labels": [
+              "Denoised — Algorithm"
+            ]
+          },
+          "id": "m0158"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 52741,
+            "end": 52784,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          },
+          "id": "m0159"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 52776,
+            "end": 52792,
+            "text": "boundary\nmapping",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          },
+          "id": "m0160"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54098,
+            "end": 54177,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type",
+              "Software"
+            ]
+          },
+          "id": "m0161"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54098,
+            "end": 54177,
+            "text": "regions of interest(ROIs) of 40 vertices closest to\nthe centroid of each parcel",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0162"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54324,
+            "end": 54357,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          },
+          "id": "m0163"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54324,
+            "end": 54484,
+            "text": "Correlation coeﬃcients of prepro-\ncessed time-series of functional\nimages were calculated as themagnitude values of functional\nconnectivity between the parcels.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0164"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54535,
+            "end": 54585,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0165"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54535,
+            "end": 54585,
+            "text": "transformed to zvalues using\nFisher transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "id": "m0166"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54595,
+            "end": 54682,
+            "text": "normalized to the standard normaldistribution (average = 0 and\nstandard deviation = 1).",
+            "labels": [
+              "Connectivity normalization — Parameters"
+            ]
+          },
+          "id": "m0167"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54779,
+            "end": 54804,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          },
+          "id": "m0168"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54779,
+            "end": 54804,
+            "text": "binary\nundirected network",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          },
+          "id": "m0169"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54825,
+            "end": 54867,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0170"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54825,
+            "end": 54867,
+            "text": "proportional\nthreshold of 9% was performed",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          },
+          "id": "m0171"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 54825,
+            "end": 54867,
+            "text": "proportional\nthreshold of 9% was performed",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0172"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 55856,
+            "end": 55878,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0173"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 56009,
+            "end": 56035,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0174"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 55856,
+            "end": 55878,
+            "text": "betweenness centrality",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0175"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 56427,
+            "end": 56531,
+            "text": "node i was calculated as the proportion of shortest pathsbetween nodes j and h that pass through node i.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0176"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 57575,
+            "end": 57598,
+            "text": "participation coeﬃcient",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0177"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 57371,
+            "end": 57436,
+            "text": "8",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          },
+          "id": "m0178"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 57371,
+            "end": 57436,
+            "text": "averaged across subjects",
+            "labels": [
+              "Result aggregation — Type"
+            ]
+          },
+          "id": "m0179"
+        }
+      ]
+    }
+  ]
+}

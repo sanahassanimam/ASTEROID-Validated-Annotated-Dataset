@@ -1,0 +1,836 @@
+{
+  "data": {
+    "text": "Title: The Contribution of Network Organization and Integration to the Development of Cognitive Control\nAuthors: Scott Marek; Kai Hwang; William Foran; Michael N. Hallquist; Beatriz Luna\nJournal: PLoS Biology (2015); DOI: 10.1371/journal.pbio.1002328\n\nData Availability Statement: All raw MRI files are available from the NITRC.org database using the following link: http://devrsfmri_2015.projects.nitrc.org/devrsfmri_2015.tar.bz2.\n\nParticipants: One hundred and ninety-five subjects aged 10–26 y participated in this study. Written informed consent was obtained from every subject and minors did sign assents. This research was approved by the University of Pittsburgh Institutional Review Board. Subjects were excluded if the subject or a first-degree relative currently or previously had a psychiatric disorder. Subjects included in this study were free from substance use or abuse. Data from three subjects were discarded due to excessive head motion. Therefore, we report data from 192 subjects.\n\nMR Data Acquisition: Data were acquired using a 12-channel Siemens 3T Tim Trio at the University of Pittsburgh Medical Center. We collected 300 s (200 TRs) of resting-state data. Structural images were acquired using a sagittal magnetization-prepared rapid gradient-echo sequence (TR = 1,570 ms, TE = 3.04 ms, flip angle = 8°, TI = 800 ms, voxel size = 0.78125 × 0.78125 × 1 mm). Functional images were acquired using an echo-planar sequence sensitive to BOLD contrast (T2*; TR = 1.5 s, TE = 29 ms, flip angle = 70°, voxel size = 3.125 × 3.125 mm in-plane resolution, 29 contiguous 4-mm axial slices). During the resting-state scan, subjects were asked to close their eyes and relax, but not fall asleep.\n\nRS-fMRI Preprocessing: Functional images were preprocessed using AFNI and Freesurfer. Standard preprocessing steps were completed, including (1) normalization based on global mode, (2) wavelet despiking, (3) simultaneous multiple regression of nuisance variables from BOLD data and bandpass filtering at 0.009 Hz < f > 0.08, and (4) spatial smoothing using a 6 mm full-width at half-maximum Gaussian blur. Freesurfer was used to segment gray matter, white matter, and ventricular voxels. Nuisance regressors included ventricular signal averaged from ventricular regions of interest (ROIs), six head realignment parameters obtained by rigid body head motion correction, and the derivatives of these signals and parameters. In addition to wavelet despiking, we removed any remaining high motion volumes via a scrubbing procedure. We censored and removed volumes that had an FD > 0.5 mm and DVARS > 5, as well as the frame preceding the motion artifact and the two subsequent frames. Because we collected 300 s of data, subjects were dropped entirely if >20% of their volumes were removed, leaving the minimum amount of rest data for any subject 240 s.\n\nFunctional Network Parcellation: Nodes (n = 264) were defined from the functional parcellation by Power et al. (2011). For each subject, the timeseries within each ROI were averaged and then correlated to produce a 264 × 264 correlation matrix.\n\nIndividual and Group Correlation Matrices: Any comparisons made between correlations were transformed to z values using Fisher z(r) transformation, and then reconverted to Pearson r values for reporting and visualization.\n\nNetwork Detection and Comparison: We explored a range of network densities from 1% to 25% and partitioned the full connectome into modules using Newman’s Q-metric coupled with the fast unfolding (Louvain/Blondel) optimization approach.\n\nComputations and Visualizations: AFNI and Freesurfer were used to process MRI images. We used the Brain Connectivity Toolbox in MATLAB for network computations and statistical testing, and BrainNet Viewer for brain visualizations.\n\nAntisaccade Task: Neutral trials were extracted from an incentivized antisaccade task, consisting of reward, loss, and neutral trials (40 of each type). Each neutral trial began with a white central fixation, which then turned red for 1.5 s, prompting subjects to prepare a response. Next, a peripheral stimulus (yellow dot at approximately 0.5 degree/visual angle) appeared at an unpredictable location on the horizontal meridian (±4 and 8 degrees/visual angle) for 1.5 s. Subjects were instructed to inhibit making a saccade towards the stimulus, and instead to saccade to the mirror location of the stimulus.\n\nEye Tracking: Eye data were scored offline by a technician for saccade metrics using ILAB software and an in-house scoring suite written in MATLAB. A correct antisaccade response was one in which the first saccade following stimulus onset was towards the mirror location of the stimulus and extended beyond a 2.5°/visual angle central fixation zone."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7,
+            "end": 103,
+            "text": "The Contribution of Network Organization and Integration to the Development of Cognitive Control",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 113,
+            "end": 186,
+            "text": "Scott Marek; Kai Hwang; William Foran; Michael N. Hallquist; Beatriz Luna",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 196,
+            "end": 208,
+            "text": "PLoS Biology",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 210,
+            "end": 214,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 222,
+            "end": 250,
+            "text": "10.1371/journal.pbio.1002328",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 367,
+            "end": 430,
+            "text": "http://devrsfmri_2015.projects.nitrc.org/devrsfmri_2015.tar.bz2",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1061,
+            "end": 1068,
+            "text": "Siemens",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1570,
+            "end": 1601,
+            "text": "29 contiguous 4-mm axial slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1501,
+            "end": 1517,
+            "text": "flip angle = 70°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1142,
+            "end": 1147,
+            "text": "300 s",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1658,
+            "end": 1684,
+            "text": "close their eyes and relax",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1477,
+            "end": 1487,
+            "text": "TR = 1.5 s",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1489,
+            "end": 1499,
+            "text": "TE = 29 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1537,
+            "end": 1556,
+            "text": "3.125 × 3.125 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 987,
+            "end": 999,
+            "text": "192 subjects",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1773,
+            "end": 1777,
+            "text": "AFNI",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1161,
+            "end": 1179,
+            "text": "resting-state data",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 489,
+            "end": 496,
+            "text": "10–26 y",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 987,
+            "end": 999,
+            "text": "192 subjects",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 698,
+            "end": 814,
+            "text": "Subjects were excluded if the subject or a first-degree relative currently or previously had a psychiatric disorder.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 886,
+            "end": 955,
+            "text": "Data from three subjects were discarded due to excessive head motion.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 670,
+            "end": 696,
+            "text": "Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4271,
+            "end": 4408,
+            "text": "Subjects were instructed to inhibit making a saccade towards the stimulus, and instead to saccade to the mirror location of the stimulus.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4110,
+            "end": 4161,
+            "text": "yellow dot at approximately 0.5 degree/visual angle",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3932,
+            "end": 3947,
+            "text": "40 of each type",
+            "labels": [
+              "Stimuli repetition"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1853,
+            "end": 1887,
+            "text": "normalization based on global mode",
+            "labels": [
+              "Intensity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1876,
+            "end": 1887,
+            "text": "global mode",
+            "labels": [
+              "Intensity normalization — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Intensity normalization — Software",
+            "Intensity normalization — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1893,
+            "end": 1910,
+            "text": "wavelet despiking",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1893,
+            "end": 1910,
+            "text": "wavelet despiking",
+            "labels": [
+              "Despiking — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Despiking — Software",
+            "Despiking — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1929,
+            "end": 1970,
+            "text": "multiple regression of nuisance variables",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1929,
+            "end": 1970,
+            "text": "multiple regression of nuisance variables",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1990,
+            "end": 2031,
+            "text": "bandpass filtering at 0.009 Hz < f > 0.08",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1990,
+            "end": 2008,
+            "text": "bandpass filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2012,
+            "end": 2031,
+            "text": "0.009 Hz < f > 0.08",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2067,
+            "end": 2112,
+            "text": "6 mm full-width at half-maximum Gaussian blur",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2067,
+            "end": 2112,
+            "text": "6 mm full-width at half-maximum Gaussian blur",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2137,
+            "end": 2194,
+            "text": "segment gray matter, white matter, and ventricular voxels",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1782,
+            "end": 1792,
+            "text": "Freesurfer",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Segmentation — Algorithm",
+            "Segmentation — Parameters"
+          ]
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2225,
+            "end": 2289,
+            "text": "ventricular signal averaged from ventricular regions of interest",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2225,
+            "end": 2289,
+            "text": "ventricular signal averaged from ventricular regions of interest",
+            "labels": [
+              "Extract regressors — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Extract regressors — Software",
+            "Extract regressors — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2342,
+            "end": 2375,
+            "text": "rigid body head motion correction",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2342,
+            "end": 2375,
+            "text": "rigid body head motion correction",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2515,
+            "end": 2534,
+            "text": "scrubbing procedure",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2515,
+            "end": 2534,
+            "text": "scrubbing procedure",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2580,
+            "end": 2605,
+            "text": "FD > 0.5 mm and DVARS > 5",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Software"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2725,
+            "end": 2792,
+            "text": "subjects were dropped entirely if >20% of their volumes were removed",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2725,
+            "end": 2921,
+            "text": "subjects were dropped entirely if >20% of their volumes were removed, leaving the minimum amount of rest data for any subject 240 s",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2892,
+            "end": 2920,
+            "text": "Nodes (n = 264) were defined",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2899,
+            "end": 2906,
+            "text": "n = 264",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3000,
+            "end": 3040,
+            "text": "timeseries within each ROI were averaged",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3000,
+            "end": 3040,
+            "text": "timeseries within each ROI were averaged",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3045,
+            "end": 3102,
+            "text": "then correlated to produce a 264 × 264 correlation matrix",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3050,
+            "end": 3060,
+            "text": "correlated",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software",
+            "Compute connectivity — Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3225,
+            "end": 3251,
+            "text": "Fisher z(r) transformation",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3225,
+            "end": 3251,
+            "text": "Fisher z(r) transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Connectivity normalization — Software",
+            "Connectivity normalization — Parameters"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3408,
+            "end": 3417,
+            "text": "1% to 25%",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3408,
+            "end": 3417,
+            "text": "1% to 25%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Sparsity control — Software",
+            "Sparsity control — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3539,
+            "text": "Louvain/Blondel",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3524,
+            "end": 3539,
+            "text": "Louvain/Blondel",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Network definition — Software",
+            "Network definition — Parameters"
+          ]
+        }
+      ]
+    }
+  ]
+}

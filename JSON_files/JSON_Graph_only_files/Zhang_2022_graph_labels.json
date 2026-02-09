@@ -1,0 +1,448 @@
+{
+  "data": {
+    "title": "Brain Network Topology and Structural–Functional Connectivity Coupling Mediate the Association Between Gut Microbiota and Cognition.",
+    "text": "Structural and Functional Brain Network\nConstruction\nWhole-brain SC and FC matrices for each individual subject\nwere reconstructed, consisting of 90 cortical areas, reﬂecting a\nsubdivision of the Automated Anatomical Labeling (AAL) atlas\n(Tzourio-Mazoyer et al., 2002). For structural brain network, we\nreconstructed streamlines between these areas and calculated the\nnumber of ﬁbers (with end points located in both nodes during\nthe ﬁber tracking) between any pairs of nodes, resulting in a\n90\u000290 ﬁber number (FN) matrix for each subject. Two nodes\nwere considered structurally connected when the FN between\nthem was at least 3 (for details, see Supplementary Methods ).\nFor resting-state data, regional time series were calculated as the\nmean across voxels within each region included in the brain\nparcellation. For each individual, Pearson’s correlations were\ncalculated between the time series of all regions to calculate FC.\nFinally, a Fisher z-transformation was applied to the FC matrices\n(for details, see Supplementary Methods ).\n\nNetwork Topological Metrics\nGraph theoretical analyses were carried out on structural and\nfunctional network using GRETNA software5(Wang et al.,\n2015). We calculated both global and regional topological\nmetrics for each individual. The global network metrics\nincluded global eﬃciency (E glob, the eﬃciency of information\ntransfer through the entire graph), local eﬃciency (E loc, the\naverage eﬃciency of information transfer over a node’s direct\nneighbors), and ﬁve small-world property metrics (Watts and\nStrogatz, 1998). The small-world property metrics included\nthe clustering coeﬃcient (Cp, the average inter-connectedness\nof a node’s direct neighbors), characteristic path length\n(Lp, the average shortest path length between any pairs of\nnodes), normalized clustering coeﬃcient ( Gamma , the ratio\nof clustering coeﬃcients between real and random networks),\nnormalized characteristic path length ( Lambda , the ratio of the\ncharacteristic path lengths between real and random networks),\nand small-worldness property ( SigmaDGamma /Lambda , a\nscalar quantitative measurement of the small-worldness of a\nnetwork) ( Supplementary Figure 1 ). For the regional network\nmetrics, we evaluated nodal degree centrality (D nodal ), nodal\neﬃciency (E nodal ), and nodal betweenness (B nodal ) (Rubinov\nand Sporns, 2010). The number of random networks was\nset as 100. Binary graph methods for global and regional\ntopological metrics were used, as they were computationally\nstraightforward and provided for simpler interpretation (for\ndetails, see Supplementary Methods ). For FC matrix, we applied\na range of sparsity thresholds (range of 0.10–0.34 with an interval\nof 0.01) to ensure the generated networks were estimable for\nsmall-worldness and had sparse properties with the minimum\npossible number of spurious edges (Zhang J. et al., 2011;\n4http://rfmri.org/dpabi\n5http://www.nitrc.org/projects/Gretna\n\nFIGURE 1 | Flowchart of the study design. DTI, diffusion tensor imaging; FC, functional connectivity; rs-fMRI, resting-state functional magnetic resonance imaging;\nSC, structural connectivity.\nLei et al., 2015; Suo et al., 2015). The area under the curve\n(AUC) for each network metric was calculated for subsequent\nanalysis, which provided a summarized scalar for the topological\ncharacterization of brain networks. Since the integrated AUC\nmetric is independent of a single threshold selection and is\nsensitive to topological alterations of brain disorders, it has been\nextensively used in brain network studies (He et al., 2009; Wang\net al., 2009; Zhang J. et al., 2011; Lei et al., 2015; Suo et al., 2015).\n\nStructural–Functional Connectivity\nCoupling\nStructural–functional connectivity coupling was assessed by the\ncorrelation coeﬃcient between strengths of the structural and\nfunctional networks. To this end, non-zero SC edges were\nextracted to form a vector of SC values, which was further\nnormalized using a log transformation (Collin et al., 2017; Hearne\net al., 2019; Koubiyr et al., 2019). The resulting SC values were\ncorrelated with corresponding FC values (i.e., the same edges)in the level of brain regions. Finally, this analysis produced 90\nPearson’s r values representing the SC–FC coupling of 90 cortical\nareas for each individual subject."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 196,
+            "end": 237,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 196,
+            "end": 237,
+            "text": "Automated Anatomical Labeling (AAL) atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 132,
+            "end": 163,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 132,
+            "end": 163,
+            "text": "consisting of 90 cortical areas",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 696,
+            "end": 732,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 740,
+            "end": 777,
+            "text": "mean across voxels within each region",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 835,
+            "end": 873,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 835,
+            "end": 873,
+            "text": "Pearson’s correlations were\ncalculated",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 941,
+            "end": 964,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 941,
+            "end": 964,
+            "text": "Fisher z-transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2402,
+            "end": 2422,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2402,
+            "end": 2422,
+            "text": "Binary graph methods",
+            "labels": [
+              "Graph characteristics — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 492,
+            "end": 521,
+            "text": "90\u000290 ﬁber number (FN) matrix",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 598,
+            "end": 628,
+            "text": "FN between\nthem was at least 3",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2634,
+            "end": 2662,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2634,
+            "end": 2662,
+            "text": "range of sparsity thresholds",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2673,
+            "end": 2707,
+            "text": "0.10–0.34 with an interval\nof 0.01",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1068,
+            "end": 1111,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1155,
+            "end": 1170,
+            "text": "GRETNA software",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1308,
+            "end": 1331,
+            "text": "global eﬃciency (E glob",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1397,
+            "end": 1418,
+            "text": "local eﬃciency (E loc",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1506,
+            "end": 1534,
+            "text": "small-world property metrics",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2232,
+            "end": 2266,
+            "text": "nodal degree centrality (D nodal )",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2274,
+            "end": 2293,
+            "text": "eﬃciency (E nodal )",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2299,
+            "end": 2327,
+            "text": "nodal betweenness (B nodal )",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2356,
+            "end": 2401,
+            "text": "The number of random networks was\nset as 100.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3696,
+            "end": 3842,
+            "text": "Structural–functional connectivity coupling was assessed by the\ncorrelation coeﬃcient between strengths of the structural and\nfunctional networks.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3938,
+            "end": 3975,
+            "text": "normalized using a log transformation",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3175,
+            "end": 3201,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3175,
+            "end": 3240,
+            "text": "area under the curve\n(AUC) for each network metric was calculated",
+            "labels": [
+              "Result aggregation — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3272,
+            "end": 3355,
+            "text": "provided a summarized scalar for the topological\ncharacterization of brain networks",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

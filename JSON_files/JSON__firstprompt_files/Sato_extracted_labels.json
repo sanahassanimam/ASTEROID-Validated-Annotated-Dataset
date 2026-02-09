@@ -1,0 +1,1068 @@
+{
+  "data": {
+    "text": "Decreased centrality of subcortical regions during the transition to adolescence: A functional connectivity study\nNeuroImage 104 (2015) 44–51\nhttp://dx.doi.org/10.1016/j.neuroimage.2014.09.063\nArticle history:\nAccepted 26 September 2014\nAvailable online 5 October 2014\n\nParticipants\nThe participants of this study are a subsample (N = 447, healthy children) of the High Risk Cohort Study for Psychiatric Disorders in Childhood (HRC, N = 2512 children). The current investigation was based on healthy children from two different Brazilian centers in the cities of São Paulo and Porto Alegre. The study was approved by the local ethics committee (University of Sao Paulo, IORG0004884, 1138/08) and required written consent from all parents and verbal assent from all children. From these, 447 children were healthy and presented typical development (229 males; mean age ± standard deviation: 9.51 ± 1.92, from 7 to 15 years old; 248 scanned at São Paulo and 199 at Porto Alegre).\n\nImage acquisition and resting state protocol\nThe image acquisition was carried out in two 1.5-T MRI scanners (models Signa HDX and HD from G.E., United States of America) using the same parameters and protocols. Functional MRI acquisition consisted of 180 EPI volumes (TR = 2000 ms, TE = 30 ms, slice thickness = 4 mm, gap = 0.5 mm, flip angle = 80°, matrix size = 80 × 80, NEX = 1, slices = 26, total acquisition time = 6 min). The fMRI images were obtained during a resting state protocol with the eyes open and a fixation point (a small black dot painted inside the magnet). Anatomical T1-weighted scans were acquired in a maximum of 156 axial slices (TR = 10.916 ms, TE = ms 4.2, thickness =1.2 mm, flip angle = 15°, matrix size = 256 × 192, FOV = 245 mm, NEX = 1, bandwidth = 122.109).\n\nBrain imaging and connectivity analysis\nFunctional and structural data processing was carried out using AFNI (version 2011_12_21_1014) and FSL (version 5.0) packages. The preprocessing steps were carried out in the following order: EPI images had their first four volumes discarded to achieve steady state and the skull stripped to improve registration. The images were subsequently motion corrected, despiked and normalized to a grand-mean of 10,000. Next, the data were band-pass filtered to frequencies between 0.01 Hz and 0.1 Hz and detrended using first- and second-order polynomials. The data were spatially smoothed using a Gaussian kernel (FWHM = 8 mm) and linearly registered to their respective structural scan. Structural images were also skull-stripped and registered to standard space using the Montreal Neurological Institute (MNI) template. This transformation was used to create a map from the volunteers’ functional native space to the standard space by nonlinear registration procedures (FNIRT). Nuisance covariates (averaged time series of voxels inside the CSF and white matter, global signal as well as the six linear parameters of motion) were extracted from functional images using brain masks created by FAST based on the volunteers’ structural scan. Lastly, the residuals after regressing out the nuisance covariates from the functional data were linearly resampled to standard space using FEAT.\n\nIt has been alleged that head motion is one of the main sources of variation in functional connectivity measures. Volumes were excluded (flagged scan, one before and two after) if the respective frame-wise displacement (FD) or the temporal derivative of the RMS variance over the voxels (DVARS) was larger than the 95% percentile of the whole sample.\n\nA whole-brain analysis was carried out based on the average BOLD signal of 325 similarly sized and functionally homogenous regions of interest (ROIs), defined in accordance to the AT325 atlas. Pearson's correlations between the signals of pairs of regions were used as the measure of functional connectivity. As short-distance correlations may arise due to smoothing, slicing and head movement, we removed the short-distance connections (less than 20 mm) from the correlation matrix.\n\nAn exploratory analysis was performed. A whole brain functional connectivity mapping between the seed-ROIs and the other ROIs was performed with a general linear model. This model considered the Fisher transform of the correlation coefficient between the BOLD signals as the response variable, age (and age squared) as main regressor, and both site and gender as covariates."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 113,
+            "text": "Decreased centrality of subcortical regions during the transition to adolescence: A functional connectivity study",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 142,
+            "end": 192,
+            "text": "http://dx.doi.org/10.1016/j.neuroimage.2014.09.063",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 130,
+            "end": 134,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 114,
+            "end": 124,
+            "text": "NeuroImage",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 237,
+            "end": 268,
+            "text": "Available online 5 October 2014",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1065,
+            "end": 1087,
+            "text": "two 1.5-T MRI scanners",
+            "labels": [
+              "Multicenter study? (Y/N)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1096,
+            "end": 1122,
+            "text": "Signa HDX and HD from G.E.",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1362,
+            "end": 1373,
+            "text": "slices = 26",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1274,
+            "end": 1296,
+            "text": "slice thickness = 4 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1312,
+            "end": 1328,
+            "text": "flip angle = 80°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1298,
+            "end": 1310,
+            "text": "gap = 0.5 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1375,
+            "end": 1405,
+            "text": "total acquisition time = 6 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1479,
+            "end": 1488,
+            "text": "eyes open",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1725,
+            "end": 1737,
+            "text": "FOV = 245 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1248,
+            "end": 1260,
+            "text": "TR = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1262,
+            "end": 1272,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1875,
+            "end": 1927,
+            "text": "AFNI (version 2011_12_21_1014) and FSL (version 5.0)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1001,
+            "end": 1014,
+            "text": "resting state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 331,
+            "end": 338,
+            "text": "N = 447",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 331,
+            "end": 338,
+            "text": "N = 447",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 848,
+            "end": 857,
+            "text": "229 males",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 903,
+            "end": 925,
+            "text": "from 7 to 15 years old",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 805,
+            "end": 846,
+            "text": "healthy and presented typical development",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 514,
+            "end": 545,
+            "text": "two different Brazilian centers",
+            "labels": [
+              "Group matching"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 645,
+            "end": 690,
+            "text": "University of Sao Paulo, IORG0004884, 1138/08",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1495,
+            "end": 1528,
+            "text": "fixation point (a small black dot",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2024,
+            "end": 2052,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2024,
+            "end": 2052,
+            "text": "first four volumes discarded",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2081,
+            "end": 2123,
+            "text": "2",
+            "labels": [
+              "Skull extraction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2085,
+            "end": 2099,
+            "text": "skull stripped",
+            "labels": [
+              "Skull extraction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2141,
+            "end": 2170,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2154,
+            "end": 2170,
+            "text": "motion corrected",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2172,
+            "end": 2180,
+            "text": "4",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2172,
+            "end": 2180,
+            "text": "despiked",
+            "labels": [
+              "Despiking — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Grand mean scaling",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2185,
+            "end": 2221,
+            "text": "5",
+            "labels": [
+              "Grand mean scaling — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Grand mean scaling",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2201,
+            "end": 2221,
+            "text": "grand-mean of 10,000",
+            "labels": [
+              "Grand mean scaling — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2243,
+            "end": 2303,
+            "text": "6",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2243,
+            "end": 2252,
+            "text": "band-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2285,
+            "end": 2303,
+            "text": "0.01 Hz and 0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2308,
+            "end": 2359,
+            "text": "7",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2308,
+            "end": 2317,
+            "text": "detrended",
+            "labels": [
+              "Temporal detrending — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2324,
+            "end": 2359,
+            "text": "first- and second-order polynomials",
+            "labels": [
+              "Temporal detrending — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2375,
+            "end": 2431,
+            "text": "8",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2419,
+            "end": 2430,
+            "text": "FWHM = 8 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2436,
+            "end": 2491,
+            "text": "9",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2436,
+            "end": 2455,
+            "text": "linearly registered",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2493,
+            "end": 2535,
+            "text": "10",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2521,
+            "end": 2535,
+            "text": "skull-stripped",
+            "labels": [
+              "Skull stripping — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2540,
+            "end": 2625,
+            "text": "11",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2579,
+            "end": 2625,
+            "text": "Montreal Neurological Institute (MNI) template",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2777,
+            "end": 2782,
+            "text": "FNIRT",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2785,
+            "end": 2946,
+            "text": "12",
+            "labels": [
+              "Extract regressors — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2785,
+            "end": 2804,
+            "text": "Nuisance covariates",
+            "labels": [
+              "Extract regressors — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Extract regressors",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2999,
+            "end": 3003,
+            "text": "FAST",
+            "labels": [
+              "Extract regressors — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2870,
+            "end": 2883,
+            "text": "13",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2870,
+            "end": 2883,
+            "text": "global signal",
+            "labels": [
+              "Global signal — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2899,
+            "end": 2930,
+            "text": "14",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2910,
+            "end": 2930,
+            "text": "parameters of motion",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2830,
+            "end": 2868,
+            "text": "15",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2848,
+            "end": 2868,
+            "text": "CSF and white matter",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3307,
+            "end": 3369,
+            "text": "16",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3344,
+            "end": 3368,
+            "text": "one before and two after",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3508,
+            "end": 3522,
+            "text": "95% percentile",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3143,
+            "end": 3190,
+            "text": "17",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3186,
+            "end": 3190,
+            "text": "FEAT",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1875,
+            "end": 1905,
+            "text": "AFNI (version 2011_12_21_1014)",
+            "labels": [
+              "Denoised — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Step Number",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1910,
+            "end": 1927,
+            "text": "FSL (version 5.0)",
+            "labels": [
+              "Denoised — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "Step Number",
+            "Algorithm",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3725,
+            "end": 3736,
+            "text": "18",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3725,
+            "end": 3736,
+            "text": "AT325 atlas",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3738,
+            "end": 3760,
+            "text": "19",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3738,
+            "end": 3760,
+            "text": "Pearson's correlations",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3983,
+            "end": 3998,
+            "text": "less than 20 mm",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4225,
+            "end": 4272,
+            "text": "20",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4225,
+            "end": 4241,
+            "text": "Fisher transform",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

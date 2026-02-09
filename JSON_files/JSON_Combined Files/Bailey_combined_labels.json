@@ -1,0 +1,1020 @@
+{
+  "data": {
+    "text": "Applying a network framework to the neurobiology of reading and dyslexia\nStephen K. Bailey, Katherine S. Aboud, Tin Q. Nguyen and Laurie E. Cutting*\nJournal of Neurodevelopmental Disorders (2018) 10:37\nhttps://doi.org/10.1186/s11689-018-9251-z\n\nParticipants Participants were scanned in the summer\nand fall following completion of third or fourth grade (ages\n8–11). All participants met the following criteria: native\nEnglish speakers; normal hearing; normal or corrected-\nto-normal vision; no history of major psychiatric illness\nor traumatic brain injury/epilepsy; and no contraindica-\ntion to MRI. Participants and their parents gave written\nconsent to participate at the beginning of the study, with\nprocedures carried out in accordance with Vanderbilt\nUniversity’s Institutional Review Board (IRB).\n\nTable 1 Demographics for study participants\n\nGrade 3 Grade 4\n\nParticipants 50 45 (15 new)\n\nScan runs 152 162\n\nGender 24 F, 26 M 23 F, 22 M\n\nAge at scan (SD) 9.45 (0.3) 10.5 (0.3)\n\nWASI Full-Scale IQ (SD) 113.0 (15.5) 111.0 (15.9)\n\nTOWRE - Total Word Efficiency (SD) 109.9 (14.8) 104.6 (17.4)\n\nFunctional MRI data In the MRI scanner, participants\nperformed up to four runs of a language comprehension\ntask, which was crossed on two conditions: the modal-\nity of presentation (listening or reading) and the passage\ngenre (expository or narrative). Each fMRI run had two\nbaseline conditions: a modality-specific baseline task and\na resting-state block with a fixation cross. The order and\nduration for each block varied slightly across runs but was\napproximately: paragraph 1 (70 s), baseline 1 (70 s), para-\ngraph 2 (70 s), baseline 2 (70 s), and resting-state (270 s).\nTotal scan time was 550 s for all runs, and the average\namount of resting-state baseline was 272 s (4 m, 32 s)\nper run.\n\nIn total, resting-state data from 50 children\nin the third wave (152 scans) and 45 children in the fourth\nwave (162 scans) met inclusion criteria.\n\nImaging acquisition and preprocessing All fMRI\nscans were acquired at Vanderbilt University Institute\nof Imaging Sciences on one of two Philips Achieva 3T\nMR scanners with a 32-channel head coil. Functional\nimages were acquired using a gradient echo planar imag-\ning sequence with 40 slices acquired parallel to the\nanterior-posterior commissure plane. Additional imag-\ning parameters for functional images were 250 dynamics;\nTR = 2200 ms; TE = 30 ms; FOV = 240× 240× 120 mm;\nflip angle = 75◦ ; voxel size = 3 × 3 × 3.2 mm3.\nAll scans were first preprocessed using a standard\npipeline in FSL (version 5.0.9), and connectivity anal-\nysis was performed in the CONN toolbox. fMRI data\nwere high-pass filtered at 0.008 Hz, motion-corrected, co-\nregistered to a structural image, normalized to MNI space\nand smoothed by a 5-mm FWHM spherical kernel. Out-\nlier volumes were identified as individual fMRI volumes\nin which the RMS framewise-displacement exceeded 0.7.\nfMRI timeseries were corrected using anatCompCorr\nmethods, which uses signal from white matter tissue and\ncerebrospinal fluid areas to reduce noise not related to\nbrain activity. Other covariates of no interest included\nsix rigid motion parameters, six derivative motion param-\neters, and outlier volumes. Finally, we used a weighted\ngeneral linear model (GLM) to model the resting block\nand averaged within-subject across scan sessions to get a\nde-noised resting-state timeseries.\n\nAvailability of data andmaterials\nData used in the present analyses, as well as links to original sources, is available\non Github at https://github.com/EBRL/JNDD_ReadingNetworkFramework.\n\nEthics approval and consent to participate\nParticipants and their parents gave written consent to participate at the\nbeginning of the study, with procedures carried out in accordance with\nVanderbilt University’s Institutional Review Board (IRB).\n\nNetwork definition\nTo build off of previous work, we created networks using 264 nodes originally published by Power and colleagues (2011) [31]. The node set covers the entire brain, including subcortical areas, and has been extensively used in graph theory analyses since its publication (e.g., [32–34]). Suggested RSN assignments for each node, totaling 13 unique networks, are also available and were used to partition the network into different RSNs. fMRI timeseries correlations were calculated between each of the 264 nodes, resulting in a single connectivity array for each subject at each time point. Matrices were then thresholded into binary maps at r = 0.15. (To confirm that this particular threshold did not unduly influence results, we also tested thresholds at r = 0.05, 0.10 and 0.20. No significant effect on the results was found.)\n\nNetwork analysis\nGlobal modularity (Q) quantifies how well the whole-brain network segregates into component RSNs. High modularity indicates that the network has much higher connectivity within RSNs compared to between RSNs; low modularity suggests that nodes do not segregate into RSNs well. For undirected and binary networks, each connection in the array is given a positive value if it links nodes in the same RSN, and it is then weighted based on the degree of each node and the total network. (For a detailed treatment, see [35].) Connection-level values were aggregated to get node-by-node and global measures of modularity for each individual, which were then mean-centered and scaled to unit variance.\n\nA GLM was used to determine the relationship between global modularity and individual performance on the TOWRE (total word efficiency, standard score). If subject data was available at multiple timepoints (n = 30), it was averaged together to produce a single value. Multiple supplementary analyses were also completed to ensure that effects were not driven by cohort or motion confounds: models were also analyzed for grades 3 and 4 separately, and also when including a measure of subject motion (mean global signal change). We also examined whether there were differences in the modularity relationship between TOWRE subtests (sight word efficiency (SWE) and phonemic decoding efficiency (PDE)).\n\nTo test whether there was an RSN-level trend in the modularity-to-reading relationships, node modularity values were also investigated. For the set of nodes comprising each RSN, a one-sample t test was performed to see whether the RSN average was significantly greater than the global node average.\n\nMapping dyslexia abnormalities onto hub areas\nTwo decades of neuroimaging research have allowed a relative consensus to form as to which brain regions are commonly dysfunctional in dyslexia. To determine whether there was any pattern related to network architecture in these areas, we gathered all activations from three meta-analyses comparing fMRI responses for individuals with dyslexia to typical readers [7–9]. The meta-analyses encompassed a total of 68 studies comparing dyslexic and typically developing individuals. Sample populations included children and adults under different experimental conditions. All brain areas that showed atypical activation in dyslexia (either greater or less activity) were included. When an activation spanned a large area, all reported local maxima were included.\n\nTo get measures of hubness across the brain, we used data from a connectomics study by Power and colleagues [36]. That study reports the participation coefficient for each of the 264 nodes previously described. The participation coefficient reflects the diversity of a node’s connectivity to different RSNs, where a higher value indicates that the node is correlated with many different RSNs. Activations from the dyslexia meta-analyses were then mapped to the geometrically closest node from this dataset, resulting in a small set of dyslexia-related nodes and a larger, unaffected set. The nodes and descriptions, along with their suggested system and atlas label, are available as an Additional file 1.\n\nThe distribution of participation coefficients across the 264 nodes was non-normal, with a large group of areas having low participation coefficients (i.e., affiliated with few RSNs) and a smaller hub-like group. Therefore, a Wilcoxon rank-sum test was performed on the participation coefficients for the two groups, which tests for the equivalence of two distributions in a non-parametric fashion.\n\nAcross the three meta-analyses, 32 of the 264 nodes showed abnormal functioning in dyslexia. Figure 3 shows the node-by-node distribution of participation coefficients for the entire set. The median participation coefficient for unaffected nodes was 1.47; for dyslexia-related nodes it was 3.28. A Wilcoxon rank-sum test between the dyslexia and unaffected nodes showed that dyslexia affects brain areas with higher participation coefficients than would otherwise be expected (U = 4946.0, p <0.001)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 73,
+            "end": 148,
+            "text": "Stephen K. Bailey, Katherine S. Aboud, Tin Q. Nguyen and Laurie E. Cutting*",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 72,
+            "text": "Applying a network framework to the neurobiology of reading and dyslexia",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 190,
+            "end": 194,
+            "text": "2018",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 149,
+            "end": 201,
+            "text": "Journal of Neurodevelopmental Disorders (2018) 10:37",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 202,
+            "end": 243,
+            "text": "https://doi.org/10.1186/s11689-018-9251-z",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3518,
+            "end": 3570,
+            "text": "https://github.com/EBRL/JNDD_ReadingNetworkFramework",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3518,
+            "end": 3570,
+            "text": "https://github.com/EBRL/JNDD_ReadingNetworkFramework",
+            "labels": [
+              "Code"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3761,
+            "end": 3817,
+            "text": "Vanderbilt University’s Institutional Review Board (IRB)",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 353,
+            "end": 364,
+            "text": "(ages\n8–11)",
+            "labels": [
+              "Age"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness"
+          ],
+          "id": "m0009"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 915,
+            "end": 943,
+            "text": "Gender 24 F, 26 M 23 F, 22 M",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 411,
+            "end": 600,
+            "text": "native\nEnglish speakers; normal hearing; normal or corrected-\nto-normal vision; no history of major psychiatric illness\nor traumatic brain injury/epilepsy; and no contraindica-\ntion to MRI.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 880,
+            "end": 882,
+            "text": "50",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 883,
+            "end": 885,
+            "text": "45",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2078,
+            "end": 2096,
+            "text": "Philips Achieva 3T",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2223,
+            "end": 2232,
+            "text": "40 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2368,
+            "end": 2380,
+            "text": "TR = 2200 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2382,
+            "end": 2392,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2394,
+            "end": 2416,
+            "text": "FOV = 240× 240× 120 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2418,
+            "end": 2434,
+            "text": "flip angle = 75◦",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2437,
+            "end": 2465,
+            "text": "voxel size = 3 × 3 × 3.2 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1650,
+            "end": 1671,
+            "text": "resting-state (270 s)",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1693,
+            "end": 1698,
+            "text": "550 s",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1766,
+            "end": 1771,
+            "text": "272 s",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1432,
+            "end": 1475,
+            "text": "a resting-state block with a fixation cross",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2530,
+            "end": 2549,
+            "text": "FSL (version 5.0.9)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2600,
+            "end": 2612,
+            "text": "CONN toolbox",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1828,
+            "end": 1830,
+            "text": "50",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1874,
+            "end": 1876,
+            "text": "45",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1579,
+            "end": 1583,
+            "text": "70 s",
+            "labels": [
+              "Length of blocks"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2629,
+            "end": 2659,
+            "text": "1",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2629,
+            "end": 2659,
+            "text": "high-pass filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2651,
+            "end": 2659,
+            "text": "0.008 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ],
+          "id": "m0032"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2661,
+            "end": 2677,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2661,
+            "end": 2677,
+            "text": "motion-corrected",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ],
+          "id": "m0034"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2679,
+            "end": 2715,
+            "text": "3",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2679,
+            "end": 2715,
+            "text": "co-registered to a structural image",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Parameters"
+          ],
+          "id": "m0036"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2717,
+            "end": 2740,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2717,
+            "end": 2740,
+            "text": "normalized to MNI space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Parameters"
+          ],
+          "id": "m0038"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2745,
+            "end": 2785,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2745,
+            "end": 2785,
+            "text": "Gaussian spatial smoothing",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2759,
+            "end": 2768,
+            "text": "5-mm FWHM",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software"
+          ],
+          "id": "m0041"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2861,
+            "end": 2900,
+            "text": "6",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2861,
+            "end": 2900,
+            "text": "outlier volumes",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2897,
+            "end": 2900,
+            "text": "0.7",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Software"
+          ],
+          "id": "m0044"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2939,
+            "end": 2951,
+            "text": "7",
+            "labels": [
+              "aCompCor — Step Number"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2939,
+            "end": 2951,
+            "text": "anatCompCorr",
+            "labels": [
+              "aCompCor — Type"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "aCompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2600,
+            "end": 2612,
+            "text": "CONN toolbox",
+            "labels": [
+              "aCompCor — Software"
+            ]
+          },
+          "Missing_sublabels": [
+            "aCompCor — Parameters"
+          ],
+          "id": "m0047"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3122,
+            "end": 3206,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3122,
+            "end": 3206,
+            "text": "six rigid motion parameters, six derivative motion parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Algorithm"
+          ],
+          "id": "m0049"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3870,
+            "end": 3963,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ],
+          "id": "m0050"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3870,
+            "end": 3963,
+            "text": "we created networks using 264 nodes originally published by Power and colleagues (2011) [31].",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3870,
+            "end": 3963,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ],
+          "id": "m0052"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3870,
+            "end": 3963,
+            "text": "we created networks using 264 nodes originally published by Power and colleagues (2011) [31].",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4274,
+            "end": 4427,
+            "text": "3",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0054"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4274,
+            "end": 4427,
+            "text": "fMRI timeseries correlations were calculated between each of the 264 nodes, resulting in a single connectivity array for each subject at each time point.",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4963,
+            "end": 5168,
+            "text": "4",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ],
+          "id": "m0056"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4963,
+            "end": 5168,
+            "text": "For undirected and binary networks, each connection in the array is given a positive value if it links nodes in the same RSN, and it is then weighted based on the degree of each node and the total network.",
+            "labels": [
+              "Graph characteristics — Algorithm/Type"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4428,
+            "end": 4619,
+            "text": "5",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0058"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4428,
+            "end": 4619,
+            "text": "Correlation thresholding",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4428,
+            "end": 4619,
+            "text": "Matrices were then thresholded into binary maps at r = 0.15. (To confirm that this particular threshold did not unduly influence results, we also tested thresholds at r = 0.05, 0.10 and 0.20.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4687,
+            "end": 4784,
+            "text": "6",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4687,
+            "end": 4784,
+            "text": "Global modularity (Q) quantifies how well the whole-brain network segregates into component RSNs.",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7399,
+            "end": 7580,
+            "text": "The participation coefficient reflects the diversity of a node’s connectivity to different RSNs, where a higher value indicates that the node is correlated with many different RSNs.",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5382,
+            "end": 5533,
+            "text": "7",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ],
+          "id": "m0064"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5382,
+            "end": 5533,
+            "text": "A GLM was used to determine the relationship between global modularity and individual performance on the TOWRE (total word efficiency, standard score).",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6082,
+            "end": 6217,
+            "text": "To test whether there was an RSN-level trend in the modularity-to-reading relationships, node modularity values were also investigated.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8108,
+            "end": 8293,
+            "text": "Therefore, a Wilcoxon rank-sum test was performed on the participation coefficients for the two groups, which tests for the equivalence of two distributions in a non-parametric fashion.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8295,
+            "end": 8387,
+            "text": "Across the three meta-analyses, 32 of the 264 nodes showed abnormal functioning in dyslexia.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0068"
+        }
+      ]
+    }
+  ]
+}

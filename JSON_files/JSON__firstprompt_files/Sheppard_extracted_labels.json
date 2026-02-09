@@ -1,0 +1,757 @@
+{
+  "data": {
+    "text": "Large-Scale Cortical Functional Organization and Speech\nPerception across the Lifespan\nJohn P. Sheppard1,2¤, Ji-Ping Wang3, Patrick C. M. Wong1,4*\n\n\nCitation: Sheppard JP, Wang J-P, Wong PCM (2011) Large-Scale Cortical Functional Organization and Speech Perception across the Lifespan. PLoS ONE 6(1): e16510. doi:10.1371/journal.pone.0016510\n\n\nEthics Statement\nAll subjects in this experiment gave informed written consent prior to inclusion in the study and were compensated monetarily for their participation. All research was conducted under the approval of the Northwestern University Institutional Review Board, and thus adhered to the ethical standards outlined in the 1964 Declaration of Helsinki.\n\n\nSubject recruitment\nWe recruited twelve younger (19–27 years; mean age 21.75±3.05 years (SD); 8 females) and twelve older (63–75 years; mean age = 67.50±3.58 years (SD); 6 females) adults with no reported neurological deficits for participation in the study.\n\n\nScanner experiment\nIn the scanner experiment, subjects were presented with one-word speech stimuli via headphones (either in quiet or embedded in multi-talker noise). During each stimulus presentation, subjects were shown three images on a screen, including an image matching the target word and two distracters, and used a response box to select the image corresponding to the target word. For instance, in one trial, subjects heard the word “witch” in the presence of background noise, and had to select between images of a witch and two other objects from the list of stimuli. Stimuli were presented in 12-second blocks consisting of three individual stimuli (each corresponding to the same listening condition), limiting response times to four seconds per stimulus. In total, the fMRI experiment consisted of 60 stimulus blocks per condition as well as 30 null blocks during which no stimuli were presented, with all blocks presented in pseudorandomized order.\n\n\nMR imaging data were acquired on a Siemens 3T Trio machine at the Center for Advanced MRI at Northwestern University. T1-weighted, high-resolution anatomical images were acquired axially (MP-RAGE; TR/TE = 2300 ms/3.36 ms; flip angle = 9°; TI = 900 ms; matrix size = 256×256; FOV = 22 cm; slice thickness = 1 mm). During the speech perception experiment, T2*-weighted functional images were acquired using a susceptibility-weighted EPI pulse sequence (TE = 30 ms; flip angle = 90°; in-plane resolution = 3.4375 mm×3.4375 mm), with 24 slices acquired per scan in an interleaved measurement (3 mm slice thickness; zero gap). Functional image acquisition occurred directly after each 12-second stimulus block and lasted two seconds in duration, resulting in a 14-second repetition time (TR). The sparse functional image acquisition (long TR) ensured there was no scanner noise during stimulus presentation. 210 (60×3+30) 14-second TRs were acquired in total.\n\n\nMRI Data Pre-Processing\nWe pre-processed MRI data using AFNI, SUMA, and the FreeSurfer analysis suite. Pre-processing of functional time series data was performed in the native three-dimensional (volumetric) space of each individual subject. Initially, the first image from each functional dataset was discarded to minimize T1 equilibration artifacts. Next, differences in the time of acquisition between slices were corrected using Fourier interpolation. Functional data were then corrected for head movement artifacts, using the second image of the acquisition as a reference to which subsequent images were adjusted. Due to the limited frequency spectrum of the acquired functional images (long TR), we did not apply bandpass filtering to the functional data. Subsequently, we mapped the processed volumetric data onto high-resolution, two-dimensional cortical surface meshes prepared for each subject using FreeSurfer and SUMA software, without regressing out the whole-brain signal. To avoid introduction of artificial local correlations in the fMRI signal, no spatial filtering was performed after mapping data onto the cortical surfaces.\n\n\nUsing FreeSurfer’s automated cortical parcellation, we obtained a classification of each subjects’ cortical surface into 66 anatomical regions (33 per hemisphere), corresponding to the cortical regions defined in the Desikan-Killiany atlas. For each subject and listening condition (i.e., quiet and noisy), node-averaged vectors were extracted containing the functional data from the stimulus blocks corresponding to the listening condition of interest, and pair-wise, zero time-lag Pearson’s correlations were calculated between nodes. Subsequently, we defined weighted cortical graphs by assigning undirected, weighted connections between nodes whose absolute pair-wise correlation exceeded a pre-specified cost threshold. The cost thresholds were specified separately for each subject in order to generate networks with fixed costs. To ensure that results were not dependent on any particular network cost, we constructed networks over a cost range from 0.10 to 0.40 at increments of 0.02. We computed normalized measures by dividing the network properties by the average values obtained in 50 randomized surrogate networks of conserved size and connectivity distribution.\n\n\nFollowing network construction, measures of global (Eglob) and local (Eloc) efficiency were computed and averaged across all cortical regions to quantify the efficiency of global and local information transfer within the networks.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 86,
+            "text": "Large-Scale Cortical Functional Organization and Speech\nPerception across the Lifespan",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 87,
+            "end": 146,
+            "text": "John P. Sheppard1,2¤, Ji-Ping Wang3, Patrick C. M. Wong1,4*",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 191,
+            "end": 197,
+            "text": "(2011)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 286,
+            "end": 294,
+            "text": "PLoS ONE",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 309,
+            "end": 341,
+            "text": "doi:10.1371/journal.pone.0016510",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 565,
+            "end": 615,
+            "text": "Northwestern University Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 727,
+            "end": 811,
+            "text": "We recruited twelve younger (19–27 years; mean age 21.75±3.05 years (SD); 8 females)",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 816,
+            "end": 887,
+            "text": "twelve older (63–75 years; mean age = 67.50±3.58 years (SD); 6 females)",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 756,
+            "end": 767,
+            "text": "19–27 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 830,
+            "end": 841,
+            "text": "63–75 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 801,
+            "end": 810,
+            "text": "8 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 877,
+            "end": 886,
+            "text": "6 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 900,
+            "end": 933,
+            "text": "no reported neurological deficits",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1285,
+            "end": 1357,
+            "text": "used a response box to select the image corresponding to the target word",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1043,
+            "end": 1066,
+            "text": "one-word speech stimuli",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1781,
+            "end": 1839,
+            "text": "60 stimulus blocks per condition as well as 30 null blocks",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1548,
+            "end": 1590,
+            "text": "Stimuli were presented in 12-second blocks",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1711,
+            "end": 1736,
+            "text": "four seconds per stimulus",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1970,
+            "end": 1985,
+            "text": "Siemens 3T Trio",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2460,
+            "end": 2492,
+            "text": "with 24 slices acquired per scan",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2524,
+            "end": 2554,
+            "text": "3 mm slice thickness; zero gap",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2398,
+            "end": 2414,
+            "text": "flip angle = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2546,
+            "end": 2554,
+            "text": "zero gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2210,
+            "end": 2221,
+            "text": "FOV = 22 cm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2691,
+            "end": 2721,
+            "text": "14-second repetition time (TR)",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2386,
+            "end": 2396,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2416,
+            "end": 2457,
+            "text": "in-plane resolution = 3.4375 mm×3.4375 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2524,
+            "end": 2544,
+            "text": "3 mm slice thickness",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2644,
+            "end": 2674,
+            "text": "lasted two seconds in duration",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2259,
+            "end": 2287,
+            "text": "speech perception experiment",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2948,
+            "end": 2993,
+            "text": "AFNI, SUMA, and the FreeSurfer analysis suite",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 727,
+            "end": 811,
+            "text": "We recruited twelve younger (19–27 years; mean age 21.75±3.05 years (SD); 8 females)",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 816,
+            "end": 887,
+            "text": "twelve older (63–75 years; mean age = 67.50±3.58 years (SD); 6 females)",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3250,
+            "end": 3346,
+            "text": "differences in the time of acquisition between slices were corrected using Fourier interpolation",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2948,
+            "end": 2993,
+            "text": "AFNI, SUMA, and the FreeSurfer analysis suite",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3250,
+            "end": 3346,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3348,
+            "end": 3411,
+            "text": "Functional data were then corrected for head movement artifacts",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3348,
+            "end": 3411,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3672,
+            "end": 3770,
+            "text": "mapped the processed volumetric data onto high-resolution, two-dimensional cortical surface meshes",
+            "labels": [
+              "Surface — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Surface — Parameters"
+          ]
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3803,
+            "end": 3831,
+            "text": "FreeSurfer and SUMA software",
+            "labels": [
+              "Surface — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Surface",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3672,
+            "end": 3770,
+            "text": "3",
+            "labels": [
+              "Surface — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4256,
+            "end": 4278,
+            "text": "Desikan-Killiany atlas",
+            "labels": [
+              "Atlas definition — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Parameters"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4045,
+            "end": 4089,
+            "text": "FreeSurfer’s automated cortical parcellation",
+            "labels": [
+              "Atlas definition — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4256,
+            "end": 4278,
+            "text": "4",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4346,
+            "end": 4382,
+            "text": "node-averaged vectors were extracted",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4346,
+            "end": 4382,
+            "text": "5",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4522,
+            "end": 4574,
+            "text": "Pearson’s correlations were calculated between nodes",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Parameters",
+            "Compute connectivity — Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4522,
+            "end": 4574,
+            "text": "6",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4862,
+            "end": 4873,
+            "text": "fixed costs",
+            "labels": [
+              "Sparsity control — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Sparsity control — Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4985,
+            "end": 5030,
+            "text": "range from 0.10 to 0.40 at increments of 0.02",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4692,
+            "end": 4762,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5261,
+            "end": 5303,
+            "text": "global (Eglob) and local (Eloc) efficiency",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Graph measures — Software",
+            "Graph measures — Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5261,
+            "end": 5303,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5133,
+            "end": 5165,
+            "text": "50 randomized surrogate networks",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Result aggregation — Software",
+            "Result aggregation — Parameters"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5133,
+            "end": 5165,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

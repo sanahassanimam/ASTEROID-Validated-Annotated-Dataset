@@ -1,0 +1,276 @@
+{
+  "data": {
+    "text": "Construction of brain functional networks\nTo construct brain functional networks in this study, we ﬁrst\nemployed an automated anatomical labeling (AAL) atlas ( Tzourio-\nMazoyer et al., 2002 ) to parcellate the brain into 90 regions of interest\n(ROIs) (45 in each hemisphere). The names of the ROIs and their\ncorresponding abbreviations are listed in Table 1 . The time series was\nacquired on each ROI by averaging the signals of all voxels within that\nregion and then linearly regressing out the in ﬂuences of head motion\nand global signals. By calculating the Pearson correlation coef ﬁcient in\nthe residual time courses between each pair of ROIs within the same\nTable 1\nThe names and the corresponding abbreviations of the regions of interest (ROIs).\nRegion Abbreviation Region Abbreviation\nPrecentral gyrus PreCG Lingual gyrus LING\nSuperior frontal gyrus\n(dorsal)SFGdor Superior occipital gyrus SOG\nOrbitofrontal cortex\n(superior)ORBsup Middle occipital gyrus MOG\nSuperior frontal gyrus\n(medial)SFGmed Inferior occipital gyrus IOG\nOrbitofrontal cortex\n(medial)ORBmed Fusiform gyrus FFG\nMiddle frontal gyrus MFG Postcentral gyrus PoCG\nOrbitofrontal cortex\n(middle)ORBmid Superior parietal gyrus SPG\nInferior frontal gyrus\n(opercula)IFGoperc Inferior parietal lobule IPL\nInferior frontal gyrus\n(triangular)IFGtriang Supramarginal gyrus SMG\nOrbitofrontal cortex\n(inferior)ORBinf Angular gyrus ANG\nRolandic operculum ROL Precuneus PCUN\nSupplementary motor area SMA Paracentral lobule PCLOlfactory OLF Caudate CAURectus gyrus REC Putamen PUTInsula INS Pallidum PAL\nAnterior cingulate gyrus ACG Thalamus THA\nMiddle cingulate gyrus MCG Heschl gyrus HESPosterior cingulate gyrus PCG Superior temporal gyrus STGHippocampus HIP Temporal pole (superior) TPOsupParahippocampal gyrus PHG Middle temporal gyrus MTGAmygdala AMYG Temporal pole (middle) TPOmidCalcarine cortex CAL Inferior temporal gyrus ITGCuneus CUN192 L. Tian et al. / NeuroImage 54 (2011) 191 –202\nhemisphere, two 45×45 correlation matrices were obtained for each\nsubject, one for the left hemisphere and the other for the right\nhemisphere. Correlation coef ﬁcients represent the functional connec-\ntivity strength between the ROIs within the same hemisphere. Finally,\neach correlation matrix was thresholded into a binarized matrix\nwith a ﬁxed sparsity value (de ﬁned as the total number of edges in\na network divided by the maximum possible number of edges).Setting a sparsity-speci ﬁc threshold ensured that the networks of\nboth hemispheres had the same number of edges or wiring cost.\nSpeci ﬁcally, we thresholded each correlation matrix repeatedly over a\nwide range of sparsity (10% VsV46%) at the intervals of 0.01. This\nrange of sparsity was chosen to allow prominent small-world\nproperties in brain networks to be observed ( Watts and Strogatz,\n1998 ) (for details, see the Results section). Through this thresholding,\nunweighted graphs were obtained with the nodes representing brain\nregions and the edges representing functional relationships between\nbrain regions. Further network analysis was based on the two sets of\n45×45 binarized matrices for each subject.\nNetwork analysisGlobal network parameters\nSix network metrics, including four small-world parameters\n(clustering coef ﬁcient, C\np, characteristic path length, Lp, normalized\nclustering coef ﬁcient, γ, and normalized shortest path length, λ) and\ntwo ef ﬁciency parameters (global ef ﬁciency, Eglob, and local ef ﬁciency,\nEloc), were adopted to characterize the global topological organization\nof brain networks. These six parameters were referred to as global\nnetwork parameters. For a given graph Gwith Nnodes, the clustering\ncoefﬁcient Cpis deﬁned as ( Watts and Strogatz, 1998 ):\nCp=1\nN∑\ni∈GEi\nDnodiðÞDnodiðÞ−1 ðÞ =2ð1Þ\nwhere Dnod(i) is the degree (de ﬁned as the number of edges\nconnected to the node) of node i, and Eiis the number of edges inGi, the subgraph consisting of the neighbors of node i.T h e\ncharacteristic path length Lpis deﬁned as ( Newman, 2003 ):\nLp=1\n1\nNN−1 ðÞ∑\nj≠i∈G1\nLij/C18/C19 ð2Þ\nwhere Lijis the shortest path length between nodes iand j. The global\nefﬁciency Eglobis deﬁned as ( Latora and Marchiori, 2001 ):\nEglob=1\nNN−1 ðÞ∑\nj≠i∈G1\nLij: ð3Þ\nThe local ef ﬁciency of Gis measured as ( Latora and Marchiori,\n2001 ):\nEloc=1\nN∑\ni∈GEglobiðÞ ð 4Þ\nwhere Eglob(i) is the global ef ﬁciency of Gi. Of the four parameters, Cp\nand Elocmeasure the local cliquishness of a network, and Lpand Eglob\nmeasure the overall routing ef ﬁciency of a network.\nTo examine the small-world properties, the normalized clustering\ncoefﬁcient γ=Cpreal/Cprandand the normalized characteristic path\nlength λ=Lpreal/Lprandwere computed ( Watts and Strogatz, 1998 ).Cpreal\nand Lprealare the clustering coef ﬁcient and the characteristic path\nlength of real networks, and Cprandand Lprandrepresent the means of\ncorresponding indices derived from 100 matched random networks\nthat preserve the same number of nodes, edges, and degree\ndistribution as the real networks ( Maslov and Sneppen, 2002; Milo\net al., 2002 ). Typically, a small-world network should meet the\nfollowing criteria: γN1 and λ≈1(Watts and Strogatz, 1998 ), or\nσ=γ/λN1(Humphries et al., 2006 ).\nRegional nodal parameters\nTo examine the regional characteristics of brain functional\nnetworks we considered three nodal metrics: the nodal degree\nFig. 1. Small-world properties of the hemispheric functional networks. The graphs show the changes in the γandλas a function of sparsity thresholds. The γandλwere evaluated on\nthe subjects' hemispheric networks and then averaged over the networks of the same subgroup: female left hemispheric networks; female right hemisph eric networks; male left\nhemispheric networks; and male right hemispheric networks. At a wide range of sparsity, all the networks have an average γof greater than 1 and an average λof nearly 1, which\nimplies prominent small-world properties.193 L. Tian et al. / NeuroImage 54 (2011) 191 –202\n(Dnod), the nodal ef ﬁciency ( Enod), and the nodal betweenness\ncentrality ( Nbc). The nodal degree of a node iis deﬁned as:\nDnodiðÞ=∑\nj≠i∈Geij ð5Þ\nwhere eijis the ( i,j)th element in the formerly obtained binarized\ncorrelation matrix. The nodal ef ﬁciency of a node iis de ﬁned as\n(Achard and Bullmore, 2007 ):\nEnodiðÞ=1\nN−1∑\nj≠i∈G1\nLij: ð6ÞThe betweenness centrality of a node iis deﬁned as ( Freeman,\n1977 ):\nNbciðÞ=∑\nj≠i≠k∈GδjkiðÞ\nδjkð7Þ\nwhere δjkis the number of shortest paths from node jto node k,a n dδjk(i)\nis the number of shortest paths from node jto node kthat pass through\nnode iwithin graph G.Nbc(i) measures the in ﬂuence of node iover\ninformation ﬂow between other nodes in the whole network.\nAs for each network, we computed six global network parameters\nand three regional nodal parameters. To investigate the hemisphere-\nFig. 2. The global ef ﬁciency ( Eglob) (A) and local ef ﬁciency ( Eloc) (B) of the hemispheric functional networks. The graphs show the changes in the Egloband Elocas a function of sparsity\nthresholds. The Egloband Elocwere evaluated on the subjects' hemispheric networks and then averaged over the networks of the same subgroup. At a wide range of sparsity, all the\nnetworks have average Eglobcomparable to that of the matched random networks and average Eloclarger than that of the matched random networks.194 L. Tian et al. / NeuroImage 54 (2011) 191 –202\nand gender-related differences in these networks, we computed the\nintegrated global network parameters as the summations:\nXglob=∑46\nk=10XkΔs ðÞ Δs ð8Þ\nwhere Δsis the sparsity interval of 0.01; X(kΔs) is a global network\nparameter ( Cp,Lp,γ,λ,ElocorEglob) at a sparsity of kΔs. Similarly, the\nintegrated regional nodal parameters of node iwere calculated as the\nsummations:\nXnodiðÞ=∑46\nk=10Xi ;kΔs ðÞ Δs ð9Þ\nwhere X(i,kΔs) is a nodal parameter ( Dnod,Enod,o rNbc) of the node iat\na sparsity of kΔs. These integrated metrics were used to further\nidentify network hubs and compute the hemisphere- and gender-\nrelated differences in the topological organization of the networks.\nHub identi ﬁcation\nThe nodes with the largest Dnod,Enod,o rNbcvalues were considered\nhubs in the network. In this study, the hubs were identi ﬁed based on\nfour separate subgroups of networks: female left hemispheric\nnetworks; female right hemispheric networks; male left hemispheric\nnetworks; male right hemispheric networks. For each node we ﬁrst\ncalculated its normalized nodal parameters as follows:\nXnorm iðÞ=∑M\nk=1Xnodi;kðÞ\nM,\n∑N\nj=1∑M\nk=1Xnodj;kðÞ\nN×Mð10Þ\nwhere Xnod(i,k) is an integrated nodal parameter ( Dnod,Enod,o rNbc)o f\nnode iin the network of subject k,Mis the number of networks in thesubgroup and Nis the number of nodes (here N=45). Node iwas\nidenti ﬁed as the hub of the network if any of its three nodal\nparameters, Xnorm(i), was at least one standard deviation (SD) greater\nthan the average of the parameter over the network (i.e., Xnorm(i)N\nmean +SD).\nAsymmetry score\nThe asymmetry of all network parameters was evaluated by the\nfollowing asymmetry score:\nA= 100 ×XRðÞ−XLðÞ\n0:5× XRðÞ+XLðÞ ðÞð11Þ\nwhere X(R)a n d X(L) are the parameters of the right and left\nhemispheres, respectively. Positive asymmetry scores indicated right-\nward asymmetry and vice versa.\nStatistical analysis\nGlobal network parameters\nTo determine whether there were signi ﬁcant differences in any\nof the six global network parameters, a two-way repeated-measures\nanalysis of variance (ANOVA) was performed with gender as a between-\nsubject factor and hemisphere (left and right) as a repeated-measures\nfactor. If any main effect survived a threshold of P b0.05, a further t-test\n(paired t-test for the hemisphere effect and two-sample t-test for the\ngender effect) was performed. A two-tailed one-sample t-test was\nperformed to determine whether the asymmetry scores of each of the\nsix global network parameters within each gender was signi ﬁcantly\ndifferent from zero. The asymmetry score of each global parameter was\nﬁnally subjected to a two-tailed two-sample t-test to assess the\nbetween-gender differences. P b0.05 was considered to be signi ﬁcantly\ndifferent.\nRegional nodal parameters\nThe statistical analysis methods for the regional nodal parameters\nwere similar to those for global network parameters. In brief, a two-\nway repeated-measures ANOVA was performed to determine the\nsigniﬁcant differences in the three regional nodal parameters and\nfurther t-tests were performed to determine the direction of these\ndifferences. T-tests were also performed for each region to evaluate\nthe signi ﬁcance of the within- and between-gender differences in\nthe asymmetry scores of the three regional nodal parameters. The\nthreshold for all tests was P b0.05 (Bonferroni corrected).Table 2\nHemisphere and gender effects on global network parameters revealed by two-wayrepeated-measures ANOVA.\nC\np Lp γλ Eloc Eglob\nHemisphere effect F-value 1.21 0.30 0.06 1.44 0.87 1.06\nP-value 0.27 0.58 0.81 0.23 0.35 0.31\nGender effect F-value 0.13 0.03 0.26 0.63 0.23 0.03\nP-value 0.72 0.87 0.61 0.43 0.63 0.86\nInteraction F-value 2.04 0.05 4.43 1.00 1.89 0.07\nP-value 0.16 0.83 0.04 0.32 0.17 0.79\nCp,Lp,γ,λ,Elocand Eglobdenote the clustering coef ﬁcient, characteristic path length,\nnormalized clustering coef ﬁcient, normalized shortest path length, local ef ﬁciency and\nglobal ef ﬁciency, respectively. Signi ﬁcant effects (P b0.05) are indicated by bold text.\nFig. 3. The integrated global network parameters. C p,Lp,γ,λ,Elocand E globdenote the clustering coef ﬁcient, characteristic path length, normalized clustering coef ﬁcient, normalized\nshortest path length, local ef ﬁciency and global ef ﬁciency, respectively. Note that the normalized clustering coef ﬁcient ( γ) was greater in the right hemispheric networks of males,\nbut greater in the left hemispheric networks of females (signi ﬁcant interaction: P b0.05).195 L. Tian et al. / NeuroImage 54 (2011) 191 –202"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 104,
+            "end": 157,
+            "text": "employed an automated anatomical labeling (AAL) atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 192,
+            "end": 275,
+            "text": "to parcellate the brain into 90 regions of interest\n(ROIs) (45 in each hemisphere).",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 360,
+            "end": 458,
+            "text": "The time series was\nacquired on each ROI by averaging the signals of all voxels within that\nregion",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 542,
+            "end": 663,
+            "text": "By calculating the Pearson correlation coef ﬁcient in\nthe residual time courses between each pair of ROIs within the same",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2226,
+            "end": 2316,
+            "text": "each correlation matrix was thresholded into a binarized matrix\nwith a ﬁxed sparsity value",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2610,
+            "end": 2678,
+            "text": "over a\nwide range of sparsity (10% VsV46%) at the intervals of 0.01.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2884,
+            "end": 3032,
+            "text": "unweighted graphs were obtained with the nodes representing brain\nregions and the edges representing functional relationships between\nbrain regions.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3172,
+            "end": 3230,
+            "text": "Six network metrics, including four small-world parameters",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5279,
+            "end": 5330,
+            "text": "we considered three nodal metrics: the nodal degree",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7396,
+            "end": 7467,
+            "text": "we computed the\nintegrated global network parameters as the summations:",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 104,
+            "end": 157,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 192,
+            "end": 275,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 360,
+            "end": 458,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 542,
+            "end": 663,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2226,
+            "end": 2316,
+            "text": "5",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2884,
+            "end": 3032,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3172,
+            "end": 3230,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7396,
+            "end": 7467,
+            "text": "8",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        }
+      ]
+    }
+  ]
+}

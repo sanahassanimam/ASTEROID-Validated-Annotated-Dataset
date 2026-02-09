@@ -1,0 +1,1097 @@
+{
+  "data": {
+    "text": "Influence of Structural and Functional Brain Connectivity on Age-Related Differences in Fluid Cognition\n\nDavid J. Madden, Shivangi Jain, Zachary A. Monge, Angela D. Cook, Alexander Lee, Hua Huang, Cortney M. Howard, Jessica R. Cohen\n\nNeurobiol Aging. 2020 December ; 96: 205–222. doi:10.1016/j.neurobiolaging.2020.09.010.\n\n\nAbstract\n\nAcross 143 healthy, community-dwelling adults 19–79 years of age, we estimated structural network properties from diffusion-weighted imaging (DWI) and functional network properties from resting-state functional magnetic resonance imaging (fMRI). Functional networks exhibited age-related decline in system segregation. Aging was associated with decline in a composite measure of fluid cognition, particularly tests of executive function. Functional system segregation was a significant mediator of age-related decline in executive function.\n\n\nThis research was conducted in accordance with the Code of Ethics of the World Medical Association (Declaration of Helsinki) for experiments involving humans. The protocol was approved by the Duke University Institutional Review Board, and participants gave written informed consent at the start of the study.\n\n\nThe participants were 153 community-dwelling individuals between 19 and 79 years of age. All participants were right-handed, had completed at least 12 years of education, did not report any major health issues. Data from nine individuals were excluded due to technical problems with their functional or structural imaging data, and one individual had an unusually high studentized residual score in the psychometric data. The final sample consisted of 143 participants (78 females).\n\n\nThe functional and anatomical imaging data was collected on a 3 T GE MR750 whole-body 60 cm bore MRI scanner (GE Healthcare, Waukesha, WI, USA) equipped with 50 mT/m gradients and a 200 T/m/s slew rate.\n\n\nFor the resting-state scans, participants were instructed to remain awake with eyes open and to view a fixation cross throughout the run. T2*-weighted gradient-echo EPI functional images were 29 contiguous slices acquired at an axial oblique orientation, parallel to the plane including the anterior and posterior commissures (AC-PC plane) with TR = 1500 ms, TE = 27 ms, FOV = 240 mm x 240 mm, flip angle = 77°, voxel size = 3.75 × 3.75 × 4 mm, 64 × 64 acquisition matrix, and a SENSE factor of 1. Each of the 2 resting-state functional MRI (fMRI) runs comprised a time series of 162 brain volumes, collected over a period of 4.05 min. Four initial radio frequency excitations were performed to achieve steady state equilibrium and were subsequently discarded, resulting in 158 remaining brain volumes per run.\n\n\nStudy-specific anatomical template—We created a study-specific anatomical template using the Advanced Normalization Tools (ANTs) script for multivariate template construction. First, we made an average T1 brain image from all 143 participants in the data set. Each individual T1 brain was then warped to this starting point average brain. The iteration continued until the mean image converged, yielding the final study-specific template.\n\n\nResting-state functional connectivity—The resting-state fMRI data were preprocessed using an in-house pipeline and FSL tools. Four brain volumes were removed from the start of each of the two resting state runs. Each of the two runs was then corrected for the sampling offsets inherent in slice-wise EPI acquisition sequences using FSL slicetimer. The two runs were then demeaned and concatenated into a single data set comprising the 8.10 min period. Motion correction using MCFLIRT was applied to the concatenated data set. Twenty-four motion parameters that included the six realignment parameters, their temporal derivatives and squares were regressed from each voxel using linear regression. The brain was extracted from the skull with BET, and the data were first normalized into the study specific template and then the standard MNI152 T1 space using FLIRT and FNIRT. Next, signal from white matter and cerebrospinal fluid was regressed out on the basis of masks created with FAST. Global signal regression was not performed. Finally, temporal band-pass filtering limited the data to frequencies in the 0.001–0.08 Hz range.\n\n\nWe performed additional motion scrubbing of volumes with either > 0.5 mm for framewise displacement (FD) or 0.5% for timecourse variance (DVARS). Two brain volumes before and after the marked volumes were also excluded.\n\n\nStructural connectivity—Two runs of DWI scans were concatenated. The concatenated data were first de-noised with MRtrix using dwidenoise, and the brain was extracted from the skull using BET in FSL. The data were preprocessed using MRtrix dwipreproc. Head motion and eddy current distortion were corrected using the FSL eddy tool, and bias-field correction was completed with MRtrix dwibiascorrect. DWI intensity normalization was applied to the two DWI runs, which were averaged and prepared for tractography. Fiber orientation distribution (FOD) was calculated using dwi2fod with constrained spherical deconvolution (CSD). For CSD map generation, the maximum number of spherical harmonic terms was set to 8, and a single-fiber response kernel was estimated from white matter voxels with FA > 0.3.\n\n\nIn the tractography, Anatomically Constrained Tractography (ACT) was adopted; the T1 image was registered to the diffusion image and segmented in FSL into five tissue types. The ACT option was added to the tckgen function of MRtrix to anatomically constrain streamline propagation. For each participant, ten million tracts were generated with a step size of 0.2 mm and filtered using SIFT in MRtrix, yielding a final set of one million tracts per participant.\n\n\nRegions of interest (ROIs) were defined by the subparcellated anatomical Harvard-Oxford Atlas (HOA) with 397 ROIs. The HOA regions were registered to the study-specific template using FLIRT in FSL and then mapped to the individual participant’s native space to extract the numbers of tracts for each participant.\n\n\nThe resting-state fMRI time series for each participant consisted of 316 brain volumes. For each of the 397 HOA ROIs, we obtained the average time series for all voxels in the ROI and then normalized (z-scored) the ROI time series. The normalized time series for each ROI was then correlated with every other ROI, yielding a 397 × 397 correlation matrix for each participant. The Pearson r in each matrix cell was transformed to Fisher-z. Negatively weighted edges and the diagonals were set to zero.\n\n\nHHS Public Access — Author manuscript; available in PMC 2021 December 01.\n\n\nBehavioral measure: The Stroop interference measure was the proportional increase in correct RT for the incompatible trials relative to the compatible trials.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 103,
+            "text": "Influence of Structural and Functional Brain Connectivity on Age-Related Differences in Fluid Cognition",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 280,
+            "end": 321,
+            "text": "doi:10.1016/j.neurobiolaging.2020.09.010.",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 251,
+            "end": 279,
+            "text": "2020 December ; 96: 205–222.",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 234,
+            "end": 250,
+            "text": "Neurobiol Aging.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 105,
+            "end": 232,
+            "text": "David J. Madden, Shivangi Jain, Zachary A. Monge, Angela D. Cook, Alexander Lee, Hua Huang, Cortney M. Howard, Jessica R. Cohen",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 772,
+            "end": 874,
+            "text": "Functional system segregation was a significant mediator of age-related decline in executive function.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6569,
+            "end": 6642,
+            "text": "HHS Public Access — Author manuscript; available in PMC 2021 December 01.",
+            "labels": [
+              "Full-text"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3226,
+            "end": 3257,
+            "text": "in-house pipeline and FSL tools",
+            "labels": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4122,
+            "end": 4165,
+            "text": "Global signal regression was not performed.",
+            "labels": [
+              "Remarks"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1674,
+            "end": 1674,
+            "text": "N",
+            "labels": [
+              "Multicenter study? (Y/N)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1736,
+            "end": 1748,
+            "text": "3 T GE MR750",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2071,
+            "end": 2091,
+            "text": "29 contiguous slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2291,
+            "end": 2322,
+            "text": "voxel size = 3.75 × 3.75 × 4 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2273,
+            "end": 2289,
+            "text": "flip angle = 77°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1958,
+            "end": 1967,
+            "text": "eyes open",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2250,
+            "end": 2271,
+            "text": "FOV = 240 mm x 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2224,
+            "end": 2236,
+            "text": "TR = 1500 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2238,
+            "end": 2248,
+            "text": "TE = 27 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2291,
+            "end": 2322,
+            "text": "voxel size = 3.75 × 3.75 × 4 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1641,
+            "end": 1657,
+            "text": "143 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3248,
+            "end": 3251,
+            "text": "FSL",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 520,
+            "end": 533,
+            "text": "resting-state",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2505,
+            "end": 2513,
+            "text": "4.05 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1254,
+            "end": 1276,
+            "text": "19 and 79 years of age",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1641,
+            "end": 1657,
+            "text": "143 participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1300,
+            "end": 1312,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1659,
+            "end": 1669,
+            "text": "78 females",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1360,
+            "end": 1398,
+            "text": "did not report any major health issues",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1400,
+            "end": 1466,
+            "text": "Data from nine individuals were excluded due to technical problems",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1053,
+            "end": 1111,
+            "text": "approved by the Duke University Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6705,
+            "end": 6740,
+            "text": "proportional increase in correct RT",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1926,
+            "end": 1967,
+            "text": "instructed to remain awake with eyes open",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1975,
+            "end": 1996,
+            "text": "view a fixation cross",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2692,
+            "end": 2692,
+            "text": "1",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2785,
+            "end": 2866,
+            "text": "Advanced Normalization Tools (ANTs) script for multivariate template construction",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2740,
+            "end": 2774,
+            "text": "study-specific anatomical template",
+            "labels": [
+              "Spatial normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4488,
+            "end": 4488,
+            "text": "2",
+            "labels": [
+              "Denoised — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4601,
+            "end": 4624,
+            "text": "MRtrix using dwidenoise",
+            "labels": [
+              "Denoised — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Denoised",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4586,
+            "end": 4595,
+            "text": "de-noised",
+            "labels": [
+              "Denoised — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4488,
+            "end": 4488,
+            "text": "3",
+            "labels": [
+              "Skull extraction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Skull extraction — Algorithm",
+            "Skull extraction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4675,
+            "end": 4685,
+            "text": "BET in FSL",
+            "labels": [
+              "Skull extraction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4488,
+            "end": 4488,
+            "text": "4",
+            "labels": [
+              "INU correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "INU correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4864,
+            "end": 4885,
+            "text": "MRtrix dwibiascorrect",
+            "labels": [
+              "INU correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "INU correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4823,
+            "end": 4844,
+            "text": "bias-field correction",
+            "labels": [
+              "INU correction — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3133,
+            "end": 3133,
+            "text": "5",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3259,
+            "end": 3290,
+            "text": "Four brain volumes were removed",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3133,
+            "end": 3133,
+            "text": "6",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3465,
+            "end": 3479,
+            "text": "FSL slicetimer",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Concatenate Runs",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3133,
+            "end": 3133,
+            "text": "7",
+            "labels": [
+              "Concatenate Runs — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Concatenate Runs — Software",
+            "Concatenate Runs — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Concatenate Runs",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3504,
+            "end": 3552,
+            "text": "demeaned and concatenated into a single data set",
+            "labels": [
+              "Concatenate Runs — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3133,
+            "end": 3133,
+            "text": "8",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3609,
+            "end": 3616,
+            "text": "MCFLIRT",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3585,
+            "end": 3602,
+            "text": "Motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3133,
+            "end": 3133,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Type"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3659,
+            "end": 3688,
+            "text": "Twenty-four motion parameters",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3133,
+            "end": 3133,
+            "text": "10",
+            "labels": [
+              "Skull extraction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Skull extraction — Algorithm",
+            "Skull extraction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Skull extraction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3874,
+            "end": 3877,
+            "text": "BET",
+            "labels": [
+              "Skull extraction — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3133,
+            "end": 3133,
+            "text": "11",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3991,
+            "end": 4006,
+            "text": "FLIRT and FNIRT",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3903,
+            "end": 3984,
+            "text": "normalized into the study specific template and then the standard MNI152 T1 space",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3133,
+            "end": 3133,
+            "text": "12",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4026,
+            "end": 4080,
+            "text": "white matter and cerebrospinal fluid was regressed out",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4116,
+            "end": 4120,
+            "text": "FAST",
+            "labels": [
+              "Other confound regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3133,
+            "end": 3133,
+            "text": "13",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4175,
+            "end": 4203,
+            "text": "temporal band-pass filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4243,
+            "end": 4256,
+            "text": "0.001–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4266,
+            "end": 4266,
+            "text": "14",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Software",
+            "Scrubbing — Type"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4330,
+            "end": 4410,
+            "text": "> 0.5 mm for framewise displacement (FD) or 0.5% for timecourse variance (DVARS)",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6066,
+            "end": 6066,
+            "text": "15",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Atlas definition — Software",
+            "Atlas definition — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5824,
+            "end": 5864,
+            "text": "Harvard-Oxford Atlas (HOA) with 397 ROIs",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6066,
+            "end": 6066,
+            "text": "16",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Time series ROI — Software",
+            "Time series ROI — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6200,
+            "end": 6276,
+            "text": "average time series for all voxels in the ROI and then normalized (z-scored)",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6066,
+            "end": 6066,
+            "text": "17",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Compute connectivity — Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6347,
+            "end": 6378,
+            "text": "correlated with every other ROI",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6446,
+            "end": 6455,
+            "text": "Pearson r",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6066,
+            "end": 6066,
+            "text": "18",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Connectivity normalization — Software",
+            "Connectivity normalization — Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6480,
+            "end": 6503,
+            "text": "transformed to Fisher-z",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6066,
+            "end": 6066,
+            "text": "19",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Negative correlation — Software",
+            "Negative correlation — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6505,
+            "end": 6565,
+            "text": "Negatively weighted edges and the diagonals were set to zero",
+            "labels": [
+              "Negative correlation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

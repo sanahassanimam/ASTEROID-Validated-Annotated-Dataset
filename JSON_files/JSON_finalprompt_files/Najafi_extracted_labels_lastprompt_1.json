@@ -1,0 +1,729 @@
+{
+  "data": {
+    "text": "Overlapping communities reveal rich structure in large-scale brain networks during rest and task conditions\nMahshid Najafi1,2,*, Brenton W. McMenamin2, Jonathan Z. Simon1,3,4, and Luiz Pessoa2,*\nNeuroimage. 2016 July 15; 135: 92–106. doi:10.1016/j.neuroimage.2016.04.054.\nLarge-scale analysis of functional MRI data has revealed that brain regions can be grouped into stable “networks” or communities.\n\nThe structural and functional MRI data for this study were obtained from the Human Connectome Project (HCP; Van Essen et al. 2013) dataset (N = 100) as accessed in June 2014.\n\nData were acquired on a Siemens Skyra 3T scanner using a standard 32-channel head coil. Functional data were collected using a multiband scanning protocol (multiband factor of 8) that allowed acquisition at higher temporal (TR = 720 ms; TE = 33.1 ms; FA: 52°) and spatial resolution (2 mm isotropic voxels in 72 slices; FOV= 208 × 180 mm). Here, we employed HCP’s so-called “minimally processed” functional data (Glasser et al. 2013), which included the following preprocessing steps: correction of spatial distortions, motion correction, functional to structural data alignment, bias field correction, and intensity normalization. Cortical data were mapped to the surface (using the Conte69, 32k standard mesh), and subcortical data were analyzed volumetrically. Surface data were spatially smoothed within the surface with a 2 mm kernel. For the resting-state data, HCP pipeline uses ICA to remove spatiotemporal components that purportedly corresponded to non-neural signals; the resulting data are referred to as the “ICA-fixed” dataset (Salimi-Khorshidi et al. 2014; Smith et al. 2013).\n\nEach run of resting-state data contained 1200 volumes (14 min and 33 s). Participants were instructed to look at a fixation crosshair for the duration of the run with their eyes open. We employed data from two runs acquired on each participants’ first visit. The only preprocessing step applied beyond the HCP ICA-fixed pipeline was to perform temporal filtering (between 0.01 and 0.08 Hz) via the 3dBandpass program of the AFNI package (Cox 1996).\n\nDuring the working memory task, participants performed an n-back memory task based on a series of centrally present pictures of places, tools, faces and non-mutilated body parts with no nudity. Participants performed two runs of the task, each of which contained four blocks of a 0-back memory task, four blocks of a 2-back memory task, and four blocks of fixation. On each trial, a stimulus was presented for 2 seconds, followed by a 500-ms interval. Here, we restricted our analysis to the 2-back condition. Each task block lasted 25 seconds; to account for the hemodynamic delay, we employed volumes from 10–25 seconds after block onset. In total, we employed 120 seconds (167 volumes) of data for each participant (2 runs × 4 blocks/run × 15 seconds/ block). The only processing step applied beyond the HCP pipeline was to regress out (via the 3dDeconvolve program of the AFNI package) 12 motion-related variables: 6 motion parameters estimated from the rigid-body transformation to the reference image acquired at the beginning of the scan and their temporal derivatives (as provided with the HCP data).\n\nThe emotion task was based on the original paradigm developed by Hariri and colleagues (2000). During each block, participants decided which of two faces (or shapes) on the screen matched the face (or shape) placed above. On each trial, stimuli appeared for two seconds followed by a one second interval. Here, we restricted our analysis to the emotion condition, during which angry or fearful faces were displayed. Each task block lasted 21 seconds; to account for the hemodynamic delay, we employed volumes from 10–21 seconds after block onset. In total, we employed 66 seconds (92 volumes) of data for each participant (2 runs × 3 blocks/run × 11 seconds/block). As in the case of the working memory task, the only processing step applied beyond the HCP pipeline was to regress out of the estimated motion parameters.\n\nBecause head motion can lead to spurious patterns of co-activation, it is important to preprocess and censor the data so as to minimize potential artifacts. Thus, we calculated the “temporal derivative of variance over voxels” (DVARs; Power et al. 2012) to gauge the rate of change in the functional MRI signal at each time sample. If DVARs exceeded a threshold of 0.35 at a time point, the data point was removed; for working memory 5.48% of the data were removed, and for emotion 4.32% of the data were removed. This procedure was applied to task data only because the ICA-fixed preprocessed resting-state data have motion parameters “aggressively regressed out” already (Smith et al. 2013).\n\nData from six participants contained time points with DVARs greater than 0.35 in over half of their blocks in working memory or emotion datasets. We therefore dropped these participants (including resting state) from further analysis. Thus, the final analysis used data from 94 participants.\n\nCortical regions of interest (ROIs) were defined to cover the cortex, yet be small enough to minimize the mixing of signals from adjacent but (potentially) functionally heterogeneous regions. k-means (with “city block” or L1 distance; 1000 iterations; Duda et al. 2012) was used to cluster each cortical hemisphere into 500 target regions based on their xyz coordinates. Thus, ROIs were defined based on their spatial coordinates on the cortical mesh, not functional data. Because the medial surface of the hemisphere is naturally undefined for parts that are effectively subcortical, clusters with xyz coordinates in those locations (i.e., corresponding to subcortical locations) were not considered. Therefore, a total of 941 ROIs were defined (471 on the right hemisphere and 470 on the left hemisphere). The resulting clusters were further “eroded” so as to avoid ROIs from abutting one another to minimize signals from a given region from contributing to neighboring ROIs (on average, ROIs comprised 28 2×2×2 mm voxels). Subcortical regions of interest were defined anatomically based on Freesurfer’s subcortical segmentation (Fischl 2012). Each subcortical structure was considered as one region, resulting in a total 19 subcortical regions (9 in each hemisphere and one brainstem ROI), including the cerebellum.\n\nFunctional connectivity between every pair of regions was calculated using the Pearson correlation of regions’ mean time series, resulting in a 960-by-960 connectivity matrix (for each participant and condition [rest, working memory, emotion]). Here, we followed the strategy by Yeo, Buckner and colleagues (Yeo et al. 2011), Power and colleagues (Power et al. 2012), and Cole and colleagues (Cole et al. 2013) and binarized each participant’s connectivity matrix by setting the top 10% strongest correlations to 1 and all other entries of the correlation matrix to 0. This strategy has proved successful in producing stable community results. The binarized connectivity matrices were averaged across participants and binarized a second time; again, the top 10% strongest connections were set to 1 and all other values were set to 0. The latter binarization was used so that we could apply the Bayesian mixed-membership model (see below) to partition the correlation matrix, which requires a binary correlation matrix. Note that the two-step binarization used here is not typically employed by other investigators, as some prefer to threshold at the subject level and others at the group level; our approach simply combined subject-level and group-level thresholding (the present approach is nearly indistinguishable from using a single thresholding step at the group level; difference in only ~0.8% of the edges). Note, furthermore, that negative correlations were converted to zero.\n\nNetwork modularity is used in the literature to indicate how a network can be subdivided into communities. For example, in the modularity measure defined by Newman for disjoint communities (Newman 2006), if two regions are connected and belong to the same community, modularity increases, and if two regions are connected but belong to two different communities, modularity decreases. Several modularity methods have been defined for overlapping communities, too (Xie 2013). Here, based on Chen and colleagues (Chen et al. 2010), we extended modularity to the case of the mixed-membership model we employed as follows: where m is the total number of links in the graph, Ai,j is the edge between node i and j (1 if edge present, 0 otherwise), ki is the degree of node i (based on the binarized group graph), and πi,c is the membership value of node i in community c.\n\nTo identify ROIs acting as bridges, first we normalized both degree and membership diversity to have values between 0 and 1. Bottleneck bridges are regions with high membership diversity and low degree. Hub bridges are regions with high membership diversity and high degree. Thus, bridgeness scores can be defined as: and computed for each bootstrapping iteration, when degree and membership diversity for each iteration are normalized between 0 and 1. z(·) computes the z score of the argument.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 108,
+            "end": 194,
+            "text": "Mahshid Najafi1,2,*, Brenton W. McMenamin2, Jonathan Z. Simon1,3,4, and Luiz Pessoa2,*",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 107,
+            "text": "Overlapping communities reveal rich structure in large-scale brain networks during rest and task conditions",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 207,
+            "end": 211,
+            "text": "2016",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 195,
+            "end": 233,
+            "text": "Neuroimage. 2016 July 15; 135: 92–106.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 234,
+            "end": 271,
+            "text": "doi:10.1016/j.neuroimage.2016.04.054.",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 272,
+            "end": 401,
+            "text": "Large-scale analysis of functional MRI data has revealed that brain regions can be grouped into stable “networks” or communities.",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 403,
+            "end": 577,
+            "text": "The structural and functional MRI data for this study were obtained from the Human Connectome Project (HCP; Van Essen et al. 2013) dataset (N = 100) as accessed in June 2014.",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 603,
+            "end": 627,
+            "text": "Siemens Skyra 3T scanner",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 803,
+            "end": 814,
+            "text": "TR = 720 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 816,
+            "end": 828,
+            "text": "TE = 33.1 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 830,
+            "end": 837,
+            "text": "FA: 52°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 888,
+            "end": 897,
+            "text": "72 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 863,
+            "end": 884,
+            "text": "2 mm isotropic voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 899,
+            "end": 916,
+            "text": "FOV= 208 × 180 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1727,
+            "end": 1742,
+            "text": "14 min and 33 s",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1834,
+            "end": 1855,
+            "text": "with their eyes open.",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4994,
+            "end": 5040,
+            "text": "final analysis used data from 94 participants.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2096,
+            "end": 2108,
+            "text": "AFNI package",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1427,
+            "end": 1445,
+            "text": "resting-state data",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2180,
+            "end": 2198,
+            "text": "n-back memory task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3236,
+            "end": 3248,
+            "text": "emotion task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2385,
+            "end": 2487,
+            "text": "four blocks of a 0-back memory task, four blocks of a 2-back memory task, and four blocks of fixation.",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2505,
+            "end": 2541,
+            "text": "stimulus was presented for 2 seconds",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2557,
+            "end": 2572,
+            "text": "500-ms interval",
+            "labels": [
+              "ISI distribution"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2632,
+            "end": 2665,
+            "text": "Each task block lasted 25 seconds",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3855,
+            "end": 3895,
+            "text": "2 runs × 3 blocks/run × 11 seconds/block",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3469,
+            "end": 3535,
+            "text": "stimuli appeared for two seconds followed by a one second interval",
+            "labels": [
+              "Length of each trial"
+            ]
+          }
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3648,
+            "end": 3681,
+            "text": "Each task block lasted 21 seconds",
+            "labels": [
+              "Length of blocks"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1745,
+            "end": 1855,
+            "text": "Participants were instructed to look at a fixation crosshair for the duration of the run with their eyes open.",
+            "labels": [
+              "Instructions"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2220,
+            "end": 2315,
+            "text": "centrally present pictures of places, tools, faces and non-mutilated body parts with no nudity.",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3609,
+            "end": 3647,
+            "text": "angry or fearful faces were displayed.",
+            "labels": [
+              "Stimuli"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 534,
+            "end": 551,
+            "text": "dataset (N = 100)",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Age",
+            "Handedness",
+            "Male/Female",
+            "Inclusion criteria",
+            "Rejected subjects",
+            "Group matching"
+          ]
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4749,
+            "end": 4894,
+            "text": "Data from six participants contained time points with DVARs greater than 0.35 in over half of their blocks in working memory or emotion datasets.",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1343,
+            "end": 1344,
+            "text": "1",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm",
+            "Spatial smooth — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1406,
+            "end": 1417,
+            "text": "2 mm kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1931,
+            "end": 1932,
+            "text": "2",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2070,
+            "end": 2108,
+            "text": "3dBandpass program of the AFNI package",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2036,
+            "end": 2060,
+            "text": "between 0.01 and 0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1931,
+            "end": 1949,
+            "text": "temporal filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2885,
+            "end": 2886,
+            "text": "3",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Algorithm",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2970,
+            "end": 3010,
+            "text": "3dDeconvolve program of the AFNI package",
+            "labels": [
+              "motion regression — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3012,
+            "end": 3039,
+            "text": "12 motion-related variables",
+            "labels": [
+              "motion regression — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4386,
+            "end": 4387,
+            "text": "4",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Scrubbing — Software",
+            "Scrubbing — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4386,
+            "end": 4567,
+            "text": "If DVARs exceeded a threshold of 0.35 at a time point, the data point was removed; for working memory 5.48% of the data were removed, and for emotion 4.32% of the data were removed.",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4406,
+            "end": 4423,
+            "text": "threshold of 0.35",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4749,
+            "end": 4750,
+            "text": "5",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Exclusion — Software",
+            "Exclusion — Algorithm",
+            "Exclusion — Parameters"
+          ]
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4749,
+            "end": 5040,
+            "text": "Data from six participants contained time points with DVARs greater than 0.35 in over half of their blocks in working memory or emotion datasets. We therefore dropped these participants (including resting state) from further analysis. Thus, the final analysis used data from 94 participants.",
+            "labels": [
+              "Exclusion — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5234,
+            "end": 5412,
+            "text": "k-means (with “city block” or L1 distance; 1000 iterations; Duda et al. 2012) was used to cluster each cortical hemisphere into 500 target regions based on their xyz coordinates.",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5755,
+            "end": 5849,
+            "text": "a total of 941 ROIs were defined (471 on the right hemisphere and 470 on the left hemisphere).",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6362,
+            "end": 6536,
+            "text": "Functional connectivity between every pair of regions was calculated using the Pearson correlation of regions’ mean time series, resulting in a 960-by-960 connectivity matrix",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6441,
+            "end": 6489,
+            "text": "Pearson correlation of regions’ mean time series",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6841,
+            "end": 6871,
+            "text": "top 10% strongest correlations",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8590,
+            "end": 8653,
+            "text": "ki is the degree of node i (based on the binarized group graph)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

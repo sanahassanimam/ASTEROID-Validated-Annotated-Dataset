@@ -1,0 +1,353 @@
+{
+  "data": {
+    "text": "2.5 |Network definition\nThe regions of interest (ROIs), used to build the network, were\nselected from the atlas of Schaefer and colleagues (Schaeferet al., 2018), corresponding to 200 cortical regions (i.e., ROIs) classi-\nfied into seven well-known resting state networks according to the\nYeo-Krienen atlas (Yeo et al., 2011): frontoparietal control (FPCN),default mode (DMN), dorsal attention (DAN), salience ventral atten-tion (SVAN), limbic (LIMB), somatomotor (SM), and visual (VIS)\nnetworks.\nThe time-series were averaged over the voxels in each ROI and\ncorrelated between each pair of nodes using the Pearson's correlation\nanalysis. Each correlation coefficient was then Fisher's r-to-zMALAGURSKI ET AL . 4831\n 10970193, 2020, 17, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/hbm.25161 by Cochrane Germany, Wiley Online Library on [30/12/2022]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License\n\ntransformed. Due to ambiguity regarding the meaning of negative cor-\nrelations in the context of global signal regression (Murphy &Fox, 2017), negative z values were excluded from the analysis in\naccordance to previous studies (Chan et al., 2014, 2018). This resulted\nin subject-specific 200 ×200 correlation matrices with diagonal and\nnegative values set to zero. Therefore, the main network analysis was\nperformed on positive weighted networks.\nIn addition, supplementary analysis has been done on positive\nweighted networks containing only statistically significant connec-\ntions at an FDR-adjusted significance level of p< .01. This has been\ndone to ensure that our results are robust in both unthresholded andthresholded matrices based on the significance level of nodeconnections.\n2.6 |Multilayer modularity\nModular structure in a network indicates that nodes in a module are\nmore interconnected with one another then with the rest of the net-\nwork. Modules within complex networks are identified using commu-\nnity detection algorithms such as the maximization of the modularityquality function (i.e., Q; Newman & Girvan, 2004). These algorithms\nare applicable to traditional single layer networks (e.g., within-session\nstatic functional connectome) or multilayer networks in which nodesare connected across layers (Kivelä et al., 2014). These layers may cor-respond to different modalities (e.g., structural and functional connec-\ntions between brain regions) or different temporal instants at which\nthe network was observed (i.e., brain connectivity across a span ofseveral years). So, in addition to being able to calculate single window\nmodularity scores, the multilayer framework is interesting for longitu-\ndinal studies because it can produce a “global index ”which reflects\nthe changes in network organization across a defined period\n(i.e., 4 years). In the present study, we define multilayer networks\nwhere each layer is the functional connectivity matrix at a given timepoint, resulting in a four-layer temporal network for each of the sub-jects, separately.\nThus, to investigate the changes in network organization across\ntime, the multilayer modularity was optimized (Blondel, Guillaume,Lambiotte, & Lefebvre, 2008; Mucha, Richardson, Macon, Porter, &\nOnnela, 2010) as follows:\nQ=\n1\n2μX\nijlrAijl−γlPijl/C0/C1\nδlr+δijωjlr/C8/C9\nδgil,gjr/C0/C1\n,\nwhere 1 is the number of layers in the multilayer network, Aijlis the\nfunctional connectivity matrix, Pijlis the corresponding null model\nmatrix (i.e., Newman –Girvan null model) defined as the kil×kjl/2ml,\nwhere mis the average edge weight in the matrix, gilgives the com-\nmunity assignment of node iin layer l, and gjrgives the community\nassignment of node jin layer r. The γis the structural resolution param-\neterwhich defines the weight of intralayer connections and thus the\nnumber of obtained modules, while ωis the temporal resolution param-\neterwhich sets the weight of the interlayer edges that link each nodeito itself across layers. When the value of γis small, the maximization\nof Q produces relatively large communities, while large values resultin more communities with smaller number of nodes. Given that the\nvalue of ωdefines the consistency of multilayer modules, large values\nrelative to intralayer edges result in communities that are more similarto one another across layers. We set these parameters to frequently\nused default values of γ=1 , ω= 1 (Betzel et al., 2017; Telesford\net al., 2017). Additional analyses with varying parameters aroundthese default values can be found in the supplementary material. As\nthe multilayer community detection algorithm is stochastic, the modu-\nlarity index (i.e., Q) was averaged across 100 optimizations of themodularity quality function. The multilayer modularity analysis wasimplemented with code from Jeub et al (Lucas G. S. Jeub, Marya Bazzi,\nInderjit S. Jutla, and Peter J. Mucha, “A generalized Louvain method\nfor community detection implemented in MATLAB, ”http://netwiki.\namath.unc.edu/GenLouvain (2011 –2017).\nThe algorithm was used with the randomization option\n“moverandw ”instead of the default “move ”option, as this has been\nshown to mitigate some undesirable behavior for multilayer modular-\nity with ordinal coupling (Bazzi et al., 2016).\n2.7 |Multilayer metrics\nIn order to describe the temporal variability of community\n(i.e., modular) structure, we calculated the node flexibility score which\nrepresents the number of times that a node switches communities\nover time, normalized by the total possible number of switches(Bassett et al., 2011). We obtained the global flexibility scores by\naveraging over all brain regions included in the analysis.\nTo better understand the underlying mechanism of the network\nflexibility over time, we calculated additional three measures: node\npromiscuity (Papadopoulos, Puckett, Daniels, & Bassett, 2016), node\ncohesion strength , and node disjointedness (Telesford et al., 2017).\nIn order to investigate the tendency of brain regions to change\nallegiance between limited or multiple (i.e., temporal integration) com-\nmunities, we calculated the node promiscuity which reflects the frac-\ntion of all networks in which the node participates at least once,across all network layers (Papadopoulos et al., 2016). The global pro-\nmiscuity was defined as the average promiscuity over all nodes.\nNode cohesion strength and node disjointedness quantify the\nnode changes based on mutual versus independent changes, respec-\ntively (Telesford et al., 2017).\nNode cohesion strength is defined as a cohesion matrix, where\nthe edges represent the number of times a pair of nodes change to\nthe same community together. Cohesion strength of a node is the\nsum of its row values in the cohesion matrix, with higher values indic-ative of frequent changes with other nodes, and lower values implyinginfrequent changes with other nodes. Node disjointedness is defined\nby the number of times a node switches communities independently\nof other nodes, divided by the number of times a node can changecommunities. Higher values indicate frequent independent changes,\nand lower values imply infrequent switches of communities of a given4832 MALAGURSKI ET AL .\n 10970193, 2020, 17, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/hbm.25161 by Cochrane Germany, Wiley Online Library on [30/12/2022]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License\n\nnode independently of other nodes. The calculated metrics were aver-\naged over all brain regions in order to obtain the global indices of dis-joint and cohesive changes of a brain network across time.\nTo understand, how the present dataset corresponds to known\nfunctional networks, we compared the community partitions obtainedon this data to the seven predefined resting state networks (Schlesinger\net al., 2017): FPCN, DMN, DAN, SVAN, LIMB, SM, and VIS.\nFirst, the cooccurrence of brain regions was summarized with a\nmodule allegiance matrix , where the ijth element present the percent-\nage of time points in which both region iand region jbelong to the\nsame community (Mattar, Cole, Thompson-Schill, & Bassett, 2015).Thus, regions that are consistently grouped together in the same net-work, across time, have high allegiance values.\nThen, using the module allegiance matrix, we computed the\ndynamic recruitment of a network , that estimated the probability that\nits regions cooccur in predefined networks with regions from the\nsame network across time points (Mattar et al., 2015). The recruit-\nment coefficient was averaged over all brain regions in order to obtainthe global dynamic recruitment.\nIn addition, all of the calculated multilayer metrics were summa-\nrized across predefined networks (Schlesinger et al., 2017); to furtherexplore the significance of the obtained results in the context of well-\nknown resting state networks.\nAs previously stated, the multilayer community detection algo-\nrithm is stochastic and therefore the obtained measures were aver-aged across 100 optimizations of the modularity quality function.\nTo provide better intuitive understanding of these metrics, Tel-\nesford et al. (2017) gave the following example which relates splittingversus merging communities to the measures of disjointedness and\ncohesion (for VIS representation, please see Telesford et al., 2017). If\na community splits in two, the cohesion is nonzero, as a subgroup ofnodes from an old Community A moves to a new Community B, and a\nseparate group of nodes moves from the old Community A to a new\nCommunity C. Node disjointedness is in this case zero, as individualnodes did not switch communities independently of other nodes. Thesame is true for merging communities, as we once again have high\ncohesion and zero node disjointedness.\nThe calculation of global flexibility, cohesion strength, and dis-\njointedness was implemented with code from the Network Commu-\nnity Toolbox (http://commdetect.weebly.com/).\n2.8 |Null models\nTo determine the statistical significance of the temporal evolution of\nfunctional brain networks and to test against the null hypothesis that\nthere is no smooth reconfiguration between consecutive time points,we compared the real functional networks to a temporal null model .\nThis null model was created by shuffling the time layers in the multi-\nlayer network uniformly at random across time (Chai, Mattar, Blank,\nFedorenko, & Bassett, 2016; Sizemore & Bassett et al., 2017). Impor-tantly, the temporal null model constructed in such a way, preservesconnectivity within a network layer but eliminates the dependencies\nbetween layers over time.\nFurther, we computed a nodal null model to contrast the network\nrecruitment coefficient obtained on our data against the null hypothe-\nsis that roles of the regions in the network are identical (i.e., no func-tional subnetworks). Hence, we ensure that the community structure\nwe calculate is not random but instead captures the modular organiza-\ntion of functional connectivity. This null model, similar to the configu-ration model for static graphs, was constructed by randomly rewiring\nedges occurring at the same point (Sizemore & Bassett et al., 2018).\nTherefore, we computed 50 null models (temporal and nodal) for\neach subject's multilayer functional matrix and then optimized themultilayer modularity quality function 100 times on each of these null\nmodel networks.\nThe real networks were compared to null networks using Welch's\ntwo-sample ttest implemented in R (v. 3.5.2; The R Project for Statis-\ntical Computing; http://www.R-project.org/).\nThe significance level of p-values was adjusted to p< .05/ n,\nwhere nrepresents the number of multilayer measures that were\ncompared between the observed and null networks.\nFurther, we calculated the Cohen's d index of effect size using an\nR-based package lsr (v. 0.5), and interpreted it as follows: d≥0.2 was\nconsidered a “small ”effect size, d≥0.5 represented a “medium ”effect\nsize and d≥0.8 a “large”effect size (Cohen, 1988)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 106,
+            "end": 148,
+            "text": "atlas of Schaefer and colleagues (Schaefer",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 163,
+            "end": 213,
+            "text": "corresponding to 200 cortical regions (i.e., ROIs)",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 232,
+            "end": 306,
+            "text": "seven well-known resting state networks according to the\nYeo-Krienen atlas",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 497,
+            "end": 554,
+            "text": "The time-series were averaged over the voxels in each ROI",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 559,
+            "end": 628,
+            "text": "correlated between each pair of nodes using the Pearson's correlation",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 639,
+            "end": 692,
+            "text": "Each correlation coefficient was then Fisher's r-to-z",
+            "labels": [
+              "Connectivity normalization — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1204,
+            "end": 1253,
+            "text": "negative z values were excluded from the analysis",
+            "labels": [
+              "Negative correlation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1358,
+            "end": 1425,
+            "text": "correlation matrices with diagonal and\nnegative values set to zero.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1650,
+            "end": 1692,
+            "text": "FDR-adjusted significance level of p< .01.",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5450,
+            "end": 5560,
+            "text": "we calculated the node flexibility score which\nrepresents the number of times that a node switches communities",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10077,
+            "end": 10137,
+            "text": "Network Commu-\nnity Toolbox (http://commdetect.weebly.com/).",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7652,
+            "end": 7750,
+            "text": "The calculated metrics were aver-\naged over all brain regions in order to obtain the global indice",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 106,
+            "end": 148,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 163,
+            "end": 213,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 232,
+            "end": 306,
+            "text": "3",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 497,
+            "end": 554,
+            "text": "4",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 559,
+            "end": 628,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 639,
+            "end": 692,
+            "text": "6",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1204,
+            "end": 1253,
+            "text": "7",
+            "labels": [
+              "Negative correlation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1358,
+            "end": 1425,
+            "text": "8",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1650,
+            "end": 1692,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5450,
+            "end": 5560,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7652,
+            "end": 7750,
+            "text": "11",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ]
+        }
+      ]
+    }
+  ]
+}

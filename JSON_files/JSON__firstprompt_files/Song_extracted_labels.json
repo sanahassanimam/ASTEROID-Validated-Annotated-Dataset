@@ -1,0 +1,735 @@
+{
+  "data": {
+    "text": "Age-Related Reorganizational Changes in Modularity\nand Functional Connectivity of Human Brain Networks\n\nJie Song,1,2 Rasmus M. Birn,3,4 Mélanie Boly,3,5 Timothy B. Meier,1,6,7 Veena A. Nair,1\nMary E. Meyerand,1,2,4,6 and Vivek Prabhakaran1,3–6,8,9\n\nBRAIN CONNECTIVITY\nVolume 4, Number 9, 2014\nª Mary Ann Liebert, Inc.\nDOI: 10.1089/brain.2014.0286\n\nThe human brain undergoes both morphological and functional modifications across the human lifespan. It is im-\nportant to understand the aspects of brain reorganization that are critical in normal aging. To address this question,\none approach is to investigate age-related topological changes of the brain. In this study, we developed a brain\nnetwork model using graph theory methods applied to the resting-state functional magnetic resonance imaging\ndata acquired from two groups of normal healthy adults classified by age. We found that brain functional networks\ndemonstrated modular organization in both groups with modularity decreased with aging, suggesting less distinct\nfunctional divisions across whole brain networks. Local efficiency was also decreased with aging but not with\nglobal efficiency. Besides these brain-wide observations, we also observed consistent alterations of network prop-\nerties at the regional level in the elderly, particularly in two major functional networks—the default mode network\n(DMN) and the sensorimotor network. Specifically, we found that measures of regional strength, local and global\nefficiency of functional connectivity were increased in the sensorimotor network while decreased in the DMN\nwith aging. These results indicate that global reorganization of brain functional networks may reflect overall to-\npological changes with aging and that aging likely alters individual brain networks differently depending on the\nfunctional properties. Moreover, these findings highly correspond to the observation of decline in cognitive func-\ntions but maintenance of primary information processing in normal healthy aging, implying an underlying com-\npensation mechanism evolving with aging to support higher-level cognitive functioning.\n\nParticipants were 26 younger adults (age 24.6 – 3.3 years, 11\nwomen) and 24 older adults (age 58.0 – 6.1 years, 12 women)\nwith no history of neurological or psychological disorders.\nTen-minute resting-state fMRI scans were acquired from\neach subject as they rested with their eyes fixated on a cross\nprojected to the center of a MR-safe screen. Imaging data\nwere obtained on a 3.0 Tesla whole-body MRI scanner (DIS-\nCOVERY MR750; General Electric Medical Systems, Wauke-\nsha, WI) with an 8-channel receive-only RF head coil array.\nThis study was approved by the University of Wisconsin-\nMadison Health Sciences Institutional Review Board. Written\ninformed consent was provided by each participant.\n\nT1-weighted structural images with 1 mm isotropic voxels\nwere acquired axially with an MPRAGE sequence (TR =\n8.132 ms, TE = 3.18 ms, TI = 450 ms, flip angle = 12°, field of\nview = 256 · 256 mm2, matrix size = 256 · 256, slice thick-\nness = 1 mm, and number of slices = 156). Echo planar imaging\ndata were collected in the sagittal plane with the following\nparameters: TR = 2.6 sec, TE = 22 ms, flip angle = 60°, field\nof view = 224 · 224 mm2, matrix size = 64 · 64, slice thick-\nness = 3.5 mm, number of slices = 40 slices, and 231 volumes.\n\nResting-state fMRI data were processed in AFNI (Cox,\n1996), including the following initial preprocessing steps: (1)\ndespiking to remove extreme outliers in the signal intensity\ntime courses, (2) correcting for motion and slice timing, and\n(3) removing first three time points of the scan (total 231 time\npoints). T1-weighted structural images were warped to standard\nMNI space using a 12-parameter affine transformation. This\ntransformation was combined with the T1-to-EPI alignment\nand used to map the functional EPI scans to MNI space with\na resampling of 3 mm resolution. The resulting structural images\nwere later skull stripped and segmented into gray matter, WM,\nand cerebrospinal fluid (CSF) masks using FSL (Smith et al.,\n2004). The average signal time course from the WM and\nCSF masks and the six rigid body motion parameters were nor-\nmalized and regressed out. The residuals from the functional\ndata were spatially smoothed with a 4 mm2 full-width half max-\nimum isotropic Gaussian kernel in AFNI and then temporally\nfiltered with a band-pass from 0.01 to 0.1 Hz.\n\nHead motion has been shown to significantly affect the\nRSFC measures (Saad et al., 2009; Satterthwaite et al.,\n2012; Van Dijk et al., 2012). Therefore, a secondary motion\ncorrection was performed to exclude certain time frames\nwith motion above a more stringent threshold. A score of\nmotion measurement corresponding to each time frame of\nfMRI scan was calculated as the square root of the sum\nof squares of the derivatives (SSD) of the six time courses\nof the motion parameters (Birn et al., 2013; Jones et al.,\n2010; Meier et al., 2012). In this study, any time frame asso-\nciated with a score of SSD greater than 0.2 mm was censored\nand later excluded using the censor option provided in the\nAFNI program, 3dDeconvolve. This option essentially per-\nformed zero-filling to maintain the same sampling rate and\nthe same length of time series for each subject. To further\neliminate group differences in motion contaminating func-\ntional connectivity assessments, we matched subjects from\nthe two age groups with their average motion SSD across\nall these time points. This process resulted in two subgroups\nwith 16 subjects in each subgroup. Several younger sub-\njects with small average motion SSD and several older sub-\njects with relatively greater average motion SSD had to be\nremoved in order to match the average motion for the two\nsubgroups."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 102,
+            "text": "Age-Related Reorganizational Changes in Modularity\nand Functional Connectivity of Human Brain Networks",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 104,
+            "end": 112,
+            "text": "Jie Song",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 288,
+            "end": 292,
+            "text": "2014",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 295,
+            "end": 317,
+            "text": "Mary Ann Liebert, Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 346,
+            "text": "10.1089/brain.2014.0286",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 967,
+            "end": 998,
+            "text": "modularity decreased with aging",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2537,
+            "end": 2588,
+            "text": "DIS-\nCOVERY MR750; General Electric Medical Systems",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3319,
+            "end": 3347,
+            "text": "number of slices = 40 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3291,
+            "end": 3317,
+            "text": "slice thick-\nness = 3.5 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3219,
+            "end": 3235,
+            "text": "flip angle = 60°",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2402,
+            "end": 2425,
+            "text": "eyes fixated on a cross",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3237,
+            "end": 3266,
+            "text": "field\nof view = 224 · 224 mm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3193,
+            "end": 3205,
+            "text": "TR = 2.6 sec",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3207,
+            "end": 3217,
+            "text": "TE = 22 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3926,
+            "end": 3941,
+            "text": "3 mm resolution",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5535,
+            "end": 5582,
+            "text": "two subgroups\nwith 16 subjects in each subgroup",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3409,
+            "end": 3413,
+            "text": "AFNI",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2319,
+            "end": 2337,
+            "text": "resting-state fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2144,
+            "end": 2161,
+            "text": "26 younger adults",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2199,
+            "end": 2214,
+            "text": "24 older adults",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2163,
+            "end": 2183,
+            "text": "age 24.6 – 3.3 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2216,
+            "end": 2236,
+            "text": "age 58.0 – 6.1 years",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2185,
+            "end": 2193,
+            "text": "11\nwomen",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2238,
+            "end": 2246,
+            "text": "12 women",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2248,
+            "end": 2306,
+            "text": "with no history of neurological or psychological disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5713,
+            "end": 5730,
+            "text": "had to be\nremoved",
+            "labels": [
+              "Rejected subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5406,
+            "end": 5479,
+            "text": "we matched subjects from\nthe two age groups with their average motion SSD",
+            "labels": [
+              "Group matching"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2672,
+            "end": 2763,
+            "text": "approved by the University of Wisconsin-\nMadison Health Sciences Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3484,
+            "end": 3493,
+            "text": "1",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Despiking — Software",
+            "Despiking — Algorithm",
+            "Despiking — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3563,
+            "end": 3584,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3589,
+            "end": 3601,
+            "text": "3",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3611,
+            "end": 3643,
+            "text": "4",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm",
+            "Removal Init Vol — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3716,
+            "end": 3744,
+            "text": "5",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3753,
+            "end": 3772,
+            "text": "12-parameter affine",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3831,
+            "end": 3850,
+            "text": "6",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Algorithm",
+            "Coregistration — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3863,
+            "end": 3904,
+            "text": "7",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3926,
+            "end": 3941,
+            "text": "3 mm resolution",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3986,
+            "end": 4000,
+            "text": "8",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4079,
+            "end": 4082,
+            "text": "FSL",
+            "labels": [
+              "Skull stripping — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4005,
+            "end": 4072,
+            "text": "9",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4079,
+            "end": 4082,
+            "text": "FSL",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4170,
+            "end": 4202,
+            "text": "10",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Type",
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4109,
+            "end": 4161,
+            "text": "11",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Type",
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4284,
+            "end": 4302,
+            "text": "12",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4310,
+            "end": 4367,
+            "text": "4 mm2 full-width half max-\nimum isotropic Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4412,
+            "end": 4421,
+            "text": "13",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4412,
+            "end": 4421,
+            "text": "band-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4427,
+            "end": 4441,
+            "text": "0.01 to 0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5071,
+            "end": 5079,
+            "text": "14",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5153,
+            "end": 5165,
+            "text": "3dDeconvolve",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5043,
+            "end": 5066,
+            "text": "SSD greater than 0.2 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5713,
+            "end": 5730,
+            "text": "15",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5535,
+            "end": 5582,
+            "text": "two subgroups\nwith 16 subjects in each subgroup",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

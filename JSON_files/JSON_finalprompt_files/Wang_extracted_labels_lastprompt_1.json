@@ -1,0 +1,618 @@
+{
+  "data": {
+    "text": "Visual expertise modulates resting-state brain network dynamics in radiologists: a degree centrality analysis. Wang H, Yao R, Zhang X, Chen C, Wu J, Dong M and Jin C (2023). Visual expertise modulates resting-state brain network dynamics in radiologists: a degree centrality analysis. Front. Neurosci. 17:1152619. doi: 10.3389/fnins.2023.1152619.\n\nAll study procedures were approved by the Subcommittee on Human Studies of the First Affiliated Hospital of Medical College in Xi’an Jiaotong University and were conducted in accordance with the Declaration of Helsinki.\n\nTwenty-two radiology interns and 22 matched subjects were recruited in our study. All of the subjects in the RI group were undergraduates majoring in radiology who interned at the First Affiliated Hospital of Xi’an Jiaotong University. Before rotation, all of the participants received basic medical education at their college. The RI group had X-ray department rotation experience, mainly in interpreting X-ray images for 4 weeks, during which time they practiced 6 days per week and read 25–35 cases per day. The total length of training was 26 ± 2.4 (mean ± standard deviation, SD) days. Scrutinizing the images displayed on the screen and completing the X-ray reports were the main tasks of every intern’s training. Each of the interns had a senior tutor providing basic clinical support. After 4 weeks of rotation, at least 600 reports written by each RI were recorded in the Picture Archiving and Communication System (PACS), which were modified by the instructor to meet the “degree of agreement” requirements. The subjects in the NC group were from other majors and had never participated in any form of medical imaging training nor received any related education. The average ages of the RI group and NC group were 23 ± 0.7 years and 23 ± 0.5 years, respectively. The sex distribution in the two groups was the same (11 males; 11 females). The recruitment criteria of all subjects included the following: (1) the participants were physically healthy and right-handed; (2) the subjects and their immediate family members had no past or present neurological, psychiatric, or neuropsychological disorders and had no history of head trauma or brain tumor by medical history, physical, and neurological examinations; and (3) participants took no relevant drugs before or during the internship. Written consent forms were obtained from all the participants.\n\nBoth the RI group and NC group completed the same behavioral tasks. We conducted the prescreening tasks using a face-to-face questionnaire to exclude confounding factors, such as visual expertise from other domains (e.g., cars, chess, birds, and mushrooms). The subjects’ behavioral test of the visual expertise level was restricted to X-ray films because of the high specialty for required perceptual expertise. Participants in the RI group were required to pass a practical examination about radiological anatomy and interpretation of X-ray films to verify that they had reached a required level of expertise. The Cambridge Face Memory Test (CFMT) and Radiological Expertise Task (RET) were employed to measure face expertise and radiological expertise in our study.\n\nfMRI data were collected from 8:30 a.m. to 12:30 a.m. to eliminate the time-of-day effect. Brain imaging scans were performed on a 3T GE scanner (EXCITE; General Electric; Milwaukee; Wisc.) at the imaging center of Xi’an Jiaotong University First Affiliated Hospital. A standard birdcage head coil and restraining foam pads were used to minimize head motion and protect participants’ hearing. Resting-state functional images were acquired by an echo-planar-imaging sequence, and the specific parameters included 32 contiguous slices with a slice thickness = 4 mm, layer interval = 0, TR = 2,000 ms, TE = 30 ms, FA = 90◦, FOV = 240 mm × 240 mm, data matrix = 64 × 64, voxel size = 3.75 mm × 3.75 mm × 4 mm, total volumes = 190, and scanning time = 380s. During the entire resting process, the subjects had to keep their eyes closed, stay awake, and try to keep their minds blank without having any particular thoughts. Additionally, an MPRAGE T1-magnetization high resolution anatomical image (1 × 1 × 1 mm) was acquired for each participant with the following parameters: TE = 2.26 ms, TR = 1,900 ms, flip angle = 9◦, FOV = 256 mm, slice thickness = 1 mm, and matrix = 256 × 256. A total of 176 slices in the sagittal orientation were acquired. Potential clinical abnormalities of each participant were assessed by two expert radiologists based on the structural images. No participants were excluded at this level.\n\nStatistical Parametric Mapping (SPM12, http://www.fil.ion.ucl.ac.uk/spm) and the Data Processing Assistant for Resting-State fMRI (DPARSF 4.5, http://rfmri.org/DPARSF) were used for MRI data preprocessing. The preprocessing steps were as follows: (1) DICOM data were converted to NIFTI format; (2) the first 10 time points were removed for stability of the magnetic field and to allow the subjects to adapt to the experimental environment; (3) slice time correction was conducted for the remaining time points; (4) motion correction was carried out using rigid body transformation to fix the brain at the same target position; (5) the functional images were coregistered to the subject’s anatomical images, and all the processed data were divided into gray matter, white matter, and cerebrospinal fluid by the exponentiated lie algebra (DARTEL) tool; (6) a higher-level Friston-24 model was employed to regress out head motion; (7) the nuisances such as global signal, white matter signal, and cerebrospinal fluid signal were regressed; (8) all the resting functional images were normalized to MNI space using the deformation field maps obtained from structural image segmentation; (9) the normalized fMRI data were resampled to 3 mm isotropic voxels; (10) the images were then spatially smoothed with a 6 mm full width at half maximum (FWHM) Gaussian kernel; and (11) linear trend removal and temporal bandpass filtering (0.01–0.08 Hz) were performed to reduce the effect of low-frequency drifts and high-frequency noise.\n\nThe DC index has unique superiority in reflecting the dynamics of brain networks. In the current study, the DC method was employed to look for the neuroimaging features between groups. The specific steps were as follows: first, the BOLD time course of each voxel was extracted and its Pearson’s correlation with all other voxels in the whole brain was analyzed. Every voxel with positive correlation coefficients >0.2 was selected to eliminate the weak correlation due to signal noise. Fisher’s r-to-z transformation was conducted to derive the Z score matrix for each participant. Then, the DC value of each subject was divided by the mean of the whole brain to achieve standardization. After that, the voxel wise DC map was averaged into a region wise DC map. The Brainnetome atlas was employed to divide the DC map into 246 regions of interest, and the mean DC values from the 246 regions then served as the input vector for the classification procedure.\n\nThe original contributions presented in the study are included in the article/supplementary material, further inquiries can be directed to the corresponding authors.\n"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 111,
+            "end": 172,
+            "text": "Wang H, Yao R, Zhang X, Chen C, Wu J, Dong M and Jin C (2023)",
+            "labels": [
+              "Author"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 109,
+            "text": "Visual expertise modulates resting-state brain network dynamics in radiologists: a degree centrality analysis",
+            "labels": [
+              "Title"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 166,
+            "end": 172,
+            "text": "(2023)",
+            "labels": [
+              "Year"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 285,
+            "end": 301,
+            "text": "Front. Neurosci.",
+            "labels": [
+              "Publisher"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 314,
+            "end": 345,
+            "text": "doi: 10.3389/fnins.2023.1152619",
+            "labels": [
+              "DOI"
+            ]
+          }
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 109,
+            "text": "Visual expertise modulates resting-state brain network dynamics in radiologists: a degree centrality analysis",
+            "labels": [
+              "Summary"
+            ]
+          }
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7101,
+            "end": 7201,
+            "text": "The original contributions presented in the study are included in the article/supplementary material",
+            "labels": [
+              "Data"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3332,
+            "end": 3390,
+            "text": "3T GE scanner (EXCITE; General Electric; Milwaukee; Wisc.)",
+            "labels": [
+              "Brand"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3713,
+            "end": 3733,
+            "text": "32 contiguous slices",
+            "labels": [
+              "Number of slices"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3741,
+            "end": 3763,
+            "text": "slice thickness = 4 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3765,
+            "end": 3783,
+            "text": "layer interval = 0",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3785,
+            "end": 3798,
+            "text": "TR = 2,000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3800,
+            "end": 3810,
+            "text": "TE = 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3812,
+            "end": 3820,
+            "text": "FA = 90◦",
+            "labels": [
+              "Flip angle"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3822,
+            "end": 3843,
+            "text": "FOV = 240 mm × 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3868,
+            "end": 3905,
+            "text": "voxel size = 3.75 mm × 3.75 mm × 4 mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3907,
+            "end": 3926,
+            "text": "total volumes = 190",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3932,
+            "end": 3952,
+            "text": "scanning time = 380s",
+            "labels": [
+              "Duration (s)"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3594,
+            "end": 3674,
+            "text": "Resting-state functional images were acquired by an echo-planar-imaging sequence",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3989,
+            "end": 4117,
+            "text": "the subjects had to keep their eyes closed, stay awake, and try to keep their minds blank without having any particular thoughts",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 569,
+            "end": 650,
+            "text": "Twenty-two radiology interns and 22 matched subjects were recruited in our study.",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          }
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4618,
+            "end": 4690,
+            "text": "Statistical Parametric Mapping (SPM12, http://www.fil.ion.ucl.ac.uk/spm)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 569,
+            "end": 650,
+            "text": "Twenty-two radiology interns and 22 matched subjects were recruited in our study.",
+            "labels": [
+              "Number of subjects"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1742,
+            "end": 1841,
+            "text": "The average ages of the RI group and NC group were 23 ± 0.7 years and 23 ± 0.5 years, respectively.",
+            "labels": [
+              "Age"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1842,
+            "end": 1917,
+            "text": "The sex distribution in the two groups was the same (11 males; 11 females).",
+            "labels": [
+              "Male/Female"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1987,
+            "end": 2044,
+            "text": "the participants were physically healthy and right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1918,
+            "end": 1982,
+            "text": "The recruitment criteria of all subjects included the following:",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          }
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 602,
+            "end": 621,
+            "text": "22 matched subjects",
+            "labels": [
+              "Group matching"
+            ]
+          }
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 348,
+            "end": 500,
+            "text": "All study procedures were approved by the Subcommittee on Human Studies of the First Affiliated Hospital of Medical College in Xi’an Jiaotong University",
+            "labels": [
+              "IRB"
+            ]
+          }
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3043,
+            "end": 3199,
+            "text": "The Cambridge Face Memory Test (CFMT) and Radiological Expertise Task (RET) were employed to measure face expertise and radiological expertise in our study.",
+            "labels": [
+              "Performance measure"
+            ]
+          }
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4916,
+            "end": 5056,
+            "text": "the first 10 time points were removed for stability of the magnetic field and to allow the subjects to adapt to the experimental environment",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Step Number",
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4926,
+            "end": 4927,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5062,
+            "end": 5127,
+            "text": "slice time correction was conducted for the remaining time points",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Step Number",
+            "Slice timing correction — Software",
+            "Slice timing correction — Parameters"
+          ]
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4913,
+            "end": 4914,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5133,
+            "end": 5243,
+            "text": "motion correction was carried out using rigid body transformation to fix the brain at the same target position",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Step Number",
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ]
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5059,
+            "end": 5060,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5659,
+            "end": 5798,
+            "text": "all the resting functional images were normalized to MNI space using the deformation field maps obtained from structural image segmentation",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Step Number",
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Parameters"
+          ]
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5497,
+            "end": 5498,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5875,
+            "end": 5976,
+            "text": "the images were then spatially smoothed with a 6 mm full width at half maximum (FWHM) Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Step Number",
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm"
+          ]
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5246,
+            "end": 5247,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6012,
+            "end": 6054,
+            "text": "temporal bandpass filtering (0.01–0.08 Hz)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Step Number",
+            "Temporal filt — Type",
+            "Temporal filt — Software"
+          ]
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5922,
+            "end": 5923,
+            "text": "6",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          }
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5987,
+            "end": 6007,
+            "text": "linear trend removal",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Step Number",
+            "Temporal detrending — Software",
+            "Temporal detrending — Parameters"
+          ]
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5547,
+            "end": 5548,
+            "text": "7",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

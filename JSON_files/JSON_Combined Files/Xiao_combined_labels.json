@@ -1,0 +1,1425 @@
+{
+  "data": {
+    "text": "Longitudinal changes in resting-state fMRI from age 5 to age 6 years covary with language development\n\nNeuroImage 128 (2016) 116–124\n\nhttp://dx.doi.org/10.1016/j.neuroimage.2015.12.008\n\n© 2015 The Authors. Published by Elsevier Inc. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).\n\nFifty-three typically developing preschool children at age 5 years (27 males; mean age 5.5 years, range 5.0 to 6.0 years) participated in the study, and longitudinal data were obtained in a one-year follow-up measurement (mean age 6.5 years, range 6.0 to 7.1 years). Prior to participation, children's parents gave written, informed consent, and children gave verbal assent for attendance. All participants were right-handed, monolingual German speakers with no history of neurological, medical, or psychological disorders. The study was approved by the Ethical Review Board of the University of Leipzig (Germany).\n\nSentence comprehension was assessed by the standardized German test of sentence-comprehension (Test zum Satzverstehen von Kindern (TSVK); Siegmüller et al., 2011). The test employs a picture matching task with three possible pictures in response to verbally presented sentences at varying syntactic difficulty. Participants were instructed to listen to stories and to select the picture that best fits the story. The number of correct responses was summed (in percent) and converted to standard scores (T values).\n\nAll data were obtained at a 3T magnetic resonance scanner (Siemens Tim Trio, Germany) with a 12-channel head coil. During resting-state data acquisition, children were instructed to lie as still as possible, keep their eyes open and watch the visual presentation of a screensaver featuring a lava lamp. Resting-state fMRI whole-brain volumes were acquired with a T2*-weighted gradient-echo echo-planar imaging (EPI) sequence using the following parameters: TR 2000 ms, TE 30 ms, flip angle= 90°, slice thickness 3 mm, gap=1 mm, FOV 19.2 cm, matrix= 64 × 64, 28 slices, 100 volumes. High-resolution 3-D structural images were acquired with a T1-weighted, magnetization prepared rapid gradient echo (MPRAGE) sequence using the following parameters: TR 1480 ms, TE 3.46 ms, flip angle = 10°; slice thickness 1.5 mm, gap 0 mm; matrix 250 × 250; spatial resolution 1 × 1 × 1.5 mm.\n\nData preprocessing was carried out using the Data Processing Assistant for Resting-State fMRI (DPARSF) (Chao-Gan and Yu-Feng, 2010, http://www.restfmri.net) which is based on Statistical Parametric Mapping (SPM8) (http://www.fil.ion.ucl.ac.uk/spm) and Resting-State fMRI Data Analysis Toolkit (REST) (Song et al., 2011, http://www.restfmri.net). Before preprocessing, the first three EPI volumes were discarded to avoid possible effects of scanner instability and allow for signal equilibration. Preprocessing steps included: i) slice timing by shifting the signal measured in each slice relative to the acquisition of the slice at the mid-point of each TR; ii) 3D motion correction using a least squares approach and a 6 parameter (rigid body) spatial transformation; iii) reorienting both functional and MPRAGE images and then co-registering MPRAGE image to the mean functional image of each subject; iv) MPRAGE images were segmented into gray matter, white matter (WM), and cerebrospinal fluid (CSF) tissue based on the NIH pediatric atlas (NIHPD) (Fonov et al., 2011), using the asymmetric T1 version of the NIHPD atlas, age range 4.5–8.5 years old (prepuberty), based on 82 subjects; v) spatial normalization by using the parameters from the segmentation procedure in each subject and resampling voxel size to 3 × 3 × 3 mm3; vi) spatial smoothing with a 6-mm full-width-at-half-maximum (FWHM) Gaussian kernel; vii) nuisance regression, including principal components (PCs) extracted from subject-specific WM and CSF mask (5 PC parameters) using a component based noise correction method (CompCor) (Behzadi et al., 2007), as well as Friston 24-parameter model (6 head motion parameters, 6 head motion parameters one time point before, and the 12 corresponding squared items) (Friston et al., 1996). The CompCor procedure comprised detrending, variance (i.e., WM and CSF) normalization and PC analysis according to Behzadi et al. (2007); viii) band-pass temporal filtering (0.01–0.1 Hz). For degree centrality calculation, spatial smoothing was not included in the preprocessing but performed after Z-normalization in order to prevent artefactual local correlations between voxels.\n\nGiven concerns regarding a possible confounding influence of micromovements in intrinsic functional connectivity analyses, the framewise displacement (FD) of time series was calculated. Seven subjects with motion (mean FD) greater than mean + 2 * SD were excluded, with threshold of 0.229 mm for children at age 5 and 0.221 mm at age 6, separately. For the remaining 46 data sets, the average of mean FD at age 5 was 0.101 mm (SD = 0.04 mm, range = 0.037–0.206 mm), and at age 6 was 0.092 mm (SD = 0.039 mm, range = 0.025–0.184 mm).\n\nMean accuracy for the sentence comprehension task was 67.7% (SD 11.38) at age 5 years and 78.8% (SD 8.37) at age 6 years. Performance was above chance at both time points, and there was a significant performance difference between the two measurement time points.\n\nExploring the development of intrinsic brain connectivity, increases in the left posterior STG/STS were identified as significant changes in the degree centrality during a one-year period in typically developing children between age 5 and age 6 years. The RSFC of left posterior STG/STS to language-relevant perisylvian regions is significantly associated with greater advancement in language abilities, whereas RSFC of left posterior STG/STS to regions within DMN is significantly correlated with less advancement in language abilities.\n\nleast squares approach and a 6 parameter (rigid body) spatial transfor-\nmation; iii) reorienting both functional and MPRAGE images and then\nco-registering MPRAGE image to the mean functional image of each\nsubject; iv) MPRAGE images were segmented into gray matter, white\nmatter (WM), and cerebrospinal ﬂuid (CSF) tissue based on the NIH pe-\ndiatric atlas (NIHPD) (Fonov et al., 2011, http://www.bic.mni.mcgill.ca/\nServicesAtlases/NIHPD-obj1), using the asymmetric T1 version of the\nNIHPD atlas, age range 4.5–8.5 years old (prepuberty), based on 82 sub-\njects; v) spatial normalization by using the parameters from the seg-\nmentation procedure in each subject and resampling voxel size to\n3 × 3 × 3 mm3; vi) spatial smoothing with a 6-mm full-width-at-half-\nmaximum (FWHM) Gaussian kernel; vii) nuisance regression, including\nprincipal components (PCs) extracted from subject-speciﬁc WM and\nCSF mask (5 PC parameters) using a component based noise correction\nmethod (CompCor) (Behzadi et al., 2007), as well as Friston 24-\nparameter model (6 head motion parameters, 6 head motion parame-\nters one time point before, and the 12 corresponding squared items)\n(Friston et al., 1996). The CompCor procedure comprised detrending,\nvariance (i.e., WM and CSF) normalization and PC analysis according\ntemporal ﬁltering\nto Behzadi et al. (2007); viii) band-pass\n(0.01–0.1 Hz). For degree centrality calculation, spatial smoothing was\nnot included in the preprocessing but performed after Z-normalization\nin order to prevent artefactual local correlations between voxels (Zuo\net al., 2012).\n\nGiven concerns regarding a possible confounding inﬂuence of\nmicromovements in intrinsic functional connectivity analyses (Power\net al., 2012, 2014; Satterthwaite et al., 2012; Van Dijk et al., 2012), the\nframewise displacement (FD) of time series (Jenkinson et al., 2002)\nwas calculated as it is preferable for its consideration of voxel-wise dif-\nferences in its derivation (Yan et al., 2013a). Seven subjects with motion\n(mean FD) greater than mean + 2 ∗ SD (Yan et al., 2013b) were exclud-\ned, with threshold of 0.229 mm for children at age 5 and 0.221 mm at\nage 6, separately. For the remaining 46 data sets, the average of mean\nFD at age 5 was 0.101 mm (SD = 0.04 mm, range = 0.037–\n0.206 mm), and at age 6 was 0.092 mm (SD = 0.039 mm, range =\n0.025–0.184 mm). Differences of mean FD were calculated by using\npaired t-test and showed no signiﬁcant differences (t(45) = 1.349,\np = .184). Nevertheless, the mean FD was controlled as a covariate of\nno interest in subsequent group-level statistical analyses to reduce\nany remaining potential effect of head motion.\n\nCalculation of degree centrality maps\n\nDegree centrality maps were computed by using the REST toolbox\nthat employs an approach similar to that shown by Buckner et al.\n(2009) and Zuo et al. (2012). Speciﬁcally, for each voxel i the connectiv-\nity between the time course of this given voxel i and the time course of\nevery other voxel within the mask of gray matter of the brain was com-\nputed. Then the correlation map of voxel i was converted to a binary\nmap of connectivity thresholded at r = 0.25, setting all connections\nbelow the threshold to zero while setting all remaining connections to\n1. The sum of all non-zero connections in this binary map was calculated\nto yield the degree centrality of the voxel i. This process was repeated\nfor each voxel in the brain to produce a whole-brain map of the network\ndegree.\n\nThe individual-level degree centrality maps were then standardized\nby converting to z-scores and maps were averaged across participants\nand compared (Buckner et al., 2009; Van Dijk et al., 2012; Zuo et al.,\n\n2012). The z-score transformation is achieved by subtracting mean de-\ngree and dividing standard deviation of degree across all voxels as de-\nscribed in previous studies (Buckner et al., 2009; Zuo et al., 2012).\nGroup-level degree centrality map for each age group was obtained by\nimplementing one-sample t-test. Multiple comparisons were corrected\nat the cluster-level using Gaussian random ﬁeld theory (| Z | N 3.5,\ncluster-wise p b .001, GRF corrected).\n\nThe threshold used to compute degree centrality in this study was\nchosen to be consistent with previous studies (Buckner et al., 2009;\nHampson et al., 2012; Van Dijk et al., 2012), and different threshold se-\nlections did not qualitatively change the results for the cortex (Buckner\net al., 2009; Hampson et al., 2012). For an analysis with alternative\nthresholds, see Supplementary Fig. S1. Furthermore, the weighted ver-\nsion of degree centrality was also computed, assuring the robustness\nof the ﬁndings with nearly identical results as shown in Supplementary\nFig. S2.\n\nDevelopmental changes in degree centrality\n\nThe primary analysis of this study examined intrinsic connectivity\ndifferences in the longitudinal data identifying clusters that change\ntheir degree centrality with development. Paired t-test was performed\nto detect the developmental changes in voxel-wise connectivity maps\nfrom age 5 to age 6 years, controlled for head motion (mean FD).\n\nSeed-based connectivity changes and relation to advances in language\nperformance\n\nHowever, the aforementioned primary analysis would not provide\ninformation about which connections are changing or the relation be-\ntween the connections and language performance. To explore this, a\nsecondary seed-based analysis was implemented. The resulting clusters\nfrom the primary analysis were subjected to a seed-based analysis on\nfunctional connectivity.\n\nRSFC analyses were performed at both measurement time points\nusing REST software. For RSFC calculation, the mean time series of the\nseed were ﬁrst computed for each participant by averaging the time se-\nries of all the voxels in the seed (6-mm-radius sphere), and then an in-\ndividual level RSFC correlation map (r-map) was produced within the\nwhole brain. Next, r-maps were converted into z-maps with application\nof Fisher's r-to-z transformation to obtain approximately normally dis-\ntributed values for further statistical analysis.\n\nAverage functional connectivity maps for both time points (age 5\nand age 6) were computed based on z-transformed maps to illustrate\nthe connectivity patterns of the cluster. In addition, the comparison of\nconnectivity maps between the two time points was obtained by\nperforming paired t-test, controlling for mean FD of each participant,\nand corrected at the cluster-level using Gaussian random ﬁeld theory\n(Z N 2.3, cluster-wise p b .05, GRF corrected).\n\nIn order to model the relationship between changes in functional\nconnectivity and changes in behavioral performance, the absolute\nchanges of both connectivity strength and language comprehension\n(TSVK) performance were calculated for age 6 subtracting age 5, and re-\nsults were then entered into a model of RSFC-behavior correlation. For\nfurther exploration of behavioral effects, the whole group data were di-\nvided into two subgroups by the median of changes in TSVK perfor-\nmance from age 5 to age 6. Participants with change value greater\nthan median were considered to show greater advancement in lan-\nguage abilities (18 participants) whereas participants with change\nvalue smaller than median were considered to show less advancement\nin language abilities (20 participants). Subsequently, RSFC-behavioral\ncorrelation was obtained for each of the two subgroups. Finally, all sta-\ntistical r-maps were transformed to z-maps and corrected at the cluster-\nlevel using Gaussian random ﬁeld theory (Z N 2.3, cluster-wise p b .05,\nGRF corrected).\n\nGroup-level degree centrality and changes with age\n\nDegree centrality maps indicate that hubs at age 5 and age 6 years\ncovered regions of the default mode network (DMN), including\nposterior cingulate cortex/precuneus (PCC), lateral temporal cortex,\nlateral parietal cortex, and medial/lateral prefrontal cortices (Fig. 2) as\nknown from adult data (Buckner et al., 2009). Interestingly, the compar-\nison between the two measurement time points yielded one cluster\ncentered on the left posterior STG/STS (MNI coordinates: − 45, − 51,\n21; peak z: 3.95; 170 voxels) with increased connectivity at age 6 com-\npared to age 5 years (Fig. 3).\n\nIn a next step, the resulting cluster from the degree centrality analy-\nsis was used as a seed in order to examine functional connectivity of this\ncluster. This seeding in the left posterior STG/STS revealed a number of\ncorrelated regions at both ages, including middle frontal gyrus, bilateral\nPCC, dorsomedial prefrontal cortex, bilateral STG/STS and angular gyrus\nbilaterally (Figs. 4A and B). At age 6 years, the IFC was additionally in-\nvolved (Fig. 4B). Direct comparison of functional connectivity between\nthe two measurement time points showed developmental changes in\nthe left inferior frontal sulcus (IFS) of the IFC and left angular gyrus\nfrom age 5 to age 6 years (Fig. 4C). Individual variations in correlations\nbetween left posterior STG/STS and left IFS as well as left angular gyrus\nare shown in Figs. 4D and E, respectively.\n\nIn order to further evaluate behavioral relevance of these functional\nnetworks, changes in RSFC were correlated with changes in language\ncomprehension performance from age 5 to age 6 years. Participants\nwere allocated to two subgroups with either greater or less change in\nlanguage performance based on a median split. RSFC-behavior correla-\ntion for each subgroup showed distinct patterns. Speciﬁcally, correla-\ntions in the left and right IFC were observed in children with greater\n\nKoyama, M.S., Di Martino, A., Zuo, X.-N., Kelly, C., Mennes, M., Jutagir, D.R., Castellanos,\nF.X., Milham, M.P., 2011. Resting-state functional connectivity indexes reading\ncompetence in children and adults. J. Neurosci. 31, 8617–8624.\n\nStevens, W.D., Spreng, R.N., 2014. Resting-state functional connectivity MRI reveals active\n\nThe current study investigated the neural basis of language develop-\nment in longitudinal resting-state functional MRI data in a cohort of typ-\nically developing children at age 5 and age 6 years. Using a data-driven\napproach to investigate degree centrality, we found at both ages a\nsimilar pattern of hubs covering regions of the DMN. A signiﬁcant\ncluster of stronger intrinsic connectivity at age 6 compared to age 5\nwas observed in the left posterior STG/STS. The RSFC-behavior correla-\ntion revealed connections from this cluster to language-relevant regions\nin bilateral IFC for children with greater advancement in language abil-\nities, whereas for children with less advancement in language abilities\nstronger connectivity of DMN regions was observed. These ﬁndings\ndemonstrate the development of functional resting-state networks dur-\ning a one-year period between age 5 and age 6 and its relation to con-\ncurrent development of language abilities.\n\nIncreased degree centrality in left posterior STG/STS with age\n\nNote that the speciﬁc functional role of increased degree centrality in\nthe left posterior STG/STS from age 5 to age 6 cannot be concluded di-\nrectly from resting-state functional brain data alone. These changes\ncan potentially be related to a variety of developmental changes in\nbrain maturation and human development. However, based on the spe-\nciﬁc location of this increase in connectivity in the posterior STG/STS, we\nhypothesize that it is related to the central involvement of this region in\nthe language network where changes in the functional network are\nmanifested at that age when language abilities increase prominently\n(e.g., Guasti, 2002; Sakai, 2005). The posterior STG/STS had been\nshown a central part of the language network in studies with adults\n(Friederici, 2011; Hickok and Poeppel, 2007; Vigneau et al., 2006) and\nwith children (Berl et al., 2010; Brauer et al., 2008; Knoll et al., 2012;\nSkeide et al., 2015). Therefore, a secondary analysis exploring changes\nin RSFC based on this region was performed to further examine which\nnetwork connections terminating in this region are changing from age\n5 to age 6, whether they are part of the language network, and whether\nthere is a relation to behavioral changes in language abilities.\n\nFig. 2. Voxel-wise degree centrality maps at age 5 (2A) and age 6 (2B). Red–yellow colors indicate positive connectivity, whereas blue colors indicate negative connectivity. Z value is the\nscale of degree centrality. Multiple comparisons were corrected at the cluster-level using Gaussian random ﬁeld theory (|Z| N3.5, cluster-wise p b .001, GRF corrected). L, left hemisphere;\nR, right hemisphere.\n\nlanguage-relevant brain regions develops as the brain matures and is\nstill structurally immature at the age of 5 to 6 years (Brauer et al.,\n2011). Furthermore, the common activity of left IFC and posterior\nSTG/STS in the sense of a “default language network” has been observed\nin LFFs (Lohmann et al., 2010), which was, moreover, shown not yet\nfully developed at age 6 years (Friederici et al., 2011). Consistent with\nthese ﬁndings, we found that RSFC between bilateral IFC (left inferior\nfrontal gyrus and right IFS) and left posterior STG/STS was positively\ncorrelated with greater advancement in language comprehension, sug-\ngesting that this long-range connection is relevant for the progress in\nlanguage abilities.\n\nFig. 3. Comparison of degree centrality maps between age 5 and age 6 years (3A). Red–yellow colors indicates stronger degree centrality at age 6 compared to age 5 in the left posterior\nSTG/STS. Multiple comparisons were corrected at the cluster level using Gaussian random ﬁeld theory (Z N 2.3, cluster-wise p b .05, GRF corrected). Figure B illustrates individual variation\nin degree centrality of left posterior STG/STS and also includes the mean values of the cluster in posterior STG/STS at age 5 and age 6 years, as well as error bars representing standard error\nof the mean (3B). L, left hemisphere; R, right hemisphere. STG/STS, superior temporal gyrus and sulcus.\n\nFig. 4. Average functional connectivity maps seeded in the left posterior STG/STS shown for children at age 5 (4A) and age 6 (4B). Signiﬁcant correlations to left inferior frontal cortex are\nonly found for age 6 (Z = 0.3 with minimal cluster size of 60 voxels). Fig. C depicts the direct contrast between the two time points (4C), with red–yellow colors indicating stronger con-\nnections at age 6 (Z N 2.3, cluster-wise p b .05, GRF corrected). In addition, the individual variation in correlations between left posterior STG/STS and left IFS (4D), as well as between pos-\nterior STG/STS and left angular gyrus (4E) are depicted including the mean correlation coefﬁcients at age 5 and age 6. Error bars represent standard error of the mean. L, left hemisphere; R,\nright hemisphere. IFS, inferior frontal sulcus.\n\nFig. 5. Correlations between changes in functional connectivity seeded in the left posterior STG/STS cluster (green circle) and changes in language comprehension performance from age 5\nto age 6 in children with greater advancement in language abilities (5A) and children with less advancement in language abilities (5B). While for the former, signiﬁcant correlations to the\nbilateral inferior frontal cortex were found, for the latter, no such correlations to other parts of the language network were observed and rather correlations to regions within the DMN\nexist. Multiple comparisons were corrected at the cluster level using Gaussian random ﬁeld theory (Z N 2.3, cluster-wise p b .05, GRF corrected). L, left hemisphere; R, right hemisphere.\nIFG, inferior frontal gyrus; IFS, inferior frontal sulcus; PCC, posterior cingulate cortex/precuneus; VMPFC/ACC, ventromedial prefrontal cortex/anterior cingulate cortex.\n\nFunctional connectivity of language regions was observed in LFFs\nfactoring out task dependent activity when seeding in the respective\nbrain regions (Friederici et al., 2011; Lohmann et al., 2010). Data from\nnewborns using the same analysis method reveal that such a functional\nconnectivity is not yet present early in life when infants start to acquire\nlanguage (Perani et al., 2011). These ﬁndings suggest that the analysis of\nLFFs can serve the investigation of language development. And indeed a\nnumber of novel ﬁndings have expanded our knowledge on the\ndevelopment of functional and structural connectivity in infants and\nyoung children (de Bie et al., 2012; Fransson et al., 2011, 2007; Gao\net al., 2009; Lee et al., 2013; Power et al., 2010; van den Heuvel et al.,\n2014).\n\nThe development of the language network from childhood to adult-\nhood was shown to be characterized by a development from inter- to\nintra-hemispheric connectivities (Friederici et al., 2011). So far, howev-\ner, research using resting-state fMRI data to identify and explore the\nlanguage related networks is still very limited (Antonenko et al., 2012;\nMuller and Meyer, 2014; Tomasi and Volkow, 2012; Turken and\nDronkers, 2011; Xiang et al., 2010), and resting-state fMRI data to\nexplore the development of language in children is even more sparse.\nRecent studies have shown that RSFC–behavior correlations are advan-\ntageous to reveal the neural basis of individual variation in cognitive\nperformance (e.g., Hampson et al., 2006; Kelly et al., 2008; Koyama\net al., 2011; Seeley et al., 2007; Stevens and Spreng, 2014; Wang et al.,\n2010; Zou et al., 2013). Given the interesting relation between task-\ndependent fMRI and seed based task-independent resting-state fMRI\ndata on language processing in adults, we expect to elucidate the\ndevelopment of the functional connectivity networks related to lan-\nguage development by combining behavioral and resting-state fMRI\ndata.\n\nHere, we present an exploratory examination of developmental\nchanges in intrinsic connectivity patterns of children from age 5 to age\n6 by using a network measure, which allows an unbiased comparison\nat a voxel-wise level. The range was chosen since at this age the struc-\ntural and functional development of the brain is in full progress\n(Gogtay et al., 2004; Knoll et al., 2012; Skeide et al., 2014) while at the\nsame time performance in language functions increases steadily\n(Guasti, 2002; Sakai, 2005; Skeide et al., 2014). Combining resting-\nstate functional connectivity (RSFC) with behavioral data on the devel-\nopment of sentence comprehension carries the potential to open new\nperspectives on the relation between brain maturation and the ontoge-\nny of language in children. In order to explore the developmental\nchanges in intrinsic connectivity patterns, longitudinal resting-state\nfMRI data were acquired from a cohort of typically developing children\naged 5 years and one year later, and subjected to degree centrality anal-\nysis. As a measure of graph theory, degree centrality is among the most\nfundamental and most common centrality measures, and has been\nwidely used to identify hubs in the human brain (e.g., Buckner et al.,\n2009; Cole et al., 2010; Tomasi and Volkow, 2011). Degree centrality\nhas been found to be physiologically meaningful (Liang et al., 2013;\nTomasi et al., 2015, 2013) and has been applied to investigate the\nchanges in network connectivity associated with healthy aging\n(Hampson et al., 2012) and cognitive functions (van den Heuvel et al.,\n2009). Hubs, as highly connected central nodes in a network, are\nthought to play pivotal roles in the coordination of information ﬂow\n(Sporns et al., 2007) and may also help to minimize wiring and metab-\nolism costs by providing a limited number of long-distance connections\nthat integrate local networks (Bassett and Bullmore, 2006). The\n\napproach used here is similar to that shown by Buckner et al. (2009)\nand Zuo et al. (2012). Binary network measure of degree centrality\nwas computed in a voxel-wise manner and used in order to identify de-\nvelopmental changes in intrinsic connectivity over one year. Subse-\nquently, the result of this analysis was used as a seed to further detect\nhow the connections change with age and, moreover, to what extent\nthe functional resting-state network is related to language abilities.\nWe expected to ﬁnd growing involvement of core regions of the lan-\nguage network with age, in particular the posterior STG/STS and IFC.\nThe importance of these regions in functional networks supporting lan-\nguage functions should be reﬂected in a relation between the growing\nnetwork architecture and language development."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 101,
+            "text": "Longitudinal changes in resting-state fMRI from age 5 to age 6 years covary with language development",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 119,
+            "end": 123,
+            "text": "2016",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 219,
+            "end": 232,
+            "text": "Elsevier Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 134,
+            "end": 184,
+            "text": "http://dx.doi.org/10.1016/j.neuroimage.2015.12.008",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "Missing_sublabels": [
+            "Author",
+            "Summary"
+          ],
+          "id": "m0004"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 244,
+            "end": 263,
+            "text": "open access article",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "Missing_sublabels": [
+            "Data",
+            "Code",
+            "Preregistered",
+            "Remarks"
+          ],
+          "id": "m0005"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1538,
+            "end": 1554,
+            "text": "Siemens Tim Trio",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2037,
+            "end": 2046,
+            "text": "28 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1975,
+            "end": 1995,
+            "text": "slice thickness 3 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1958,
+            "end": 1973,
+            "text": "flip angle= 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1997,
+            "end": 2005,
+            "text": "gap=1 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2007,
+            "end": 2018,
+            "text": "FOV 19.2 cm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1936,
+            "end": 1946,
+            "text": "TR 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1948,
+            "end": 1956,
+            "text": "TE 30 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1782,
+            "end": 1800,
+            "text": "Resting-state fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1698,
+            "end": 1707,
+            "text": "eyes open",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4899,
+            "end": 4921,
+            "text": "remaining 46 data sets",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2401,
+            "end": 2458,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2563,
+            "end": 2567,
+            "text": "SPM8",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2608,
+            "end": 2655,
+            "text": "Resting-State fMRI Data Analysis Toolkit (REST)",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3646,
+            "end": 3684,
+            "text": "resampling voxel size to 3 × 3 × 3 mm3",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1538,
+            "end": 1554,
+            "text": "Siemens Tim Trio",
+            "labels": [
+              "Multicenter study? (Y/N)"
+            ]
+          },
+          "Missing_sublabels": [
+            "Value missing (Y/N)"
+          ],
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 348,
+            "end": 359,
+            "text": "Fifty-three",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 415,
+            "end": 424,
+            "text": "(27 males",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 426,
+            "end": 468,
+            "text": "mean age 5.5 years, range 5.0 to 6.0 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 570,
+            "end": 612,
+            "text": "mean age 6.5 years, range 6.0 to 7.1 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 760,
+            "end": 772,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 774,
+            "end": 801,
+            "text": "monolingual German speakers",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4728,
+            "end": 4742,
+            "text": "Seven subjects",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Female count missing"
+          ],
+          "id": "m0028"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4825,
+            "end": 4877,
+            "text": "0.229 mm for children at age 5 and 0.221 mm at age 6",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 902,
+            "end": 961,
+            "text": "Ethical Review Board of the University of Leipzig (Germany)",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1059,
+            "end": 1100,
+            "text": "Test zum Satzverstehen von Kindern (TSVK)",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5130,
+            "end": 5135,
+            "text": "67.7%",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5166,
+            "end": 5171,
+            "text": "78.8%",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2724,
+            "end": 2725,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2401,
+            "end": 2458,
+            "text": "Data Processing Assistant for Resting-State fMRI (DPARSF)",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2724,
+            "end": 2766,
+            "text": "the first three EPI volumes were discarded",
+            "labels": [
+              "Removal Init Vol — Algorithm"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2885,
+            "end": 2886,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2563,
+            "end": 2567,
+            "text": "SPM8",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2885,
+            "end": 2897,
+            "text": "slice timing",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3018,
+            "end": 3019,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2563,
+            "end": 2567,
+            "text": "SPM8",
+            "labels": [
+              "Alignment Head motion est — Software"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3018,
+            "end": 3038,
+            "text": "3D motion correction",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3076,
+            "end": 3100,
+            "text": "6 parameter (rigid body)",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3185,
+            "end": 3186,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2563,
+            "end": 2567,
+            "text": "SPM8",
+            "labels": [
+              "Coregistration — Software"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3185,
+            "end": 3241,
+            "text": "co-registering MPRAGE image to the mean functional image",
+            "labels": [
+              "Coregistration — Algorithm"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3282,
+            "end": 3283,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2563,
+            "end": 2567,
+            "text": "SPM8",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3282,
+            "end": 3358,
+            "text": "segmented into gray matter, white matter (WM), and cerebrospinal fluid (CSF)",
+            "labels": [
+              "Segmentation — Algorithm"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3548,
+            "end": 3549,
+            "text": "6",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2563,
+            "end": 2567,
+            "text": "SPM8",
+            "labels": [
+              "Spatial normalization (functional) — Software"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3548,
+            "end": 3569,
+            "text": "spatial normalization",
+            "labels": [
+              "Spatial normalization (functional) — Algorithm"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3646,
+            "end": 3684,
+            "text": "resampling voxel size to 3 × 3 × 3 mm3",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3690,
+            "end": 3691,
+            "text": "7",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2563,
+            "end": 2567,
+            "text": "SPM8",
+            "labels": [
+              "Spatial smooth — Software"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3690,
+            "end": 3769,
+            "text": "spatial smoothing with a 6-mm full-width-at-half-maximum (FWHM) Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Algorithm"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3690,
+            "end": 3769,
+            "text": "spatial smoothing with a 6-mm full-width-at-half-maximum (FWHM) Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3949,
+            "end": 3950,
+            "text": "8",
+            "labels": [
+              "CompCor — Step Number"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3949,
+            "end": 3956,
+            "text": "CompCor",
+            "labels": [
+              "CompCor — Software"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3949,
+            "end": 3956,
+            "text": "CompCor",
+            "labels": [
+              "CompCor — Type"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "CompCor",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3883,
+            "end": 3898,
+            "text": "5 PC parameters",
+            "labels": [
+              "CompCor — Parameters"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3993,
+            "end": 3994,
+            "text": "9",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3993,
+            "end": 4019,
+            "text": "Friston 24-parameter model",
+            "labels": [
+              "motion regression — Software"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3993,
+            "end": 4019,
+            "text": "Friston 24-parameter model",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4020,
+            "end": 4134,
+            "text": "(6 head motion parameters, 6 head motion parameters one time point before, and the 12 corresponding squared items)",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4303,
+            "end": 4304,
+            "text": "10",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2608,
+            "end": 2655,
+            "text": "Resting-State fMRI Data Analysis Toolkit (REST)",
+            "labels": [
+              "Temporal filt — Software"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4303,
+            "end": 4345,
+            "text": "band-pass temporal filtering (0.01–0.1 Hz)",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4303,
+            "end": 4345,
+            "text": "band-pass temporal filtering (0.01–0.1 Hz)",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4728,
+            "end": 4729,
+            "text": "11",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4728,
+            "end": 4742,
+            "text": "Seven subjects",
+            "labels": [
+              "Exclusion — Algorithm"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4825,
+            "end": 4877,
+            "text": "0.229 mm for children at age 5 and 0.221 mm at age 6",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7251,
+            "end": 7268,
+            "text": "1",
+            "labels": [
+              "Graph measures — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7251,
+            "end": 7268,
+            "text": "degree centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8618,
+            "end": 8630,
+            "text": "REST toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8739,
+            "end": 10483,
+            "text": "2",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8739,
+            "end": 10483,
+            "text": "for each voxel i the connectiv-\nity between the time course of this given voxel i and the time course of\nevery other voxel within the mask of gray matter of the brain was com-\nputed. Then the correlation map of voxel i was converted to a binary\nmap of connectivity thresholded at r = 0.25, setting all connections\nbelow the threshold to zero while setting all remaining connections to\n1. The sum of all non-zero connections in this binary map was calculated\nto yield the degree centrality of the voxel i. This process was repeated\nfor each voxel in the brain to produce a whole-brain map of the network\ndegree.\n\nThe individual-level degree centrality maps were then standardized\nby converting to z-scores and maps were averaged across participants\nand compared (Buckner et al., 2009; Van Dijk et al., 2012; Zuo et al.,\n\n2012). The z-score transformation is achieved by subtracting mean de-\ngree and dividing standard deviation of degree across all voxels as de-\nscribed in previous studies (Buckner et al., 2009; Zuo et al., 2012).\nGroup-level degree centrality map for each age group was obtained by\nimplementing one-sample t-test. Multiple comparisons were corrected\nat the cluster-level using Gaussian random ﬁeld theory (| Z | N 3.5,\ncluster-wise p b .001, GRF corrected).\n\nThe threshold used to compute degree centrality in this study was\nchosen to be consistent with previous studies (Buckner et al., 2009;\nHampson et al., 2012; Van Dijk et al., 2012), and different threshold se-\nlections did not qualitatively change the results for the cortex (Buckner\net al., 2009; Hampson et al., 2012). For an analysis with alternative\nthresholds, see Supplementary Fig. S1. Furthermore, the weighted ver-\nsion of degree centrality was also computed",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11712,
+            "end": 11740,
+            "text": "RSFC correlation map (r-map)",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11488,
+            "end": 11501,
+            "text": "REST software",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8873,
+            "end": 8892,
+            "text": "mask of gray matter",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8977,
+            "end": 9003,
+            "text": "3",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8977,
+            "end": 9003,
+            "text": "binary\nmap of connectivity",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0082"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7793,
+            "end": 7803,
+            "text": "voxel-wise",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8873,
+            "end": 8892,
+            "text": "mask of gray matter",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9004,
+            "end": 9027,
+            "text": "4",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9004,
+            "end": 9027,
+            "text": "thresholded at r = 0.25",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          },
+          "id": "m0086"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9004,
+            "end": 9027,
+            "text": "thresholded at r = 0.25",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0087"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9029,
+            "end": 9125,
+            "text": "setting all connections\nbelow the threshold to zero while setting all remaining connections to\n1",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0088"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9405,
+            "end": 9443,
+            "text": "5",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0089"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9448,
+            "end": 9486,
+            "text": "maps were averaged across participants",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "id": "m0090"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9853,
+            "end": 9870,
+            "text": "one-sample t-test",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "id": "m0091"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8275,
+            "end": 8288,
+            "text": "paired t-test",
+            "labels": [
+              "Result aggregation — Algorithm"
+            ]
+          },
+          "id": "m0092"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9405,
+            "end": 9443,
+            "text": "standardized\nby converting to z-scores",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0093"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11660,
+            "end": 11678,
+            "text": "6",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type",
+              "Parameters"
+            ]
+          },
+          "id": "m0094"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11660,
+            "end": 11678,
+            "text": "6-mm-radius sphere",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0095"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11838,
+            "end": 11868,
+            "text": "7",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0096"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11838,
+            "end": 11868,
+            "text": "Fisher's r-to-z transformation",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          },
+          "id": "m0097"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11784,
+            "end": 11817,
+            "text": "r-maps were converted into z-maps",
+            "labels": [
+              "Connectivity normalization — Parameters"
+            ]
+          },
+          "id": "m0098"
+        }
+      ]
+    }
+  ]
+}

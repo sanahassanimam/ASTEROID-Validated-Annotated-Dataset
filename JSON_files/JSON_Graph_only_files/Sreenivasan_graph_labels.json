@@ -1,0 +1,368 @@
+{
+  "data": {
+    "title": "Olfactory Network Differences in Master Sommeliers: Connectivity Analysis Using Granger Causality and Graph Theoretical Approach",
+    "text": "Blind deconvolution model. The ﬁrst step in the effective\nconnectivity analysis is to deconvolve the HRF from the\nfMRI time series to obtain underlying neuronal response.\nIn our article, we implement the blind deconvolution method\nproposed by Havlicek and colleagues (2011).\n\nThe exogenous input r (i.e., experimental boxcar function)\nand fMRI time series yp(t) are the inputs to the model. The\ncubature Kalman ﬁlter (CKF) can be used to successfully es-\ntimate the hidden neuronal state variables and parameters.\nBrieﬂy,\nin\nwhich the latent neuronal variables (n) and the parameters\ncorresponding to the HRF (h) are combined into a single\njoint state vector and estimated together in a recursive man-\nner by inverting a dynamic state-space model [Eqs. (1) and\n(2)]. For detailed explanation about\nthis deconvolution\nmethod, the reader is referred to Havlicek and colleagues\n(2011).\n\nDynamic MVAR model. The neuronal state variables\n\nnp(t) can be input into the MVAR as follows\n\nused for the analysis. Each matrix was thresholded into a set\nof weighted graphs (i.e., networks) by selecting the strongest\nconnections until the desired sparsity was reached. Connec-\ntion sparsity (S; ratio of the existing edges to the maximum\npossible number of edges in a network) was used as a thresh-\nolding measure in the current study. The threshold was ap-\nplied to ensure that the networks being compared had the\nsame number of nodes and edges to analyze between-group\ndifferences in the network organization (Achard and Bull-\nmore, 2007). A threshold range of 0.10 < S < 0.50 with an in-\nterval of 0.01 was applied to each connectivity matrix. This\nrange of sparsity was chosen as it is comparable to the range\nindicated in prior studies (He et al., 2008; Rubinov and\nSporns, 2010). The following network analysis was repeat-\nedly performed on this deﬁned threshold range.\n\nx\nþ +\ns = 1\n\na11(s) a12(s)\na21(s) a22(s)\n\n(cid:3) (cid:3) (cid:3) a1p(s)\na2p(s)\n(cid:3)\n(cid:3)\n\nap1(s) ap2(s)\n\n(cid:3) (cid:3) (cid:3) app(s)\n\nn1(t (cid:2) s)\nn2(t (cid:2) s)\n(cid:3)\n(cid:3)\nnp(t (cid:2) s)\n\nOrder of the model (x) is determined by the Akaike/\nBayesian information criterion (Akaike, 1974; Schwarz,\n1978), a are the model coefﬁcients and d is the model\nerror. Note that a(0) and a(s), s = 1 . x represent the instan-\ntaneous inﬂuences between time series and causal inﬂuences\nbetween time series, respectively. By modeling both these\nterms in the model, the effect of instantaneous correlation\non causality can be minimized (Deshpande et al., 2010a).\nBy varying the model coefﬁcients as a function of time,\nthe MVAR model can be made dynamic, as given below\n[Eq. (4)].\n\nAt each S, we obtained network characteristics, including\n(1) small-world parameters and (2) network efﬁciency.\nSmall-world properties were originally proposed by Watts\nand Strogatz (1998). It involved determination of weighted\nclustering coefﬁcient (C), weighted characteristic path length\n(L), normalized weighted clustering coefﬁcient (CN), and\nnormalized weighted characteristic path length (LN). The C\nof a network quantiﬁes the degree of local interconnectivity\nin a network and is expressed as the average of clustering\ncoefﬁcients across all nodes in the network: C = 1\nN +i2NCi,\nwhere N and Ci denote the number of nodes and the clus-\n\na11(s, t)\na21(s, t)\n(cid:3)\n(cid:3)\nap1(s, t)\n\na12(s, t)\na22(s, t)\n(cid:3)\n(cid:3)\nap2(s, t)\n\n3\n(cid:3) (cid:3) (cid:3) a1p(s, t)\n7\na2p(s, t)\n7\n7\n(cid:3)\n7\n7\n7\n(cid:3)\n5\n(cid:3) (cid:3) (cid:3) app(s, t)\n\n3\nn1(t (cid:2) s)\n7\nn2(t (cid:2) s)\n7\n7\n(cid:3)\n7\n7\n7\n(cid:3)\n5\nnp(t (cid:2) s)\n\nThe model coefﬁcients aij(s,t) were taken as the state vector\nof a Kalman ﬁlter and adaptively estimated using the algo-\nrithm proposed by Arnold and colleagues (1998). Dynamic\nGC was then obtained as follows.\n\nx\nDGCij (t) = +\ns =1\n\naij s, t\nð\n\nGraph theory analysis\n\nThe topological properties of functional networks were in-\nvestigated by graph theoretical analysis. The causal connec-\ntivity matrices obtained from the connectivity model were\n\nA network is considered small world if it has similar path\nlength but higher local connectivity than random networks\n(Watts and Strogatz, 1998). The small worldness of a net-\nwork can be expressed as s = CN/LN, which is typically larger\nthan 1 in the case of small-world organization (CN = C/\nCrandom > 1 and LN = L/Lrandom * 1) (Achard et al., 2006;\nWatts and Strogatz, 1998). The mean weighted clustering\ncoefﬁcient and weighted characteristic path length of 100\nmatched random networks are given by Crandom and Lrandom.\nThe random networks are matched to preserve the same\nnumber of nodes, edges, and degree distribution as the real\nnetwork.\n\nTo study the network efﬁciency, we obtained the local (Elocal)\nand global efﬁciency (Eglobal) of the connectivity networks. The\nefﬁciency is a measure of how well a network exchanges infor-\nmation (Achard and Bullmore, 2007). Global efﬁciency quan-\ntiﬁes the exchange of information on a global scale in the\nnetwork and the local efﬁciency is a measure of how well\nlocal subgraphs exchange information when the node under\nconsideration is eliminated. All of the above network measures\nwere calculated using the appropriate functions provided in the\nBrain Connectivity Toolbox (Rubinov and Sporns, 2010).\n\nTo evaluate the between-group differences in overall topo-\nlogical characteristics, we calculated the area under the curve\n(AUC) over the whole range of thresholds. The AUC provi-\ndes a summarized scalar for topological characterization of\nbrain networks independent of single threshold selection\n(Achard and Bullmore, 2007). The integrated AUC of net-\nwork metric Y, which was computed over the threshold\nrange of S1 = 0.1 and Sn = 0.50 with interval of DS = 0.01,\nwas expressed as follows [Eq. (8)]:\n\nMaster Sommeliers were recruited from the Las Vegas re-\nsort community and surrounding regions by S.J.B. with the\nassistance of Jay James, a Master Sommelier extensively in-\nvolved in both training of sommeliers and in the local com-\nmunity. Control participants were recruited via advertising\n\nFMRI data were preprocessed using SPM12. All the sta-\ntistical analyses were performed using MATLAB 2015a.\nEPI data were input into a standard preprocessing pipeline\nthat performed slice time correction, realignment, coregis-\ntration, and normalization to the Montreal Neurological\nInstitute (MNI) 2 mm template. Finally, data were smoothed\nwith an 8 mm Gaussian kernel. Ninety different cortical re-\ngions of interest (ROIs; excluding cerebellum) were identi-\nﬁed based on the Automated Anatomical Labeling atlas\n\n(Tzourio-Mazoyer et al., 2002). No global signal regression\nwas performed (Aguirre et al., 1998; Glasser et al., 2013;\nMurphy et al., 2009). Average time series were extracted\nfrom these regions for all participants. These average time\nseries were standardized and then the latent neuronal state\n\nvariables were obtained by hemodynamic deconvolution\nof the fMRI time series using the CKF. A boxcar function\ncorresponding to the input stimulus was used as the exoge-\nnous input to the deconvolution model along with normal-\nized fMRI time series from previously identiﬁed activated\n\nROI. The hidden neuronal variables obtained after deconvo-\nlution were input into a dynamic MVAR model (model\norder 4) to obtain dynamic effective connectivity between\nevery pair of ROI for all the participants. Samples of task-\nspeciﬁc connectivity were then obtained for each participant\nby populating the absolute causality values at the time point\ncorresponding to wine or nonwine and the ﬁngerprint or\nzebra pattern conditions. These were averaged within sub-\nject and task-speciﬁc connectivity values were then obtained\nfor all participants (Fig. 3 middle panel).\n\nThe connectivity matrices obtained from the MVAR\nmodel were further used to calculate the small worldness\n\nand global and local efﬁciencies of the network for all the\nparticipants. These graph theory measures were obtained at\ndifferent sparsity levels. A difference matrix was obtained\nfor each subject by subtracting the ﬁngerprint/zebra task con-\nnectivity values from the wine/nonwine task connectivity\nvalues. One-sample t-tests (right tailed) were used on these\nnew connectivity values (wine/nonwine connectivity—ﬁnger-\nprint zebra connectivity) and the t-values were obtained. This\nt-value was used as a threshold to choose the strongest causal\nconnections until a desired sparsity was reached. As mentioned\nearlier, a sparsity threshold range of 0.1 < S < 0.50 with an inter-\nval of 0.01 was applied to each connectivity matrix. Figure 4\nshows a schematic of the graph theory analysis pipeline. The\nintegrated AUC graph theory metrics over the different sparsity\nthresholds for the two groups were obtained. The samples were\nthen compared using t-test (controlling for age and gender) to\nobtain the between-group differences in network topology.\n\nThe results of this study are summarized as follows: (1)\nthere were 28 effective connectivity paths that were signiﬁ-\ncantly different between sommeliers and controls and (2)\nthere were enhanced small-world organization and signiﬁ-\ncantly greater clustering coefﬁcient and smaller path length\nin the sommeliers when compared to untrained participants.\nThe ﬁrst set of results is associated with the identiﬁcation\nof important effective connectivity paths that are different\nbetween the Master Sommeliers and the untrained partici-\npants. The results show 28 signiﬁcantly different paths be-\ntween the 2 groups during the olfactory task. Twenty-two\nof these paths were signiﬁcantly greater ( p < 0.05, Cohen’s\nd [effect size] > 0.7) in sommeliers during the wine/nonwine\ntask and six of the connections were greater in controls. The\n\nresults were visualized using BrainNet Viewer (Xia et al.,\n2013, www.nitrc.org/projects/bnv/). Figure 5 and Table 1\nshow the effective connectivity paths to be signiﬁcantly\ngreater in the sommeliers compared to untrained controls.\nWe see signiﬁcantly greater connectivity in sommeliers,\nmainly comprising connections involving the precuneus,\ncaudate, putamen, and several frontal and temporal regions\n( p < 0.05, Cohen’s d [effect size] > 0.7, Fig. 5 and Table 1).\nFigure 6 and Table 2 show paths that were signiﬁcantly\ngreater in untrained participants when compared to the somme-\nliers, which primarily involve connections from the left hippo-\ncampus to the frontal regions ( p < 0.05, effect size > 0.7).\n\nSecond, the graph theory analysis results showed that both\nthe sommeliers and the control group represented a small-\nworld organization for the deﬁned range of sparsity thresholds\n(S). Furthermore, comparing the integrated AUC values, we\nfound that the sommeliers had signiﬁcantly greater small\nworldness (r; p = 7.54 · 10(cid:2)5) and normalized weighted clus-\ntering coefﬁcient (c; p = 1.69 · 10(cid:2)11) when compared to the\nuntrained controls (Fig. 7). There were no signiﬁcant differ-\nences in the normalized weighted characteristic path length\n(k), global efﬁciency (Eglob), and the local efﬁciency (Eloc).\nThere were no statistically signiﬁcant ﬁndings when\nassessing relationship between connectivity and years of ex-\nperience as a sommelier or RT during the wine/nonwine task.\nHowever, these ﬁndings did exhibit expected trends with\nconnectivity, showing a positive relationship with experi-\nence and an inverse relationship with RT with a moderate ef-\nfect size (Cohen’s d > 0.6) (Fig. 8).\n\nduring olfaction in sommeliers. The ﬁndings of this study\nwere (1) sommeliers showed signiﬁcantly increased connec-\ntivity involving the precuneus, caudate, putamen, and several\nfrontal and temporal regions, while there was an increased\nconnectivity in paths primarily involving connections from\nthe left hippocampus to the frontal regions in controls and\n(2) the sommeliers showed signiﬁcantly greater small world-\nness when compared to the controls.\n\nFIG. 7. Between-group\ndifferences in graph theory\nmetrics during the wine/\nnonwine task. The bar plots\nindicate the statistical differ-\nence of integrated AUC over\na range of sparsity thresholds\n(S) between the sommeliers\nand the untrained controls.\nAUC, area under the curve.\n\nDifference in small worldness in sommeliers and controls\n\nPrevious studies have shown that the functional connec-\ntions of the brain networks are structured in an extremely\nwell-organized small-world manner (Achard et al., 2006;\nSporns et al., 2004; Van den Heuvel et al., 2008). This\nsmall-world organization is characterized by a high level of\nlocal interconnectivity or local clustering, which is responsi-\nble for efﬁcient local information processing, as well as exis-\ntence of efﬁcient long-distance connections (with a short\naverage path between nodes) that ensure a high level of global\ncommunication efﬁciency and integration of information\nwithin the overall network (Bullmore and Sporns, 2009;\nWatts and Strogatz, 1998). In other words, we could say\nthat a small-world organization reﬂects an optimized net-\nwork organization, which could be in turn associated with\ndifference in cognition.\n\nOur results show that both the sommeliers and the controls\nhave an efﬁcient small-world organization of the brain net-\nwork (r > 1), but the Master Sommeliers have a signiﬁcantly\ngreater small-world index (r) and normalized clustering co-\nefﬁcient (c) when compared to untrained controls. Studies\nhave shown that training and expertise enhance the network\ncharacteristics (Duan et al., 2014; Van den Heuvel et al.,\n2009; Voss et al., 2010). Therefore, we attribute this en-\nhancement in network organization to the rigorous learning\nexperienced by the Master Sommeliers. The graph theory\nﬁndings of this study suggest reorganization of the brain net-\nworks in Master Sommeliers during olfaction, which may be\nattributed to the expertise.\n\nThis study is unique because we investigated effective con-\nnectivity and topological properties of brain organization in\nMaster Sommeliers, a population of experts who have a dis-\ntinctive skill set and the population is small. There are 230\nprofessionals (147 Master Sommeliers in America’s chapter)\nworldwide who have received the title of Master Sommelier\nsince the organization’s inception (www.mastersommeliers\n.org/about#). By including only individuals with this dis-\ntinction, we could be assured that we were assessing true\nexperts. Although we were able to recruit all the Master\nSommeliers from the Las Vegas resort community and sur-\nrounding regions, the sample size is still small due to the rare\nprofession. Despite working with a limited sample, our re-\nsults show a large effect size, therefore upholding the sta-\ntistical signiﬁcance of our ﬁndings. Given the restrictions in\nthe size of the expert population, future studies might need to\nbe multisite in nature to gain access to a larger pool of Master\nSommeliers. This may allow the detection of signiﬁcant re-\nlationship between connectivity and behavior that were not\nobserved in the current data set.\n\nPrevious studies investigating the differences in olfactory processing and judgments between trained sommeliers\nand controls have shown increased activations in brain regions involving higher level cognitive processes in som-\nmeliers. However, there is little information about the inﬂuence of expertise on causal connectivity and topolog-\nical properties of the connectivity networks between these regions. Therefore, the current study focuses on\naddressing these questions in a functional magnetic resonance imaging (fMRI) study of olfactory perception\nin Master Sommeliers. fMRI data were acquired from Master Sommeliers and control participants during differ-\nent olfactory and nonolfactory tasks. Mean time series were extracted from 90 different regions of interest (ROIs;\nbased on Automated Anatomical Labeling atlas). The underlying neuronal variables were extracted using blind\nhemodynamic deconvolution and then input into a dynamic multivariate autoregressive model to obtain connec-\ntivity between every pair of ROIs as a function of time. These connectivity values were then statistically com-\npared to obtain paths that were signiﬁcantly different between the two groups. The obtained connectivity\nmatrices were further studied using graph theoretical methods. In sommeliers, signiﬁcantly greater connectivity\nwas observed in connections involving the precuneus, caudate, putamen, and several frontal and temporal re-\ngions. The controls showed increased connectivity from the left hippocampus to the frontal regions. Furthermore,\nthe sommeliers exhibited signiﬁcantly higher small-world topology than the controls. These ﬁndings are signif-\nicant, given that learning about neuroplasticity in adulthood in these regions may then have added clinical\nimportance in diseases such as Alzheimer’s and Parkinson’s where early neurodegeneration is isolated to regions\nimportant in smell.\n\nKeywords: effective connectivity; experts; functional magnetic resonance imaging; Granger causality; graph\ntheory; olfaction\n\nEffective connectivity refers to the inﬂuence one neural\nsystem exerts over another, thus enabling us to ﬁnd more in-\nformation about how information ﬂows between different\nbrain regions. As a result, effective connectivity ﬁndings\nhave added important information and yielded models of\ncognitive function by highlighting the extremely dynamic\nnature of the neural instantiations (McIntosh et al., 2010).\nSome of the more frequently used effective connectivity\nmethods are dynamic causal modeling (DCM) (Friston\net al., 2004), structural equation modeling (SEM) (McIntosh\nand Gozales-Lima, 1994), and Granger causality (GC) anal-\nysis (Abler et al., 2006; Deshpande et al., 2009; Roebroeck\net al., 2005).\n\nUnlike the conﬁrmatory methods such as DCM and SEM,\nGC analysis is an exploratory technique that does not make\nany prior assumptions about the underlying connectional ar-\nchitecture and is capable of obtaining condition-speciﬁc\ncausal connectivity metrics between the larger number of\nbrain regions using relatively shorter time series. Some of\nthe earlier studies did examine causal connectivity differ-\nences related to learning using GC (Luo et al., 2012; Sathian\net al., 2013), but such studies are few, and, to our knowledge,\nhave not been completed on sommeliers (wine experts).\n\nGC is based on the principle that the causal inﬂuence of\none region X on another region Y can be obtained if past val-\nues of the time series from the region X help predict the pres-\nent and future values of the time series from the region Y\n(Granger, 1969). This method is implemented using a multi-\nvariate autoregressive (MVAR) model. Several earlier stud-\nies have used these MVAR models based on the GC\nframework to study the predictive relationship between\ntime series from different brain regions (Abler et al., 2006;\nDeshpande et al., 2011; Krueger et al., 2011; Lacey et al.,\n2011; Roebroeck et al., 2005).\n\nHowever, it was shown that due to the effect of non-\nneuronal spatial variability of the shape of hemodynamic re-\nsponse functions (HRF) and slow sampling rate (Handwerker\net al., 2004), using raw fMRI time series in GC analysis\ncould lead to confounds in the estimation of causal connec-\ntivity metrics (David et al., 2008; Deshpande et al.,\n2010b). Consequently, recent studies have implemented an\n\nimprovised effective connectivity analysis framework. This\nframework implements blind hemodynamic deconvolution\nmethods where in the underlying hidden neuronal variable\nfor the fMRI time series can be estimated, and the GC anal-\nysis is done in the latent neuronal space (Grant et al., 2015;\nHutcheson et al., 2015; Sathian et al., 2013).\n\nThe goals of this study are to investigate effective connec-\ntivity between brain regions in Master Sommeliers (wine ex-\nperts) and untrained participants (nonwine experts) during\nolfactory tasks and study the global topological properties\nof these networks. In particular, we investigate the associa-\ntion between functional organization of the brain networks\nand the difference in olfactory expertise. Master Sommeliers\nundergo specialized training and have to pass a four-\nexamination process that takes several years. By the end of\ntheir training, they have accumulated a wealth of knowledge\nlinked to the smell of the wines. In addition to the obvious\ndependence on their sense of smell and taste, sommeliers\nalso learn to draw on their memory and use mental imagery\nwhen judging wine. Therefore, we hypothesized that there\nwould be network differences in effective connectivity and\nalso the functional organization of the networks involving re-\ngions involved in olfaction, memory, multimodal integra-\ntion, and mental imagery between Master Sommeliers and\nuntrained controls. Furthermore, we also expected to see dif-\nferences in the small-world topology in the effective connec-\ntivity networks in both groups.\n\nIn the current study, we explored the causal inﬂuences be-\ntween different brain regions during olfactory fMRI tasks in\ntrained Master Sommeliers and novice controls. Furthermore,\nthe functional organization of the brain networks was studied\nusing graph theoretical approaches, and the differences be-\ntween the two groups were further statistically evaluated."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6556,
+            "end": 6591,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6556,
+            "end": 6591,
+            "text": "Automated Anatomical Labeling atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6449,
+            "end": 6591,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6449,
+            "end": 6502,
+            "text": "Ninety different cortical re-\ngions of interest (ROIs",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6734,
+            "end": 6808,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6734,
+            "end": 6768,
+            "text": "Average time series were extracted",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6734,
+            "end": 6808,
+            "text": "Average time series were extracted\nfrom these regions for all participants",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6810,
+            "end": 6853,
+            "text": "4",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6810,
+            "end": 6853,
+            "text": "These average time\nseries were standardized",
+            "labels": [
+              "Connectivity normalization — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7259,
+            "end": 7293,
+            "text": "5",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6917,
+            "end": 6980,
+            "text": "hemodynamic deconvolution\nof the fMRI time series using the CKF",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7259,
+            "end": 7293,
+            "text": "dynamic MVAR model (model\norder 4)",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7285,
+            "end": 7292,
+            "text": "order 4",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3795,
+            "end": 3818,
+            "text": "DGCij (t) = +\ns =1\n\naij",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1018,
+            "end": 1142,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1018,
+            "end": 1142,
+            "text": "thresholded into a set\nof weighted graphs (i.e., networks) by selecting the strongest\nconnections until the desired sparsity",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1550,
+            "end": 1592,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1169,
+            "end": 1336,
+            "text": "sparsity (S; ratio of the existing edges to the maximum\npossible number of edges in a network) was used as a thresh-\nolding measure in the current study. The threshold",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1550,
+            "end": 1592,
+            "text": "0.10 < S < 0.50 with an in-\nterval of 0.01",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2713,
+            "end": 2735,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5224,
+            "end": 5276,
+            "text": "Brain Connectivity Toolbox (Rubinov and Sporns, 2010",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2763,
+            "end": 4145,
+            "text": "Small-world properties were originally proposed by Watts\nand Strogatz (1998). It involved determination of weighted\nclustering coefﬁcient (C), weighted characteristic path length\n(L), normalized weighted clustering coefﬁcient (CN), and\nnormalized weighted characteristic path length (LN). The C\nof a network quantiﬁes the degree of local interconnectivity\nin a network and is expressed as the average of clustering\ncoefﬁcients across all nodes in the network: C = 1\nN +i2NCi,\nwhere N and Ci denote the number of nodes and the clus-\n\na11(s, t)\na21(s, t)\n(cid:3)\n(cid:3)\nap1(s, t)\n\na12(s, t)\na22(s, t)\n(cid:3)\n(cid:3)\nap2(s, t)\n\n3\n(cid:3) (cid:3) (cid:3) a1p(s, t)\n7\na2p(s, t)\n7\n7\n(cid:3)\n7\n7\n7\n(cid:3)\n5\n(cid:3) (cid:3) (cid:3) app(s, t)\n\n3\nn1(t (cid:2) s)\n7\nn2(t (cid:2) s)\n7\n7\n(cid:3)\n7\n7\n7\n(cid:3)\n5\nnp(t (cid:2) s)\n\nThe model coefﬁcients aij(s,t) were taken as the state vector\nof a Kalman ﬁlter and adaptively estimated using the algo-\nrithm proposed by Arnold and colleagues (1998). Dynamic\nGC was then obtained as follows.\n\nx\nDGCij (t) = +\ns =1\n\naij s, t\nð\n\nGraph theory analysis\n\nThe topological properties of functional networks were in-\nvestigated by graph theoretical analysis. The causal connec-\ntivity matrices obtained from the connectivity model were\n\nA network is considered small world if it has similar path\nlength but higher local connectivity than random networks",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4490,
+            "end": 4517,
+            "text": "100\nmatched random networks",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5382,
+            "end": 5576,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5382,
+            "end": 5576,
+            "text": "area under the curve\n(AUC) over the whole range of thresholds. The AUC provi-\ndes a summarized scalar for topological characterization of\nbrain networks independent of single threshold selection",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

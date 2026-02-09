@@ -1,0 +1,929 @@
+{
+  "data": {
+    "text": "Lateral Prefrontal Cortex Contributes to Fluid\nIntelligence Through Multinetwork Connectivity\n\nMichael W. Cole, Takuya Ito, and Todd S. Braver\nBRAIN CONNECTIVITY — 2015 — Mary Ann Liebert, Inc.\nDOI: 10.1089/brain.2015.0357\n\nOur ability to effectively adapt to novel circumstances—as measured by general fluid intelligence—has recently been tied to the global connectivity of lateral prefrontal cortex (LPFC).\n\nOne hundred twenty-one participants (70 female; mean age = 23, range = 18–40) were recruited from the undergraduate population at Washington University or surrounding communities and received financial remuneration. The experiment was approved by the Washington University Institutional Review Board. The same 94 participants used in Cole et al. (2012) were used here.\n\nWhole-brain images were acquired on a 3 Tesla Allegra System (Siemens, Erlangen, Germany). Structural images were acquired using a T1-weighted sequence. Functional images were acquired using an asymmetric spin-echo echo-planar sequence sensitive to BOLD (TR = 2360 msec, TE = 50 msec, flip = 90°). Each scanning run gave 149 sets of brain volumes (32 contiguous, 4-mm-thick axial images, 4 · 4-mm in-plane resolution).\n\nFunctional images were extracted from the rest periods between task blocks of an N-back task. We used rest images that were 14.16 sec or more past the end of every task block and 4.72 sec or fewer into the start of every task block. The mean signal amplitude for each rest block was subtracted for each voxel before rest block concatenation. There were 3 rest blocks per run, resulting in 35 rest frames per run (after removing the first 5 frames of each run). There were 8.26 min of rest total across the six runs per participant.\n\nResting-state functional images were further preprocessed using AFNI with the following steps (in order): (1) slice-time correction, (2) removal of the first five images from each run to reach steady state, (3) rigid body motion correction, (4) removal of a set of nuisance regressors, including signals from the ventricles, deep white matter, whole-brain average, motion correction parameters, and first derivatives, (5) additional removal of local white matter nuisance regressors on a voxel-wise basis (ANATICOR) using 16-mm radii spheres, (6) band-pass filtering (0.009 < f(t) < 0.08), and (7) smoothing with a 6-mm spherical dilation of gray matter voxels.\n\nFollowing global brain connectivity processing, but before group analysis, the images were transformed into atlas space (Talairach and Tournoux, 1988).\n\nWe used the 264-region set presented by Power et al. (2011) with several modifications. Our hypotheses were specific to the LPFC region identified in Cole et al. (2012), so we added that region as a sphere such that we used a 265-region set. This region was defined based on individual differences in activation amplitudes correlating with N -back task performance (Cole et al., 2012). When adding the 265th region, 2 nearby regions overlapped by a single voxel each. To ensure that each region was independent of every other, we moved these 2 nearby regions by a single voxel for the 265-region set. We also carried out our analyses with the original 264region set and found that the connectivity of the regions nearby LPFC did not significantly correlate with fluid intelligence. Note that we assigned the LPFC region to the same network as the two nearby regions: the frontoparietal control network.\n\nPower et al. (2011) presented several region network segmentations based on different connection density thresholds. We used their 2% connection density segmentation for our analyses, given that of all the tested segmentations, it best separated networks known to be distinct (such as the auditory network) (Power et al., 2011).\n\nGraph theoretical analyses were carried out with MATLAB(version 2008a) using in-house code and the Brain Connectivity Toolbox (Rubinov and Sporns, 2010). Functional connectivity was estimated as the Fisher z -transformed correlation between each pairwise regions' time series (the average of the voxels' time series within each region). GBC was calculated as the average connectivity of each region with all other regions. In graph theoretical terms, GBC was the weighted degree centrality (or strength) divided by the total number of connections. We calculated weighted betweenness centrality as the number of shortest paths through a region (the Brain Connectivity Toolbox function ''betweenness-wei'') divided by the total number of connections. The participation coefficient was calculated using the regional community assignments from Power et al. (2011) at the 2% threshold and the Brain Connectivity Toolbox function ''participation_coef.'' We calculated the participation coefficient results across three connectivity density thresholds: 10%, 5%, and 1%."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 95,
+            "end": 142,
+            "text": "Michael W. Cole, Takuya Ito, and Todd S. Braver",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 93,
+            "text": "Lateral Prefrontal Cortex Contributes to Fluid\nIntelligence Through Multinetwork Connectivity",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 164,
+            "end": 168,
+            "text": "2015",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 171,
+            "end": 193,
+            "text": "Mary Ann Liebert, Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 199,
+            "end": 222,
+            "text": "10.1089/brain.2015.0357",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 224,
+            "end": 408,
+            "text": "Our ability to effectively adapt to novel circumstances—as measured by general fluid intelligence—has recently been tied to the global connectivity of lateral prefrontal cortex (LPFC).",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 842,
+            "end": 849,
+            "text": "Siemens",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1128,
+            "end": 1141,
+            "text": "32 contiguous",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1143,
+            "end": 1153,
+            "text": "4-mm-thick",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1065,
+            "end": 1075,
+            "text": "flip = 90°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1035,
+            "end": 1049,
+            "text": "TR = 2360 msec",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1051,
+            "end": 1063,
+            "text": "TE = 50 msec",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1168,
+            "end": 1196,
+            "text": "4 · 4-mm in-plane resolution",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1672,
+            "end": 1694,
+            "text": "8.26 min of rest total",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1778,
+            "end": 1801,
+            "text": "preprocessed using AFNI",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1242,
+            "end": 1274,
+            "text": "rest periods between task blocks",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1281,
+            "end": 1292,
+            "text": "N-back task",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 720,
+            "end": 735,
+            "text": "94 participants",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 410,
+            "end": 445,
+            "text": "One hundred twenty-one participants",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 458,
+            "end": 486,
+            "text": "mean age = 23, range = 18–40",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 447,
+            "end": 456,
+            "text": "70 female",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 645,
+            "end": 709,
+            "text": "approved by the Washington University Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1843,
+            "end": 1864,
+            "text": "1",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ],
+          "id": "m0023"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1778,
+            "end": 1801,
+            "text": "preprocessed using AFNI",
+            "labels": [
+              "Slice timing correction — Software"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1870,
+            "end": 1902,
+            "text": "2",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1885,
+            "end": 1902,
+            "text": "first five images",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1944,
+            "end": 1972,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1944,
+            "end": 1954,
+            "text": "rigid body",
+            "labels": [
+              "Alignment Head motion est — Parameters"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1978,
+            "end": 2017,
+            "text": "4",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1998,
+            "end": 2017,
+            "text": "nuisance regressors",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2046,
+            "end": 2149,
+            "text": "ventricles, deep white matter, whole-brain average, motion correction parameters, and first derivatives",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2077,
+            "end": 2096,
+            "text": "5",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2077,
+            "end": 2096,
+            "text": "whole-brain average",
+            "labels": [
+              "Global signal — Type"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2098,
+            "end": 2126,
+            "text": "6",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2098,
+            "end": 2149,
+            "text": "motion correction parameters, and first derivatives",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "ANATICOR",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2239,
+            "end": 2247,
+            "text": "7",
+            "labels": [
+              "ANATICOR — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "ANATICOR",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2239,
+            "end": 2247,
+            "text": "ANATICOR",
+            "labels": [
+              "ANATICOR — Type"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "ANATICOR",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2255,
+            "end": 2274,
+            "text": "16-mm radii spheres",
+            "labels": [
+              "ANATICOR — Parameters"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2280,
+            "end": 2321,
+            "text": "8",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2280,
+            "end": 2299,
+            "text": "band-pass filtering",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2301,
+            "end": 2320,
+            "text": "0.009 < f(t) < 0.08",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2331,
+            "end": 2393,
+            "text": "9",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2348,
+            "end": 2371,
+            "text": "6-mm spherical dilation",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2487,
+            "end": 2546,
+            "text": "10",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Algorithm"
+          ],
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2504,
+            "end": 2546,
+            "text": "atlas space (Talairach and Tournoux, 1988)",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2649,
+            "end": 2669,
+            "text": "264-region set",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2670,
+            "end": 2676,
+            "text": "set",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2689,
+            "end": 2704,
+            "text": "LPFC region",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2709,
+            "end": 2724,
+            "text": "N -back task performance",
+            "labels": [
+              "ROI definition — Algorithm"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2739,
+            "end": 2754,
+            "text": "265-region set",
+            "labels": [
+              "Combine block — Step Number"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2769,
+            "end": 2784,
+            "text": "2% connection density segmentation",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2789,
+            "end": 2804,
+            "text": "regional community assignments",
+            "labels": [
+              "Network definition — Algorithm"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2809,
+            "end": 2824,
+            "text": "frontoparietal control network",
+            "labels": [
+              "Network definition — Type"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2839,
+            "end": 2854,
+            "text": "Fisher z -transformed correlation",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2869,
+            "end": 2884,
+            "text": "weighted betweenness centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2889,
+            "end": 2904,
+            "text": "participation coefficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2919,
+            "end": 2934,
+            "text": "10%, 5%, and 1%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2949,
+            "end": 2964,
+            "text": "Brain Connectivity Toolbox",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2969,
+            "end": 2984,
+            "text": "in-house code",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2989,
+            "end": 3004,
+            "text": "MATLAB(version 2008a)",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3019,
+            "end": 3034,
+            "text": "weighted degree centrality",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3039,
+            "end": 3054,
+            "text": "total number of connections",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3059,
+            "end": 3074,
+            "text": "shortest paths through a region",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3079,
+            "end": 3094,
+            "text": "Brain Connectivity Toolbox function ''betweenness-wei''",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3099,
+            "end": 3114,
+            "text": "Brain Connectivity Toolbox function ''participation_coef''",
+            "labels": [
+              "Graph measures — Algorithm"
+            ]
+          },
+          "id": "m0065"
+        }
+      ]
+    }
+  ]
+}

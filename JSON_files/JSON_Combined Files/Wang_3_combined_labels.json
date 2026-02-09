@@ -1,0 +1,1226 @@
+{
+  "data": {
+    "text": "The longitudinal development of large-scale functional brain networks for arithmetic ability from childhood to adolescence\nEur J Neurosci. 2022;55:1825–1839.\nDOI: https://doi.org/10.1111/ejn.15651\n© 2022 Federation of European Neuroscience Societies and John Wiley & Sons Ltd\n\nArithmetic ability is an important high-level cognitive function that requires interaction among multiple brain regions. Previous studies on arithmetic development have focused on task-induced activation in isolated brain regions or functional connectivity among particular seed regions. However, it remains largely unknown whether and how functional connectivity among large-scale brain modules contributes to arithmetic development. In the present study, we used a longitudinal sample of task-based functional magnetic resonance imaging (fMRI) data comprising 63 typically developing children, with two testing points being about 2 years apart. With graph theory, we examined the longitudinal development of large-scale brain modules for a multiplication task in younger (mean age 9.88 at time 1) and older children (mean age 12.34 at time 1), respectively. The results showed that the default-mode (DMN) and frontal-parietal networks (FPN) became increasingly segregated over time. Specifically, intra-connectivity within the DMN and FPN increased significantly with age, and inter-connectivity between the DMN and visual network decreased significantly with age. Such developmental changes were mainly observed in the younger children but not in the older children. Moreover, the change in network segregation of the DMN was positively correlated with longitudinal gain in arithmetic performance in the younger children, and individual difference in network segregation of the FPN was positively correlated with arithmetic performance at Time 2 in the older children.\n\nA total of 63 typically developing children aged 8–15 years were tested twice, with testing sessions being about 2 years apart. All participants were native English speakers, right-handed and were reported to have normal hearing, normal or corrected-to-normal vision and no history of neurological or psychiatric disorders. Nine children were excluded, of whom six with excessive head movements in the MRI scanner (exceeding 3.0 mm in displacement or 3° in rotation) and three with inside-scanner task accuracy being below 50% either at Time 1 (T1) or at Time 2 (T2), yielding 54 children in the final sample. Two groups were created based on the median-split of participant’s age at Time 1: younger group and older group. The two groups differed significantly in age both at T1 and T2, with no differences in gender distribution, time between sessions and intelligence scores. This study was approved by the Research Ethics Review Board of Hangzhou Normal University.\n\nData in the present study were taken from a public neuroimaging dataset entitled ‘Brain Correlates of Math Development’. This dataset has been deposited in the OpenNeuro (https://openneuro.org/datasets/ds001486/versions/1.3.0).\n\nThe inside-scanner task involved 72 single-digit multiplication problems: 48 with correct solutions and 24 with false solutions. Problems involving zero, one or ties (e.g., 3 × 3) were not included. In each trial, the multiplication problem and proposed solution were presented successively on a white background for 800 ms, separated by an inter-stimulus interval for 200 ms. Then a red fixation square was displayed for 2200, 2600 or 3000 ms. Participants were instructed to respond with their index finger if the proposed solution of the multiplication problem was correct and with their middle finger if the solution was incorrect. To control for motor responses, 24 control trials were designed, where a blue square was presented for 800 ms, followed by a red fixation square lasting 2200, 2600 or 3000 ms. The total scanning lasted about 8 min. Reaction time and accuracy were recorded for each trial.\n\nThe outside-scanner task was the multiplication subtest of the Comprehensive Mathematical Abilities Test (CMAT). It was a paper-and-pencil test with no time limits. For each participant, the number of correct answers was used as an estimate of multiplication ability.\n\nWhole-brain imaging was performed on a Siemens 3T TIM Trio MRI scanner using a 32-channel head coil. For each subject, BOLD-sensitive T2*-weighted functional images were acquired using a susceptibility weighted single-shot echo planar imaging sequence (repetition time = 2000 ms, echo time = 20 ms, flip angle = 80°, field of view = 220 × 206.25 mm, matrix size = 128 × 120, slice thickness/gap = 3/0.48 mm and slice number = 32). Prior to functional image acquisition, a high-resolution 3D structural image was acquired for anatomic normalization (repetition time = 2300 ms, echo time = 3.36 ms, matrix size = 256 × 256, field of view = 240 mm, slice thickness = 1 mm and slice number = 160).\n\nIn the present study, we preprocessed the raw imaging data using SPM12. First, the first six functional images of each participant were discarded due to instability of initial MR signals. Then, the imaging data were preprocessed with reorientation to the anterior–posterior commissure line, slice time correction and head-motion correction. The individual high-resolution structural image of each participant was co-registered with the mean functional image. Grey matter, white matter and cerebrospinal fluid were segmented using the SPM12 New Segmentation procedure. A child template was created by the Template-O-Matic toolbox and used in the New Segment procedure. Subsequently, the DARTEL tool was applied to normalize each participant’s high-resolution structural image to the Montreal Neurological Institute space, and the normalization parameters were applied to the functional images. Finally, spatial smoothing was conducted using a 6-mm full-width half-maximum Gaussian kernel. A censoring/scrubbing strategy was used to remove time points with frame-wise displacement (FD) greater than 0.3 mm. Thereafter, three additional processes were applied before calculating brain connectivity measures: (1) high-pass filtering with a cut-off frequency of 1/128 Hz; (2) linear detrending; (3) regression of the first five principal components of white-matter and cerebrospinal fluid signals, six motion parameters and their temporal first-order derivatives.\n\nWe first analysed the changes in behavioural performance over time for the children by running a Group (younger, older) × Time (T1, T2) repeated measures analysis of variance (ANOVA). Follow-up tests included paired and independent-samples t tests as appropriate.\n\nIn the present study, we preprocessed the raw imag-\ning data using SPM12 (http://www.flion.ucl.ac.uk/spm).\nFirst, the first six functional images of each participant\nwere discarded due to instability of initial MR signals.\nThen, the imaging data were preprocessed with reor-\nientation to the anterior–posterior commissure line, slice\ntime correction and head-motion correction. The individ-\nual high-resolution structural image of each participant\nwas co-registered with the mean functional image. Grey\nmatter, white matter and cerebrospinal fluid were seg-\nmented using the SPM12 New Segmentation procedure\n(http://www.fil.ion.ucl.ac.uk/spm/). A child template\nwas created by the Template-O-Matic toolbox (Wilke\net al., 2008) and used in the New Segment procedure.\nSubsequently, the Diffeomorphic Anatomical registration\nthrough Exponentiated Lie algebra tool (DARTEL) was\napplied to normalize each participant’s high-resolution\nstructural image to the Montreal Neurological Institute\nspace, and the normalization parameters were applied to\nthe functional\nimages. Finally, spatial smoothing was\nconducted using a 6-mm full-width half-maximum\nGaussian kernel. Considering recent concerns about head\nmotion artefacts\nconnectivity studies\n(Parkes et al., 2018; Power et al., 2014), a censoring/\nscrubbing strategy (Power et al., 2014) was used to\nremove time points with frame-wise displacement\n(FD) greater than 0.3 mm. Mean FD and percentage of\nscrubbed data were used to characterize head motion\ninside the scanner (Table 1). Head motion measures did\nnot differ significantly between the two age groups for\neither T1 or T2 (smallest p = 0.12) and neither signifi-\ncantly between T1 and T2 for either age group (smallest\np = 0.09). No significant correlations were detected\nbetween head motion and behavioural performance on\nthe multiplication task (smallest p = 0.10). Thereafter,\nthree additional processes were applied before calculating\nbrain connectivity measures: (1) high-pass filtering with\na cut-off frequency of 1/128 Hz; (2) linear detrending;\n\n| Graph theory analysis\n\nFor each participant, the whole brain (excluding cerebel-\nlum) was partitioned into 142 regions of interest (ROI)\naccording to a functional template generated from a pre-\nvious study (Dosenbach et al., 2010). We chose this func-\ntional template because it has been applied to examine\ntask-related functional connectivity among multiple\nbrain networks (Di and Biswal, 2019; Wang et al., 2020;\nWen et al., 2015). The 142 ROIs have been assigned into\nfive functional modules: (1) DMN; (2) FPN; (3) somato-\nmotor network (SMN);\n(4) visual network (VN);\n(5) cingulo-opercular network (CON) (Figure 2). The set\nof ROIs (6-mm radius spheres) were generated using\n3dcalc with AFNI (Cox, 1996) with the centre coordinates\nfrom the above functional template, and the average time\nseries of each ROI were extracted. To construct the net-\nwork for the multiplication task, we extracted time series\ncorresponding to the multiplication trials as described in\na previous study (Liu et al., 2018). Specifically, the rele-\nthe multiplication trials were\nvant\nextracted and concatenated over trials, as in the previous\nstudies (Ekman et al., 2012; Liang et al., 2016; Liu\net al., 2018). As for trials in the control condition, they\nwere used in prior research (Berteletti et al., 2014; Prado\net al., 2014) to determine task-induced brain activation.\nIn the present study, the behavioural data under the\n\nThe 142 regions of interest encompass five\n\nF I G U R E 2\nfunctional modules. Abbreviations: DMN, default-mode network\n(34 nodes); FPN, frontal-parietal network (21 nodes); SMN, somato-\nmotor network (33 nodes); VN, visual network (22 nodes); CON,\ncingulo-opercular network (32 nodes); L, left hemisphere; R, right\nhemisphere\n\nPearson correlation coefficients were\n\ncomputed\nbetween each pair of ROIs, resulting in a 142 (cid:3) 142 con-\nnectivity matrix for each participant. Due to the ambigu-\nous biological interpretation of negative correlations (Fox\net al., 2009), our analysis was restricted to only positive\ncorrelations. Following previous routines of graph theory\nanalysis (Reineberg & Banich, 2016; Wang et al., 2020),\nwe set a scarcity threshold of 15% to remove weak brain\nconnections and keep strong connections. To test\nwhether our findings generalize beyond the scarcity\nthreshold of 15%, we also verified the results with scarcity\nthresholds of 10% and 20%, respectively. Because the\noverall results were consistent, we only reported the\n\nresults with the scarcity thresholds of 15%. The Brain\nConnectivity Toolbox was used to calculate the following\ngraph theory measures (Rubinov & Sporns, 2010). First,\nparticipation coefficient (PC) was calculated to estimate\nthe degree of segregation of a specific node’s connections\nacross different brain modules. For a node i, PC was com-\nputed using the formula as below:\n\nwhere kim is the links of the node i with other nodes in a\nmodule m and ki is the links of the node i with other\nnodes\nin the whole brain network (Guimerà &\nAmaral, 2005). Generally, lower PC indicates that one\nnode is more linked with nodes in its own brain module\nbut less linked with nodes in other brain modules, which\nreflects greater segregation. Average PC for all nodes in\neach module was calculated to test which module drives\nthe developmental-induced segregation effects. Further,\nintra-connections of each module and inter-connections\nbetween any two modules were calculated. These mea-\nsures can add our understanding of development differ-\nence in integration and interactions among multiple\nbrain modules.\n\nWe first conducted the Group (cid:3) Time repeated measures\nANOVA for the PC in each module. Head motion mea-\nsures were included in the model as covariates. In order\nto control for multiple comparisons at the module level,\nthe significance level was set at α = 0.01 (0.05/5 modules)\nwith a Bonferroni correction. Interestingly, there was a\nsignificant interaction between Group and Time for the\nmean PC of the DMN (F1, 52 = 9.60, P = 0.003, partial\nη 2 = 0.16). Follow-up analysis showed that the younger\ngroup demonstrated a significant decrease in the mean\nPC from T1 to T2 (t26 = 3.37, P = 0.002), whereas the\nolder group did not (t26 = (cid:4)0.99, P = 0.33). In terms of\nthe mean PC of the FPN, a significant main effect of\nTime was also observed (F1, 52 = 6.61, P = 0.01, partial\n\nF I G U R E 4 Changes in graph measures\nover time by age groups. (a) the mean PC of\nboth the default-mode network (DMN) and\nfrontal-parietal network (FPN) decreased\nsignificantly from T1 to T2 for the younger\ngroup (DMN: t26 = 3.37, P = 0.002; FPN:\nt26 = 2.77, P = 0.01) but not for the older group\n(DMN: t26 = (cid:4)0.99, P = 0.33; FPN: t26 = 1.76,\nP = 0.09). (b) The intra-module connections of\nboth the DMN and FPN increased significantly\nfrom T1 to T2 for the younger group (DMN:\nt26 = 3.18, P = 0.004; FPN: t26 = 3.47,\nP = 0.002) but not for the older group (DMN:\nt26 = (cid:4)1.20, P = 0.24; FPN: t26 = 0.96,\nP = 0.35). (c) The inter-module connections\nbetween the DMN and visual network\n(VN) increased significantly from T1 to T2 for\nthe younger group (t26 = 2.87, P = 0.008) but\nnot for the older group (t26 = (cid:4)1.33, P = 0.20).\nEach dot represents the data of each subject.\n**P < 0.01; *P < 0.05\n\nη 2 = 0.12). Follow-up analysis showed that the mean PC\nof the FPN decreased significantly from T1 to T2 for the\nyounger group (t26 = 2.77, P = 0.01) but not for the older\ngroup (t26 = 1.76, P = 0.09). No main and interaction\nthe other brain modules\neffects were detected for\n(puncorrected > 0.05 in all other brain modules). Figure 4a\nshows the changes over time in the mean PC of the DMN\nand FPN.\n\nThen, we conducted the Group (cid:3) Time repeated mea-\nsures ANOVA for the intra-connections in each module,\nincluding head motion measures as covariates. The sig-\nnificance level was set at α = 0.01 (0.05/5 modules) with\nsignificant\ncorrection. There was\na Bonferroni\n\ninteraction between Group and Time (F1, 52 = 7.45,\nP = 0.009, partial η 2 = 0.13) for the intra-connections of\nthe DMN. Follow-up tests\nthe intra-\nconnections of the DMN increased significantly from T1\nto T2 in the younger group (t26 = 3.18, P = 0.004) but not\nover time in the older group (t26 = (cid:4)1.20, P = 0.24). For\nthe intra-connections of the FPN, the ANOVA showed a\nsignificant main effect of Time (F1, 52 = 6.70, P = 0.01,\npartial η 2 = 0.12). Follow-up tests showed that the intra-\nconnections of the FPN increased significantly from T1 to\nT2 for the younger group (t26 = 3.47, P = 0.002) but not\nfor the older group (t26 = 0.96, P = 0.35). No main and\ninteraction effects were detected for the other brain\n\nmodules (puncorrected 0.05 in all other brain modules).\nFigure 4b shows the changes over time in the intra-\nconnections of the DMN and FPN.\n\nNext, we ran the Group (cid:3) Time repeated measures\nANOVA for the inter-connections between each pair of\nincluding head motion measures as\nbrain modules,\ncovariates. The significance level was set at α = 0.005\n\nF I G U R E 5 Correlation between the default-mode network\n(DMN) and arithmetic ability. A significant correlation was found\nbetween developmental decrease in the mean participation\ncoefficient (PC) of the DMN and longitudinal gain in the accuracy\nin the inside-scanner multiplication task for the younger group\n(r = 0.61, P = 0.003) but not for the older group (r = (cid:4)0.01,\nP = 0.96)\n\n(0.05/10 inter-module measures) with a Bonferroni cor-\nrection. We did not detect any significant main or inter-\naction effect at this strict correction level. Notably, the\ninter-connections between the DMN and the VN showed\nan interaction between Group and Time under an\nuncorrected significance level of p < 0.05 (F1, 52 = 5.73,\nP = 0.02, partial η 2 = 0.10). Follow-up analysis showed\nthat the DMN-VN connections decreased significantly\nfrom T1 to T2 in the younger group (t26 = 2.87,\nin the older group (t26 = (cid:4)1.33,\nP = 0.008) but not\nP = 0.20). Figure 4c shows the change over time in the\nDMN-VN connections.\n\nWe first examined whether developmental change in\ngraph measures detected above would be significantly\ncorrelated with performance gain in arithmetic ability\nwhile controlling for age, gender, general intelligence,\nhead motion and behavioural performance of the control\ntrials. Across all participants, decrease in the mean PC of\nthe DMN from T1 to T2 was significantly associated with\nlongitudinal gain in the accuracy of the inside-scanner\nmultiplication task (r = 0.31, P = 0.04). When dividing\nthe participants into the younger and older groups, we\nfound that the correlation was significant for the younger\ngroup (r = 0.61, P = 0.003, Figure 5) but not for the older\ngroup (r = (cid:4)0.01, P = 0.96). We did not\nfind any\n\nF I G U R E 6 Correlation between the\nfrontal-parietal network (FPN) and arithmetic\nability. (a) A significant correlation was found\nbetween the mean participation coefficient\n(PC) of the FPN and the outside-scanner\nComprehensive Mathematical Abilities Test\n(CMAT) scores at T2 for the older group\n(r = (cid:4)0.63, P = 0.002) but not for the younger\ngroup (r = (cid:4)0.13, P = 0.56). (b) No significant\ncorrelation was detected between the mean PC\nof the FPN and the outside-scanner CMAT\nscores at T1 for either younger (r = (cid:4)0.07,\nP = 0.78) or older age groups (r = 0.12,\nP = 0.62). (c) A significant correlation was\nfound between the intra-module connections of\nthe FPN and the outside-scanner CMAT scores\nfor the older group (r = 0.58, P = 0.004) but not\nfor the younger group (r = 0.09, P = 0.68).\n(d) No significant correlation was detected\nbetween the intra-connections of the FPN and\nthe outside-scanner CMAT scores at T1 for\neither younger (r = 0.28, P = 0.22) or older age\ngroups (r = 0.15, P = 0.53)\n\nsignificant correlations between developmental change in\nthe FPN and performance gain in arithmetic ability.\n\nWe then examined the concurrent relations between\ngraph measures and performance in arithmetic ability at\neach time point while controlling for age, gender, general\nintelligence, head motion and behavioural performance\nof the control trials. Across all participants, lower PC of\nthe FPN was significantly correlated with higher CMAT\nmultiplication scores at T2 (r = (cid:4)0.34, P = 0.02) but not\nat T1 (r = 0.06, P = 0.67). When dividing the participants\ninto the younger and older groups, we found that the cor-\nrelation at T2 was only significant\nthe older\n(r = (cid:4)0.63, P = 0.002, Figure 6a) but not for the younger\ngroup (r = (cid:4)0.13, P = 0.56). Such correlation was not\nseen at T1 for either younger (r = (cid:4)0.07, P = 0.78,\nFigure 6b) or older groups (r = 0.12, P = 0.62). Similarly,\nacross all participants, more intra-module connections of\nthe FPN were significantly correlated with higher CMAT\nmultiplication scores at T2 (r = 0.33, P = 0.02) but not at\nT1 (r = 0.23, P = 0.13). When dividing the participants\ninto the younger and older groups, we found that the cor-\nrelation at T2 was only significant for the older group\n(r = 0.58, P = 0.004, Figure 6c) but not for the younger\ngroup (r = 0.09, P = 0.68). Such correlation was not seen\nat T1 for either younger (r = 0.28, P = 0.22, Figure 6d) or\nolder groups (r = 0.15, P = 0.53). Notably, only the corre-\nlation between the mean PC of the FPN and CMAT mul-\ntiplication scores at T2 for the older group could survive\nBonferroni correction for the number of correlations\n(0.05/20 for five brain modules, two time points and two\nage groups).\n\nTo confirm that the present findings generalize beyond\nthe scarcity threshold of 15%, we re-analysed the imaging\ndata with scarcity thresholds of 10% and 20%, respec-\ntively, and obtained consistent results (see the Table S1).\n\nat age 14 was significantly correlated with variation in\nconcurrent network segregation of\nthe FPN. Taken\ntogether, these results suggest that the neurodevelopment\nof large-scale brain modules may play a critical role in\nthe development of arithmetic ability from childhood to\nadolescence.\n\nRecently, characterizing functional connectivity between\nlarge-scale brain modules has become an emerging\napproach for investigating the brain basis of cognitive\ndevelopment. Previous studies have addressed the brain\nmechanisms\ndevelopment\n(Arsalidou & Taylor, 2011; Zhou et al., 2007). However,\nmost of the previous studies have focused on isolated\nbrain regions. It remains unclear how developmental dif-\nference in large-scale brain modules facilitates the devel-\nopment of arithmetical ability. Using graph theory, some\nprevious studies investigated the development of struc-\ntural and resting-state functional brain networks from\nchildhood to adulthood and demonstrated that the task-\nindependent brain modules become more distinct, with\nstronger connections within modules and weaker con-\nnections between modules (Baum et al., 2017; Fair\net al., 2007; Gu et al., 2015; Huang et al., 2015). Such\nmodular segregation may allow for functional specializa-\ntion and reduce competitive interference between brain\nsystems. However, almost all these previous studies just\nfocused on the development of task-independent brain\nnetworks, and the findings were limited to cross-sectional\ndesigns. Using task-based fMRI and a longitudinal\ndesign, the present study extended the previous findings\nby showing longitudinal increases in large-scale modular\nsegregation for a multiplication task during childhood\nand adolescence, providing new insights into potential\nneural mechanisms underlying the improvement of arith-\nmetic skill across development.\n\nThe present study found that the task-state brain mod-\nules became increasingly segregated with age. Specifi-\ncally, the intra-connectivity within both the DMN and\nFPN increased significantly from age 10 to 12, whereas\nthe inter-connectivity between the DMN and VN\ndecreased significantly at the same age period. Moreover,\nthe improvement in arithmetic ability from age 10 to\n12 was associated with change in network segregation of\nthe DMN, and individual difference in arithmetic ability\n\n| Developmental change in DMN\n\nMany previous resting-state imaging studies have shown\nthat the intra-module connectivity of the DMN increased\nsignificantly during the school-age period of development\n(de Bie et al., 2012; Fair et al., 2008; Mak et al., 2017;\nSupekar et al., 2010). Similarly, diffusion imaging studies\nhave revealed that the structural connectivity within the\nDMN increased significantly with age during the school\nyears (Clayden et al., 2012; Supekar et al., 2010; Tamnes\n\net al., 2010). Moreover, functional connectivity of the\nDMN was found positively associated with white matter\nin a sample of 9–13 year old (Gordon\nintegrity\net al., 2011), suggesting that the structural connectivity of\nthe DMN may underlie functional connectivity develop-\nment of this system during childhood and adolescence.\nThe present study provides novel evidence for the\nincreased intra-module DMN connectivity for task-based\nbrain network development, suggesting a consistent\ndevelopmental trend in resting-state, structural and task-\nbased functional connectivity in the DMN.\n\nWe also observed decrease in inter-module connectiv-\nity between the DMN and the VN. A previous task-state\nfMRI study for selective encoding of visual information\nhas shown that the functional coupling between the\nDMN and the visual cortical areas is important for task-\nirrelevant\n&\nGazzaley, 2011). Hence, it is possible that reduced func-\ntional coupling between the DMN and the VN contrib-\nutes to more efficiency in processing task-irrelevant\ninformation, thereby facilitating arithmetic processing by\nputting more efforts into task-relevant information. Nota-\nbly, the changes in both the intra- and inter-module con-\nnectivity of the DMN were present from age 10 to 12 but\nnot from age 12 to 14, suggesting that the development of\nDMN connectivity may be partly age-dependent.\n\n| Developmental change in FPN\n\nThe present results about FPN connectivity are also con-\nsistent with the previous cross-sectional studies examin-\ning functional connectivity development (Emerson &\nCantlon,\n2007; Rosenberg-Lee\net al., 2011). For instance, Fair et al. (2007) reported\nstronger resting-state functional connectivity between the\ndorsolateral prefrontal and posterior parietal areas in\nadolescence aged 10–15 years compared with children\naged 7–9 years. With the use of\ntask-based fMRI,\nRosenberg-Lee et al. (2011) reported greater functional\nconnectivity between the frontal and parietal regions in\nchildren aged 8–9 years than those aged 7–8 years per-\nforming an addition task. Chang et al.\n(2016) also\nobserved increased prefrontal-parietal functional connec-\ntivity during an addition task performance in adolescents\ncompared with children. Consistently, the present longi-\ntudinal study showed a developmental increase in the\nintra-module connectivity within the FPN, reflecting a\nstrengthening communication and information transmis-\nsion within the frontal and parietal nodes for arithmetic\nprocessing. Furthermore,\nthe increased intra-module\nconnectivity may suggest an enhanced importance of the\n\nwhole frontal-parietal module rather than local frontal\nand parietal nodes. It should be noticed that the develop-\nmental increase in the FPN connectivity was significant\nfrom age 10 to 12 but with only a trend from age 12 to\n14, indicating that such developmental progress may be\npartly age-dependent.\n\nAccumulating evidence suggests that functional connec-\ntivity of the DMN correlates with individual difference in\nmultiple cognitive functions including working memory\n(Sala-Llonch et al., 2012), creativity (Beaty et al., 2014),\nmental manipulation (Yang et al., 2013) and language\nprocessing in adults (Yang et al., 2013). All these cogni-\ntive functions are closely related to arithmetic processing.\nImportantly, the present study found that the enhanced\nmodular segregation of the DMN over time was positively\ncorrelated with individual difference in the arithmetic\nimprovement, suggesting that the development of DMN\ntopology may serve as a neural substrate for supporting\ngreater improvement in arithmetic ability. It is possible\nthat the DMN re-configures with age, becoming more\nfunctional specialized and more efficient in coordination\nwith other brain modules for arithmetic processing. Addi-\ntionally, this brain–behaviour relationship holds even\nwhen general intelligence and performance of the control\ncondition were controlled, indicating that the correlation\nmight not be simply attributed to difference in general\ncognitive abilities. Hence,\nthe development of DMN\ntopology may exhibit partial specificity for arithmetic\nprocessing.\n\nThe role of the FPN in individual difference in arith-\nmetic ability in children remains largely unknown in the\nextant literature. Previous developmental studies have\nshown some evidence that greater activation of the fron-\ntal and parietal regions is associated with better perfor-\nmance in various high-order cognitive tasks in samples\nwith a wider age range or in older individuals (Klingberg\net al., 2002; Olesen et al., 2007; Rubia et al., 2006). When\nrestricted to a narrow age\nrange, Spencer-Smith\net al. (2013) found that activation of the frontal and parie-\ntal regions was positively correlated with performance\nduring a delayed match-to-sample task in children aged\n10–12 years but not in those aged 7–9 years. Similarly,\nPrice et al. (2013) reported a positive correlation between\nactivation in the left parietal region and performance\nduring an arithmetic task in adolescents, whereas no\nsuch an association was detected in younger children.\nAltogether, the role of the FPN in high-order cognitive\nfunctions including arithmetic ability may vary with age.\n\nThe lack of a significant correlation between frontal-\nparietal activation and high-order cognitive performance\nat younger ages may be attributable to the protracted\ndevelopment of the FPN (Crone et al., 2006; Giedd &\nRapoport, 2010). In consistence, the present study found\na significant correlation between the intra-module con-\nnections of the FPN and performance on the outside-\nscanner multiplication task at T2 but not at T1. The sig-\nnificant correlation suggests that brain network topology\nof the FPN can serve as a substrate for supporting good\narithmetic performance. When further dividing the chil-\ndren into younger and older age groups, the correlation\nat T2 was significant for the older group but not for the\nyounger group, providing further evidence that the role\nof the FPN in arithmetic processing may be age depen-\ndent. Further longitudinal studies with larger sample size\nand multiple time points would be needed to distinguish\nthe FPN in arithmetic ability across\nthe role of\ndifferent ages.\n\nA number of caveats need to be noted. First, several\nrecent studies have raised that head motion artefacts can\nto connectivity estimates\nintroduce systematic bias\n(Parkes et al., 2018; Power et al., 2014). The present study\nfound no significant differences in head motion between\nage groups and no significant correlations between head\nmotion and performance on the multiplication task. Fur-\nthermore, including head motion in the statistical ana-\nlyses as a covariate did not alter the results reported in\nthe present study. Therefore, the observed effects were\nnot likely due to artefacts produced by head motion. Sec-\nond, although we use methods described above to extract\ntime points corresponding to the multiplication trials, the\ntime series from the multiplication trials and control tri-\nals could not be completely separated due to the continu-\nity of signals. However, this limitation may have limited\neffects on our results, because we were mainly focused\non developmental difference, and the signal-extraction\nmethod was the same for both the younger and older\ngroups and for both Time 1 and Time 2. Moreover, the\npresent study found a significant correlation between\nchange in brain network connectivity and arithmetic gain\nwhen general intelligence and performance of the control\ncondition was included as covariates, providing further\nevidence that large-scale brain network connectivity may\nsupport arithmetic development. Lastly, our study aimed\nto investigate developmental change in large-scale brain\nmodules and its relationship with arithmetic ability.\nThough our findings were highly consistent with findings\ntask-independent neuroimaging studies\nin previous\n\n(Baum et al., 2017; Sherman et al., 2014) and supported\nour hypothesis, it remains unclear whether the neuro-\ndevelopment of the FPN and DMN may play a similar\nrole in the development of other high-order cognitive\nabilities. Future study should conduct a battery of cogni-\ntive tasks inside the MRI scanner to address the role of\nlarge-scale brain modules in cognitive development more\ncomprehensively.\n\nIn conclusion, the present study provides evidence for\nbrain modules\nthe\nsupporting the cognitive development of arithmetic abil-\nity. Consistent with previous studies about resting-state\nor\n(Baum\net al., 2017; Fair et al., 2007), we found that the task-state\nfunctional brain modules\nfor arithmetic processing\nbecame increasingly segregated over time from childhood\nto adolescence. Specifically,\nthe\nDMN and the FPN increased over time, whereas inter-\nconnectivity between the DMN and the VN decreased\nover time. These developmental changes were mainly\npresent in the younger group but not in the older one.\nMoreover, the functional segregation of the DMN and\nthe FPN was associated with improvement or individual\ndifference in arithmetic ability. Taken together, the pre-\nsent findings extend our understanding of how functional\nmaturation of the brain supports the cognitive develop-\nment of arithmetic ability. Given that arithmetic ability is\nclosely related to many cognitive abilities, it is worth-\nwhile to further explore whether the development of\nlarge-scale brain modules may play a critical role in other\ncognitive abilities.\n\nBeaty, R. E., Benedek, M., Wilkins, R. W., Jauk, E., Fink, A.,\nSilvia, P. J., Hodges, D. A., Koschutnig, K., & Neubauer, A. C.\n(2014). Creativity and the default network: A functional con-\nnectivity\nrest.\nNeuropsychologia,\nhttps://doi.org/10.1016/j.\nneuropsychologia.2014.09.019\n\nCox, R. W. (1996). AFNI: Software for analysis and visualization of\nfunctional magnetic resonance neuroimages. Computers and\nBiomedical Research, 29(3), 162–173. https://doi.org/10.1006/\ncbmr.1996.0014\n\nDosenbach, N. U. F., Nardos, B., Cohen, A. L., Fair, D. A.,\nPower, J. D., Church, J. A., Nelson, S. M., Wig, G. S.,\nVogel, A. C., & Lessov-Schlaggar, C. N. (2010). Prediction\nScience,\nof\n329(80),\n5997. https://doi.org/10.1126/science.\n1194144\n\nFair, D. A., Cohen, A. L., Dosenbach, N. U. F., Church, J. A.,\nMiezin, F. M., Barch, D. M., Raichle, M. E., Petersen, S. E., &\nSchlaggar, B. L. (2008). The maturing architecture of the\nbrains default network. Proceedings of the National Academy of\nSciences,\nhttps://doi.org/10.1073/pnas.\n0800376105\n\nFair, D. A., Dosenbach, N. U. F., Church, J. A., Cohen, A. L.,\nBrahmbhatt, S., Miezin, F. M., Barch, D. M., Raichle, M. E.,\nPetersen, S. E., & Schlaggar, B. L. (2007). Development of\ndistinct control networks through segregation and integration.\nProceedings of\nthe National Academy of Sciences, 104(33),\n13507–13512. https://doi.org/10.1073/pnas.0705843104\n\nlargely unknown whether and how functional connectivity among large-scale\nbrain modules contributes to arithmetic development. In the present study, we\n\npoints being about 2 years apart. With graph theory, we examined the longitu-\ndinal development of large-scale brain modules for a multiplication task in\n\n1), respectively. The results showed that the default-mode (DMN) and frontal-\nparietal networks (FPN) became increasingly segregated over time. Specifi-\n\ncally, intra-connectivity within the DMN and FPN increased significantly with\nage, and inter-connectivity between the DMN and visual network decreased\n\nthe younger children but not in the older children. Moreover, the change in\nnetwork segregation of the DMN was positively correlated with longitudinal\n\ngain in arithmetic performance in the younger children, and individual differ-\nence in network segregation of the FPN was positively correlated with arith-\n\nAbbreviations: CMAT, Comprehensive Mathematical Abilities Test; CON, cingulo-opercular network; DMN, default-mode network; FD, frame-wise\ndisplacement; FMRI, functional magnetic resonance imaging; FPN, frontal-parietal network; PC, participation coefficient; ROI, regions of interest;\nSMN, somato-motor network; T1, Time 1; T2, Time 2; VN, visual network.\n\nK E Y W O R D S\narithmetic development, default-mode network, frontal-parietal network, functional\nconnectivity, graph theory\n\nprefrontal\ncortex,\nprecuneus, anterior inferior parietal lobule and inferior\ntemporal cortex, all of which are the key nodes of the\n(Menon et al., 2000;\nfrontal-parietal network (FPN)\nRivera et al., 2005; Zhou et al., 2007). Moreover, arith-\nmetic processing has been reported to rely on de-\nactivation of the dorsal and ventral medial prefrontal cor-\ntex, posterior cingulate cortex, lateral temporal lobes and\nangular gyrus\n(Pletzer et al., 2015; Rosenberg-Lee\net al., 2011). These regions are the key nodes of the\ndefault-mode network (DMN). Considering the func-\ntional roles of the FPN and DMN in various cognitive\nprocesses\nrepresentations\n(Pletzer et al., 2015; Sokolowski et al., 2017), working\nmemory (Liang et al., 2016; Sala-Llonch et al., 2012) and\n2015; Wang\n(Crittenden et\ncognitive\net al., 2020), and the fact that these cognitive processes\nhave been consistently reported to be involved in arith-\nmetic processing (Obersteiner\net al., 2013; Wang\net al., 2015; van de Weijer-Bergsma et al., 2015), it is not\nsurprising to speculate that arithmetic ability may\ndevelop via neurodevelopmental change in brain regions\nbelonging to these two brain networks. Indeed, several\ndevelopmental studies about arithmetic processing have\nrevealed age-related change in activation of the frontal-\nparietal regions or deactivation of\nthe default-mode\nregions (Davis et al., 2009; Rivera et al., 2005; Rosenberg-\nLee et al., 2011), suggesting that the DMN and FPN may\nplay a critical role in arithmetic development.\n\nthe\nhuman brain is topologically organized into an efficient\nnetwork architecture that can be divided into a set of spa-\ntially distributed but\nfunctionally relevant modules\n(Power et al., 2011; Rubinov & Sporns, 2010; Zuo\net al., 2017). Integration and interactions among these\nbrain modules have been suggested to contribute to\nbehavioural performance in a variety of high-order cogni-\ntive functions (Cole et al., 2014; Liu et al., 2017; Power\net al., 2011; Wang et al., 2020). Therefore, studying brain\nconnectivity across different brain modules in children\nmay enhance our understanding of arithmetic develop-\nment. Although several recent studies have used brain\nconnectivity analysis to examine arithmetic processing in\nchildren, most of the studies have focused on brain con-\nnectivity of particular seed regions (Chang et al., 2016;\nEmerson & Cantlon, 2012; Supekar et al., 2013). Knowl-\nedge is still limited regarding developmental change in\n\ndifferent brain modules. Graph theory, which describes\ndifferent regions of the brain as nodes and region-to-\nregion correlations as edges, has been utilized as a popu-\nlar approach with a powerful statistical framework for\ninvestigating integration and interactions among multi-\n(Rubinov & Sporns, 2010). For\nple brain modules\ninstance, Baum et al. (2017) used graph theory to exam-\nine the development of structural brain network in\n8–22 year old. The study showed that the structural mod-\nules became increasingly segregated with age, as reflected\nby both increases in within-module connections and\ndecreases\nin between-module connections. Similarly,\nwith graph theory, Fair et al. (2007) investigated develop-\nmental difference in resting-state functional brain net-\nwork and revealed that adults had more segregated\nfunctional modules than children, driven by both more\nwithin-module connections and less between-module\ninterpreted such neuro-\nconnections. The authors\ndevelopment as a consequence of functional specializa-\ntion of the brain, which could reduce interference among\ndifferent brain subsystems and thus facilitate different\ncognitive processes. However, to date, most graph theory-\nbased studies have focused on brain network develop-\nment in the absence of cognitive tasks. Few studies have\nbeen conducted to examine the contribution of brain net-\nwork topology to cognitive development, especially for\narithmetic processing.\n\nAnother limitation in previous imaging studies about\narithmetic development is that they often employed a\ncross-sectional design. It should be noticed that the cross-\nsectional studies included participants from different\nages, families and social backgrounds. Large individual\nvariability should be a major concern. Hence, it was pos-\nsible that these studies failed to detect or falsely suggested\nchanges over time (Casey et al., 2005). Accordingly, to\nreduce the influence of\nindividual variability and to\nincrease statistical power, the longitudinal approach is\nrecommended. As for the development in brain network\ntopology,\nstudies have\nemployed longitudinal fMRI datasets comprising children\nat different ages (Fan et al., 2021; Sherman et al., 2014),\nto the best of our knowledge, no study has addressed lon-\ngitudinal changes in multiple brain network modules for\narithmetic development.\n\nThe present study aimed to employ graph theory to\nexamine the longitudinal development of\nlarge-scale\nbrain network modules for arithmetic ability and delin-\neate its role in arithmetic development. To do so, we\nanalysed a public longitudinal dataset entitled ‘Brain\n(Su(cid:1)arez-Pellicioni\nCorrelates of Math Development’\net al., 2019). In this dataset, a total of 63 children per-\nformed several cognitive tasks inside or outside the MRI\nscanner at age of 8–14 years old (Time 1) and once again\n\nat an average of 2.2 years later (Time 2). In this study, we\nmainly focused on the task-state fMRI data involving a\nmultiplication task inside the scanner at both time\npoints. In light of previous findings in task-independent\nbrain network development (Baum et al., 2017; Fair\net al., 2007), we hypothesized that some of the task-state\nfunctional brain modules would become increasingly seg-\nregated with age, driven by both increased within-\nmodule connections and decreased between-module con-\nnections. Given the critical role of the FPN and DMN in\narithmetic processing\n(Emerson & Cantlon, 2012;\nRosenberg-Lee et al., 2011), we speculated that age-\nrelated functional segregation would be particularly pro-\nIn addition,\nnounced in these two brain modules.\nbecause brain function at different ages has been\nsuggested to be likely characterized by substantially dif-\nferent developmental trajectories (Chang et al., 2016;\nGrayson, 2017; Gu et al., 2015), we divided the children\ninto younger (mean age = 9.88 at Time 1) and older\ngroups (mean age = 12.34 at Time 1) and examined\nwhether age would affect the longitudinal development\nof different brain network modules. Furthermore, previ-\nous neuroimaging studies have shown evidence that indi-\nvidual difference in particular brain network connectivity\nis meaningfully related to variability in cognitive perfor-\nmance (Riggins et al., 2016; Sherman et al., 2014). Hence,\nthe present study also explored whether individual differ-\nence in arithmetic performance could be accounted for\nby individual difference in large-scale brain network con-\nnectivity. Addressing this question would bring us a more\ncomprehensive understanding of the cognitive implica-\ntions of large-scale brain networks. Notably, the public\ndataset analysed in this study also provides other behav-\nioural or neuroimaging data including reading, number\ncomparison and other math skills. Further investigation\nof this public dataset is still of great value.\n\ncomputed\nbetween each pair of ROIs, resulting in a 142 (cid:3) 142 con-\nnectivity matrix for each participant. Due to the ambigu-\nous biological interpretation of negative correlations (Fox\net al., 2009), our analysis was restricted to only positive\ncorrelations. Following previous routines of graph theory\nanalysis (Reineberg & Banich, 2016; Wang et al., 2020),\nwe set a scarcity threshold of 15% to remove weak brain\nconnections and keep strong connections. To test\nwhether our findings generalize beyond the scarcity\nthreshold of 15%, we also verified the results with scarcity\nthresholds of 10% and 20%, respectively. Because the\noverall results were consistent, we only reported the\nresults with the scarcity thresholds of 15%. The Brain\nConnectivity Toolbox was used to calculate the following\ngraph theory measures (Rubinov & Sporns, 2010). First,\nparticipation coefficient (PC) was calculated to estimate\nthe degree of segregation of a specific node’s connections\nacross different brain modules. For a node i, PC was com-\nputed using the formula as below:"
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 122,
+            "text": "The longitudinal development of large-scale functional brain networks for arithmetic ability from childhood to adolescence",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 139,
+            "end": 143,
+            "text": "2022",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 254,
+            "end": 275,
+            "text": "John Wiley & Sons Ltd",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 163,
+            "end": 196,
+            "text": "https://doi.org/10.1111/ejn.15651",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 277,
+            "end": 341,
+            "text": "Arithmetic ability is an important high-level cognitive function",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2991,
+            "end": 3045,
+            "text": "https://openneuro.org/datasets/ds001486/versions/1.3.0",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4266,
+            "end": 4297,
+            "text": "Siemens 3T TIM Trio MRI scanner",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4638,
+            "end": 4655,
+            "text": "slice number = 32",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4602,
+            "end": 4633,
+            "text": "slice thickness/gap = 3/0.48 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4526,
+            "end": 4542,
+            "text": "flip angle = 80°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4602,
+            "end": 4633,
+            "text": "slice thickness/gap = 3/0.48 mm",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4544,
+            "end": 4575,
+            "text": "field of view = 220 × 206.25 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4480,
+            "end": 4505,
+            "text": "repetition time = 2000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4507,
+            "end": 4524,
+            "text": "echo time = 20 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3861,
+            "end": 3898,
+            "text": "The total scanning lasted about 8 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2418,
+            "end": 2458,
+            "text": "yielding 54 children in the final sample",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4944,
+            "end": 4992,
+            "text": "we preprocessed the raw imaging data using SPM12",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 767,
+            "end": 822,
+            "text": "task-based functional magnetic resonance imaging (fMRI)",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3073,
+            "end": 3176,
+            "text": "involved 72 single-digit multiplication problems: 48 with correct solutions and 24 with false solutions",
+            "labels": [
+              "Number of blocks/trials"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3390,
+            "end": 3424,
+            "text": "inter-stimulus interval for 200 ms",
+            "labels": [
+              "ISI distribution"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Design_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3317,
+            "end": 3372,
+            "text": "presented successively on a white background for 800 ms",
+            "labels": [
+              "Length of each trial"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3494,
+            "end": 3684,
+            "text": "Participants were instructed to respond with their index finger if the proposed solution of the multiplication problem was correct and with their middle finger if the solution was incorrect.",
+            "labels": [
+              "Instructions"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Task_specification",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3085,
+            "end": 3121,
+            "text": "single-digit multiplication problems",
+            "labels": [
+              "Stimuli"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6518,
+            "end": 6564,
+            "text": "repeated measures analysis of variance (ANOVA)",
+            "labels": [
+              "Omnibus ANOVA"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Planned_comparisons",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6566,
+            "end": 6629,
+            "text": "Follow-up tests included paired and independent-samples t tests",
+            "labels": [
+              "Comparisons"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1850,
+            "end": 1893,
+            "text": "A total of 63 typically developing children",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1894,
+            "end": 1909,
+            "text": "aged 8–15 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2025,
+            "end": 2037,
+            "text": "right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2064,
+            "end": 2172,
+            "text": "normal hearing, normal or corrected-to-normal vision and no history of neurological or psychiatric disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2174,
+            "end": 2201,
+            "text": "Nine children were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2637,
+            "end": 2726,
+            "text": "with no differences in gender distribution, time between sessions and intelligence scores",
+            "labels": [
+              "Group matching"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2728,
+            "end": 2817,
+            "text": "This study was approved by the Research Ethics Review Board of Hangzhou Normal University",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3900,
+            "end": 3955,
+            "text": "Reaction time and accuracy were recorded for each trial",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5001,
+            "end": 5067,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5001,
+            "end": 5032,
+            "text": "first six functional images",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5213,
+            "end": 5234,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5239,
+            "end": 5261,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5335,
+            "end": 5379,
+            "text": "4",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5436,
+            "end": 5488,
+            "text": "5",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5436,
+            "end": 5488,
+            "text": "SPM12 New Segmentation",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5604,
+            "end": 5644,
+            "text": "6",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5604,
+            "end": 5644,
+            "text": "DARTEL",
+            "labels": [
+              "Spatial normalization — Software"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5604,
+            "end": 5735,
+            "text": "Montreal Neurological Institute",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5824,
+            "end": 5908,
+            "text": "7",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5824,
+            "end": 5908,
+            "text": "6-mm full-width half-maximum Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5912,
+            "end": 5971,
+            "text": "8",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5912,
+            "end": 5971,
+            "text": "Scrubbing",
+            "labels": [
+              "Scrubbing — Type"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5912,
+            "end": 6025,
+            "text": "frame-wise displacement (FD) greater than 0.3 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6131,
+            "end": 6187,
+            "text": "9",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6131,
+            "end": 6187,
+            "text": "band/high/low pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6131,
+            "end": 6187,
+            "text": "cut-off frequency of 1/128 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6193,
+            "end": 6210,
+            "text": "10",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6193,
+            "end": 6210,
+            "text": "Linear detrending",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6315,
+            "end": 6379,
+            "text": "11",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6315,
+            "end": 6379,
+            "text": "Motion regression",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6315,
+            "end": 6379,
+            "text": "six motion parameters and their temporal first-order derivatives",
+            "labels": [
+              "motion regression — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6234,
+            "end": 6313,
+            "text": "12",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6234,
+            "end": 6313,
+            "text": "Confound regression",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6234,
+            "end": 6313,
+            "text": "first five principal components of white-matter and cerebrospinal fluid signals",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8795,
+            "end": 8841,
+            "text": "1",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8795,
+            "end": 8841,
+            "text": "partitioned into 142 regions of interest (ROI)",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9342,
+            "end": 9361,
+            "text": "6-mm radius spheres",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8912,
+            "end": 8934,
+            "text": "2",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Algorithm/Type"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8912,
+            "end": 8934,
+            "text": "Dosenbach et al., 2010",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9162,
+            "end": 9199,
+            "text": "3",
+            "labels": [
+              "Network definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9162,
+            "end": 9199,
+            "text": "assigned into\nfive functional modules",
+            "labels": [
+              "Network definition — Type"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9176,
+            "end": 9288,
+            "text": "five functional modules: (1) DMN; (2) FPN; (3) somato-\nmotor network (SMN);\n(4) visual network (VN);\n(5) cingulo",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9481,
+            "end": 9531,
+            "text": "4",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9481,
+            "end": 9531,
+            "text": "the average time\nseries of each ROI were extracted",
+            "labels": [
+              "Time series ROI — Algorithm"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9384,
+            "end": 9400,
+            "text": "3dcalc with AFNI",
+            "labels": [
+              "Time series ROI — Software"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9481,
+            "end": 9531,
+            "text": "the average time\nseries of each ROI were extracted",
+            "labels": [
+              "Time series ROI — Parameters"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9770,
+            "end": 9808,
+            "text": "5",
+            "labels": [
+              "Combine block — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Combine block",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9770,
+            "end": 9808,
+            "text": "extracted and concatenated over trials",
+            "labels": [
+              "Combine block — Type"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10441,
+            "end": 10488,
+            "text": "6",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10441,
+            "end": 10488,
+            "text": "Pearson correlation coefficients were\n\ncomputed",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10531,
+            "end": 10546,
+            "text": "142 (cid:3) 142",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10702,
+            "end": 10742,
+            "text": "7",
+            "labels": [
+              "Negative correlation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software",
+              "Parameters"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10702,
+            "end": 10742,
+            "text": "restricted to only positive\ncorrelations",
+            "labels": [
+              "Negative correlation — Type"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10853,
+            "end": 10878,
+            "text": "8",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10853,
+            "end": 10878,
+            "text": "scarcity threshold of 15%",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10853,
+            "end": 10878,
+            "text": "scarcity threshold of 15%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11062,
+            "end": 11087,
+            "text": "thresholds of 10% and 20%",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0082"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11337,
+            "end": 11367,
+            "text": "9",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11337,
+            "end": 11367,
+            "text": "participation coefficient (PC)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 12039,
+            "end": 12093,
+            "text": "intra-connections of each module and inter-connections",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0085"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1275 @@
+{
+  "data": {
+    "text": "A graph representation of functional diversity of brain regions\n\nBrain and Behavior. 2019;9:e01358.\nhttps://doi.org/10.1002/brb3.1358\n\nO R I G I N A L  R E S E A R C H\n\nA graph representation of functional diversity of brain regions\n\nDazhi Yin1 | Xiaoyu Chen1,2 | Kristina Zeljic1,2 | Yafeng Zhan1,2 | Xiangyu Shen1 | Gang Yan3 | Zheng Wang1,2,4\n\nThis is an open access article under the terms of the Creative Commons Attribution License.\n© 2019 The Authors. Brain and Behavior published by Wiley Periodicals, Inc.\n\nOur analysis was performed on a resting-state fMRI dataset of 100 unrelated participants (age: 29.1 ± 3.7 years; 46 male) from the Human Connectome Project (HCP). We also tested another resting-state fMRI dataset of 198 subjects (Beijing site; age: 21.2 ± 1.8 years; 76 male) from the 1000 Functional Connectomes Project (FCP). Data collection was approved by the institutional review board of the individual site, and informed consent was obtained from each subject.\n\nSeveral cognitive measures were retrieved from the HCP database, including Penn's Progressive Matrices, Picture Sequence Memory Test, Dimensional Change Card Sort Test, Picture Vocabulary Test, Pattern Comparison Processing Speed Test, and List Sorting Working Memory Test.\n\nFor the HCP dataset, the whole-brain resting-state fMRI scans were acquired with a 32 channel head coil on a modified 3 T Siemens Skyra. The sequence parameters are as follows: repetition time = 720 ms, echo time = 33.1 ms, flip angle = 52°, bandwidth = 2,290 Hz/Px, field of view = 208 × 180 mm, 72 slices, 2.0 mm isotropic voxels, with a multiband acceleration factor of 8. This dataset was collected across 2 days. On each day, 28 min of rest (eyes open with fixation) fMRI data were collected across two runs. In our current study, we only used the first run for each subject with 1,200 volumes.\nFor the FCP dataset, scanning was performed on a 3 T MRI Scanner (Siemens). The whole-brain resting-state fMRI scans were acquired using an echo planar imaging sequence with repetition time = 2,000 ms, slices = 33, volumes = 225.\n\nFor the HCP dataset, we used a minimally preprocessed volume version of the data, which underwent standard procedures including spatial normalization to a standard template, motion correction, and intensity normalization; one subject was excluded due to poor image quality in the orbitofrontal cortex. We performed further preprocessing using SPM (SPM8) and REST software. The first 10 volumes were discarded for signal equilibrium and to allow participants' adaptation to the scanning environment. We removed the variables of no interest from the time series using linear regression, including motion estimates, cerebrospinal fluid and white matter signals, and derivatives. In addition, we also conducted our analysis with global signal regression (GSR). The linear trend was removed, and the data were temporally bandpass filtered (0.01–0.08 Hz) and spatially smoothed (full width at half maximum = 4 mm).\n\nFor the FCP dataset, preprocessing was performed following our previous study, including slice timing, motion correction, spatial normalization (resampled to 3 mm isotropic voxels), smoothing (full width at half maximum = 8 mm), removing linear trends, temporal bandpass filtering (0.01–0.08 Hz), and regressing out covariates (i.e., six head motion parameters, cerebrospinal fluid, and white matter signals); six subjects were excluded according to the notes in the database.\n\nWe constructed functional brain networks based on preprocessed resting-state fMRI images. For node definition, we used a parcellation scheme composed of 264 putative functional areas (Power-264, spherical ROIs with the same size), as well as 90 ROIs according to the commonly used Automated Anatomical Labeling template (AAL-90, ROIs with different size). The time series of each ROI was obtained by averaging the residual time courses of all voxels within the ROI. A symmetric N × N functional connectivity matrix was generated, and elements of the matrix Aij represent the Pearson's correlation coefficient between the time courses of two ROIs, i and j.\n\nFor weighted networks without a set density threshold, all negative correlations were set to zero as NDI is not applicable for negative weights.\n\nThe data that support the findings of this study are openly available in ConnectomDB (Human Connectome Project) and at the 1000 Functional Connectomes Project (Beijing site).\n\n2.5  Construction of functional brain networks\nWe constructed functional brain networks based on preprocessed resting‐state fMRI images. For node definition, we used a parcellation scheme composed of 264 putative functional areas (Power‐264, spherical regions of interest (ROIs) with the same size; Power et al., 2011), as well as 90 ROIs according to the commonly used Automated Anatomical Labeling template (AAL‐90, ROIs with different size; Tzourio‐Mazoyer et al., 2002). The time series of each ROI was obtained by averaging the residual time courses of all voxels within the ROI. A symmetric N × N (N = 264 for the Power‐264 parcellation; N = 90 for the AAL‐90 template) functional connectivity matrix was generated, and elements of the matrix Aij represent the Pearson's correlation coefficient between the time courses of two ROIs, i and j. Functional connectivity matrices were thus obtained for each participant. The next step is selection of cost threshold (reflecting network density). The cost of the network G was defined as the total number of edges in a graph, divided by the maximum possible number of edges:\ncos t= 1\nN(N−1)\n∑\ni∈G\nKi.\nHowever, there is currently no definitive criterion for threshold selection (Fornito, Zalesky, & Breakspear, 2013). Low cost may lead to a fragmented network with long shortest pathway, while high cost may reduce the economy of network. Considering that the network organization of the human brain is economic with features of small‐worldness and connectedness (Bassett & Bullmore, 2006; Bullmore & Sporns, 2009, 2012), we first calculated these topological properties of the functional brain networks across a wide range of cost (0.05 ≤ cost ≤ 0.5, with an incremental interval of 0.05) using graph theoretical analysis (see Methods S1 for the details of calculation of small‐worldness). We then selected the cost threshold that enables the brain network to be small‐world. In addition, we considered that the minimum mean degree of nodes across subjects should be >1, to minimize the disconnected nodes. We finally validated our main findings across cost thresholds within small‐world regime.\n\n2.6  Neighbor dispersion index of each node in a network\nHere, we assume that the functional diversity of a brain region is embodied by topological differentiation of its immediate neighbors in the large‐scale functional brain network. To characterize the functional diversity of each node in a network, we propose a new graph metric NDI, quantified by the ratio of topological distance between immediate neighbors of a given node i and the maximum possible distance:\nNDI(i)=\n∑\ns,t∈Gi\ndst\n(\nKi−1\n)×∑\nj∈Gi\nKj,\nwhere Gi denotes the set of nodes that are the immediate neighbors of the node i, Ki is the degree of i, dst indicates topological distance between two nodes, s and t, defined as:\ndst =\n∑N\nm=1\n|Asm−Atm|,\nwhere A is the adjacency matrix, here the distance is evaluated using Manhattan distance. The NDI of a node is close to 1 if the neighbors of its neighbors are largely nonoverlapped and 0 if the neighbors of its neighbors are completely overlapped or its degree is <2. The NDI measures the degree of dispersion of information from a node in the network. To illustrate the concept of NDI, a toy graph is shown in Figure 1a.\n\n2.7  Existing graph metrics commonly used for identifying network hubs\nFor comparison purposes, we calculated three existing graph metrics, commonly used for identifying network hubs, including degree, betweenness centrality, and participation coefficient. Degree Ki is defined as the number of immediate neighbors of a node i. Betweenness centrality Bi is defined as the number of shortest paths between any two nodes that run through node i (Freeman, 1977):\nBi =∑\nj,k∈N,j≠k\nnj,k(i)\nnj,k\n,\nwhere nj,k (i) is the number of shortest paths between nodes j and k that run through node i and nj,k is all shortest paths between nodes j and k. Bi captures the influence of a node over information flow between other nodes in the network, which tends to be high for brain regions with extensive across‐network connectivity. The participation coefficient Pi of node i is defined as follows (Guimera & Nunes Amaral, 2005):\nPi =1−\n∑NM\ns=1\n(Kis\nKi\n)2\n,\nwhere NM is number of modules, identified by a spectral optimization algorithm (Newman, 2006), Kis is the number of links of node i to nodes in module s, and Ki is the degree of node i. The participation coefficient of a node is close to 1 if its links are uniformly distributed among all the modules and 0 if all its links are within its own module.\nTo consider that the contribution of a node to each community also depends on the size of the community, Klimm and colleagues have introduced refined versions of the participation coefficient, called the participation index (pi) and the dispersion index (di; Klimm et al., 2014). We also calculated these two indices as a comparison.\n\nIn order to quantify whether and how values of each metric varied across brain regions and potential functional roles, we divided the brain into 10 different functional networks according to a previous study (Power et al., 2011). Then, a one‐way analysis of variance (ANOVA) was performed on the mean values of each metric within these functional networks. Finally, post hoc two‐sample t‐tests were conducted to assess the significant differences in the mean values of each metric between any two functional networks. A threshold of p < .05 with Bonferroni correction was considered statistically significant.\n\nIn the above analyses, the values of NDI were calculated for binary networks. To test the applicability of NDI in networks with connectivity weights, we applied it to weighted functional brain networks with a wide range of network densities (i.e., cost = 0.15, 0.30, and 0.60), without setting a density threshold (however, all negative correlations were set to zero as NDI is not applicable for negative weights). We found the regional profile of NDI to be highly consistent between the binary and weighted networks (r = .998, p < .0001 for cost = 0.15; r = .994, p < .0001 for cost = 0.30; and r = .983, p < .0001 for cost = 0.60). However, the quantitative differences in NDI between binary and weighted networks are dramatic at a higher network density (cost = 0.60)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 234,
+            "end": 345,
+            "text": "Dazhi Yin1 | Xiaoyu Chen1,2 | Kristina Zeljic1,2 | Yafeng Zhan1,2 | Xiangyu Shen1 | Gang Yan3 | Zheng Wang1,2,4",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 63,
+            "text": "A graph representation of functional diversity of brain regions",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 85,
+            "end": 89,
+            "text": "2019",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 65,
+            "end": 83,
+            "text": "Brain and Behavior",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 100,
+            "end": 133,
+            "text": "https://doi.org/10.1002/brb3.1358",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 347,
+            "end": 438,
+            "text": "This is an open access article under the terms of the Creative Commons Attribution License.",
+            "labels": [
+              "Full-text"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4282,
+            "end": 4456,
+            "text": "The data that support the findings of this study are openly available in ConnectomDB (Human Connectome Project) and at the 1000 Functional Connectomes Project (Beijing site).",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 578,
+            "end": 637,
+            "text": "100 unrelated participants (age: 29.1 ± 3.7 years; 46 male)",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Inclusion criteria",
+            "Group matching"
+          ],
+          "id": "m0008"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 611,
+            "end": 627,
+            "text": "29.1 ± 3.7 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 629,
+            "end": 636,
+            "text": "46 male",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 732,
+            "end": 791,
+            "text": "198 subjects (Beijing site; age: 21.2 ± 1.8 years; 76 male)",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "Missing_sublabels": [
+            "Handedness",
+            "Inclusion criteria",
+            "Group matching"
+          ],
+          "id": "m0011"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 765,
+            "end": 781,
+            "text": "21.2 ± 1.8 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 783,
+            "end": 790,
+            "text": "76 male",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2313,
+            "end": 2337,
+            "text": "one subject was excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3411,
+            "end": 3437,
+            "text": "six subjects were excluded",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 844,
+            "end": 983,
+            "text": "Data collection was approved by the institutional review board of the individual site, and informed consent was obtained from each subject.",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Behavioral_performance",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1060,
+            "end": 1087,
+            "text": "Penn's Progressive Matrices",
+            "labels": [
+              "Performance measure"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1378,
+            "end": 1395,
+            "text": "3 T Siemens Skyra",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1557,
+            "end": 1566,
+            "text": "72 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1568,
+            "end": 1591,
+            "text": "2.0 mm isotropic voxels",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1527,
+            "end": 1555,
+            "text": "field of view = 208 × 180 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1437,
+            "end": 1461,
+            "text": "repetition time = 720 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1463,
+            "end": 1482,
+            "text": "echo time = 33.1 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1484,
+            "end": 1500,
+            "text": "flip angle = 52°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1707,
+            "end": 1730,
+            "text": "eyes open with fixation",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1845,
+            "end": 1858,
+            "text": "1,200 volumes",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2034,
+            "end": 2060,
+            "text": "repetition time = 2,000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2062,
+            "end": 2073,
+            "text": "slices = 33",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2075,
+            "end": 2088,
+            "text": "volumes = 225",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2434,
+            "end": 2462,
+            "text": "SPM (SPM8) and REST software",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0030"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 548,
+            "end": 566,
+            "text": "resting-state fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2219,
+            "end": 2263,
+            "text": "1",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Motion correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2265,
+            "end": 2311,
+            "text": "2",
+            "labels": [
+              "Motion correction — Step Number"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Intensity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2288,
+            "end": 2324,
+            "text": "3",
+            "labels": [
+              "Intensity normalization — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2464,
+            "end": 2499,
+            "text": "4",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0035"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2593,
+            "end": 2674,
+            "text": "5",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2816,
+            "end": 2846,
+            "text": "6",
+            "labels": [
+              "Global signal — Step Number"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2848,
+            "end": 2876,
+            "text": "7",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2896,
+            "end": 2939,
+            "text": "8",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2944,
+            "end": 2998,
+            "text": "9",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3080,
+            "end": 3144,
+            "text": "10",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3123,
+            "end": 3181,
+            "text": "11",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0042"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3183,
+            "end": 3228,
+            "text": "12",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3230,
+            "end": 3281,
+            "text": "13",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3254,
+            "end": 3296,
+            "text": "14",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3302,
+            "end": 3361,
+            "text": "15",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2434,
+            "end": 2462,
+            "text": "SPM (SPM8) and REST software",
+            "labels": [
+              "Removal Init Vol — Software"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2464,
+            "end": 2484,
+            "text": "The first 10 volumes",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2657,
+            "end": 2674,
+            "text": "linear regression",
+            "labels": [
+              "Other confound regression — Algorithm"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2686,
+            "end": 2765,
+            "text": "motion estimates, cerebrospinal fluid and white matter signals, and derivatives",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Global signal",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2816,
+            "end": 2846,
+            "text": "global signal regression (GSR)",
+            "labels": [
+              "Global signal — Type"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2852,
+            "end": 2864,
+            "text": "linear trend",
+            "labels": [
+              "Temporal detrending — Algorithm"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2907,
+            "end": 2915,
+            "text": "bandpass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2926,
+            "end": 2938,
+            "text": "0.01–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2964,
+            "end": 2997,
+            "text": "full width at half maximum = 4 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3159,
+            "end": 3180,
+            "text": "3 mm isotropic voxels",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3194,
+            "end": 3227,
+            "text": "full width at half maximum = 8 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2926,
+            "end": 2938,
+            "text": "0.01–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3335,
+            "end": 3408,
+            "text": "six head motion parameters, cerebrospinal fluid, and white matter signals",
+            "labels": [
+              "Other confound regression — Parameters"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4689,
+            "end": 4698,
+            "text": "Power‐264",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4868,
+            "end": 4874,
+            "text": "AAL‐90",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4658,
+            "end": 4687,
+            "text": "264 putative functional areas",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4789,
+            "end": 4796,
+            "text": "90 ROIs",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4965,
+            "end": 5041,
+            "text": "obtained by averaging the residual time courses of all voxels within the ROI",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          },
+          "id": "m0064"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5225,
+            "end": 5258,
+            "text": "Pearson's correlation coefficient",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          },
+          "id": "m0065"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5397,
+            "end": 5453,
+            "text": "selection of cost threshold (reflecting network density)",
+            "labels": [
+              "Sparsity control — Algorithm/Type"
+            ]
+          },
+          "id": "m0066"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6140,
+            "end": 6195,
+            "text": "0.05 ≤ cost ≤ 0.5, with an incremental interval of 0.05",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0067"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5936,
+            "end": 5969,
+            "text": "small‐worldness and connectedness",
+            "labels": [
+              "Graph characteristics — Algorithm/Type"
+            ]
+          },
+          "id": "m0068"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6926,
+            "end": 6942,
+            "text": "graph metric NDI",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          },
+          "id": "m0069"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7936,
+            "end": 7997,
+            "text": "degree, betweenness centrality, and participation coefficient",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0070"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9239,
+            "end": 9313,
+            "text": "participation index (pi) and the dispersion index (di; Klimm et al., 2014)",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0071"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9492,
+            "end": 9598,
+            "text": "divided the brain into 10 different functional networks according to a previous study (Power et al., 2011)",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0072"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9515,
+            "end": 9547,
+            "text": "10 different functional networks",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          },
+          "id": "m0073"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9608,
+            "end": 9644,
+            "text": "one‐way analysis of variance (ANOVA)",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0074"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9736,
+            "end": 9763,
+            "text": "post hoc two‐sample t‐tests",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0075"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9903,
+            "end": 9937,
+            "text": "p < .05 with Bonferroni correction",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          },
+          "id": "m0076"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10309,
+            "end": 10347,
+            "text": "negative correlations were set to zero",
+            "labels": [
+              "Negative correlation — Algorithm/Type"
+            ]
+          },
+          "id": "m0077"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4626,
+            "end": 4645,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type",
+              "Software"
+            ]
+          },
+          "id": "m0078"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4700,
+            "end": 4736,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Algorithm/Type",
+              "Software"
+            ]
+          },
+          "id": "m0079"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4933,
+            "end": 4960,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          },
+          "id": "m0080"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5134,
+            "end": 5164,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          },
+          "id": "m0081"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5410,
+            "end": 5453,
+            "text": "5",
+            "labels": [
+              "Sparsity control — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0082"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5936,
+            "end": 5969,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          },
+          "id": "m0083"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6922,
+            "end": 6942,
+            "text": "7",
+            "labels": [
+              "Graph measures — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0084"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9492,
+            "end": 9598,
+            "text": "8",
+            "labels": [
+              "Network definition — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0085"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9608,
+            "end": 9644,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Software"
+            ]
+          },
+          "id": "m0086"
+        },
+        {
+          "from_name": "Negative correlation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 10309,
+            "end": 10347,
+            "text": "10",
+            "labels": [
+              "Negative correlation — Step Number"
+            ],
+            "Missing_sublabels": [
+              "Parameters",
+              "Software"
+            ]
+          },
+          "id": "m0087"
+        }
+      ]
+    }
+  ]
+}

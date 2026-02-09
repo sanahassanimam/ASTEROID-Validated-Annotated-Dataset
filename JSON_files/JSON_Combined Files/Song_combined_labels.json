@@ -1,0 +1,1089 @@
+{
+  "data": {
+    "text": "Age-Related Reorganizational Changes in Modularity\nand Functional Connectivity of Human Brain Networks\n\nJie Song,1,2 Rasmus M. Birn,3,4 Mélanie Boly,3,5 Timothy B. Meier,1,6,7 Veena A. Nair,1\nMary E. Meyerand,1,2,4,6 and Vivek Prabhakaran1,3–6,8,9\n\nBRAIN CONNECTIVITY\nVolume 4, Number 9, 2014\nª Mary Ann Liebert, Inc.\nDOI: 10.1089/brain.2014.0286\n\nThe human brain undergoes both morphological and functional modifications across the human lifespan. It is im-\nportant to understand the aspects of brain reorganization that are critical in normal aging. To address this question,\none approach is to investigate age-related topological changes of the brain. In this study, we developed a brain\nnetwork model using graph theory methods applied to the resting-state functional magnetic resonance imaging\ndata acquired from two groups of normal healthy adults classified by age. We found that brain functional networks\ndemonstrated modular organization in both groups with modularity decreased with aging, suggesting less distinct\nfunctional divisions across whole brain networks. Local efficiency was also decreased with aging but not with\nglobal efficiency. Besides these brain-wide observations, we also observed consistent alterations of network prop-\nerties at the regional level in the elderly, particularly in two major functional networks—the default mode network\n(DMN) and the sensorimotor network. Specifically, we found that measures of regional strength, local and global\nefficiency of functional connectivity were increased in the sensorimotor network while decreased in the DMN\nwith aging. These results indicate that global reorganization of brain functional networks may reflect overall to-\npological changes with aging and that aging likely alters individual brain networks differently depending on the\nfunctional properties. Moreover, these findings highly correspond to the observation of decline in cognitive func-\ntions but maintenance of primary information processing in normal healthy aging, implying an underlying com-\npensation mechanism evolving with aging to support higher-level cognitive functioning.\n\nParticipants were 26 younger adults (age 24.6 – 3.3 years, 11\nwomen) and 24 older adults (age 58.0 – 6.1 years, 12 women)\nwith no history of neurological or psychological disorders.\nTen-minute resting-state fMRI scans were acquired from\neach subject as they rested with their eyes fixated on a cross\nprojected to the center of a MR-safe screen. Imaging data\nwere obtained on a 3.0 Tesla whole-body MRI scanner (DIS-\nCOVERY MR750; General Electric Medical Systems, Wauke-\nsha, WI) with an 8-channel receive-only RF head coil array.\nThis study was approved by the University of Wisconsin-\nMadison Health Sciences Institutional Review Board. Written\ninformed consent was provided by each participant.\n\nT1-weighted structural images with 1 mm isotropic voxels\nwere acquired axially with an MPRAGE sequence (TR =\n8.132 ms, TE = 3.18 ms, TI = 450 ms, flip angle = 12°, field of\nview = 256 · 256 mm2, matrix size = 256 · 256, slice thick-\nness = 1 mm, and number of slices = 156). Echo planar imaging\ndata were collected in the sagittal plane with the following\nparameters: TR = 2.6 sec, TE = 22 ms, flip angle = 60°, field\nof view = 224 · 224 mm2, matrix size = 64 · 64, slice thick-\nness = 3.5 mm, number of slices = 40 slices, and 231 volumes.\n\nResting-state fMRI data were processed in AFNI (Cox,\n1996), including the following initial preprocessing steps: (1)\ndespiking to remove extreme outliers in the signal intensity\ntime courses, (2) correcting for motion and slice timing, and\n(3) removing first three time points of the scan (total 231 time\npoints). T1-weighted structural images were warped to standard\nMNI space using a 12-parameter affine transformation. This\ntransformation was combined with the T1-to-EPI alignment\nand used to map the functional EPI scans to MNI space with\na resampling of 3 mm resolution. The resulting structural images\nwere later skull stripped and segmented into gray matter, WM,\nand cerebrospinal fluid (CSF) masks using FSL (Smith et al.,\n2004). The average signal time course from the WM and\nCSF masks and the six rigid body motion parameters were nor-\nmalized and regressed out. The residuals from the functional\ndata were spatially smoothed with a 4 mm2 full-width half max-\nimum isotropic Gaussian kernel in AFNI and then temporally\nfiltered with a band-pass from 0.01 to 0.1 Hz.\n\nHead motion has been shown to significantly affect the\nRSFC measures (Saad et al., 2009; Satterthwaite et al.,\n2012; Van Dijk et al., 2012). Therefore, a secondary motion\ncorrection was performed to exclude certain time frames\nwith motion above a more stringent threshold. A score of\nmotion measurement corresponding to each time frame of\nfMRI scan was calculated as the square root of the sum\nof squares of the derivatives (SSD) of the six time courses\nof the motion parameters (Birn et al., 2013; Jones et al.,\n2010; Meier et al., 2012). In this study, any time frame asso-\nciated with a score of SSD greater than 0.2 mm was censored\nand later excluded using the censor option provided in the\nAFNI program, 3dDeconvolve. This option essentially per-\nformed zero-filling to maintain the same sampling rate and\nthe same length of time series for each subject. To further\neliminate group differences in motion contaminating func-\ntional connectivity assessments, we matched subjects from\nthe two age groups with their average motion SSD across\nall these time points. This process resulted in two subgroups\nwith 16 subjects in each subgroup. Several younger sub-\njects with small average motion SSD and several older sub-\njects with relatively greater average motion SSD had to be\nremoved in order to match the average motion for the two\nsubgroups.\n\nResting-state functional connectivity\nThe RSFC was computed from 187 different brain regions\ndeﬁned within the sensorimotor, cingulo-opercular task control,\nfronto-parietal task control, dors al/ventral attention, default\nmode network (DMN), salience network and subcortical/cerebellar network (Power et al ., 2011). In each of these brain\nregions, signals resulting from the processed functional data\nwere extracted and averaged over a spherical region of interest(ROI) with a radius of 4 mm. Pearson correlation coefﬁcient ( r\nij)\nwas calculated for the ith and jth ROI. This generated a\n187·187 adjacency matrix, M, for each subject, which served\nas the RSFC matrix for each subject within each group.\nThresholding brain networks\nThresholding an RSFC matrix is critical for obtaining a\nsparse adjacency matrix in that it should be optimal andAGE-RELATED BRAIN FUNCTIONAL REORGANIZATION 663\ncontain not too little functional connections for detecting\ngroup differences but not too many functional connections\nthat it may dilute group differences. The most commonlyused approach for thresholding is to globally threshold theRSFC matrix at a ﬁxed threshold, q, for any r\nijbetween\n/C01 and 1. If rij‡q, the corresponding element of the adja-\ncency matrix, Mij, is kept for the actual value of rijfor a\nweighted adjacency matrix or is set to be 1 for a binary ad-\njacency matrix. If rij<q, then Mijis set to be 0 for both\nweighted and binary matrices. Note: except for strength,measures of modularity, local and global efﬁciency were\ncomputed using the binary adjacency matrix. One potential\nproblem with this global thresholding method is that oncethresholded, the sparse matrices are not fully connected\nfrom node to node (Alexander-Bloch et al., 2010). This dis-\nconnectedness of the resulting graphs may ultimately changethe properties of the original global and local functionalconnectivity, which may bias the comparisons of graph-\ntheoretic metrics between different groups of subjects.\nIn this study, we anticipated that this might be a factor af-\nfecting our observations in age-related differences in RSFC,\nand used a minimum spanning tree (MST) method in order to\npreserve fully connected brain graphs (Achard et al., 2012;Alexander-Bloch et al., 2010). In this study, each MST per\nsubject is a spanning tree of a weighted subgraph that is\nfully connected with all nodes having a maximum totalweight of all links. Although the MST sparsely represents\na ‘‘skeleton structure’’ of the brain graph, it does not form\nclusters or loops at the regional level that keeps it from a bi-ologically meaningful sparse representation (Alexander-Bloch et al., 2010). To obtain a sparse, fully connected,\nand biologically meaningful graph, we added extra links to\nthe MST from the remaining adjacency matrix. To do so,for each ﬁnal sparse adjacency matrix, we added top 2–\n40% of the remaining links to the MST, respectively, to in-\nclude the highest proportion of the remaining functionalconnectivity. This ensured that each ﬁnal graph per subject\nhad an equal number of links, and, thus, observations on age-\nrelated group differences were independent of number offunctional connections. Several values of the threshold weretested in order to examine the effect of different proportional\nthresholding on aging-related group differences. Thresholds\nfrom 2% to 40% were chosen based on the reasons that (1)the network measures are relatively constant over this range\n(Alexander-Bloch et al., 2010); (2) graphs become more ran-\ndom above a threshold level of 50% (Humphries et al., 2006).Current ﬁndings are based on thresholds from 2% to 8%\nat 2% intervals; results obtained from thresholds of 10% to\n40% at 10% intervals can be found in the SupplementaryMaterials (Supplementary Figs. S1–S10; Supplementary\nData are available online at www.liebertpub.com/brain).\nMeasures of graph metrics\nGraph metrics, including modularity, local and global efﬁ-\nciency, and strength, were estimated using the Brain Connec-\ntivity Toolbox (Rubinov and Sporns, 2010) with adaptationmade for nodal or regional-level calculation. Previous studies\nhave reported age-related changes in connectivity and network\nmeasures on a global or brain-wide level (Alexander-Blochet al., 2010; Geerligs et al., 2014; Meunier et al., 2009a). In\nthis study, network measures were estimated at global and re-gional level, thus enabling an examination of age-related\nchanges in functional connectivity at a brain-wide level and\nat regional level for a ﬁner-grained analysis. Global-levelgraph metrics were estimated by averaging each measureacross all nodal regions and across all subjects in each\ngroup; regional level measures, except for modularity, were\nestimated for each node averaging across all subjects withineach group. Statistical group comparison was conducted for\neach graph metric at each threshold using the Wilcoxon\nrank sum test.\nModularity is a global measure of how well a network can\nbe decomposed into a set of sparsely interconnected but\ndensely intraconnected modules (Newman, 2004) and canbe a valuable tool in identifying the functional blocks within\nthe brain network. The optimal modular structure for a given\nnetwork is typically estimated with optimization algorithmsrather than computed exactly (Danon et al., 2005; Rubinovand Sporns, 2010). In this study, network modularity was es-\ntimated via a two-step approach to achieve an optimal mod-\nule division, similar to the one applied in other studies(Geerligs et al., 2014; Rubinov and Sporns, 2011). Modular-\nity was ﬁrst estimated using the Newman–Girvan algorithm\n(Newman, 2006a, 2006b). Each module is extracted as agroup of nonoverlapping nodes by maximizing the number\nof within-module links and minimizing the number of\nbetween-module links among those nodes. Since the optimalcommunity structure and maximized modularity may vary\nfrom run to run due to heuristics in the algorithm (Rubinov\nand Sporns, 2010), this step was repeated 500 times. In thesecond step, all previously detected community structureswere reﬁned using a ﬁne-tuning algorithm (Rubinov and\nSporns, 2010; Sun et al., 2009) with a maximum 500\ntimes’ iteration. Once an optimal modular structure of thenetwork has been identiﬁed, it is possible to assign topolog-\nical roles to each node based on its density of intra- and inter-\nmodular connections (Guimera et al., 2005). Therefore,intramodular connectivity of each node was measured by\nthe normalized intramodular degree, that is, the within-module\ndegree z-score (Rubinov and Sporns, 2010). The within-\nmodule degree z-score is large for a node that has a large\nnumber of intramodular connections relative to other nodes\nin the same module. We used the measure of within-module\ndegree z-score to identify those ‘‘hub’’ nodes with high intra-\nmodular connectivity and examined the age-related changes\nin these functionally important regions.\nLocal efﬁciency is a measure of information transfer in the\nimmediate neighborhood of each node, indicating to what\nextent connections are being segregated into subnetworks\n(Achard et al., 2012), while global efﬁciency is a measureof information propagating in the whole network, indicating\nto what extent connections are being integrated into a whole\nbrain-wide network (Rubinov and Sporns, 2010). These twomeasures are based on a pre-estimation of the minimum pathlength. For the local efﬁciency, the minimum path length is\nestimated as the shortest path length from node ito its nearest\nneighbor node jin the subgraph they both belong to. For the\nglobal efﬁciency, the minimum path length is estimated as\nthe shortest path length from node ito all other nodes jin\nthe whole graph.\nThe strength of functional connectivity of each node is mea-\nsured as the mean value of weights (i.e., cross-correlation\ncoefﬁcients) of all functional connections linking to the664 SONG ET AL.\nnode. It provides an estimation of the functional importance\nof each node.\nMeasures of alteration of graph metrics\nAge-related topological changes are different across brain\nlocations and networks. These patterns of changes cannot betruly reﬂected with a solely brain-wide examination. How-\never, it might be visualized by plotting, for a given graphmetric, the mean value at each node in the younger group\nversus the difference between the older and younger groups\nat each node. This approach was originally reported and usedfor detecting functional network changes in comatose pa-tients, and the gradient of a straight line ﬁtted to the data\nwas referred to as a hub disruption index, j(Achard et al.,\n2012). In this study, the hub disruption index for a givengraph metric, for example, strength, was constructed by sub-\ntracting the younger group mean nodal strength from the\nFIG. 1. Adjacency matri-\nces shown at threshold of 8%(Young—upper panel,Older—bottom panel). Func-\ntional networks are illustrated\nusing adjacency matrices.Rows and columns denote the187 nodes, and each element\nof the matrix denotes a link\nbetween the correspondingnodes. Square blocks from the\ntop left to the bottom right\nalong the main diagonal rep-resent the sensorimotor (red;35 regions), cingulo-opercular\ntask control (orange; 14 re-\ngions), fronto-parietal taskcontrol (gold; 25 regions),dorsal/ventral attention (ma-\ngenta, 20 regions), default\nmode network (DMN; me-dium blue, 58 regions), sa-\nlience network (royal blue;\n18 regions), and subcortical/cerebellar (green; 17 regions)network. Elements within\neach block represent within-\nnetwork functional connec-tions and elements outsideblocks represent between-\nnetwork connections.AGE-RELATED BRAIN FUNCTIONAL REORGANIZATION 665\nmean strength of the corresponding node in the older group\nand plotting this group mean difference against the younger\ngroup mean. This transformation improves visualization ofthe age-related differences in the proﬁle of regional networkproperties."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 0,
+            "end": 102,
+            "text": "Age-Related Reorganizational Changes in Modularity\nand Functional Connectivity of Human Brain Networks",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 104,
+            "end": 112,
+            "text": "Jie Song",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 288,
+            "end": 292,
+            "text": "2014",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 295,
+            "end": 317,
+            "text": "Mary Ann Liebert, Inc.",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 323,
+            "end": 346,
+            "text": "10.1089/brain.2014.0286",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 967,
+            "end": 998,
+            "text": "modularity decreased with aging",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2537,
+            "end": 2588,
+            "text": "DIS-\nCOVERY MR750; General Electric Medical Systems",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3319,
+            "end": 3347,
+            "text": "number of slices = 40 slices",
+            "labels": [
+              "Number of slices"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3291,
+            "end": 3317,
+            "text": "slice thick-\nness = 3.5 mm",
+            "labels": [
+              "Slice thickness"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3219,
+            "end": 3235,
+            "text": "flip angle = 60°",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2402,
+            "end": 2425,
+            "text": "eyes fixated on a cross",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3237,
+            "end": 3266,
+            "text": "field\nof view = 224 · 224 mm2",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3193,
+            "end": 3205,
+            "text": "TR = 2.6 sec",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3207,
+            "end": 3217,
+            "text": "TE = 22 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3926,
+            "end": 3941,
+            "text": "3 mm resolution",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5535,
+            "end": 5582,
+            "text": "two subgroups\nwith 16 subjects in each subgroup",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3409,
+            "end": 3413,
+            "text": "AFNI",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2319,
+            "end": 2337,
+            "text": "resting-state fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2144,
+            "end": 2161,
+            "text": "26 younger adults",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2199,
+            "end": 2214,
+            "text": "24 older adults",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2163,
+            "end": 2183,
+            "text": "age 24.6 – 3.3 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2216,
+            "end": 2236,
+            "text": "age 58.0 – 6.1 years",
+            "labels": [
+              "Age"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2185,
+            "end": 2193,
+            "text": "11\nwomen",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2238,
+            "end": 2246,
+            "text": "12 women",
+            "labels": [
+              "Male/Female"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2248,
+            "end": 2306,
+            "text": "with no history of neurological or psychological disorders",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5713,
+            "end": 5730,
+            "text": "had to be\nremoved",
+            "labels": [
+              "Rejected subjects"
+            ]
+          },
+          "id": "m0026"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5406,
+            "end": 5479,
+            "text": "we matched subjects from\nthe two age groups with their average motion SSD",
+            "labels": [
+              "Group matching"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2672,
+            "end": 2763,
+            "text": "approved by the University of Wisconsin-\nMadison Health Sciences Institutional Review Board",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0028"
+        },
+        {
+          "from_name": "Despiking",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3484,
+            "end": 3493,
+            "text": "1",
+            "labels": [
+              "Despiking — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Despiking — Software",
+            "Despiking — Algorithm",
+            "Despiking — Parameters"
+          ],
+          "id": "m0029"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3563,
+            "end": 3584,
+            "text": "2",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Algorithm",
+            "Alignment Head motion est — Parameters"
+          ],
+          "id": "m0030"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3589,
+            "end": 3601,
+            "text": "3",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Algorithm",
+            "Slice timing correction — Parameters"
+          ],
+          "id": "m0031"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3611,
+            "end": 3643,
+            "text": "4",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm",
+            "Removal Init Vol — Parameters"
+          ],
+          "id": "m0032"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3716,
+            "end": 3744,
+            "text": "5",
+            "labels": [
+              "Spatial normalization — Step Number"
+            ]
+          },
+          "id": "m0033"
+        },
+        {
+          "from_name": "Spatial normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3753,
+            "end": 3772,
+            "text": "12-parameter affine",
+            "labels": [
+              "Spatial normalization — Parameters"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Coregistration",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3831,
+            "end": 3850,
+            "text": "6",
+            "labels": [
+              "Coregistration — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Coregistration — Software",
+            "Coregistration — Algorithm",
+            "Coregistration — Parameters"
+          ],
+          "id": "m0035"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3863,
+            "end": 3904,
+            "text": "7",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3926,
+            "end": 3941,
+            "text": "3 mm resolution",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0037"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3986,
+            "end": 4000,
+            "text": "8",
+            "labels": [
+              "Skull stripping — Step Number"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Skull stripping",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4079,
+            "end": 4082,
+            "text": "FSL",
+            "labels": [
+              "Skull stripping — Software"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4005,
+            "end": 4072,
+            "text": "9",
+            "labels": [
+              "Segmentation — Step Number"
+            ]
+          },
+          "id": "m0040"
+        },
+        {
+          "from_name": "Segmentation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4079,
+            "end": 4082,
+            "text": "FSL",
+            "labels": [
+              "Segmentation — Software"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4170,
+            "end": 4202,
+            "text": "10",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Type",
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ],
+          "id": "m0042"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4109,
+            "end": 4161,
+            "text": "11",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Type",
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ],
+          "id": "m0043"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4284,
+            "end": 4302,
+            "text": "12",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4310,
+            "end": 4367,
+            "text": "4 mm2 full-width half max-\nimum isotropic Gaussian kernel",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "id": "m0045"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4412,
+            "end": 4421,
+            "text": "13",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4412,
+            "end": 4421,
+            "text": "band-pass",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4427,
+            "end": 4441,
+            "text": "0.01 to 0.1 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5071,
+            "end": 5079,
+            "text": "14",
+            "labels": [
+              "Scrubbing — Step Number"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5153,
+            "end": 5165,
+            "text": "3dDeconvolve",
+            "labels": [
+              "Scrubbing — Software"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Scrubbing",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5043,
+            "end": 5066,
+            "text": "SSD greater than 0.2 mm",
+            "labels": [
+              "Scrubbing — Parameters"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5713,
+            "end": 5730,
+            "text": "15",
+            "labels": [
+              "Exclusion — Step Number"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Exclusion",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5535,
+            "end": 5582,
+            "text": "two subgroups\nwith 16 subjects in each subgroup",
+            "labels": [
+              "Exclusion — Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5830,
+            "end": 6108,
+            "text": "The RSFC was computed from 187 different brain regions\ndeﬁned within the sensorimotor, cingulo-opercular task control,\nfronto-parietal task control, dors al/ventral attention, default\nmode network (DMN), salience network and subcortical/cerebellar network (Power et al ., 2011).",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6109,
+            "end": 6285,
+            "text": "In each of these brain\nregions, signals resulting from the processed functional data\nwere extracted and averaged over a spherical region of interest(ROI) with a radius of 4 mm.",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6109,
+            "end": 6285,
+            "text": "In each of these brain\nregions, signals resulting from the processed functional data\nwere extracted and averaged over a spherical region of interest(ROI) with a radius of 4 mm.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6286,
+            "end": 6364,
+            "text": "Pearson correlation coefﬁcient ( r\nij)\nwas calculated for the ith and jth ROI.",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          },
+          "id": "m0057"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6985,
+            "end": 7170,
+            "text": "If rij‡q, the corresponding element of the adja-\ncency matrix, Mij, is kept for the actual value of rijfor a\nweighted adjacency matrix or is set to be 1 for a binary ad-\njacency matrix.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0058"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9374,
+            "end": 9521,
+            "text": "Current ﬁndings are based on thresholds from 2% to 8%\nat 2% intervals; results obtained from thresholds of 10% to\n40% at 10% intervals can be found",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0059"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9677,
+            "end": 9854,
+            "text": "Graph metrics, including modularity, local and global efﬁ-\nciency, and strength, were estimated using the Brain Connec-\ntivity Toolbox (Rubinov and Sporns, 2010) with adaptation",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0060"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9677,
+            "end": 9854,
+            "text": "Graph metrics, including modularity, local and global efﬁ-\nciency, and strength, were estimated using the Brain Connec-\ntivity Toolbox (Rubinov and Sporns, 2010) with adaptation",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0061"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9677,
+            "end": 9854,
+            "text": "Graph metrics, including modularity, local and global efﬁ-\nciency, and strength, were estimated using the Brain Connec-\ntivity Toolbox (Rubinov and Sporns, 2010) with adaptation",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0062"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13977,
+            "end": 14159,
+            "text": "it might be visualized by plotting, for a given graphmetric, the mean value at each node in the younger group\nversus the difference between the older and younger groups\nat each node.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0063"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5830,
+            "end": 6108,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0064"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6109,
+            "end": 6285,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0065"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6109,
+            "end": 6285,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0066"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6286,
+            "end": 6364,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0067"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6985,
+            "end": 7170,
+            "text": "5",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0068"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9374,
+            "end": 9521,
+            "text": "6",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0069"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9677,
+            "end": 9854,
+            "text": "7",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0070"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 9677,
+            "end": 9854,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ],
+          "id": "m0071"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 13977,
+            "end": 14159,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0072"
+        }
+      ]
+    }
+  ]
+}

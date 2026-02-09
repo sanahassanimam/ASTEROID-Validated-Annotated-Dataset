@@ -1,0 +1,357 @@
+{
+  "data": {
+    "text": "Functional connectivity and graph theory analysis. We conducted a region of interest (ROI)-to-ROI functional connectivity (FC) analysis using the CONN toolbox. We specified 12 spherical clusters of the dorsal attention network (DAN) with 10-mm diameters and peak coordinates based on a previous fMRI study35 (Table 3). For each subject, preprocessed blood oxygenation level-dependent (BOLD) time series of all voxels in each ROI were averaged. The FC was computed using the Fisher-transformed bivariate correlation coefficients between two ROIs BOLD time series. All pairs of ROIs constructed a 12×12 FC matrix for each subject. We also conducted ROIs of the ventral attention network (VAN), salience network (SN), and frontoparietal network (FPN), which are associated with other aspects of attention. More details are provided in the Supplementary Methods.\n\nAmong the strategies for the FC analyses, graph theory is one that can be applied to estimate topological properties of global and local networks using the combination of nodes and edges36. We adopted the degree centrality (DC) for our analyses, as the DC is the most basic measure of graph theory analyses, and several studies have suggested that the DC in large-scale networks is associated with the performance of attention-related tasks23,37. To calculate DC, FCs within any pairs of ROIs were converted to bivariate undirected edges that were thresholded by the value of the correlation coefficients (CC) of FCs. The threshold range was 0.15≤CC≤0.60 (0.01 step). The upper limit of this threshold value was determined according to a previous study23. Then, the number of edges was calculated for each ROI of each individual, for each threshold value. The number of edges was plotted against thresholds, and the area under the curve was calculated and considered as a summarized scalar reflecting the DC of each ROI. The sum of DCs of each ROI (divided by two) was considered as the DC of the entire network."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 202,
+            "end": 232,
+            "text": "1",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 202,
+            "end": 232,
+            "text": "dorsal attention network (DAN)",
+            "labels": [
+              "Network definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 173,
+            "end": 194,
+            "text": "2",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 173,
+            "end": 194,
+            "text": "12 spherical clusters",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 238,
+            "end": 253,
+            "text": "10-mm diameters",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 429,
+            "end": 442,
+            "text": "3",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 429,
+            "end": 442,
+            "text": "were averaged",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 474,
+            "end": 527,
+            "text": "4",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 146,
+            "end": 158,
+            "text": "CONN toolbox",
+            "labels": [
+              "Compute connectivity — Software"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 474,
+            "end": 527,
+            "text": "Fisher-transformed bivariate correlation coefficients",
+            "labels": [
+              "Compute connectivity — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 595,
+            "end": 610,
+            "text": "12×12 FC matrix",
+            "labels": [
+              "Compute connectivity — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 474,
+            "end": 527,
+            "text": "5",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 474,
+            "end": 527,
+            "text": "Fisher-transformed bivariate correlation coefficients",
+            "labels": [
+              "Connectivity normalization — Algorithm"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1371,
+            "end": 1397,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Algorithm/Type"
+          ]
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1371,
+            "end": 1397,
+            "text": "bivariate undirected edges",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1502,
+            "end": 1526,
+            "text": "7",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1408,
+            "end": 1477,
+            "text": "thresholded by the value of the correlation coefficients (CC) of FCs.",
+            "labels": [
+              "Sparsity control — Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1502,
+            "end": 1526,
+            "text": "0.15≤CC≤0.60 (0.01 step)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1065,
+            "end": 1087,
+            "text": "8",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software",
+            "Parameters"
+          ]
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1065,
+            "end": 1087,
+            "text": "degree centrality (DC)",
+            "labels": [
+              "Graph measures — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1776,
+            "end": 1879,
+            "text": "9",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Software"
+          ]
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1776,
+            "end": 1879,
+            "text": "area under the curve was calculated and considered as a summarized scalar reflecting the DC of each ROI",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1776,
+            "end": 1879,
+            "text": "area under the curve was calculated and considered as a summarized scalar reflecting the DC of each ROI",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1881,
+            "end": 1972,
+            "text": "The sum of DCs of each ROI (divided by two) was considered as the DC of the entire network.",
+            "labels": [
+              "Result aggregation — Parameters"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

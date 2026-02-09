@@ -1,0 +1,1009 @@
+{
+  "data": {
+    "text": "ORIGINAL RESEARCH\npublished: 18 June 2020\n\ndoi: 10.3389/fpsyg.2020.01189\n\nDynamic Language Network in Early\nand Late Cantonese–Mandarin\nBilinguals\nXiaojin Liu, Liu Tu, Xiaoxi Chen, Miao Zhong, Meiqi Niu, Ling Zhao, Zhi Lu and\nRuiwang Huang\n\nSpecialty section:\nThis article was submitted to\nLanguage Sciences,\na section of the journal\nFrontiers in Psychology\n\nReceived: 20 December 2019\nAccepted: 07 May 2020\nPublished: 18 June 2020\n\nCitation:\nLiu X, Tu L, Chen X, Zhong M,\nNiu M, Zhao L, Lu Z and Huang R\n(2020) Dynamic Language Network\nin Early and Late\nCantonese–Mandarin Bilinguals.\nFront. Psychol. 11:1189.\ndoi: 10.3389/fpsyg.2020.01189\n\nThe brain representation of language in bilinguals is sculptured by several factors, such\nas age of acquisition (AoA) and proficiency level (PL) in second language. Although the\neffect of AoA-L2 on brain function and structure has been studied, little attention is\ndevoted to dynamic properties of the language network and their differences between\nearly and late bilinguals. In this study, we acquired resting-state fMRI data from early\nand late Cantonese (L1)–Mandarin (L2) bilinguals with high PLs of verbal fluency in\nboth languages. We then analyzed dynamic functional connectivity (dFC) by using the\nsliding-windows approach, estimated the dFC states by using the k-means clustering\nalgorithm, and calculated the dynamic topological properties of the language network for\nthe early and late bilinguals. We detected four dFC states, State 1, State 2, State 3, and\nState 4, which may be related to phonetic processing, semantic processing, language\ncontrol, and syntactic processing, respectively. Compared to the late bilinguals, the early\nbilinguals showed higher dFC between the inferior frontal area and the temporal area in\nState 1 and State 2, while higher dFC between the cerebellum and other regions in\nState 3. The early bilinguals showed a higher clustering coefficient and local and global\nefficiency in State 1 and State 3, but lower characteristic path length in State 1, than the\nlate bilinguals. Together, these results suggested that AoA-L2 affects temporal neural\nactivation and dynamic topological properties of the language network. These findings\nprovide new information to understand the effect of experience of L2 acquisition on\nlanguage network in bilinguals.\n\nThis study recruited early and late Cantonese–Mandarin bilinguals. Through questionnaires and\ninterviews, we selected the subjects from a pool containing 500 volunteers of Cantonese–Mandarin\nbilinguals based on their age of acquisition in second language (AoA-L2), the performance of\nlistening and oral proficiency level in L1 (PL-L1) and L2 (PL-L2), and the exposure period to L1 and L2.\nWe have selected 10 subjects in the EBG and 11 subjects in the LBG based on their AoA-L2 and other language\nmeasurements. All subjects were right-handed according to the Edinburgh Handedness Inventory (EHI) scores.\nNo subjects reported current or history of neurological or psychiatric disorders or brain injury. Written\nnotification of informed consent was collected from each subject before the study. The protocols were\napproved by the Review Board of South China Normal University.\n\nImage Acquisition\nAll MRI data were acquired on a 1.5-T Philips Achieva Nova Dual MR scanner at the Department of Radiology,\nHuangpu Clinical Medical Center, First Affiliated Hospital of Sun Yat-sen University, Guangzhou, China.\nThe functional images were obtained using a single-shot gradient-echo echo-planner imaging (GE-EPI) sequence\nwith the following parameters: repetition time (TR) = 3,000 ms, echo time (TE) = 40 ms, flip angle (FA) = 90◦,\nfield of view (FoV) = 240 mm × 240 mm, matrix size = 64 × 64, slice thickness = 4 mm without interslice gap, and\n180 volumes acquired in 9 min. We also obtained high-resolution T1-weighted brain structural images of detailed anatomy for\neach subject using a rapid interference phase gradient echo flip recovery pulse sequence (TR/TE = 9.6 ms/3.8 ms, FA = 8◦,\nFoV = 256 × 256 mm, data matrix = 288 × 288, slice thickness = 1 mm, voxel size = 1 mm3) and 176 sagittal slices\n(from left to right) covering the whole brain.\n\nDuring the rs-fMRI scanning, each subject was inquired to lie quietly in the scanner, close his or her eyes, remain wake, and\nnot think about anything.\n\nPreprocessing Data\nFunctional imaging data were preprocessed in SPM 12 and DPABI. The first 10 volumes were discarded to allow for the MRI\nsignal to approach steady state. We then preprocessed slice timing for the remaining 170 volumes to account for the acquisition\ntime delay among slices before realigning to the first volume for head-motion correction. Subsequently, the function images\nwere spatially normalized to the standard MNI-152 template and resampled to a voxel size of 3 mm × 3 mm × 3mm with a kernel\nof full-width at half-maximum (FWHM) of 8 mm. Last, the data were signal-linear-detrended and band-pass-filtered (0.01–0.08 Hz).\nIn the calculations, we finally regressed out the nuisance covariates including the head-motion effect derived from the Friston 24 correction\n(Friston 24-parameter model, white matter signal, and cerebrospinal fluid signal) within each voxel in the whole brain. Due to the controversy\nof regressing out the global signal in rs-fMRI analysis, we did not regress out the global signal in this study.\n\nDATA AVAILABILITY STATEMENT\nAll original and processed fMRI images data related to this publication will be available upon request with a legitimate reason.\n\nETHICS STATEMENT\nThe studies involving human participants were reviewed and approved by the Review Board of South China Normal University.\nThe patients/participants provided their written informed consent to participate in this study.\n\nConstructing the Language Network\nTwo regions-of-interest (ROIs), Broca’s and Wernicke’s areas,\nwere selected in the MNI space and were used to deﬁne\nthe language network with a standard seed-voxel approach.\nParticularly, we deﬁned two ROIs with 3-mm-radius spheres\nas seeds based on automated anatomical labeling (AAL) atlas\n(Tzourio-Mazoyer et al., 2002). A previous study (Tomasi and\nVolkow, 2012) used these two seeds and applied a seed-voxel\napproach to identify the language network. One ROI was close to\nthe left pars triangularis (MNI coordinate: x=\u000053,y= 20, z= 15)\nrepresenting the Broca’s area, and the other ROI was close to the\nleft supramarginal gyrus (MNI coordinate: x=\u000051,y=\u000051,\n1http://www.ﬁl.ion.ucl.ac.uk/spm\n2http://rfmri.org/dpabiz= 30) representing the Wernicke’s area. The averaged time series\nof these two ROIs during the whole scanning was extracted from\neach subject. For a given ROI, we considered it as a seed and then\nestimated the static functional connectivity (sFC) and Pearson’s\ncorrelation coeﬃcient r, between the selected ROI and each voxel\nin the whole brain. Hence, we obtained the sFC maps based on\nBroca’s and Wernicke’s areas. Next, the Fisher’s r-to-ztransform\nwas adopted to convert these sFC correlation maps into z-value\nmaps for the following statistical analysis.\nOne sample t-test was used to detect the group-level sFC\namong 21 subjects examined in this study. We deﬁned the clusters\nwith the following criteria: signiﬁcant threshold p<0.01 (family-\nwise error, FWE-corrected), and the number of voxels in each\ncluster exceeds 50 voxels based on a gray matter template of more\nthan 90% probability in SPM 12. In this way, we determined the\nclusters that strongly connected to the Broca’s and Wernicke’s\nareas. For a given cluster in the sFC map, we selected the voxels\nthat had statistical peak values from one sample t-test and drew\nspheres with radius = 3 mm. By considering these spheres as\nnodes and the sFC as the weighted edge, we built the language\nnetwork in this study.\nSliding-Windows Approach\nWe calculated the dynamic functional connectivity (dFC) of\nthe language network for each subject by using a sliding-\nwindows approach (Chang and Glover, 2010; Allen et al., 2012)\nin DynamicBC (Liao et al., 2014), a MATLAB toolbox for\ndynamic brain connectome analysis. We segmented the entire\ntime series of each node into multiple subseries related to\nthe sliding windows (the window length of 35 TRs or 105 s\nwith step = 1 TR), from each of which the FC networks were\nconstructed. The reason for selecting a window length of 35\nTRs is because the sliding-windows correlation analysis with\na short window length could induce artiﬁcial ﬂuctuations in\nestimating dFC (Lindquist et al., 2014; Hindriks et al., 2016;\nLiegeois et al., 2017). Hence, we selected the window length\nof about 100 s, which was suggested by previous studies (Liu\net al., 2018; Pang et al., 2018; Li et al., 2019; Chen et al., 2020).\nAccording to the above analysis, we obtained 136 subseries in\nthe sliding windows for each subject. In each sliding window,\nwe calculated the Pearson’s correlation coeﬃcient rbetween the\nsubseries of any two nodes to identify the dFC of the language\nnetwork in this study.\nIdentifying dFC States\nWe used a k-means clustering algorithm to cluster all sliding\nwindows into several separate clusters (i.e., connectivity states,\ndFC states) based on the Euclidean distance metric. Earlier\nstudies (Allen et al., 2012; Y ang et al., 2014) suggest that\nbrain spontaneous activity is changing over time. These changes\nin blood oxygenation level dependent (BOLD) signal showing\nseveral similar connectivity patterns in the brain are considered\nas dFC states. In the calculations, we extracted the dFC of the\nlanguage network in a given sliding window and then arranged\nall sliding windows in sequence to constitute the dynamic\nconnectivity matrix for each subject. Since there were Nnodes\nin each sliding window and 136 sliding windows in each subject,\nFrontiers in Psychology | www.frontiersin.org 4 June 2020 | Volume 11 | Article 1189\nfpsyg-11-01189 June 16, 2020 Time: 19:59 # 5\nLiu et al. Dynamic Language Network in Bilinguals\nthe dynamic connectivity matrix included 136 rows (136 sliding\nwindows) and 21 \u0002(N\u0002N–N)/2 columns (all dFC of 21\nsubjects in 1 sliding window). Finally, the k-means algorithm\n(kfrom 2 to 12) was applied to divide all sliding windows into\nseveral dFC states based on the dynamic connectivity matrix.\nCriteria for k-Means Solution\nThe silhouette score (Rousseeuw, 1987) was used to check the\nbetter solution of the k-means algorithm. It is applied to calculate\nthe separation distance between any two resulting clusters. The\nsilhouette score near 1 corresponds to the fact that the sample is\ndistant from its neighboring clusters, while the silhouette score\nnear 0 means the decision boundary is very close between these\ntwo neighboring clusters, and negative means that the sample\nmight have been assigned to the wrong cluster. We selected an\noptimal ksolution based on the silhouette score that in this\nsolution was signiﬁcantly higher than it was in the last ksolution.\ndFC of the Language Network\nAfter identifying several optimal dFC states, we studied the\ndiﬀerence in dFC between the EBG and the LBG. Particularly,\nwe ﬁrst extracted all dFCs in 136 sliding windows for each\nsubject. Then, we averaged those dFCs that are in the same\ndFC state for each subject. At last, the diﬀerence in dFC of the\nlanguage network between the EBG and the LBG can be studied\nin each dFC state.\nDynamic Topological Properties of the\nLanguage Network\nWe studied the diﬀerence in the dynamic topological properties\nof the language network between the EBG and the LBG. The\ndynamic topological properties were estimated using GRETNA3.\nWe calculated the dFC and generated 136 symmetric matrices for\neach subject. In this study, each dFC should satisfy a threshold\nof signiﬁcance level of p<0.05 (FWE-corrected) compared\nto others (Cruse et al., 2011). Based on the dFC in each\nsliding window, we estimated the dynamic topological properties,\nincluding the clustering coeﬃcient ( Cw), the characteristic\npath length ( Lw), the global eﬃciency ( Eglob), and the local\neﬃciency ( Eloc) by using the graph theory for all subjects. The\ndescription of these four parameters is listed in Supplementary\nTable S3 . Afterward, we determined the diﬀerence in the dynamic\ntopological properties of the language network between the\nEBG and the LBG in each dFC state. The deﬁnitions and\ndescriptions of the above parameters can be also found in\nRubinov and Sporns (2010)."
+  },
+  "annotations": [
+    {
+      "result": [
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 443,
+            "end": 504,
+            "text": "Liu X, Tu L, Chen X, Zhong M,\nNiu M, Zhao L, Lu Z and Huang R",
+            "labels": [
+              "Author"
+            ]
+          },
+          "id": "m0001"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 74,
+            "end": 146,
+            "text": "Dynamic Language Network in Early\nand Late Cantonese–Mandarin\nBilinguals",
+            "labels": [
+              "Title"
+            ]
+          },
+          "id": "m0002"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 505,
+            "end": 511,
+            "text": "(2020)",
+            "labels": [
+              "Year"
+            ]
+          },
+          "id": "m0003"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 334,
+            "end": 357,
+            "text": "Frontiers in Psychology",
+            "labels": [
+              "Publisher"
+            ]
+          },
+          "id": "m0004"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 43,
+            "end": 72,
+            "text": "doi: 10.3389/fpsyg.2020.01189",
+            "labels": [
+              "DOI"
+            ]
+          },
+          "id": "m0005"
+        },
+        {
+          "from_name": "Publication",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 1451,
+            "end": 1643,
+            "text": "We detected four dFC states, State 1, State 2, State 3, and\nState 4, which may be related to phonetic processing, semantic processing, language\ncontrol, and syntactic processing, respectively.",
+            "labels": [
+              "Summary"
+            ]
+          },
+          "id": "m0006"
+        },
+        {
+          "from_name": "Availability",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5399,
+            "end": 5527,
+            "text": "All original and processed fMRI images data related to this publication will be available upon request with a legitimate reason.",
+            "labels": [
+              "Data"
+            ]
+          },
+          "id": "m0007"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3256,
+            "end": 3298,
+            "text": "1.5-T Philips Achieva Nova Dual MR scanner",
+            "labels": [
+              "Brand"
+            ]
+          },
+          "id": "m0008"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3592,
+            "end": 3606,
+            "text": "TR) = 3,000 ms",
+            "labels": [
+              "TR (ms)"
+            ]
+          },
+          "id": "m0009"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3619,
+            "end": 3630,
+            "text": "TE) = 40 ms",
+            "labels": [
+              "TE (ms)"
+            ]
+          },
+          "id": "m0010"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3644,
+            "end": 3653,
+            "text": "FA) = 90◦",
+            "labels": [
+              "Flip angle"
+            ]
+          },
+          "id": "m0011"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3670,
+            "end": 3692,
+            "text": "FoV) = 240 mm × 240 mm",
+            "labels": [
+              "Field of View (cm)"
+            ]
+          },
+          "id": "m0012"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4782,
+            "end": 4828,
+            "text": "resampled to a voxel size of 3 mm × 3 mm × 3mm",
+            "labels": [
+              "Voxel Size (mm x mm x mm)"
+            ]
+          },
+          "id": "m0013"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3740,
+            "end": 3762,
+            "text": "without interslice gap",
+            "labels": [
+              "Inter-slice gap"
+            ]
+          },
+          "id": "m0014"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3768,
+            "end": 3797,
+            "text": "180 volumes acquired in 9 min",
+            "labels": [
+              "Duration (s)"
+            ]
+          },
+          "id": "m0015"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4261,
+            "end": 4282,
+            "text": "close his or her eyes",
+            "labels": [
+              "Eyes open/closed"
+            ]
+          },
+          "id": "m0016"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4186,
+            "end": 4193,
+            "text": "rs-fMRI",
+            "labels": [
+              "Resting or Task/If Task, what task?"
+            ]
+          },
+          "id": "m0017"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4347,
+            "end": 4409,
+            "text": "Functional imaging data were preprocessed in SPM 12 and DPABI.",
+            "labels": [
+              "Most-used software for preprocessing"
+            ]
+          },
+          "id": "m0018"
+        },
+        {
+          "from_name": "Functional_scan_Information",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2719,
+            "end": 2785,
+            "text": "We have selected 10 subjects in the EBG and 11 subjects in the LBG",
+            "labels": [
+              "Number of individuals for final analyses"
+            ]
+          },
+          "id": "m0019"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2719,
+            "end": 2785,
+            "text": "We have selected 10 subjects in the EBG and 11 subjects in the LBG",
+            "labels": [
+              "Number of subjects"
+            ]
+          },
+          "id": "m0020"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2841,
+            "end": 2871,
+            "text": "All subjects were right-handed",
+            "labels": [
+              "Handedness"
+            ]
+          },
+          "id": "m0021"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 2934,
+            "end": 3031,
+            "text": "No subjects reported current or history of neurological or psychiatric disorders or brain injury.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0022"
+        },
+        {
+          "from_name": "Human_subjects",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3032,
+            "end": 3122,
+            "text": "Written\nnotification of informed consent was collected from each subject before the study.",
+            "labels": [
+              "Inclusion criteria"
+            ]
+          },
+          "id": "m0023"
+        },
+        {
+          "from_name": "Ethics_approval",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 3142,
+            "end": 3204,
+            "text": "approved by the Review Board of South China Normal University.",
+            "labels": [
+              "IRB"
+            ]
+          },
+          "id": "m0024"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4410,
+            "end": 4445,
+            "text": "1",
+            "labels": [
+              "Removal Init Vol — Step Number"
+            ]
+          },
+          "id": "m0025"
+        },
+        {
+          "from_name": "Removal Init Vol",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4410,
+            "end": 4445,
+            "text": "The first 10 volumes were discarded",
+            "labels": [
+              "Removal Init Vol — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Removal Init Vol — Software",
+            "Removal Init Vol — Algorithm"
+          ],
+          "id": "m0026"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4508,
+            "end": 4533,
+            "text": "2",
+            "labels": [
+              "Slice timing correction — Step Number"
+            ]
+          },
+          "id": "m0027"
+        },
+        {
+          "from_name": "Slice timing correction",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4521,
+            "end": 4533,
+            "text": "slice timing",
+            "labels": [
+              "Slice timing correction — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Slice timing correction — Software",
+            "Slice timing correction — Parameters"
+          ],
+          "id": "m0028"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4626,
+            "end": 4656,
+            "text": "3",
+            "labels": [
+              "Alignment Head motion est — Step Number"
+            ]
+          },
+          "id": "m0029"
+        },
+        {
+          "from_name": "Alignment Head motion est",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4626,
+            "end": 4656,
+            "text": "realigning to the first volume",
+            "labels": [
+              "Alignment Head motion est — Algorithm"
+            ]
+          },
+          "Missing_sublabels": [
+            "Alignment Head motion est — Software",
+            "Alignment Head motion est — Parameters"
+          ],
+          "id": "m0030"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4719,
+            "end": 4777,
+            "text": "4",
+            "labels": [
+              "Spatial normalization (functional) — Step Number"
+            ]
+          },
+          "id": "m0031"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4752,
+            "end": 4777,
+            "text": "standard MNI-152 template",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "id": "m0032"
+        },
+        {
+          "from_name": "Spatial normalization (functional)",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4782,
+            "end": 4828,
+            "text": "resampled to a voxel size of 3 mm × 3 mm × 3mm",
+            "labels": [
+              "Spatial normalization (functional) — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial normalization (functional) — Software",
+            "Spatial normalization (functional) — Algorithm"
+          ],
+          "id": "m0033"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4846,
+            "end": 4887,
+            "text": "5",
+            "labels": [
+              "Spatial smooth — Step Number"
+            ]
+          },
+          "id": "m0034"
+        },
+        {
+          "from_name": "Spatial smooth",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4846,
+            "end": 4887,
+            "text": "full-width at half-maximum (FWHM) of 8 mm",
+            "labels": [
+              "Spatial smooth — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Spatial smooth — Software",
+            "Spatial smooth — Algorithm"
+          ],
+          "id": "m0035"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4909,
+            "end": 4932,
+            "text": "6",
+            "labels": [
+              "Temporal detrending — Step Number"
+            ]
+          },
+          "id": "m0036"
+        },
+        {
+          "from_name": "Temporal detrending",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4909,
+            "end": 4932,
+            "text": "signal-linear-detrended",
+            "labels": [
+              "Temporal detrending — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal detrending — Software",
+            "Temporal detrending — Parameters"
+          ],
+          "id": "m0037"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4937,
+            "end": 4970,
+            "text": "7",
+            "labels": [
+              "Temporal filt — Step Number"
+            ]
+          },
+          "id": "m0038"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4937,
+            "end": 4955,
+            "text": "band-pass-filtered",
+            "labels": [
+              "Temporal filt — Type"
+            ]
+          },
+          "id": "m0039"
+        },
+        {
+          "from_name": "Temporal filt",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 4957,
+            "end": 4969,
+            "text": "0.01–0.08 Hz",
+            "labels": [
+              "Temporal filt — Parameters"
+            ]
+          },
+          "Missing_sublabels": [
+            "Temporal filt — Software"
+          ],
+          "id": "m0040"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5092,
+            "end": 5113,
+            "text": "8",
+            "labels": [
+              "motion regression — Step Number"
+            ]
+          },
+          "id": "m0041"
+        },
+        {
+          "from_name": "motion regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5115,
+            "end": 5141,
+            "text": "Friston 24-parameter model",
+            "labels": [
+              "motion regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "motion regression — Software",
+            "motion regression — Parameters"
+          ],
+          "id": "m0042"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5143,
+            "end": 5194,
+            "text": "9",
+            "labels": [
+              "Other confound regression — Step Number"
+            ]
+          },
+          "id": "m0043"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5143,
+            "end": 5162,
+            "text": "white matter signal",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "id": "m0044"
+        },
+        {
+          "from_name": "Other confound regression",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 5168,
+            "end": 5194,
+            "text": "cerebrospinal fluid signal",
+            "labels": [
+              "Other confound regression — Type"
+            ]
+          },
+          "Missing_sublabels": [
+            "Other confound regression — Software",
+            "Other confound regression — Parameters"
+          ],
+          "id": "m0045"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6031,
+            "end": 6090,
+            "text": "as seeds based on automated anatomical labeling (AAL) atlas",
+            "labels": [
+              "Atlas definition — Parameters"
+            ]
+          },
+          "id": "m0046"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7561,
+            "end": 7676,
+            "text": "we selected the voxels\nthat had statistical peak values from one sample t-test and drew\nspheres with radius = 3 mm.",
+            "labels": [
+              "ROI definition — Parameters"
+            ]
+          },
+          "id": "m0047"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6558,
+            "end": 6659,
+            "text": "The averaged time series\nof these two ROIs during the whole scanning was extracted from\neach subject.",
+            "labels": [
+              "Time series ROI — Algorithm/Type"
+            ]
+          },
+          "id": "m0048"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8849,
+            "end": 8965,
+            "text": "we calculated the Pearson’s correlation coeﬃcient rbetween the\nsubseries of any two nodes to identify the dFC of the",
+            "labels": [
+              "Compute connectivity — Algorithm/Type"
+            ]
+          },
+          "id": "m0049"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6934,
+            "end": 6965,
+            "text": "Next, the Fisher’s r-to-ztransf",
+            "labels": [
+              "Connectivity normalization — Algorithm/Type"
+            ]
+          },
+          "id": "m0050"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7719,
+            "end": 7793,
+            "text": "the sFC as the weighted edge, we built the language\nnetwork in this study.",
+            "labels": [
+              "Network definition — Algorithm/Type"
+            ]
+          },
+          "id": "m0051"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7719,
+            "end": 7793,
+            "text": "the sFC as the weighted edge, we built the language\nnetwork in this study.",
+            "labels": [
+              "Graph characteristics — Parameters"
+            ]
+          },
+          "id": "m0052"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11660,
+            "end": 11742,
+            "text": "each dFC should satisfy a threshold\nof signiﬁcance level of p<0.05 (FWE-corrected)",
+            "labels": [
+              "Sparsity control — Parameters"
+            ]
+          },
+          "id": "m0053"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11874,
+            "end": 12058,
+            "text": "including the clustering coeﬃcient ( Cw), the characteristic\npath length ( Lw), the global eﬃciency ( Eglob), and the local\neﬃciency ( Eloc) by using the graph theory for all subjects.",
+            "labels": [
+              "Graph measures — Parameters"
+            ]
+          },
+          "id": "m0054"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11507,
+            "end": 11565,
+            "text": "dynamic topological properties were estimated using GRETNA",
+            "labels": [
+              "Graph measures — Software"
+            ]
+          },
+          "id": "m0055"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11138,
+            "end": 11215,
+            "text": "Then, we averaged those dFCs that are in the same\ndFC state for each subject.",
+            "labels": [
+              "Result aggregation — Algorithm/Type"
+            ]
+          },
+          "id": "m0056"
+        },
+        {
+          "from_name": "Atlas definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6031,
+            "end": 6090,
+            "text": "1",
+            "labels": [
+              "Atlas definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0057"
+        },
+        {
+          "from_name": "Time series ROI",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6558,
+            "end": 6659,
+            "text": "2",
+            "labels": [
+              "Time series ROI — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0058"
+        },
+        {
+          "from_name": "Connectivity normalization",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 6934,
+            "end": 6965,
+            "text": "3",
+            "labels": [
+              "Connectivity normalization — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0059"
+        },
+        {
+          "from_name": "ROI definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7561,
+            "end": 7676,
+            "text": "4",
+            "labels": [
+              "ROI definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0060"
+        },
+        {
+          "from_name": "Network definition",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7719,
+            "end": 7793,
+            "text": "5",
+            "labels": [
+              "Network definition — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0061"
+        },
+        {
+          "from_name": "Graph characteristics",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 7719,
+            "end": 7793,
+            "text": "6",
+            "labels": [
+              "Graph characteristics — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0062"
+        },
+        {
+          "from_name": "Compute connectivity",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 8849,
+            "end": 8965,
+            "text": "7",
+            "labels": [
+              "Compute connectivity — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0063"
+        },
+        {
+          "from_name": "Result aggregation",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11138,
+            "end": 11215,
+            "text": "8",
+            "labels": [
+              "Result aggregation — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Parameters",
+            "Software"
+          ],
+          "id": "m0064"
+        },
+        {
+          "from_name": "Sparsity control",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11660,
+            "end": 11742,
+            "text": "9",
+            "labels": [
+              "Sparsity control — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type",
+            "Software"
+          ],
+          "id": "m0065"
+        },
+        {
+          "from_name": "Graph measures",
+          "to_name": "text",
+          "type": "labels",
+          "value": {
+            "start": 11874,
+            "end": 12058,
+            "text": "10",
+            "labels": [
+              "Graph measures — Step Number"
+            ]
+          },
+          "Missing_sublabels": [
+            "Algorithm/Type"
+          ],
+          "id": "m0066"
+        }
+      ]
+    }
+  ]
+}
