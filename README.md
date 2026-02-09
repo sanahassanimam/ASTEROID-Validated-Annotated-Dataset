@@ -13,6 +13,7 @@ This repository contains:
 
 - A **fully annotated benchmark dataset** (170 documents)
 - Outputs from **multiple LLM prompting strategies**
+- **Documented prompt specifications** (baseline, GA-focused, and final refined prompts)
 - **Comparison, merging, and validation scripts**
 - A visual **workflow of the benchmarking pipeline**
 
