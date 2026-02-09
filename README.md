@@ -136,3 +136,15 @@ The dataset enables:
 - All data is **benchmarked against a curated reference**
 - Intended for **research and methodological evaluation**
 - Redistribution is **not permitted** without authorization
+
+---
+
+## License
+See the LICENSE file in this repository.
+
+---
+
+## Contact
+Sana Hassan Imam  
+GitHub: sanahassanimam
+Email:sana.hassan.imam@uni-oldenburg.de
