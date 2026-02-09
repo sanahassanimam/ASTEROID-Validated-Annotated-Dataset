@@ -11,15 +11,15 @@ The repository is intended for **internal use and controlled collaboration only*
 
 This repository contains:
 
-- A **fully annotated benchmark dataset** (170 documents)  
+- A **fully annotated benchmark dataset** (170 documents)
 - Outputs from **multiple LLM prompting strategies**
 - **Comparison, merging, and validation scripts**
 - A visual **workflow of the benchmarking pipeline**
 
 The dataset enables:
-- Systematic comparison of *initial*, *refined*, and *GA-based* prompts  
-- Quantitative mismatch analysis between LLM outputs and a reference database  
-- Reproducible benchmarking and error analysis  
+- Systematic comparison of *initial*, *refined*, and *GA-based* prompts
+- Quantitative mismatch analysis between LLM outputs and a reference database
+- Reproducible benchmarking and error analysis
 
 ---
 
@@ -37,6 +37,11 @@ The dataset enables:
 │   ├── JSON_Finalprompt_files/
 │   ├── JSON_GAprompt_files/
 │   └── JSON_Combined_files/
+│
+├── Prompts/
+│   ├── First Prompt.docx
+│   ├── GA Prompt.docx
+│   └── Final Prompt.docx
 │
 ├── Python_Scripts/
 │   ├── combine_summary.py
@@ -98,7 +103,35 @@ The dataset enables:
 
 ---
 
-## 4️⃣ Python Scripts
+## 4️⃣ Prompts
+
+**Path:**  
+`Prompts/`
+
+This folder contains the **exact prompt specifications** used to generate the LLM outputs included in this benchmarked dataset. Each prompt represents a distinct stage in the prompt development and evaluation pipeline.
+
+The prompts are provided as **`.docx` files** to preserve structure, formatting, and explanatory notes.
+
+### 📄 Prompt Files
+
+#### 4.1 `First Prompt.docx`
+- Initial **baseline prompt** used for large-scale information extraction  
+- Captures a broad range of metadata with minimal optimization  
+- Serves as the starting point for benchmarking LLM performance  
+
+#### 4.2 `GA Prompt.docx`
+- Specialized prompt focusing on **Graph Analysis (GA)**–related metadata  
+- Targets graph-theoretical decisions, parameters, and analytical steps  
+- Improves extraction accuracy for GA-specific fields  
+
+#### 4.3 `Final Prompt.docx`
+- Final refined and optimized prompt  
+- Integrates insights from baseline errors, GA prompt strengths, and mismatch reviews  
+- Produces the highest-quality and most consistent extraction outputs  
+
+---
+
+## 5️⃣ Python Scripts
 
 **Path:**  
 `Python_Scripts/`
@@ -135,7 +168,7 @@ The dataset enables:
 
 - All data is **benchmarked against a curated reference**
 - Intended for **research and methodological evaluation**
-- Redistribution is **not permitted** without authorization
+- Redistribution is **not permitted** without explicit authorization
 
 ---
 
@@ -146,5 +179,5 @@ See the LICENSE file in this repository.
 
 ## Contact
 Sana Hassan Imam  
-GitHub: sanahassanimam
-Email:sana.hassan.imam@uni-oldenburg.de
+GitHub: sanahassanimam  
+Email: sana.hassan.imam@uni-oldenburg.de
