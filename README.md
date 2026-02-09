@@ -27,14 +27,14 @@ The dataset enables:
 
 ```
 ├── Annotated_Files_Combined/
-│   └── all_annotations_combined.json
+│   └── all_annotations.json
 │
 ├── Images/
-│   └── benchmarking_workflow.png
+│   └── benchmarking_workflow.html
 │
 ├── JSON_Files/
-│   ├── JSON_firstprompt_files/
-│   ├── JSON_finalprompt_files/
+│   ├── JSON_Firstprompt_files/
+│   ├── JSON_Finalprompt_files/
 │   ├── JSON_GAprompt_files/
 │   └── JSON_Combined_files/
 │
@@ -52,7 +52,7 @@ The dataset enables:
 ## 1️⃣ Annotated Files (Combined)
 
 **Path:**  
-`Annotated_Files_Combined/all_annotations_combined.json`
+`Annotated_Files_Combined/all_annotations.json`
 
 **Description:**  
 - Contains **all 170 annotated JSON files merged into a single file**
@@ -69,7 +69,7 @@ The dataset enables:
 ## 2️⃣ Images (Benchmarking Workflow)
 
 **Path:**  
-`Images/benchmarking_workflow.png`
+`Images/benchmarking_workflow.html`
 
 **Description:**  
 - Visual overview of the **benchmarking and extraction pipeline**
@@ -84,10 +84,10 @@ The dataset enables:
 
 ### Subfolders
 
-- **JSON_firstprompt_files/**  
+- **JSON_Firstprompt_files/**  
   JSON files produced using the initial baseline prompt.
 
-- **JSON_finalprompt_files/**  
+- **JSON_Finalprompt_files/**  
   JSON files generated using the final refined prompt.
 
 - **JSON_GAprompt_files/**  
