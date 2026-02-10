@@ -1,0 +1,1746 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Benchmarking — Graph + Explorer + Generate Report</title>
+
+  <script src="https://unpkg.com/d3@7/dist/d3.min.js"></script>
+
+  <style>
+    :root{
+      --blue:#0b3d91;
+      --blue2:#0a4aa8;
+
+      /* ✅ CHANGED: dark-blue page + topbar */
+      --bg:#061a3a;          /* dark blue page background */
+      --topbar:#081f45;      /* dark blue top bar */
+
+      --panel:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:rgba(0,0,0,.12);
+      --shadow:0 10px 30px rgba(0,0,0,.10);
+
+      --link:#000000;
+      --node-stroke:rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      overflow:hidden;
+
+      /* ✅ CHANGED */
+      background:var(--bg);
+
+      position:relative;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(90deg,
+          rgba(255,255,255,.08) 0 48%,
+          rgba(255,255,255,0) 48% 100%),
+        radial-gradient(800px 600px at 18% 15%, rgba(255,255,255,.14), rgba(255,255,255,0) 55%),
+        radial-gradient(900px 700px at 22% 78%, rgba(255,255,255,.10), rgba(255,255,255,0) 58%),
+        repeating-linear-gradient(135deg,
+          rgba(255,255,255,.06) 0px,
+          rgba(255,255,255,.06) 2px,
+          rgba(255,255,255,0) 2px,
+          rgba(255,255,255,0) 18px);
+
+      /* ✅ CHANGED: overlay tuned for dark background */
+      mix-blend-mode:normal;
+      opacity:.18;
+    }
+
+    /* ---------- Tabs ---------- */
+    .topbar{
+      height:56px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 20px;
+
+      /* ✅ CHANGED */
+      border-bottom:1px solid rgba(255,255,255,.12);
+      background:var(--topbar);
+      color:#ffffff;
+
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+	.brand{font-weight:900;letter-spacing:.2px;margin-right:8px;font-size:26px; /* ✅ bigger */}
+	.tabs{display:flex; gap:8px; align-items:center;}
+    .tab{
+      padding:10px 20px;
+      border-radius:20px;
+      border:1px solid var(--border);
+
+      /* ✅ CHANGED: readable on dark topbar */
+      background:rgba(255,255,255,.92);
+      border-color:rgba(255,255,255,.18);
+
+      cursor:pointer;
+      font-size:20px;
+      font-weight:800;
+      user-select:none;
+      white-space:nowrap;
+      color:#111827;
+    }
+    .tab[data-tab="graphPage"]{ background:#e7f0ff; }      /* pastel blue */
+    .tab[data-tab="explorerPage"]{ background:#e9fbf2; }   /* pastel mint */
+    .tab[data-tab="reportPage"]{ background:#fff1f2; }     /* pastel pink */
+
+    .tab.active{
+      background:#ffffff;
+      border-color:rgba(37,99,235,.35);
+      box-shadow:0 0 0 3px rgba(37,99,235,.10);
+    }
+    .spacer{flex:1}
+    .tinyhint{font-size:20px;color:rgba(255,255,255,.75)}
+
+    .tab[data-tab="graphPage"]{
+      background:#e7f0ff;
+      border-color:#c7dbff;
+    }
+
+    /* active Schema Graph tab */
+    .tab[data-tab="graphPage"].active{
+      background:#ffffff; /* change to #e7f0ff if you want it to stay blue */
+    }
+
+    /* ---------- Pages ---------- */
+    .page{height:calc(100vh - 56px); display:none;}
+    .page.active{display:block;}
+
+    /* ---------- Shared cards ---------- */
+    .app{
+      display:grid;
+      grid-template-columns: 8fr 2fr;
+      gap:20px;
+      padding:20px;
+      height:100%;
+    }
+    .card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:14px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      min-height:0;
+      display:flex;
+      flex-direction:column;
+    }
+    .card-header{
+      padding:20px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      background:#fff;
+    }
+    .title{font-weight:900; font-size:22px; margin-right:auto;}
+    .hint{font-size:20px; color:var(--muted); flex:1 1 380px; min-width:240px;}
+    .toolbar{width:100%; display:flex; gap:8px; align-items:center; flex-wrap:wrap;}
+    .input{flex:1 1 260px; display:flex; gap:8px; align-items:center;}
+    input[type="text"], textarea{
+      width:100%;
+      padding:11px 20px;
+      border-radius:20px;
+      border:1px solid var(--border);
+      outline:none;
+      font-size:20px;
+      background:#fff;
+    }
+    textarea{min-height:86px; resize:vertical;}
+    input[type="text"]:focus, textarea:focus{
+      border-color:rgba(37,99,235,.45);
+      box-shadow:0 0 0 3px rgba(37,99,235,.10);
+    }
+    button{
+      padding:10px 20px;
+      border-radius:20px;
+      border:1px solid var(--border);
+      background:#fff;
+      cursor:pointer;
+      font-size:20px;
+      font-weight:800;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .chip{
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      font-size:20px;
+      color:var(--muted);
+      background:#fff;
+      white-space:nowrap;
+    }
+    .side{padding:20px; overflow:auto; background:#fff;}
+
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:20px;
+      line-height:1.35;
+      white-space:pre-wrap;
+      background:#f9fafb;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:10px;
+    }
+    .section{
+      margin-top:10px;
+      padding-top:10px;
+      border-top:1px dashed rgba(0,0,0,.12);
+    }
+
+    /* ---------- Graph styles ---------- */
+    #graphWrap{flex:1; min-height:0; display:flex; background:#fff;}
+    #graph{width:100%; height:100%; background:#fff;}
+
+    .link{
+      fill:none;
+      stroke:var(--link);
+      stroke-opacity:0.75;
+      stroke-width:7px;
+      stroke-linecap:round;
+    }
+
+    .node circle{
+      stroke:var(--node-stroke);
+      stroke-width:2px;
+      cursor:pointer;
+    }
+
+    .node text{
+      font-size:20px;
+      font-weight:900;
+      fill:#0b0b0b;
+      paint-order:stroke;
+      stroke:#ffffff;
+      stroke-width:7px;
+      stroke-linejoin:round;
+      pointer-events:none;
+    }
+
+    .node text.preprocGroupText{
+      font-size:26px;
+      stroke-width:9px;
+    }
+
+    .selected circle{ stroke:rgba(37,99,235,.95); stroke-width:6px; }
+    .faded{opacity:.10}
+
+    /* ---------- Explorer (Tab 2) ---------- */
+    .explorer{
+      display:grid;
+      grid-template-columns: 260px 1fr;
+      gap:20px;
+      padding:20px;
+      height:100%;
+    }
+    .panel{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:14px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      min-height:0;
+    }
+    .panel-header{
+      padding:20px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+      background:#fff;
+    }
+    .panel-body{padding:10px; overflow:auto; min-height:0; background:#fff;}
+    .drop{
+      border:2px dashed rgba(0,0,0,.18);
+      border-radius:14px;
+      padding:20px;
+      text-align:center;
+      color:var(--muted);
+      font-size:20px;
+      background:#fff;
+    }
+    .files{margin-top:10px; border-top:1px solid rgba(0,0,0,.06);}
+    .file{
+      padding:10px 10px;
+      border-bottom:1px solid rgba(0,0,0,.06);
+      cursor:pointer;
+      font-size:20px;
+      font-weight:800;
+      line-height:1.2;
+      background:#fff;
+    }
+    .file small{
+      display:block;
+      font-weight:700;
+      color:var(--muted);
+      margin-top:4px;
+    }
+    .file.active{background:rgba(37,99,235,.08);}
+
+    .doc{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:14px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      min-height:0;
+    }
+    .doc-header{
+      padding:20px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      background:#fff;
+    }
+    .doc-title{font-weight:900; font-size:20px; margin-right:auto;}
+    .legend{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+      font-size:20px;
+      color:var(--muted);
+    }
+    .swatch{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.10);
+      background:#fff;
+      font-weight:800;
+      color:#111;
+    }
+    .dot{width:10px;height:10px;border-radius:50%;border:1px solid rgba(0,0,0,.18);background:#eee;}
+
+    .doc-body{
+      padding:20px;
+      overflow:auto;
+      min-height:0;
+      flex:1;
+      line-height:1.45;
+      font-size:20px;
+      white-space:pre-wrap;
+      background:#fff;
+    }
+
+    #annoMeta{
+      border-top:1px solid rgba(0,0,0,.08);
+      padding:10px;
+      overflow:auto;
+      min-height:120px;
+      max-height:18vh;
+      background:#fff;
+    }
+
+    .hl{
+      border-radius:6px;
+      padding:1px 2px;
+      box-decoration-break:clone;
+      -webkit-box-decoration-break:clone;
+      border:1px solid rgba(0,0,0,.10);
+      cursor:pointer;
+    }
+    .hl:hover{ outline:3px solid rgba(0,0,0,.15); }
+    .annoList{margin-top:0px; font-size:20px; color:var(--muted);}
+    .annoItem{
+      padding:8px 10px;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:20px;
+      margin-top:8px;
+      background:#fff;
+      font-size:20px;
+    }
+    .annoItem b{color:#111}
+
+    /* ---------- Generate Report (Tab 3) ---------- */
+    .report{
+      display:grid;
+
+      /* ✅ CHANGED: right panel reduced a bit (left wider) */
+	  grid-template-columns: 1fr 2.2fr;   /* ✅ no overflow with gap */
+	  min-width:0;
+      gap:16px;
+      padding:20px 24px;
+      height:100%;
+    }
+    .reportTip{
+      font-size:14px;
+      color:var(--muted);
+    }
+	#reportPage .nav, #reportPage .content { min-width:0; }
+    /* smaller helper note only (you can tweak) */
+    .preprocNote{
+      font-size:16px;
+      line-height:1.35;
+    }
+
+    .nav{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:14px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      min-height:0;
+    }
+    .navHeader{
+      padding:20px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+      background:#fff;
+    }
+    .navBody{
+      padding:10px;
+      overflow:auto;
+      min-height:0;
+      background:#fff;
+    }
+    .navItem{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 10px;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:14px;
+      cursor:pointer;
+      user-select:none;
+      margin-bottom:10px;
+      font-weight:900;
+      font-size:20px;
+      /* background is set inline (pastel) */
+    }
+    .navItem.active{
+      outline:3px solid rgba(37,99,235,.12);
+      border-color:rgba(37,99,235,.25);
+    }
+    .pill{
+      width:14px;height:14px;border-radius:999px;border:1px solid rgba(0,0,0,.18);
+      flex:none;
+    }
+
+    .content{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:14px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      min-height:0;
+    }
+    .contentHeader{
+      padding:20px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:10px;
+      background:#fff;
+    }
+    .contentTitle{font-weight:900; font-size:20px; margin-right:auto;}
+    .contentBody{
+      padding:20px;
+      overflow:auto;
+      min-height:0;
+      background:#fff;
+    }
+
+    .acc{
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:14px;
+      overflow:hidden;
+      margin-bottom:20px;
+      background:#fff;
+    }
+    .accHead{
+      padding:10px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      cursor:pointer;
+      user-select:none;
+      font-weight:900;
+      background:#fff;
+    }
+    .preprocAcc > .accHead{
+      font-size:26px;
+    }
+    .accHead small{color:var(--muted); font-weight:800;}
+    .accBody{
+      padding:10px 20px 20px 20px;
+      border-top:1px solid rgba(0,0,0,.08);
+      display:none;
+      background:#fff;
+    }
+    .acc.open .accBody{display:block;}
+
+    .row{
+      display:grid;
+      grid-template-columns: 26px 1fr;
+      gap:10px;
+      align-items:flex-start;
+      padding:8px 0;
+      border-bottom:1px dashed rgba(0,0,0,.10);
+    }
+    .row:last-child{border-bottom:none;}
+    .row label{font-weight:900; font-size:20px;}
+    .subtext{font-size:14px; color:var(--muted); margin-top:4px;}
+
+    .stepCard{
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:14px;
+      padding:10px;
+      margin-top:10px;
+      background:#fff;
+    }
+    .stepTop{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .stepTop b{font-size:18px;}
+    .grid4{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(160px, 1fr));
+      gap:10px;
+      margin-top:10px;
+    }
+    .grid4 .field label{display:block; font-weight:900; font-size:14px; margin-bottom:6px; color:var(--muted);}
+    .grid4 .field input{
+      width:100%;
+      padding:10px 10px;
+      border-radius:20px;
+      border:1px solid var(--border);
+      font-size:14px;
+      outline:none;
+    }
+    .grid4 .field input:focus{
+      border-color:rgba(37,99,235,.45);
+      box-shadow:0 0 0 3px rgba(37,99,235,.10);
+    }
+
+    .greyTag{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.12);
+      background:#f3f4f6;
+      font-weight:900;
+      font-size:14px;
+      color:#111;
+    }
+
+    .footerActions{
+      border-top:1px solid rgba(0,0,0,.10);
+      padding:20px;
+      background:#fff;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="brand">Benchmarking</div>
+    <div class="tabs">
+      <div class="tab active" data-tab="graphPage">Schema Graph</div>
+      <div class="tab" data-tab="explorerPage">Annotations Explorer</div>
+      <div class="tab" data-tab="reportPage">Generate Report</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="tinyhint"></div>
+  </div>
+
+  <!-- =======================
+       TAB 1: GRAPH
+  ======================== -->
+  <div id="graphPage" class="page active">
+    <div class="app">
+
+      <div class="card">
+        <div class="card-header">
+          <div class="title">Schema — Floating Force Tree</div>
+          <div class="hint">Click = select · Double-click / Shift+Click = expand/collapse · Drag nodes · Wheel = zoom</div>
+
+          <div class="toolbar">
+            <div class="input">
+              <input id="search" type="text" placeholder="Search schema..." />
+            </div>
+            <button id="fit">Fit</button>
+            <button id="reset">Reset zoom</button>
+            <button id="collapseAll">Collapse all</button>
+            <button id="expandAll">Expand all</button>
+            <button id="collapsePreproc">Collapse preprocessing</button>
+            <button id="expandPreproc">Expand preprocessing</button>
+            <span id="count" class="chip">0 nodes</span>
+          </div>
+        </div>
+
+        <div id="graphWrap">
+          <svg id="graph"></svg>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="title">Details</div>
+          <div class="hint">Click a preprocessing step (or its sublabels) to see the definition.</div>
+        </div>
+        <div class="side">
+          <div id="details"><div class="hint">Click a node to see details here.</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =======================
+       TAB 2: EXPLORER
+  ======================== -->
+  <div id="explorerPage" class="page">
+    <div class="explorer">
+
+      <div class="panel">
+        <div class="panel-header">
+          <b style="font-size:20px;">Files</b>
+          <span class="chip" id="fileCount">0 loaded</span>
+          <label style="margin-left:auto;">
+            <input id="fileInput" type="file" accept=".json,application/json" multiple style="display:none;">
+            <button type="button" id="pickFiles">Load JSON</button>
+          </label>
+        </div>
+
+        <div class="panel-body">
+          <div id="drop" class="drop">
+            Drag & drop Label Studio JSON files here<br/>
+            <small>(or use “Load JSON”)</small>
+          </div>
+
+          <div class="files" id="fileList"></div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="doc-header">
+          <div class="doc-title" id="docTitle">No file selected</div>
+          <div class="legend" id="legend"></div>
+        </div>
+
+        <div class="doc-body" id="docBody">
+          Load JSON files and click one from the left to see highlighted annotations.
+        </div>
+
+        <div id="annoMeta">
+          <div class="annoList">No annotations yet.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =======================
+       TAB 3: GENERATE REPORT
+  ======================== -->
+  <div id="reportPage" class="page">
+    <div class="report">
+
+      <div class="nav">
+        <div class="navHeader">
+          <b style="font-size:20px;">Families</b>
+          <span class="chip" id="pickedCount">0 selected</span>
+        </div>
+        <div class="navBody" id="familyNav"></div>
+      </div>
+
+      <div class="content">
+        <div class="contentHeader">
+          <div class="contentTitle" id="reportTitle">Pick a family on the left</div>
+          <span class="greyTag" id="familyTag" style="display:none;">Family</span>
+          <div style="flex:1"></div>
+
+          <button id="rCollapsePreproc" style="display:none;">Collapse all preprocessing groups</button>
+          <button id="rExpandPreproc" style="display:none;">Expand all preprocessing groups</button>
+        </div>
+
+        <div class="contentBody" id="reportBody">
+          <div class="mono reportTip">
+            Tip: Click a family → open sub-sections → tick what’s present → fill step fields → download at the bottom.
+          </div>
+        </div>
+
+        <div class="footerActions">
+          <button id="downloadReport">Download report.txt</button>
+          <button id="resetReport">Reset selections</button>
+          <span class="chip" id="reportStatus">Ready</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+/* ==========================================================
+   TAB SWITCHING
+   CHANGE: when you go to Graph tab, it auto Reset Zoom + Fit
+========================================================== */
+document.querySelectorAll(".tab").forEach(t => {
+  t.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));
+    t.classList.add("active");
+    const id = t.dataset.tab;
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+
+    if (id === "graphPage") {
+      setTimeout(() => {
+        resize();
+        simulation?.alpha(0.2).restart();
+        // auto reset + fit whenever you return to the first page
+        resetZoom();
+        setTimeout(fitToView, 120);
+      }, 50);
+    }
+  });
+});
+
+/* ==========================================================
+   PREPROCESSING DEFINITIONS (YOUR DEFINITIONS)
+========================================================== */
+const PREPROC_DEFS = {
+  "INU correction": "Correct intensity non-uniformity in anatomical images. Example software: ANTs N4BiasFieldCorrection; SPM Segment. Example parameters: Convergence=1e−7; B-spline=200–300 mm.",
+  "Denoised": "Denoise anatomical T1/T2 images. Example software: ANTs DenoiseImage; SPM CAT12. Example parameters: Patch radius=1–3; Noise σ=10–25.",
+  "Gradient Distortion Correction": "Correct gradient nonlinearity. Example software: HCP gradunwarp; FreeSurfer gradunwarp. Example parameters: Vendor coeff set (Siemens/GE/Philips).",
+  "Fuse conform": "Fuse/conform multiple T1w volumes before processing. Example software: FreeSurfer mri_convert; FSL fslmerge. Example parameters: N vols=2–5; interp=linear/spline.",
+  "Skull stripping": "Remove non-brain tissue (structural). Example software: FSL BET; AFNI 3dSkullStrip; FreeSurfer mri_watershed. Example parameters: frac=0.3–0.5.",
+  "Skull extraction": "Create functional brain mask / remove non-brain (EPI). Example software: AFNI 3dAutomask; FSL BET. Example parameters: frac=0.2–0.3.",
+  "Spatial normalization": "Nonlinear registration of structural to template. Example software: ANTs SyN; FSL FNIRT; SPM Normalize. Example parameters: Template=MNI152/ICBM; voxel=1 mm.",
+  "BBR crossmodal registration": "Boundary-based registration across modalities (e.g., T1↔T2). Example software: FSL FLIRT+BBR; FreeSurfer bbregister. Example parameters: DOF=6–12; cost=BBR.",
+  "Surface reconstruction": "Reconstruct cortical surfaces. Example software: FreeSurfer recon-all. Example parameters: Iterations=10–20; smoothing steps per defaults.",
+  "Segmentation": "WM/GM/CSF tissue segmentation. Example software: FSL FAST; SPM Segment; FreeSurfer. Example parameters: Classes=3–5; bias reg per tool.",
+  "Exclusion": "Remove subjects/runs by QC criteria. Example software: fMRIPrep QC; custom scripts. Example parameters: FD>0.5 mm; DVARS>5%.",
+  "Concatenate Runs": "Merge runs time-wise. Example software: FSL fslmerge; AFNI 3dTcat. Example parameters: Runs=2–4; TR matched.",
+  "Removal Init Vol": "Drop initial volumes for steady state. Example software: FSL fslroi; AFNI 3dTcat. Example parameters: Removed=3–10 vols.",
+  "Alignment Head motion est": "Within-run motion correction. Example software: FSL MCFLIRT; SPM Realign; AFNI 3dvolreg. Example parameters: Rigid-body (6 DOF).",
+  "Despiking": "Suppress transient spikes. Example software: AFNI 3dDespike. Example parameters: Cutoff=2.5–3 SD.",
+  "Scrubbing": "Censor motion-contaminated volumes. Example software: fMRIPrep confounds; custom censor lists. Example parameters: FD threshold=0.5–0.9 mm.",
+  "Interpolate": "Interpolate censored volumes. Example software: AFNI 3dTproject; custom spline. Example parameters: Linear/cubic spline.",
+  "Slice timing correction": "Correct inter-slice acquisition offsets. Example software: SPM SliceTiming; FSL slicetimer; AFNI 3dTshift. Example parameters: Order=ascending/descending/interleaved.",
+  "Field map correction": "B0 field distortion correction. Example software: FSL FUGUE; SPM FieldMap. Example parameters: ΔTE=2.5–4 ms; EPI echo spacing.",
+  "Unwarp": "Susceptibility/motion distortion correction. Example software: FSL TOPUP/EDDY. Example parameters: Blip up/down (AP/PA).",
+  "Combined echos": "Combine multi-echo data. Example software: tedana. Example parameters: T2-weighted or ME-ICA combine.",
+  "Intensity normalization": "Scale intensities to target mean. Example software: AFNI 3dTstat; fMRIPrep pipeline. Example parameters: Target mean≈1000.",
+  "Grand mean scaling": "Normalize to global mean target. Example software: FSL FEAT. Example parameters: Grand mean=10,000.",
+  "Coregistration": "Align functional to structural. Example software: FSL FLIRT; SPM Coregister. Example parameters: Cost=mutual information; DOF=6.",
+  "Spatial normalization (functional)": "Warp functional to template space. Example software: ANTs applywarp; FSL FNIRT/FLIRT; SPM. Example parameters: Template=MNI; res=2–3 mm.",
+  "Spatial smooth": "Gaussian spatial smoothing. Example software: SPM Smooth; FSL SUSAN; AFNI 3dmerge. Example parameters: FWHM=4–8 mm.",
+  "Extract regressors": "Extract confound signals (e.g., WM/CSF/motion/CompCor). Example software: fMRIPrep; Nilearn. Example parameters: DVARS/FD/WM/CSF timeseries.",
+  "Surface": "Project volume BOLD to surface. Example software: FreeSurfer mri_vol2surf; Connectome Workbench. Example parameters: Projection fraction=0.5–1.0.",
+
+  "RETROICOR": "Cardiac/respiratory phase regressors. Example software: AFNI RetroTS; FSL PhysIO. Example parameters: Harmonics=2 cardiac + 2 resp.",
+  "RVHRCOR": "RETROICOR with HR/resp rate variation. Example software: AFNI implementations. Example parameters: Cutoff≈0.01 Hz companion.",
+  "ANATICOR": "Local WM nuisance regression. Example software: AFNI pipeline. Example parameters: WM radius≈20 mm.",
+  "PESTICA": "Physiology-informed temporal ICA. Example software: PESTICA. Example parameters: Components=5–10.",
+  "CompCor": "PCA of WM/CSF to model noise. Example software: fMRIPrep; aCompCor/tCompCor variants. Example parameters: Components=5–6.",
+  "tCompCor": "High-variance temporal CompCor (mask-free). Example software: fMRIPrep. Example parameters: Top variance voxels; n comps=5.",
+  "aCompCor": "Anatomical (WM/CSF mask) CompCor. Example software: fMRIPrep. Example parameters: n comps=5; mask erosion.",
+  "ME ICA": "Multi-echo ICA denoising. Example software: tedana. Example parameters: κ/ρ criteria≈3.",
+  "ArtRepair": "Repair outlier volumes. Example software: ArtRepair (SPM add-on). Example parameters: Motion≈0.5 mm.",
+  "Temporal detrending": "Remove low-order trends. Example software: AFNI 3dDetrend. Example parameters: Polynomial order=1–2.",
+  "Global signal": "Regress global mean signal. Example software: Custom design. Example parameters: Single global regressor.",
+  "ICA FIX": "ICA-based artifact classifier. Example software: FSL FIX. Example parameters: Pretrained HCP/custom.",
+  "ICA AROMA": "ICA motion artifact removal. Example software: FSL ICA-AROMA. Example parameters: No retraining needed.",
+  "Temporal filt": "Band/low/high-pass filtering. Example software: AFNI 3dBandpass; FSL fslmaths. Example parameters: 0.01–0.08 Hz bandpass typical.",
+  "motion regression": "Regress motion parameters. Example software: Custom; fMRIPrep outputs. Example parameters: 6/12/24 params + derivatives.",
+  "Other confound regression": "Regress custom confounds. Example software: Custom matrix. Example parameters: WM/CSF/FD/DVARS etc.",
+  "PhysIO": "Physiological model regressors. Example software: TAPAS PhysIO. Example parameters: RETROICOR+RVT; cardiac bins≈20.",
+  "Regressors filter": "Filter confound regressors to match BOLD filter. Example software: Custom. Example parameters: Same cutoff as BOLD.",
+  "Modular filter motion": "Hybrid filtering + motion regression. Example software: Custom. Example parameters: Pipeline-specific.",
+  "wavelet decomposition": "Wavelet-domain denoising. Example software: WaveletDespike; Nilearn. Example parameters: Levels=4–5.",
+
+  "Atlas definition": "Assign voxels/vertices to ROIs using a predefined atlas/parcellation (atlas, template, parcellation, network template). Examples: Shen 268; AAL90; Power 264; Schaefer 100; Desikan–Killiany 114.",
+  "ROI definition": "Define or count ROIs (seed spheres, masks, parcellations). Can be literature-based or theory-based. Examples: 5 mm spheres in PCC/mPFC; 377 ROIs; subset of Schaefer400 DMN; peak-voxel ROIs.",
+  "Time series ROI": "Extract per-ROI (or voxelwise) time series (mean BOLD / average time series). Example software: CONN, FSLNets, AFNI 3dmaskave.",
+  "Combine block": "Combine or concatenate runs/blocks/sessions before connectivity estimation (concatenate, merged, block-wise average). Example software: MATLAB scripts, AFNI 3dTcat, FSL fslmerge.",
+  "Compute connectivity": "Compute FC between ROIs/voxels (correlation, partial correlation, coherence, covariance). Examples: Pearson correlation, partial correlation.",
+  "Connectivity normalization": "Normalize FC values (Fisher r-to-z). Example software: BCT/MATLAB/CONN.",
+  "Network definition": "Define networks/modules (community detection, modularity optimization, Louvain/Infomap) or predefined templates (Yeo7/Yeo17/Power).",
+  "Graph characteristics": "Graph type/properties (weighted/binarized, directed/undirected, thresholding).",
+  "Negative correlation": "Policy for handling negative FC values (keep, set to zero, remove, absolute value).",
+  "Sparsity control": "Threshold/density control method (proportional thresholding or fixed cutoff). Example: density=0.09; 5%–25% interval step 0.05.",
+  "Graph measures": "Compute graph-theoretical metrics (degree/strength, clustering, efficiency, modularity, betweenness, small-worldness, etc.).",
+  "Result aggregation": "Aggregate results across thresholds/runs/groups (mean across thresholds, group-level inference; e.g., 0.09–0.6)."
+};
+
+/* ==========================================================
+   SCHEMA TREE (Graph tab)
+========================================================== */
+function buildStepsWith4(stepNames, algoOrType){
+  return stepNames.map(step => ({
+    name: step,
+    type: "step",
+    def: PREPROC_DEFS[step] || "",
+    children: [
+      { name: "Step Number", type: "sublabel" },
+      { name: "Software", type: "sublabel" },
+      { name: algoOrType, type: "sublabel" },
+      { name: "Parameters", type: "sublabel" },
+    ]
+  }));
+}
+
+const STRUCT_FUNC_STEPS = [
+  "INU correction","Denoised","Gradient Distortion Correction","Fuse conform",
+  "Skull stripping","Skull extraction","Spatial normalization","BBR crossmodal registration",
+  "Surface reconstruction","Segmentation","Exclusion","Concatenate Runs","Removal Init Vol",
+  "Alignment Head motion est","Despiking","Scrubbing","Interpolate","Slice timing correction",
+  "Field map correction","Unwarp","Combined echos","Intensity normalization","Grand mean scaling",
+  "Coregistration","Spatial normalization (functional)","Spatial smooth","Extract regressors","Surface",
+];
+
+const NOISE_FILTER_STEPS = [
+  "RETROICOR","RVHRCOR","ANATICOR","PESTICA","CompCor","tCompCor","aCompCor","ME ICA","ArtRepair",
+  "Temporal detrending","Global signal","ICA FIX","ICA AROMA","Temporal filt","motion regression",
+  "Other confound regression","PhysIO","Regressors filter","Modular filter motion","wavelet decomposition",
+];
+
+const FC_GRAPH_STEPS = [
+  "Atlas definition","ROI definition","Time series ROI","Combine block","Compute connectivity",
+  "Connectivity normalization","Network definition","Graph characteristics","Negative correlation",
+  "Sparsity control","Graph measures","Result aggregation",
+];
+
+const SCHEMA_TREE = {
+  name: "Benchmarking Schema",
+  type: "root",
+  children: [
+    { name: "Publication", type: "family", children: [
+      { name: "Author", type: "label" },
+      { name: "Title", type: "label" },
+      { name: "Year", type: "label" },
+      { name: "Publisher", type: "label" },
+      { name: "DOI", type: "label" },
+      { name: "Summary", type: "label" },
+    ]},
+    { name: "Availability", type: "family", children: [
+      { name: "Full-text", type: "label" },
+      { name: "Data", type: "label" },
+      { name: "Code", type: "label" },
+      { name: "Preregistered", type: "label" },
+      { name: "Remarks", type: "label" },
+    ]},
+    { name: "Functional_scan_Information", type: "family", children: [
+      { name: "Multicenter study? (Y/N)", type: "label" },
+      { name: "Brand", type: "label" },
+      { name: "Number of slices", type: "label" },
+      { name: "Slice thickness", type: "label" },
+      { name: "Flip angle", type: "label" },
+      { name: "Inter-slice gap", type: "label" },
+      { name: "Duration (s)", type: "label" },
+      { name: "Eyes open/closed", type: "label" },
+      { name: "Field of View (cm)", type: "label" },
+      { name: "TR (ms)", type: "label" },
+      { name: "TE (ms)", type: "label" },
+      { name: "Voxel Size (mm x mm x mm)", type: "label" },
+      { name: "Number of individuals for final analyses", type: "label" },
+      { name: "Most-used software for preprocessing", type: "label" },
+      { name: "Resting or Task/If Task, what task?", type: "label" },
+    ]},
+    { name: "Design_specification", type: "family", children: [
+      { name: "Number of blocks/trials", type: "label" },
+      { name: "Length of each trial", type: "label" },
+      { name: "ISI distribution", type: "label" },
+      { name: "Length of blocks", type: "label" },
+      { name: "Efficiency optimization", type: "label" },
+      { name: "Block/event correlation", type: "label" },
+    ]},
+    { name: "Task_specification", type: "family", children: [
+      { name: "Instructions", type: "label" },
+      { name: "Stimuli", type: "label" },
+      { name: "Stimuli repetition", type: "label" },
+    ]},
+    { name: "Planned_comparisons", type: "family", children: [
+      { name: "Comparisons", type: "label" },
+      { name: "Omnibus ANOVA", type: "label" },
+    ]},
+    { name: "Human_subjects", type: "family", children: [
+      { name: "Number of subjects", type: "label" },
+      { name: "Age", type: "label" },
+      { name: "Handedness", type: "label" },
+      { name: "Male/Female", type: "label" },
+      { name: "Inclusion criteria", type: "label" },
+      { name: "Rejected subjects", type: "label" },
+      { name: "Group matching", type: "label" },
+    ]},
+    { name: "Ethics_approval", type: "family", children: [
+      { name: "IRB", type: "label" },
+    ]},
+    { name: "Behavioral_performance", type: "family", children: [
+      { name: "Performance measure", type: "label" },
+    ]},
+    { name: "Preprocessing", type: "family", children: [
+      { name: "Structural / Functional (Algorithm)", type: "group", isPreprocGroup: true,
+        children: buildStepsWith4(STRUCT_FUNC_STEPS, "Algorithm")
+      },
+      { name: "Noise removal / Filtering (Type)", type: "group", isPreprocGroup: true,
+        children: buildStepsWith4(NOISE_FILTER_STEPS, "Type")
+      },
+      { name: "FC / Graph analysis (Algorithm)", type: "group", isPreprocGroup: true,
+        children: buildStepsWith4(FC_GRAPH_STEPS, "Algorithm")
+      },
+    ]},
+  ]
+};
+
+/* ==========================================================
+   COLORS
+========================================================== */
+const FAMILY_COLORS = {
+  "Publication": "#00796B",
+  "Availability": "#455A64",
+  "Functional_scan_Information": "#5C6BC0",
+  "Design_specification": "#8E24AA",
+  "Task_specification": "#6D4C41",
+  "Planned_comparisons": "#3949AB",
+  "Human_subjects": "#00897B",
+  "Ethics_approval": "#7B1FA2",
+  "Behavioral_performance": "#558B2F",
+  "Preprocessing": "#C81E1E"
+};
+
+function topFamilyName(node){
+  let cur = node;
+  while (cur.parent && cur.parent.data && cur.parent.data.type !== "root") cur = cur.parent;
+  return cur.data?.name;
+}
+
+function nodeFill(d){
+  const t = d.data.type;
+  if (t === "family") return FAMILY_COLORS[d.data.name] || "#E5E7EB";
+  if (t === "group") return "#DCEBFF";
+  if (t === "step") return "#FFE6A3";
+  if (t === "sublabel") return "#E5E7EB";
+  if (t === "label") return FAMILY_COLORS[topFamilyName(d)] || "#E5E7EB";
+  if (t === "root") return "#FFFFFF";
+  return "#FFFFFF";
+}
+
+/* ==========================================================
+   D3 FORCE GRAPH
+========================================================== */
+const svg = d3.select("#graph");
+const gRoot = svg.append("g");
+let width = 800, height = 800;
+let root = null;
+let nodes = [], links = [];
+let nodeSel = null, linkSel = null;
+let selectedPid = null;
+
+const zoom = d3.zoom()
+  .scaleExtent([0.2, 6])
+  .on("zoom", (event) => gRoot.attr("transform", event.transform));
+svg.call(zoom);
+
+function resize(){
+  const wrap = document.getElementById("graphWrap");
+  width = wrap.clientWidth;
+  height = wrap.clientHeight;
+  svg.attr("viewBox", `0 0 ${width} ${height}`);
+  if (simulation) {
+    simulation.force("center", d3.forceCenter(width/2, height/2));
+    simulation.alpha(0.4).restart();
+  }
+}
+window.addEventListener("resize", resize);
+
+function collapse(h){
+  if (h.children) { h._children = h.children; h._children.forEach(collapse); h.children = null; }
+}
+function expand(h){
+  if (h._children) { h.children = h._children; h._children = null; }
+  if (h.children) h.children.forEach(expand);
+}
+function toggle(h){
+  if (h.children) { h._children = h.children; h.children = null; }
+  else if (h._children) { h.children = h._children; h._children = null; }
+  rebuildAndRestart();
+}
+
+function nodeRadius(d){
+  if (d.data.type === "root") return 16;
+  if (d.data.type === "family") return 14;
+  if (d.data.type === "group") return 13;
+  if (d.data.type === "step") return 11;
+  if (d.data.type === "label") return 10;
+  if (d.data.type === "sublabel") return 9;
+  return 10;
+}
+
+function pathId(h){
+  return h.ancestors().reverse().map(x => x.data.name).join(" / ");
+}
+
+let simulation = null;
+
+function rebuildData(){
+  nodes = root.descendants();
+  links = root.links();
+  nodes.forEach(n => {
+    n.pid = pathId(n);
+    if (n.x == null) n.x = width/2 + (Math.random()-0.5)*12;
+    if (n.y == null) n.y = height/2 + (Math.random()-0.5)*12;
+  });
+}
+
+function renderGraph(){
+  rebuildData();
+
+  linkSel = gRoot.selectAll(".link").data(links, d => d.target.pid);
+  linkSel.exit().remove();
+  linkSel = linkSel.enter().append("path").attr("class","link").merge(linkSel);
+
+  nodeSel = gRoot.selectAll(".node").data(nodes, d => d.pid);
+  nodeSel.exit().remove();
+
+  const nodeEnter = nodeSel.enter().append("g").attr("class","node")
+    .call(d3.drag().on("start",dragstarted).on("drag",dragged).on("end",dragended))
+    .on("click",(event,d)=>{ if(event.shiftKey) toggle(d); else selectNode(d); event.stopPropagation(); })
+    .on("dblclick",(event,d)=>{ toggle(d); event.stopPropagation(); });
+
+  nodeEnter.append("circle")
+    .attr("r",d=>nodeRadius(d))
+    .attr("fill",d=>nodeFill(d));
+
+  nodeEnter.append("text")
+    .attr("text-anchor","middle")
+    .attr("x",0)
+    .attr("y",d=>-(nodeRadius(d)+4))
+    .classed("preprocGroupText", d => d.data.type === "group" && d.data.isPreprocGroup)
+    .text(d=>d.data.name);
+
+  nodeSel = nodeEnter.merge(nodeSel);
+
+  nodeSel.classed("selected", d => d.pid === selectedPid);
+  nodeSel.select("circle").attr("r",d=>nodeRadius(d)).attr("fill",d=>nodeFill(d));
+  nodeSel.select("text")
+    .attr("y",d=>-(nodeRadius(d)+4))
+    .classed("preprocGroupText", d => d.data.type === "group" && d.data.isPreprocGroup);
+
+  document.getElementById("count").textContent = `${nodes.length} nodes`;
+  applySearchFilter(document.getElementById("search").value.trim());
+}
+
+function ticked(){
+  linkSel.attr("d", d => {
+    const sx=d.source.x, sy=d.source.y, tx=d.target.x, ty=d.target.y;
+    const mx=(sx+tx)/2, my=(sy+ty)/2;
+    const dx=tx-sx, dy=ty-sy;
+    const len=Math.sqrt(dx*dx+dy*dy)||1;
+    const amp=Math.min(80, len/4);
+    const ox=(-dy/len)*amp, oy=(dx/len)*amp;
+    const cx=mx+ox, cy=my+oy;
+    return `M${sx},${sy} Q${cx},${cy} ${tx},${ty}`;
+  });
+  nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
+}
+
+function rebuildAndRestart(){
+  rebuildData();
+  renderGraph();
+  simulation.nodes(nodes);
+  simulation.force("link").links(links);
+  simulation.alpha(0.9).restart();
+}
+
+function initSimulation(){
+  simulation = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d=>d.pid).distance(d=>{
+      const t=d.target.data.type;
+      if(t==="family") return 220;
+      if(t==="group") return 180;
+      if(t==="step") return 130;
+      if(t==="label") return 120;
+      return 95;
+    }).strength(1.0))
+    .force("charge", d3.forceManyBody().strength(d=>{
+      const t=d.data.type;
+      if(t==="root") return -2300;
+      if(t==="family") return -1700;
+      if(t==="group") return -1200;
+      return -650;
+    }))
+    .force("collide", d3.forceCollide().radius(d => nodeRadius(d)+24).iterations(2))
+    .force("center", d3.forceCenter(width/2,height/2))
+    .on("tick", ticked);
+}
+
+function dragstarted(event,d){ if(!event.active) simulation.alphaTarget(0.25).restart(); d.fx=d.x; d.fy=d.y; }
+function dragged(event,d){ d.fx=event.x; d.fy=event.y; }
+function dragended(event,d){ if(!event.active) simulation.alphaTarget(0); d.fx=null; d.fy=null; }
+
+function escapeHtml(s){
+  return String(s ?? "")
+    .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;").replaceAll("'","&#039;");
+}
+
+function findParentStepWithDef(d){
+  let cur = d;
+  while (cur) {
+    if (cur.data?.type === "step" && PREPROC_DEFS[cur.data.name]) return cur;
+    cur = cur.parent;
+  }
+  return null;
+}
+
+function selectNode(d){
+  selectedPid = d.pid;
+  nodeSel.classed("selected", n => n.pid === selectedPid);
+
+  const fam = topFamilyName(d);
+  const path = d.ancestors().reverse().map(n=>n.data.name).join(" → ");
+  const childrenCount = (d.children?.length || d._children?.length || 0);
+
+  const parentStep = (d.data.type === "sublabel") ? findParentStepWithDef(d) : null;
+  const defKey =
+    (d.data.type === "step" && PREPROC_DEFS[d.data.name]) ? d.data.name :
+    (parentStep ? parentStep.data.name : null);
+
+  const defBlock = defKey
+    ? `<div class="section"><div style="font-weight:900;margin-bottom:6px;">Definition</div><div class="mono">${escapeHtml(PREPROC_DEFS[defKey])}</div></div>`
+    : "";
+
+  const inheritNote = (d.data.type === "sublabel" && defKey)
+    ? `<div class="section"><div class="mono">Note: This sublabel inherits the definition from <b>${escapeHtml(defKey)}</b>.</div></div>`
+    : "";
+
+  document.getElementById("details").innerHTML = `
+    <div class="mono"><b>Name:</b> ${escapeHtml(d.data.name)}
+<b>Type:</b> ${escapeHtml(d.data.type||"")}
+<b>Family:</b> ${escapeHtml(fam||"")}
+<b>Path:</b> ${escapeHtml(path)}
+<b>Children:</b> ${childrenCount}</div>
+    ${defBlock}
+    ${inheritNote}
+    <div class="section">
+      <div class="mono">Tip: Double-click (or Shift+Click) to expand/collapse a node.</div>
+    </div>
+  `;
+}
+
+function applySearchFilter(q){
+  if (!nodeSel || !linkSel) return;
+  if(!q){ nodeSel.classed("faded",false); linkSel.classed("faded",false); return; }
+  const query=q.toLowerCase();
+  const match=new Set();
+  root.each(d=>{
+    if(String(d.data.name).toLowerCase().includes(query)){
+      d.ancestors().forEach(a=>match.add(pathId(a)));
+      d.descendants().forEach(ch=>match.add(pathId(ch)));
+    }
+  });
+  nodeSel.classed("faded", d=>!match.has(d.pid));
+  linkSel.classed("faded", d=>!(match.has(d.source.pid)&&match.has(d.target.pid)));
+}
+document.getElementById("search").addEventListener("input", e => applySearchFilter(e.target.value.trim()));
+
+function resetZoom(){ svg.transition().duration(300).call(zoom.transform, d3.zoomIdentity); }
+
+function fitToView(){
+  if(!nodes.length) return;
+  let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity;
+  for(const n of nodes){ minX=Math.min(minX,n.x); maxX=Math.max(maxX,n.x); minY=Math.min(minY,n.y); maxY=Math.max(maxY,n.y); }
+  const pad=140;
+  const w=(maxX-minX)+pad*2, h=(maxY-minY)+pad*2;
+  const scale=Math.min(width/w, height/h, 1); // never zoom-in on load
+  const tx=width/2 - scale*(minX+maxX)/2;
+  const ty=height/2 - scale*(minY+maxY)/2;
+  svg.transition().duration(420).call(zoom.transform, d3.zoomIdentity.translate(tx,ty).scale(scale));
+}
+
+document.getElementById("reset").addEventListener("click", resetZoom);
+document.getElementById("fit").addEventListener("click", ()=>{ simulation.alpha(0.3).restart(); setTimeout(fitToView,250); });
+document.getElementById("collapseAll").addEventListener("click", ()=>{ collapse(root); rebuildAndRestart(); setTimeout(fitToView,250); });
+document.getElementById("expandAll").addEventListener("click", ()=>{ expand(root); rebuildAndRestart(); setTimeout(fitToView,250); });
+
+function findPreprocessingNode(){
+  return root.descendants().find(d => d.data?.name === "Preprocessing" && d.data?.type === "family") || null;
+}
+function collapsePreprocessing(){
+  const p = findPreprocessingNode();
+  if (!p) return;
+  if (p.children) p.children.forEach(ch => collapse(ch));
+  rebuildAndRestart();
+  setTimeout(fitToView, 200);
+}
+function expandPreprocessing(){
+  const p = findPreprocessingNode();
+  if (!p) return;
+  if (p._children){ p.children = p._children; p._children = null; }
+  if (p.children){
+    p.children.forEach(g => {
+      if (g._children){ g.children = g._children; g._children = null; }
+      if (g.children) g.children.forEach(s => collapse(s));
+    });
+  }
+  rebuildAndRestart();
+  setTimeout(fitToView, 200);
+}
+document.getElementById("collapsePreproc").addEventListener("click", collapsePreprocessing);
+document.getElementById("expandPreproc").addEventListener("click", expandPreprocessing);
+
+/* CHANGE: start page opens already reset + fit */
+function startGraph(){
+  resize();
+  root = d3.hierarchy(SCHEMA_TREE);
+  collapse(root);
+
+  rebuildData();
+  renderGraph();
+  initSimulation();
+  selectNode(root);
+
+  simulation.alpha(1.0).restart();
+
+  // hard reset zoom + fit on load (a couple of ticks later = more stable)
+  resetZoom();
+  setTimeout(fitToView, 220);
+  setTimeout(() => { resetZoom(); fitToView(); }, 520);
+}
+startGraph();
+
+/* ==========================================================
+   TAB 2: ANNOTATION EXPLORER
+========================================================== */
+const state = { files: [], activeIndex: -1 };
+
+const fileInput = document.getElementById("fileInput");
+const pickFiles = document.getElementById("pickFiles");
+const drop = document.getElementById("drop");
+const fileList = document.getElementById("fileList");
+const fileCount = document.getElementById("fileCount");
+const docTitle = document.getElementById("docTitle");
+const docBody = document.getElementById("docBody");
+const legend = document.getElementById("legend");
+const annoMeta = document.getElementById("annoMeta");
+
+function colorForLabel(label){
+  let h=0;
+  for (let i=0;i<label.length;i++) h = (h*31 + label.charCodeAt(i)) >>> 0;
+  const hue = h % 360;
+  return `hsl(${hue} 70% 85%)`;
+}
+
+function extractTextAndSpans(js){
+  const text = js?.data?.text ?? js?.data?.Text ?? js?.data?.content ?? js?.text ?? "";
+  const results = js?.annotations?.[0]?.result ?? js?.completions?.[0]?.result ?? js?.result ?? [];
+  const spans = [];
+
+  for (const r of results){
+    const v = r?.value || {};
+    const label =
+      (Array.isArray(v.labels) && v.labels[0]) ||
+      (Array.isArray(v.hypertextlabels) && v.hypertextlabels[0]) ||
+      r?.from_name ||
+      "Label";
+
+    const hasStartEnd = Number.isFinite(v.start) && Number.isFinite(v.end);
+    const hasOffsets = Array.isArray(v.offsets) && v.offsets[0] && Number.isFinite(v.offsets[0].start) && Number.isFinite(v.offsets[0].end);
+
+    let start=null, end=null;
+    if (hasStartEnd){ start = v.start; end = v.end; }
+    else if (hasOffsets){ start = v.offsets[0].start; end = v.offsets[0].end; }
+
+    if (start != null && end != null && end > start){
+      spans.push({ start, end, label, text: text.slice(start, end) });
+    }
+  }
+  spans.sort((a,b)=>a.start-b.start || a.end-b.end);
+  return { text, spans };
+}
+
+function renderDoc(index){
+  state.activeIndex = index;
+  const item = state.files[index];
+  if (!item) return;
+
+  [...fileList.querySelectorAll(".file")].forEach((el,i)=>el.classList.toggle("active", i===index));
+
+  docTitle.textContent = item.name;
+
+  const spans = item.spans || [];
+  const text = item.text || "";
+
+  const uniqLabels = [...new Set(spans.map(s=>s.label))];
+  legend.innerHTML = uniqLabels.slice(0, 16).map(l => {
+    const c = colorForLabel(l);
+    return `<span class="swatch"><span class="dot" style="background:${c}"></span>${escapeHtml(l)}</span>`;
+  }).join("");
+
+  let out = "";
+  let pos = 0;
+  for (const s of spans){
+    const start = Math.max(0, Math.min(text.length, s.start));
+    const end = Math.max(0, Math.min(text.length, s.end));
+    if (end <= pos) continue;
+    out += escapeHtml(text.slice(pos, start));
+    const c = colorForLabel(s.label);
+    out += `<span class="hl" title="${escapeHtml(s.label)}" style="background:${c};">${escapeHtml(text.slice(start, end))}</span>`;
+    pos = end;
+  }
+  out += escapeHtml(text.slice(pos));
+
+  docBody.innerHTML = out || "<span style='color:var(--muted)'>No text found in this JSON (expected data.text).</span>";
+
+  if (!spans.length){
+    annoMeta.innerHTML = `<div class="annoList">No span annotations found in this file.</div>`;
+  } else {
+    annoMeta.innerHTML = `
+      <div class="annoList"><b>${spans.length}</b> spans (compact list)</div>
+      ${spans.slice(0, 25).map((s) => `
+        <div class="annoItem">
+          <div><b>${escapeHtml(s.label)}</b> <span style="color:var(--muted)">[${s.start}, ${s.end}]</span></div>
+          <div style="margin-top:6px;">${escapeHtml(s.text)}</div>
+        </div>
+      `).join("")}
+      ${spans.length > 25 ? `<div class="annoList" style="margin-top:10px;">Showing first 25 spans…</div>` : ""}
+    `;
+  }
+}
+
+async function readJsonFile(file){
+  const txt = await file.text();
+  let js = null;
+  try { js = JSON.parse(txt); }
+  catch(e){ return { ok:false, name:file.name, error:"Invalid JSON" }; }
+
+  if (Array.isArray(js)){
+    const items = [];
+    js.forEach((task, idx) => {
+      const { text, spans } = extractTextAndSpans(task);
+      items.push({ name: `${file.name} :: item ${idx+1}`, json: task, text, spans });
+    });
+    return { ok:true, multi:true, items };
+  } else {
+    const { text, spans } = extractTextAndSpans(js);
+    return { ok:true, multi:false, item:{ name:file.name, json:js, text, spans } };
+  }
+}
+
+function refreshFileList(){
+  fileCount.textContent = `${state.files.length} loaded`;
+  fileList.innerHTML = state.files.map((f, i) => `
+    <div class="file ${i===state.activeIndex ? "active":""}" data-i="${i}">
+      ${escapeHtml(f.name)}
+      <small>${f.spans.length} spans · ${f.text.length} chars</small>
+    </div>
+  `).join("");
+
+  fileList.querySelectorAll(".file").forEach(el => {
+    el.addEventListener("click", () => renderDoc(Number(el.dataset.i)));
+  });
+
+  if (state.activeIndex === -1 && state.files.length){
+    renderDoc(0);
+  }
+}
+
+async function loadFiles(files){
+  for (const f of files){
+    const res = await readJsonFile(f);
+    if (!res.ok){
+      state.files.push({ name: `${f.name} (ERROR)`, json:null, text:"", spans:[] });
+      continue;
+    }
+    if (res.multi) state.files.push(...res.items);
+    else state.files.push(res.item);
+  }
+  refreshFileList();
+}
+
+pickFiles.addEventListener("click", () => fileInput.click());
+fileInput.addEventListener("change", async (e) => {
+  const files = [...(e.target.files || [])];
+  await loadFiles(files);
+  fileInput.value = "";
+});
+
+drop.addEventListener("dragover", (e) => { e.preventDefault(); drop.style.background = "rgba(37,99,235,.06)"; });
+drop.addEventListener("dragleave", () => { drop.style.background = "#fff"; });
+drop.addEventListener("drop", async (e) => {
+  e.preventDefault();
+  drop.style.background = "#fff";
+  const files = [...(e.dataTransfer.files || [])].filter(f => f.name.toLowerCase().endsWith(".json"));
+  await loadFiles(files);
+});
+
+/* ==========================================================
+   TAB 3: GENERATE REPORT
+========================================================== */
+const FAMILY_COLORS_UI = FAMILY_COLORS;
+
+const REPORT_SCHEMA = [
+  { family: "Publication", labels: ["Author","Title","Year","Publisher","DOI","Summary"] },
+  { family: "Availability", labels: ["Full-text","Data","Code","Preregistered","Remarks"] },
+  { family: "Functional_scan_Information", labels: [
+      "Multicenter study? (Y/N)","Brand","Number of slices","Slice thickness","Flip angle","Inter-slice gap",
+      "Duration (s)","Eyes open/closed","Field of View (cm)","TR (ms)","TE (ms)",
+      "Voxel Size (mm x mm x mm)","Number of individuals for final analyses",
+      "Most-used software for preprocessing","Resting or Task/If Task, what task?"
+    ]
+  },
+  { family: "Design_specification", labels: ["Number of blocks/trials","Length of each trial","ISI distribution","Length of blocks","Efficiency optimization","Block/event correlation"] },
+  { family: "Task_specification", labels: ["Instructions","Stimuli","Stimuli repetition"] },
+  { family: "Planned_comparisons", labels: ["Comparisons","Omnibus ANOVA"] },
+  { family: "Human_subjects", labels: ["Number of subjects","Age","Handedness","Male/Female","Inclusion criteria","Rejected subjects","Group matching"] },
+  { family: "Ethics_approval", labels: ["IRB"] },
+  { family: "Behavioral_performance", labels: ["Performance measure"] },
+  {
+    family: "Preprocessing",
+    groups: [
+      { name: "Structural / Functional (Algorithm)", kind: "Algorithm", steps: STRUCT_FUNC_STEPS },
+      { name: "Noise removal / Filtering (Type)", kind: "Type", steps: NOISE_FILTER_STEPS },
+      { name: "FC / Graph analysis (Algorithm)", kind: "Algorithm", steps: FC_GRAPH_STEPS }
+    ]
+  }
+];
+
+const reportState = {
+  activeFamily: null,
+  checked: new Map(),
+  stepFields: new Map(),
+};
+
+function setChecked(key, val){
+  reportState.checked.set(key, !!val);
+  updatePickedCount();
+}
+function getChecked(key){
+  return !!reportState.checked.get(key);
+}
+function setStepField(key, field, value){
+  const cur = reportState.stepFields.get(key) || { stepNumber:"", software:"", algoType:"", params:"" };
+  cur[field] = value;
+  reportState.stepFields.set(key, cur);
+}
+function getStepField(key){
+  return reportState.stepFields.get(key) || { stepNumber:"", software:"", algoType:"", params:"" };
+}
+
+function updatePickedCount(){
+  let c = 0;
+  for (const v of reportState.checked.values()) if (v) c++;
+  document.getElementById("pickedCount").textContent = `${c} selected`;
+}
+
+/* CHANGE: pastel color helper for Tab 3 left nav items */
+function hexToRgb(hex){
+  const h = String(hex || "").replace("#","").trim();
+  if (h.length === 3){
+    const r = parseInt(h[0]+h[0], 16);
+    const g = parseInt(h[1]+h[1], 16);
+    const b = parseInt(h[2]+h[2], 16);
+    return {r,g,b};
+  }
+  if (h.length === 6){
+    const r = parseInt(h.slice(0,2), 16);
+    const g = parseInt(h.slice(2,4), 16);
+    const b = parseInt(h.slice(4,6), 16);
+    return {r,g,b};
+  }
+  return {r:230,g:230,b:230};
+}
+function pastelize(hex, mix=0.82){
+  // mix with white to get a soft pastel
+  const {r,g,b} = hexToRgb(hex);
+  const rr = Math.round(r*(1-mix) + 255*mix);
+  const gg = Math.round(g*(1-mix) + 255*mix);
+  const bb = Math.round(b*(1-mix) + 255*mix);
+  return `rgb(${rr}, ${gg}, ${bb})`;
+}
+
+function renderFamilyNav(){
+  const el = document.getElementById("familyNav");
+  el.innerHTML = REPORT_SCHEMA.map((f) => {
+    const base = FAMILY_COLORS_UI[f.family] || "#999999";
+    const pastel = pastelize(base, 0.84);
+    return `
+      <div
+        class="navItem ${reportState.activeFamily===f.family ? "active":""}"
+        data-family="${escapeHtml(f.family)}"
+        style="background:${pastel};"
+      >
+        <span class="pill" style="background:${base}"></span>
+        <span>${escapeHtml(f.family)}</span>
+      </div>
+    `;
+  }).join("");
+
+  el.querySelectorAll(".navItem").forEach(item => {
+    item.addEventListener("click", () => {
+      reportState.activeFamily = item.dataset.family;
+      renderFamilyNav();
+      renderFamilyContent(reportState.activeFamily);
+    });
+  });
+}
+
+function makeAccordion(title, subtitle){
+  const wrap = document.createElement("div");
+  wrap.className = "acc";
+  wrap.innerHTML = `
+    <div class="accHead">
+      <div>${escapeHtml(title)} <small>${escapeHtml(subtitle||"")}</small></div>
+      <div style="font-size:20px;color:var(--muted)">▼</div>
+    </div>
+    <div class="accBody"></div>
+  `;
+  wrap.querySelector(".accHead").addEventListener("click", () => {
+    wrap.classList.toggle("open");
+  });
+  return wrap;
+}
+
+function renderFamilyContent(familyName){
+  const title = document.getElementById("reportTitle");
+  const tag = document.getElementById("familyTag");
+  const body = document.getElementById("reportBody");
+  const btnC = document.getElementById("rCollapsePreproc");
+  const btnE = document.getElementById("rExpandPreproc");
+
+  body.innerHTML = "";
+
+  const familyObj = REPORT_SCHEMA.find(f => f.family === familyName);
+  if (!familyObj){
+    title.textContent = "Pick a family on the left";
+    tag.style.display = "none";
+    btnC.style.display = "none";
+    btnE.style.display = "none";
+    body.innerHTML = `<div class="mono">No family selected.</div>`;
+    return;
+  }
+
+  title.textContent = familyObj.family;
+  tag.style.display = "inline-flex";
+  tag.textContent = "Family";
+
+  const isPreproc = familyObj.family === "Preprocessing";
+  btnC.style.display = isPreproc ? "inline-flex" : "none";
+  btnE.style.display = isPreproc ? "inline-flex" : "none";
+
+  if (!isPreproc){
+    const acc = makeAccordion("Definition & Fields", "Open to tick labels");
+    acc.classList.add("open");
+    const accBody = acc.querySelector(".accBody");
+
+    accBody.insertAdjacentHTML("beforeend", `<div class="mono">Tick what is present for <b>${escapeHtml(familyObj.family)}</b>.</div>`);
+
+    familyObj.labels.forEach(label => {
+      const key = `${familyObj.family}::${label}`;
+      const row = document.createElement("div");
+      row.className = "row";
+      row.innerHTML = `
+        <div><input type="checkbox" ${getChecked(key)?"checked":""} data-key="${escapeHtml(key)}"></div>
+        <div>
+          <label>${escapeHtml(label)}</label>
+          <div class="subtext">Optional notes:</div>
+          <textarea placeholder="Write notes / extracted values (optional)..." data-notes="${escapeHtml(key)}"></textarea>
+        </div>
+      `;
+      accBody.appendChild(row);
+
+      const cb = row.querySelector(`input[type="checkbox"]`);
+      cb.addEventListener("change", () => setChecked(key, cb.checked));
+
+      const ta = row.querySelector("textarea");
+      const cur = getStepField(key);
+      ta.value = cur.params || "";
+      ta.addEventListener("input", () => setStepField(key, "params", ta.value));
+    });
+
+    body.appendChild(acc);
+    return;
+  }
+
+  /* ===== Preprocessing ===== */
+  const headerNote = document.createElement("div");
+  headerNote.className = "mono preprocNote";
+  headerNote.textContent = "Preprocessing is collapsed by default. Open a group → tick steps present → fill Step Number / Software / Algorithm or Type / Parameters.";
+  body.appendChild(headerNote);
+
+  familyObj.groups.forEach(group => {
+    const groupAcc = makeAccordion(group.name, "(collapsed by default)");
+    groupAcc.classList.add("preprocAcc");
+    const groupBody = groupAcc.querySelector(".accBody");
+
+    groupBody.insertAdjacentHTML("beforeend", `<div class="greyTag">Sublabel fields: Step Number · Software · ${escapeHtml(group.kind)} · Parameters</div>`);
+
+    group.steps.forEach(stepName => {
+      const key = `Preprocessing::${group.name}::${stepName}`;
+      const stepWrap = document.createElement("div");
+      stepWrap.className = "stepCard";
+      const checked = getChecked(key);
+      const def = PREPROC_DEFS[stepName] || "";
+
+      const fields = getStepField(key);
+      stepWrap.innerHTML = `
+        <div class="stepTop">
+          <input type="checkbox" ${checked?"checked":""} data-step="${escapeHtml(key)}">
+          <b>${escapeHtml(stepName)}</b>
+        </div>
+        <div class="subtext" style="margin-top:8px;"><b>Definition:</b> ${escapeHtml(def)}</div>
+
+        <div class="grid4">
+          <div class="field">
+            <label>Step Number</label>
+            <input type="text" placeholder="e.g., 12" value="${escapeHtml(fields.stepNumber)}" data-field="stepNumber" data-stepkey="${escapeHtml(key)}">
+          </div>
+          <div class="field">
+            <label>Software</label>
+            <input type="text" placeholder="e.g., fMRIPrep 23.1" value="${escapeHtml(fields.software)}" data-field="software" data-stepkey="${escapeHtml(key)}">
+          </div>
+          <div class="field">
+            <label>${escapeHtml(group.kind)}</label>
+            <input type="text" placeholder="Algorithm/Type (verbatim)" value="${escapeHtml(fields.algoType)}" data-field="algoType" data-stepkey="${escapeHtml(key)}">
+          </div>
+          <div class="field">
+            <label>Parameters</label>
+            <input type="text" placeholder="e.g., 6 mm FWHM" value="${escapeHtml(fields.params)}" data-field="params" data-stepkey="${escapeHtml(key)}">
+          </div>
+        </div>
+      `;
+
+      const cb = stepWrap.querySelector(`input[type="checkbox"]`);
+      cb.addEventListener("change", () => setChecked(key, cb.checked));
+
+      stepWrap.querySelectorAll(`input[data-stepkey="${CSS.escape(key)}"]`).forEach(inp => {
+        inp.addEventListener("input", () => {
+          setStepField(key, inp.dataset.field, inp.value);
+        });
+      });
+
+      groupBody.appendChild(stepWrap);
+    });
+
+    body.appendChild(groupAcc);
+  });
+
+  btnC.onclick = () => {
+    body.querySelectorAll(".acc").forEach(acc => acc.classList.remove("open"));
+  };
+  btnE.onclick = () => {
+    body.querySelectorAll(".acc").forEach(acc => acc.classList.add("open"));
+  };
+}
+
+function buildReportText(){
+  const lines = [];
+  lines.push("Benchmarking Report");
+  lines.push("===============");
+  lines.push("");
+
+  for (const f of REPORT_SCHEMA){
+    lines.push(`[${f.family}]`);
+
+    if (f.family !== "Preprocessing"){
+      for (const label of (f.labels || [])){
+        const key = `${f.family}::${label}`;
+        const checked = getChecked(key);
+        const notes = getStepField(key).params || "";
+        if (checked || notes.trim()){
+          lines.push(`- ${label}: ${checked ? "✔" : "✘"}${notes.trim() ? ` | Notes: ${notes.trim()}` : ""}`);
+        }
+      }
+    } else {
+      for (const g of f.groups){
+        lines.push(`  <${g.name}>`);
+        for (const step of g.steps){
+          const key = `Preprocessing::${g.name}::${step}`;
+          const checked = getChecked(key);
+          const fields = getStepField(key);
+          if (checked || fields.stepNumber || fields.software || fields.algoType || fields.params){
+            lines.push(`  - ${step}: ${checked ? "✔" : "✘"}`);
+            if (fields.stepNumber) lines.push(`      Step Number: ${fields.stepNumber}`);
+            if (fields.software) lines.push(`      Software: ${fields.software}`);
+            if (fields.algoType) lines.push(`      ${g.kind}: ${fields.algoType}`);
+            if (fields.params) lines.push(`      Parameters: ${fields.params}`);
+          }
+        }
+      }
+    }
+    lines.push("");
+  }
+
+  return lines.join("\n");
+}
+
+function downloadText(filename, text){
+  const blob = new Blob([text], {type:"text/plain;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+document.getElementById("downloadReport").addEventListener("click", () => {
+  const txt = buildReportText();
+  downloadText("Benchmarking_report.txt", txt);
+  document.getElementById("reportStatus").textContent = "Downloaded";
+  setTimeout(()=>document.getElementById("reportStatus").textContent="Ready", 900);
+});
+
+document.getElementById("resetReport").addEventListener("click", () => {
+  reportState.checked.clear();
+  reportState.stepFields.clear();
+  updatePickedCount();
+  if (reportState.activeFamily) renderFamilyContent(reportState.activeFamily);
+  document.getElementById("reportStatus").textContent = "Reset";
+  setTimeout(()=>document.getElementById("reportStatus").textContent="Ready", 900);
+});
+
+renderFamilyNav();
+updatePickedCount();
+</script>
+</body>
+</html>

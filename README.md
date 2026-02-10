@@ -15,6 +15,7 @@ This repository contains:
 - A **fully annotated benchmark dataset** (170 files)
 - Outputs from **multiple LLM prompting strategies**
 - **Comparison, merging, and validation scripts**
+- Interactive **HTML-based visualization tools** for schema exploration and annotation inspection
 - A visual **workflow of the benchmarking pipeline**
 
 The dataset enables:
@@ -49,6 +50,9 @@ The dataset enables:
 │   ├── mismatch_checker.py
 │   ├── merge_json_file.py
 │   └── review_newversion.py
+│
+├── schema_viewer/
+│   └── schema_viewer.html
 │
 └── README.md
 ```
@@ -150,6 +154,71 @@ The prompts are provided as **`.docx` files** to preserve structure, formatting,
 
 - **review_newversion.py**  
   Supports review, validation, and correction of mismatches.
+
+---
+# 🧭 schema_viewer (Interactive Schema Explorer)
+
+## Path
+`schema_viewer/schema_viewer.html`
+
+
+## Description
+
+This folder contains an interactive, web-based schema exploration and report-generation tool developed to support understanding, validation, and manual inspection of the benchmarking schema used in this project.
+
+The schema viewer is designed to bridge the gap between:
+
+- **Abstract annotation schemas**, and  
+- **Concrete extraction decisions** made by LLMs and human annotators.
+
+It provides a visual and structured interface to explore **families, groups, steps, and sublabels** used in the benchmark.
+
+
+## 🔹 Key Functionalities
+
+### Schema Graph (Tab 1)
+
+- Interactive force-directed graph representation of the full benchmarking schema  
+- Nodes represent families, groups, steps, and sublabels  
+- Click to inspect definitions, relationships, and hierarchy  
+- Supports expand/collapse, zooming, and search  
+
+
+### Annotations Explorer (Tab 2)
+
+- Load Label Studio–compatible JSON files  
+- Visualize extracted text with highlighted annotation spans  
+- Inspect label distributions and annotation metadata  
+
+### Generate Report (Tab 3)
+
+- Manual, guided report builder aligned with the benchmarking schema  
+- Allows users to:
+  - Select schema families  
+  - Tick present preprocessing steps  
+  - Enter step numbers, software, algorithms/types, and parameters  
+- Produces a structured, text-based report summarizing preprocessing and analysis decisions  
+
+## 🎯 Purpose in the Benchmarking Pipeline
+
+The `schema_viewer` serves multiple roles:
+
+- **Schema documentation**: makes the full analytical decision space explicit and navigable  
+- **Annotation validation**: enables rapid inspection of extracted metadata  
+- **Human-in-the-loop review**: supports correction and confirmation of LLM outputs  
+- **Reporting aid**: standardizes how preprocessing pipelines are summarized  
+
+This tool is especially useful for:
+
+- Onboarding new collaborators  
+- Reviewing edge cases and mismatches  
+- Demonstrating the scope and complexity of the benchmarking schema  
+
+## ▶️ Usage
+
+- Open `schema_viewer.html` in any modern web browser (Chrome/Edge recommended)  
+- No server or backend required — runs fully client-side  
+- Optional: load JSON annotation files in the **Annotations Explorer** tab  
 
 ---
 
