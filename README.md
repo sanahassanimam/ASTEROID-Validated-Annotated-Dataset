@@ -182,13 +182,16 @@ It provides a visual and structured interface to explore **families, groups, ste
 - Nodes represent families, groups, steps, and sublabels  
 - Click to inspect definitions, relationships, and hierarchy  
 - Supports expand/collapse, zooming, and search  
-
+<p align="center">
+  <img src="Images/tab1.jpeg" width="800">
+</p>
 
 ### Annotations Explorer (Tab 2)
 
 - Load Label Studio–compatible JSON files  
 - Visualize extracted text with highlighted annotation spans  
 - Inspect label distributions and annotation metadata  
+![Annotations Explorer – Tab 2](Images/tab2.jpeg)
 
 ### Generate Report (Tab 3)
 
@@ -198,6 +201,7 @@ It provides a visual and structured interface to explore **families, groups, ste
   - Tick present preprocessing steps  
   - Enter step numbers, software, algorithms/types, and parameters  
 - Produces a structured, text-based report summarizing preprocessing and analysis decisions  
+![Generate Report – Tab 3](Images/tab3.jpeg)
 
 ## 🎯 Purpose in the Benchmarking Pipeline
 
