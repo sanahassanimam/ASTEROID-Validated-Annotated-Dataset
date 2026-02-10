@@ -51,7 +51,7 @@ The dataset enables:
 │   ├── merge_json_file.py
 │   └── review_newversion.py
 │
-├── schema_viewer/
+├── Schema_Viewer/
 │   └── schema_viewer.html
 │
 └── README.md
@@ -156,7 +156,7 @@ The prompts are provided as **`.docx` files** to preserve structure, formatting,
   Supports review, validation, and correction of mismatches.
 
 ---
-# 🧭 schema_viewer (Interactive Schema Explorer)
+# 🧭 Schema_Viewer (Interactive Schema Explorer)
 
 ## Path
 `schema_viewer/schema_viewer.html`
@@ -174,7 +174,7 @@ The schema viewer is designed to bridge the gap between:
 It provides a visual and structured interface to explore **families, groups, steps, and sublabels** used in the benchmark.
 
 
-## 🔹 Key Functionalities
+## 🔹Key Functionalities
 
 ### Schema Graph (Tab 1)
 
