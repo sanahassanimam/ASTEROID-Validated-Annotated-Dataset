@@ -191,7 +191,10 @@ It provides a visual and structured interface to explore **families, groups, ste
 - Load Label Studio–compatible JSON files  
 - Visualize extracted text with highlighted annotation spans  
 - Inspect label distributions and annotation metadata  
-![Annotations Explorer – Tab 2](Images/tab2.jpeg)
+<p align="center">
+  <img src="Images/tab2.jpeg" width="800">
+</p>
+
 
 ### Generate Report (Tab 3)
 
@@ -201,7 +204,10 @@ It provides a visual and structured interface to explore **families, groups, ste
   - Tick present preprocessing steps  
   - Enter step numbers, software, algorithms/types, and parameters  
 - Produces a structured, text-based report summarizing preprocessing and analysis decisions  
-![Generate Report – Tab 3](Images/tab3.jpeg)
+<p align="center">
+  <img src="Images/tab3.jpeg" width="800">
+</p>
+
 
 ## 🎯 Purpose in the Benchmarking Pipeline
 
