@@ -1,4 +1,4 @@
-# 📊 Benchmarked Annotation Dataset for LLM-Based Information Extraction
+# 📊 Validated Annotation Dataset for LLM-Based Information Extraction
 
 ## 🔒 Repository Access
 This is a **private repository** containing a **benchmarked and curated dataset** used for evaluating and comparing multiple LLM prompting strategies for structured information extraction from scientific literature.
