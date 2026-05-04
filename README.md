@@ -41,9 +41,9 @@ The dataset enables:
 │   └── JSON_Combined_files/
 │
 ├── Prompts/
-│   ├── First Prompt.docx
-│   ├── GA Prompt.docx
-│   └── Final Prompt.docx
+│   ├── First Prompt.md
+│   ├── GA Prompt.md
+│   └── Final Prompt.md
 │
 ├── Python_Scripts/
 │   ├── combine_summary.py
