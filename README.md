@@ -127,7 +127,34 @@ The interactive application supports three core activities:
 3. To examine final annotations, download `Annotated_Files/all_annotations.json` and upload it through the viewer's file selector, if prompted.
 4. Use the Schema Graph and reporting interface to explore the annotation framework.
 
-The app is a visualization and inspection tool; the downloadable, archived JSON dataset remains the authoritative data record. **Before release, confirm that all tabs, JSON upload, and report generation work for a visitor who is not logged into your accounts.**
+The app is a visualization and inspection tool; the downloadable, archived JSON dataset remains the authoritative data record. 
+
+### ASTEROID Interactive Application
+
+**Launch the application:**
+https://asteroid.shinyapps.io/asteroid/
+
+#### Tab 1 — Schema Graph
+
+Explore the hierarchical annotation schema and inspect
+relationships between label groups, steps, and sublabels.
+
+![ASTEROID Schema Graph](Images/explorer1.jpeg)
+
+#### Tab 2 — Annotations Explorer
+
+Load compatible JSON annotation files and examine
+highlighted text spans and assigned labels.
+
+![ASTEROID Annotations Explorer](Images/explorer2.jpeg)
+
+#### Tab 3 — Generate Report
+
+Create structured summaries of preprocessing and
+graph-analysis decisions.
+
+![ASTEROID Report Generator](Images/explorer3.jpeg)
+
 
 ## Dataset creation and validation
 
