@@ -201,7 +201,7 @@ For scholarly citation, use the exact archived dataset version and its DOI once 
 
 **Data licence:** To be confirmed before public release, following review of third-party source-text rights.
 
-**Code licence:** [SPECIFY THE EXISTING APPROVED CODE LICENCE]
+**Code licence:** To be confirmed before public release, following review of third-party source-text rights.
 
 Annotations may contain passages derived from third-party publications. Do not assume that licensing the annotation dataset automatically grants permission to redistribute third-party copyrighted article text. Review the source licences and permissions before public release.
 
