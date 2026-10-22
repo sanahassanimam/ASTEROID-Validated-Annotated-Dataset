@@ -1,263 +1,172 @@
-# 📊 Validated Annotation Dataset for LLM-Based Information Extraction
+# ASTEROID: Validated Annotated Dataset of Graph Theory-Based fMRI Analytical Decisions
 
-## 🔒 Repository Access
-This is a **private repository** containing a **Validateded and curated dataset** used for evaluating and comparing multiple LLM prompting strategies for structured information extraction from scientific literature.
+[![ASTEROID interactive viewer](https://img.shields.io/badge/ASTEROID-Interactive%20Viewer-blue)](https://asteroid.shinyapps.io/asteroid/)
 
-The repository is intended for **internal use and controlled collaboration only**.
+## Overview
 
----
+**ASTEROID** is a structured, expert-reviewed annotation dataset describing analytical decisions reported in published graph theory-based human functional magnetic resonance imaging (fMRI) research. It supports the systematic examination of methodological choices in fMRI preprocessing, functional-connectivity analysis, and graph-theoretical network analysis.
 
-## 📌 Overview
+The accompanying manuscript describes annotations from **160 studies** using a schema of **125 labels**: **61 methodological labels** and **64 labels** covering study characteristics and experimental design. The annotations were produced through an LLM-assisted workflow, followed by automated quality-control procedures and human expert review. The final annotations include methodological steps, software, algorithms/types, parameters, and links to supporting text spans where available.
 
-This repository contains:
+> **Release verification:** Confirm that `Annotated_Files/all_annotations.json` contains the 160 unique final study records described in the manuscript before publishing this README. Earlier internal documentation listed 170 and 175 files; those numbers may refer to other stages of the corpus, but should not be used for the final dataset without verification.
 
-- **Documented prompt specifications** (baseline, GA-focused, and final refined prompts)
-- A **fully annotated Validated dataset** (175 files)
-- Outputs from **multiple LLM prompting strategies**
-- **Comparison, merging, and validation scripts**
-- Interactive **HTML-based visualization tools** for schema exploration and annotation inspection
-- A visual **workflow of the Validateding pipeline**
+## Contents
 
-The dataset enables:
-- Systematic comparison of *initial*, *refined*, and *GA-based* prompts
-- Quantitative mismatch analysis between LLM outputs and a reference database
-- Reproducible Validateding and error analysis
+- Final human-reviewed annotations in Label Studio-compatible JSON format
+- Intermediate JSON outputs from different prompting strategies
+- Prompt specifications used for LLM-assisted pre-annotation
+- Scripts supporting merging, mismatch assessment, summary generation, and review
+- Interactive ASTEROID application for exploring the schema and annotations
+- Supporting images and workflow visualizations
 
----
+## Main dataset
 
-## 📂 Repository Structure
+**Path:** [`Annotated_Files/all_annotations.json`](Annotated_Files/all_annotations.json)
 
-```
+The consolidated JSON contains structured records representing the reviewed source studies. Its annotations cover:
+
+1. **Study characteristics:** bibliographic and participant/study information.
+2. **Experimental design:** functional-scan and experimental-design information.
+3. **Analytical pipeline:** methodological decisions involving structural and functional preprocessing, noise removal/filtering, functional connectivity, and graph analysis.
+
+Methodological annotations include standardized attributes such as step number, software, algorithm/type, and parameters. Source text spans are provided where available. Missing or ambiguous fields should be interpreted in the context of the original studies' reporting, not automatically as evidence that an analysis step was not performed.
+
+**Data format:** JSON, structured for compatibility with Label Studio annotation import. The contents should be inspected using the included schema documentation and/or the ASTEROID viewer.
+
+**Source studies:** [ADD LINK TO A MANIFEST OF THE 160 SOURCE STUDIES, INCLUDING DOI OR OTHER IDENTIFIERS, IF AVAILABLE]
+
+**Data dictionary/schema:** [ADD THE EXISTING SCHEMA DOCUMENTATION PATH OR PROVIDE A MACHINE-READABLE SCHEMA FILE]
+
+## Repository organization
+
+The following layout is based on the project documentation. **Check all names and file extensions against the actual repository before release.**
+
+```text
+ASTEROID-Validated-Annotated-Dataset/
 ├── Annotated_Files/
 │   └── all_annotations.json
-│
 ├── Images/
-│   └── Validateding_workflow.html
-│
+│   └── [workflow and viewer images; verify filenames]
 ├── JSON_Files/
 │   ├── JSON_Firstprompt_files/
 │   ├── JSON_Finalprompt_files/
 │   ├── JSON_GAprompt_files/
 │   └── JSON_Combined_files/
-│
 ├── Prompts/
-│   ├── First Prompt.md
-│   ├── GA Prompt.md
-│   └── Final Prompt.md
-│
+│   └── [First, GA, and Final prompt files; verify .md/.docx extensions]
 ├── Python_Scripts/
 │   ├── combine_summary.py
 │   ├── mismatch_checker.py
 │   ├── merge_json_file.py
 │   └── review_newversion.py
-│
 ├── Schema_Viewer/
-│   └── schema_viewer.html
-│
+│   └── [verify local entry-point filename]
 └── README.md
 ```
 
----
+### Intermediate JSON outputs
 
-## 1️⃣ Annotated Files (Combined)
+`JSON_Files/` contains LLM-generated pre-annotation outputs:
 
-**Path:**  
-`Annotated_Files/all_annotations.json`
+- `JSON_Firstprompt_files/`: outputs from the initial broad extraction prompt.
+- `JSON_GAprompt_files/`: outputs from the graph-analysis-focused extraction prompt.
+- `JSON_Combined_files/`: outputs combining first-prompt and graph-analysis annotations.
+- `JSON_Finalprompt_files/`: outputs from the refined single-pass prompt.
 
-**Description:**  
-- Contains **all 170 annotated JSON files merged into a single file**
-- Each document retains its **full annotation structure**
-- Designed for **direct import into any annotation viewer** (e.g., Label Studio or compatible tools)
+The manuscript describes a staged extraction process: initial and graph-analysis prompting with merged outputs for the first 100 studies, followed by a refined prompt for the remaining 60. These intermediate files should **not** be confused with the final human-reviewed dataset in `Annotated_Files/`.
 
-**Usage:**  
-- Download the file  
-- Import into your annotation/inspection tool  
-- Instantly browse all documents and their complete annotations  
+### Prompt specifications
 
----
+`Prompts/` documents the extraction instructions for the First Prompt, GA Prompt, and Final Prompt. These record the development of the LLM-assisted annotation workflow. **Confirm the actual filenames and extensions before release.**
 
-## 2️⃣ Images (Validateding Workflow)
+### Python scripts
 
-**Path:**  
-`Images/Validateding_workflow.html`
+`Python_Scripts/` includes:
 
-**Description:**  
-- Visual overview of the **Validateding and extraction pipeline**
-- Illustrates prompt variants, JSON generation, merging logic, mismatch analysis, and review cycles
+| Script | Function |
+| --- | --- |
+| `combine_summary.py` | Produces summaries of annotation and validation results. |
+| `mismatch_checker.py` | Compares structured annotations with the manually curated reference information. |
+| `merge_json_file.py` | Integrates first-prompt and graph-analysis outputs. |
+| `review_newversion.py` | Supports inspection and review of validation discrepancies. |
 
----
+The manuscript reports that these scripts were developed and tested using **Python 3.10**. To reproduce script execution, provide the tested dependencies and exact example commands below once verified.
 
-## 3️⃣ JSON Files (Prompt-wise Outputs)
+```bash
+# Installation (replace only after testing the requirements file)
+python -m venv .venv
+python -m pip install -r Python_Scripts/requirements.txt
+```
 
-**Path:**  
-`JSON_Files/`
+> **To complete:** Add the verified `requirements.txt` path; specify the input files, command-line arguments or configuration, and outputs for each script. If a script depends on a manually curated reference database that cannot be shared, document that limitation precisely.
 
-### Subfolders
+## Interactive ASTEROID application
 
-- **JSON_Firstprompt_files/**  
-  JSON files produced using the initial baseline prompt.
+**Open the online ASTEROID viewer:** https://asteroid.shinyapps.io/asteroid/
 
-- **JSON_Finalprompt_files/**  
-  JSON files generated using the final refined prompt.
+The interactive application supports three core activities:
 
-- **JSON_GAprompt_files/**  
-  JSON files produced using a Graph-Analysis (GA)–focused prompt.
+1. **Schema Graph:** Explore the relationships among annotation families, groups, steps, and sublabels, including descriptions and hierarchy.
+2. **Annotations Explorer:** Load compatible annotation JSON and inspect the supporting text and label assignments.
+3. **Generate Report:** Select reported analysis steps and provide corresponding step numbers, software, algorithms/types, and parameters to create a structured summary.
 
-- **JSON_Combined_files/**  
-  JSON files created by merging outputs from the initial and GA-based prompts.
+**Using the viewer:**
 
----
+1. Open the application URL in a modern browser.
+2. Select the relevant tab.
+3. To examine final annotations, download `Annotated_Files/all_annotations.json` and upload it through the viewer's file selector, if prompted.
+4. Use the Schema Graph and reporting interface to explore the annotation framework.
 
-## 4️⃣ Prompts
+The app is a visualization and inspection tool; the downloadable, archived JSON dataset remains the authoritative data record. **Before release, confirm that all tabs, JSON upload, and report generation work for a visitor who is not logged into your accounts.**
 
-**Path:**  
-`Prompts/`
+## Dataset creation and validation
 
-This folder contains the **exact prompt specifications** used to generate the LLM outputs included in this Validateded dataset. Each prompt represents a distinct stage in the prompt development and evaluation pipeline.
+The manuscript describes the following workflow:
 
-The prompts are provided as **`.docx` files** to preserve structure, formatting, and explanatory notes.
+1. Compile a corpus of published graph theory-based human fMRI studies.
+2. Convert source PDFs to structured text/JSON.
+3. Produce initial schema-guided annotations using LLM prompts.
+4. Run automated checks for missing/duplicated decisions, parameter formatting, step numbering, and span offsets.
+5. Compare annotation outputs with a previously compiled manual extraction resource.
+6. Review flagged and ambiguous records using human expertise, and export the validated annotation dataset.
 
-### 📄 Prompt Files
+The PDF-to-JSON conversion tool is documented separately in [Annotation-buddy](https://github.com/sanahassanimam/Annotation-buddy).
 
-#### 4.1 `First Prompt.docx`
-- Initial **baseline prompt** used for large-scale information extraction  
-- Captures a broad range of metadata with minimal optimization  
-- Serves as the starting point for Validateding LLM performance  
+The manual comparison is an evaluation resource, not absolute ground truth. The manuscript reports targeted expert review and discussion to resolve uncertain cases; it does **not** report an independent parallel annotation study or inter-annotator agreement statistic. Consult the accompanying manuscript for the precise validation methodology and limitations.
 
-#### 4.2 `GA Prompt.docx`
-- Specialized prompt focusing on **Graph Analysis (GA)**–related metadata  
-- Targets graph-theoretical decisions, parameters, and analytical steps  
-- Improves extraction accuracy for GA-specific fields  
+## Reuse and limitations
 
-#### 4.3 `Final Prompt.docx`
-- Final refined and optimized prompt  
-- Integrates insights from baseline errors, GA prompt strengths, and mismatch reviews  
-- Produces the highest-quality and most consistent extraction outputs  
+ASTEROID is intended for examining reported methodological decisions in graph theory-based human fMRI studies, supporting comparisons across studies, identifying plausible choices for multiverse analyses, and evaluating automated scientific information-extraction workflows.
 
----
+The dataset records information **as reported** in source publications. An unreported annotation does not necessarily mean the corresponding method was not used. Ordering information and source-text support should be interpreted according to the annotation definitions and documented workflow. Use caution in applying the schema outside its source domain without additional validation.
 
-## 5️⃣ Python Scripts
+## Data availability and versioning
 
-**Path:**  
-`Python_Scripts/`
+- **GitHub project:** https://github.com/sanahassanimam/ASTEROID-Validated-Annotated-Dataset
+- **Archived dataset:** [ADD ZENODO RECORD URL AFTER THE DEPOSIT IS READY]
+- **Version-specific DOI:** [ADD RESERVED OR REGISTERED DATASET DOI WHEN AVAILABLE]
+- **Dataset version/release:** [ADD RELEASE TAG OR VERSION]
+- **Online viewer:** https://asteroid.shinyapps.io/asteroid/
 
-### Script Descriptions
+For scholarly citation, use the exact archived dataset version and its DOI once registered. The GitHub repository may evolve independently of the archived version used in the manuscript.
 
-- **combine_summary.py**  
-  Generates a global mismatch summary and outputs Excel/CSV files.
+## Licence and third-party source material
 
-- **mismatch_checker.py**  
-  Compares LLM-extracted JSON files with a reference Excel database.
+**Data licence:** [CONFIRM WITH CO-AUTHORS AFTER REVIEWING RIGHTS IN PUBLISHED SOURCE-TEXT EXCERPTS]
 
-- **merge_json_file.py**  
-  Combines JSON outputs from initial and GA-based prompts.
+**Code licence:** [SPECIFY THE EXISTING APPROVED CODE LICENCE]
 
-- **review_newversion.py**  
-  Supports review, validation, and correction of mismatches.
+Annotations may contain passages derived from third-party publications. Do not assume that licensing the annotation dataset automatically grants permission to redistribute third-party copyrighted article text. Review the source licences and permissions before public release.
 
----
-# 🧭 Schema_Viewer (Interactive Schema Explorer)
+## Citation
 
-## Path
-`ASTEROID/www/ASTEROID.html`
+**Dataset:** [ADD EXACT ZENODO CITATION AND DOI AFTER RECORD CREATION]
 
-
-## Description
-
-This folder contains an interactive, web-based schema exploration and report-generation tool developed to support understanding, validation, and manual inspection of the Validateding schema used in this project.
-
-The schema viewer is designed to bridge the gap between:
-
-- **Abstract annotation schemas**, and  
-- **Concrete extraction decisions** made by LLMs and human annotators.
-
-It provides a visual and structured interface to explore **families, groups, steps, and sublabels** used in the Validated.
-
-
-## 🔹Key Functionalities
-
-### Schema Graph (Tab 1)
-
-- Interactive force-directed graph representation of the full Validateding schema  
-- Nodes represent families, groups, steps, and sublabels  
-- Click to inspect definitions, relationships, and hierarchy  
-- Supports expand/collapse, zooming, and search  
-<p align="center">
-  <img src="Images/tab1.jpeg" width="800">
-</p>
-
-### Annotations Explorer (Tab 2)
-
-- Load Label Studio–compatible JSON files  
-- Visualize extracted text with highlighted annotation spans  
-- Inspect label distributions and annotation metadata  
-<p align="center">
-  <img src="Images/tab2.jpeg" width="800">
-</p>
-
-
-### Generate Report (Tab 3)
-
-- Manual, guided report builder aligned with the Validateding schema  
-- Allows users to:
-  - Select schema families  
-  - Tick present preprocessing steps  
-  - Enter step numbers, software, algorithms/types, and parameters  
-- Produces a structured, text-based report summarizing preprocessing and analysis decisions  
-<p align="center">
-  <img src="Images/tab3.jpeg" width="800">
-</p>
-
-
-## 🎯 Purpose in the Validateding Pipeline
-
-The `schema_viewer` serves multiple roles:
-
-- **Schema documentation**: makes the full analytical decision space explicit and navigable  
-- **Annotation validation**: enables rapid inspection of extracted metadata  
-- **Human-in-the-loop review**: supports correction and confirmation of LLM outputs  
-- **Reporting aid**: standardizes how preprocessing pipelines are summarized  
-
-This tool is especially useful for:
-
-- Onboarding new collaborators  
-- Reviewing edge cases and mismatches  
-- Demonstrating the scope and complexity of the Validateding schema  
-
-## ▶️ Usage
-
-- Open `schema_viewer.html` in any modern web browser (Chrome/Edge recommended)  
-- No server or backend required — runs fully client-side  
-- Optional: load JSON annotation files in the **Annotations Explorer** tab  
-
----
-
-## 🔁 Validateding Workflow (Summary)
-
-1. Run LLM extraction with different prompts  
-2. Store prompt-specific JSON outputs  
-3. Merge selected outputs  
-4. Compare against the reference database  
-5. Generate mismatch summaries  
-6. Review and correct inconsistencies  
-7. Produce final Validated-ready dataset  
-
----
-
-## 📎 Notes
-
-- All data is **Validateded against a curated reference**
-- Intended for **research and methodological evaluation**
-- Redistribution is **not permitted** without explicit authorization
-
----
-
-## License
-See the LICENSE file in this repository.
-
----
+**Related Data Descriptor:** [ADD PUBLICATION CITATION WHEN AVAILABLE]
 
 ## Contact
-Sana Hassan Imam  
-GitHub: sanahassanimam  
+
+**Sana Hassan Imam**  
+Carl von Ossietzky Universität Oldenburg  
+GitHub: [sanahassanimam](https://github.com/sanahassanimam)  
 Email: sana.hassan.imam@uni-oldenburg.de
