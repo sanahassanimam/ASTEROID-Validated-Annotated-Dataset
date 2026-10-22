@@ -43,25 +43,27 @@ The following layout is based on the project documentation. **Check all names an
 
 ```text
 ASTEROID-Validated-Annotated-Dataset/
+├── README.md
+├── Prompts/
+│   ├── First Prompt.md
+│   ├── GA Prompt.md
+│   └── Final Prompt.md
+├── JSON_Files/
+│   ├── Firstprompt/
+│   ├── GAprompt/
+│   ├── Finalprompt/
+│   └── Combined JSON/
 ├── Annotated_Files/
 │   └── all_annotations.json
-├── Images/
-│   └── [workflow and viewer images; verify filenames]
-├── JSON_Files/
-│   ├── JSON_Firstprompt_files/
-│   ├── JSON_Finalprompt_files/
-│   ├── JSON_GAprompt_files/
-│   └── JSON_Combined_files/
-├── Prompts/
-│   └── [First, GA, and Final prompt files; verify .md/.docx extensions]
 ├── Python_Scripts/
 │   ├── combine_summary.py
 │   ├── mismatch_checker.py
 │   ├── merge_json_file.py
 │   └── review_newversion.py
 ├── Schema_Viewer/
-│   └── [verify local entry-point filename]
-└── README.md
+│   └── schema_viewer.html
+└── Images/
+    └── benchmarking_workflow.html
 ```
 
 ### Intermediate JSON outputs
