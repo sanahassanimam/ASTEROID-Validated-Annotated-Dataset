@@ -159,7 +159,7 @@ The prompts are provided as **`.docx` files** to preserve structure, formatting,
 # 🧭 Schema_Viewer (Interactive Schema Explorer)
 
 ## Path
-`schema_viewer/schema_viewer.html`
+`ASTEROID/www/ASTEROID.html`
 
 
 ## Description
