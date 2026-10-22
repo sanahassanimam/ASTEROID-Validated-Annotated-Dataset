@@ -61,7 +61,11 @@ ASTEROID-Validated-Annotated-Dataset/
 ├── Schema_Viewer/
 │   └── schema_viewer.html
 └── Images/
-    └── benchmarking_workflow.html
+    └── workflow.png
+    └── explorer1.png
+    └── explorer2.png
+    └── explorer3.png
+    
 ```
 
 ### Intermediate JSON outputs
