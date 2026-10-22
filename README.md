@@ -101,13 +101,15 @@ The manuscript describes a staged extraction process: initial and graph-analysis
 
 The manuscript reports that these scripts were developed and tested using **Python 3.10**. To reproduce script execution, provide the tested dependencies and exact example commands below once verified.
 
-```bash
-# Installation (replace only after testing the requirements file)
-python -m venv .venv
-python -m pip install -r Python_Scripts/requirements.txt
-```
 
-> **To complete:** Add the verified `requirements.txt` path; specify the input files, command-line arguments or configuration, and outputs for each script. If a script depends on a manually curated reference database that cannot be shared, document that limitation precisely.
+### Software requirements
+
+The dataset preparation and validation scripts were developed using Python 3.10.
+
+The scripts and their dependencies are described in the `Python_Scripts/` directory.
+
+A verified installation environment and instructions for reproducing individual analyses will be added before the public repository release.
+
 
 ## Interactive ASTEROID application
 
