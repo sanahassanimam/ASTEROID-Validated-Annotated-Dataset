@@ -60,13 +60,13 @@ ASTEROID-Validated-Annotated-Dataset/
 │   ├── Baily_missing_summary
 │   ├── Beaty_missing_summary
 │   ├── Chong_missing_summary
-    .....
+│   └── ...
 ├── Schema_Viewer/
 │   └── ASTEROID.html
 └── Images/
-    └── workflow.png
-    └── explorer1.jpeg
-    └── explorer2.jpeg
+    ├── workflow.png
+    ├── explorer1.jpeg
+    ├── explorer2.jpeg
     └── explorer3.jpeg
 
     
