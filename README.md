@@ -31,9 +31,7 @@ Methodological annotations include standardized attributes such as step number, 
 
 **Data format:** JSON, structured for compatibility with Label Studio annotation import. The contents should be inspected using the included schema documentation and/or the ASTEROID viewer.
 
-**Source studies:** [ADD LINK TO A MANIFEST OF THE 160 SOURCE STUDIES, INCLUDING DOI OR OTHER IDENTIFIERS, IF AVAILABLE]
-
-**Data dictionary/schema:** [ADD THE EXISTING SCHEMA DOCUMENTATION PATH OR PROVIDE A MACHINE-READABLE SCHEMA FILE]
+**Data dictionary/schema:** Schema_Viewer/Schema.html
 
 ## Repository organization
 
