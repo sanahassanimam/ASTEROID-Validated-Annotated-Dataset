@@ -62,9 +62,9 @@ ASTEROID-Validated-Annotated-Dataset/
 │   └── schema_viewer.html
 └── Images/
     └── workflow.png
-    └── explorer1.png
-    └── explorer2.png
-    └── explorer3.png
+    └── explorer1.jpeg
+    └── explorer2.jpeg
+    └── explorer3.jpeg
     
 ```
 
