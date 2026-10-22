@@ -128,10 +128,7 @@ The interactive application supports three core activities:
 
 The app is a visualization and inspection tool; the downloadable, archived JSON dataset remains the authoritative data record. 
 
-### ASTEROID Interactive Application
-
-**Launch the application:**
-https://asteroid.shinyapps.io/asteroid/
+### Application screenshots
 
 #### Tab 1 — Schema Graph
 
