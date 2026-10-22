@@ -207,9 +207,13 @@ Annotations may contain passages derived from third-party publications. Do not a
 
 ## Citation
 
-**Dataset:** [ADD EXACT ZENODO CITATION AND DOI AFTER RECORD CREATION]
 
-**Related Data Descriptor:** [ADD PUBLICATION CITATION WHEN AVAILABLE]
+## Citation
+
+**Dataset:** ASTEROID — Validated Annotated Dataset of Graph Theory-Based fMRI Analytical Decisions. Zenodo dataset archive (DOI to be added upon publication of the record).
+
+**Related Data Descriptor:** Imam et al., "ASTEROID: A Validated Annotated Dataset of Graph Theory–Based fMRI Analytical Decisions Derived by LLM-Assisted Literature Mining." Manuscript in preparation.
+
 
 ## Contact
 
