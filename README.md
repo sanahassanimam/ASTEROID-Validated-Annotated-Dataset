@@ -8,8 +8,6 @@
 
 The accompanying manuscript describes annotations from **160 studies** using a schema of **125 labels**: **61 methodological labels** and **64 labels** covering study characteristics and experimental design. The annotations were produced through an LLM-assisted workflow, followed by automated quality-control procedures and human expert review. The final annotations include methodological steps, software, algorithms/types, parameters, and links to supporting text spans where available.
 
-> **Release verification:** Confirm that `Annotated_Files/all_annotations.json` contains the 160 unique final study records described in the manuscript before publishing this README. Earlier internal documentation listed 170 and 175 files; those numbers may refer to other stages of the corpus, but should not be used for the final dataset without verification.
-
 ## Contents
 
 - Final human-reviewed annotations in Label Studio-compatible JSON format
