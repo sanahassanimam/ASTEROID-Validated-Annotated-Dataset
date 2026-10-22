@@ -131,6 +131,15 @@ The app is a visualization and inspection tool; the downloadable, archived JSON 
 
 ## Dataset creation and validation
 
+### ASTEROID Dataset Construction Workflow
+
+The following diagram illustrates the ASTEROID dataset
+construction process, including literature collection,
+PDF-to-JSON conversion, LLM-assisted pre-annotation,
+automated quality control, and expert human review.
+
+![ASTEROID dataset construction workflow](Images/workflow.png)
+
 The manuscript describes the following workflow:
 
 1. Compile a corpus of published graph theory-based human fMRI studies.
