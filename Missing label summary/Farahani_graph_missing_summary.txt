@@ -1,0 +1,77 @@
+Title: Diurnal variations of resting-state fMRI data: A graph-based analysis
+
+graph_found_missing:
+- Atlas definition: Present
+- ROI definition: Present
+- Time series ROI: Present
+- Combine block: Missing
+- Compute connectivity: Present
+- Connectivity normalization: Present
+- Network definition: Present
+- Graph characteristics: Present
+- Negative correlation: Missing (they used absolute value of correlations)
+- Sparsity control: Present
+- Graph measures: Present
+- Result aggregation: Present (density selection/AUCs implied)
+
+graph_sublabels_found_missing:
+- Time series ROI:
+  - Step Number: Present
+  - Software: Present (DPABI)
+  - Algorithm/Type: Missing
+  - Parameters: Present
+
+- Atlas definition:
+  - Step Number: Present
+  - Software: Missing
+  - Algorithm/Type: Missing
+  - Parameters: Present (Schaefer-Yeo atlas — 200 ROIs; 7 systems)
+
+- ROI definition:
+  - Step Number: Present
+  - Software: Missing
+  - Algorithm/Type: Present (averaging)
+  - Parameters: Present
+
+- Compute connectivity:
+  - Step Number: Present
+  - Software: Missing
+  - Algorithm/Type: Present (Pearson’s correlation)
+  - Parameters: Present (200 × 200 weighted adjacency matrix)
+
+- Connectivity normalization:
+  - Step Number: Present
+  - Software: Missing
+  - Algorithm/Type: Present (Fisher r→z)
+  - Parameters: Present
+
+- Sparsity control:
+  - Step Number: Present
+  - Software: Missing
+  - Algorithm/Type: Present (density-based thresholding)
+  - Parameters: Present (0.05–0.5 step 0.05)
+
+- Graph characteristics:
+  - Step Number: Present
+  - Software: Missing
+  - Algorithm/Type: Present (weighted and binary; absolute value used for binarization)
+  - Parameters: Present
+
+- Graph measures:
+  - Step Number: Present
+  - Software: Present (BCT; GRETNA)
+  - Algorithm/Type: Present (list of global & local metrics)
+  - Parameters: Present
+
+- Network definition:
+  - Step Number: Present
+  - Software: Missing
+  - Algorithm/Type: Present (multi-layer modularity, Mucha et al., 2010)
+  - Parameters: Present (γ = 1.2; ω = 0.1)
+
+- Result aggregation:
+  - Step Number: Present
+  - Software: Missing
+  - Algorithm/Type: Present (AUCs and density selection; permutation testing described separately)
+  - Parameters: Present (visualization density = 0.05)
+

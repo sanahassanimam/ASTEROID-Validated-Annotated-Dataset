@@ -1,0 +1,59 @@
+Title: Longitudinal functional brain network reconfiguration in healthy aging (Malagurski et al., 2020)
+
+graph_found_missing:
+Atlas definition: Present
+ROI definition: Present
+Time series ROI: Present
+Combine block: Missing
+Compute connectivity: Present
+Connectivity normalization: Present
+Network definition: Present
+Graph characteristics: Present
+Negative correlation: Present
+Sparsity control: Present
+Graph measures: Present
+Result aggregation: Present
+
+graph_sublabels_found_missing:
+Atlas definition:
+  Present: Step Number, Parameters
+  Missing: Software, Algorithm/Type
+ROI definition:
+  Present: Step Number, Parameters
+  Missing: Software, Algorithm/Type
+Time series ROI:
+  Present: Step Number, Type
+  Missing: Software, Parameters
+Compute connectivity:
+  Present: Step Number, Algorithm
+  Missing: Software, Parameters
+Connectivity normalization:
+  Present: Step Number, Algorithm
+  Missing: Software, Parameters
+Network definition:
+  Present: Step Number, Parameters, Software
+  Missing: Algorithm/Type
+Graph characteristics:
+  Present: Step Number, Type
+  Missing: Software, Parameters
+Negative correlation:
+  Present: Step Number, Type
+  Missing: Software, Parameters
+Sparsity control:
+  Present: Step Number, Parameters
+  Missing: Software, Algorithm/Type
+Graph measures:
+  Present: Step Number, Parameters, Software
+  Missing: Algorithm/Type
+Result aggregation:
+  Present: Step Number, Parameters, Software, Type
+  Missing: None
+
+Notes:
+- Atlas: Schaefer et al., 2018; 200 cortical ROIs organized in 7 networks (Yeo).
+- Time series: voxel-averaged per ROI; Pearson correlations computed; Fisher r-to-z transform applied.
+- Negative handling: negative z excluded; diagonal and negative values set to zero (positive weighted networks).
+- Sparsity: supplementary thresholding using FDR-adjusted p < .01 for significant edges.
+- Network definition: multilayer modularity with γ = 1, ω = 1; GenLouvain (MATLAB) with 'moverandw' option; averaged across 100 optimizations.
+- Graph measures: flexibility, promiscuity, cohesion strength, disjointedness, recruitment; implemented with Network Community Toolbox.
+- Result aggregation: 50 null models per subject; 100 optimizations per null; comparisons using Welch's two-sample t-test in R (v3.5.2).

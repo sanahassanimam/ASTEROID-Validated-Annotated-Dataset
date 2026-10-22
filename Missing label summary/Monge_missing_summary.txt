@@ -1,0 +1,28 @@
+Title: Functional Modular Architecture Underlying Attentional Control in Aging
+Publication: Present=['DOI', 'Publisher', 'Title', 'Year']; Missing=['Author', 'Summary']
+Availability: Present=['Full-text']; Missing=['Code', 'Data', 'Preregistered', 'Remarks']
+Functional_scan_Information: Present=['Brand', 'Field of View (cm)', 'Flip angle', 'Inter-slice gap', 'Most-used software for preprocessing', 'Number of individuals for final analyses', 'Number of slices', 'Resting or Task/If Task, what task?', 'TE (ms)', 'TR (ms)', 'Voxel Size (mm x mm x mm)']; Missing=['Duration (s)', 'Eyes open/closed', 'Multicenter study? (Y/N)', 'Slice thickness']
+Design_specification: Present=['ISI distribution', 'Length of each trial', 'Number of blocks/trials']; Missing=['Block/event correlation', 'Efficiency optimization', 'Length of blocks']
+Task_specification: Present=['Instructions', 'Stimuli', 'Stimuli repetition']; Missing=None
+Planned_comparisons: Present=['Comparisons']; Missing=['Omnibus ANOVA']
+Human_subjects: Present=['Age', 'Handedness', 'Inclusion criteria', 'Male/Female', 'Number of subjects']; Missing=['Group matching', 'Rejected subjects']
+Ethics_approval: Present=['IRB']; Missing=None
+Behavioral_performance: Present=['Performance measure']; Missing=None
+
+preprocessing_found_missing:
+- Skull stripping: Present=['Software', 'Step Number']; Missing=['Algorithm', 'Type', 'Parameters']
+- Removal Init Vol: Present=['Parameters', 'Step Number']; Missing=['Software', 'Algorithm', 'Type']
+- Slice timing correction: Present=['Step Number']; Missing=['Software', 'Algorithm', 'Type', 'Parameters']
+- Alignment Head motion est: Present=['Algorithm', 'Software', 'Step Number']; Missing=['Type', 'Parameters']
+- Scrubbing: Present=['Parameters', 'Step Number', 'Type']; Missing=['Software', 'Algorithm']
+- Coregistration: Present=['Algorithm', 'Step Number']; Missing=['Software', 'Type', 'Parameters']
+- Spatial normalization (functional): Present=['Algorithm', 'Step Number']; Missing=['Software', 'Type', 'Parameters']
+- Spatial smooth: Present=['Parameters', 'Step Number']; Missing=['Software', 'Algorithm', 'Type']
+- Temporal filt: Present=['Parameters', 'Step Number', 'Type']; Missing=['Software', 'Algorithm']
+- Extract regressors: Present=['Step Number']; Missing=['Software', 'Algorithm', 'Type', 'Parameters']
+- Atlas definition: Present=['Parameters', 'Software', 'Step Number']; Missing=['Algorithm', 'Type']
+- Time series ROI: Present=['Step Number']; Missing=['Software', 'Algorithm', 'Type', 'Parameters']
+- Compute connectivity: Present=['Parameters', 'Step Number']; Missing=['Software', 'Algorithm', 'Type']
+- Negative correlation: Present=['Step Number']; Missing=['Software', 'Algorithm', 'Type', 'Parameters']
+- Network definition: Present=['Algorithm', 'Parameters', 'Software', 'Step Number']; Missing=['Type']
+- Graph measures: Present=['Algorithm', 'Parameters', 'Step Number']; Missing=['Software', 'Type']
