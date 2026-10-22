@@ -190,16 +190,16 @@ The dataset records information **as reported** in source publications. An unrep
 ## Data availability and versioning
 
 - **GitHub project:** https://github.com/sanahassanimam/ASTEROID-Validated-Annotated-Dataset
-- **Archived dataset:** [ADD ZENODO RECORD URL AFTER THE DEPOSIT IS READY]
-- **Version-specific DOI:** [ADD RESERVED OR REGISTERED DATASET DOI WHEN AVAILABLE]
-- **Dataset version/release:** [ADD RELEASE TAG OR VERSION]
+- **Archived dataset:** Zenodo record in preparation; a permanent DOI will be added upon publication.
+- **Version-specific DOI:** Zenodo record in preparation; a permanent DOI will be added upon publication.
+- **Dataset version/release:** Zenodo record in preparation; a permanent DOI will be added upon publication.
 - **Online viewer:** https://asteroid.shinyapps.io/asteroid/
 
 For scholarly citation, use the exact archived dataset version and its DOI once registered. The GitHub repository may evolve independently of the archived version used in the manuscript.
 
 ## Licence and third-party source material
 
-**Data licence:** [CONFIRM WITH CO-AUTHORS AFTER REVIEWING RIGHTS IN PUBLISHED SOURCE-TEXT EXCERPTS]
+**Data licence:** To be confirmed before public release, following review of third-party source-text rights.
 
 **Code licence:** [SPECIFY THE EXISTING APPROVED CODE LICENCE]
 
