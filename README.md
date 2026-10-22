@@ -59,7 +59,7 @@ ASTEROID-Validated-Annotated-Dataset/
 │   ├── merge_json_file.py
 │   └── review_newversion.py
 ├── Schema_Viewer/
-│   └── schema_viewer.html
+│   └── ASTEROID.html
 └── Images/
     └── workflow.png
     └── explorer1.jpeg
