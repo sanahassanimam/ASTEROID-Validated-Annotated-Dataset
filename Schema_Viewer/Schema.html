@@ -1,0 +1,726 @@
+<View>
+<View style="display:flex;align-items:start;gap:8px;flex-direction:row-reverse"><Text name="text" value="$text"/><View><Filter toName="Result aggregation" minlength="0" name="filter"/><Labels name="Result aggregation" toName="text" showInline="false">
+<Label value="Result aggregation — Step Number" background="#C01F2F"/>
+<Label value="Result aggregation — Software" background="#C01F2F"/>
+<Label value="Result aggregation — Algorithm" background="#C01F2F"/>
+<Label value="Result aggregation — Parameters" background="#C01F2F"/>
+</Labels></View></View>
+<Header value="Publication"/>
+<Labels name="Publication" toName="text">
+<Label value="Author" background="#00796B"/>
+<Label value="Title" background="#00796B"/>
+<Label value="Year" background="#00796B"/>
+<Label value="Publisher" background="#00796B"/>
+<Label value="DOI" background="#00796B"/>
+<Label value="Summary" background="#00796B"/>
+</Labels>
+<TextArea name="Publication__Summary__desc" toName="text" perRegion="true" whenLabelValue="Summary" placeholder="Describe/justify selection for 'Summary'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Publication__DOI__desc" toName="text" perRegion="true" whenLabelValue="DOI" placeholder="Describe/justify selection for 'DOI'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Publication__Publisher__desc" toName="text" perRegion="true" whenLabelValue="Publisher" placeholder="Describe/justify selection for 'Publisher'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Publication__Year__desc" toName="text" perRegion="true" whenLabelValue="Year" placeholder="Describe/justify selection for 'Year'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Publication__Title__desc" toName="text" perRegion="true" whenLabelValue="Title" placeholder="Describe/justify selection for 'Title'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Publication__Author__desc" toName="text" perRegion="true" whenLabelValue="Author" placeholder="Describe/justify selection for 'Author'…" rows="3" maxSubmissions="1"/>
+<Header value="Availability"/>
+<Labels name="Availability" toName="text">
+<Label value="Full-text" background="#455A64"/>
+<Label value="Data" background="#455A64"/>
+<Label value="Code" background="#455A64"/>
+<Label value="Preregistered" background="#455A64"/>
+<Label value="Remarks" background="#455A64"/>
+</Labels>
+<TextArea name="Availability__Remarks__desc" toName="text" perRegion="true" whenLabelValue="Remarks" placeholder="Describe/justify selection for 'Remarks'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Availability__Preregistered__desc" toName="text" perRegion="true" whenLabelValue="Preregistered" placeholder="Describe/justify selection for 'Preregistered'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Availability__Code__desc" toName="text" perRegion="true" whenLabelValue="Code" placeholder="Describe/justify selection for 'Code'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Availability__Data__desc" toName="text" perRegion="true" whenLabelValue="Data" placeholder="Describe/justify selection for 'Data'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Availability__Full_text__desc" toName="text" perRegion="true" whenLabelValue="Full-text" placeholder="Describe/justify selection for 'Full-text'…" rows="3" maxSubmissions="1"/>
+<Header value="Functional scan Information"/>
+<Labels name="Functional_scan_Information" toName="text">
+<Label value="Multicenter study? (Y/N)" background="#5C6BC0"/>
+<Label value="Brand" background="#5C6BC0"/>
+<Label value="Number of slices" background="#5C6BC0"/>
+<Label value="Slice thickness" background="#5C6BC0"/>
+<Label value="Flip angle" background="#5C6BC0"/>
+<Label value="Inter-slice gap" background="#5C6BC0"/>
+<Label value="Duration (s)" background="#5C6BC0"/>
+<Label value="Eyes open/closed" background="#5C6BC0"/>
+<Label value="Field of View (cm)" background="#5C6BC0"/>
+<Label value="TR (ms)" background="#5C6BC0"/>
+<Label value="TE (ms)" background="#5C6BC0"/>
+<Label value="Voxel Size (mm x mm x mm)" background="#5C6BC0"/>
+<Label value="Number of individuals for final analyses" background="#5C6BC0"/>
+<Label value="Most-used software for preprocessing" background="#5C6BC0"/>
+<Label value="Resting or Task/If Task, what task?" background="#5C6BC0"/>
+</Labels>
+<TextArea name="Functional_scan_Information__Resting_or_Task_If_Task__what_task___desc" toName="text" perRegion="true" whenLabelValue="Resting or Task/If Task, what task?" placeholder="Describe/justify selection for 'Resting or Task/If Task, what task?'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Most_used_software_for_preprocessing__desc" toName="text" perRegion="true" whenLabelValue="Most-used software for preprocessing" placeholder="Describe/justify selection for 'Most-used software for preprocessing'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Number_of_individuals_for_final_analyses__desc" toName="text" perRegion="true" whenLabelValue="Number of individuals for final analyses" placeholder="Describe/justify selection for 'Number of individuals for final analyses'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Voxel_Size__mm_x_mm_x_mm___desc" toName="text" perRegion="true" whenLabelValue="Voxel Size (mm x mm x mm)" placeholder="Describe/justify selection for 'Voxel Size (mm x mm x mm)'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__TE__ms___desc" toName="text" perRegion="true" whenLabelValue="TE (ms)" placeholder="Describe/justify selection for 'TE (ms)'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__TR__ms___desc" toName="text" perRegion="true" whenLabelValue="TR (ms)" placeholder="Describe/justify selection for 'TR (ms)'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Field_of_View__cm___desc" toName="text" perRegion="true" whenLabelValue="Field of View (cm)" placeholder="Describe/justify selection for 'Field of View (cm)'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Eyes_open_closed__desc" toName="text" perRegion="true" whenLabelValue="Eyes open/closed" placeholder="Describe/justify selection for 'Eyes open/closed'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Duration__s___desc" toName="text" perRegion="true" whenLabelValue="Duration (s)" placeholder="Describe/justify selection for 'Duration (s)'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Inter_slice_gap__desc" toName="text" perRegion="true" whenLabelValue="Inter-slice gap" placeholder="Describe/justify selection for 'Inter-slice gap'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Flip_angle__desc" toName="text" perRegion="true" whenLabelValue="Flip angle" placeholder="Describe/justify selection for 'Flip angle'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Slice_thickness__desc" toName="text" perRegion="true" whenLabelValue="Slice thickness" placeholder="Describe/justify selection for 'Slice thickness'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Number_of_slices__desc" toName="text" perRegion="true" whenLabelValue="Number of slices" placeholder="Describe/justify selection for 'Number of slices'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Brand__desc" toName="text" perRegion="true" whenLabelValue="Brand" placeholder="Describe/justify selection for 'Brand'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Functional_scan_Information__Multicenter_study___Y_N___desc" toName="text" perRegion="true" whenLabelValue="Multicenter study? (Y/N)" placeholder="Describe/justify selection for 'Multicenter study? (Y/N)'…" rows="3" maxSubmissions="1"/>
+<Header value="Design specification"/>
+<Labels name="Design_specification" toName="text">
+<Label value="Number of blocks/trials" background="#8E24AA"/>
+<Label value="Length of each trial" background="#8E24AA"/>
+<Label value="ISI distribution" background="#8E24AA"/>
+<Label value="Length of blocks" background="#8E24AA"/>
+<Label value="Efficiency optimization" background="#8E24AA"/>
+<Label value="Block/event correlation" background="#8E24AA"/>
+</Labels>
+<TextArea name="Design_specification__Block_event_correlation__desc" toName="text" perRegion="true" whenLabelValue="Block/event correlation" placeholder="Describe/justify selection for 'Block/event correlation'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Design_specification__Efficiency_optimization__desc" toName="text" perRegion="true" whenLabelValue="Efficiency optimization" placeholder="Describe/justify selection for 'Efficiency optimization'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Design_specification__Length_of_blocks__desc" toName="text" perRegion="true" whenLabelValue="Length of blocks" placeholder="Describe/justify selection for 'Length of blocks'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Design_specification__ISI_distribution__desc" toName="text" perRegion="true" whenLabelValue="ISI distribution" placeholder="Describe/justify selection for 'ISI distribution'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Design_specification__Length_of_each_trial__desc" toName="text" perRegion="true" whenLabelValue="Length of each trial" placeholder="Describe/justify selection for 'Length of each trial'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Design_specification__Number_of_blocks_trials__desc" toName="text" perRegion="true" whenLabelValue="Number of blocks/trials" placeholder="Describe/justify selection for 'Number of blocks/trials'…" rows="3" maxSubmissions="1"/>
+<Header value="Task specification"/>
+<Labels name="Task_specification" toName="text">
+<Label value="Instructions" background="#6D4C41"/>
+<Label value="Stimuli" background="#6D4C41"/>
+<Label value="Stimuli repetition" background="#6D4C41"/>
+</Labels>
+<TextArea name="Task_specification__Stimuli_repetition__desc" toName="text" perRegion="true" whenLabelValue="Stimuli repetition" placeholder="Describe/justify selection for 'Stimuli repetition'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Task_specification__Stimuli__desc" toName="text" perRegion="true" whenLabelValue="Stimuli" placeholder="Describe/justify selection for 'Stimuli'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Task_specification__Instructions__desc" toName="text" perRegion="true" whenLabelValue="Instructions" placeholder="Describe/justify selection for 'Instructions'…" rows="3" maxSubmissions="1"/>
+<Header value="Planned comparisons"/>
+<Labels name="Planned_comparisons" toName="text">
+<Label value="Comparisons" background="#3949AB"/>
+<Label value="Omnibus ANOVA" background="#3949AB"/>
+</Labels>
+<TextArea name="Planned_comparisons__Omnibus_ANOVA__desc" toName="text" perRegion="true" whenLabelValue="Omnibus ANOVA" placeholder="Describe/justify selection for 'Omnibus ANOVA'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Planned_comparisons__Comparisons__desc" toName="text" perRegion="true" whenLabelValue="Comparisons" placeholder="Describe/justify selection for 'Comparisons'…" rows="3" maxSubmissions="1"/>
+<Header value="Human subjects"/>
+<Labels name="Human_subjects" toName="text">
+<Label value="Number of subjects" background="#00897B"/>
+<Label value="Age" background="#00897B"/>
+<Label value="Handedness" background="#00897B"/>
+<Label value="Male/Female" background="#00897B"/>
+<Label value="Inclusion criteria" background="#00897B"/>
+<Label value="Rejected subjects" background="#00897B"/>
+<Label value="Group matching" background="#00897B"/>
+</Labels>
+<TextArea name="Human_subjects__Group_matching__desc" toName="text" perRegion="true" whenLabelValue="Group matching" placeholder="Describe/justify selection for 'Group matching'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Human_subjects__Rejected_subjects__desc" toName="text" perRegion="true" whenLabelValue="Rejected subjects" placeholder="Describe/justify selection for 'Rejected subjects'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Human_subjects__Inclusion_criteria__desc" toName="text" perRegion="true" whenLabelValue="Inclusion criteria" placeholder="Describe/justify selection for 'Inclusion criteria'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Human_subjects__Male_Female__desc" toName="text" perRegion="true" whenLabelValue="Male/Female" placeholder="Describe/justify selection for 'Male/Female'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Human_subjects__Handedness__desc" toName="text" perRegion="true" whenLabelValue="Handedness" placeholder="Describe/justify selection for 'Handedness'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Human_subjects__Age__desc" toName="text" perRegion="true" whenLabelValue="Age" placeholder="Describe/justify selection for 'Age'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Human_subjects__Number_of_subjects__desc" toName="text" perRegion="true" whenLabelValue="Number of subjects" placeholder="Describe/justify selection for 'Number of subjects'…" rows="3" maxSubmissions="1"/>
+<Header value="Ethics approval"/>
+<Labels name="Ethics_approval" toName="text">
+<Label value="IRB" background="#7B1FA2"/>
+</Labels>
+<TextArea name="Ethics_approval__IRB__desc" toName="text" perRegion="true" whenLabelValue="IRB" placeholder="Describe/justify selection for 'IRB'…" rows="3" maxSubmissions="1"/>
+<Header value="Behavioral performance"/>
+<Labels name="Behavioral_performance" toName="text">
+<Label value="Performance measure" background="#558B2F"/>
+</Labels>
+<TextArea name="Behavioral_performance__Performance_measure__desc" toName="text" perRegion="true" whenLabelValue="Performance measure" placeholder="Describe/justify selection for 'Performance measure'…" rows="3" maxSubmissions="1"/>
+ 
+<Header value="Preprocessing — Structural / Functional (Algorithm)"/>
+<Labels name="INU correction" toName="text">
+<Label value="INU correction — Step Number" background="#DC2C2C"/>
+<Label value="INU correction — Software" background="#DC2C2C"/>
+<Label value="INU correction — Algorithm" background="#DC2C2C"/>
+<Label value="INU correction — Parameters" background="#DC2C2C"/>
+</Labels>
+<TextArea name="INU_correction__INU_correction___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="INU correction — Step Number" placeholder="Describe/justify selection for 'INU correction — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="INU_correction__INU_correction___Software__desc" toName="text" perRegion="true" whenLabelValue="INU correction — Software" placeholder="Describe/justify selection for 'INU correction — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="INU_correction__INU_correction___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="INU correction — Algorithm" placeholder="Describe/justify selection for 'INU correction — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="INU_correction__INU_correction___Parameters__desc" toName="text" perRegion="true" whenLabelValue="INU correction — Parameters" placeholder="Describe/justify selection for 'INU correction — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Denoised" toName="text">
+<Label value="Denoised — Step Number" background="#C02F1F"/>
+<Label value="Denoised — Software" background="#C02F1F"/>
+<Label value="Denoised — Algorithm" background="#C02F1F"/>
+<Label value="Denoised — Parameters" background="#C02F1F"/>
+</Labels>
+<TextArea name="Denoised__Denoised___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Denoised — Step Number" placeholder="Describe/justify selection for 'Denoised — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Denoised__Denoised___Software__desc" toName="text" perRegion="true" whenLabelValue="Denoised — Software" placeholder="Describe/justify selection for 'Denoised — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Denoised__Denoised___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Denoised — Algorithm" placeholder="Describe/justify selection for 'Denoised — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Denoised__Denoised___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Denoised — Parameters" placeholder="Describe/justify selection for 'Denoised — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Gradient Distortion Correction" toName="text">
+<Label value="Gradient Distortion Correction — Step Number" background="#DC4F2C"/>
+<Label value="Gradient Distortion Correction — Software" background="#DC4F2C"/>
+<Label value="Gradient Distortion Correction — Algorithm" background="#DC4F2C"/>
+<Label value="Gradient Distortion Correction — Parameters" background="#DC4F2C"/>
+</Labels>
+<TextArea name="Gradient_Distortion_Correction__Gradient_Distortion_Correction___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Gradient Distortion Correction — Step Number" placeholder="Describe/justify selection for 'Gradient Distortion Correction — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Gradient_Distortion_Correction__Gradient_Distortion_Correction___Software__desc" toName="text" perRegion="true" whenLabelValue="Gradient Distortion Correction — Software" placeholder="Describe/justify selection for 'Gradient Distortion Correction — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Gradient_Distortion_Correction__Gradient_Distortion_Correction___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Gradient Distortion Correction — Algorithm" placeholder="Describe/justify selection for 'Gradient Distortion Correction — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Gradient_Distortion_Correction__Gradient_Distortion_Correction___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Gradient Distortion Correction — Parameters" placeholder="Describe/justify selection for 'Gradient Distortion Correction — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Fuse conform" toName="text">
+<Label value="Fuse conform — Step Number" background="#C04F1F"/>
+<Label value="Fuse conform — Software" background="#C04F1F"/>
+<Label value="Fuse conform — Algorithm" background="#C04F1F"/>
+<Label value="Fuse conform — Parameters" background="#C04F1F"/>
+</Labels>
+<TextArea name="Fuse_conform__Fuse_conform___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Fuse conform — Step Number" placeholder="Describe/justify selection for 'Fuse conform — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Fuse_conform__Fuse_conform___Software__desc" toName="text" perRegion="true" whenLabelValue="Fuse conform — Software" placeholder="Describe/justify selection for 'Fuse conform — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Fuse_conform__Fuse_conform___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Fuse conform — Algorithm" placeholder="Describe/justify selection for 'Fuse conform — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Fuse_conform__Fuse_conform___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Fuse conform — Parameters" placeholder="Describe/justify selection for 'Fuse conform — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Skull stripping" toName="text">
+<Label value="Skull stripping — Step Number" background="#DC722C"/>
+<Label value="Skull stripping — Software" background="#DC722C"/>
+<Label value="Skull stripping — Algorithm" background="#DC722C"/>
+<Label value="Skull stripping — Parameters" background="#DC722C"/>
+</Labels>
+<TextArea name="Skull_stripping__Skull_stripping___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Skull stripping — Step Number" placeholder="Describe/justify selection for 'Skull stripping — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Skull_stripping__Skull_stripping___Software__desc" toName="text" perRegion="true" whenLabelValue="Skull stripping — Software" placeholder="Describe/justify selection for 'Skull stripping — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Skull_stripping__Skull_stripping___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Skull stripping — Algorithm" placeholder="Describe/justify selection for 'Skull stripping — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Skull_stripping__Skull_stripping___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Skull stripping — Parameters" placeholder="Describe/justify selection for 'Skull stripping — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Skull extraction" toName="text">
+<Label value="Skull extraction — Step Number" background="#C0701F"/>
+<Label value="Skull extraction — Software" background="#C0701F"/>
+<Label value="Skull extraction — Algorithm" background="#C0701F"/>
+<Label value="Skull extraction — Parameters" background="#C0701F"/>
+</Labels>
+<TextArea name="Skull_extraction__Skull_extraction___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Skull extraction — Step Number" placeholder="Describe/justify selection for 'Skull extraction — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Skull_extraction__Skull_extraction___Software__desc" toName="text" perRegion="true" whenLabelValue="Skull extraction — Software" placeholder="Describe/justify selection for 'Skull extraction — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Skull_extraction__Skull_extraction___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Skull extraction — Algorithm" placeholder="Describe/justify selection for 'Skull extraction — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Skull_extraction__Skull_extraction___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Skull extraction — Parameters" placeholder="Describe/justify selection for 'Skull extraction — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Spatial normalization" toName="text">
+<Label value="Spatial normalization — Step Number" background="#DC962C"/>
+<Label value="Spatial normalization — Software" background="#DC962C"/>
+<Label value="Spatial normalization — Algorithm" background="#DC962C"/>
+<Label value="Spatial normalization — Parameters" background="#DC962C"/>
+</Labels>
+<TextArea name="Spatial_normalization__Spatial_normalization___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Spatial normalization — Step Number" placeholder="Describe/justify selection for 'Spatial normalization — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Spatial_normalization__Spatial_normalization___Software__desc" toName="text" perRegion="true" whenLabelValue="Spatial normalization — Software" placeholder="Describe/justify selection for 'Spatial normalization — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Spatial_normalization__Spatial_normalization___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Spatial normalization — Algorithm" placeholder="Describe/justify selection for 'Spatial normalization — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Spatial_normalization__Spatial_normalization___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Spatial normalization — Parameters" placeholder="Describe/justify selection for 'Spatial normalization — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="BBR crossmodal registration" toName="text">
+<Label value="BBR crossmodal registration — Step Number" background="#C0901F"/>
+<Label value="BBR crossmodal registration — Software" background="#C0901F"/>
+<Label value="BBR crossmodal registration — Algorithm" background="#C0901F"/>
+<Label value="BBR crossmodal registration — Parameters" background="#C0901F"/>
+</Labels>
+<TextArea name="BBR_crossmodal_registration__BBR_crossmodal_registration___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="BBR crossmodal registration — Step Number" placeholder="Describe/justify selection for 'BBR crossmodal registration — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="BBR_crossmodal_registration__BBR_crossmodal_registration___Software__desc" toName="text" perRegion="true" whenLabelValue="BBR crossmodal registration — Software" placeholder="Describe/justify selection for 'BBR crossmodal registration — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="BBR_crossmodal_registration__BBR_crossmodal_registration___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="BBR crossmodal registration — Algorithm" placeholder="Describe/justify selection for 'BBR crossmodal registration — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="BBR_crossmodal_registration__BBR_crossmodal_registration___Parameters__desc" toName="text" perRegion="true" whenLabelValue="BBR crossmodal registration — Parameters" placeholder="Describe/justify selection for 'BBR crossmodal registration — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Surface reconstruction" toName="text">
+<Label value="Surface reconstruction — Step Number" background="#DCB92C"/>
+<Label value="Surface reconstruction — Software" background="#DCB92C"/>
+<Label value="Surface reconstruction — Algorithm" background="#DCB92C"/>
+<Label value="Surface reconstruction — Parameters" background="#DCB92C"/>
+</Labels>
+<TextArea name="Surface_reconstruction__Surface_reconstruction___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Surface reconstruction — Step Number" placeholder="Describe/justify selection for 'Surface reconstruction — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Surface_reconstruction__Surface_reconstruction___Software__desc" toName="text" perRegion="true" whenLabelValue="Surface reconstruction — Software" placeholder="Describe/justify selection for 'Surface reconstruction — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Surface_reconstruction__Surface_reconstruction___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Surface reconstruction — Algorithm" placeholder="Describe/justify selection for 'Surface reconstruction — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Surface_reconstruction__Surface_reconstruction___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Surface reconstruction — Parameters" placeholder="Describe/justify selection for 'Surface reconstruction — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Segmentation" toName="text">
+<Label value="Segmentation — Step Number" background="#C0B01F"/>
+<Label value="Segmentation — Software" background="#C0B01F"/>
+<Label value="Segmentation — Algorithm" background="#C0B01F"/>
+<Label value="Segmentation — Parameters" background="#C0B01F"/>
+</Labels>
+<TextArea name="Segmentation__Segmentation___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Segmentation — Step Number" placeholder="Describe/justify selection for 'Segmentation — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Segmentation__Segmentation___Software__desc" toName="text" perRegion="true" whenLabelValue="Segmentation — Software" placeholder="Describe/justify selection for 'Segmentation — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Segmentation__Segmentation___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Segmentation — Algorithm" placeholder="Describe/justify selection for 'Segmentation — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Segmentation__Segmentation___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Segmentation — Parameters" placeholder="Describe/justify selection for 'Segmentation — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Exclusion" toName="text">
+<Label value="Exclusion — Step Number" background="#DCDC2C"/>
+<Label value="Exclusion — Software" background="#DCDC2C"/>
+<Label value="Exclusion — Algorithm" background="#DCDC2C"/>
+<Label value="Exclusion — Parameters" background="#DCDC2C"/>
+</Labels>
+<TextArea name="Exclusion__Exclusion___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Exclusion — Step Number" placeholder="Describe/justify selection for 'Exclusion — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Exclusion__Exclusion___Software__desc" toName="text" perRegion="true" whenLabelValue="Exclusion — Software" placeholder="Describe/justify selection for 'Exclusion — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Exclusion__Exclusion___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Exclusion — Algorithm" placeholder="Describe/justify selection for 'Exclusion — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Exclusion__Exclusion___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Exclusion — Parameters" placeholder="Describe/justify selection for 'Exclusion — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Concatenate Runs" toName="text">
+<Label value="Concatenate Runs — Step Number" background="#B0C01F"/>
+<Label value="Concatenate Runs — Software" background="#B0C01F"/>
+<Label value="Concatenate Runs — Algorithm" background="#B0C01F"/>
+<Label value="Concatenate Runs — Parameters" background="#B0C01F"/>
+</Labels>
+<TextArea name="Concatenate_Runs__Concatenate_Runs___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Concatenate Runs — Step Number" placeholder="Describe/justify selection for 'Concatenate Runs — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Concatenate_Runs__Concatenate_Runs___Software__desc" toName="text" perRegion="true" whenLabelValue="Concatenate Runs — Software" placeholder="Describe/justify selection for 'Concatenate Runs — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Concatenate_Runs__Concatenate_Runs___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Concatenate Runs — Algorithm" placeholder="Describe/justify selection for 'Concatenate Runs — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Concatenate_Runs__Concatenate_Runs___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Concatenate Runs — Parameters" placeholder="Describe/justify selection for 'Concatenate Runs — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Removal Init Vol" toName="text">
+<Label value="Removal Init Vol — Step Number" background="#B9DC2C"/>
+<Label value="Removal Init Vol — Software" background="#B9DC2C"/>
+<Label value="Removal Init Vol — Algorithm" background="#B9DC2C"/>
+<Label value="Removal Init Vol — Parameters" background="#B9DC2C"/>
+</Labels>
+<TextArea name="Removal_Init_Vol__Removal_Init_Vol___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Removal Init Vol — Step Number" placeholder="Describe/justify selection for 'Removal Init Vol — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Removal_Init_Vol__Removal_Init_Vol___Software__desc" toName="text" perRegion="true" whenLabelValue="Removal Init Vol — Software" placeholder="Describe/justify selection for 'Removal Init Vol — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Removal_Init_Vol__Removal_Init_Vol___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Removal Init Vol — Algorithm" placeholder="Describe/justify selection for 'Removal Init Vol — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Removal_Init_Vol__Removal_Init_Vol___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Removal Init Vol — Parameters" placeholder="Describe/justify selection for 'Removal Init Vol — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Alignment Head motion est" toName="text">
+<Label value="Alignment Head motion est — Step Number" background="#90C01F"/>
+<Label value="Alignment Head motion est — Software" background="#90C01F"/>
+<Label value="Alignment Head motion est — Algorithm" background="#90C01F"/>
+<Label value="Alignment Head motion est — Parameters" background="#90C01F"/>
+</Labels>
+<TextArea name="Alignment_Head_motion_est__Alignment_Head_motion_est___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Alignment Head motion est — Step Number" placeholder="Describe/justify selection for 'Alignment Head motion est — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Alignment_Head_motion_est__Alignment_Head_motion_est___Software__desc" toName="text" perRegion="true" whenLabelValue="Alignment Head motion est — Software" placeholder="Describe/justify selection for 'Alignment Head motion est — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Alignment_Head_motion_est__Alignment_Head_motion_est___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Alignment Head motion est — Algorithm" placeholder="Describe/justify selection for 'Alignment Head motion est — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Alignment_Head_motion_est__Alignment_Head_motion_est___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Alignment Head motion est — Parameters" placeholder="Describe/justify selection for 'Alignment Head motion est — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Despiking" toName="text">
+<Label value="Despiking — Step Number" background="#96DC2C"/>
+<Label value="Despiking — Software" background="#96DC2C"/>
+<Label value="Despiking — Algorithm" background="#96DC2C"/>
+<Label value="Despiking — Parameters" background="#96DC2C"/>
+</Labels>
+<TextArea name="Despiking__Despiking___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Despiking — Step Number" placeholder="Describe/justify selection for 'Despiking — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Despiking__Despiking___Software__desc" toName="text" perRegion="true" whenLabelValue="Despiking — Software" placeholder="Describe/justify selection for 'Despiking — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Despiking__Despiking___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Despiking — Algorithm" placeholder="Describe/justify selection for 'Despiking — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Despiking__Despiking___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Despiking — Parameters" placeholder="Describe/justify selection for 'Despiking — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Scrubbing" toName="text">
+<Label value="Scrubbing — Step Number" background="#70C01F"/>
+<Label value="Scrubbing — Software" background="#70C01F"/>
+<Label value="Scrubbing — Algorithm" background="#70C01F"/>
+<Label value="Scrubbing — Parameters" background="#70C01F"/>
+</Labels>
+<TextArea name="Scrubbing__Scrubbing___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Scrubbing — Step Number" placeholder="Describe/justify selection for 'Scrubbing — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Scrubbing__Scrubbing___Software__desc" toName="text" perRegion="true" whenLabelValue="Scrubbing — Software" placeholder="Describe/justify selection for 'Scrubbing — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Scrubbing__Scrubbing___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Scrubbing — Algorithm" placeholder="Describe/justify selection for 'Scrubbing — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Scrubbing__Scrubbing___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Scrubbing — Parameters" placeholder="Describe/justify selection for 'Scrubbing — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Interpolate" toName="text">
+<Label value="Interpolate — Step Number" background="#72DC2C"/>
+<Label value="Interpolate — Software" background="#72DC2C"/>
+<Label value="Interpolate — Algorithm" background="#72DC2C"/>
+<Label value="Interpolate — Parameters" background="#72DC2C"/>
+</Labels>
+<TextArea name="Interpolate__Interpolate___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Interpolate — Step Number" placeholder="Describe/justify selection for 'Interpolate — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Interpolate__Interpolate___Software__desc" toName="text" perRegion="true" whenLabelValue="Interpolate — Software" placeholder="Describe/justify selection for 'Interpolate — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Interpolate__Interpolate___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Interpolate — Algorithm" placeholder="Describe/justify selection for 'Interpolate — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Interpolate__Interpolate___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Interpolate — Parameters" placeholder="Describe/justify selection for 'Interpolate — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Slice timing correction" toName="text">
+<Label value="Slice timing correction — Step Number" background="#4FC01F"/>
+<Label value="Slice timing correction — Software" background="#4FC01F"/>
+<Label value="Slice timing correction — Algorithm" background="#4FC01F"/>
+<Label value="Slice timing correction — Parameters" background="#4FC01F"/>
+</Labels>
+<TextArea name="Slice_timing_correction__Slice_timing_correction___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Slice timing correction — Step Number" placeholder="Describe/justify selection for 'Slice timing correction — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Slice_timing_correction__Slice_timing_correction___Software__desc" toName="text" perRegion="true" whenLabelValue="Slice timing correction — Software" placeholder="Describe/justify selection for 'Slice timing correction — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Slice_timing_correction__Slice_timing_correction___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Slice timing correction — Algorithm" placeholder="Describe/justify selection for 'Slice timing correction — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Slice_timing_correction__Slice_timing_correction___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Slice timing correction — Parameters" placeholder="Describe/justify selection for 'Slice timing correction — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Field map correction" toName="text">
+<Label value="Field map correction — Step Number" background="#4FDC2C"/>
+<Label value="Field map correction — Software" background="#4FDC2C"/>
+<Label value="Field map correction — Algorithm" background="#4FDC2C"/>
+<Label value="Field map correction — Parameters" background="#4FDC2C"/>
+</Labels>
+<TextArea name="Field_map_correction__Field_map_correction___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Field map correction — Step Number" placeholder="Describe/justify selection for 'Field map correction — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Field_map_correction__Field_map_correction___Software__desc" toName="text" perRegion="true" whenLabelValue="Field map correction — Software" placeholder="Describe/justify selection for 'Field map correction — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Field_map_correction__Field_map_correction___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Field map correction — Algorithm" placeholder="Describe/justify selection for 'Field map correction — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Field_map_correction__Field_map_correction___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Field map correction — Parameters" placeholder="Describe/justify selection for 'Field map correction — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Unwarp" toName="text">
+<Label value="Unwarp — Step Number" background="#2FC01F"/>
+<Label value="Unwarp — Software" background="#2FC01F"/>
+<Label value="Unwarp — Algorithm" background="#2FC01F"/>
+<Label value="Unwarp — Parameters" background="#2FC01F"/>
+</Labels>
+<TextArea name="Unwarp__Unwarp___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Unwarp — Step Number" placeholder="Describe/justify selection for 'Unwarp — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Unwarp__Unwarp___Software__desc" toName="text" perRegion="true" whenLabelValue="Unwarp — Software" placeholder="Describe/justify selection for 'Unwarp — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Unwarp__Unwarp___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Unwarp — Algorithm" placeholder="Describe/justify selection for 'Unwarp — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Unwarp__Unwarp___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Unwarp — Parameters" placeholder="Describe/justify selection for 'Unwarp — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Combined echos" toName="text">
+<Label value="Combined echos — Step Number" background="#2CDC2C"/>
+<Label value="Combined echos — Software" background="#2CDC2C"/>
+<Label value="Combined echos — Algorithm" background="#2CDC2C"/>
+<Label value="Combined echos — Parameters" background="#2CDC2C"/>
+</Labels>
+<TextArea name="Combined_echos__Combined_echos___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Combined echos — Step Number" placeholder="Describe/justify selection for 'Combined echos — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Combined_echos__Combined_echos___Software__desc" toName="text" perRegion="true" whenLabelValue="Combined echos — Software" placeholder="Describe/justify selection for 'Combined echos — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Combined_echos__Combined_echos___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Combined echos — Algorithm" placeholder="Describe/justify selection for 'Combined echos — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Combined_echos__Combined_echos___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Combined echos — Parameters" placeholder="Describe/justify selection for 'Combined echos — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Intensity normalization" toName="text">
+<Label value="Intensity normalization — Step Number" background="#1FC02F"/>
+<Label value="Intensity normalization — Software" background="#1FC02F"/>
+<Label value="Intensity normalization — Algorithm" background="#1FC02F"/>
+<Label value="Intensity normalization — Parameters" background="#1FC02F"/>
+</Labels>
+<TextArea name="Intensity_normalization__Intensity_normalization___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Intensity normalization — Step Number" placeholder="Describe/justify selection for 'Intensity normalization — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Intensity_normalization__Intensity_normalization___Software__desc" toName="text" perRegion="true" whenLabelValue="Intensity normalization — Software" placeholder="Describe/justify selection for 'Intensity normalization — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Intensity_normalization__Intensity_normalization___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Intensity normalization — Algorithm" placeholder="Describe/justify selection for 'Intensity normalization — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Intensity_normalization__Intensity_normalization___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Intensity normalization — Parameters" placeholder="Describe/justify selection for 'Intensity normalization — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Grand mean scaling" toName="text">
+<Label value="Grand mean scaling — Step Number" background="#2CDC4F"/>
+<Label value="Grand mean scaling — Software" background="#2CDC4F"/>
+<Label value="Grand mean scaling — Algorithm" background="#2CDC4F"/>
+<Label value="Grand mean scaling — Parameters" background="#2CDC4F"/>
+</Labels>
+<TextArea name="Grand_mean_scaling__Grand_mean_scaling___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Grand mean scaling — Step Number" placeholder="Describe/justify selection for 'Grand mean scaling — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Grand_mean_scaling__Grand_mean_scaling___Software__desc" toName="text" perRegion="true" whenLabelValue="Grand mean scaling — Software" placeholder="Describe/justify selection for 'Grand mean scaling — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Grand_mean_scaling__Grand_mean_scaling___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Grand mean scaling — Algorithm" placeholder="Describe/justify selection for 'Grand mean scaling — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Grand_mean_scaling__Grand_mean_scaling___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Grand mean scaling — Parameters" placeholder="Describe/justify selection for 'Grand mean scaling — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Coregistration" toName="text">
+<Label value="Coregistration — Step Number" background="#1FC04F"/>
+<Label value="Coregistration — Software" background="#1FC04F"/>
+<Label value="Coregistration — Algorithm" background="#1FC04F"/>
+<Label value="Coregistration — Parameters" background="#1FC04F"/>
+</Labels>
+<TextArea name="Coregistration__Coregistration___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Coregistration — Step Number" placeholder="Describe/justify selection for 'Coregistration — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Coregistration__Coregistration___Software__desc" toName="text" perRegion="true" whenLabelValue="Coregistration — Software" placeholder="Describe/justify selection for 'Coregistration — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Coregistration__Coregistration___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Coregistration — Algorithm" placeholder="Describe/justify selection for 'Coregistration — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Coregistration__Coregistration___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Coregistration — Parameters" placeholder="Describe/justify selection for 'Coregistration — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Spatial normalization (functional)" toName="text">
+<Label value="Spatial normalization (functional) — Step Number" background="#2CDC72"/>
+<Label value="Spatial normalization (functional) — Software" background="#2CDC72"/>
+<Label value="Spatial normalization (functional) — Algorithm" background="#2CDC72"/>
+<Label value="Spatial normalization (functional) — Parameters" background="#2CDC72"/>
+</Labels>
+<TextArea name="Spatial_normalization_functional__Spatial_normalization_functional___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Spatial normalization (functional) — Step Number" placeholder="Describe/justify selection for 'Spatial normalization (functional) — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Spatial_normalization_functional__Spatial_normalization_functional___Software__desc" toName="text" perRegion="true" whenLabelValue="Spatial normalization (functional) — Software" placeholder="Describe/justify selection for 'Spatial normalization (functional) — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Spatial_normalization_functional__Spatial_normalization_functional___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Spatial normalization (functional) — Algorithm" placeholder="Describe/justify selection for 'Spatial normalization (functional) — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Spatial_normalization_functional__Spatial_normalization_functional___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Spatial normalization (functional) — Parameters" placeholder="Describe/justify selection for 'Spatial normalization (functional) — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Spatial smooth" toName="text">
+<Label value="Spatial smooth — Step Number" background="#1FC070"/>
+<Label value="Spatial smooth — Software" background="#1FC070"/>
+<Label value="Spatial smooth — Algorithm" background="#1FC070"/>
+<Label value="Spatial smooth — Parameters" background="#1FC070"/>
+</Labels>
+<TextArea name="Spatial_smooth__Spatial_smooth___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Spatial smooth — Step Number" placeholder="Describe/justify selection for 'Spatial smooth — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Spatial_smooth__Spatial_smooth___Software__desc" toName="text" perRegion="true" whenLabelValue="Spatial smooth — Software" placeholder="Describe/justify selection for 'Spatial smooth — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Spatial_smooth__Spatial_smooth___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Spatial smooth — Algorithm" placeholder="Describe/justify selection for 'Spatial smooth — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Spatial_smooth__Spatial_smooth___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Spatial smooth — Parameters" placeholder="Describe/justify selection for 'Spatial smooth — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Extract regressors" toName="text">
+<Label value="Extract regressors — Step Number" background="#2CDC96"/>
+<Label value="Extract regressors — Software" background="#2CDC96"/>
+<Label value="Extract regressors — Algorithm" background="#2CDC96"/>
+<Label value="Extract regressors — Parameters" background="#2CDC96"/>
+</Labels>
+<TextArea name="Extract_regressors__Extract_regressors___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Extract regressors — Step Number" placeholder="Describe/justify selection for 'Extract regressors — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Extract_regressors__Extract_regressors___Software__desc" toName="text" perRegion="true" whenLabelValue="Extract regressors — Software" placeholder="Describe/justify selection for 'Extract regressors — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Extract_regressors__Extract_regressors___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Extract regressors — Algorithm" placeholder="Describe/justify selection for 'Extract regressors — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Extract_regressors__Extract_regressors___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Extract regressors — Parameters" placeholder="Describe/justify selection for 'Extract regressors — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Surface" toName="text">
+<Label value="Surface — Step Number" background="#1FC090"/>
+<Label value="Surface — Software" background="#1FC090"/>
+<Label value="Surface — Algorithm" background="#1FC090"/>
+<Label value="Surface — Parameters" background="#1FC090"/>
+</Labels>
+<TextArea name="Surface__Surface___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Surface — Step Number" placeholder="Describe/justify selection for 'Surface — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Surface__Surface___Software__desc" toName="text" perRegion="true" whenLabelValue="Surface — Software" placeholder="Describe/justify selection for 'Surface — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Surface__Surface___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Surface — Algorithm" placeholder="Describe/justify selection for 'Surface — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Surface__Surface___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Surface — Parameters" placeholder="Describe/justify selection for 'Surface — Parameters'…" rows="3" maxSubmissions="1"/>
+<Header value="Preprocessing — Noise removal / Filtering (Type)"/>
+<Labels name="RETROICOR" toName="text">
+<Label value="RETROICOR — Step Number" background="#2CDCB9"/>
+<Label value="RETROICOR — Software" background="#2CDCB9"/>
+<Label value="RETROICOR — Type" background="#2CDCB9"/>
+<Label value="RETROICOR — Parameters" background="#2CDCB9"/>
+</Labels>
+<TextArea name="RETROICOR__RETROICOR___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="RETROICOR — Step Number" placeholder="Describe/justify selection for 'RETROICOR — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="RETROICOR__RETROICOR___Software__desc" toName="text" perRegion="true" whenLabelValue="RETROICOR — Software" placeholder="Describe/justify selection for 'RETROICOR — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="RETROICOR__RETROICOR___Type__desc" toName="text" perRegion="true" whenLabelValue="RETROICOR — Type" placeholder="Describe/justify selection for 'RETROICOR — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="RETROICOR__RETROICOR___Parameters__desc" toName="text" perRegion="true" whenLabelValue="RETROICOR — Parameters" placeholder="Describe/justify selection for 'RETROICOR — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="RVHRCOR" toName="text">
+<Label value="RVHRCOR — Step Number" background="#1FC0B0"/>
+<Label value="RVHRCOR — Software" background="#1FC0B0"/>
+<Label value="RVHRCOR — Type" background="#1FC0B0"/>
+<Label value="RVHRCOR — Parameters" background="#1FC0B0"/>
+</Labels>
+<TextArea name="RVHRCOR__RVHRCOR___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="RVHRCOR — Step Number" placeholder="Describe/justify selection for 'RVHRCOR — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="RVHRCOR__RVHRCOR___Software__desc" toName="text" perRegion="true" whenLabelValue="RVHRCOR — Software" placeholder="Describe/justify selection for 'RVHRCOR — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="RVHRCOR__RVHRCOR___Type__desc" toName="text" perRegion="true" whenLabelValue="RVHRCOR — Type" placeholder="Describe/justify selection for 'RVHRCOR — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="RVHRCOR__RVHRCOR___Parameters__desc" toName="text" perRegion="true" whenLabelValue="RVHRCOR — Parameters" placeholder="Describe/justify selection for 'RVHRCOR — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="ANATICOR" toName="text">
+<Label value="ANATICOR — Step Number" background="#2CDCDC"/>
+<Label value="ANATICOR — Software" background="#2CDCDC"/>
+<Label value="ANATICOR — Type" background="#2CDCDC"/>
+<Label value="ANATICOR — Parameters" background="#2CDCDC"/>
+</Labels>
+<TextArea name="ANATICOR__ANATICOR___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="ANATICOR — Step Number" placeholder="Describe/justify selection for 'ANATICOR — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ANATICOR__ANATICOR___Software__desc" toName="text" perRegion="true" whenLabelValue="ANATICOR — Software" placeholder="Describe/justify selection for 'ANATICOR — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ANATICOR__ANATICOR___Type__desc" toName="text" perRegion="true" whenLabelValue="ANATICOR — Type" placeholder="Describe/justify selection for 'ANATICOR — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ANATICOR__ANATICOR___Parameters__desc" toName="text" perRegion="true" whenLabelValue="ANATICOR — Parameters" placeholder="Describe/justify selection for 'ANATICOR — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="PESTICA" toName="text">
+<Label value="PESTICA — Step Number" background="#1FB0C0"/>
+<Label value="PESTICA — Software" background="#1FB0C0"/>
+<Label value="PESTICA — Type" background="#1FB0C0"/>
+<Label value="PESTICA — Parameters" background="#1FB0C0"/>
+</Labels>
+<TextArea name="PESTICA__PESTICA___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="PESTICA — Step Number" placeholder="Describe/justify selection for 'PESTICA — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="PESTICA__PESTICA___Software__desc" toName="text" perRegion="true" whenLabelValue="PESTICA — Software" placeholder="Describe/justify selection for 'PESTICA — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="PESTICA__PESTICA___Type__desc" toName="text" perRegion="true" whenLabelValue="PESTICA — Type" placeholder="Describe/justify selection for 'PESTICA — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="PESTICA__PESTICA___Parameters__desc" toName="text" perRegion="true" whenLabelValue="PESTICA — Parameters" placeholder="Describe/justify selection for 'PESTICA — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="CompCor" toName="text">
+<Label value="CompCor — Step Number" background="#2CB9DC"/>
+<Label value="CompCor — Software" background="#2CB9DC"/>
+<Label value="CompCor — Type" background="#2CB9DC"/>
+<Label value="CompCor — Parameters" background="#2CB9DC"/>
+</Labels>
+<TextArea name="CompCor__CompCor___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="CompCor — Step Number" placeholder="Describe/justify selection for 'CompCor — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="CompCor__CompCor___Software__desc" toName="text" perRegion="true" whenLabelValue="CompCor — Software" placeholder="Describe/justify selection for 'CompCor — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="CompCor__CompCor___Type__desc" toName="text" perRegion="true" whenLabelValue="CompCor — Type" placeholder="Describe/justify selection for 'CompCor — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="CompCor__CompCor___Parameters__desc" toName="text" perRegion="true" whenLabelValue="CompCor — Parameters" placeholder="Describe/justify selection for 'CompCor — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="tCompCor" toName="text">
+<Label value="tCompCor — Step Number" background="#1F90C0"/>
+<Label value="tCompCor — Software" background="#1F90C0"/>
+<Label value="tCompCor — Type" background="#1F90C0"/>
+<Label value="tCompCor — Parameters" background="#1F90C0"/>
+</Labels>
+<TextArea name="tCompCor__tCompCor___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="tCompCor — Step Number" placeholder="Describe/justify selection for 'tCompCor — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="tCompCor__tCompCor___Software__desc" toName="text" perRegion="true" whenLabelValue="tCompCor — Software" placeholder="Describe/justify selection for 'tCompCor — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="tCompCor__tCompCor___Type__desc" toName="text" perRegion="true" whenLabelValue="tCompCor — Type" placeholder="Describe/justify selection for 'tCompCor — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="tCompCor__tCompCor___Parameters__desc" toName="text" perRegion="true" whenLabelValue="tCompCor — Parameters" placeholder="Describe/justify selection for 'tCompCor — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="aCompCor" toName="text">
+<Label value="aCompCor — Step Number" background="#2C96DC"/>
+<Label value="aCompCor — Software" background="#2C96DC"/>
+<Label value="aCompCor — Type" background="#2C96DC"/>
+<Label value="aCompCor — Parameters" background="#2C96DC"/>
+</Labels>
+<TextArea name="aCompCor__aCompCor___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="aCompCor — Step Number" placeholder="Describe/justify selection for 'aCompCor — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="aCompCor__aCompCor___Software__desc" toName="text" perRegion="true" whenLabelValue="aCompCor — Software" placeholder="Describe/justify selection for 'aCompCor — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="aCompCor__aCompCor___Type__desc" toName="text" perRegion="true" whenLabelValue="aCompCor — Type" placeholder="Describe/justify selection for 'aCompCor — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="aCompCor__aCompCor___Parameters__desc" toName="text" perRegion="true" whenLabelValue="aCompCor — Parameters" placeholder="Describe/justify selection for 'aCompCor — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="ME ICA" toName="text">
+<Label value="ME ICA — Step Number" background="#1F70C0"/>
+<Label value="ME ICA — Software" background="#1F70C0"/>
+<Label value="ME ICA — Type" background="#1F70C0"/>
+<Label value="ME ICA — Parameters" background="#1F70C0"/>
+</Labels>
+<TextArea name="ME_ICA__ME_ICA___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="ME ICA — Step Number" placeholder="Describe/justify selection for 'ME ICA — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ME_ICA__ME_ICA___Software__desc" toName="text" perRegion="true" whenLabelValue="ME ICA — Software" placeholder="Describe/justify selection for 'ME ICA — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ME_ICA__ME_ICA___Type__desc" toName="text" perRegion="true" whenLabelValue="ME ICA — Type" placeholder="Describe/justify selection for 'ME ICA — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ME_ICA__ME_ICA___Parameters__desc" toName="text" perRegion="true" whenLabelValue="ME ICA — Parameters" placeholder="Describe/justify selection for 'ME ICA — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="ArtRepair" toName="text">
+<Label value="ArtRepair — Step Number" background="#2C72DC"/>
+<Label value="ArtRepair — Software" background="#2C72DC"/>
+<Label value="ArtRepair — Type" background="#2C72DC"/>
+<Label value="ArtRepair — Parameters" background="#2C72DC"/>
+</Labels>
+<TextArea name="ArtRepair__ArtRepair___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="ArtRepair — Step Number" placeholder="Describe/justify selection for 'ArtRepair — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ArtRepair__ArtRepair___Software__desc" toName="text" perRegion="true" whenLabelValue="ArtRepair — Software" placeholder="Describe/justify selection for 'ArtRepair — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ArtRepair__ArtRepair___Type__desc" toName="text" perRegion="true" whenLabelValue="ArtRepair — Type" placeholder="Describe/justify selection for 'ArtRepair — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ArtRepair__ArtRepair___Parameters__desc" toName="text" perRegion="true" whenLabelValue="ArtRepair — Parameters" placeholder="Describe/justify selection for 'ArtRepair — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Temporal detrending" toName="text">
+<Label value="Temporal detrending — Step Number" background="#1F4FC0"/>
+<Label value="Temporal detrending — Software" background="#1F4FC0"/>
+<Label value="Temporal detrending — Type" background="#1F4FC0"/>
+<Label value="Temporal detrending — Parameters" background="#1F4FC0"/>
+</Labels>
+<TextArea name="Temporal_detrending__Temporal_detrending___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Temporal detrending — Step Number" placeholder="Describe/justify selection for 'Temporal detrending — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Temporal_detrending__Temporal_detrending___Software__desc" toName="text" perRegion="true" whenLabelValue="Temporal detrending — Software" placeholder="Describe/justify selection for 'Temporal detrending — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Temporal_detrending__Temporal_detrending___Type__desc" toName="text" perRegion="true" whenLabelValue="Temporal detrending — Type" placeholder="Describe/justify selection for 'Temporal detrending — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Temporal_detrending__Temporal_detrending___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Temporal detrending — Parameters" placeholder="Describe/justify selection for 'Temporal detrending — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Global signal" toName="text">
+<Label value="Global signal — Step Number" background="#2C4FDC"/>
+<Label value="Global signal — Software" background="#2C4FDC"/>
+<Label value="Global signal — Type" background="#2C4FDC"/>
+<Label value="Global signal — Parameters" background="#2C4FDC"/>
+</Labels>
+<TextArea name="Global_signal__Global_signal___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Global signal — Step Number" placeholder="Describe/justify selection for 'Global signal — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Global_signal__Global_signal___Software__desc" toName="text" perRegion="true" whenLabelValue="Global signal — Software" placeholder="Describe/justify selection for 'Global signal — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Global_signal__Global_signal___Type__desc" toName="text" perRegion="true" whenLabelValue="Global signal — Type" placeholder="Describe/justify selection for 'Global signal — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Global_signal__Global_signal___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Global signal — Parameters" placeholder="Describe/justify selection for 'Global signal — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="ICA FIX" toName="text">
+<Label value="ICA FIX — Step Number" background="#1F2FC0"/>
+<Label value="ICA FIX — Software" background="#1F2FC0"/>
+<Label value="ICA FIX — Type" background="#1F2FC0"/>
+<Label value="ICA FIX — Parameters" background="#1F2FC0"/>
+</Labels>
+<TextArea name="ICA_FIX__ICA_FIX___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="ICA FIX — Step Number" placeholder="Describe/justify selection for 'ICA FIX — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ICA_FIX__ICA_FIX___Software__desc" toName="text" perRegion="true" whenLabelValue="ICA FIX — Software" placeholder="Describe/justify selection for 'ICA FIX — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ICA_FIX__ICA_FIX___Type__desc" toName="text" perRegion="true" whenLabelValue="ICA FIX — Type" placeholder="Describe/justify selection for 'ICA FIX — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ICA_FIX__ICA_FIX___Parameters__desc" toName="text" perRegion="true" whenLabelValue="ICA FIX — Parameters" placeholder="Describe/justify selection for 'ICA FIX — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="ICA AROMA" toName="text">
+<Label value="ICA AROMA — Step Number" background="#2C2CDC"/>
+<Label value="ICA AROMA — Software" background="#2C2CDC"/>
+<Label value="ICA AROMA — Type" background="#2C2CDC"/>
+<Label value="ICA AROMA — Parameters" background="#2C2CDC"/>
+</Labels>
+<TextArea name="ICA_AROMA__ICA_AROMA___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="ICA AROMA — Step Number" placeholder="Describe/justify selection for 'ICA AROMA — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ICA_AROMA__ICA_AROMA___Software__desc" toName="text" perRegion="true" whenLabelValue="ICA AROMA — Software" placeholder="Describe/justify selection for 'ICA AROMA — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ICA_AROMA__ICA_AROMA___Type__desc" toName="text" perRegion="true" whenLabelValue="ICA AROMA — Type" placeholder="Describe/justify selection for 'ICA AROMA — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ICA_AROMA__ICA_AROMA___Parameters__desc" toName="text" perRegion="true" whenLabelValue="ICA AROMA — Parameters" placeholder="Describe/justify selection for 'ICA AROMA — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Temporal filt" toName="text">
+<Label value="Temporal filt — Step Number" background="#2F1FC0"/>
+<Label value="Temporal filt — Software" background="#2F1FC0"/>
+<Label value="Temporal filt — Type" background="#2F1FC0"/>
+<Label value="Temporal filt — Parameters" background="#2F1FC0"/>
+</Labels>
+<TextArea name="Temporal_filt__Temporal_filt___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Temporal filt — Step Number" placeholder="Describe/justify selection for 'Temporal filt — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Temporal_filt__Temporal_filt___Software__desc" toName="text" perRegion="true" whenLabelValue="Temporal filt — Software" placeholder="Describe/justify selection for 'Temporal filt — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Temporal_filt__Temporal_filt___Type__desc" toName="text" perRegion="true" whenLabelValue="Temporal filt — Type" placeholder="Describe/justify selection for 'Temporal filt — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Temporal_filt__Temporal_filt___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Temporal filt — Parameters" placeholder="Describe/justify selection for 'Temporal filt — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="motion regression" toName="text">
+<Label value="motion regression — Step Number" background="#4F2CDC"/>
+<Label value="motion regression — Software" background="#4F2CDC"/>
+<Label value="motion regression — Type" background="#4F2CDC"/>
+<Label value="motion regression — Parameters" background="#4F2CDC"/>
+</Labels>
+<TextArea name="motion_regression__motion_regression___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="motion regression — Step Number" placeholder="Describe/justify selection for 'motion regression — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="motion_regression__motion_regression___Software__desc" toName="text" perRegion="true" whenLabelValue="motion regression — Software" placeholder="Describe/justify selection for 'motion regression — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="motion_regression__motion_regression___Type__desc" toName="text" perRegion="true" whenLabelValue="motion regression — Type" placeholder="Describe/justify selection for 'motion regression — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="motion_regression__motion_regression___Parameters__desc" toName="text" perRegion="true" whenLabelValue="motion regression — Parameters" placeholder="Describe/justify selection for 'motion regression — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Other confound regression" toName="text">
+<Label value="Other confound regression — Step Number" background="#4F1FC0"/>
+<Label value="Other confound regression — Software" background="#4F1FC0"/>
+<Label value="Other confound regression — Type" background="#4F1FC0"/>
+<Label value="Other confound regression — Parameters" background="#4F1FC0"/>
+</Labels>
+<TextArea name="Other_confound_regression__Other_confound_regression___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Other confound regression — Step Number" placeholder="Describe/justify selection for 'Other confound regression — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Other_confound_regression__Other_confound_regression___Software__desc" toName="text" perRegion="true" whenLabelValue="Other confound regression — Software" placeholder="Describe/justify selection for 'Other confound regression — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Other_confound_regression__Other_confound_regression___Type__desc" toName="text" perRegion="true" whenLabelValue="Other confound regression — Type" placeholder="Describe/justify selection for 'Other confound regression — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Other_confound_regression__Other_confound_regression___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Other confound regression — Parameters" placeholder="Describe/justify selection for 'Other confound regression — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="PhysIO" toName="text">
+<Label value="PhysIO — Step Number" background="#722CDC"/>
+<Label value="PhysIO — Software" background="#722CDC"/>
+<Label value="PhysIO — Type" background="#722CDC"/>
+<Label value="PhysIO — Parameters" background="#722CDC"/>
+</Labels>
+<TextArea name="PhysIO__PhysIO___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="PhysIO — Step Number" placeholder="Describe/justify selection for 'PhysIO — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="PhysIO__PhysIO___Software__desc" toName="text" perRegion="true" whenLabelValue="PhysIO — Software" placeholder="Describe/justify selection for 'PhysIO — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="PhysIO__PhysIO___Type__desc" toName="text" perRegion="true" whenLabelValue="PhysIO — Type" placeholder="Describe/justify selection for 'PhysIO — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="PhysIO__PhysIO___Parameters__desc" toName="text" perRegion="true" whenLabelValue="PhysIO — Parameters" placeholder="Describe/justify selection for 'PhysIO — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Regressors filter" toName="text">
+<Label value="Regressors filter — Step Number" background="#701FC0"/>
+<Label value="Regressors filter — Software" background="#701FC0"/>
+<Label value="Regressors filter — Type" background="#701FC0"/>
+<Label value="Regressors filter — Parameters" background="#701FC0"/>
+</Labels>
+<TextArea name="Regressors_filter__Regressors_filter___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Regressors filter — Step Number" placeholder="Describe/justify selection for 'Regressors filter — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Regressors_filter__Regressors_filter___Software__desc" toName="text" perRegion="true" whenLabelValue="Regressors filter — Software" placeholder="Describe/justify selection for 'Regressors filter — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Regressors_filter__Regressors_filter___Type__desc" toName="text" perRegion="true" whenLabelValue="Regressors filter — Type" placeholder="Describe/justify selection for 'Regressors filter — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Regressors_filter__Regressors_filter___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Regressors filter — Parameters" placeholder="Describe/justify selection for 'Regressors filter — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Modular filter motion" toName="text">
+<Label value="Modular filter motion — Step Number" background="#962CDC"/>
+<Label value="Modular filter motion — Software" background="#962CDC"/>
+<Label value="Modular filter motion — Type" background="#962CDC"/>
+<Label value="Modular filter motion — Parameters" background="#962CDC"/>
+</Labels>
+<TextArea name="Modular_filter_motion__Modular_filter_motion___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Modular filter motion — Step Number" placeholder="Describe/justify selection for 'Modular filter motion — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Modular_filter_motion__Modular_filter_motion___Software__desc" toName="text" perRegion="true" whenLabelValue="Modular filter motion — Software" placeholder="Describe/justify selection for 'Modular filter motion — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Modular_filter_motion__Modular_filter_motion___Type__desc" toName="text" perRegion="true" whenLabelValue="Modular filter motion — Type" placeholder="Describe/justify selection for 'Modular filter motion — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Modular_filter_motion__Modular_filter_motion___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Modular filter motion — Parameters" placeholder="Describe/justify selection for 'Modular filter motion — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="wavelet decomposition" toName="text">
+<Label value="wavelet decomposition — Step Number" background="#901FC0"/>
+<Label value="wavelet decomposition — Software" background="#901FC0"/>
+<Label value="wavelet decomposition — Type" background="#901FC0"/>
+<Label value="wavelet decomposition — Parameters" background="#901FC0"/>
+</Labels>
+<TextArea name="wavelet_decomposition__wavelet_decomposition___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="wavelet decomposition — Step Number" placeholder="Describe/justify selection for 'wavelet decomposition — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="wavelet_decomposition__wavelet_decomposition___Software__desc" toName="text" perRegion="true" whenLabelValue="wavelet decomposition — Software" placeholder="Describe/justify selection for 'wavelet decomposition — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="wavelet_decomposition__wavelet_decomposition___Type__desc" toName="text" perRegion="true" whenLabelValue="wavelet decomposition — Type" placeholder="Describe/justify selection for 'wavelet decomposition — Type'…" rows="3" maxSubmissions="1"/>
+<TextArea name="wavelet_decomposition__wavelet_decomposition___Parameters__desc" toName="text" perRegion="true" whenLabelValue="wavelet decomposition — Parameters" placeholder="Describe/justify selection for 'wavelet decomposition — Parameters'…" rows="3" maxSubmissions="1"/>
+<Header value="Preprocessing — FC / Graph analysis (Algorithm)"/>
+<Labels name="Atlas definition" toName="text">
+<Label value="Atlas definition — Step Number" background="#B92CDC"/>
+<Label value="Atlas definition — Software" background="#B92CDC"/>
+<Label value="Atlas definition — Algorithm" background="#B92CDC"/>
+<Label value="Atlas definition — Parameters" background="#B92CDC"/>
+</Labels>
+<TextArea name="Atlas_definition__Atlas_definition___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Atlas definition — Step Number" placeholder="Describe/justify selection for 'Atlas definition — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Atlas_definition__Atlas_definition___Software__desc" toName="text" perRegion="true" whenLabelValue="Atlas definition — Software" placeholder="Describe/justify selection for 'Atlas definition — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Atlas_definition__Atlas_definition___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Atlas definition — Algorithm" placeholder="Describe/justify selection for 'Atlas definition — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Atlas_definition__Atlas_definition___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Atlas definition — Parameters" placeholder="Describe/justify selection for 'Atlas definition — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Time series ROI" toName="text">
+<Label value="Time series ROI — Step Number" background="#B01FC0"/>
+<Label value="Time series ROI — Software" background="#B01FC0"/>
+<Label value="Time series ROI — Algorithm" background="#B01FC0"/>
+<Label value="Time series ROI — Parameters" background="#B01FC0"/>
+</Labels>
+<TextArea name="Time_series_ROI__Time_series_ROI___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Time series ROI — Step Number" placeholder="Describe/justify selection for 'Time series ROI — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Time_series_ROI__Time_series_ROI___Software__desc" toName="text" perRegion="true" whenLabelValue="Time series ROI — Software" placeholder="Describe/justify selection for 'Time series ROI — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Time_series_ROI__Time_series_ROI___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Time series ROI — Algorithm" placeholder="Describe/justify selection for 'Time series ROI — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Time_series_ROI__Time_series_ROI___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Time series ROI — Parameters" placeholder="Describe/justify selection for 'Time series ROI — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="ROI definition" toName="text">
+<Label value="ROI definition — Step Number" background="#DC2CDC"/>
+<Label value="ROI definition — Software" background="#DC2CDC"/>
+<Label value="ROI definition — Algorithm" background="#DC2CDC"/>
+<Label value="ROI definition — Parameters" background="#DC2CDC"/>
+</Labels>
+<TextArea name="ROI_definition__ROI_definition___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="ROI definition — Step Number" placeholder="Describe/justify selection for 'ROI definition — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ROI_definition__ROI_definition___Software__desc" toName="text" perRegion="true" whenLabelValue="ROI definition — Software" placeholder="Describe/justify selection for 'ROI definition — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ROI_definition__ROI_definition___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="ROI definition — Algorithm" placeholder="Describe/justify selection for 'ROI definition — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="ROI_definition__ROI_definition___Parameters__desc" toName="text" perRegion="true" whenLabelValue="ROI definition — Parameters" placeholder="Describe/justify selection for 'ROI definition — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Combine block" toName="text">
+<Label value="Combine block — Step Number" background="#C01FB0"/>
+<Label value="Combine block — Software" background="#C01FB0"/>
+<Label value="Combine block — Algorithm" background="#C01FB0"/>
+<Label value="Combine block — Parameters" background="#C01FB0"/>
+</Labels>
+<TextArea name="Combine_block__Combine_block___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Combine block — Step Number" placeholder="Describe/justify selection for 'Combine block — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Combine_block__Combine_block___Software__desc" toName="text" perRegion="true" whenLabelValue="Combine block — Software" placeholder="Describe/justify selection for 'Combine block — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Combine_block__Combine_block___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Combine block — Algorithm" placeholder="Describe/justify selection for 'Combine block — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Combine_block__Combine_block___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Combine block — Parameters" placeholder="Describe/justify selection for 'Combine block — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Compute connectivity" toName="text">
+<Label value="Compute connectivity — Step Number" background="#DC2CB9"/>
+<Label value="Compute connectivity — Software" background="#DC2CB9"/>
+<Label value="Compute connectivity — Algorithm" background="#DC2CB9"/>
+<Label value="Compute connectivity — Parameters" background="#DC2CB9"/>
+</Labels>
+<TextArea name="Compute_connectivity__Compute_connectivity___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Compute connectivity — Step Number" placeholder="Describe/justify selection for 'Compute connectivity — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Compute_connectivity__Compute_connectivity___Software__desc" toName="text" perRegion="true" whenLabelValue="Compute connectivity — Software" placeholder="Describe/justify selection for 'Compute connectivity — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Compute_connectivity__Compute_connectivity___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Compute connectivity — Algorithm" placeholder="Describe/justify selection for 'Compute connectivity — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Compute_connectivity__Compute_connectivity___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Compute connectivity — Parameters" placeholder="Describe/justify selection for 'Compute connectivity — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Connectivity normalization" toName="text">
+<Label value="Connectivity normalization — Step Number" background="#C01F90"/>
+<Label value="Connectivity normalization — Software" background="#C01F90"/>
+<Label value="Connectivity normalization — Algorithm" background="#C01F90"/>
+<Label value="Connectivity normalization — Parameters" background="#C01F90"/>
+</Labels>
+<TextArea name="Connectivity_normalization__Connectivity_normalization___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Connectivity normalization — Step Number" placeholder="Describe/justify selection for 'Connectivity normalization — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Connectivity_normalization__Connectivity_normalization___Software__desc" toName="text" perRegion="true" whenLabelValue="Connectivity normalization — Software" placeholder="Describe/justify selection for 'Connectivity normalization — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Connectivity_normalization__Connectivity_normalization___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Connectivity normalization — Algorithm" placeholder="Describe/justify selection for 'Connectivity normalization — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Connectivity_normalization__Connectivity_normalization___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Connectivity normalization — Parameters" placeholder="Describe/justify selection for 'Connectivity normalization — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Network definition" toName="text">
+<Label value="Network definition — Step Number" background="#DC2C96"/>
+<Label value="Network definition — Software" background="#DC2C96"/>
+<Label value="Network definition — Algorithm" background="#DC2C96"/>
+<Label value="Network definition — Parameters" background="#DC2C96"/>
+</Labels>
+<TextArea name="Network_definition__Network_definition___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Network definition — Step Number" placeholder="Describe/justify selection for 'Network definition — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Network_definition__Network_definition___Software__desc" toName="text" perRegion="true" whenLabelValue="Network definition — Software" placeholder="Describe/justify selection for 'Network definition — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Network_definition__Network_definition___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Network definition — Algorithm" placeholder="Describe/justify selection for 'Network definition — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Network_definition__Network_definition___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Network definition — Parameters" placeholder="Describe/justify selection for 'Network definition — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Graph characteristics" toName="text">
+<Label value="Graph characteristics — Step Number" background="#C01F70"/>
+<Label value="Graph characteristics — Software" background="#C01F70"/>
+<Label value="Graph characteristics — Algorithm" background="#C01F70"/>
+<Label value="Graph characteristics — Parameters" background="#C01F70"/>
+</Labels>
+<TextArea name="Graph_characteristics__Graph_characteristics___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Graph characteristics — Step Number" placeholder="Describe/justify selection for 'Graph characteristics — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Graph_characteristics__Graph_characteristics___Software__desc" toName="text" perRegion="true" whenLabelValue="Graph characteristics — Software" placeholder="Describe/justify selection for 'Graph characteristics — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Graph_characteristics__Graph_characteristics___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Graph characteristics — Algorithm" placeholder="Describe/justify selection for 'Graph characteristics — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Graph_characteristics__Graph_characteristics___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Graph characteristics — Parameters" placeholder="Describe/justify selection for 'Graph characteristics — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Negative correlation" toName="text">
+<Label value="Negative correlation — Step Number" background="#DC2C72"/>
+<Label value="Negative correlation — Software" background="#DC2C72"/>
+<Label value="Negative correlation — Algorithm" background="#DC2C72"/>
+<Label value="Negative correlation — Parameters" background="#DC2C72"/>
+</Labels>
+<TextArea name="Negative_correlation__Negative_correlation___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Negative correlation — Step Number" placeholder="Describe/justify selection for 'Negative correlation — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Negative_correlation__Negative_correlation___Software__desc" toName="text" perRegion="true" whenLabelValue="Negative correlation — Software" placeholder="Describe/justify selection for 'Negative correlation — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Negative_correlation__Negative_correlation___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Negative correlation — Algorithm" placeholder="Describe/justify selection for 'Negative correlation — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Negative_correlation__Negative_correlation___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Negative correlation — Parameters" placeholder="Describe/justify selection for 'Negative correlation — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Sparsity control" toName="text">
+<Label value="Sparsity control — Step Number" background="#C01F4F"/>
+<Label value="Sparsity control — Software" background="#C01F4F"/>
+<Label value="Sparsity control — Algorithm" background="#C01F4F"/>
+<Label value="Sparsity control — Parameters" background="#C01F4F"/>
+</Labels>
+<TextArea name="Sparsity_control__Sparsity_control___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Sparsity control — Step Number" placeholder="Describe/justify selection for 'Sparsity control — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Sparsity_control__Sparsity_control___Software__desc" toName="text" perRegion="true" whenLabelValue="Sparsity control — Software" placeholder="Describe/justify selection for 'Sparsity control — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Sparsity_control__Sparsity_control___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Sparsity control — Algorithm" placeholder="Describe/justify selection for 'Sparsity control — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Sparsity_control__Sparsity_control___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Sparsity control — Parameters" placeholder="Describe/justify selection for 'Sparsity control — Parameters'…" rows="3" maxSubmissions="1"/>
+<Labels name="Graph measures" toName="text">
+<Label value="Graph measures — Step Number" background="#DC2C4F"/>
+<Label value="Graph measures — Software" background="#DC2C4F"/>
+<Label value="Graph measures — Algorithm" background="#DC2C4F"/>
+<Label value="Graph measures — Parameters" background="#DC2C4F"/>
+</Labels>
+<TextArea name="Graph_measures__Graph_measures___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Graph measures — Step Number" placeholder="Describe/justify selection for 'Graph measures — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Graph_measures__Graph_measures___Software__desc" toName="text" perRegion="true" whenLabelValue="Graph measures — Software" placeholder="Describe/justify selection for 'Graph measures — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Graph_measures__Graph_measures___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Graph measures — Algorithm" placeholder="Describe/justify selection for 'Graph measures — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Graph_measures__Graph_measures___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Graph measures — Parameters" placeholder="Describe/justify selection for 'Graph measures — Parameters'…" rows="3" maxSubmissions="1"/>
+
+<TextArea name="Result_aggregation__Result_aggregation___Step_Number__desc" toName="text" perRegion="true" whenLabelValue="Result aggregation — Step Number" placeholder="Describe/justify selection for 'Result aggregation — Step Number'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Result_aggregation__Result_aggregation___Software__desc" toName="text" perRegion="true" whenLabelValue="Result aggregation — Software" placeholder="Describe/justify selection for 'Result aggregation — Software'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Result_aggregation__Result_aggregation___Algorithm__desc" toName="text" perRegion="true" whenLabelValue="Result aggregation — Algorithm" placeholder="Describe/justify selection for 'Result aggregation — Algorithm'…" rows="3" maxSubmissions="1"/>
+<TextArea name="Result_aggregation__Result_aggregation___Parameters__desc" toName="text" perRegion="true" whenLabelValue="Result aggregation — Parameters" placeholder="Describe/justify selection for 'Result aggregation — Parameters'…" rows="3" maxSubmissions="1"/>
+</View>
