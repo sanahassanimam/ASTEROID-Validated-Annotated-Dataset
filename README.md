@@ -78,10 +78,11 @@ ASTEROID-Validated-Annotated-Dataset/
 
 `JSON_Files/` contains LLM-generated pre-annotation outputs:
 
-- `JSON_Firstprompt_files/`: outputs from the initial broad extraction prompt.
-- `JSON_GAprompt_files/`: outputs from the graph-analysis-focused extraction prompt.
-- `JSON_Combined_files/`: outputs combining first-prompt and graph-analysis annotations.
-- `JSON_Finalprompt_files/`: outputs from the refined single-pass prompt.
+- `Firstprompt/`: outputs from the initial broad extraction prompt.
+- `GAprompt/`: outputs from the graph-analysis-focused extraction prompt.
+- `Finalprompt/`: outputs from the refined single-pass prompt.
+- `Combined JSON/`: outputs combining first-prompt and graph-analysis annotations.
+
 
 The manuscript describes a staged extraction process: initial and graph-analysis prompting with merged outputs for the first 100 studies, followed by a refined prompt for the remaining 60. These intermediate files should **not** be confused with the final human-reviewed dataset in `Annotated_Files/`.
 
