@@ -58,6 +58,11 @@ ASTEROID-Validated-Annotated-Dataset/
 │   ├── mismatch_checker.py
 │   ├── merge_json_file.py
 │   └── review_newversion.py
+├── Missing label summary/
+│   ├── Baily_missing_summary
+│   ├── Beaty_missing_summary
+│   ├── Chong_missing_summary
+    .....
 ├── Schema_Viewer/
 │   └── ASTEROID.html
 └── Images/
@@ -65,11 +70,7 @@ ASTEROID-Validated-Annotated-Dataset/
     └── explorer1.jpeg
     └── explorer2.jpeg
     └── explorer3.jpeg
-└── Missing label Summary/
-    └── workflow.png
-    └── explorer1.jpeg
-    └── explorer2.jpeg
-    └── explorer3.jpeg
+
     
 ```
 
