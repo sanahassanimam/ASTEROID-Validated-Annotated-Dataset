@@ -61,6 +61,7 @@ ASTEROID-Validated-Annotated-Dataset/
 │   ├── all_annotations.json
 │   └── source_studies_with_annotations.xlsx
 ├── Python_Scripts/
+│   ├── requirements.txt
 │   ├── combine_summary.py
 │   ├── mismatch_checker.py
 │   ├── merge_json_file.py
