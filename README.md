@@ -38,7 +38,7 @@ The Excel workbook provides a searchable overview of the 156 source studies, inc
 
 **Data dictionary/schema:** [`Schema_Viewer/Schema.html`](Schema_Viewer/Schema.html)
 
-Schema.html contains the Label Studio annotation schema used for ASTEROID. It organizes labels for study characteristics, experimental design, fMRI preprocessing, functional connectivity, and graph analysis, and defines methodological sublabels such as step number, software, algorithm/type, and parameters. It can be used to interpret the labels in the JSON dataset and Excel workbook.
+`Schema.html` contains the Label Studio annotation schema used for ASTEROID. It organizes labels for study characteristics, experimental design, fMRI preprocessing, functional connectivity, and graph analysis, and defines methodological sublabels such as step number, software, algorithm/type, and parameters. It can be used to interpret the labels in the JSON dataset and Excel workbook.
 
 
 ## Repository organization
@@ -61,10 +61,10 @@ ASTEROID-Validated-Annotated-Dataset/
 │   ├── all_annotations.json
 │   └── source_studies_with_annotations.xlsx
 ├── Python_Scripts/
-│   ├── requirements.txt
 │   ├── combine_summary.py
 │   ├── mismatch_checker.py
-│   ├── merge_json_file.py
+│   ├── merge_json_files.py
+│   ├── requirements.txt
 │   └── review_newversion.py
 ├── Schema_Viewer/
 │   ├── ASTEROID.html
@@ -88,11 +88,17 @@ ASTEROID-Validated-Annotated-Dataset/
 - `Combined JSON/`: outputs combining first-prompt and graph-analysis annotations.
 
 
-The manuscript describes a staged extraction process: initial and graph-analysis prompting with merged outputs for the first 80 studies, followed by a refined prompt for the remaining 76. These intermediate files should **not** be confused with the final human-reviewed dataset in `Annotated_Files/`.
+The manuscript describes a staged extraction process: initial and graph-analysis prompting with merged outputs for the first 100 studies, followed by a refined prompt for the remaining 60. These intermediate files should **not** be confused with the final human-reviewed dataset in `Annotated_Files/`.
 
 ### Prompt specifications
 
-`Prompts/` documents the extraction instructions for the First Prompt, GA Prompt, and Final Prompt. These record the development of the LLM-assisted annotation workflow. 
+`Prompts/` contains the schema-guided prompts used for LLM-assisted pre-annotation of the source studies:
+
+- **First Prompt:** Initial extraction of publication details, study characteristics, and methodological information.
+- **GA Prompt:** Focused extraction of functional-connectivity and graph-analysis decisions to supplement the initial output.
+- **Final Prompt:** Refined prompt combining the extraction requirements into a more consistent single-pass workflow.
+
+These prompts document how the extraction strategy evolved. Their outputs were subsequently checked and reviewed; the final human-validated annotations are provided in `Annotated_Files/all_annotations.json`. **Confirm the actual prompt filenames and extensions before release.**
 
 ### Python scripts
 
@@ -102,19 +108,50 @@ The manuscript describes a staged extraction process: initial and graph-analysis
 | --- | --- |
 | `combine_summary.py` | Produces summaries of annotation and validation results. |
 | `mismatch_checker.py` | Compares structured annotations with the manually curated reference information. |
-| `merge_json_file.py` | Integrates first-prompt and graph-analysis outputs. |
+| `merge_json_files.py` | Integrates first-prompt and graph-analysis outputs. |
 | `review_newversion.py` | Supports inspection and review of validation discrepancies. |
 
-The manuscript reports that these scripts were developed and tested using **Python 3.10**. To reproduce script execution, provide the tested dependencies and exact example commands below once verified.
+The scripts are provided to document the processing and validation workflow. Some require the original intermediate inputs and the manually curated reference workbook; they do not regenerate the human-reviewed final annotations on their own.
 
+### Software requirements and reproduction
 
-### Software requirements
+The workflow is documented as having been developed using **Python 3.10**. The four supplied utility scripts import the external packages `pandas`, `numpy`, and `openpyxl`; the listed dependency versions were checked for availability in a Python environment, but **the complete workflow has not been end-to-end tested against the original project inputs**.
 
-The dataset preparation and validation scripts were developed using Python 3.10.
+From the repository root, create an environment and install dependencies:
 
-The scripts and their dependencies are described in the `Python_Scripts/` directory.
+```bash
+python3.10 -m venv .venv
+# Linux/macOS: source .venv/bin/activate
+# Windows (PowerShell): .venv\Scripts\Activate.ps1
+python -m pip install -r Python_Scripts/requirements.txt
+```
 
-A verified installation environment and instructions for reproducing individual analyses will be added before the public repository release.
+Usage examples (substitute the actual local input paths):
+
+```bash
+# Combine comparison-report CSVs and produce an Excel summary
+python Python_Scripts/combine_summary.py --folder "path/to/comparison_csvs"
+
+# Check entries marked missing in TXT summaries against the reference workbook
+python Python_Scripts/mismatch_checker.py --excel "path/to/reference.xlsx" --txt_dir "path/to/missing_summaries"
+
+# Compare LLM JSON outputs against the same reference workbook
+python Python_Scripts/review_newversion.py --excel "path/to/reference.xlsx" --sheet Seed2 --json_root "path/to/json_outputs" --recursive
+
+# Merge initial and graph-only JSON exports (see directory requirements below)
+python Python_Scripts/merge_json_files.py
+```
+
+**Inputs and outputs:**
+
+- `combine_summary.py` accepts a directory of comparison CSV files with columns such as `Verdict`, `Category`, and `Match_quality` and writes `Combined_Verdict_Category_Match_Summary.xlsx` to that directory.
+- `mismatch_checker.py` accepts `--excel` plus either `--txt` (one missing-summary TXT file) or `--txt_dir` (a directory of TXT summaries). It writes per-paper mismatch reports in TXT format.
+- `review_newversion.py` reads an Excel worksheet (default `Seed2`) and matching `*_extracted_labels*.json` or `*_combined_labels.json` files and writes per-paper `*_table.csv` comparison reports next to the JSON files. Optional flags include `--show_values` and `--no_fuzzy`.
+- `merge_json_files.py` has no command-line arguments. Its input/output directories are currently configured relative to the **working directory** as `JSON_firstprompt_files/`, `JSON_Graph_only_files/`, and `JSON_Combined_files/`. Create/populate these directories or edit `BASE_DIR`, `GRAPH_DIR`, and `OUT_DIR` in the script to match your local layout. It also writes `merge_report.txt` and `merge_report.csv` to the working directory. The expected filenames end in `_extracted_labels.json` and `_graph_labels.json`.
+
+**Reference-workbook limitation:** Both comparison scripts expect the original reference Excel workbook with a `Seed2` worksheet and two header rows (family and label), including preprocessing step columns. The publication overview `Annotated_Files/source_studies_with_annotations.xlsx` is **not** that reference workbook and must not be supplied as its replacement. Include the reference workbook if its redistribution is authorized, or document its access restrictions.
+
+These are **code-derived usage instructions**. Before public release, run the commands using the actual repository inputs, verify the generated files, and confirm the documented Python/package versions on the supported platform.
 
 
 ## Interactive ASTEROID application
@@ -202,7 +239,7 @@ For scholarly citation, use the exact archived dataset version and its DOI once 
 
 ## Licence and third-party source material
 
-**Data licence:** To be confirmed before public release, following review of third-party source-text rights, including the excerpts in `source_studies_with_annotations.xlsx`.
+**Data licence:** To be confirmed before public release, following review of third-party source-text rights.
 
 **Code licence:** To be confirmed before public release, following review of third-party source-text rights.
 
