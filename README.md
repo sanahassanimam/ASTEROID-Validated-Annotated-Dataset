@@ -38,7 +38,7 @@ Methodological annotations include standardized attributes such as step number, 
 
 ## Repository organization
 
-The following layout is based on the project documentation. **Check all names and file extensions against the actual repository before release.**
+The following layout is based on the project documentation. 
 
 ```text
 ASTEROID-Validated-Annotated-Dataset/
