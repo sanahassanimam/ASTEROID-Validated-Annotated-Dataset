@@ -89,7 +89,7 @@ The manuscript describes a staged extraction process: initial and graph-analysis
 
 ### Prompt specifications
 
-`Prompts/` documents the extraction instructions for the First Prompt, GA Prompt, and Final Prompt. These record the development of the LLM-assisted annotation workflow. **Confirm the actual filenames and extensions before release.**
+`Prompts/` documents the extraction instructions for the First Prompt, GA Prompt, and Final Prompt. These record the development of the LLM-assisted annotation workflow. 
 
 ### Python scripts
 
