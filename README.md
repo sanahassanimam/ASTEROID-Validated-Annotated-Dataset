@@ -37,6 +37,7 @@ Methodological annotations include standardized attributes such as step number, 
 The Excel workbook provides a searchable overview of the 156 source studies, including bibliographic metadata, DOI links, identified schema labels, and supporting annotated text spans. The **Source Studies** sheet summarizes labels and text evidence per study; **Annotation Text Spans** lists individual spans with their schema groups, labels, and start/end offsets; and **Schema Labels** summarizes label frequencies. Offsets are character positions in the text imported for annotation, **not** PDF page numbers or page coordinates. The validated JSON above remains the primary annotation dataset.
 
 **Data dictionary/schema:** [`Schema_Viewer/Schema.html`](Schema_Viewer/Schema.html)
+Schema.html contains the Label Studio annotation schema used for ASTEROID. It organizes labels for study characteristics, experimental design, fMRI preprocessing, functional connectivity, and graph analysis, and defines methodological sublabels such as step number, software, algorithm/type, and parameters. It can be used to interpret the labels in the JSON dataset and Excel workbook.
 
 
 ## Repository organization
