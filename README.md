@@ -11,6 +11,7 @@ The accompanying manuscript describes annotations from **156 studies** using a s
 ## Contents
 
 - Final human-reviewed annotations in Label Studio-compatible JSON format
+- Source-study bibliography and schema-labeled supporting text spans in Excel format
 - Intermediate JSON outputs from different prompting strategies
 - Prompt specifications used for LLM-assisted pre-annotation
 - Scripts supporting merging, mismatch assessment, summary generation, and review
@@ -31,9 +32,11 @@ Methodological annotations include standardized attributes such as step number, 
 
 **Data format:** JSON, structured for compatibility with Label Studio annotation import. The contents should be inspected using the included schema documentation and/or the ASTEROID viewer.
 
-**Source studies:** [`Annotated_Files/source_studies.xlsx`](Annotated_Files/source_studies_with_annotations.xlsx)
+**Source studies and annotation spans:** [`Annotated_Files/source_studies_with_annotations.xlsx`](Annotated_Files/source_studies_with_annotations.xlsx)
 
-**Data dictionary/schema:**  [`Schema_Viewer/schema_viewer.html`](Schema_Viewer/Schema.html)
+The Excel workbook provides a searchable overview of the 156 source studies, including bibliographic metadata, DOI links, identified schema labels, and supporting annotated text spans. The **Source Studies** sheet summarizes labels and text evidence per study; **Annotation Text Spans** lists individual spans with their schema groups, labels, and start/end offsets; and **Schema Labels** summarizes label frequencies. Offsets are character positions in the text imported for annotation, **not** PDF page numbers or page coordinates. The validated JSON above remains the primary annotation dataset.
+
+**Data dictionary/schema:** [`Schema_Viewer/Schema.html`](Schema_Viewer/Schema.html)
 
 
 ## Repository organization
@@ -53,15 +56,16 @@ ASTEROID-Validated-Annotated-Dataset/
 │   ├── Finalprompt/
 │   └── Combined JSON/
 ├── Annotated_Files/
-│   └── all_annotations.json
-│   └── source studies_with_annotations.xlsx
+│   ├── all_annotations.json
+│   └── source_studies_with_annotations.xlsx
 ├── Python_Scripts/
 │   ├── combine_summary.py
 │   ├── mismatch_checker.py
 │   ├── merge_json_file.py
 │   └── review_newversion.py
 ├── Schema_Viewer/
-│   └── ASTEROID.html
+│   ├── ASTEROID.html
+│   └── Schema.html
 └── Images/
     ├── workflow.png
     ├── explorer1.jpeg
@@ -195,11 +199,11 @@ For scholarly citation, use the exact archived dataset version and its DOI once 
 
 ## Licence and third-party source material
 
-**Data licence:** To be confirmed before public release, following review of third-party source-text rights.
+**Data licence:** To be confirmed before public release, following review of third-party source-text rights, including the excerpts in `source_studies_with_annotations.xlsx`.
 
 **Code licence:** To be confirmed before public release, following review of third-party source-text rights.
 
-Annotations may contain passages derived from third-party publications. Do not assume that licensing the annotation dataset automatically grants permission to redistribute third-party copyrighted article text. Review the source licences and permissions before public release.
+Annotations may contain passages derived from third-party publications, including excerpts in the Excel workbook. Do not assume that licensing the annotation dataset automatically grants permission to redistribute third-party copyrighted article text. Review the source licences and permissions before public release. If needed, distribute bibliographic metadata and annotation labels separately from restricted excerpts.
 
 ## Citation
 
