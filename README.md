@@ -85,7 +85,7 @@ ASTEROID-Validated-Annotated-Dataset/
 - `Combined JSON/`: outputs combining first-prompt and graph-analysis annotations.
 
 
-The manuscript describes a staged extraction process: initial and graph-analysis prompting with merged outputs for the first 100 studies, followed by a refined prompt for the remaining 60. These intermediate files should **not** be confused with the final human-reviewed dataset in `Annotated_Files/`.
+The manuscript describes a staged extraction process: initial and graph-analysis prompting with merged outputs for the first 80 studies, followed by a refined prompt for the remaining 76. These intermediate files should **not** be confused with the final human-reviewed dataset in `Annotated_Files/`.
 
 ### Prompt specifications
 
