@@ -219,7 +219,7 @@ The ASTEROID repository uses separate licences for research data and software:
 
 **Third-party source material:** The dataset includes supporting text spans extracted from published scientific articles. These excerpts remain attributed to their original publications, identifiable through the accompanying bibliographic information and DOI references. Copyright in third-party material remains with the respective rights holders; the ASTEROID licences apply only to material that the contributors are entitled to license.
 
-Users should consult the original publications and their applicable reuse conditions when reusing third-party text beyond the ASTEROID research context.
+Users should consult the original publications and their applicable reuse conditions when reusing third-party text.
 
 ## Citation
 
