@@ -59,7 +59,7 @@ ASTEROID-Validated-Annotated-Dataset/
 ├── Annotated_Files/
 │   ├── all_annotations.json
 │   └── source_studies_with_annotations.xlsx
-├── Python_Scripts/
+├── python_scripts/
 │   ├── combine_summary.py
 │   ├── mismatch_checker.py
 │   ├── merge_json_files.py
@@ -101,7 +101,7 @@ These prompts document how the extraction strategy evolved. Their outputs were s
 
 ### Python scripts and reference data
 
-`Python_Scripts/` contains supporting utilities used during dataset preparation and validation:
+`python_scripts/` contains supporting utilities used during dataset preparation and validation:
 
 | Script | Purpose |
 | --- | --- |
