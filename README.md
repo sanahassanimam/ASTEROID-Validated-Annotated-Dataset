@@ -118,7 +118,7 @@ The scripts use Python and the packages `pandas`, `numpy`, and `openpyxl` (see [
 
 ASTEROID provides two ways to explore the annotation schema and dataset:
 
-1. Standalone HTML viewer
+### 1. Standalone HTML viewer
 
 A standalone HTML viewer is also included in the GitHub repository:
 
@@ -126,7 +126,7 @@ A standalone HTML viewer is also included in the GitHub repository:
 
 The file can be downloaded and opened locally in a compatible web browser.
 
-2. Online Shiny application
+### 2. Online Shiny application
 
 Access the interactive ASTEROID application directly through your browser:
 https://asteroid.shinyapps.io/asteroid/
