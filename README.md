@@ -43,8 +43,7 @@ The Excel workbook provides a searchable overview of the 156 source studies, inc
 
 ## Repository organization
 
-The following layout is based on the project documentation. 
-
+The ASTEROID repository is organized into the following directories and files:
 ```text
 ASTEROID-Validated-Annotated-Dataset/
 ├── README.md
@@ -117,7 +116,20 @@ The scripts use Python and the packages `pandas`, `numpy`, and `openpyxl` (see `
 
 ## Interactive ASTEROID application
 
-**Open the online ASTEROID viewer:** https://asteroid.shinyapps.io/asteroid/
+ASTEROID provides two ways to explore the annotation schema and dataset:
+
+1. Standalone HTML viewer
+
+A standalone HTML viewer is also included in the GitHub repository:
+
+`Schema_Viewer/ASTEROID.html`
+
+The file can be downloaded and opened locally in a compatible web browser.
+
+2. 1. Online Shiny application
+
+Access the interactive ASTEROID application directly through your browser:
+https://asteroid.shinyapps.io/asteroid/
 
 The interactive application supports three core activities:
 
@@ -200,17 +212,20 @@ For scholarly citation, use the exact archived dataset version and its DOI once 
 
 ## Licence and third-party source material
 
-**Data licence:** To be confirmed before public release, following review of third-party source-text rights, including the excerpts in `source_studies_with_annotations.xlsx`.
+The ASTEROID repository uses separate licences for research data and software:
 
-**Code licence:** To be confirmed before public release, following review of third-party source-text rights.
+- **Dataset and documentation:** Original ASTEROID annotations, structured dataset metadata, schema documentation, and other original non-code materials are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+- **Software:** Original Python scripts in the `python_scripts/` directory are licensed under the [MIT License](https://opensource.org/license/mit). See `python_scripts/LICENSE`.
 
-Annotations may contain passages derived from third-party publications, including excerpts in the Excel workbook. Do not assume that licensing the annotation dataset automatically grants permission to redistribute third-party copyrighted article text. Review the source licences and permissions before public release. If needed, distribute bibliographic metadata and annotation labels separately from restricted excerpts.
+**Third-party source material:** The dataset includes supporting text spans extracted from published scientific articles. These excerpts remain attributed to their original publications, identifiable through the accompanying bibliographic information and DOI references. Copyright in third-party material remains with the respective rights holders; the ASTEROID licences apply only to material that the contributors are entitled to license.
+
+Users should consult the original publications and their applicable reuse conditions when reusing third-party text beyond the ASTEROID research context.
 
 ## Citation
 
 **Dataset:** ASTEROID — Validated Annotated Dataset of Graph Theory-Based fMRI Analytical Decisions. Zenodo dataset archive (DOI to be added upon publication of the record).
 
-**Related Data Descriptor:** Imam et al., "ASTEROID: A Validated Annotated Dataset of Graph Theory–Based fMRI Analytical Decisions Derived by LLM-Assisted Literature Mining." Manuscript in preparation.
+**Related Data Descriptor:** Imam et al., "ASTEROID: A Validated Annotated Dataset of Graph Theory–Based fMRI Analytical Decisions Derived by LLM-Assisted Literature Mining." Manuscript under review.
 
 
 ## Contact
