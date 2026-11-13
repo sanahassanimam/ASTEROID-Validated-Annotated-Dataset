@@ -61,12 +61,12 @@ ASTEROID-Validated-Annotated-Dataset/
 │   ├── all_annotations.json
 │   └── source_studies_with_annotations.xlsx
 ├── python_scripts/
+│   ├── LICENSE
 │   ├── combine_summary.py
 │   ├── mismatch_checker.py
 │   ├── merge_json_files.py
 │   ├── requirements.txt
 │   └── review_newversion.py
-│   ├── LICENSE
 ├── Schema_Viewer/
 │   ├── ASTEROID.html
 │   └── Schema.html
