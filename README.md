@@ -141,7 +141,7 @@ The interactive application supports three core activities:
 
 1. Open the application URL in a modern browser.
 2. Select the relevant tab.
-3. To examine final annotations, download `Annotated_Files/all_annotations.json` and upload it through the viewer's file selector, if prompted.
+3. To examine final annotations, download [`Annotated_Files/all_annotations.json`](Annotated_Files/all_annotations.json) and upload it through the viewer's file selector, if prompted.
 4. Use the Schema Graph and reporting interface to explore the annotation framework.
 
 The app is a visualization and inspection tool; the downloadable, archived JSON dataset remains the authoritative data record. 
