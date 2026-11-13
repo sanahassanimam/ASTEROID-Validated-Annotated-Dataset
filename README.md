@@ -217,9 +217,7 @@ The ASTEROID repository uses separate licences for research data and software:
 - **Dataset and documentation:** Original ASTEROID annotations, structured dataset metadata, schema documentation, and other original non-code materials are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 - **Software:** Original Python scripts in the `python_scripts/` directory are licensed under the [MIT License](https://opensource.org/license/mit). See [`python_scripts/LICENSE`](python_scripts/LICENSE).
 
-**Third-party source material:** The dataset includes supporting text spans extracted from published scientific articles. These excerpts remain attributed to their original publications, identifiable through the accompanying bibliographic information and DOI references. Copyright in third-party material remains with the respective rights holders; the ASTEROID licences apply only to material that the contributors are entitled to license.
-
-Users should consult the original publications and their applicable reuse conditions when reusing third-party text.
+**Third-party source material:** The dataset includes supporting text spans extracted from published scientific articles. These excerpts remain attributed to their original publications, identifiable through the accompanying bibliographic information and DOI references. Copyright in third-party material remains with the respective rights holders; the ASTEROID licences apply only to material that the contributors are entitled to license. Users should consult the original publications and their applicable reuse conditions when reusing third-party text.
 
 ## Citation
 
