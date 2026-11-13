@@ -112,7 +112,7 @@ These prompts document how the extraction strategy evolved. Their outputs were s
 
 **Manual reference database:** [METEOR `Database.xlsx`](https://github.com/metascience-uol/METEOR/blob/main/Database.xlsx) (see worksheet `Seed2`). The comparison scripts are written to use the `Seed2` reference-table structure. This external database is distinct from ASTEROID's `source_studies_with_annotations.xlsx` bibliography and annotation-span workbook. Please consult the METEOR repository for the database's provenance, version, and reuse conditions.
 
-The scripts use Python and the packages `pandas`, `numpy`, and `openpyxl` (see [`Python_Scripts/requirements.txt`](Python_Scripts/requirements.txt)). They are shared to document supporting processing and quality-control steps. Some operations depend on intermediate files, local directory arrangements, and manual expert review. The final human-reviewed annotations are available directly in [`Annotated_Files/all_annotations.json`](Annotated_Files/all_annotations.json).
+The scripts use Python and the packages `pandas`, `numpy`, and `openpyxl` (see [`python_scripts/requirements.txt`](python_scripts/requirements.txt)). They are shared to document supporting processing and quality-control steps. Some operations depend on intermediate files, local directory arrangements, and manual expert review. The final human-reviewed annotations are available directly in [`Annotated_Files/all_annotations.json`](Annotated_Files/all_annotations.json).
 
 ## Interactive ASTEROID application
 
