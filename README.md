@@ -231,7 +231,7 @@ The ASTEROID repository uses separate licences for research data and software:
 
 ## Citation
 
-**Dataset:** ASTEROID — Validated Annotated Dataset of Graph Theory-Based fMRI Analytical Decisions. Zenodo dataset archive (DOI to be added upon publication of the record).
+**Dataset:** Imam et al. (2026). *ASTEROID: A Validated Annotated Dataset of Graph Theory–Based fMRI Analytical Decisions Derived by LLM-Assisted Literature Mining*. Zenodo. Reserved DOI: https://doi.org/10.5281/zenodo.23569927 (record not yet publicly available).
 
 **Related Data Descriptor:** Imam et al., ASTEROID, A Validated Annotated Dataset of Analytical Decisions in Graph Theory–Based fMRI. Manuscript under review at Scientific Data.
 
