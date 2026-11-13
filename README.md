@@ -81,9 +81,9 @@ ASTEROID-Validated-Annotated-Dataset/
 
 `JSON_Files/` contains LLM-generated pre-annotation outputs:
 
-- `Firstprompt/`: outputs from the initial broad extraction prompt.
-- `GAprompt/`: outputs from the graph-analysis-focused extraction prompt.
-- `Finalprompt/`: outputs from the refined single-pass prompt.
+- `First prompt/`: outputs from the initial broad extraction prompt.
+- `GA prompt/`: outputs from the graph-analysis-focused extraction prompt.
+- `Final prompt/`: outputs from the refined single-pass prompt.
 - `Combined JSON/`: outputs combining first-prompt and graph-analysis annotations.
 
 
@@ -200,15 +200,23 @@ ASTEROID is intended for examining reported methodological decisions in graph th
 
 The dataset records information **as reported** in source publications. An unreported annotation does not necessarily mean the corresponding method was not used. Ordering information and source-text support should be interpreted according to the annotation definitions and documented workflow. Use caution in applying the schema outside its source domain without additional validation.
 
+
 ## Data availability and versioning
 
-- **GitHub project:** https://github.com/sanahassanimam/ASTEROID-Validated-Annotated-Dataset
-- **Archived dataset:** Zenodo record in preparation; a permanent DOI will be added upon publication.
-- **Version-specific DOI:** Zenodo record in preparation; a permanent DOI will be added upon publication.
-- **Dataset version/release:** Zenodo record in preparation; a permanent DOI will be added upon publication.
-- **Online viewer:** https://asteroid.shinyapps.io/asteroid/
+The ASTEROID dataset, supporting materials, and processing scripts are publicly available through the project repository:
 
-For scholarly citation, use the exact archived dataset version and its DOI once registered. The GitHub repository may evolve independently of the archived version used in the manuscript.
+https://github.com/sanahassanimam/ASTEROID-Validated-Annotated-Dataset
+
+A Zenodo dataset record has been prepared with the reserved DOI:
+https://doi.org/10.5281/zenodo.23569927
+
+The Zenodo record is not yet publicly published. Its DOI will become publicly resolvable following publication of the record.
+
+The online ASTEROID viewer is available at:
+https://asteroid.shinyapps.io/asteroid/
+
+For citation, use the version-specific Zenodo DOI once the archived release is published.
+
 
 ## Licence and third-party source material
 
