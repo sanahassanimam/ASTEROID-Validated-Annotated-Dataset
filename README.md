@@ -47,6 +47,7 @@ The ASTEROID repository is organized into the following directories and files:
 ```text
 ASTEROID-Validated-Annotated-Dataset/
 ├── README.md
+├── LICENSE
 ├── Prompts/
 │   ├── First Prompt.md
 │   ├── GA Prompt.md
