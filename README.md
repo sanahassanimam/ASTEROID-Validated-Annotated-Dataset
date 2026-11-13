@@ -98,7 +98,7 @@ The manuscript describes a staged extraction process: initial and graph-analysis
 - **GA Prompt:** Focused extraction of functional-connectivity and graph-analysis decisions to supplement the initial output.
 - **Final Prompt:** Refined prompt combining the extraction requirements into a more consistent single-pass workflow.
 
-These prompts document how the extraction strategy evolved. Their outputs were subsequently checked and reviewed; the final human-validated annotations are provided in `Annotated_Files/all_annotations.json`. **Confirm the actual prompt filenames and extensions before release.**
+These prompts document how the extraction strategy evolved. Their outputs were subsequently checked and reviewed; the final human-validated annotations are provided in `Annotated_Files/all_annotations.json`. 
 
 ### Python scripts and reference data
 
